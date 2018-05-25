@@ -10,4 +10,5 @@ General Introduction
    Operators.rst
    FunctionCalls.rst
    Print.rst
+   DataTypes.rst
    
