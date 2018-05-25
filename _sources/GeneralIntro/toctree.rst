@@ -13,5 +13,6 @@ General Introduction
    FormalandNaturalLanguages.rst
    ATypicalFirstProgram.rst
    WhatisDebugging.rst
+   Syntaxerrors.rst
    
    
