@@ -15,5 +15,6 @@ General Introduction
    WhatisDebugging.rst
    Syntaxerrors.rst
    RuntimeErrors.rst
+   SemanticErrors.rst
    
    
