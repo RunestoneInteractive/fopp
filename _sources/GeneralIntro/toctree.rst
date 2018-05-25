@@ -16,5 +16,6 @@ General Introduction
    Syntaxerrors.rst
    RuntimeErrors.rst
    SemanticErrors.rst
+   ExperimentalDebugging.rst
    
    
