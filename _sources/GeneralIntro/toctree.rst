@@ -17,5 +17,6 @@ General Introduction
    RuntimeErrors.rst
    SemanticErrors.rst
    ExperimentalDebugging.rst
-   
+   Comments.rst
+   Glossary.rst
    
