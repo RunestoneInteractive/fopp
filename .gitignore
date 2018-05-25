@@ -1,0 +1,13 @@
+__pycache__/
+build/
+build_info
+.idea
+.idea/*
+pavement.pyc
+# for builds on Mac:
+**/.DS_Store
+.vscode
+*~
+*.bak
+*.orig
+\#*\#
