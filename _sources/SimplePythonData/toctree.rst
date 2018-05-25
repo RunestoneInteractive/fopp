@@ -6,4 +6,5 @@ General Introduction
    :maxdepth: 2
 
    intro-VariablesExpressionsandStatements.rst
+   Values.rst
    
