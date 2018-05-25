@@ -14,5 +14,6 @@ General Introduction
    ATypicalFirstProgram.rst
    WhatisDebugging.rst
    Syntaxerrors.rst
+   RuntimeErrors.rst
    
    
