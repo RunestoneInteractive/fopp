@@ -10,5 +10,6 @@ General Introduction
    ThePythonProgrammingLanguage.rst
    SpecialWaystoExecutePythoninthisBook.rst
    MoreAboutPrograms.rst
+   FormalandNaturalLanguages.rst
    
    
