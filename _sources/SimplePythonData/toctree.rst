@@ -7,4 +7,7 @@ General Introduction
 
    intro-VariablesExpressionsandStatements.rst
    Values.rst
+   Operators.rst
+   FunctionCalls.rst
+   Print.rst
    
