@@ -109,5 +109,5 @@ Check out how adding conditionals to our code can change what we can write about
    A program is:
 
 
-.. index:: debugging, bug
+.. index:: formal language, natural language, parse, token
 

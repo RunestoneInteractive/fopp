@@ -11,5 +11,7 @@ General Introduction
    SpecialWaystoExecutePythoninthisBook.rst
    MoreAboutPrograms.rst
    FormalandNaturalLanguages.rst
+   ATypicalFirstProgram.rst
+   WhatisDebugging.rst
    
    
