@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: intro-13-
+   :prefix: intro-8-
    :start: 1
 
 Comments
@@ -25,7 +25,7 @@ reader - it is completely ignored by the interpreter.
 In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
 Here is a new version of *Hello, World!*.
 
-.. activecode:: ac1_13_1
+.. activecode:: ac1_8_1
 
     #---------------------------------------------------
     # This demo program shows off how elegant Python is!
@@ -42,7 +42,7 @@ programs much easier for humans to parse.  Use them liberally!
 
 **Check your understanding**
 
-.. mchoice:: question1_13_1
+.. mchoice:: question1_8_1
    :answer_a: To tell the computer what you mean in your program.
    :answer_b: For the people who are reading your code to know, in natural language, what the program is doing.
    :answer_c: Nothing, they are extraneous information that is not needed.
@@ -60,7 +60,7 @@ programs much easier for humans to parse.  Use them liberally!
 
    This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
 
-   .. activecode:: ac1_13_2
+   .. activecode:: ac1_8_2
 
 
 
