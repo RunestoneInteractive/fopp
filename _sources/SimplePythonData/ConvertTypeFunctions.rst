@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-8-
+   :prefix: data-7-
    :start: 1
 
 Type conversion functions
@@ -24,7 +24,7 @@ into an int. For floating point numbers, it *discards* the decimal portion of
 the number - a process we call *truncation towards zero* on the number line.
 Let us see this in action:
 
-.. activecode:: ac2_8_1
+.. activecode:: ac2_7_1
     :nocanvas:
 
     print(3.14, int(3.14))
@@ -44,7 +44,7 @@ otherwise you'll get one of those pesky runtime errors.  Modify the example by d
 The type converter ``float`` can turn an integer, a float, or a syntactically
 legal string into a float.
 
-.. activecode:: ac2_8_2
+.. activecode:: ac2_7_2
     :nocanvas:
 
     print(float("123.45"))
@@ -54,7 +54,7 @@ legal string into a float.
 The type converter ``str`` turns its argument into a string.  Remember that when we print a string, the
 quotes are removed.  However, if we print the type, we can see that it is definitely ``str``.
 
-.. activecode:: ac2_8_3
+.. activecode:: ac2_7_3
     :nocanvas:
 
     print(str(17))
@@ -63,7 +63,7 @@ quotes are removed.  However, if we print the type, we can see that it is defini
 
 **Check your understanding**
 
-.. mchoice:: question2_8_1
+.. mchoice:: question2_7_1
    :answer_a: Nothing is printed. It generates a runtime error.
    :answer_b: 53
    :answer_c: 54

@@ -10,8 +10,12 @@ General Introduction
    Operators.rst
    FunctionCalls.rst
    Print.rst
-   Variables.rst
    DataTypes.rst
    ConvertTypeFunctions.rst
+   Variables.rst
+   StatementsandExpressions.rst
+   OrderofOperations.rst
+   VariableNamesandKeywords.rst
+   Reassignment.rst
    
    
