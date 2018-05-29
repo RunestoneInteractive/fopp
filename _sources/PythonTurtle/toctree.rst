@@ -2,8 +2,9 @@ Python Turtle
 :::::::::::::
 
 .. toctree::
-   :numbered:
-   :maxdepth: 2 
+   :caption: Python Turtle
+   :maxdepth: 3
 
-   intro-HellolittleTurtles.rst
+   intro-HelloLittleTurtles.rst
+   OurFirstTurtleProgram.rst
    
