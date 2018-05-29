@@ -147,7 +147,7 @@ For example, we can find out the data type of the current value of a variable by
 
 **Check your understanding**
 
-.. mchoice:: question2_6_1
+.. mchoice:: question2_8_1
    :answer_a: Nothing is printed. A runtime error occurs.
    :answer_b: Thursday
    :answer_c: 32.5

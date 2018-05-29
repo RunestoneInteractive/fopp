@@ -1,8 +1,8 @@
-General Introduction
-::::::::::::::::::::
+Simple Python Data
+::::::::::::::::::
 
 .. toctree::
-   :caption: General Introduction
+   :caption: Simple Python Data
    :maxdepth: 2
 
    intro-VariablesExpressionsandStatements.rst
