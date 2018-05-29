@@ -7,4 +7,5 @@ Python Turtle
 
    intro-HelloLittleTurtles.rst
    OurFirstTurtleProgram.rst
+   InstancesAHerdofTurtles.rst
    
