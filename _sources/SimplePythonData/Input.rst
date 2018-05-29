@@ -14,12 +14,7 @@
 Input
 -----
 
-.. video:: inputvid
-    :controls:
-    :thumb: ../_static/inputthumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/input.mov
-    http://media.interactivepython.org/thinkcsVideos/input.webm
+.. video should go here, taken from steve's youtube video on print + input
 
 Our programs get more interesting if they don't do exactly the same thing every time they run. 
 One way to make them more interesting is to get **input** from the user.  Luckily, in Python 
