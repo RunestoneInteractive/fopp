@@ -77,7 +77,7 @@ For example:
 
 Let's take a look at how that last execution unfolds.
 
-.. showeval:: se_ac_2a
+.. showeval:: se_ac2_4_1a
    :trace_mode: true
 
    Notice that we always have to resolve the expression inside the innermost parentheses first, in order to determine what input to provide when calling the functions.

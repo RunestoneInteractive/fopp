@@ -98,7 +98,7 @@ Developing your mental model of How Python Evaluates
 
 Its important to start to develop a good mental model of the steps Python takes when evaluating an assignment statement.  In an assignment statement Python first evaluates the code on the right hand side of the assignment operator.  It then gives a name to whatever that is.  The (very short) visualization below shows what is happening.
 
-.. showeval:: se_ac_1a
+.. showeval:: se_ac2_12_1a
     :trace_mode: true
 
     a = 5

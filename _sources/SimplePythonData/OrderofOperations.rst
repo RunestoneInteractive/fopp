@@ -100,7 +100,7 @@ rules for its mathematical operators that mathematics does.
 
 Here is an animation for the above expression:
 
-.. showeval:: se_ac2_10_1
+.. showeval:: se_ac2_10_1a
    :trace_mode: true
 
    16 - 2 * 5 // 3 + 1

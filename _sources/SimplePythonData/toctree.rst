@@ -17,5 +17,6 @@ General Introduction
    OrderofOperations.rst
    VariableNamesandKeywords.rst
    Reassignment.rst
+   UpdatingVariables.rst
    
    
