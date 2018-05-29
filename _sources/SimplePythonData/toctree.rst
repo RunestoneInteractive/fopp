@@ -18,5 +18,6 @@ General Introduction
    VariableNamesandKeywords.rst
    Reassignment.rst
    UpdatingVariables.rst
+   Input.rst
    
    
