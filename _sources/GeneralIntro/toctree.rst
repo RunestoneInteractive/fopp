@@ -12,9 +12,6 @@ General Introduction
    MoreAboutPrograms.rst
    FormalandNaturalLanguages.rst
    ATypicalFirstProgram.rst
-   Syntaxerrors.rst
-   RuntimeErrors.rst
-   SemanticErrors.rst
    Comments.rst
    Glossary.rst
    
