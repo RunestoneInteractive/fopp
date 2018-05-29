@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: debug-1-
+   :prefix: debug-3-
    :start: 1
 
 .. index:: debugging, bug
@@ -25,7 +25,7 @@ since. For more about this historic event, see `first bug <http://en.wikipedia.o
 
 **Check your understanding**
 
-.. mchoice:: question100_1_1
+.. mchoice:: question4_3_1
    :answer_a: tracking down programming errors and correcting them.
    :answer_b: removing all the bugs from your house.
    :answer_c: finding all the bugs in the program.

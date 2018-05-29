@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: debug-3
+   :prefix: debug-5
    :start: 1
 
 .. index:: error;runtime, runtime error
@@ -26,7 +26,7 @@ chapters, so it might be a while before you encounter one.
 
 **Check your understanding**
 
-.. mchoice:: question100_3_1
+.. mchoice:: question4_5_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -37,7 +37,7 @@ chapters, so it might be a while before you encounter one.
 
    Which of the following is a run-time error?
 
-.. mchoice:: question100_3_2
+.. mchoice:: question4_5_2
    :answer_a: The programmer.
    :answer_b: The compiler / interpreter.
    :answer_c: The computer.
@@ -49,6 +49,3 @@ chapters, so it might be a while before you encounter one.
    :feedback_d: Your teacher and instructor may be able to find most of your runtime errors, but only because they have experience looking at code and possibly writing code.  With experience runtime errors are easier to find.  But we also have an automated way of finding these types of errors.
 
    Who or what typically finds runtime errors?
-
-
-

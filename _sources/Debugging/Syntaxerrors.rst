@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: debug-2-
+   :prefix: debug-4-
    :start: 1
 
 .. index:: syntax error, error; syntax
@@ -32,13 +32,13 @@ experience, you will make fewer errors and you will also be able to find your er
 
 Can you spot the syntax error in the code below?
 
-.. activecode:: ac100_2_1
+.. activecode:: ac4_4_1
 
    print("Hello World!"
 
 **Check your understanding**
 
-.. mchoice:: question100_2_1
+.. mchoice:: question4_4_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -49,7 +49,7 @@ Can you spot the syntax error in the code below?
 
    Which of the following is a syntax error?
 
-.. mchoice:: question100_2_2
+.. mchoice:: question4_4_2
    :answer_a: The programmer.
    :answer_b: The compiler / interpreter.
    :answer_c: The computer.

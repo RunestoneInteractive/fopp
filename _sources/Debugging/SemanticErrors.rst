@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: debug-4-
+   :prefix: debug-6-
    :start: 1
 
 .. index:: semantic error, logic error, error; semantic, error; logic
@@ -28,7 +28,7 @@ looking at the output of the program and trying to figure out what it is doing.
 
 **Check your understanding**
 
-.. mchoice:: question100_4_1
+.. mchoice:: question4_6_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a semi-colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -39,7 +39,7 @@ looking at the output of the program and trying to figure out what it is doing.
 
    Which of the following is a semantic error?
 
-.. mchoice:: question100_4_2
+.. mchoice:: question4_6_2
    :answer_a: The programmer.
    :answer_b: The compiler / interpreter.
    :answer_c: The computer.

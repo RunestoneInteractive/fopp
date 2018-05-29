@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: debug-5-
+   :prefix: debug-8-
    :start: 1
 
 Experimental Debugging
@@ -46,7 +46,7 @@ practices.
 
 **Check your understanding**
 
-.. mchoice:: question100_5_1
+.. mchoice:: question4_8_1
    :answer_a: programming is the process of writing and gradually debugging a program until it does what you want.
    :answer_b: programming is creative and debugging is routine.
    :answer_c: programming is fun and debugging is work.
