@@ -12,11 +12,9 @@ General Introduction
    MoreAboutPrograms.rst
    FormalandNaturalLanguages.rst
    ATypicalFirstProgram.rst
-   WhatisDebugging.rst
    Syntaxerrors.rst
    RuntimeErrors.rst
    SemanticErrors.rst
-   ExperimentalDebugging.rst
    Comments.rst
    Glossary.rst
    
