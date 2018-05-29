@@ -76,6 +76,40 @@ Incrementing and decrementing are such common operations that programming langua
     x -= 1       # decrement x by 1
     print(x)
 
+Imagine that we wanted to not increment by one each time but instead add together the 
+numbers one through ten, but only one at a time.
+
+.. activecode:: ac2_13_3
+  
+  s = 1
+  print(s)
+  s = s + 2
+  print(s)
+  s = s + 3
+  print(s)
+  s = s + 4
+  print(s)
+  s = s + 5
+  print(s)
+  s = s + 6
+  print(s)
+  s = s + 7
+  print(s)
+  s = s + 8
+  print(s)
+  s = s + 9
+  print(s)
+  s = s + 10
+  print(s)
+
+After the initial statement, where we assign ``s`` to 1, we can add the current value of 
+``s`` and the next number that we want to add (2 all the way up to 10) and then finally 
+reassign that that value to ``s`` so that the variable is updated after each line in the 
+code.
+
+This will be tedious when we have many things to add together. Later you'll read about an 
+easier way to do this kind of task.
+
 
 **Check your understanding**
 

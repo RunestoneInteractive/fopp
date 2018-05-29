@@ -43,45 +43,12 @@ Here is what **reassignment** looks like in a reference diagram:
 .. image:: Figures/reassign1.png
    :alt: reassignment
 
-We can also use reassignment to sum a total. The following problem will add together the numbers one through ten one at a time.
-
-.. activecode:: ac2_12_2
-  
-  s = 1
-  print(s)
-  s = s + 2
-  print(s)
-  s = s + 3
-  print(s)
-  s = s + 4
-  print(s)
-  s = s + 5
-  print(s)
-  s = s + 6
-  print(s)
-  s = s + 7
-  print(s)
-  s = s + 8
-  print(s)
-  s = s + 9
-  print(s)
-  s = s + 10
-  print(s)
-
-After the initial statement, where we assign ``s`` to 1, we can add the current value of 
-``s`` and the next number that we want to add (2 all the way up to 10) and then finally 
-reassign that that value to ``s`` so that the variable is updated after each line in the 
-code.
-
-This will be tedious when we have many things to add together. Later you'll read about an 
-easier way to do this kind of task.
-
 It is important to note that in mathematics, a statement of equality is always true.  If ``a is equal to b``
 now, then ``a will always equal to b``. In Python, an assignment statement can make
 two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
 they don't have to stay that way:
 
-.. activecode:: ac2_12_3
+.. activecode:: ac2_12_2
 
     a = 5
     b = a    # after executing this line, a and b are now equal
