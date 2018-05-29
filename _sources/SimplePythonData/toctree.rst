@@ -19,5 +19,7 @@ General Introduction
    Reassignment.rst
    UpdatingVariables.rst
    Input.rst
+   Glossary.rst
+   Exercises.rst
    
    
