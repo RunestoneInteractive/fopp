@@ -10,3 +10,4 @@ Sequences
    IndexOperatorWorkingwiththeCharactersofaString.rst
    Length.rst
    TheSliceOperator.rst
+   ConcatenationandRepetition.rst
