@@ -9,3 +9,4 @@ Sequences
    StringsandLists.rst
    IndexOperatorWorkingwiththeCharactersofaString.rst
    Length.rst
+   TheSliceOperator.rst
