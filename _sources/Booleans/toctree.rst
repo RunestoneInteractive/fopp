@@ -6,3 +6,4 @@ Booleans
    :maxdepth: 2
 
    BooleanValuesandBooleanExpressions.rst
+   Logicaloperators.rst
