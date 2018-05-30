@@ -62,6 +62,18 @@ two lines of code from above.
     
     lastch = fruit[len(fruit)-1]
 
+As with strings, the function ``len`` returns the length of a list (the number
+of items in the list).  However, since lists can have items which are themselves sequences (e.g., strings), 
+it important to note that ``len`` only returns the top-most length.
+
+.. activecode:: ac5_4_4
+
+    alist =  ["hello", 2.0, 5]
+    print(len(alist))
+    print(len(alist[0]))
+
+Note that ``alist[0]`` is the string ``"hello"``, which has length 5. 
+
 **Check your understanding**
 
 .. mchoice:: question5_4_1
@@ -78,3 +90,34 @@ two lines of code from above.
       s = "python rocks"
       print(len(s))
 
+.. mchoice:: question5_4_2 
+   :answer_a: 4
+   :answer_b: 5
+   :correct: b
+   :feedback_a: len returns the actual number of items in the list, not the maximum index value.
+   :feedback_b: Yes, there are 5 items in this list.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     alist = [3, 67, "cat", 3.14, False]
+     print(len(alist))
+     
+.. mchoice:: question5_4_3 
+   :answer_a: 2
+   :answer_b: 3
+   :answer_c: 4
+   :answer_d: 5
+   :correct: b
+   :feedback_a: The list begins with the second item of L and includes everything up to but not including the last item.
+   :feedback_b: Yes, there are 3 items in this list.
+   :feedback_c: The list begins with the second item of L and includes everything up to but not including the last item.
+   :feedback_d: The list begins with the second item of L and includes everything up to but not including the last item.
+
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     L = [0.34, '6', 'SI106', 'Python', -2]
+     print(len(L[1:-1]))   

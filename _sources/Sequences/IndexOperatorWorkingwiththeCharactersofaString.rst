@@ -57,7 +57,7 @@ Note that indexing returns a *string* --- Python has no special type for a singl
 It is just a string of length 1.
 
 Index Operator: Accessing Elements of a List
----------------------------------------------------
+============================================
 
 The syntax for accessing the elements of a list is the same as the syntax for
 accessing the characters of a string.  We use the index operator ( ``[]`` -- not to
@@ -122,10 +122,12 @@ will learn much more if you force yourself to make a prediction before you see t
    :answer_a: [ ]
    :answer_b: 3.14
    :answer_c: False
+   :answer_d: "dog"
    :correct: b
    :feedback_a: The empty list is at index 4.
    :feedback_b: Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.
    :feedback_c: False is at index 6.
+   :feedback_d: Look again, the element at index 3 is a list. This list only counts as one element.
    
    What is printed by the following statements?
    

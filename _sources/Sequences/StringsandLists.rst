@@ -38,3 +38,34 @@ index. The values that make up a list are called its **elements**. Lists are sim
 are ordered collections of characters, except that the elements of a list can have any type and for 
 any one list, the items can be of different types.
 
+List Values
+-----------
+
+There are several ways to create a new list.  The simplest is to enclose the
+elements in square brackets ( ``[`` and ``]``).
+
+.. sourcecode:: python
+    
+    [10, 20, 30, 40]
+    ["spam", "bungee", "swallow"]
+
+The first example is a list of four integers. The second is a list of three
+strings. As we said above, the elements of a list don't have to be the same type.  The following
+list contains a string, a float, an integer, and
+another list.
+
+.. sourcecode:: python
+    
+    ["hello", 2.0, 5, [10, 20]]
+
+**Check your understanding**
+
+.. mchoice:: question5_2_1 
+   :answer_a: False
+   :answer_b: True
+   :correct: a
+   :feedback_a: Yes, unlike strings, lists can consist of any type of Python data.
+   :feedback_b: Lists are heterogeneous, meaning they can have different types of data.
+
+   A list can contain only integer items.
+
