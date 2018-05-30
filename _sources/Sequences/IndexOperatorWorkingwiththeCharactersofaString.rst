@@ -24,14 +24,11 @@ selects a single character from a string.  The characters are accessed by their 
 index value.  For example, in the string shown below, the 14 characters are indexed left to right 
 from postion 0 to position 13.  
 
-
 .. image:: Figures/indexvalues.png
    :alt: index values
 
-It is also the case that the positions are named from right to left using negative numbers where -1 is the rightmost
-index and so on.
-Note that the character at index 6 (or -8) is the blank character.
-
+It is also the case that the positions are named from right to left using negative numbers where -1 is 
+the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.
 
 .. activecode:: ac5_3_1
     
@@ -58,6 +55,28 @@ expression so long as it evaluates to a valid index value.
 
 Note that indexing returns a *string* --- Python has no special type for a single character.
 It is just a string of length 1.
+
+Index Operator: Accessing Elements of a List
+---------------------------------------------------
+
+The syntax for accessing the elements of a list is the same as the syntax for
+accessing the characters of a string.  We use the index operator ( ``[]`` -- not to
+be confused with an empty list). The expression inside the brackets specifies
+the index. Remember that the indices start at 0. Any integer expression can be used
+as an index and as with strings, negative index values will locate items from the right instead
+of from the left.
+
+Try to predict what will be printed out by the following code, and then run it to check your
+prediction. (Actually, it's a good idea to always do that with the code examples. You 
+will learn much more if you force yourself to make a prediction before you see the output.)
+
+.. activecode:: ac5_3_2
+    
+    numbers = [17, 123, 87, 34, 66, 8398, 44]
+    print(numbers[2])
+    print(numbers[9-8])
+    print(numbers[-2])
+    print(numbers[len(numbers)-1])
 
 **Check your understanding**
 
@@ -98,6 +117,22 @@ It is just a string of length 1.
    
       s = "python rocks"
       print(s[2] + s[-4])
+
+.. mchoice:: question5_3_3
+   :answer_a: [ ]
+   :answer_b: 3.14
+   :answer_c: False
+   :correct: b
+   :feedback_a: The empty list is at index 4.
+   :feedback_b: Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.
+   :feedback_c: False is at index 6.
+   
+   What is printed by the following statements?
+   
+   .. code-block:: python
+
+     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+     print(alist[5])
 
 .. note::
    Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
