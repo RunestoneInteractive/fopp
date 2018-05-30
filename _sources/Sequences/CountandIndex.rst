@@ -18,14 +18,14 @@ As you create more complex programs, you will find that some tasks are commonly 
 built-in functions and methods to help you with these tasks. This page will cover two helpful methods 
 for both strings and lists: count and index.
 
-You've learned about methods before when drawing with the turtle module. There, you used things like 
+You've learned about methods before when drawing with the turtle module. There, you used 
 ``.forward(50)`` and ``.color("purple")`` to complete actions. We refer to forward and color as methods 
 of the turtle class. Objects like strings and lists also have methods that we can use.
 
 Count
 -----
 
-The first method we'll talk about is called ``count.`` It requires that you provide one argument, which 
+The first method we'll talk about is called ``count``. It requires that you provide one argument, which 
 is what you would like to count. The method then returns the number of times that the argument occured 
 in the string/list the method was used on. There are some differences between count for strings and 
 count for lists. When you use count on a string, the argument can only be a string. You can't count how 

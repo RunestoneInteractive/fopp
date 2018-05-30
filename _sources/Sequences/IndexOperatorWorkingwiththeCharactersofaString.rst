@@ -76,7 +76,6 @@ will learn much more if you force yourself to make a prediction before you see t
     print(numbers[2])
     print(numbers[9-8])
     print(numbers[-2])
-    print(numbers[len(numbers)-1])
 
 **Check your understanding**
 
