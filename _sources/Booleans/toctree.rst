@@ -7,4 +7,5 @@ Booleans
 
    BooleanValuesandBooleanExpressions.rst
    Logicaloperators.rst
+   Theinandnotinoperators.rst
    PrecedenceofOperators.rst

@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: bool-3-
+   :prefix: bool-4-
    :start: 1
 
 Precedence of Operators
@@ -34,12 +34,26 @@ Level     Category        Operators
 
   This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
 
-  .. activecode:: ac100_3_1
+  .. activecode:: ac100_4_1
 
+.. admonition:: Common Mistake!
+
+   Students often incorrectly combine the in and or operators. For example, if they want to check
+   that the letter x is inside of either of two variables then they tend to write it the following 
+   way: ``'x' in y or z``
+
+   Written this way, the code would not always do what the programmer intended. This is because the 
+   ``in`` operator is only on the left side of the or statement. It doesn't get implemented on both 
+   sides of the or statement. In order to properly check that x is inside of either variable, the in 
+   operator must be used on both sides which looks like this:
+
+   .. sourcecode:: python
+
+       'x' in y or 'x' in z
 
 **Check your understanding**
 
-.. mchoice:: question100_3_1
+.. mchoice:: question100_4_1
    :answer_a: ((5*3) &gt; 10) and ((4+6) == 11)
    :answer_b: (5*(3 &gt; 10)) and (4 + (6 == 11))
    :answer_c: ((((5*3) &gt; 10) and 4)+6) == 11
@@ -55,7 +69,7 @@ Level     Category        Operators
 
 Here is an animation for the above expression:
 
-.. showeval:: se_ac100_3_1
+.. showeval:: se_ac100_4_1
    :trace_mode: true
 
    5 * 3 > 10 and 4 + 6 == 11
