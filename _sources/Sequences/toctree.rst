@@ -8,3 +8,4 @@ Sequences
    intro-Sequences.rst
    StringsandLists.rst
    IndexOperatorWorkingwiththeCharactersofaString.rst
+   Length.rst
