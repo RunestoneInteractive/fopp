@@ -10,4 +10,4 @@ Python Turtle
    InstancesAHerdofTurtles.rst
    ObjectInstances.rst
    RepetitionwithaForLoop.rst
-   
+   SummaryOfTurtleMethods.rst
