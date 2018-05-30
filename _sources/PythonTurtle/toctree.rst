@@ -9,4 +9,5 @@ Python Turtle
    OurFirstTurtleProgram.rst
    InstancesAHerdofTurtles.rst
    ObjectInstances.rst
+   RepetitionwithaForLoop.rst
    
