@@ -6,3 +6,4 @@ Sequences
    :maxdepth: 2
 
    intro-Sequences.rst
+   StringsandLists.rst
