@@ -5,5 +5,6 @@ Iteration
    :caption: Iteration
    :maxdepth: 2
 
-   intro-TheWayoftheProgram.rst
+   intro-Iteration.rst
+   TheforLoop.rst
    
