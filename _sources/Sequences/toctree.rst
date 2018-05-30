@@ -11,3 +11,4 @@ Sequences
    Length.rst
    TheSliceOperator.rst
    ConcatenationandRepetition.rst
+   CountandIndex.rst
