@@ -8,4 +8,6 @@ Iteration
    intro-Iteration.rst
    TheforLoop.rst
    FlowofExecutionoftheforLoop.rst
+   Stringsandforloops.rst
+   Listsandforloops.rst
    
