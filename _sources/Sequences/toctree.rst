@@ -12,3 +12,4 @@ Sequences
    TheSliceOperator.rst
    ConcatenationandRepetition.rst
    CountandIndex.rst
+   SplitandJoin.rst
