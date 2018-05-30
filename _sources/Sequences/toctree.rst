@@ -7,3 +7,4 @@ Sequences
 
    intro-Sequences.rst
    StringsandLists.rst
+   IndexOperatorWorkingwiththeCharactersofaString.rst
