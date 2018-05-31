@@ -11,8 +11,8 @@
    :prefix: turtle-4-
    :start: 1
 
-Summary
-=======
+Object Oriented Concepts
+========================
 
 It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully.
 
