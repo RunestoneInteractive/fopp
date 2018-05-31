@@ -12,4 +12,5 @@ Sequence Mutation
    CloningLists.rst
    MutatingMethods.rst
    AppendversusConcatenate.rst
+   NonmutatingMethodsonStrings.rst
    
