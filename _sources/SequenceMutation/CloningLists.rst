@@ -23,7 +23,7 @@ The easiest way to clone a list is to use the slice operator.
 Taking any slice of ``a`` creates a new list. In this case the slice happens to
 consist of the whole list.
 
-.. codelens:: clens7_6_1
+.. codelens:: clens8_5_1
     :python: py3
     :showoutput:
     
@@ -43,7 +43,7 @@ codelens that ``a`` and ``b`` are entirely different list objects.
 
 **Check your understanding**
 
-.. mchoice:: question7_5_1
+.. mchoice:: question8_5_1
    :answer_a: [4,2,8,999,5,4,2,8,6,5]
    :answer_b: [4,2,8,999,5]
    :answer_c: [4,2,8,6,5]

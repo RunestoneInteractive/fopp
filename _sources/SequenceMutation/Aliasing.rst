@@ -17,7 +17,7 @@ Aliasing
 Since variables refer to objects, if we assign one variable to another, both
 variables refer to the same object:
 
-.. activecode:: listalias1
+.. activecode:: ac8_4_1
     
     a = [81, 82, 83]
     b = a
@@ -33,7 +33,7 @@ is **aliased**. Changes made with one alias affect the other.  In the codelens e
 to the same list after executing the assignment statement ``b = a``.
 
 
-.. codelens:: chp09_is3
+.. codelens:: ac8_4_2
     :python: py3
     :showoutput:
     
@@ -60,7 +60,7 @@ economize.
 
 **Check your understanding**
 
-.. mchoice:: test_question9_10_1
+.. mchoice:: question8_4_1
    :answer_a: [4,2,8,6,5]
    :answer_b: [4,2,8,999,5]
    :correct: b

@@ -31,7 +31,7 @@ the ``[]`` operator on the left side of an assignment, with the intention of cha
 in a string. For example, in the following code, we would like to change the first letter of 
 ``greeting``.
 
-.. activecode:: ac7_1_1
+.. activecode:: ac8_1_1
     
     greeting = "Hello, world!"
     greeting[0] = 'J'            # ERROR!
@@ -43,7 +43,7 @@ runtime error ``TypeError: 'str' object does not support item assignment``.
 Strings are **immutable**, which means you cannot change an existing string. The
 best you can do is create a new string that is a variation on the original.
 
-.. activecode:: ac7_1_2
+.. activecode:: ac8_1_2
     
     greeting = "Hello, world!"
     newGreeting = 'J' + greeting[1:]
@@ -60,7 +60,7 @@ Unlike strings, lists are **mutable**. This means we can change an item in a lis
 it directly as part of the assignment statement. Using the indexing operator (square brackets) on 
 the left side of an assignment, we can update one of the list items.
 
-.. activecode:: ac7_1_3
+.. activecode:: ac8_1_3
     
     fruit = ["banana", "apple", "cherry"]
     print(fruit)
@@ -76,7 +76,7 @@ for strings. Recall that strings are immutable.
 Here is the same example in codelens so that you can step through the statements and see the 
 changes to the list elements.
 
-.. codelens:: clens7_1_1
+.. codelens:: clens8_1_1
     :python: py3
 
     fruit = ["banana", "apple", "cherry"]
@@ -86,7 +86,7 @@ changes to the list elements.
 
 By combining assignment with the slice operator we can update several elements at once.
 
-.. activecode:: ac7_1_4
+.. activecode:: ac8_1_4
     
     alist = ['a', 'b', 'c', 'd', 'e', 'f']
     alist[1:3] = ['x', 'y']
@@ -94,7 +94,7 @@ By combining assignment with the slice operator we can update several elements a
 
 We can also remove elements from a list by assigning the empty list to them.
 
-.. activecode:: ac7_1_5
+.. activecode:: ac8_1_5
     
     alist = ['a', 'b', 'c', 'd', 'e', 'f']
     alist[1:3] = []
@@ -103,7 +103,7 @@ We can also remove elements from a list by assigning the empty list to them.
 We can even insert elements into a list by squeezing them into an empty slice at the
 desired location.
 
-.. activecode:: ac7_1_6
+.. activecode:: ac8_1_6
     
     alist = ['a', 'd', 'f']
     alist[1:1] = ['b', 'c']
@@ -116,7 +116,7 @@ List Assignment
 
 It is possible to assign a list to the value of an already existing list.
 
-.. activecode:: ac7_1_7
+.. activecode:: ac8_1_7
 
     a = ['wow', 'zoinks']
     b = a
@@ -129,7 +129,7 @@ value of a and see what happens to both lists!
 
 **Check your understanding**
 
-.. mchoice:: question7_1_1
+.. mchoice:: question8_1_1
    :answer_a: [4,2,True,8,6,5]
    :answer_b: [4,2,True,6,5]
    :answer_c: Error, it is illegal to assign
@@ -146,7 +146,7 @@ value of a and see what happens to both lists!
      alist[2] = True
      print(alist)
 
-.. mchoice:: question7_1_2
+.. mchoice:: question8_1_2
    :answer_a: Ball
    :answer_b: Call
    :answer_c: Error
@@ -163,7 +163,7 @@ value of a and see what happens to both lists!
       s[0] = "C"
       print(s)
     
-.. mchoice:: question7_1_3
+.. mchoice:: question8_1_3
    :answer_a: ['Jamboree', 'get-together', 'party']
    :answer_b: ['celebration']
    :answer_c: ['celebration', 'Jamboree', 'get-together', 'party']

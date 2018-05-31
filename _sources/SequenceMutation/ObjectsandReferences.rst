@@ -41,7 +41,7 @@ refer to.
 We can test whether two names refer to the same object using the *is*
 operator.  The *is* operator will return true if the two references are to the same object.  In other words, the references are the same.  Try our example from above.
 
-.. activecode:: ac7_3_1
+.. activecode:: ac8_3_1
 
     a = "banana"
     b = "banana"
@@ -55,7 +55,7 @@ that refer to the same string value refer to the same object.
 
 This is not the case with lists.  Consider the following example.  Here, ``a`` and ``b`` refer to two different lists, each of which happens to have the same element values.
 
-.. activecode:: ac7_3_2
+.. activecode:: ac8_3_2
     
     a = [81,82,83]
     b = [81,82,83]
@@ -75,7 +75,7 @@ There is one other important thing to notice about this reference diagram.  The 
 
 Here is the example in codelens.  Pay particular attention to the ``id`` values.
 
-.. codelens:: clens7_3_1
+.. codelens:: clens8_3_1
     :python: py3
     :showoutput:
     

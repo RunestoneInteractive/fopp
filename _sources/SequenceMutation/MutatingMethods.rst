@@ -31,7 +31,7 @@ The dot operator can also be used to access built-in methods of list objects.
 the list. Continuing with this example, we show several other list methods.  Many of them are
 easy to understand.  
 
-.. activecode:: ac7_6_1
+.. activecode:: ac8_6_1
 
     mylist = []
     mylist.append(5)
@@ -98,7 +98,7 @@ It is important to remember that methods like ``append``, ``sort``,  and ``rever
 increment a number, as in ``x = x + 1``, doing the analogous thing with these operations will lose 
 the entire list contents (see line 8 below).
 
-.. activecode:: ac7_6_2
+.. activecode:: ac8_6_2
 
     mylist = []
     mylist.append(5)
@@ -112,7 +112,7 @@ the entire list contents (see line 8 below).
 
 **Check your understanding**
 
-.. mchoice:: question7_6_1
+.. mchoice:: question8_6_1
    :answer_a: [4,2,8,6,5,False,True]
    :answer_b: [4,2,8,6,5,True,False]
    :answer_c: [True,False,4,2,8,6,5]

@@ -18,7 +18,7 @@ Using slices to delete list elements can be awkward and therefore error-prone.
 Python provides an alternative that is more readable.
 The ``del`` statement removes an element from a list by using its position.
 
-.. activecode:: ac7_2_1
+.. activecode:: ac8_2_1
     
     a = ['one', 'two', 'three']
     del a[1]
@@ -36,4 +36,4 @@ As usual, slices select all the elements up to, but not including, the second in
 
     This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
 
-    .. activecode:: ac7_2_2
+    .. activecode:: ac8_2_2

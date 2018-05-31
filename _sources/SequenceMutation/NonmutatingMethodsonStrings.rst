@@ -18,7 +18,7 @@ The "dot notation" is the way we connect an object to one of its attributes or t
 that object. There are a wide variety of methods for string objects.  
 Try the following program.
 
-.. activecode:: ac7_8_1
+.. activecode:: ac8_8_1
 
     ss = "Hello, World"
     print(ss.upper())
@@ -53,7 +53,7 @@ replace     old, new            Replaces all occurrences of old substring with n
 You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the 
 `Python documentation for strings <http://docs.python.org/3/library/stdtypes.html#string-methods>`_.
 
-.. activecode:: ac7_8_2
+.. activecode:: ac8_8_2
 
     ss = "    Hello, World    "
 
@@ -66,7 +66,7 @@ You should experiment with these methods so that you understand what they do.  N
     print(news)
 
 
-.. activecode:: ac7_8_3
+.. activecode:: ac8_8_3
 
 
     food = "banana bread"
@@ -75,7 +75,7 @@ You should experiment with these methods so that you understand what they do.  N
 
 **Check your understanding**
 
-.. mchoice:: question7_8_1
+.. mchoice:: question8_8_1
    :answer_a: 0
    :answer_b: 2
    :answer_c: 3
@@ -91,7 +91,7 @@ You should experiment with these methods so that you understand what they do.  N
       s = "python rocks"
       print(s.count("o") + s.count("p"))
 
-.. mchoice:: question7_8_2
+.. mchoice:: question8_8_2
    :answer_a: yyyyy
    :answer_b: 55555
    :answer_c: n

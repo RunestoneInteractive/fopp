@@ -18,7 +18,7 @@ The ``append`` method adds a new item to the end of a list.  It is also possible
 
 Consider the following example.  The original list has 3 integers.  We want to add the word "cat" to the end of the list.
 
-.. codelens:: clens7_7_1
+.. codelens:: clens8_7_1
     :python: py3
 
     origlist = [45,32,88]
@@ -33,7 +33,7 @@ write an assignment statement that uses the accumulator pattern::
 Note that the word "cat" needs to be placed in a list since the concatenation operator needs two lists 
 to do its work.
 
-.. codelens:: clens7_7_2
+.. codelens:: clens8_7_2
     :python: py3
 
     origlist = [45,32,88]
@@ -47,7 +47,7 @@ following codelens example where
 "cat" added to the end.  ``origlist`` still contains the three values it did before the concatenation. 
 This is why the assignment operation is necessary as part of the accumulator pattern.
 
-.. codelens:: clens7_7_3
+.. codelens:: clens8_7_3
     :python: py3
 
     origlist = [45,32,88]
@@ -57,7 +57,7 @@ This is why the assignment operation is necessary as part of the accumulator pat
 
 **Check your understanding**
 
-.. mchoice:: question7_7_1
+.. mchoice:: question8_7_1
    :answer_a: [4,2,8,6,5,999]
    :answer_b: Error, you cannot concatenate a list with an integer.
    :correct: b
