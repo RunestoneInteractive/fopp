@@ -8,4 +8,6 @@ Sequence Mutation
    Mutability.rst
    ListDeletion.rst
    ObjectsandReferences.rst
+   Aliasing.rst
+   CloningLists.rst
    
