@@ -13,4 +13,5 @@ Sequence Mutation
    MutatingMethods.rst
    AppendversusConcatenate.rst
    NonmutatingMethodsonStrings.rst
+   TheAccumulatorPatternwithLists.rst
    
