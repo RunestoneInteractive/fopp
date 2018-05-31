@@ -11,4 +11,5 @@ Sequence Mutation
    Aliasing.rst
    CloningLists.rst
    MutatingMethods.rst
+   AppendversusConcatenate.rst
    
