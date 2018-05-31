@@ -26,8 +26,10 @@ Strings are Immutable
 ---------------------
 
 One final thing that makes strings different from some other Python collection types is that
-you are not allowed to modify the individual characters in the collection.  It is tempting to use the ``[]`` operator on the left side of an assignment,
-with the intention of changing a character in a string.  For example, in the following code, we would like to change the first letter of ``greeting``.
+you are not allowed to modify the individual characters in the collection. It is tempting to use 
+the ``[]`` operator on the left side of an assignment, with the intention of changing a character 
+in a string. For example, in the following code, we would like to change the first letter of 
+``greeting``.
 
 .. activecode:: ac7_1_1
     
@@ -54,9 +56,9 @@ The solution here is to concatenate a new first letter onto a slice of
 Lists are Mutable
 -----------------
 
-Unlike strings, lists are **mutable**.  This means we can change an item in a list by accessing
-it directly as part of the assignment statement. Using the indexing operator (square brackets) on the left side of an assignment, we can
-update one of the list items.
+Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing
+it directly as part of the assignment statement. Using the indexing operator (square brackets) on 
+the left side of an assignment, we can update one of the list items.
 
 .. activecode:: ac7_1_3
     
@@ -68,11 +70,11 @@ update one of the list items.
     print(fruit)
 
 
-An
-assignment to an element of a list is called **item assignment**. Item
-assignment does not work for strings.  Recall that strings are immutable.
+An assignment to an element of a list is called **item assignment**. Item assignment does not work 
+for strings. Recall that strings are immutable.
 
-Here is the same example in codelens so that you can step thru the statements and see the changes to the list elements.
+Here is the same example in codelens so that you can step through the statements and see the 
+changes to the list elements.
 
 .. codelens:: clens7_1_1
     :python: py3
@@ -81,7 +83,6 @@ Here is the same example in codelens so that you can step thru the statements an
 
     fruit[0] = "pear"
     fruit[-1] = "orange"
-
 
 By combining assignment with the slice operator we can update several elements at once.
 
@@ -110,6 +111,21 @@ desired location.
     alist[4:4] = ['e']
     print(alist)
 
+List Assignment
+---------------
+
+It is possible to assign a list to the value of an already existing list.
+
+.. activecode:: ac7_1_7
+
+    a = ['wow', 'zoinks']
+    b = a
+    print(b)
+
+If you step through the above example in code lens, you will see how - instead of two lists 
+existing - both ``a`` and ``b`` point to the list ``['wow', 'zoinks']``. This can lead to some 
+unexpected behavior which you will learn about later. Try changing b after it's been assigned the 
+value of a and see what happens to both lists!
 
 **Check your understanding**
 
@@ -147,3 +163,22 @@ desired location.
       s[0] = "C"
       print(s)
     
+.. mchoice:: question7_1_3
+   :answer_a: ['Jamboree', 'get-together', 'party']
+   :answer_b: ['celebration']
+   :answer_c: ['celebration', 'Jamboree', 'get-together', 'party']
+   :answer_d: ['Jamboree', 'get-together', 'party', 'celebration']
+   :correct: a
+   :feedback_a: Yes, the value of y has been reassigned to the value of w.
+   :feedback_b: No, that was the inital value of y, but y has changed.
+   :feedback_c: No, when we assign a list to another list it does not concatenate the lists together.
+   :feedback_d: No, when we assign a list to another list it does not concatenate the lists together.
+
+   What is the value of y after the following code has been evaluated:
+   
+   .. code-block:: python
+
+      w = ['Jamboree', 'get-together', 'party']
+      y = ['celebration']
+      y = w
+
