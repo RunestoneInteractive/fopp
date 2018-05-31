@@ -10,4 +10,5 @@ Iteration
    FlowofExecutionoftheforLoop.rst
    Stringsandforloops.rst
    Listsandforloops.rst
+   TheAccumulatorPattern.rst
    
