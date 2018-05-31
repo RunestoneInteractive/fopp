@@ -13,4 +13,5 @@ Iteration
    TheAccumulatorPattern.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    
