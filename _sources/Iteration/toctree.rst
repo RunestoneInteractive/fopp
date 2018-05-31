@@ -12,4 +12,5 @@ Iteration
    Listsandforloops.rst
    TheAccumulatorPattern.rst
    Glossary.rst
+   Exercises.rst
    
