@@ -10,4 +10,5 @@ Sequence Mutation
    ObjectsandReferences.rst
    Aliasing.rst
    CloningLists.rst
+   MutatingMethods.rst
    
