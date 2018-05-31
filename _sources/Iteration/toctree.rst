@@ -11,4 +11,5 @@ Iteration
    Stringsandforloops.rst
    Listsandforloops.rst
    TheAccumulatorPattern.rst
+   Glossary.rst
    
