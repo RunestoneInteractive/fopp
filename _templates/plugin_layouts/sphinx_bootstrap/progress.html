@@ -61,7 +61,7 @@
                 }
             }
             document.getElementById("locationText").innerHTML = book.curChapter + "<br>" + book.curSection;
-            document.getElementById("bookProgress").innerHTML = "Progress in Book: " + book.curBookPercent + "%";
+            document.getElementById("bookProgress").innerHTML = "Book: " + book.curBookPercent + "%";
             document.getElementById("progressBar").style.width = book.curChapterPercent-1 + "%";
         }
     }
@@ -70,15 +70,14 @@
     }, false);
 </script>
 
-<div class="navbar-collapse collapse navbar-ex1-collapse">
-    <div style="width:49%; float:right">
-        <p id="locationText" style="margin-bottom:0px; margin-top:7px; float:left; width:65%"></p>   
-        <div style="width:35%; float:right;">
-            <p style="float:left; margin-bottom:0px; margin-top:7px; padding-bottom:0px;">Progress in Chapter: </p>
+
+    <div >
+        <p id="locationText" style="margin-bottom:0px; margin-top:7px; float:left; width:65%">Chapter</p>   
+        <div >
+            <p >Chapter: </p>
             <div id="chapterProgress" style="margin-left:5px; margin-top:12px; float:left; width:25%; border:1px solid grey;">
                 <div id="progressBar" style="margin-left:0px; margin-top:1px; width:1%; height:9px; background-color:limegreen;"></div>
             </div>
-            <p id="bookProgress" style="padding-top:0px; margin:0px; float:left;">Progress in Book: 0%</p>          
+            <p id="bookProgress" style="padding-top:0px; margin:0px; float:left;">Book: 0%</p>          
         </div>     
     </div>
-</div>
