@@ -13,4 +13,5 @@ Conditionals
    TheAccumulatorPatternwithConditionals.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    
