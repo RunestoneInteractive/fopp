@@ -15,4 +15,5 @@ Sequence Mutation
    NonmutatingMethodsonStrings.rst
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
+   Glossary.rst
    
