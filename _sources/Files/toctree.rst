@@ -12,4 +12,6 @@ Files
    Iteratingoverlinesinafile.rst
    FilesRecipe.rst
    WritingTextFiles.rst
+   Glossary.rst
+   Exercises.rst
    
