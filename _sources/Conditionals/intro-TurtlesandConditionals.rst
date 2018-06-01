@@ -44,10 +44,11 @@ behavior of the program accordingly.
 
 In the above code, we first set Amy's pen color to be "Pink" and then move her forward. Next we want one of 
 two actions to happen, either Amy should move right and then forward, or left and then forward. The direction 
-that we want her to go in depends on her pen color. If she's pink then we should have her move right and 
-forward. Else (or otherwise) she should move left and forward. Both things can't happen though. She can't 
-move right, forward *and* left, forward. We then do the same thing for Kenji, though in this case, we didn't 
-change Kenji's pen color.
+that we want her to go in depends on her pen color. If her pen color is set to pink - which is determined by 
+writing ``Amy.pencolor() == "Pink"`` which checks to see if the value returned by ``Amy.pencolor()`` is the 
+equivalent to the string "Pink" - then we should have her move right and forward. Else (or otherwise) she 
+should move left and forward. Both things can't happen though. She can't move right, forward *and* left, 
+forward. We then do the same thing for Kenji, though in this case, we didn't change Kenji's pen color.
 
 It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up Amy 
 and Kenji's colors, so why would we need a conditional? While it's true that this isn't the *best* place to 
