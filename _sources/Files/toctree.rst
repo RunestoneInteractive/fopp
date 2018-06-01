@@ -9,4 +9,7 @@ Files
    FindingaFileonyourDisk.rst
    ReadingaFile.rst
    AlternativeFileReadingMethods.rst
+   Iteratingoverlinesinafile.rst
+   FilesRecipe.rst
+   WritingTextFiles.rst
    
