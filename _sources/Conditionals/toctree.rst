@@ -11,4 +11,6 @@ Conditionals
    Nestedconditionals.rst
    Chainedconditionals.rst
    TheAccumulatorPatternwithConditionals.rst
+   Glossary.rst
+   Exercises.rst
    
