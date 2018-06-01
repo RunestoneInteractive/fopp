@@ -7,4 +7,5 @@ Files
 
    intro-WorkingwithDataFiles.rst
    FindingaFileonyourDisk.rst
+   ReadingaFile.rst
    
