@@ -16,4 +16,5 @@ Sequence Mutation
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
    Glossary.rst
+   Exercises.rst
    
