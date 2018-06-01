@@ -8,5 +8,5 @@ Conditionals
    intro-TurtlesandConditionals.rst
    ConditionalExecutionBinarySelection.rst
    OmittingtheelseClauseUnarySelection.rst
-   
+   Nestedconditionals.rst
    
