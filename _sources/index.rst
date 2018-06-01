@@ -55,6 +55,7 @@ Table of Contents
    :maxdepth: 3 
 
    GeneralIntro/toctree.rst
+   UnderstandingCode/toctree.rst
    SimplePythonData/toctree.rst
    Debugging/toctree.rst
    PythonTurtle/toctree.rst
