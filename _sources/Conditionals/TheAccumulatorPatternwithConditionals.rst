@@ -38,6 +38,18 @@ At the end, we have accumulated a the total number of letters in the phrase. Wit
 we would have only been able to count how many characters there are in the string and not been able to 
 differentiate between spaces and non-spaces.
 
+We can use conditionals to also count if particular items are in a string or list. The following code finds all occurances of vowels in the following string.
+
+.. activecode:: ac7_6_2
+
+    s = "what if we went to the zoo"
+    x = 0
+    for i in s:
+        if i in ['a', 'e', 'i', 'o', 'u']:
+            x += 1
+    print(x)
+
+
 Accumulating the Max Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -47,7 +59,7 @@ accumulator variable to a different value.
 
 The following example shows how we can get the maximum value from a list of integers.
 
-.. activecode:: ac7_6_2
+.. activecode:: ac7_6_3
 
    nums = [9, 3, 8, 11, 5, 29, 2]
    best_num = 0
@@ -67,7 +79,7 @@ happen to our code? What if we were looking for the smallest number but we initi
 zero? To get around this issue, we can initialize the accumulator variable using one of the numbers in the 
 list.
 
-.. activecode:: ac7_6_3
+.. activecode:: ac7_6_4
 
    nums = [9, 3, 8, 11, 5, 29, 2]
    best_num = nums[0]
