@@ -70,13 +70,13 @@ use a conditional, we can combine conditional statements with for loops to make 
         if Amy.pencolor() == "Purple":
             Amy.forward(50)
             Amy.right(59)
-        if Amy.pencolor() == "Yellow":
+        elif Amy.pencolor() == "Yellow":
             Amy.forward(65)
             Amy.left(98)
-        if Amy.pencolor() == "Orange":
+        elif Amy.pencolor() == "Orange":
             Amy.forward(30)
             Amy.left(60)
-        if Amy.pencolor() == "Pink":
+        elif Amy.pencolor() == "Pink":
             Amy.forward(50)
             Amy.right(57)
 

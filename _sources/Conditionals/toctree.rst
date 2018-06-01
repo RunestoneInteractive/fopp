@@ -9,4 +9,5 @@ Conditionals
    ConditionalExecutionBinarySelection.rst
    OmittingtheelseClauseUnarySelection.rst
    Nestedconditionals.rst
+   Chainedconditionals.rst
    
