@@ -10,4 +10,5 @@ Conditionals
    OmittingtheelseClauseUnarySelection.rst
    Nestedconditionals.rst
    Chainedconditionals.rst
+   TheAccumulatorPatternwithConditionals.rst
    
