@@ -58,12 +58,12 @@ Now it's time to combine this with the Turtle module. We can do a lot of cool st
    import turtle
    wn = turtle.Screen()
    
-   Elan = turtle.Turtle()
+   elan = turtle.Turtle()
 
    distance = 50
    for _ in range(10):
-       Elan.forward(distance)
-       Elan.right(90)
+       elan.forward(distance)
+       elan.right(90)
        distance = distance + 10
 
 .. note::
