@@ -56,6 +56,7 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+   Sequences/toctree.rst
    Debugging/toctree.rst
    PythonTurtle/toctree.rst
    PythonModules/toctree.rst
