@@ -93,6 +93,10 @@ Check out how adding conditionals to our code can change what we can write about
    print("Here is our grocery list:")
    print(grocery_list)
 
+At a high level, these control structures are not only found in python. 
+Many other programming languages have these features, but each language has a specific syntax that must be followed. 
+For example, ``for`` loops in C++ look quite different from ``for`` loops in python!
+
 **Check your understanding**
 
 .. mchoice:: question1_5_1
