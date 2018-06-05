@@ -9,4 +9,5 @@ Functions
    FunctionInvocation.rst
    FunctionParameters.rst
    Returningavaluefromafunction.rst
+   Afunctionthataccumulates.rst
    
