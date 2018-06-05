@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-8-
+   :prefix: condition-10-
    :start: 1
 
 Extra Exercises
@@ -39,11 +39,11 @@ Extra Exercises
             A closed interval includes the number, and open interval excludes it.   So 79.99999 gets grade C , but 80 gets grade B.
         
          
-            .. actex:: ex_6_3
+            .. actex:: ac7_10_1
            
         .. tab:: Answer
 
-            .. activecode:: ans_6_3
+            .. activecode:: ans7_10_1
             
                sc = input("Enter a score from 0 to 100 (decimal points are allowed)")
                fl_sc = float(sc)
@@ -83,6 +83,6 @@ Extra Exercises
          2056     True
          =======  =====
 
-    .. actex:: ex_6_12
+    .. actex:: ac7_10_2
 
 

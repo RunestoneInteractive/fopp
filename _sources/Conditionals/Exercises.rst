@@ -8,13 +8,13 @@
     License".
 
 .. qnum::
-   :prefix: condition-8-
+   :prefix: condition-9-
    :start: 1
 
 Exercises
 =========
 
-.. activecode:: ac7_8_1
+.. activecode:: ac7_9_1
    :language: python
    :autograde: unittest
 
@@ -35,7 +35,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_2
+.. activecode:: ac7_9_2
    :language: python
    :autograde: unittest
 
@@ -56,7 +56,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_3
+.. activecode:: ac7_9_3
    :language: python
    :autograde: unittest
 
@@ -79,7 +79,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_4
+.. activecode:: ac7_9_4
    :language: python
    :autograde: unittest
 
@@ -101,7 +101,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_5
+.. activecode:: ac7_9_5
    :language: python
    :autograde: unittest
 
@@ -123,7 +123,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_6
+.. activecode:: ac7_9_6
    :language: python
    :autograde: unittest
 
@@ -145,7 +145,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_7
+.. activecode:: ac7_9_7
    :language: python
    :autograde: unittest
 
@@ -165,7 +165,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_8
+.. activecode:: ac7_9_8
    :language: python
    :autograde: unittest
       
@@ -185,7 +185,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_9
+.. activecode:: ac7_9_9
    :language: python
    :autograde: unittest
 
@@ -205,7 +205,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_10
+.. activecode:: ac7_9_10
    :language: python
    :autograde: unittest
 
@@ -241,7 +241,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_11
+.. activecode:: ac7_9_11
    :language: python
    :autograde: unittest
 
@@ -272,7 +272,7 @@ Exercises
    myTests().main()
 
 
-.. activecode:: ac7_8_12
+.. activecode:: ac7_9_12
    :language: python
    :autograde: unittest
 
