@@ -6,4 +6,5 @@ Functions
    :maxdepth: 2
 
    FunctionDefinitions.rst
+   FunctionInvocation.rst
    
