@@ -9,4 +9,7 @@ Dictionaries
    Dictionaryoperations.rst
    Dictionarymethods.rst
    Aliasingandcopying.rst
+   intro-AccumulatingMultipleResultsInaDictionary.rst
+   AccumulatingResultsFromaDictionary.rst
+   AccumulatingtheBestKey.rst
    
