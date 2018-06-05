@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: func-1-
+   :prefix: func-2-
    :start: 1
 
 Function Invocation

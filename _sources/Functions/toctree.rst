@@ -7,4 +7,5 @@ Functions
 
    FunctionDefinitions.rst
    FunctionInvocation.rst
+   FunctionParameters.rst
    
