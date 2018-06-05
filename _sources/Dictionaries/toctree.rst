@@ -13,4 +13,5 @@ Dictionaries
    AccumulatingResultsFromaDictionary.rst
    AccumulatingtheBestKey.rst
    DictionaryExercises.rst
+   DictionaryExtraExercises.rst
    
