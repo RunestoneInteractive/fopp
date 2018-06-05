@@ -14,4 +14,6 @@ Dictionaries
    AccumulatingtheBestKey.rst
    DictionaryExercises.rst
    DictionaryExtraExercises.rst
+   Glossary.rst
+   DictionaryAccumulationExercises.rst
    
