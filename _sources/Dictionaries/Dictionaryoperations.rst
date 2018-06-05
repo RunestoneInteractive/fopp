@@ -11,6 +11,9 @@
    :prefix: dictionaries-2-
    :start: 1
 
+.. index:: del; dictionary
+   statement; del
+
 Dictionary operations
 ---------------------
 
@@ -52,6 +55,9 @@ of key-value pairs.
     inventory['bananas'] = inventory['bananas'] + 200
 
     numItems = len(inventory)
+
+Notice that there are now 512 bananas---the dictionary has been modified. Note also that the ``len`` function also 
+works on dictionaries. It returns the number of key-value pairs.
 
 **Check your understanding**
 

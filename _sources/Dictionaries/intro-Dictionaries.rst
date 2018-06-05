@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. index:: dictionary, mapping type, key-value pair
+   single: [ ]; dictionary access
+   value; dictionary
+
 .. qnum::
    :prefix: dictionaries-1-
    :start: 1

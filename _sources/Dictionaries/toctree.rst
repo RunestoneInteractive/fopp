@@ -7,4 +7,5 @@ Dictionaries
 
    intro-Dictionaries.rst
    Dictionaryoperations.rst
+   Dictionarymethods.rst
    
