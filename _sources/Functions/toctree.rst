@@ -8,4 +8,5 @@ Functions
    FunctionDefinitions.rst
    FunctionInvocation.rst
    FunctionParameters.rst
+   Returningavaluefromafunction.rst
    
