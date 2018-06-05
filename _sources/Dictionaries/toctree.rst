@@ -12,4 +12,5 @@ Dictionaries
    intro-AccumulatingMultipleResultsInaDictionary.rst
    AccumulatingResultsFromaDictionary.rst
    AccumulatingtheBestKey.rst
+   DictionaryExercises.rst
    
