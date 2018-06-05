@@ -16,4 +16,5 @@ Dictionaries
    DictionaryExtraExercises.rst
    Glossary.rst
    DictionaryAccumulationExercises.rst
+   DictionaryAccumulationExtraExercises.rst
    
