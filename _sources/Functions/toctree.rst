@@ -12,4 +12,5 @@ Functions
    Afunctionthataccumulates.rst
    MethodInvocations.rst
    Variablesandparametersarelocal.rst
+   GlobalVariables.rst
    
