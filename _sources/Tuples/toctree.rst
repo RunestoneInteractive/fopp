@@ -7,4 +7,5 @@ Tuples
 
    Tuples.rst
    TuplePacking.rst
+   TuplesasReturnValues.rst
    
