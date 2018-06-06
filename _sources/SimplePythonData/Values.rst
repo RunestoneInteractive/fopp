@@ -15,7 +15,10 @@ Values and Data Types
 ---------------------
 
 A **value** is one of the fundamental things --- like a word or a number --- that a program manipulates. 
-Some values are ``5`` (the result when we add ``2 + 3``), and ``"Hello, World!"``.  
+Some values are ``5`` (the result when we add ``2 + 3``), and ``"Hello, World!"``. These objects are classified into 
+different classes, or data types: 4 is an integer, and "Hello, World!" is a string, so-called because it contains a 
+string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation 
+marks.
 
 We can specify values directly in the programs we write. For example we can specify a number as a literal just by writing it directly, (e.g., ``5`` or ``4.32``). In a program, we specify a word, or more generally a **string** of characters, by enclosing the characters inside quotation marks (e.g., ``"Hello, World!"``).
 
