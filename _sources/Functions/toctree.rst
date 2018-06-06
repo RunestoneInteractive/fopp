@@ -11,4 +11,5 @@ Functions
    Returningavaluefromafunction.rst
    Afunctionthataccumulates.rst
    MethodInvocations.rst
+   Variablesandparametersarelocal.rst
    
