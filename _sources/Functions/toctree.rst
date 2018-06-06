@@ -18,4 +18,5 @@ Functions
    Printvsreturn.rst
    PassingMutableObjects.rst
    SideEffects.rst
+   Glossary.rst
    
