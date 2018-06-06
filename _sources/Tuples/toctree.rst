@@ -10,4 +10,5 @@ Tuples
    TuplesasReturnValues.rst
    TupleAssignmentwithunpacking.rst
    UnpackingDictionaryItems.rst
+   Glossary.rst
    
