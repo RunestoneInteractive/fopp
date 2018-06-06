@@ -16,4 +16,5 @@ Functions
    Functionscancallotherfunctions.rst
    FlowofExecutionSummary.rst
    Printvsreturn.rst
+   PassingMutableObjects.rst
    
