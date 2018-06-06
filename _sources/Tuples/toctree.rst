@@ -8,4 +8,5 @@ Tuples
    Tuples.rst
    TuplePacking.rst
    TuplesasReturnValues.rst
+   TupleAssignmentwithunpacking.rst
    
