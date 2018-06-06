@@ -8,4 +8,5 @@ More About Iteration
    intro-indefiniteiteration.rst
    ThewhileStatement.rst
    listenerLoop.rst
+   RandomlyWalkingTurtles.rst
    

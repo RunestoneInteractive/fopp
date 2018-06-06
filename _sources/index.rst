@@ -52,7 +52,7 @@ Table of Contents
 
 .. toctree::
    :numbered:
-   :maxdepth: 3 
+   :maxdepth: 4 
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
