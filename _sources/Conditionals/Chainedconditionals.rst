@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-5-
+   :prefix: condition-9-
    :start: 1
 
 .. index::
@@ -46,7 +46,7 @@ branch executes.
 
 Here is the same program using ``elif``.
 
-.. activecode:: ac7_5_1
+.. activecode:: ac7_9_1
 
     x = 10
     y = 10
@@ -63,12 +63,12 @@ Here is the same program using ``elif``.
 
   This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
 
-  .. activecode:: ac7_5_2
+  .. activecode:: ac7_9_2
 
 
 **Check your understanding**
 
-.. mchoice:: question7_5_1
+.. mchoice:: question7_9_1
    :answer_a: I only
    :answer_b: II only
    :answer_c: III only
@@ -131,7 +131,7 @@ Here is the same program using ``elif``.
          print(x, " is 0")
 
 
-.. mchoice:: test_question6_7_2
+.. mchoice:: question7_9_2
    :answer_a: a
    :answer_b: b
    :answer_c: c

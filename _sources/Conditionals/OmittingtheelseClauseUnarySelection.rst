@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-3-
+   :prefix: condition-7-
    :start: 1
 
 .. index:: unary selection
@@ -36,7 +36,7 @@ In this case, when the condition evaluates to ``True``, the statements are
 executed.  Otherwise the flow of execution continues to the statement after the body of the ``if``.
 
 
-.. activecode:: ac7_3_1
+.. activecode:: ac7_7_1
 
     x = 10
     if x < 0:
@@ -49,7 +49,7 @@ What would be printed if the value of ``x`` is negative?  Try it.
 
 **Check your understanding**
 
-.. mchoice:: question7_3_1
+.. mchoice:: question7_7_1
    :answer_a: Output a
    :answer_b: Output b
    :answer_c: Output c
@@ -82,7 +82,7 @@ What would be printed if the value of ``x`` is negative?  Try it.
      The negative number -10 is not valid here
 
 
-.. mchoice:: question7_3_2
+.. mchoice:: question7_7_2
    :answer_a: No
    :answer_b: Yes
    :correct: b

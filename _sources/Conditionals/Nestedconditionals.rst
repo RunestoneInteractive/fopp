@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-4-
+   :prefix: condition-8-
    :start: 1
 
 .. index::
@@ -45,7 +45,7 @@ The flow of control for this example can be seen in this flowchart illustration.
 
 Here is a complete program that defines values for ``x`` and ``y``.  Run the program and see the result.  Then change the values of the variables to change the flow of control.
 
-.. activecode:: ac7_4_1
+.. activecode:: ac7_8_1
 
     x = 10
     y = 10
@@ -65,7 +65,7 @@ Here is a complete program that defines values for ``x`` and ``y``.  Run the pro
 
 If you are still a bit unsure, here is the same selection as part of a codelens example.  Step through it to see how the correct ``print`` is chosen.
 
-.. codelens:: clens7_4_1
+.. codelens:: clens7_8_1
     :python: py3
     :showoutput:
 
@@ -83,7 +83,7 @@ If you are still a bit unsure, here is the same selection as part of a codelens 
 
 **Check your understanding**
 
-.. mchoice:: question7_4_1
+.. mchoice:: question7_8_1
    :answer_a: No
    :answer_b: Yes
    :correct: a

@@ -7,7 +7,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-6-
+   :prefix: condition-10-
    :start: 1
 
 The Accumulator Pattern with Conditionals
@@ -16,7 +16,7 @@ The Accumulator Pattern with Conditionals
 Sometimes when we're accumulating, we don't want to add to our accumulator every time we iterate.
 Consider, for example, the following program which counts the number of letters in a phrase.
 
-.. activecode:: ac7_6_1
+.. activecode:: ac7_10_1
 
    phrase = "What a wonderful day to program"
    tot = 0
@@ -40,7 +40,7 @@ differentiate between spaces and non-spaces.
 
 We can use conditionals to also count if particular items are in a string or list. The following code finds all occurances of vowels in the following string.
 
-.. activecode:: ac7_6_2
+.. activecode:: ac7_10_2
 
     s = "what if we went to the zoo"
     x = 0
@@ -59,7 +59,7 @@ accumulator variable to a different value.
 
 The following example shows how we can get the maximum value from a list of integers.
 
-.. activecode:: ac7_6_3
+.. activecode:: ac7_10_3
 
    nums = [9, 3, 8, 11, 5, 29, 2]
    best_num = 0
@@ -79,7 +79,7 @@ happen to our code? What if we were looking for the smallest number but we initi
 zero? To get around this issue, we can initialize the accumulator variable using one of the numbers in the 
 list.
 
-.. activecode:: ac7_6_4
+.. activecode:: ac7_10_4
 
    nums = [9, 3, 8, 11, 5, 29, 2]
    best_num = nums[0]
@@ -93,7 +93,7 @@ first element in ``nums``, but the result is still the same!
 
 **Check your understanding**
 
-.. mchoice:: question7_6_1
+.. mchoice:: question7_10_1
    :answer_a: 2
    :answer_b: 5
    :answer_c: 0
@@ -115,7 +115,7 @@ first element in ``nums``, but the result is still the same!
              x += 1
      print(x)
 
-.. mchoice:: question7_6_2
+.. mchoice:: question7_10_2
    :answer_a: 10
    :answer_b: 1
    :answer_c: 0

@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: condition-2-
+   :prefix: condition-6-
    :start: 1
 
 .. index:: heading, body, selection, if, else, pass, compound statement, conditional statement
@@ -31,7 +31,7 @@ conditions and change the behavior of the program accordingly. **Selection state
 also referred to as **conditional statements**, give us this ability. The simplest form of selection is the **if statement**.  
 This is sometimes referred to as **binary selection** since there are two possible paths of execution.
 
-.. activecode:: ac7_2_1
+.. activecode:: ac7_6_1
 
     x = 15
 
@@ -79,7 +79,7 @@ There is no limit on the number of statements that can appear under the two clau
 
 **Check your understanding**
 
-.. mchoice:: question7_2_1
+.. mchoice:: question7_6_1
    :answer_a: Just one.
    :answer_b: Zero or more.
    :answer_c: One or more.
@@ -92,7 +92,7 @@ There is no limit on the number of statements that can appear under the two clau
 
    How many lines of code can appear in the indented code block below the if and else lines in a conditional?
 
-.. mchoice:: question7_2_2
+.. mchoice:: question7_6_2
    :answer_a: TRUE
    :answer_b: FALSE
    :answer_c: TRUE on one line and FALSE on the next
@@ -112,7 +112,7 @@ There is no limit on the number of statements that can appear under the two clau
      else:
          print("FALSE")
 
-.. mchoice:: question7_2_3
+.. mchoice:: question7_6_3
    :answer_a: Output a
    :answer_b: Output b
    :answer_c: Output c
