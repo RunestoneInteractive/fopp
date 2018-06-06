@@ -13,4 +13,5 @@ Functions
    MethodInvocations.rst
    Variablesandparametersarelocal.rst
    GlobalVariables.rst
+   Functionscancallotherfunctions.rst
    
