@@ -21,7 +21,7 @@ We can specify values directly in the programs we write. For example we can spec
 
 During execution of a program, the python interpreter creates an internal representation of values that are specified in a program. It can then manipulate them. For example, in the next section, we'll look at how a program can specify that values should be combined using operators like ``+`` and ``*``. We call the internal representations **objects** or just **values**. 
 
-.. note:
+.. note::
    When we are being careful, we will refer to a number or string that is specified directly in a program as a **literal**, and use the word **value** to refer to the Python interpreter's internal representation of the number or string during the execution of the program. Sometimes, however, we will get a little sloppy and refer to literals as values. It may help you to keep in mind the distinction between a value as written in a program (a literal) and the internal representation of a value.
 
 Normally, people don't get to see directly what is happening when a program executes. Codelens is really useful for learning because it does make a lot of things visible during a program execution.
