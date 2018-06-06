@@ -10,4 +10,5 @@ Functions
    FunctionParameters.rst
    Returningavaluefromafunction.rst
    Afunctionthataccumulates.rst
+   MethodInvocations.rst
    
