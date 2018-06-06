@@ -17,4 +17,5 @@ Functions
    FlowofExecutionSummary.rst
    Printvsreturn.rst
    PassingMutableObjects.rst
+   SideEffects.rst
    
