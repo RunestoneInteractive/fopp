@@ -11,4 +11,5 @@ Tuples
    TupleAssignmentwithunpacking.rst
    UnpackingDictionaryItems.rst
    Glossary.rst
+   Exercises.rst
    
