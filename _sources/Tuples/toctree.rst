@@ -9,4 +9,5 @@ Tuples
    TuplePacking.rst
    TuplesasReturnValues.rst
    TupleAssignmentwithunpacking.rst
+   UnpackingDictionaryItems.rst
    
