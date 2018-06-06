@@ -12,4 +12,5 @@ Tuples
    UnpackingDictionaryItems.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    
