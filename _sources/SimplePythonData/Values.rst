@@ -14,9 +14,8 @@
 Values and Data Types
 ---------------------
 
-A **value** is one of the fundamental things --- like a word or a number ---
-that a program manipulates. The values we have seen so far are ``5`` (the
-result when we added ``2 + 3``), and ``"Hello, World!"``.  
+A **value** is one of the fundamental things --- like a word or a number --- that a program manipulates. 
+Some values are ``5`` (the result when we add ``2 + 3``), and ``"Hello, World!"``.  
 
 We can specify values directly in the programs we write. For example we can specify a number as a literal just by writing it directly, (e.g., ``5`` or ``4.32``). In a program, we specify a word, or more generally a **string** of characters, by enclosing the characters inside quotation marks (e.g., ``"Hello, World!"``).
 
