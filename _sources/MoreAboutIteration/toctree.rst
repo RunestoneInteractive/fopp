@@ -3,7 +3,7 @@ More About Iteration
 
 .. toctree::
    :caption: More About Iteration
-   :maxdepth: 2
+   :maxdepth: 3
 
    intro-indefiniteiteration.rst
    ThewhileStatement.rst
