@@ -24,6 +24,7 @@ Try the following program.
 
     tt = ss.lower()
     print(tt)
+    print(ss)
 
 In this example, ``upper`` is a method that can be invoked on any string object to create a new string 
 in which all the characters are in uppercase. ``lower`` works in a similar fashion changing all 
