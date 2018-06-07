@@ -29,11 +29,11 @@ Let us see this in action:
 
     print(3.14, int(3.14))
     print(3.9999, int(3.9999))       # This doesn't round to the closest int!
-    print(3.0,int(3.0))
-    print(-3.999,int(-3.999))        # Note that the result is closer to zero
+    print(3.0, int(3.0))
+    print(-3.999, int(-3.999))        # Note that the result is closer to zero
 
-    print("2345",int("2345"))        # parse a string to produce an int
-    print(17,int(17))                # int even works on integers
+    print("2345", int("2345"))        # parse a string to produce an int
+    print(17, int(17))                # int even works on integers
     print(int("23bottles"))
 
 
@@ -52,7 +52,7 @@ legal string into a float.
 
 
 The type converter ``str`` turns its argument into a string.  Remember that when we print a string, the
-quotes are removed.  However, if we print the type, we can see that it is definitely ``str``.
+quotes are removed in the output window.  However, if we print the type, we can see that it is definitely ``str``.
 
 .. activecode:: ac2_7_3
     :nocanvas:
@@ -79,3 +79,5 @@ quotes are removed.  However, if we print the type, we can see that it is defini
    .. code-block:: python
 
       print(int(53.785))
+
+

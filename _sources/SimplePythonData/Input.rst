@@ -43,6 +43,12 @@ asked the user to enter their age, you would get back a string like
 an int or a float, using the ``int`` or ``float`` converter functions we saw
 earlier.
 
+.. note::
+
+    We often use the word "input" (or, synonymously, parameter) to refer to the values that are passed to any function. Do not confuse that with the ``input`` function, which asks the user of a program to type in a value. Like any function, ``input`` itself takes an input parameter and produces an output. The input is a character string that is displayed as a prompt to the user. The output is whatever character string the user types.
+
+    This is analogous to the potential confusion of function "outputs" with the contents of the output window. Every function produces an output, which is a Python value. Only the print function puts things in the output window. Most functions take inputs, which are Python values. Only the input function invites users to type something.
+
 Here is a program that turns a number of seconds into more human readable counts of hours, 
 minutes, and seconds. A call to ``input()`` allows the user to enter the number of seconds. 
 Then we convert that string to an integer.  From there we use the division and modulus 

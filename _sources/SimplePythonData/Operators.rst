@@ -22,7 +22,7 @@
 Operators and Operands
 ----------------------
 
-**Operators** are special tokens that represent computations like addition,
+You can build complex expressions out of simpler ones using **operators**. Operators are special tokens that represent computations like addition,
 multiplication and division. The values the operator works on are called
 **operands**.
 
@@ -39,7 +39,7 @@ token for multiplication, and ``**`` is the token for exponentiation.
 Addition, subtraction, multiplication, and exponentiation all do what you
 expect.
 
-Remember that if we want to see the results of the computation, the program needs to specify that with a print statement. The first three computations occur, but their results are not printed out.
+Remember that if we want to see the results of the computation, the program needs to specify that with the word ``print``. The first three computations occur, but their results are not printed out.
 
 .. activecode:: ac2_3_1
     :nocanvas:

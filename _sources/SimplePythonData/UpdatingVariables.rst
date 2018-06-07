@@ -65,7 +65,7 @@ simple assignment.  In the above example, ``x`` was initialized to 6.
 Updating a variable by adding something to it is called an **increment**; subtracting is
 called a **decrement**.  Sometimes programmers talk about incrementing or decrementing without specifying by how much; when they do they usually mean by 1. Sometimes programmers also talk about **bumping** a variable, which means the same as incrementing it by 1.
 
-Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In python ``+=`` is used for incrementing, and ``-=`` for decrementing. In some other languages, there is even a special syntax ``++`` and ``--`` for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 you have to write ``x += 1`` or ``x = x + 1``.
+Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python ``+=`` is used for incrementing, and ``-=`` for decrementing. In some other languages, there is even a special syntax ``++`` and ``--`` for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 you have to write ``x += 1`` or ``x = x + 1``.
 
 .. activecode:: ac2_13_2
 
@@ -175,7 +175,7 @@ easier way to do this kind of task.
    :feedback_b: y is updated to be the old value of y plus the value of x.
    :feedback_c: This updates x to be its old value (because of the +=) plus its old value again (because of the x on the right side) plus the value of y, so it's equivalent to x = x + x + y
    :feedback_d: x is updated to be the old value of x plus the value of y.
-   :feedback_e: ++ is not a syntax that means anything in python.
+   :feedback_e: ++ is not a syntax that means anything in Python.
 
    Which of the following statements are equivalent?
  
