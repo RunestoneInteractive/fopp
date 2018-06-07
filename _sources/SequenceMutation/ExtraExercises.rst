@@ -14,31 +14,36 @@
 Extra Exercises
 ===============
 
-1. (You may work on on this one in class. Feel free to start thinking about it.) In Robert McCloskey's
-   book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack,
-   Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.
-
-.. sourcecode:: python
-
-   prefixes = "JKLMNOPQ"
-   suffix = "ack"
-
-   for p in prefixes:
-       print(p + suffix)
-
-
-Of course, that's not quite right because Ouack and Quack are misspelled.
-Can you fix it?
 
 .. actex:: ex8_12_1
 
+    1. In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack,
+    Mack, Nack, Ouack, Pack, and Quack. This loop tries to output these names in order.
 
-2. Get the user to enter some text and print it out in reverse order.
+    .. sourcecode:: python
+
+        prefixes = "JKLMNOPQ"
+        suffix = "ack"
+
+        for p in prefixes:
+            print(p + suffix)
+
+
+    Of course, that's not quite right because Ouack and Quack are misspelled.
+    Can you fix it?
+
+    ~~~~
+
 
 .. actex:: ex8_12_2
 
+    2. Get the user to enter some text and print it out in reverse order.
 
-3. Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
-some of your code from the last question. The == operator compares two values to see if they are the same)
+    ~~~~
 
 .. actex:: ex8_12_3
+
+    3. Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
+    some of your code from the last question. The == operator compares two values to see if they are the same)
+
+    ~~~~
