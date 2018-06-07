@@ -14,8 +14,7 @@
 Non-mutating Methods on Strings
 ===============================
 
-The "dot notation" is the way we connect an object to one of its attributes or to invoke a method on 
-that object. There are a wide variety of methods for string objects.  
+There are a wide variety of methods for string objects.  
 Try the following program.
 
 .. activecode:: ac8_8_1
