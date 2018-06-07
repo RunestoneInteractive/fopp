@@ -155,7 +155,6 @@ easier way to do this kind of task.
 
 .. parsonsprob:: pp2_13_1
    :practice: T
-   :topics: SimplePythonData/UpdatingVariables
 
    Construct the code that will result in the value 134 being printed.
    -----
