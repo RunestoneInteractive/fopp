@@ -211,17 +211,17 @@ the characters, using a for loop to iterate through the keys in x.
    f = open('scarlet.txt', 'r')
    txt = f.read()
    # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
+   letter_counts = {} # start with an empty dictionary
    for c in txt:
-       if c not in x:
+       if c not in letter_counts:
            # we have not seen this character before, so initialize a counter for it
-           x[c] = 0
+           letter_counts[c] = 0
       
        #whether we've seen it before or not, increment its counter
-       x[c] = x[c] + 1
+       letter_counts[c] = letter_counts[c] + 1
 
-   for c in x.keys():
-       print(c + ": " + str(x[c]) + " occurrences")
+   for c in letter_counts.keys():
+       print(c + ": " + str(letter_counts[c]) + " occurrences")
    
 Note that only those letters that actually occur in the text are shown. Some
 punctuation marks that are possible in English, but were never used in the 
