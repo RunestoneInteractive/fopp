@@ -116,6 +116,7 @@ are just using a variable ``c`` whose value is 's' or 't', or some other charact
 
 If that made perfect sense to you, skip the next two paragraphs. Otherwise, read on. 
 Let's break down that line in a little more detail. 
+
 First, note that, as with all
 assignment statements, the right side is evaluated first. In this case ``x[c]`` has to be
 evaluated. As with all expressions, we first have to substitute values for variable names.
@@ -123,12 +124,31 @@ evaluated. As with all expressions, we first have to substitute values for varia
 string that ``txt`` is bound to (that's what the for statement says to do: 
 execute lines 8-11 once for each character in txt, with the variable c bound to the current character 
 on each iteration.) So, let's suppose that the current character is the letter ``s`` (we are on line 11). 
-Then ``x[c]`` looks
-up the value associated with the key 's' in the dictionary x. If all is working correctly, that value
-shoudl be the number of times 's' has previously occurred. For the sake of argument, suppose it's 25. Then
-the right side evaluates to 25 + 1, 26.
+Then ``x[c]`` looks up the value associated with the key 's' in the dictionary x. If all is working correctly, that value should be the number of times 's' has previously occurred. For the sake of argument, suppose it's 25. Then
+the right side evaluates to 25 + 1, 26. Watch this play out below.
 
-Now we assign the value 26 to ``x[c]``. That is, in dictionary x, we set the value associated with the 
+.. showeval:: eval10_5_4
+   :trace_mode: true
+
+   f = open('scarlet.txt', 'r')
+   txt = f.read()
+   # now txt is one long string containing all the characters
+   x = {} # start with an empty dictionary
+   x['t'] = 15  # intiialize the t counter
+   x['s'] = 25  # initialize the s counter
+   ~~~~
+   for {{c}}{{'s'}} in txt: # we have reached the 26th s now
+   {{for 's' in txt:}}{{if c == 't'}}
+       if {{c}}{{'s'}} == 't':
+       {{if 's' == 't':}}{{elif c == 's':}}
+       elif {{c}}{{'s'}} == 's':
+       {{elif 's' == 's':}}{{x[c] = x[c] + 1   # increment the s counter}}
+           x[{{c] = x[c}}{{'s'] = x['s'}}] + 1   # increment the s counter
+           x['s'] = {{x['s']}}{{25}} + 1   # increment the s counter
+           x['s'] = {{25 + 1}}{{26}}   # increment the s counter
+
+
+Now we have assigned the value 26 to ``x[c]``. That is, in dictionary x, we set the value associated with the 
 key 's' (the current value of the variable c) to be 26. In other words, we have incremented the value associated with
 the key 's' from 25 to 26.
 
