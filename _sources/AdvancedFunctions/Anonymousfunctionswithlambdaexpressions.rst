@@ -30,7 +30,7 @@ unnamed object behaves just like the function object constructed below.
 
 Consider the following code
 
-.. activecode:: sort_7
+.. activecode:: ac15_3_1
 
     def f(x):
         return x - 1
@@ -61,7 +61,7 @@ In all the examples below, both ways of doing it will be illustrated.
 
 Below, sorting on absolute value has been rewritten using lambda notation and the built-in function abs.
 
-.. activecode:: sort_8
+.. activecode:: ac15_3_2
 
     L1 = [1, 7, 4, -2, 3]
     
@@ -76,7 +76,7 @@ lambda expression above helps you understand what sorted does with the function 
 function on each of the items in the list that is passed to sorted. Make sure you understand why the code above and the 
 code immediately below cause the list to be sorted the same way. 
 
-.. activecode:: sort_8a  
+.. activecode:: ac15_3_3  
 
     L1 = [1, 7, 4, -2, 3]
     
@@ -86,16 +86,15 @@ code immediately below cause the list to be sorted the same way.
     print(L2)
 
 
-.. mchoice:: test_questionsort_1
+.. mchoice:: question15_3_1
    :answer_a: descending order, from 7 down to -2
    :answer_b: ascending order, from -2 up to 7
    :answer_c: the original order of L1
+   :correct: a
    :feedback_a: 7 is decorated with -7, so it is first; -2 is decorated with 2, so it is last.
    :feedback_b: -x produces the negative of x.
    :feedback_c: sorted changes the order.
-   :correct: a
    :practice: T
-   :topics: Sort/Anonymousfunctionswithlambdaexpressions
 
    Describe what the sort order will be for this.
    
@@ -105,16 +104,15 @@ code immediately below cause the list to be sorted the same way.
      
     print(sorted(L1, key = lambda x: -x))
 
-.. mchoice:: test_questionsort_2
+.. mchoice:: question15_3_2
    :answer_a: descending order, from 7 down to -2
    :answer_b: ascending order, from -2 up to 7
    :answer_c: the original order of L1
+   :correct: b
    :feedback_a: The True value for the reverse parameter says to reverse the order.
    :feedback_b: The True value for the reverse parameter says to reverse the order.
    :feedback_c: sorted changes the order.
-   :correct: b
    :practice: T
-   :topics: Sort/Anonymousfunctionswithlambdaexpressions
 
    Describe what the sort order will be for this.
    
@@ -123,4 +121,3 @@ code immediately below cause the list to be sorted the same way.
     L1 = [1, 7, 4, -2, 3]
      
     print(sorted(L1, key = lambda x: -x, reverse = True))
-
