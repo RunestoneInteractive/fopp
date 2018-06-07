@@ -39,3 +39,24 @@ The ``not in`` operator returns the logical opposite result of ``in``.
 .. activecode:: ac4_3_3
 
     print('x' not in 'apple')
+
+We can also use the ``in`` and ``not in`` operators on lists!
+
+..activecode:: ac4_4_4
+
+   print("a" in ["a", "b", "c", "d"])
+   print(9 in [3, 2, 9, 10, 9.0])
+   print('wow' not in ['gee wiz', 'gosh golly', 'wow', 'amazing'])
+
+However, remember how you were able to check to see if an "a" was in "apple"? 
+Let's try that again to see if there's an "a" somewhere in the following list.
+
+.. activecode:: ac4_4_5
+
+    print("a" in ["apple", "absolutely", "application", "nope"])
+
+Clearly, we can tell that a is in the word apple, and absolutely, and application. For some reason 
+though, the Python interpreter returns False. Why is that? When we use the ``in`` and ``not in`` 
+operators on lists, Python checks to see if the item on the left side of the expression is equivalent 
+to an element in the item on the right side of the expression. In this case, Python is checking 
+whether or not an element of the list is the string "a" - nothing more or less than that.

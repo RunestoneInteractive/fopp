@@ -14,8 +14,8 @@
 Intro: What we can do with Turtles and Conditionals
 ---------------------------------------------------
 
-To build further on our turtle drawings, we can start to include something called a **selection** or 
-**conditional statement**. Using this kind of statement will allow up to check conditions and change the 
+To build further on our turtle drawings, we can start to include something called a **selection** or a
+**conditional statement**. Using this kind of statement will allow us to check conditions and change the 
 behavior of the program accordingly. 
 
 .. activecode:: ac7_1_1
@@ -23,35 +23,35 @@ behavior of the program accordingly.
     import turtle
     wn = turtle.Screen()
 
-    Amy = turtle.Turtle()
-    Amy.pencolor("Pink")
-    Amy.forward(50)
-    if Amy.pencolor() == "Pink":
-        Amy.right(60)
-        Amy.forward(100)
+    amy = turtle.Turtle()
+    amy.pencolor("Pink")
+    amy.forward(50)
+    if amy.pencolor() == "Pink":
+        amy.right(60)
+        amy.forward(100)
     else:
-        Amy.left(60)
-        Amy.forward(100)
+        amy.left(60)
+        amy.forward(100)
         
-    Kenji = turtle.Turtle()
-    Kenji.forward(60)
-    if Kenji.pencolor() == "Pink":
-        Kenji.right(60)
-        Kenji.forward(100)
+    kenji = turtle.Turtle()
+    kenji.forward(60)
+    if kenji.pencolor() == "Pink":
+        kenji.right(60)
+        kenji.forward(100)
     else:
-        Kenji.left(60)
-        Kenji.forward(100)
+        kenji.left(60)
+        kenji.forward(100)
 
-In the above code, we first set Amy's pen color to be "Pink" and then move her forward. Next we want one of 
-two actions to happen, either Amy should move right and then forward, or left and then forward. The direction 
+In the above code, we first set amy's pen color to be "Pink" and then move her forward. Next we want one of 
+two actions to happen, either amy should move right and then forward, or left and then forward. The direction 
 that we want her to go in depends on her pen color. If her pen color is set to pink - which is determined by 
-writing ``Amy.pencolor() == "Pink"`` which checks to see if the value returned by ``Amy.pencolor()`` is the 
+writing ``amy.pencolor() == "Pink"`` which checks to see if the value returned by ``amy.pencolor()`` is the 
 equivalent to the string "Pink" - then we should have her move right and forward. Else (or otherwise) she 
 should move left and forward. Both things can't happen though. She can't move right, forward *and* left, 
-forward. We then do the same thing for Kenji, though in this case, we didn't change Kenji's pen color.
+forward. We then do the same thing for kenji, though in this case, we didn't change kenji's pen color.
 
-It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up Amy 
-and Kenji's colors, so why would we need a conditional? While it's true that this isn't the *best* place to 
+It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up amy 
+and kenji's colors, so why would we need a conditional? While it's true that this isn't the *best* place to 
 use a conditional, we can combine conditional statements with for loops to make something pretty cool! 
 
 .. activecode:: ac7_1_2
@@ -59,34 +59,34 @@ use a conditional, we can combine conditional statements with for loops to make 
     import turtle
     wn = turtle.Screen()
 
-    Amy = turtle.Turtle()
-    Amy.pencolor("Pink")
-    Amy.right(170)
+    amy = turtle.Turtle()
+    amy.pencolor("Pink")
+    amy.right(170)
 
     colors = ["Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Orange", "Pink", "Pink", "Orange", "Yellow", "Purple", "Orange", "Purple", "Yellow", "Orange", "Pink", "Orange", "Purple", "Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Yellow"]
 
 
     for color in colors:
-        if Amy.pencolor() == "Purple":
-            Amy.forward(50)
-            Amy.right(59)
-        elif Amy.pencolor() == "Yellow":
-            Amy.forward(65)
-            Amy.left(98)
-        elif Amy.pencolor() == "Orange":
-            Amy.forward(30)
-            Amy.left(60)
-        elif Amy.pencolor() == "Pink":
-            Amy.forward(50)
-            Amy.right(57)
+        if amy.pencolor() == "Purple":
+            amy.forward(50)
+            amy.right(59)
+        elif amy.pencolor() == "Yellow":
+            amy.forward(65)
+            amy.left(98)
+        elif amy.pencolor() == "Orange":
+            amy.forward(30)
+            amy.left(60)
+        elif amy.pencolor() == "Pink":
+            amy.forward(50)
+            amy.right(57)
 
-        Amy.pencolor(color)
+        amy.pencolor(color)
 
 The above example combines a for loop with a set of conditional statements. Here, we loop through a list of 
-colors and each iteration checks to see what Amy's pen color is. Depending on the pen color, the turtle will 
-move in a certain direction, for a certain distance. Before the for loop iterates, Amy's pen color is changed 
+colors and each iteration checks to see what amy's pen color is. Depending on the pen color, the turtle will 
+move in a certain direction, for a certain distance. Before the for loop iterates, amy's pen color is changed 
 to whatever ``color`` is in the for loop and it continues. Note how the color doesn't change until the end, 
-so that we can start using whatever color Amy is set to initally. This means that the last color in the list 
+so that we can start using whatever color amy is set to initally. This means that the last color in the list 
 ``colors`` will not be used, though you can see how the icon changes to the appropriate color.
     
 This chapter will further detail how to use conditional statements.
