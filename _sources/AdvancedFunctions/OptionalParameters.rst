@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. _optional_params_chap:
+
 .. qnum::
    :prefix: advfuncs-1-
    :start: 1

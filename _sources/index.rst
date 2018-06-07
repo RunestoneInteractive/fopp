@@ -71,7 +71,7 @@ Table of Contents
    IntroRecursion/toctree.rst
    ClassesBasics/toctree.rst
    ClassesDiggingDeeper/toctree.rst
-   AdvancedFunctions.rst
+   AdvancedFunctions/toctree.rst
 
 
 Appendices

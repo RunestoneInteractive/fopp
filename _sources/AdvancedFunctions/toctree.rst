@@ -6,5 +6,5 @@ Advanced Functions
    :maxdepth: 2
 
    OptionalParameters.rst
-   
+   KeywordParameters.rst
    
