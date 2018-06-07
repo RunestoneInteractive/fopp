@@ -11,6 +11,8 @@
    :prefix: turtle-3-
    :start: 1
 
+.. index:: for loop
+
 Instances: A Herd of Turtles
 ----------------------------
 
@@ -141,7 +143,3 @@ Here are some *How to think like a computer scientist* observations:
    tina.forward(150)
    =====
    wn.exitonclick()
-
-
-.. index:: for loop
-

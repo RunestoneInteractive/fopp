@@ -11,6 +11,8 @@
    :prefix: turtle-2-
    :start: 1
 
+.. index:: instance
+
 Our First Turtle Program
 ------------------------
 
@@ -290,7 +292,3 @@ screen until we click on it.
    jamal.forward(100)
    =====
    wn.exitonclick()
-
-
-.. index:: instance
-
