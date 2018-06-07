@@ -18,8 +18,8 @@
 Mutatability
 ============
 
-Some Python collection types - strings and lists so far - are able to mutate and some are not. If 
-a type is able to mutate, then it is said to be mutable. If the type is not able to mutate then it
+Some Python collection types - strings and lists so far - are able to change and some are not. If 
+a type is able to change, then it is said to be mutable. If the type is not able to change then it
 is said to be immutable. This will be expanded below.
 
 Strings are Immutable
@@ -50,8 +50,21 @@ best you can do is create a new string that is a variation on the original.
     print(newGreeting)
     print(greeting)          # same as it was
 
-The solution here is to concatenate a new first letter onto a slice of
-``greeting``. This operation has no effect on the original string.
+The solution here is to concatenate a new first letter onto a slice of ``greeting``. 
+This operation has no effect on the original string.
+
+While it's possible to make up new variable names each time we make changes to existing
+values, it could become difficult to keep track of them all.
+
+.. activecode:: ac8_1_3
+
+    phrase = "many moons"
+    phrase_expanded = phrase + " and many stars"
+    phrase_larger = phrase_expanded + " litter"
+    phrase_complete = "M" + phrase_larger[1:] + "the night sky."
+    excited_phrase_complete = phrase_complete[:-1] + "!"
+
+The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.
 
 Lists are Mutable
 -----------------
@@ -60,7 +73,7 @@ Unlike strings, lists are **mutable**. This means we can change an item in a lis
 it directly as part of the assignment statement. Using the indexing operator (square brackets) on 
 the left side of an assignment, we can update one of the list items.
 
-.. activecode:: ac8_1_3
+.. activecode:: ac8_1_4
     
     fruit = ["banana", "apple", "cherry"]
     print(fruit)
@@ -86,7 +99,7 @@ changes to the list elements.
 
 By combining assignment with the slice operator we can update several elements at once.
 
-.. activecode:: ac8_1_4
+.. activecode:: ac8_1_5
     
     alist = ['a', 'b', 'c', 'd', 'e', 'f']
     alist[1:3] = ['x', 'y']
@@ -94,7 +107,7 @@ By combining assignment with the slice operator we can update several elements a
 
 We can also remove elements from a list by assigning the empty list to them.
 
-.. activecode:: ac8_1_5
+.. activecode:: ac8_1_6
     
     alist = ['a', 'b', 'c', 'd', 'e', 'f']
     alist[1:3] = []
@@ -103,7 +116,7 @@ We can also remove elements from a list by assigning the empty list to them.
 We can even insert elements into a list by squeezing them into an empty slice at the
 desired location.
 
-.. activecode:: ac8_1_6
+.. activecode:: ac8_1_7
     
     alist = ['a', 'd', 'f']
     alist[1:1] = ['b', 'c']
@@ -116,7 +129,7 @@ List Assignment
 
 It is possible to assign a list to the value of an already existing list.
 
-.. activecode:: ac8_1_7
+.. activecode:: ac8_1_8
 
     a = ['wow', 'zoinks']
     b = a
