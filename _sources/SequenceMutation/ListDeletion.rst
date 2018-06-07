@@ -31,9 +31,3 @@ The ``del`` statement removes an element from a list by using its position.
 As you might expect, ``del`` handles negative indices and causes a runtime
 error if the index is out of range. In addition, you can use a slice as an index for ``del``.
 As usual, slices select all the elements up to, but not including, the second index.
-
-.. note::
-
-    This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
-
-    .. activecode:: ac8_2_2
