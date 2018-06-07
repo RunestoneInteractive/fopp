@@ -11,3 +11,6 @@ Python Turtle
    ObjectInstances.rst
    RepetitionwithaForLoop.rst
    SummaryOfTurtleMethods.rst
+   AFewMoreturtleMethodsandObservations.rst
+   Exercises.rst
+   
