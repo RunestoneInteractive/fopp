@@ -58,14 +58,6 @@ Here is the same program using ``elif``.
     else:
         print("x and y must be equal")
 
-
-.. note::
-
-  This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
-
-  .. activecode:: ac7_9_2
-
-
 **Check your understanding**
 
 .. mchoice:: question7_9_1
@@ -129,7 +121,6 @@ Here is the same program using ``elif``.
          print(x, " is a positive number")
      else:
          print(x, " is 0")
-
 
 .. mchoice:: question7_9_2
    :answer_a: a
