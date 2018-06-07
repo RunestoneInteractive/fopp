@@ -11,6 +11,10 @@
    :prefix: condition-5-
    :start: 1
 
+.. index:: conditional branching, conditional execution, if, elif, else,
+           if statement, compound statement, statement block, block, body,
+           pass statement
+
 Precedence of Operators
 -----------------------
 
@@ -63,9 +67,9 @@ Level     Category        Operators
    :feedback_b: Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)
    :feedback_c: This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.
    :feedback_d: This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.
+   :practice: T
 
    Which of the following properly expresses the  precedence of operators (using parentheses) in the following expression: 5*3 > 10 and 4+6==11
-
 
 Here is an animation for the above expression:
 
@@ -79,8 +83,3 @@ Here is an animation for the above expression:
    True and {{4 + 6}}{{10}} == 11
    True and {{10 == 11}}{{False}}
    {{True and False}}{{False}}
-
-.. index:: conditional branching, conditional execution, if, elif, else,
-           if statement, compound statement, statement block, block, body,
-           pass statement
-

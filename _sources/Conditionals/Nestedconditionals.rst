@@ -18,8 +18,8 @@
 Nested conditionals
 -------------------
 
-One conditional can also be **nested** within another. For example, assume we have two integer variables, ``x`` and ``y``.
-The following pattern of selection shows how we might decide how they are related to each other.
+One conditional can also be **nested** within another. For example, assume we have two integer variables, ``x`` and 
+``y``. The following pattern of selection shows how we might decide how they are related to each other.
 
 .. sourcecode:: python
 
@@ -39,8 +39,6 @@ conditional statements as well.
 The flow of control for this example can be seen in this flowchart illustration.
 
 .. image:: Figures/flowchart_nested_conditional.png
-
-
 
 
 Here is a complete program that defines values for ``x`` and ``y``.  Run the program and see the result.  Then change the values of the variables to change the flow of control.
@@ -89,6 +87,7 @@ If you are still a bit unsure, here is the same selection as part of a codelens 
    :correct: a
    :feedback_a: This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.
    :feedback_b: This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.
+   :practice: T
 
    Will the following code cause an error?
 

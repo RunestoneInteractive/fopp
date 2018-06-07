@@ -17,6 +17,7 @@ Exercises
 .. activecode:: ac7_13_1
    :language: python
    :autograde: unittest
+   :practice: T
 
    **1.** Write code to assign the string ``"You can apply to SI!"`` to ``output`` *if* the string ``"SI 106"`` is in the list ``courses``. If it is not in ``courses``, assign the value ``"Take SI 106!"`` to the variable ``output``.
    ~~~~
@@ -38,6 +39,7 @@ Exercises
 .. activecode:: ac7_13_2
    :language: python
    :autograde: unittest
+   :practice: T
 
    **1.1** Write code so that if ``"STATS 250"`` is in the list ``schedule``, then the string ``"You could be in Information Science!"`` is assigned to the variable ``resp``. Otherwise, the string ``"That's too bad."`` should be assigned to the variable ``resp``.
    ~~~~
@@ -59,6 +61,7 @@ Exercises
 .. activecode:: ac7_13_3
    :language: python
    :autograde: unittest
+   :practice: T
 
    **2.** Create a variable, ``b``, and assign it the value of ``15``. Then, write code to see if the value ``b`` is greater than that of ``a``. If it is, ``a``'s value should be multiplied by 2. If the value of ``b`` is less than or equal to ``a``, nothing should happen. Finally, create variable ``c`` and assign it the value of the sum of ``a`` and ``b``.
    ~~~~
@@ -82,6 +85,7 @@ Exercises
 .. activecode:: ac7_13_4
    :language: python
    :autograde: unittest
+   :practice: T
 
    **2.1** Create the variable ``z`` whose value is ``30``. Write code to see if ``z`` is greater than ``y``. If so, add 5 to ``y``'s value, otherwise do nothing. Then, multiply ``z`` and ``y``, and assign the resulting value to the variable ``x``.
    ~~~~
@@ -104,6 +108,7 @@ Exercises
 .. activecode:: ac7_13_5
    :language: python
    :autograde: unittest
+   :practice: T
 
    **3.** Create one conditional to find whether "false" is in string ``str1``. If so, assign variable ``output`` the string "False. You aren't you?". Check to see if "true" is in string ``str1`` and if it is then assign "True! You are you!" to the variable ``output``. If neither are in ``str1``, assign "Neither true nor false!" to ``output``.
    ~~~~
@@ -126,6 +131,7 @@ Exercises
 .. activecode:: ac7_13_6
    :language: python
    :autograde: unittest
+   :practice: T
 
    **3.1** Create one conditional so that if "Friendly" is in ``w``, then "Friendly is here!" should be assigned to the variable ``wrd``. If it's not, check if "Friend" is in ``w``. If so, the string "Friend is here!" should be assigned to the variable ``wrd``, otherwise "No variation of friend is in here." should be assigned to the variable ``wrd``. (Also consider: does the order of your conditional statements matter for this problem? Why?)
    ~~~~
@@ -148,6 +154,7 @@ Exercises
 .. activecode:: ac7_13_7
    :language: python
    :autograde: unittest
+   :practice: T
 
    **4.** Create an empty list called ``resps``. Using the list ``percent_rain``, for each percent, if it is above 90, add the string 'Bring an umbrella.' to ``resps``, otherwise if it is above 80, add the string 'Good for the flowers?' to ``resps``, otherwise if it is above 50, add the string 'Watch out for clouds!' to ``resps``, otherwise, add the string 'Nice day!' to ``resps``. Note: if you're sure you've got the problem right but it doesn't pass, then check that you've matched up the strings exactly.
    ~~~~
@@ -168,6 +175,7 @@ Exercises
 .. activecode:: ac7_13_8
    :language: python
    :autograde: unittest
+   :practice: T
       
    **5.** For each word in list ``words``, find the number of characters in the string. If the number of characters in each string is greater than 3, add 1 to the variable ``num_words`` so that ``num_words`` should end up with the total number of words with more than 3 characters.
    ~~~~
@@ -188,6 +196,7 @@ Exercises
 .. activecode:: ac7_13_9
    :language: python
    :autograde: unittest
+   :practice: T
 
    **5.1** For each string in ``wrd_lst``, find the number of characters in the string. If the number of characters is less than 6, add 1 to ``accum`` so that in the end, ``accum`` will contain an integer representing the total number of words in the list that have fewer than 6 characters.
    ~~~~
@@ -208,6 +217,7 @@ Exercises
 .. activecode:: ac7_13_10
    :language: python
    :autograde: unittest
+   :practice: T
 
    **6.** We have created conditionals for you to use. Do not change the provided conditional statements. Find an integer value for ``x`` that will cause ``output`` to hold the values ``True`` and ``None``. (Drawing diagrams or flow charts for yourself may help!)
    ~~~~
@@ -244,6 +254,7 @@ Exercises
 .. activecode:: ac7_13_11
    :language: python
    :autograde: unittest
+   :practice: T
 
    **6.1** We have written conditionals for you to use. Create the variable x and assign it to some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
    ~~~~
@@ -275,6 +286,7 @@ Exercises
 .. activecode:: ac7_13_12
    :language: python
    :autograde: unittest
+   :practice: T
 
    **7.** **Challenge** For each word in ``words``, add 'd' to the end of the word if the word ends in "e" to make it past tense. Otherwise, add 'ed' to make it past tense. Save these past tense words to a list called ``past_tense``.
    ~~~~

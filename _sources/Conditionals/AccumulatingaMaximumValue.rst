@@ -68,6 +68,7 @@ max-so-far.
    :feedback_b: That will treate the current value of a as a key in the dictionary and update that key's value. You want to update a instead.
    :feedback_c: When the value associated with the current key c is bigger than the max so far, replace the max so far with that value.
    :feedback_d: That will set a to be the current key, a string like 'a', not a value like 194.
+   :practice: T
 
    Which is the right code block to use in place of line 5 if we want to print out the maximum value?
 

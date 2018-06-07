@@ -103,6 +103,7 @@ first element in ``nums``, but the result is still the same!
    :feedback_b: Yes, we add to x each time we come across a letter in the list.
    :feedback_c: Check again what the conditional is evaluating. The value of i will be a character in the string s, so what will happen in the if statement?
    :feedback_d: There are no errors in this code.
+   :practice: T
 
    What is printed by the following statements?
 
@@ -125,6 +126,7 @@ first element in ``nums``, but the result is still the same!
    :feedback_b: min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.
    :feedback_c: Yes, min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.
    :feedback_d: The code does not have an error that would prevent it from running.
+   :practice: T
 
    What is printed by the following statements?
 

@@ -24,17 +24,13 @@ Omitting the ``else`` Clause: Unary Selection
    http://media.interactivepython.org/thinkcsVideos/unaryselection.mov
    http://media.interactivepython.org/thinkcsVideos/unaryselection.webm
 
-
-
 .. sidebar::  Flowchart of an **if** with no **else**
 
    .. image:: Figures/flowchart_if_only.png
 
-Another form of the ``if`` statement is one in which the ``else`` clause is omitted entirely.
-This creates what is sometimes called **unary selection**.
-In this case, when the condition evaluates to ``True``, the statements are
-executed.  Otherwise the flow of execution continues to the statement after the body of the ``if``.
-
+Another form of the ``if`` statement is one in which the ``else`` clause is omitted entirely. This creates what 
+is sometimes called **unary selection**. In this case, when the condition evaluates to ``True``, the statements 
+are executed. Otherwise the flow of execution continues to the statement after the body of the ``if``.
 
 .. activecode:: ac7_7_1
 
@@ -43,9 +39,7 @@ executed.  Otherwise the flow of execution continues to the statement after the 
         print("The negative number ",  x, " is not valid here.")
     print("This is always printed")
 
-
 What would be printed if the value of ``x`` is negative?  Try it.
-
 
 **Check your understanding**
 
@@ -59,6 +53,7 @@ What would be printed if the value of ``x`` is negative?  Try it.
    :feedback_b: Python executes the body of the if-block as well as the statement that follows the if-block.
    :feedback_c: Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).
    :feedback_d: It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).
+   :practice: T
 
    What does the following code print?
 
@@ -88,6 +83,7 @@ What would be printed if the value of ``x`` is negative?  Try it.
    :correct: b
    :feedback_a: Every else-block must have exactly one corresponding if-block.  If you want to chain if-else statements together, you must use the else if construct, described in the chained conditionals section.
    :feedback_b: This will cause an error because the second else-block is not attached to a corresponding if-block.
+   :practice: T
 
    Will the following code cause an error?
 

@@ -89,6 +89,7 @@ There is no limit on the number of statements that can appear under the two clau
    :feedback_b: Each block must contain at least one statement.
    :feedback_c: Yes, a block must contain at least one statement and can have many statements.
    :feedback_d: The blocks may contain different numbers of statements.
+   :practice: T
 
    How many lines of code can appear in the indented code block below the if and else lines in a conditional?
 
@@ -102,6 +103,7 @@ There is no limit on the number of statements that can appear under the two clau
    :feedback_b: Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.
    :feedback_c: Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.
    :feedback_d: Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.
+   :practice: T
 
    What does the following code print? (choose from output a, b, c or nothing)
 
@@ -122,6 +124,7 @@ There is no limit on the number of statements that can appear under the two clau
    :feedback_b: Because there is a TRUE printed after the if-else statement ends, Python will always print TRUE as the last statement.
    :feedback_c: Python will print FALSE from within the else-block (because 5+4 does not equal 10), and then print TRUE after the if-else statement completes.
    :feedback_d: To print these three lines, Python would have to execute both blocks in the if-else statement, which it can never do.
+   :practice: T
 
    What does the following code print?
 
