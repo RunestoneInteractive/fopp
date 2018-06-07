@@ -18,7 +18,7 @@ Throughout the first chapters of this book we have used strings to represent wor
 wanted to print out. Our definition was simple: a string is simply some characters inside quotes.  
 In this chapter we explore strings in much more detail.
 
-Additionally, we explore lists, which are very much like strings but can hold different types. In fact, you can think of a string as a list of characters!
+Additionally, we explore lists, which are very much like strings but can hold different types.
 
 Strings
 -------
