@@ -12,6 +12,9 @@
    :start: 1
 
 .. index:: semantic error, logic error, error; semantic, error; logic
+    single: Holmes, Sherlock
+    single: Doyle, Arthur Conan
+    single: Linux
 
 Semantic Errors
 ---------------
@@ -36,6 +39,7 @@ looking at the output of the program and trying to figure out what it is doing.
    :feedback_a: A semantic error is an error in logic. In this case the program does not produce the correct output because the problem is not solved correctly. This would be considered a run-time error.
    :feedback_b: A semantic error is an error in logic. In this case the program does not produce the correct output because the code can not be processed by the compiler or interpreter. This would be considered a syntax error.
    :feedback_c: This will produce the wrong answer because the programmer implemented the solution incorrectly.  This is a semantic error.
+   :practice: T
 
    Which of the following is a semantic error?
 
@@ -49,10 +53,6 @@ looking at the output of the program and trying to figure out what it is doing.
    :feedback_b: The compiler and / or interpreter will only do what you instruct it to do. It does not understand what the problem is that you want to solve.
    :feedback_c: The computer does not understand your problem. It just executes the instructions that it is given.
    :feedback_d: Your teacher and instructor may be able to find most of your semantic errors, but only because they have experience solving problems.  However it is your responsibility to understand the problem so you can develop a correct solution.
+   :practice: T
 
    Who or what typically finds semantic errors?
-
-.. index::
-    single: Holmes, Sherlock
-    single: Doyle, Arthur Conan
-    single: Linux

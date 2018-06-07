@@ -11,7 +11,7 @@
    :prefix: debug-3-
    :start: 1
 
-.. index:: debugging, bug
+.. index:: debugging, bug;syntax, syntax error
 
 What is Debugging?
 ------------------
@@ -35,10 +35,9 @@ since. For more about this historic event, see `first bug <http://en.wikipedia.o
    :feedback_b: Maybe, but that is not what we are talking about in this context.
    :feedback_c: This is partially correct.  But, debugging is more than just finding the bugs.  What do you need to do once you find them?
    :feedback_d: This is partially correct.  But, debugging is more than just fixing the bugs. What do you need to do before you can fix them?
+   :practice: T
 
    Debugging is:
-
-.. index:: syntax, syntax error
 
 Three kinds of errors can occur in a program: `syntax errors
 <http://en.wikipedia.org/wiki/Syntax_error>`__, `runtime errors

@@ -34,6 +34,7 @@ chapters, so it might be a while before you encounter one.
    :feedback_a: Python cannot reliably tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value—you cannot know what value the user will enter before you run the program).
    :feedback_b: This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.
    :feedback_c: This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.
+   :practice: T
 
    Which of the following is a run-time error?
 
@@ -47,5 +48,6 @@ chapters, so it might be a while before you encounter one.
    :feedback_b: If an instruction is illegal to perform at that point in the execution, the interpreter will stop with a message describing the exception.
    :feedback_c: Well, sort of.  But it is a special thing in the computer that does it.  The stand alone computer without this additional piece can not do it.
    :feedback_d: Your teacher and instructor may be able to find most of your runtime errors, but only because they have experience looking at code and possibly writing code.  With experience runtime errors are easier to find.  But we also have an automated way of finding these types of errors.
+   :practice: T
 
    Who or what typically finds runtime errors?

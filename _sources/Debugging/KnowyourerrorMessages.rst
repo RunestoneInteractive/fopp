@@ -67,6 +67,7 @@ statement.
    :feedback_a: No, You can, as long as all the variables on the right hand side already have values.
    :feedback_b: Yes.  Variables must already have values in order to be used on the right hand side.
    :feedback_c: No, No, No!
+   :practice: T
 
    Which of the following explains why ``wait_time_int = int(wait_time_int)`` is an error?
 

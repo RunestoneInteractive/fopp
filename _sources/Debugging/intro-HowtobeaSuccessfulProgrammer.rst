@@ -11,6 +11,8 @@
    :prefix: debug-1-
    :start: 1
 
+.. index:: boundary conditions, testing, debugging
+
 Debugging
 =========
 
@@ -106,7 +108,7 @@ Hmm, when you run that example you see that something funny has happened.
    :feedback_b: No, try adding the two numbers together yourself, you will definitely get a different result.
    :feedback_c: Yes!  Remember that input returns a string.  Now we will need to convert the string to an integer
    :correct: c
-   :topics: Debugging/intro-HowtobeaSuccessfulProgrammer
+   :practice: T
 
    Which of the following best describes what is wrong with the previous example?
 
@@ -129,8 +131,6 @@ iteration of the program that does that, and the conversion to integer.
    final_time_int = current_time_int + wait_time_int
    print(final_time_int)
 
-
-.. index:: boundary conditions, testing, debugging
 
 Now, that's a lot better, and in fact depending on the hours you chose, it may be exactly right. 
 If you entered 8 for the current time and 5 for the wait time then 13 is correct. But if you 
