@@ -14,9 +14,10 @@
 Append versus Concatenate
 -------------------------
 
-The ``append`` method adds a new item to the end of a list.  It is also possible to add a new item to the end of a list by using the concatenation operator.  However, you need to be careful.
+The ``append`` method adds a new item to the end of a list. It is also possible to add a new item to the end of a list 
+by using the concatenation operator. However, you need to be careful.
 
-Consider the following example.  The original list has 3 integers.  We want to add the word "cat" to the end of the list.
+Consider the following example. The original list has 3 integers. We want to add the word "cat" to the end of the list.
 
 .. codelens:: clens8_7_1
     :python: py3
@@ -25,7 +26,7 @@ Consider the following example.  The original list has 3 integers.  We want to a
 
     origlist.append("cat")
 
-Here we have used ``append`` which simply modifies the list.  In order to use concatenation, we need to 
+Here we have used ``append`` which simply modifies the list. In order to use concatenation, we need to 
 write an assignment statement that uses the accumulator pattern::
 
     origlist = origlist + ["cat"]
@@ -40,10 +41,9 @@ to do its work.
 
     origlist = origlist + ["cat"]
 
-It is also important to realize that with append, the original list is simply modified.  
-On the other hand, with concatenation, an entirely new list is created.  This can be seen in the 
-following codelens example where
-``newlist`` refers to a list which is a copy of the original list, ``origlist``, with the new item 
+It is also important to realize that with append, the original list is simply modified. On the other hand, 
+with concatenation, an entirely new list is created.  This can be seen in the following codelens example 
+where``newlist`` refers to a list which is a copy of the original list, ``origlist``, with the new item 
 "cat" added to the end.  ``origlist`` still contains the three values it did before the concatenation. 
 This is why the assignment operation is necessary as part of the accumulator pattern.
 
@@ -54,6 +54,32 @@ This is why the assignment operation is necessary as part of the accumulator pat
 
     newlist = origlist + ["cat"]
 
+This might be difficult to understand since these two lists appear to be the same. In Python, every object 
+has a unique identification tag. Likewise, there is a built-in function that can be called on any object to return 
+its unique id. The function is appropriately called ``id`` and takes a single parameter, the object that you are 
+interested in knowing about. You can see in the example below that a real id is usually a very large integer value 
+(corresponding to an address in memory). In the textbook though the number will likely be smaller.
+
+.. sourcecode:: python
+
+    >>> alist = [4, 5, 6]
+    >>> id(alist)
+    4300840544
+    >>> 
+
+.. activecode:: ac8_7_1
+
+    origlist = [45,32,88]
+    print("origlist:", origlist)
+    print("the identifier:", id(origlist))             #id of the list before changes
+    newlist = origlist + ['cat'] 
+    print("newlist:", newlist)   
+    print("the identifier:", id(newlist))              #id of the list after concatentation
+    origlist.append('cat')
+    print("origlist:", origlist)
+    print("the identifier:", id(origlist))             #id of the list after append is used
+
+Note how even though ``newlist`` and ``origlist`` appear the same, they have different identifiers. 
 
 **Check your understanding**
 
@@ -72,4 +98,3 @@ This is why the assignment operation is necessary as part of the accumulator pat
      alist = [4,2,8,6,5]
      alist = alist + 999
      print(alist)
-
