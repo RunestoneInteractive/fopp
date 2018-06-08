@@ -9,11 +9,10 @@
 
 .. _simple_python_data:
 
-Introduction: Values, Operators, Function calls, Variables
-==========================================================
+Introduction
+============
 
-
-.. index:: value, data type, string, integer, int, float, class
+.. index:: value, data type, string, integer, int, float, class, literal, output
 
 .. index::
     single: triple quoted string
@@ -27,9 +26,11 @@ Introduction: Values, Operators, Function calls, Variables
     http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.mov
     http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.webm
 
-In order to get started learning any programming language there are a number of
-concepts and ideas that are necessary.
-The goal of this chapter is to introduce you to the basic vocabulary of programming and some of the fundamental
-building blocks of Python.
+This chapter introduces several basic building blocks of Python programs:
+
+    - literals, like numbers and character strings
+    - operators, like ``+`` and ``*``
+    - function calls, which take values as inputs and compute new values
+    - variables, which save values so they can be used later in the program
 
 

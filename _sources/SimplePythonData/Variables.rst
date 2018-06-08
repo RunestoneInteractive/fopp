@@ -35,7 +35,7 @@ manipulate **variables**. A variable is a name that refers to a value.
     pi = 3.14159
 
 This example makes three assignments. The first assigns the string value
-``"What's up, Doc?"`` to a new variable named ``message``. The second gives the
+``"What's up, Doc?"`` to a new variable named ``message``. The second assigns the
 integer ``17`` to ``n``, and the third assigns the floating-point number
 ``3.14159`` to a variable called ``pi``.
 
@@ -62,8 +62,8 @@ This diagram shows the result of executing the assignment statements shown above
 .. image:: Figures/refdiagram1.png
    :alt: Reference Diagram
 
-If you ask Python to evaluate a variable, it will produce the value
-that is currently linked to the variable.  In other words, evaluating a variable looks up its value.
+If your program includes a variable in any expression, whenever that expression is executed it will produce the value
+that is linked to the variable at the time of execution.  In other words, evaluating a variable looks up its value.
 
 .. activecode:: ac2_8_1
     :nocanvas:
@@ -125,7 +125,7 @@ A great deal of programming is about having the computer remember things.  For e
 track of the number of missed calls on your phone.  Each time another call is missed, we will arrange to update
 or change the variable so that it will always reflect the correct value.
 
-Any place in python where a number or string is expected, you can put a variable name instead. The python interpreter will substitute the value for the variable name.
+Any place in a Python program where a number or string is expected, you can put a variable name instead. The python interpreter will substitute the value for the variable name.
 
 For example, we can find out the data type of the current value of a variable by putting the variable name inside the parentheses following the function name ``type``.
 
@@ -141,7 +141,7 @@ For example, we can find out the data type of the current value of a variable by
     print(type(pi))
 
 .. note::
-   If you have programmed in another language such as Java or C++, you may be used to the idea that *variables* have types that are declared when the variable name is first introduced in a program. Python doesn't do that. Variables don't have types in python; *values* do. That means that it is acceptable in Python to have a variable name refer to an integer and later have the same variable name refer to a string. This is almost never a good idea, because it will confuse human readers (including you), but the Python interpreter will not complain.
+   If you have programmed in another language such as Java or C++, you may be used to the idea that *variables* have types that are declared when the variable name is first introduced in a program. Python doesn't do that. Variables don't have types in Python; *values* do. That means that it is acceptable in Python to have a variable name refer to an integer and later have the same variable name refer to a string. This is almost never a good idea, because it will confuse human readers (including you), but the Python interpreter will not complain.
 
 
 
