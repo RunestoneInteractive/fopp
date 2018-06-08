@@ -36,7 +36,7 @@ That code is easier to read if we unpack the key-value pairs into two variable n
 
     d = {"k1": 3, "k2": 7, "k3": "some other value"}
     
-    for (k, v) in d.items():
+    for k, v in d.items():
         print(k)
         print(v)
         print('*** LOOP ***')
