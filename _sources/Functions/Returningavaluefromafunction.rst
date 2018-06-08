@@ -14,6 +14,9 @@
 Returning a value from a function
 ---------------------------------
 
+.. image:: Figures/function_call.gif
+   :alt: gif of a box labeled function with three spaces on the top for input and a space on the bottom for output. Three arrows enter the top and are labeled as input or arguments. The function box shakes, and then one arrow leaves the bottom of the function box.
+
 Not only can you pass a parameter value into a function, a function can also produce a value. You have already 
 seen this in some previous functions that you have used. For example, ``len`` takes a list or string as a parameter 
 value and returns a number, the length of that list or string. ``range`` takes an integer as a parameter value and 
