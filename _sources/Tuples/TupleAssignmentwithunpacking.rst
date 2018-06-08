@@ -54,10 +54,31 @@ Naturally, the number of variables on the left and the number of values on the r
 
     (a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack 
 
+Earlier we were demonstrating how to use tuples as return values when calculating the area and circumference of a 
+circle. Here we can unpack the return values after calling the function.
+
+.. activecode:: ac12_4_1
+    
+    def circleInfo(r):
+        """ Return (circumference, area) of a circle of radius r """
+        c = 2 * 3.14159 * r
+        a = 3.14159 * r * r
+        return c, a
+
+    print(circleInfo(10))
+    
+    circumference, area = circleInfo(10)
+    print(circumference)
+    print(area)
+
+    circumference_two, area_two = circleInfo(45)
+    print(circumference_two)
+    print(area_two)
+
 Python even provides a way to pass a single tuple to a function and have it be unpacked for assignment to the named 
 parameters. 
 
-.. activecode:: ac12_4_1
+.. activecode:: ac12_4_2
 
     def add(x, y):
         return x + y
