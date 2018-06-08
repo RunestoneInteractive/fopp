@@ -123,6 +123,7 @@ easier way to do this kind of task.
    :feedback_b: In the second statement, substitute the current value of x before subtracting 1.
    :feedback_c: Yes, this statement sets the value of x equal to the current value minus 1.
    :feedback_d: Remember that variables in Python are different from variables in math in that they (temporarily) hold values, but can be reassigned.
+   :practice: T
 
    What is printed when the following statements execute?
 
@@ -142,6 +143,7 @@ easier way to do this kind of task.
    :feedback_b: Each statement changes the value of x, so 9 is not the final result.
    :feedback_c: Yes, starting with 12, subtract 3, than add 5, and finally add 1.
    :feedback_d: Remember that variables in Python are different from variables in math in that they (temporarily) hold values, but can be reassigned.
+   :practice: T
 
    What is printed when the following statements execute?
 
@@ -175,6 +177,7 @@ easier way to do this kind of task.
    :feedback_c: This updates x to be its old value (because of the +=) plus its old value again (because of the x on the right side) plus the value of y, so it's equivalent to x = x + x + y
    :feedback_d: x is updated to be the old value of x plus the value of y.
    :feedback_e: ++ is not a syntax that means anything in Python.
+   :practice: T
 
    Which of the following statements are equivalent?
  

@@ -11,6 +11,8 @@
    :prefix: data-6-
    :start: 1
 
+.. index:: type converter functions, int, float, str, truncation
+
 Data Types
 ----------
 If you are not sure what class (data type) a value falls into, Python has a function called
@@ -125,6 +127,7 @@ change might mean something quite different from what you intended.
    :feedback_b: The type function will tell you the class the value belongs to.
    :feedback_c: Only numeric values can be used in equations.
    :feedback_d: In Python variables are not declared. Values, not variables, have types in Python. A variable can even take on values with different types during a program's execution.
+   :practice: T
 
    How can you determine the type of a variable?
 
@@ -138,8 +141,6 @@ change might mean something quite different from what you intended.
    :feedback_b: The data is not numeric.
    :feedback_c: The value is not numeric with a decimal point.
    :feedback_d: Strings can be enclosed in single quotes.
+   :practice: T
 
    What is the data type of 'this is what kind of data'?
-
-.. index:: type converter functions, int, float, str, truncation
-

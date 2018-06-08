@@ -143,8 +143,6 @@ For example, we can find out the data type of the current value of a variable by
 .. note::
    If you have programmed in another language such as Java or C++, you may be used to the idea that *variables* have types that are declared when the variable name is first introduced in a program. Python doesn't do that. Variables don't have types in Python; *values* do. That means that it is acceptable in Python to have a variable name refer to an integer and later have the same variable name refer to a string. This is almost never a good idea, because it will confuse human readers (including you), but the Python interpreter will not complain.
 
-
-
 **Check your understanding**
 
 .. mchoice:: question2_8_1
@@ -157,6 +155,7 @@ For example, we can find out the data type of the current value of a variable by
    :feedback_b: This is the first value assigned to the variable day, but the next statements reassign that variable to new values.
    :feedback_c: This is the second value assigned to the variable day, but the next statement reassigns that variable to a new value.
    :feedback_d: The variable day will contain the last value assigned to it when it is printed.
+   :practice: T
 
    What is printed when the following statements execute?
 

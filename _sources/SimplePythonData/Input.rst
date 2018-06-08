@@ -11,6 +11,8 @@
    :prefix: data-14-
    :start: 1
 
+.. index:: order of operations, rules of precedence
+
 Input
 -----
 
@@ -82,6 +84,7 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
    :feedback_b: Even though the user typed in an integer, it does not come into the program as an integer.
    :feedback_c: 18 is the value of what the user typed, not the type of the data.
    :feedback_d: 18 is the value of what the user typed, not the type of the data.
+   :practice: T
 
    What is printed when the following statements execute?
 
@@ -90,7 +93,3 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
      n = input("Please enter your age: ")
      # user types in 18
      print(type(n))
-
-
-.. index:: order of operations, rules of precedence
-

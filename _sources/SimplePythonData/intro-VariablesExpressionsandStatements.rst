@@ -13,8 +13,6 @@ Introduction
 ============
 
 .. index:: value, data type, string, integer, int, float, class, literal, output
-
-.. index::
     single: triple quoted string
 
 .. _values_n_types:

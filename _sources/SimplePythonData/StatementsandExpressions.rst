@@ -11,6 +11,8 @@
    :prefix: data-9-
    :start: 1
 
+.. index:: expression
+
 Statements and Expressions
 --------------------------
 
@@ -25,9 +27,6 @@ A **statement** is an instruction that the Python interpreter can execute. You
 have only seen the assignment statement so far .  Some other kinds of statements
 that you'll see in future chapters are ``while`` statements, ``for`` statements, ``if``
 statements,  and ``import`` statements.  (There are other kinds too!)
-
-
-.. index:: expression
 
 An **expression** is a combination of literals, variable names, operators, and calls
 to functions. Expressions need to be evaluated. The result of evaluating an expression is a *value* or *object*.
@@ -111,6 +110,7 @@ To start giving you some practice in reading and understanding complicated expre
 
 
 .. parsonsprob:: pp2_9_1
+   :practice: T
 
    Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing ``square(x + sub(square(y), 2 *x))``.
 
@@ -136,6 +136,3 @@ To start giving you some practice in reading and understanding complicated expre
    add 2 and 5 to get 7
    =====
    run the square function, again, on input 7, returning the value 49
-
-
-

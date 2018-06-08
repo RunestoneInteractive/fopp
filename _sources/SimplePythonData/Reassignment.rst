@@ -108,6 +108,7 @@ You can step through the code and see how the variable assignments change below.
    :feedback_b: No, x and y are two separate variables.  Just because x changes in the last assignment statement, it does not change the value that was copied into y in the second statement.
    :feedback_c: Look at the last assignment statement, which reassigns x, and not y.
    :feedback_d: Yes, x has the value 22 and y the value 15.
+   :practice: T
 
    After the following statements, what are the values of x and y?
 

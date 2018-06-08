@@ -73,6 +73,7 @@ quotes are removed in the output window.  However, if we print the type, we can 
    :feedback_b: The int function truncates all values after the decimal and prints the integer value.
    :feedback_c: When converting to an integer, the int function does not round.
    :feedback_d: The int function removes the fractional part of 53.785 and returns an integer, which is then printed.
+   :practice: T
 
    What value is printed when the following statement executes?
 
