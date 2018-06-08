@@ -32,9 +32,11 @@ outside. For example, consider again the ``square`` function:
     print(y)
 
 
-Try running this in Codelens. If you press the 'last >>' button you will see an error message. When we try to use 
-``y`` on line 6 (outside the function) Python looks for a global variable named ``y`` but does not find one. This 
-results in the error: ``Name Error: 'y' is not defined.``
+Try running this in Codelens. When a function is invoked in Codelens, the local scope is separated from global scope by 
+a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global 
+frame. If you press the 'last >>' button you will see an error message. When we try to use ``y`` on line 6 (outside the 
+function) Python looks for a global variable named ``y`` but does not find one. This results in the error: 
+``Name Error: 'y' is not defined.``
 
 The variable ``y`` only exists while the function is being executed --- we call this its **lifetime**. When the 
 execution of the function terminates (returns), the local variables are destroyed. Codelens helps you visualize this 
