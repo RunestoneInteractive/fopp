@@ -69,6 +69,22 @@ is evaluated before control is passed to the function. The value is assigned to 
 Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value, 
 the value that was 'passed into' the function.
 
+.. showeval:: eval11_3_1
+   :trace_mode: true
+
+   def hello2(s):
+       print("Hello " + s)
+       print("Glad to meet you")
+
+   hello2("Nick")
+   ~~~~
+   {{hello2("Nick")}}{{def hello2(s):}}
+   def hello2({{s}}{{"Nick"}}):
+   {{def hello2("Nick"):}}{{print("Hello " + s)}}
+   print("Hello " + {{s}}{{"Nick"}})
+   {{print("Hello " + "Nick")     #prints out "hello Nick"}}{{print("Glad to meet you")   #prints out "Glad to meet you"}}
+   {{print("Glad to meet you")   #prints out "Glad to meet you"}}{{# the function is finished}}
+
 To get a feel for that, let's invoke hello2 using some more complicated expressions. Try some of your own, too.
 
 .. activecode:: ac11_3_1
