@@ -56,6 +56,7 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+   Sorting/toctree.rst
 
 .. ignore
    Debugging/toctree.rst
@@ -73,7 +74,6 @@ Table of Contents
    IntroRecursion/toctree.rst
    ClassesBasics/toctree.rst
    ClassesDiggingDeeper/toctree.rst
-   Sorting/toctree.rst
 
 
 Appendices
