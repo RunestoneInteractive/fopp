@@ -8,4 +8,5 @@ Sorting
    intro-SortingwithSortandSorted.rst
    Optionalreverseparameter.rst
    Optionalkeyparameter.rst
+   SortingaDictionary.rst
    
