@@ -64,6 +64,13 @@ has happened.
 
 The same process of invocation occurs again on line 10, with lines 2 and 3 getting executed a second time.
 
+.. admonition:: Common Mistake with Functions
+
+    It is a common mistake for beginners to forget their parenthesis after the function name. This is particularly 
+    common in the case where there parameters are not required. Because the hello function defined above does not 
+    require parameters, it's easy to forget the parenthesis. This is less common, but still possible, when trying to
+    call functions that require parameters.
+
 **Check your understanding**
 
 .. mchoice:: question11_2_1
