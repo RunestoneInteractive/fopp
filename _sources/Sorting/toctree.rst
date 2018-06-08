@@ -11,4 +11,5 @@ Sorting
    SortingaDictionary.rst
    StableSorting.rst
    Glossary.rst
+   Exercises.rst
    
