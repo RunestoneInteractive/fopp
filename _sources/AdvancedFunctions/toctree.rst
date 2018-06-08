@@ -8,4 +8,5 @@ Advanced Functions
    OptionalParameters.rst
    KeywordParameters.rst
    Exercises.rst
+   ExtraExercises.rst
    
