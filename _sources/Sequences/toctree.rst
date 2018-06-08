@@ -13,3 +13,4 @@ Sequences
    ConcatenationandRepetition.rst
    CountandIndex.rst
    SplitandJoin.rst
+   Exercises.rst
