@@ -12,4 +12,5 @@ Sorting
    StableSorting.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    
