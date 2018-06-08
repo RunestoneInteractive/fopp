@@ -11,6 +11,8 @@
    :prefix: seqmut-3-
    :start: 1
 
+.. index:: aliases
+
 Objects and References
 ----------------------
 
@@ -84,5 +86,3 @@ Here is the example in codelens.  Pay particular attention to the ``id`` values.
 
     print(a is b)
     print(a == b)
-
-.. index:: aliases

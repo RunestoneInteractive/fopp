@@ -63,6 +63,7 @@ This is why the assignment operation is necessary as part of the accumulator pat
    :correct: b
    :feedback_a: You cannot concatenate a list with an integer.
    :feedback_b: Yes, in order to perform concatenation you would need to write alist+[999].  You must have two lists.
+   :practice: T
 
    What is printed by the following statements?
    

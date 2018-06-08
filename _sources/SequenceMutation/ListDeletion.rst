@@ -11,8 +11,8 @@
    :prefix: seqmut-2-
    :start: 1
 
-List Deletion
--------------
+List Element Deletion
+---------------------
 
 Using slices to delete list elements can be awkward and therefore error-prone.
 Python provides an alternative that is more readable.

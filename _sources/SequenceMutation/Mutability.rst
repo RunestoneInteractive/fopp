@@ -148,8 +148,9 @@ value of a and see what happens to both lists!
    :answer_c: Error, it is illegal to assign
    :correct: b
    :feedback_a: Item assignment does not insert the new item into the list.
-   :feedback_b: Yes, the value True is placed in the list at index 2.  It replaces 8.
-   :feedback_c: Item assignment is allowed with lists.  Lists are mutable.
+   :feedback_b: Yes, the value True is placed in the list at index 2. It replaces 8.
+   :feedback_c: Item assignment is allowed with lists. Lists are mutable.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -167,6 +168,7 @@ value of a and see what happens to both lists!
    :feedback_a: Assignment is not allowed with strings.
    :feedback_b: Assignment is not allowed with strings.
    :feedback_c: Yes, strings are immutable.
+   :practice: T
 
    What is printed by the following statements:
    
@@ -186,6 +188,7 @@ value of a and see what happens to both lists!
    :feedback_b: No, that was the inital value of y, but y has changed.
    :feedback_c: No, when we assign a list to another list it does not concatenate the lists together.
    :feedback_d: No, when we assign a list to another list it does not concatenate the lists together.
+   :practice: T
 
    What is the value of y after the following code has been evaluated:
    

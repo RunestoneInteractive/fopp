@@ -83,6 +83,7 @@ You should experiment with these methods so that you understand what they do.  N
    :feedback_a: There are definitely o and p characters.
    :feedback_b: There are 2 o characters but what about p?
    :feedback_c: Yes, add the number of o characters and the number of p characters.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -101,6 +102,7 @@ You should experiment with these methods so that you understand what they do.  N
    :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
    :feedback_c: This expression uses the index of n
    :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+   :practice: T
 
    What is printed by the following statements?
    

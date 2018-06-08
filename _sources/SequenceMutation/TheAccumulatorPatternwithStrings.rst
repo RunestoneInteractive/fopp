@@ -45,6 +45,7 @@ same (try substituting x for ac everywhere in the above code).
    :feedback_a: Each item is converted to upper case before concatenation.
    :feedback_b: Each character is converted to upper case but the order is wrong.
    :feedback_c: Yes, the order is reversed due to the order of the concatenation.
+   :practice: T
 
    What is printed by the following statements:
    

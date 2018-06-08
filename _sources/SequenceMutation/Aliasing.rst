@@ -66,6 +66,7 @@ economize.
    :correct: b
    :feedback_a: blist is not a copy of alist, it is a reference to the list alist refers to.
    :feedback_b: Yes, since alist and blist both reference the same list, changes to one also change the other.
+   :practice: T
 
    What is printed by the following statements?
    

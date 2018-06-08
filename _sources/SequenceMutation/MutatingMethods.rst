@@ -120,6 +120,7 @@ the entire list contents (see line 8 below).
    :feedback_a: True was added first, then False was added last.
    :feedback_b: Yes, each item is added to the end of the list.
    :feedback_c: append adds at the end, not the beginning.
+   :practice: T
 
    What is printed by the following statements?
    

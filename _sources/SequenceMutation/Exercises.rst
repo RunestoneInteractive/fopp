@@ -17,6 +17,7 @@ Exercises
 .. activecode:: ac8_11_1
    :language: python
    :autograde: unittest
+   :practice: T
 
    1. For each character in the string already saved in the variable ``str1``, add each character to a list called ``chars``.
    ~~~~
@@ -39,6 +40,7 @@ Exercises
 .. activecode:: ac8_11_2
    :language: python
    :autograde: unittest
+   :practice: T
 
    1.1 For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
    ~~~~
@@ -59,6 +61,7 @@ Exercises
 .. activecode:: ac8_11_3
    :language: python
    :autograde: unittest
+   :practice: T
 
    2. For each word in the list ``verbs``, add an -ing ending. Save this new list in a new list, ``ing``.
    ~~~~
@@ -78,6 +81,7 @@ Exercises
 .. activecode:: ac8_11_4
    :language: python
    :autograde: unittest
+   :practice: T
 
    2.1 **Challenge** Do the same as above, but do not create a new list. Instead, overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
    ~~~~
@@ -97,6 +101,7 @@ Exercises
 .. activecode:: ac8_11_5
    :language: python
    :autograde: unittest
+   :practice: T
 
    3. For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
    ~~~~
@@ -115,6 +120,7 @@ Exercises
 .. activecode:: ac8_11_6
    :language: python
    :autograde: unittest
+   :practice: T
       
    **4.** **Challenge** In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
    ~~~~

@@ -51,6 +51,7 @@ codelens that ``a`` and ``b`` are entirely different list objects.
    :feedback_a: print alist not print blist
    :feedback_b: blist is changed, not alist.
    :feedback_c: Yes, alist was unchanged by the assignment statement. blist was a copy of the references in alist.
+   :practice: T
 
    What is printed by the following statements?
    
