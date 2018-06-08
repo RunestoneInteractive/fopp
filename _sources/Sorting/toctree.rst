@@ -9,4 +9,6 @@ Sorting
    Optionalreverseparameter.rst
    Optionalkeyparameter.rst
    SortingaDictionary.rst
+   StableSorting.rst
+   Glossary.rst
    
