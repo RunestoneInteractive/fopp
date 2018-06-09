@@ -9,7 +9,6 @@ Simple Python Data
    Values.rst
    Operators.rst
    FunctionCalls.rst
-   Print.rst
    DataTypes.rst
    ConvertTypeFunctions.rst
    Variables.rst

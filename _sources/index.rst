@@ -56,6 +56,8 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+
+.. ignore
    Debugging/toctree.rst
    PythonTurtle/toctree.rst
    PythonModules/toctree.rst
@@ -76,7 +78,7 @@ Table of Contents
 Appendices
 ::::::::::
 
-.. toctree::
+.. ignore
    :caption: Appendices
    :maxdepth: 1
 
@@ -86,7 +88,7 @@ Appendices
 Acknowledgements
 ::::::::::::::::
 
-.. toctree::
+.. ignore
     :caption: Acknowledgements
     :maxdepth: 1
 

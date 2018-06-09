@@ -23,7 +23,7 @@ Statements and Expressions
 
 A **statement** is an instruction that the Python interpreter can execute. You
 have only seen the assignment statement so far .  Some other kinds of statements
-that you'll see shortly are ``while`` statements, ``for`` statements, ``if``
+that you'll see in future chapters are ``while`` statements, ``for`` statements, ``if``
 statements,  and ``import`` statements.  (There are other kinds too!)
 
 
@@ -45,7 +45,7 @@ of characters in a string.
 
 The *evaluation of an expression* produces a value, which is why expressions
 can appear on the right hand side of assignment statements. A literal all by
-itself is a simple expression, and so is a variable.  Evaluating a variable gives the value that the variable refers to.
+itself is a simple expression, and so is a variable.
 
 .. activecode:: ac2_9_2
     :nocanvas:
@@ -103,7 +103,7 @@ With a function call, it's even possible to have a complex expression before the
 
 It is important to start learning to read code that contains complex expressions. The Python interpreter examines any line of code and *parses* it into components. For example, if it sees an ``=`` symbol, it will try to treat the whole line as an assignment statement. It will expect to see a valid variable name to the left of the =, and will parse everything to the right of the = as an expression. It will try to figure out whether the right side is a literal, a variable name, an operator expression, or a function call expression. If it's an operator expression, it will further try to parse the sub-expressions before and after the operator. And so on. You should learn to parse lines of code in the same way.
 
-In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.
+In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after, then combines the two resulting values using the operator. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.
 
 If a function call expression is a sub-expression of some more complicated expression, as ``square(x)`` is in ``sub(square(y), square(x))``, then the return value from ``square(x)`` is passed as an input to the ``sub`` function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the ``square`` function is called (twice) before the ``sub`` function is called, even though the ``sub`` function comes first when reading the code from left to right.
 
