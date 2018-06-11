@@ -11,4 +11,5 @@ More About Iteration
    RandomlyWalkingTurtles.rst
    BreakandContinue.rst
    2DimensionalIterationImageProcessing.rst
+   ImageProcessingonYourOwn.rst
    
