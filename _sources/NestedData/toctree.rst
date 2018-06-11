@@ -8,5 +8,6 @@ Nested Data and Nested Iteration
    ListswithComplexItems.rst
    NestedDictionaries.rst
    NestedIteration.rst
+   DebuggingNestedData.rst
    
    
