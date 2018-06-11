@@ -10,4 +10,5 @@ More About Iteration
    listenerLoop.rst
    RandomlyWalkingTurtles.rst
    BreakandContinue.rst
+   2DimensionalIterationImageProcessing.rst
    
