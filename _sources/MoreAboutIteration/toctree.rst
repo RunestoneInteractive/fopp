@@ -12,4 +12,5 @@ More About Iteration
    BreakandContinue.rst
    2DimensionalIterationImageProcessing.rst
    ImageProcessingonYourOwn.rst
+   Exercises.rst
    
