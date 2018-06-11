@@ -9,5 +9,6 @@ Nested Data and Nested Iteration
    NestedDictionaries.rst
    NestedIteration.rst
    DebuggingNestedData.rst
+   Exercises.rst
    
    
