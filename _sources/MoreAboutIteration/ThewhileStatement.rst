@@ -26,9 +26,14 @@ The ``while`` statement provides a much more general mechanism for iterating. Si
 a boolean expression to control the flow of execution. The body of while will be repeated as long as the controlling 
 boolean expression evaluates to ``True``.
 
-The following figure shows the flow of control.
+The following two figures show the flow of control. The first focuses on the flow inside the while loop and the second 
+shows the while loop in context.
 
 .. image:: Figures/while_flow.png
+   :alt: a diamond at the top has the phrase "Is the condition True?". Two arrows come out it with either the phrase yes or no on the arrows. The yes arrow points to a box that says "evaluate the statemenets in the body of the loop". It then has an arrow that unconditionally points back to "Is the condition True?" diamond. The no arrow escapes the loop and points down past the "evaluate" square.
+
+.. image:: Figures/while_loop.png
+   :alt: image showing a rectangle with "code block" written on it on top. Then, text that read "while {condition}": followed by an indented block with "run if {condition} is True" written on it. An arrow points from the bottom of the indented block to the top of the while loop and says "run loop again". At the bottom of the image is an unindented block that says the phrase "code block."
 
 We can use the ``while`` loop to create any type of iteration we wish, including anything that we have previously 
 done with a ``for`` loop. For example, the program in the previous section could be rewritten using ``while``.

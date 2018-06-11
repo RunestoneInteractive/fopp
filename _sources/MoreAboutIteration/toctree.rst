@@ -9,4 +9,5 @@ More About Iteration
    ThewhileStatement.rst
    listenerLoop.rst
    RandomlyWalkingTurtles.rst
+   BreakandContinue.rst
    
