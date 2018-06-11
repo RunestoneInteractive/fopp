@@ -12,9 +12,9 @@ Simple Python Data
    DataTypes.rst
    ConvertTypeFunctions.rst
    Variables.rst
+   VariableNamesandKeywords.rst
    StatementsandExpressions.rst
    OrderofOperations.rst
-   VariableNamesandKeywords.rst
    Reassignment.rst
    UpdatingVariables.rst
    Input.rst
