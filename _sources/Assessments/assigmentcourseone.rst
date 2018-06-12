@@ -16,13 +16,9 @@ Assignment
    :practice: T
    :topics: 
 
-   **1.** Write code to determine how many vowels are in the text assigned to ``story``. Assign this number to the variable ``num_vowels``. Note that in this problem, only 'a', 'e', 'i', 'o', and 'u' count as vowels.
+   **1.** Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value ``a_scores``.
    ~~~~
-   story = """The quick brown fox jumped over the lazy dog.
-   By the end of the day, the fox had travelled far from home
-   and the dog had only made it down the street. This was not
-   an advantage for the dog though, because it still took both
-   animals the same amount of time to arrive at home."""
+   scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
    =====
 
@@ -31,14 +27,9 @@ Assignment
    class myTests(TestCaseGui):
 
       def testOne(self):
-         og_story = """The quick brown fox jumped over the lazy dog.
-   By the end of the day, the fox had travelled far from home
-   and the dog had only made it down the street. This was not
-   an advantage for the dog though, because it still took both
-   animals the same amount of time to arrive at home."""
-         self.assertEqual(num_vowels, 80, "Testing that num_vowels is a number that contains the correct elements.")
-         self.assertEqual(story, og_story, "Testing that story is still the original string assigned.")
+         self.assertEqual(a_scores, 10, "Testing that num_vowels is a number that contains the correct elements.")
          self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values.)")
+         self.assertIn('if', self.getEditorText(), "Testing your code (Don't worry about actual and expected values.)")
 
    myTests().main()
 
