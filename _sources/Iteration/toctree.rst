@@ -13,6 +13,5 @@ Iteration
    TheAccumulatorPattern.rst
    GeneralizedSequences.rst
    Glossary.rst
-   Exercises.rst
    ExtraExercises.rst
    
