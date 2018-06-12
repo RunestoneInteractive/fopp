@@ -20,5 +20,6 @@ Simple Python Data
    Input.rst
    Glossary.rst
    Exercises.rst
+   week1a2.rst
    
    
