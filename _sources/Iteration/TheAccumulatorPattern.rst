@@ -61,11 +61,37 @@ accumulate the result.
 
     What would happen if we indented the print accum statement? Not sure? Make a prediction, then try it and find out.
 
+We can utilize the range function in this situation as well. Previously, you've seen it used when we wanted to draw in 
+turtle. There we used it to iterate a certain number of times. We can do more than that though. The ``range`` function 
+takes at least one input - which should be an integer - and returns a list as long as your input. While you can provide 
+two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but 
+not include - the input.
+
+One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we 
+have to cast it as a list using ``list()``. Inside the textbook you'll notice that ``range`` works with or without 
+casting it as a list but it is best for you to try and get into the habit of casting it as a list. Here's how you could use the range function in the previous problem.
+
+.. activecode:: ac6_6_2
+
+   accum = 0
+   for w in range(11):
+       accum = accum + w
+   print(accum)
+
+   # or, if you use two inputs for the range function
+
+   sec_accum = 0
+   for w in range(1,11):
+       sec_accum = sec_accum + w
+   print(sec_accum)
+
+Because the the range function is exclusive of the ending number, we have to use 11 as the function input.
+
 We can use the accumulation pattern is count the number of something or to sum up a total. The 
 above examples only covered how to get the sum for a list, but we can also count how many items are 
 in the list if we wanted to.
 
-.. activecode:: ac6_6_2
+.. activecode:: ac6_6_3
 
    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    count = 0
