@@ -55,3 +55,66 @@ and join the list with the glue between each of the elements.
 
 The list that you glue together (``wds`` in this example) is not modified.  Also, 
 you can use empty glue or multi-character strings as glue.
+
+**Check your understanding**
+
+.. activecode:: ac5_8_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a new list of the 6th through 13th elements of ``lst`` (eight items in all) and assign it to the variable ``output``.
+   ~~~~
+   lst = ["swimming", 2, "water bottle", 44, "lollipop", "shine", "marsh", "winter", "donkey", "rain", ["Rio", "Beijing", "London"], [1,2,3], "gold", "bronze", "silver", "mathematician", "scientist", "actor", "actress", "win", "cell phone", "leg", "running", "horse", "socket", "plug", ["Phelps", "le Clos", "Lochte"], "drink", 22, "happyfeet", "penguins"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFour(self):
+         self.assertEqual(output, lst[5:13], "Testing that output value is assigned to correct value.")
+
+   myTests().main()
+
+.. activecode:: ac5_8_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a variable ``output`` and assign it to a list whose elements are the words in the string ``str1``.
+   ~~~~
+   str1 = "OH THE PLACES YOU'LL GO"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testSix(self):
+         self.assertEqual(output, ["OH", "THE", "PLACES", "YOU'LL", "GO"], "Testing that output value is assigned to correct value.")
+
+   myTests().main()
+
+.. activecode:: ac5_8_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
+   ~~~~
+   sent = "The bicentennial for our university is in 2017!"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(wrds, sent.split(), "Testing that wrds has been correctly assigned.")
+
+   myTests().main()
+

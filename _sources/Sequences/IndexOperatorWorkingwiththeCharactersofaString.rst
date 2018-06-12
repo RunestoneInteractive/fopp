@@ -135,6 +135,87 @@ will learn much more if you force yourself to make a prediction before you see t
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[5])
 
+.. activecode:: ac5_3_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Assign the value of the 34th element of ``lst`` to the variable ``output``.
+   ~~~~
+   lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
+   
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(output, "laptop", "Testing that output value is assigned to correct value.")
+
+   myTests().main()
+
+.. activecode:: ac5_3_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the value of the 23rd element of ``lst`` to the variable ``checking``.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(checking, "leaders and the best", "Testing that checking has the correct element assigned.")
+
+   myTests().main()
+
+.. activecode:: ac5_3_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Assign the value of the last chacter of ``lst`` to the variable ``output``. Do this so that the length of lst doesn't matter.
+   ~~~~
+   lst = "Every chess or checkers game begins from the same position and has a finite number of moves that can be played. While the number of possible scenarios and moves is quite large, it is still possible for computers to calculate that number and even be programmed to respond well against a human player..."
+   
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testThree(self):
+         self.assertEqual(output, ".", "Testing that output value is assigned to correct value.")
+
+   myTests().main()
+
+.. activecode:: ac5_3_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
+
+   myTests().main()
+
+
 .. note::
    Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
    has a long history in computer science having to do with some low-level implementation details that we won't

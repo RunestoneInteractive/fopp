@@ -98,8 +98,27 @@ end of the sequence.
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[4:])
 
-.. note::
+.. activecode:: ac5_5_4
+   :language: python
+   :autograde: unittest
+   :practice: T
 
-    This workspace is provided for your convenience. You can use this activecode window to try out anything you like.
+   Create a new list using the 9th through 12th elements (four items in all) of ``new_lst`` and assign it to the variable ``sub_lst``.
+   ~~~~
+   new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
 
-    .. activecode:: ac5_5_4
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sub_lst, new_lst[8:12], "Testing that sub_lst has the correct elements assigned.")
+
+   myTests().main()
+
+
+
+
+

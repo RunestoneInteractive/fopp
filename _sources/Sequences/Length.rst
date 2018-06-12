@@ -121,3 +121,44 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
 
      L = [0.34, '6', 'SI106', 'Python', -2]
      print(len(L[1:-1]))   
+
+.. activecode:: ac5_4_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Assign the number of elements in ``lst`` to the variable ``output``.
+   ~~~~
+   lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
+   
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testTwo(self):
+         self.assertEqual(output, 52, "Testing that output value is assigned to correct value.")
+
+   myTests().main()
+
+.. activecode:: ac5_4_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the number of elements in ``lst`` to the variable ``num_lst``.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(num_lst, 30, "Testing that num_lst has the correct length assigned.")
+
+   myTests().main()
+
