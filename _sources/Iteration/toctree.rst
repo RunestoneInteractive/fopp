@@ -11,6 +11,7 @@ Iteration
    Stringsandforloops.rst
    Listsandforloops.rst
    TheAccumulatorPattern.rst
+   GeneralizedSequences.rst
    Glossary.rst
    Exercises.rst
    ExtraExercises.rst
