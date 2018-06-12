@@ -14,4 +14,5 @@ General Introduction
    ATypicalFirstProgram.rst
    Comments.rst
    Glossary.rst
+   week1a1.rst
    
