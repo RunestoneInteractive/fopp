@@ -151,3 +151,90 @@ There is no limit on the number of statements that can appear under the two clau
          TRUE
          FALSE
          TRUE
+
+.. activecode:: ac7_6_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Write code to assign the string ``"You can apply to SI!"`` to ``output`` *if* the string ``"SI 106"`` is in the list ``courses``. If it is not in ``courses``, assign the value ``"Take SI 106!"`` to the variable ``output``.
+   ~~~~
+   courses = ["ENGR 101", "SI 110", "ENG 125", "SI 106", "CHEM 130"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(output, "You can apply to SI!", "Testing that output has the correct value, given the courses list provided")
+         self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac7_6_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Write code so that if ``"STATS 250"`` is in the list ``schedule``, then the string ``"You could be in Information Science!"`` is assigned to the variable ``resp``. Otherwise, the string ``"That's too bad."`` should be assigned to the variable ``resp``.
+   ~~~~
+   schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(resp, "You could be in Information Science!", "Testing the value of resp given the schedule list provided.")
+         self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac7_6_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a variable, ``b``, and assign it the value of ``15``. Then, write code to see if the value ``b`` is greater than that of ``a``. If it is, ``a``'s value should be multiplied by 2. If the value of ``b`` is less than or equal to ``a``, nothing should happen. Finally, create variable ``c`` and assign it the value of the sum of ``a`` and ``b``.
+   ~~~~
+   a = 20
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testTwoA(self):
+         self.assertEqual(a, 20, "Testing that a has the correct value.")
+
+      def testTwoB(self):
+         self.assertEqual(c, 35, "Testing that c has the correct value.")
+
+   myTests().main()
+
+.. activecode:: ac7_6_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create the variable ``z`` whose value is ``30``. Write code to see if ``z`` is greater than ``y``. If so, add 5 to ``y``'s value, otherwise do nothing. Then, multiply ``z`` and ``y``, and assign the resulting value to the variable ``x``.
+   ~~~~
+   y = 22
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(x, 810, "Testing the value of x")
+      def testTwo(self):
+         self.assertEqual(z, 30, "Testing that z has correctly been defined.")
+
+   myTests().main()   

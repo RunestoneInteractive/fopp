@@ -143,3 +143,134 @@ Here is the same program using ``elif``.
          print("b")
      else:
          print("c")
+
+.. activecode:: ac7_9_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create one conditional to find whether "false" is in string ``str1``. If so, assign variable ``output`` the string "False. You aren't you?". Check to see if "true" is in string ``str1`` and if it is then assign "True! You are you!" to the variable ``output``. If neither are in ``str1``, assign "Neither true nor false!" to ``output``.
+   ~~~~
+   str1 = "Today you are you! That is truer than true! There is no one alive who is you-er than you!"
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testThree(self):
+         self.assertEqual(output, "True! You are you!", "Testing that output has the correct value, given the str1 provided.")
+         self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+         self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac7_9_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create one conditional so that if "Friendly" is in ``w``, then "Friendly is here!" should be assigned to the variable ``wrd``. If it's not, check if "Friend" is in ``w``. If so, the string "Friend is here!" should be assigned to the variable ``wrd``, otherwise "No variation of friend is in here." should be assigned to the variable ``wrd``. (Also consider: does the order of your conditional statements matter for this problem? Why?)
+   ~~~~
+   w = "Friendship is a wonderful human experience!"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(wrd, "Friend is here!", "Testing the value of wrd")
+         self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+         self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac7_9_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create an empty list called ``resps``. Using the list ``percent_rain``, for each percent, if it is above 90, add the string 'Bring an umbrella.' to ``resps``, otherwise if it is above 80, add the string 'Good for the flowers?' to ``resps``, otherwise if it is above 50, add the string 'Watch out for clouds!' to ``resps``, otherwise, add the string 'Nice day!' to ``resps``. Note: if you're sure you've got the problem right but it doesn't pass, then check that you've matched up the strings exactly.
+   ~~~~
+   percent_rain = [94.3, 45, 100, 78, 16, 5.3, 79, 86]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(resps, ['Bring an umbrella.','Nice day!','Bring an umbrella.','Watch out for clouds!',"Nice day!",'Nice day!','Watch out for clouds!',"Good for the flowers?"], "Testing the value of resps")
+
+   myTests().main()
+
+.. activecode:: ac7_9_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   We have created conditionals for you to use. Do not change the provided conditional statements. Find an integer value for ``x`` that will cause ``output`` to hold the values ``True`` and ``None``. (Drawing diagrams or flow charts for yourself may help!)
+   ~~~~
+   x =
+   output = []
+
+   if x > 63:
+       output.append(True)
+   elif x > 55:
+       output.append(False)
+   else: 
+       output.append("Neither")
+
+   if x > 67:
+       output.append(True)
+   else:
+       output.append(None)
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testSixA(self):
+         self.assertEqual(output, [True, None], "Testing that value of output is correct.")
+
+      def testSixB(self):
+         self.assertEqual(x in [64, 65, 66, 67], True, "Testing that value of x is reasonable for this problem")
+
+   myTests().main()
+
+.. activecode:: ac7_9_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   We have written conditionals for you to use. Create the variable x and assign it to some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
+   ~~~~
+   if x >= 10:
+       output = "working"
+   else:
+       output = "Still working"
+   if x > 12:
+       output = "Always working"
+   elif x < 7:
+       output = "Forever working"
+   else:
+       output = "Consistently working"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(output, "Consistently working", "Testing the value of output")
+      def testTwo(self):
+         self.assertEqual(x in [7,8,9,10,11,12], True, "Testing that x was assigned a correct number" )
+
+   myTests().main()
