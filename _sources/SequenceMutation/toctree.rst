@@ -15,6 +15,7 @@ Sequence Mutation
    NonmutatingMethodsonStrings.rst
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
+   AccumulatorPatternStrategies.rst
    Glossary.rst
    Exercises.rst
    ExtraExercises.rst
