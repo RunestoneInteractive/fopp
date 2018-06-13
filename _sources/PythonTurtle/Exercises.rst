@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: turtle-8-
+   :prefix: turtle-10-
    :start: 1
 
 Exercises
