@@ -23,13 +23,15 @@ Statements and Expressions
     http://media.interactivepython.org/thinkcsVideos/Expressions.mov
     http://media.interactivepython.org/thinkcsVideos/Expressions.webm
 
-A **statement** is an instruction that the Python interpreter can execute. You
-have only seen the assignment statement so far .  Some other kinds of statements
-that you'll see in future chapters are ``while`` statements, ``for`` statements, ``if``
-statements,  and ``import`` statements.  (There are other kinds too!)
+A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
+statement so far. Some other kinds of statementsthat you'll see in future chapters are ``while`` statements, 
+``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds too!)
 
-An **expression** is a combination of literals, variable names, operators, and calls
-to functions. Expressions need to be evaluated. The result of evaluating an expression is a *value* or *object*.
+An **expression** is a combination of literals, variable names, operators, and calls to functions. 
+Expressions need to be evaluated. The result of evaluating an expression is a *value* or *object*.
+
+.. image:: Figures/expression_value_type.png
+   :alt: table that shows expressions and their value, and type.
 
 If you ask Python to ``print`` an expression, the interpreter **evaluates** the expression and displays the result.
 
@@ -39,12 +41,10 @@ If you ask Python to ``print`` an expression, the interpreter **evaluates** the 
     print(1 + 1 + (2 * 3))
     print(len("hello"))
 
-In this example ``len`` is a built-in Python function that returns the number
-of characters in a string.
+In this example ``len`` is a built-in Python function that returns the number of characters in a string.
 
-The *evaluation of an expression* produces a value, which is why expressions
-can appear on the right hand side of assignment statements. A literal all by
-itself is a simple expression, and so is a variable.
+The *evaluation of an expression* produces a value, which is why expressions can appear on the right hand 
+side of assignment statements. A literal all by itself is a simple expression, and so is a variable.
 
 .. activecode:: ac2_10_2
     :nocanvas:
