@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: data-19-
+   :start: 1
+
 Week 1 Assessment 2
 -------------------
 

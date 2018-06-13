@@ -13,10 +13,12 @@ Simple Python Data
    ConvertTypeFunctions.rst
    Variables.rst
    VariableNamesandKeywords.rst
+   WPChoosingtheRightVariableName.rst
    StatementsandExpressions.rst
    OrderofOperations.rst
    Reassignment.rst
    UpdatingVariables.rst
+   HardCoding.rst
    Input.rst
    Glossary.rst
    Exercises.rst

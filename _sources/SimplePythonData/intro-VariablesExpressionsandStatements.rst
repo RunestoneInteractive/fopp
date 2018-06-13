@@ -9,6 +9,10 @@
 
 .. _simple_python_data:
 
+.. qnum::
+   :prefix: data-1-
+   :start: 1
+
 Introduction
 ============
 

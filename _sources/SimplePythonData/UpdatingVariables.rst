@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-13-
+   :prefix: data-14-
    :start: 1
 
 Updating Variables
@@ -36,7 +36,7 @@ right-hand side expression.  Second, let the variable name on the left-hand side
 resulting object.  The fact that ``x`` appears on both sides does not matter.  The semantics of the assignment
 statement makes sure that there is no confusion as to the result. The visualizer makes this very clear.
 
-.. showeval:: se_ac2_13_1a
+.. showeval:: se_ac2_14_1
    :trace_mode: true
 
    x = 6
@@ -48,7 +48,7 @@ statement makes sure that there is no confusion as to the result. The visualizer
 
 
 
-.. activecode:: ac2_13_1
+.. activecode:: ac2_14_1
 
     x = 6        # initialize x
     print(x)
@@ -67,7 +67,7 @@ called a **decrement**.  Sometimes programmers talk about incrementing or decrem
 
 Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python ``+=`` is used for incrementing, and ``-=`` for decrementing. In some other languages, there is even a special syntax ``++`` and ``--`` for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 you have to write ``x += 1`` or ``x = x + 1``.
 
-.. activecode:: ac2_13_2
+.. activecode:: ac2_14_2
 
     x = 6        # initialize x
     print(x)
@@ -79,7 +79,7 @@ Incrementing and decrementing are such common operations that programming langua
 Imagine that we wanted to not increment by one each time but instead add together the 
 numbers one through ten, but only one at a time.
 
-.. activecode:: ac2_13_3
+.. activecode:: ac2_14_3
   
   s = 1
   print(s)
@@ -113,7 +113,7 @@ easier way to do this kind of task.
 
 **Check your understanding**
 
-.. mchoice:: question2_13_1
+.. mchoice:: question2_14_1
    :answer_a: 12
    :answer_b: -1
    :answer_c: 11
@@ -133,7 +133,7 @@ easier way to do this kind of task.
      x = x - 1
      print(x)
 
-.. mchoice:: question2_13_2
+.. mchoice:: question2_14_2
    :answer_a: 12
    :answer_b: 9
    :answer_c: 15
@@ -155,7 +155,7 @@ easier way to do this kind of task.
      x = x + 1
      print(x)
 
-.. parsonsprob:: pp2_13_1
+.. parsonsprob:: pp2_14_1
    :practice: T
 
    Construct the code that will result in the value 134 being printed.
@@ -164,7 +164,7 @@ easier way to do this kind of task.
    mybankbalance = mybankbalance + 34
    print(mybankbalance)
 
-.. mchoice:: question2_13_3
+.. mchoice:: question2_14_3
    :multiple_answers:
    :answer_a: x = x + y
    :answer_b: y += x

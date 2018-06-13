@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-6-
+   :prefix: data-5-
    :start: 1
 
 .. index:: type converter functions, int, float, str, truncation
@@ -18,7 +18,7 @@ Data Types
 If you are not sure what class (data type) a value falls into, Python has a function called
 **type** which can tell you.
 
-.. activecode:: ac2_6_1
+.. activecode:: ac2_5_1
     :nocanvas:
 
     print(type("Hello, World!"))
@@ -30,7 +30,7 @@ If you are not sure what class (data type) a value falls into, Python has a func
 What about values like ``"17"`` and ``"3.2"``? They look like numbers, but they
 are in quotation marks like strings.
 
-.. activecode:: ac2_6_2
+.. activecode:: ac2_5_2
     :nocanvas:
 
     print(type("17"))
@@ -41,7 +41,7 @@ They're strings!
 Strings in Python can be enclosed in either single quotes (``'``) or double
 quotes (``"``), or three of each (``'''`` or ``"""``)
 
-.. activecode:: ac2_6_3
+.. activecode:: ac2_5_3
     :nocanvas:
 
     print(type('This is a string.'))
@@ -56,7 +56,7 @@ beard"``, and single quoted strings can have double quotes inside them, as in
 Strings enclosed with three occurrences of either quote symbol are called
 triple quoted strings.  They can contain either single or double quotes:
 
-.. activecode:: ac2_6_4
+.. activecode:: ac2_5_4
     :nocanvas:
 
     print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
@@ -64,7 +64,7 @@ triple quoted strings.  They can contain either single or double quotes:
 
 Triple quoted strings can even span multiple lines:
 
-.. activecode:: ac2_6_5
+.. activecode:: ac2_5_5
     :nocanvas:
 
     print("""This message will span
@@ -76,7 +76,7 @@ three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
 your program or command, the way it stores the value is identical in all cases,
 and the surrounding quotes are not part of the value.
 
-.. activecode:: ac2_6_6
+.. activecode:: ac2_5_6
     :nocanvas:
 
     print('This is a string.')
@@ -90,7 +90,7 @@ When you type a large integer, you might be tempted to use commas between
 groups of three digits, as in ``42,000``. This is not a legal integer in
 Python, but it does mean something else, which is legal:
 
-.. activecode:: ac2_6_7
+.. activecode:: ac2_5_7
     :nocanvas:
 
     print(42500)
@@ -101,7 +101,7 @@ Well, that's not what we expected at all! Because of the comma, Python chose to
 treat this as a *pair* of values. In fact, a print statement can print any number of values as long
 as you separate them by commas. Notice that the values are separated by spaces when they are displayed.
 
-.. activecode:: ac2_6_8
+.. activecode:: ac2_5_8
     :nocanvas:
 
     print(42, 17, 56, 34, 11, 4.35, 32)
@@ -117,7 +117,7 @@ change might mean something quite different from what you intended.
 
 **Check your understanding**
 
-.. mchoice:: question2_6_1
+.. mchoice:: question2_5_1
    :answer_a: Print out the value and determine the data type based on the value printed.
    :answer_b: Use the type function.
    :answer_c: Use it in a known equation and print the result.
@@ -131,7 +131,7 @@ change might mean something quite different from what you intended.
 
    How can you determine the type of a variable?
 
-.. mchoice:: question2_6_2
+.. mchoice:: question2_5_2
    :answer_a: Character
    :answer_b: Integer
    :answer_c: Float

@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-8-
+   :prefix: data-7-
    :start: 1
 
 .. _variables:
@@ -65,7 +65,7 @@ This diagram shows the result of executing the assignment statements shown above
 If your program includes a variable in any expression, whenever that expression is executed it will produce the value
 that is linked to the variable at the time of execution.  In other words, evaluating a variable looks up its value.
 
-.. activecode:: ac2_8_1
+.. activecode:: ac2_7_1
     :nocanvas:
 
     message = "What's up, Doc?"
@@ -79,7 +79,7 @@ that is linked to the variable at the time of execution.  In other words, evalua
 In each case the result is the value of the variable.
 To see this in even more detail, we can run the program using codelens.
 
-.. codelens:: clens2_8_1
+.. codelens:: clens2_7_1
     :python: py3
     :showoutput:
 
@@ -110,7 +110,7 @@ To see this, read and then run the following program.
 You'll notice we change the value of ``day`` three times, and on the third
 assignment we even give it a value that is of a different type.
 
-.. codelens:: clens2_8_2
+.. codelens:: clens2_7_2
     :python: py3
     :showoutput:
 
@@ -129,7 +129,7 @@ Any place in a Python program where a number or string is expected, you can put 
 
 For example, we can find out the data type of the current value of a variable by putting the variable name inside the parentheses following the function name ``type``.
 
-.. activecode:: ac2_8_2
+.. activecode:: ac2_7_2
     :nocanvas:
 
     message = "What's up, Doc?"
@@ -145,7 +145,7 @@ For example, we can find out the data type of the current value of a variable by
 
 **Check your understanding**
 
-.. mchoice:: question2_8_1
+.. mchoice:: question2_7_1
    :answer_a: Nothing is printed. A runtime error occurs.
    :answer_b: Thursday
    :answer_c: 32.5
