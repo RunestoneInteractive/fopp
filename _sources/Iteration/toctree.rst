@@ -15,6 +15,6 @@ Iteration
    WPNamingVariablesinForLoops.rst
    GeneralizedSequences.rst
    Glossary.rst
-   ExtraExercises.rst
+   Exercises.rst
    week2a2.rst
    
