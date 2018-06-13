@@ -17,4 +17,5 @@ Conditionals
    TheAccumulatorPatternwithConditionals.rst
    Glossary.rst
    ExtraExercises.rst
+   week3a1.rst
    
