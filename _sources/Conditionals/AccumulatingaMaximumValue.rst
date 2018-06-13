@@ -25,7 +25,7 @@ replace the accumulator variable's value with the value of the current item.
 
 Step through the execution of this code to get a feel for how it works. 
 
-.. codelens:: ac7_11_1
+.. codelens:: ac7_100_1
    :python: py3
 
    L = [3, 6, 2, 5, 39, 7, 5]
@@ -41,7 +41,7 @@ You would get an error on line 4 for trying to access item L[1], which is the se
 item. If we assume that L will have only numbers >= 0, we can initialize the max-so-far to be
 0 and loop through *all* of the items in L.
 
-.. codelens:: clens7_11_1
+.. codelens:: clens7_100_1
    :python: py3
 
    L = [3, 6, 2, 5, 39, 7, 5]
@@ -58,7 +58,7 @@ max-so-far.
 
 **Check your understanding**
 
-.. mchoice:: question7_11_1
+.. mchoice:: question7_100_1
    :answer_a: I
    :answer_b: II
    :answer_c: III

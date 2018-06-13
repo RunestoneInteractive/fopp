@@ -39,6 +39,8 @@ executed. There is no limit of the number of ``elif`` statements but only a
 single (and optional) final ``else`` statement is allowed and it must be the last
 branch in the statement.
 
+.. image:: Figures/conditionals_overview.png
+
 Each condition is checked in order. If the first is false, the next is checked,
 and so on. If one of them is true, the corresponding branch executes, and the
 statement ends. Even if more than one condition is true, only the first true
@@ -57,6 +59,13 @@ Here is the same program using ``elif``.
         print("x is greater than y")
     else:
         print("x and y must be equal")
+
+The following image highlights different kinds of valid conditionals that can be used. Though there are other 
+versions of conditionals that Python can understand (imagine an if statement with twenty elif statements), those 
+other versions must follow the same order as seen below.
+
+.. image:: Figures/valid_conditionals.png
+   :alt: shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif.
 
 **Check your understanding**
 
