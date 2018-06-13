@@ -49,6 +49,11 @@ We can use conditionals to also count if particular items are in a string or lis
             x += 1
     print(x)
 
+We can also use ``==`` to execute a similar operation. Here, we'll check to see if the character we are iterating over is 
+an "o". If it is an "o" then we will update our counter. 
+
+.. image:: Figures/accum_o.gif
+   :alt: a gif that shows code to check that "o" is in the phrase "onomatopoeia". 
 
 Accumulating the Max Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
