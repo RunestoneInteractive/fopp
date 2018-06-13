@@ -13,4 +13,6 @@ Python Turtle
    SummaryOfTurtleMethods.rst
    AFewMoreturtleMethodsandObservations.rst
    Exercises.rst
+   week1a3.rst
+   week1a4.rst
    
