@@ -58,6 +58,14 @@ another list.
     
     ["hello", 2.0, 5, [10, 20]]
 
+
+.. note:: WP: Don't Mix Types!
+
+    You'll likely see us do this in the textbook to give you odd combinations, but when you create lists you
+    should generally not mix types together. A list of just strings or just integers or just floats is generally 
+    easier to deal with.
+
+
 **Check your understanding**
 
 .. mchoice:: question5_2_1 

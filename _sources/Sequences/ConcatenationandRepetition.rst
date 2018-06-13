@@ -30,7 +30,6 @@ Similarly, the ``*`` operator repeats the items in a list a given number of time
 
     print([0] * 4)
 
-
 It is important to see that these operators create new lists from the elements of the operand lists.  
 If you concatenate a list with 2 items and a list with 4 items, you will get a new list with 6 items 
 (not a list with two sublists).  Similarly, repetition of a list of 2 items 4 times will give a list 
@@ -40,8 +39,6 @@ One way for us to make this more clear is to run a part of this example in codel
 As you step through the code, you will see the variables being created and the lists that they refer to. 
 Pay particular attention to the fact that when ``newlist`` is created by the statement 
 ``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the codelens object diagram.  The objects are different.
-
-
 
 .. codelens:: clens5_6_1
     :python: py3
@@ -53,6 +50,14 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
 
     zeros = [0] * 4
 
+.. note:: WP: Adding types together
+
+    Beware when adding different types together! Python doesn't understand how to concatenate different
+    types together. Thus, if we try to add a string to a list with ``['first'] + "second"`` then the 
+    interpreter will return an error. To do this you'll need to make the two objects the same type. In this
+    case, it means putting the string into its own list and then adding the two together like so: 
+    ``['first'] + ["second"]``. This process will look different for other types though. Remember that there
+    are functions to convert types!
 
 **Check your understanding**
 
