@@ -16,6 +16,6 @@ Conditionals
    Chainedconditionals.rst
    TheAccumulatorPatternwithConditionals.rst
    Glossary.rst
-   ExtraExercises.rst
+   Exercises.rst
    week3a1.rst
    
