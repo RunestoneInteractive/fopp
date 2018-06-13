@@ -6,8 +6,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Accumulator Pattern Strategies
-==============================
+WP: Accumulator Pattern Strategies
+==================================
 
 When to Use it
 --------------

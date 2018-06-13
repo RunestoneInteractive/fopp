@@ -15,7 +15,7 @@ Sequence Mutation
    NonmutatingMethodsonStrings.rst
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
-   AccumulatorPatternStrategies.rst
+   WPAccumulatorPatternStrategies.rst
    Glossary.rst
    Exercises.rst
    ExtraExercises.rst
