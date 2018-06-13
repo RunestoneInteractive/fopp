@@ -14,4 +14,5 @@ Iteration
    GeneralizedSequences.rst
    Glossary.rst
    ExtraExercises.rst
+   week2a2.rst
    
