@@ -11,6 +11,8 @@ Iteration
    Stringsandforloops.rst
    Listsandforloops.rst
    TheAccumulatorPattern.rst
+   WPPrintingIntermediateResults.rst
+   WPNamingVariablesinForLoops.rst
    GeneralizedSequences.rst
    Glossary.rst
    ExtraExercises.rst

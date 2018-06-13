@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: iter-9-
+   :prefix: iter-11-
    :start: 1
 
 Extra Exercises
@@ -30,15 +30,15 @@ Extra Exercises
 Of course, that's not quite right because Ouack and Quack are misspelled.
 Can you fix it?
 
-.. actex:: ex6_9_1
+.. actex:: ex6_11_1
 
 
 2. Get the user to enter some text and print it out in reverse order.
 
-.. actex:: ex6_9_2
+.. actex:: ex6_11_2
 
 
 3. Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
 some of your code from the last question. The == operator compares two values to see if they are the same)
 
-.. actex:: ex6_9_3
+.. actex:: ex6_11_3

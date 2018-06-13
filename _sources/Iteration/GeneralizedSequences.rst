@@ -8,6 +8,10 @@
 
 .. _iter_iterators:
 
+.. qnum::
+   :prefix: iter-9-
+   :start: 1
+
 The Gory Details
 ----------------
 
