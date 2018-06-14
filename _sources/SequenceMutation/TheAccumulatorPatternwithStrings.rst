@@ -14,7 +14,7 @@
 The Accumulator Pattern with Strings
 ------------------------------------
 
-We can also accumulate strings rather than accumulating numbers. The following program isn't 
+We can also accumulate strings rather than accumulating numbers, as you've seen before. The following program isn't 
 particularly useful for data processing, but we will see more useful things later that accumulate strings.
 
 .. activecode:: ac8_10_1

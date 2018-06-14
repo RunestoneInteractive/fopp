@@ -81,6 +81,42 @@ interested in knowing about. You can see in the example below that a real id is 
 
 Note how even though ``newlist`` and ``origlist`` appear the same, they have different identifiers. 
 
+We can use append or concatenate repeatedly to create new objects. If we had a string and wanted to make a new list, where each element in the list is a character in the string, where do you think you should start? In both cases, you'll need to first create a variable to store the new object.
+
+.. activecode:: ac8_72
+
+    st = "Warmth"
+    a = []
+
+Then, character by character, you can add to the empty list. The process looks different if you concatentate as compared to using append.
+
+.. activecode:: ac8_7_3
+
+    st = "Warmth"
+    a = []
+    b = a + [st[0]]
+    c = b + [st[1]]
+    d = c + [st[2]]
+    e = d + [st[3]]
+    f = e + [st[4]]
+    g = f + [st[5]]
+    print(g)
+
+.. activecode:: ac8_7_4
+
+    st = "Warmth"
+    a = []
+    a.append(st[0]) 
+    a.append(st[1])
+    a.append(st[2])
+    a.append(st[3])
+    a.append(st[4])
+    a.append(st[5])
+    print(a)
+
+This might become tedious though, and difficult if the length of the string is long. 
+Can you think of a better way to do this?
+
 **Check your understanding**
 
 .. mchoice:: question8_7_1
