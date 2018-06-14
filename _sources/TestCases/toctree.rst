@@ -7,5 +7,7 @@ Test Cases
 
    intro-TestCases.rst
    Testingfunctions.rst
+   Testingclasses.rst
+   Glossary.rst
    
    
