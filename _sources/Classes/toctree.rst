@@ -10,5 +10,7 @@ Classes
    UserDefinedClasses.rst
    ImprovingourConstructor.rst
    AddingOtherMethodstoourClass.rst
+   ObjectsasArgumentsandParameters.rst
+   ConvertinganObjecttoaString.rst
    
    
