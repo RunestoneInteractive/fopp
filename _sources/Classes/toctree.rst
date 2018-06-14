@@ -14,5 +14,6 @@ Classes
    ConvertinganObjecttoaString.rst
    InstancesasReturnValues.rst
    sorting_instances.rst
+   ClassVariablesInstanceVariables.rst
    
    
