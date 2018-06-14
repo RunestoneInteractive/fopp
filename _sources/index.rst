@@ -56,6 +56,7 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+   TestCases/toctree.rst
 
 .. ignore
    Debugging/toctree.rst
