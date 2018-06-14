@@ -7,5 +7,6 @@ Classes
 
    intro-ClassesandObjectstheBasics.rst
    ObjectsRevisited.rst
+   UserDefinedClasses.rst
    
    
