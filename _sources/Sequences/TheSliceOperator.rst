@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: sequences-5-
+   :prefix: sequences-6-
    :start: 1
 
 .. index::
@@ -21,7 +21,7 @@ The Slice Operator
 A substring of a string is called a **slice**. Selecting a slice is similar to
 selecting a character:
 
-.. activecode:: ac5_5_1
+.. activecode:: ac5_6_1
     
     singers = "Peter, Paul, and Mary"
     print(singers[0:5])
@@ -38,7 +38,7 @@ If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
 end of the string.
 
-.. activecode:: ac5_5_2
+.. activecode:: ac5_6_2
     
     fruit = "banana"
     print(fruit[:3])
@@ -54,7 +54,7 @@ that if you omit the first index (before the colon), the slice starts at the
 beginning of the sequence. If you omit the second index, the slice goes to the
 end of the sequence.
 
-.. activecode:: ac5_5_3
+.. activecode:: ac5_6_3
     
     a_list = ['a', 'b', 'c', 'd', 'e', 'f']
     print(a_list[1:3])
@@ -64,7 +64,7 @@ end of the sequence.
 
 **Check your understanding**
 
-.. mchoice:: question5_5_1
+.. mchoice:: question5_6_1
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
@@ -82,7 +82,7 @@ end of the sequence.
       s = "python rocks"
       print(s[3:8])
 
-.. mchoice:: question5_5_2
+.. mchoice:: question5_6_2
    :answer_a: [ [ ], 3.14, False]
    :answer_b: [ [ ], 3.14]
    :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
@@ -98,7 +98,7 @@ end of the sequence.
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[4:])
 
-.. activecode:: ac5_5_4
+.. activecode:: ac5_6_4
    :language: python
    :autograde: unittest
    :practice: T

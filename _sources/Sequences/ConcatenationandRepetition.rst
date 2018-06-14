@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: sequences-6-
+   :prefix: sequences-7-
    :start: 1
 
 .. index::
@@ -22,7 +22,7 @@ Concatenation and Repetition
 Again, as with strings, the ``+`` operator concatenates lists.  
 Similarly, the ``*`` operator repeats the items in a list a given number of times.
 
-.. activecode:: ac5_6_1
+.. activecode:: ac5_7_1
 
     fruit = ["apple","orange","banana","cherry"]
     print([1,2] + [3,4])
@@ -40,7 +40,7 @@ As you step through the code, you will see the variables being created and the l
 Pay particular attention to the fact that when ``newlist`` is created by the statement 
 ``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the codelens object diagram.  The objects are different.
 
-.. codelens:: clens5_6_1
+.. codelens:: clens5_7_1
     :python: py3
 
     fruit = ["apple","orange","banana","cherry"]
@@ -61,7 +61,7 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
 
 **Check your understanding**
 
-.. mchoice:: question5_6_1
+.. mchoice:: question5_7_1
    :answer_a: 6
    :answer_b: [1,2,3,4,5,6]
    :answer_c: [1,3,5,2,4,6]
@@ -80,7 +80,7 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
      blist = [2,4,6]
      print(alist + blist)
 
-.. mchoice:: question5_6_2
+.. mchoice:: question5_7_2
    :answer_a: 9
    :answer_b: [1,1,1,3,3,3,5,5,5]
    :answer_c: [1,3,5,1,3,5,1,3,5]

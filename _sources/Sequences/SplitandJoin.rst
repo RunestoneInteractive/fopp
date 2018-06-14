@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: sequences-8-
+   :prefix: sequences-9-
    :start: 1
 
 Splitting and Joining Strings
@@ -20,7 +20,7 @@ of words. By default, any number of whitespace characters is considered a word b
 .. image:: Figures/split_default.gif
    :alt: shows the phrase "leaders and best" being split on spaces
 
-.. activecode:: ac5_8_1
+.. activecode:: ac5_9_1
     
     song = "The rain in Spain..."
     wds = song.split()
@@ -33,7 +33,7 @@ An optional argument called a **delimiter** can be used to specify which charact
 
 The following example uses the string ``ai`` as the delimiter:
 
-.. activecode:: ac5_8_2
+.. activecode:: ac5_9_2
     
     song = "The rain in Spain..."
     wds = song.split('ai')
@@ -48,7 +48,7 @@ and join the list with the glue between each of the elements.
 .. image:: Figures/join.gif
    :alt: shows process of a "/" separating the words "leaders", "and", "best"
 
-.. activecode:: ac5_8_3
+.. activecode:: ac5_9_3
 
     wds = ["red", "blue", "green"]
     glue = ';'
@@ -65,7 +65,7 @@ you can use empty glue or multi-character strings as glue.
 
 **Check your understanding**
 
-.. activecode:: ac5_8_4
+.. activecode:: ac5_9_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -85,7 +85,7 @@ you can use empty glue or multi-character strings as glue.
 
    myTests().main()
 
-.. activecode:: ac5_8_5
+.. activecode:: ac5_9_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -105,7 +105,7 @@ you can use empty glue or multi-character strings as glue.
 
    myTests().main()
 
-.. activecode:: ac5_8_6
+.. activecode:: ac5_9_6
    :language: python
    :autograde: unittest
    :practice: T

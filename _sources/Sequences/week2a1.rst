@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: sequences-10-
+   :start: 1
+
 Week 2 Assessment 1
 -------------------
 

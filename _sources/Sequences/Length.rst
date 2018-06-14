@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: sequences-4-
+   :prefix: sequences-5-
    :start: 1
 
 .. index::
@@ -23,7 +23,7 @@ Length
 
 The ``len`` function, when applied to a string, returns the number of characters in a string.
 
-.. activecode:: ac5_4_1
+.. activecode:: ac5_5_1
     
     fruit = "Banana"
     print(len(fruit))
@@ -32,7 +32,7 @@ The ``len`` function, when applied to a string, returns the number of characters
 To get the last letter of a string, you might be tempted to try something like
 this:
 
-.. activecode:: ac5_4_2
+.. activecode:: ac5_5_2
     
     fruit = "Banana"
     sz = len(fruit)
@@ -44,7 +44,7 @@ that there is no letter at index position 6 in ``"Banana"``. Since we started co
 six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length. 
 Give it a try in the example above.
 
-.. activecode:: ac5_4_3
+.. activecode:: ac5_5_3
     
     fruit = "Banana"
     sz = len(fruit)
@@ -66,7 +66,7 @@ As with strings, the function ``len`` returns the length of a list (the number
 of items in the list).  However, since lists can have items which are themselves sequences (e.g., strings), 
 it important to note that ``len`` only returns the top-most length.
 
-.. activecode:: ac5_4_4
+.. activecode:: ac5_5_4
 
     alist =  ["hello", 2.0, 5]
     print(len(alist))
@@ -76,7 +76,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
 
 **Check your understanding**
 
-.. mchoice:: question5_4_1
+.. mchoice:: question5_5_1
    :answer_a: 11
    :answer_b: 12
    :correct: b
@@ -90,7 +90,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
       s = "python rocks"
       print(len(s))
 
-.. mchoice:: question5_4_2 
+.. mchoice:: question5_5_2 
    :answer_a: 4
    :answer_b: 5
    :correct: b
@@ -104,7 +104,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
      alist = [3, 67, "cat", 3.14, False]
      print(len(alist))
      
-.. mchoice:: question5_4_3 
+.. mchoice:: question5_5_3 
    :answer_a: 2
    :answer_b: 3
    :answer_c: 4
@@ -122,7 +122,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
      L = [0.34, '6', 'SI106', 'Python', -2]
      print(len(L[1:-1]))   
 
-.. activecode:: ac5_4_5
+.. activecode:: ac5_5_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -142,7 +142,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
 
    myTests().main()
 
-.. activecode:: ac5_4_6
+.. activecode:: ac5_5_6
    :language: python
    :autograde: unittest
    :practice: T

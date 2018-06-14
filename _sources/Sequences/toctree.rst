@@ -8,6 +8,7 @@ Sequences
    intro-Sequences.rst
    StringsandLists.rst
    IndexOperatorWorkingwiththeCharactersofaString.rst
+   DisabmiguatingSquareBrackets.rst
    Length.rst
    TheSliceOperator.rst
    ConcatenationandRepetition.rst
