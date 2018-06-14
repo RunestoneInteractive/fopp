@@ -12,5 +12,7 @@ Classes
    AddingOtherMethodstoourClass.rst
    ObjectsasArgumentsandParameters.rst
    ConvertinganObjecttoaString.rst
+   InstancesasReturnValues.rst
+   sorting_instances.rst
    
    
