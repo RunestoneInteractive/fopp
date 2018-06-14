@@ -3,8 +3,9 @@ Test Cases
 
 .. toctree::
    :caption: Test Cases
-   :maxdepth: 2
+   :maxdepth: 3
 
    intro-TestCases.rst
+   Testingfunctions.rst
    
    

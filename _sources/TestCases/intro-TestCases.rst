@@ -165,6 +165,7 @@ tests will fail until you fill in a correct definition for the blanked function.
 
         myTests().main()
 
+
 .. mchoice:: question18_1_3
     :practice: T
     :answer_a: self.assertEqual(blanked('under', 'du', 'u_d__'))
