@@ -6,5 +6,6 @@ Classes
    :maxdepth: 2
 
    intro-ClassesandObjectstheBasics.rst
+   ObjectsRevisited.rst
    
    
