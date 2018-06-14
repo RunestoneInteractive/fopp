@@ -17,4 +17,5 @@ Classes
    ClassVariablesInstanceVariables.rst
    ThinkingAboutClasses.rst
    ClassesHoldingData.rst
+   Tamagotchi.rst
    
