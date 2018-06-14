@@ -14,7 +14,6 @@
 Exercises
 =========
 
-
 .. activecode:: ac15_4_1
    :language: python
    :autograde: unittest
@@ -301,5 +300,3 @@ Exercises
          
 
    myTests().main()
-
-

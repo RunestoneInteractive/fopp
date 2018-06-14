@@ -7,6 +7,7 @@ Advanced Functions
 
    OptionalParameters.rst
    KeywordParameters.rst
+   Anonymousfunctionswithlambdaexpressions.rst
    Exercises.rst
    ExtraExercises.rst
    

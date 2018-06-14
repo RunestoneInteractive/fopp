@@ -59,65 +59,38 @@ by name. Others find the syntax of lambda expressions confusing. It's up to you 
 use though you will need to be able to read and understand lambda expressions that are written by others. 
 In all the examples below, both ways of doing it will be illustrated.
 
-Below, sorting on absolute value has been rewritten using lambda notation and the built-in function abs.
+Say we want to create a function that takes a string and returns the last character in that string. What might this look 
+like with the functions you've used before?
 
 .. activecode:: ac15_3_2
 
-    L1 = [1, 7, 4, -2, 3]
-    
-    print("About to call sorted")
-    L2 = sorted(L1, key=lambda x: abs(x))
-    print("Finished execution of sorted")
-    print(L2)
+    def last_char(s):
+        return s[-1]
 
-Of course, it's unnecessary to make an anonymous function that takes an input and just calls an existing function on 
-it. That's equivalent to just providing the existing function as a lambda expression. You may find, however, that the 
-lambda expression above helps you understand what sorted does with the function that is passed in: it calls the 
-function on each of the items in the list that is passed to sorted. Make sure you understand why the code above and the 
-code immediately below cause the list to be sorted the same way. 
+To re-write this using lambda notation, we can do the following:
 
-.. activecode:: ac15_3_3  
+.. activecode:: ac15_3_3
 
-    L1 = [1, 7, 4, -2, 3]
-    
-    print("About to call sorted")
-    L2 = sorted(L1, key=abs)
-    print("Finished execution of sorted")
-    print(L2)
+    last_char = (lambda s: s[-1])
 
+Note that neither function is actually invoked. Look at the parallels between the two structures. The parameters are 
+defined in both functions with the variable ``s``. In the typical function, we have to use the keyword ``return`` to send 
+back the value. In a lambda function, that is not necessary - whatever is placed after the colon is what will be returned.
+
+** Check Your Understanding **
 
 .. mchoice:: question15_3_1
-   :answer_a: descending order, from 7 down to -2
-   :answer_b: ascending order, from -2 up to 7
-   :answer_c: the original order of L1
-   :correct: a
-   :feedback_a: 7 is decorated with -7, so it is first; -2 is decorated with 2, so it is last.
-   :feedback_b: -x produces the negative of x.
-   :feedback_c: sorted changes the order.
-   :practice: T
-
-   Describe what the sort order will be for this.
-   
-   .. code-block:: python 
-
-    L1 = [1, 7, 4, -2, 3]
-     
-    print(sorted(L1, key = lambda x: -x))
-
-.. mchoice:: question15_3_2
-   :answer_a: descending order, from 7 down to -2
-   :answer_b: ascending order, from -2 up to 7
-   :answer_c: the original order of L1
+   :answer_a: A string with a - in front of the number.
+   :answer_b: A number of the opposite sign (positive number becomes negative, negative becomes positive).
+   :answer_c: Nothing is returned because there is no return statement.
    :correct: b
-   :feedback_a: The True value for the reverse parameter says to reverse the order.
-   :feedback_b: The True value for the reverse parameter says to reverse the order.
-   :feedback_c: sorted changes the order.
+   :feedback_a: The number would be assigned to the variable x and there is no type conversion used here, so the number would stay a number.
+   :feedback_b: Correct!
+   :feedback_c: Remember, lambda functions do not use return statements.
    :practice: T
 
-   Describe what the sort order will be for this.
+   If the input to this lambda function is a number, what is returned?
    
    .. code-block:: python 
-
-    L1 = [1, 7, 4, -2, 3]
      
-    print(sorted(L1, key = lambda x: -x, reverse = True))
+    (lambda x: -x)
