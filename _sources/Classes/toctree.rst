@@ -15,5 +15,5 @@ Classes
    InstancesasReturnValues.rst
    sorting_instances.rst
    ClassVariablesInstanceVariables.rst
-   
+   ThinkingAboutClasses.rst
    
