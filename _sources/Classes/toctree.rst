@@ -16,4 +16,5 @@ Classes
    sorting_instances.rst
    ClassVariablesInstanceVariables.rst
    ThinkingAboutClasses.rst
+   ClassesHoldingData.rst
    
