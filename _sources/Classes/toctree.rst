@@ -9,5 +9,6 @@ Classes
    ObjectsRevisited.rst
    UserDefinedClasses.rst
    ImprovingourConstructor.rst
+   AddingOtherMethodstoourClass.rst
    
    
