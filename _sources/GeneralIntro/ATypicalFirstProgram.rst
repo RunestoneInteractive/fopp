@@ -22,24 +22,14 @@ looks like this.
 
     print("Hello, World!")
 
-This is an example of using the **print statement**, which doesn't actually
+This is an example of using the **print function**, which doesn't actually
 print anything on paper. It displays a value on the screen. In this case, the result is the phrase:
 
 ::
 
     Hello, World!
 
-Here is the example in activecode. Remember, activecode windows allow you to execute python 
-code while inside the textbook. When you click **Run** you will execute whatever code has 
-been written in the window. Each time you hit **Run** a new version of the code will be saved 
-in that activecode window's history. If you have already run code in the activecode window 
-before and would like to revert your code to a prior save, click **Load History** and a bar 
-will appear. Your most recent code will be on the right side of the bar, and the first time 
-you clicked **Run** will be on the left side. Regardless of whether you've run the window in 
-the past though, once you start to execute code the **Load History** button will change to 
-the history bar. If you would like to see how python processes your code step-by-step then 
-click on **Show CodeLens**. If you have already opened CodeLens and would like to step 
-through different code then you'll need to refresh the page. Give it a try!
+Here is the example in an activecode window, where you can run it and modify it.
 
 .. activecode:: ac1_7_1
 
@@ -65,7 +55,7 @@ possible.
    :feedback_c: The format of the information is called its font and has nothing to do with the print statement.
    :feedback_d: That would be nice! But no...
 
-   The print statement:
+   The print function:
 
 
 .. index:: debugging, bug

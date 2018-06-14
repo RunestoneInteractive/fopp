@@ -61,74 +61,14 @@ level language, called **byte code**, and then interpreted by a program called
 a **virtual machine**. Python uses both processes, but because of the way
 programmers interact with it, it is usually considered an interpreted language.
 
-In this book, and for the first half of this course, you will not need to install
+For the core material in this book, you will not need to install
 or run python natively on your computer. Instead, you'll be writing simple
-programs and executing them right in your browser. About midway through
-the course, you will install python, and then the next few paragraphs will
-apply. Consider them a preview for now. 
+programs and executing them right in your browser.
 
-There are two ways to use the Python interpreter: *shell mode* and *program
-mode*. In shell mode, you type Python expressions into the **Python shell**,
-and the interpreter immediately shows the result.  The example below shows the Python shell at work.
-
-::
-
-   $ python3
-   Python 3.5.2 (r32:88445, Mar 25 2011, 19:28:28)
-   [GCC 4.5.2] on linux2
-   Type "help", "copyright", "credits" or "license" for more information.
-   >>> 2 + 3
-   5
-   >>> 
-
-The ``>>>`` is called the **Python prompt**. The interpreter uses the prompt to
-indicate that it is ready for instructions. We typed ``2 + 3``.  The
-interpreter evaluated our expression and replied ``5``. On the next line
-it gave a new prompt indicating that it is ready for more input.
-
-Working directly in the interpreter is convenient for testing short bits of
-code because you get immediate feedback. Think of it as scratch paper used to
-help you work out problems.
-
-Alternatively, you can write an entire program by placing lines of Python instructions
-in a file and then use the interpreter to
-execute the contents of the file as a whole. Such a file is often referred to as **source code**.  For
-example, we will use a text editor to create a source code file named ``firstprogram.py`` with
-the following contents:
-
-.. sourcecode:: python
-
-    print("My first program adds two numbers, 2 and 3:")
-    print(2 + 3)
-
-
-By convention, files that contain Python programs have names that end with
-``.py`` .  Following this convention will help your operating system and other
-programs identify a file as containing python code.
-
-::
-
-    $ python firstprogram.py
-    My first program adds two numbers, 2 and 3:
-    5
-
-These examples show Python being run from a Unix command line. In other
-development environments, the details of executing programs may differ. Also,
-most programs are more interesting than this one.
-
-.. note::
-
-    In this textbook, we will not make use of the interactive python shell. We have found that it is quite confusing to students because the interactive shell shows the value of expressions, which are not normally revealed during a program's execution unless the print function is invoked. This textbook reinforces the notion that there is a difference between the internal state of a program during execution, and visible outputs, which are caused by invocations of the print function.
-
-.. admonition:: Want to learn more about Python?
-
-  If you would like to learn more about installing and using Python, here are some video links.
-  `Installing Python for Windows <http://youtu.be/9EfGpN1Pnsg>`__ shows you how to install the Python environment under
-  Windows Vista,
-  `Installing Python for Mac <http://youtu.be/MEmEJCLLI2k>`__ shows you how to install under Mac OS/X, and
-  `Installing Python for Linux <http://youtu.be/RLPYBxfAud4>`__ shows you how to install from the Linux
-  command line.
-  `Using Python <http://youtu.be/kXbpB5_ywDw>`__ shows you some details about the Python shell and source code.
+At some point, you will find it useful to have a complete python environment, rather than the limited environment
+available in this online textbook. To do that, you will either
+install python on your computer so that it can run natively, or use a remote server that provides either a
+command line shell or a jupyter notebook environment.
 
 **Check your understanding**
 

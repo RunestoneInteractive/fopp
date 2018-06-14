@@ -23,22 +23,9 @@ These programs are written in **programming languages**.
 
 **Check your understanding**
 
-.. mchoice:: question1_1_1
-   :answer_a: To think like a computer.
-   :answer_b: To be able to write code really well.
-   :answer_c: To be able to solve problems.
-   :answer_d: To be really good at math.
-   :correct: c
-   :feedback_a: Computers do not think, they only do what we humans tell them to do via programs.
-   :feedback_b: While it is necessary for most computer scientists to know how to write code, it is not the most important skill.
-   :feedback_c: Programming is all about solving problems.  We use computers to automate solutions to problems and to do things faster and more accurately than we can do by hand or manually.
-   :feedback_d: Algorithmic thinking and mathematical thinking are in some ways similar. Practice at mathematical thinking will probably help in learning to program. But the content itself is different. You do not have to know a lot of math to be a good programmer.
-
-   What is the most important skill for a programmer?
-
 .. mchoice:: question1_2_2
    :answer_a: A solution to a problem that can be solved by a computer.
-   :answer_b: A step by step list of instructions that if followed exactly will solve the problem under consideration.
+   :answer_b: A step by step sequence of instructions that if followed exactly will solve the problem under consideration.
    :answer_c: A series of instructions implemented in a programming language.
    :answer_d: A special kind of notation used by programmers.
    :correct: b
