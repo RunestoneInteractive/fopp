@@ -18,4 +18,5 @@ Classes
    ThinkingAboutClasses.rst
    ClassesHoldingData.rst
    Tamagotchi.rst
+   Glossary.rst
    
