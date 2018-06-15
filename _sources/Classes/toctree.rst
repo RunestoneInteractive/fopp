@@ -20,4 +20,5 @@ Classes
    Tamagotchi.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    
