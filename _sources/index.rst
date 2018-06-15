@@ -62,7 +62,8 @@ Table of Contents
    PythonTurtle/toctree.rst
    PythonModules/toctree.rst
    Functions/toctree.rst
-   Iteration/toctree.rst
+   Selection/toctree.rst
+   Conditionals/toctree.rst
    MoreAboutIteration/toctree.rst
    Strings/toctree.rst
    Lists/toctree.rst
