@@ -7,3 +7,4 @@ Inheritance
 
    intro.rst
    inheritVarsAndMethods.rst
+   OverrideMethods.rst
