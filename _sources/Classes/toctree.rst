@@ -19,4 +19,5 @@ Classes
    ClassesHoldingData.rst
    Tamagotchi.rst
    Glossary.rst
+   Exercises.rst
    
