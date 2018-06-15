@@ -63,8 +63,7 @@ Table of Contents
    PythonModules/toctree.rst
    Functions/toctree.rst
    Selection/toctree.rst
-   Conditionals/toctree.rst
-   MoreAboutIteration/toctree.rst
+   SequenceMutation/toctree.rst
    Strings/toctree.rst
    Lists/toctree.rst
    Files/toctree.rst
