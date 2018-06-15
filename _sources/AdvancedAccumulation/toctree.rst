@@ -11,4 +11,5 @@ More on Accumulation: Map, Filter, List Comprehension, and Zip
    listcomp.rst
    zip.rst
    Exercises.rst
+   ExtraExercises.rst
    
