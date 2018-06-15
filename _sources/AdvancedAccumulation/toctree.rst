@@ -7,4 +7,5 @@ More on Accumulation: Map, Filter, List Comprehension, and Zip
 
    intro.rst
    map.rst
+   filter.rst
    
