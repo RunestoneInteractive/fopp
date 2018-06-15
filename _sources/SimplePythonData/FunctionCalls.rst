@@ -48,7 +48,14 @@ It is also possible for programmers to define new functions in their programs. Y
    def sub(x, y):
       return x - y
 
-We've defined two functions above. The code is hidden so as not to bother you (yet) with how functions are defined. ``square`` takes a single input parameter, and returns that input multiplied by itself. ``sub`` takes two input parameters and returns the result of subtracting the second from the first. Obviously, these functions are not particularly useful, since we have the operators ``*`` and ``-`` available. But they illustrate how functions work.
+We've defined two functions above. The code is hidden so as not to bother you (yet) with how functions are defined. 
+``square`` takes a single input parameter, and returns that input multiplied by itself. ``sub`` takes two input 
+parameters and returns the result of subtracting the second from the first. Obviously, these functions are not 
+particularly useful, since we have the operators ``*`` and ``-`` available. But they illustrate how functions work. 
+The visual below illustrates how the ``square`` function works.
+
+.. image:: Figures/square_function.gif
+   :alt: a visual of the square function. Four is provided as the input, the function object shakes, and then sixteen comes out from the bottom of the function object.
 
 .. activecode:: ac2_4_2
    :include: ac2_4_1
@@ -61,14 +68,19 @@ We've defined two functions above. The code is hidden so as not to bother you (y
    print(sub(5, 9))
 
 
-Notice that when a function takes more than one input parameter (like ``sub(6, 4)`` above) the inputs are separated by a comma. Also notice that the order of the inputs matters. The value before the comma is treated as the first input, the value after it as the second input.
+Notice that when a function takes more than one input parameter, the inputs are separated by a comma. Also notice 
+that the order of the inputs matters. The value before the comma is treated as the first input, the value after it 
+as the second input.
 
-Again, remember that when Python performs computations, the results are only shown in the output window if there's a print statement that says to do that. In the activcode window above, ``square(5)`` produces the value 25 but we never get to see that in the output window, because it is not printed.
+Again, remember that when Python performs computations, the results are only shown in the output window if there's a 
+print statement that says to do that. In the activcode window above, ``square(5)`` produces the value 25 but we never 
+get to see that in the output window, because it is not printed.
 
 Function calls as part of complex expressions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anywhere in an expression that you can write a literal like a number, you can also write a function invocation that produces a number.
+Anywhere in an expression that you can write a literal like a number, you can also write a function invocation that 
+produces a number.
 
 For example:
 
@@ -97,9 +109,12 @@ Let's take a look at how that last execution unfolds.
 Functions are objects; parentheses invoke functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Remember the earlier mention that some kinds of Python objects don't have a nice printed representation? Functions are themselves just objects. If you tell Python to print the function object, rather than printing the results of invoking the function object, you'll get one of those not-so-nice printed representations.
+Remember the earlier mention that some kinds of Python objects don't have a nice printed representation? Functions are 
+themselves just objects. If you tell Python to print the function object, rather than printing the results of invoking 
+the function object, you'll get one of those not-so-nice printed representations.
 
-Just typing the name of the function refers to the function as an object. Typing the name of the function followed by parentheses ``()`` invokes the function.
+Just typing the name of the function refers to the function as an object. Typing the name of the function followed by 
+parentheses ``()`` invokes the function.
 
 .. activecode:: ac2_4_4
    :include: ac2_4_1

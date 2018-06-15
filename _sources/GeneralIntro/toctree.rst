@@ -12,6 +12,9 @@ General Introduction
    MoreAboutPrograms.rst
    FormalandNaturalLanguages.rst
    ATypicalFirstProgram.rst
+   WPPredictBeforeYouRun.rst
+   WPToUnderstandaProgramChangeIt.rst
    Comments.rst
    Glossary.rst
+   week1a1.rst
    

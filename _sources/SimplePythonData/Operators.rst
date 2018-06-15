@@ -11,7 +11,9 @@
    :prefix: data-3-
    :start: 1
 
-.. index:: 
+.. _input:
+
+.. index:: input, input dialog
     single: +; addition
     single: - 
     single: *; multiplication of numbers
@@ -107,6 +109,7 @@ Similarly ``x % 100`` yields the last two digits.
    :feedback_c: Perhaps you are thinking of the integer division operator, //
    :feedback_d: / performs exact division, without truncation
    :feedback_e: / does division. Perhaps you were thinking of %, which computes the remainder?
+   :practice: T
 
    What value is printed when the following statement executes?
 
@@ -126,6 +129,7 @@ Similarly ``x % 100`` yields the last two digits.
    :feedback_c: - Even though it truncates, it produces a floating point result
    :feedback_d: - Yes, even though it truncates, it produces a floating point result because 18.0 is a float
    :feedback_e: - / does division. Perhaps you were thinking of %, which computes the remainder?
+   :practice: T
 
    What value is printed when the following statement executes?
 
@@ -144,14 +148,10 @@ Similarly ``x % 100`` yields the last two digits.
    :feedback_b: The % operator returns the remainder after division.
    :feedback_c: The % operator returns the remainder after division.
    :feedback_d: The % operator returns the remainder after division.
+   :practice: T
 
    What value is printed when the following statement executes?
 
    .. code-block:: python
 
       print(18 % 4)
-
-
-.. index:: input, input dialog
-
-.. _input:

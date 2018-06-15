@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-7-
+   :prefix: data-6-
    :start: 1
 
 Type conversion functions
@@ -24,7 +24,7 @@ into an int. For floating point numbers, it *discards* the decimal portion of
 the number - a process we call *truncation towards zero* on the number line.
 Let us see this in action:
 
-.. activecode:: ac2_7_1
+.. activecode:: ac2_6_1
     :nocanvas:
 
     print(3.14, int(3.14))
@@ -44,7 +44,7 @@ otherwise you'll get one of those pesky runtime errors.  Modify the example by d
 The type converter ``float`` can turn an integer, a float, or a syntactically
 legal string into a float.
 
-.. activecode:: ac2_7_2
+.. activecode:: ac2_6_2
     :nocanvas:
 
     print(float("123.45"))
@@ -54,16 +54,22 @@ legal string into a float.
 The type converter ``str`` turns its argument into a string.  Remember that when we print a string, the
 quotes are removed in the output window.  However, if we print the type, we can see that it is definitely ``str``.
 
-.. activecode:: ac2_7_3
+.. activecode:: ac2_6_3
     :nocanvas:
 
     print(str(17))
     print(str(123.45))
     print(type(str(123.45)))
 
+Because we can only print one type at a time, if we want to print out a string and an integer then we have to convert 
+the type. Think about which type you'd need to convert, a string to an integer or an integer to a string?
+
+.. image:: Figures/type_cast.gif
+   :alt: a variable stores the value 55. a print statement tries to print "the value is" and the integer, but a runtime error occurs. Solution is to convert the integer into a string so that it only prints one type.
+
 **Check your understanding**
 
-.. mchoice:: question2_7_1
+.. mchoice:: question2_6_1
    :answer_a: Nothing is printed. It generates a runtime error.
    :answer_b: 53
    :answer_c: 54
@@ -73,6 +79,7 @@ quotes are removed in the output window.  However, if we print the type, we can 
    :feedback_b: The int function truncates all values after the decimal and prints the integer value.
    :feedback_c: When converting to an integer, the int function does not round.
    :feedback_d: The int function removes the fractional part of 53.785 and returns an integer, which is then printed.
+   :practice: T
 
    What value is printed when the following statement executes?
 
