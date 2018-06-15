@@ -9,3 +9,4 @@ Inheritance
    inheritVarsAndMethods.rst
    OverrideMethods.rst
    InvokingSuperMethods.rst
+   TamagotchiRevisited.rst
