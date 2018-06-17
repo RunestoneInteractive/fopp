@@ -56,6 +56,7 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+   Sorting/toctree.rst
 
 .. ignore
    Debugging/toctree.rst
@@ -63,16 +64,18 @@ Table of Contents
    PythonModules/toctree.rst
    Functions/toctree.rst
    Selection/toctree.rst
-   MoreAboutIteration/toctree.rst
+   SequenceMutation/toctree.rst
    Strings/toctree.rst
    Lists/toctree.rst
    Files/toctree.rst
    Dictionaries/toctree.rst
+   Tuples/toctree.rst
    Exceptions/toctree.rst
    GUIandEventDrivenProgramming/toctree.rst
    IntroRecursion/toctree.rst
    ClassesBasics/toctree.rst
    ClassesDiggingDeeper/toctree.rst
+   AdvancedFunctions/toctree.rst
 
 
 Appendices

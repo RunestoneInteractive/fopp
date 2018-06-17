@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-10-
+   :prefix: data-11-
    :start: 1
 
 Order of Operations
@@ -67,7 +67,7 @@ rules for its mathematical operators that mathematics does.
     is to always use parentheses to force exactly the order you want when
     exponentiation is involved:
 
-.. activecode:: ac2_10_1
+.. activecode:: ac2_11_1
    :nocanvas:
 
    print(2 ** 3 ** 2)     # the right-most ** operator gets done first!
@@ -81,7 +81,7 @@ rules for its mathematical operators that mathematics does.
 
 **Check your understanding**
 
-.. mchoice:: question2_10_1
+.. mchoice:: question2_11_1
    :answer_a: 14
    :answer_b: 24
    :answer_c: 3
@@ -91,6 +91,7 @@ rules for its mathematical operators that mathematics does.
    :feedback_b: Remember that * has precedence over  -.
    :feedback_c: Remember that // has precedence over -.
    :feedback_d: Remember that // does integer division.
+   :practice: T
 
    What is the value of the following expression:
 
@@ -100,7 +101,7 @@ rules for its mathematical operators that mathematics does.
 
 Here is an animation for the above expression:
 
-.. showeval:: se_ac2_10_1a
+.. showeval:: se_ac2_11_1
    :trace_mode: true
 
    16 - 2 * 5 // 3 + 1
