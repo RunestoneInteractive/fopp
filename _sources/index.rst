@@ -69,6 +69,7 @@ Table of Contents
    MoreAboutIteration/toctree.rst
    Sorting/toctree.rst
    AdvancedFunctions/toctree.rst
+   TestCases/toctree.rst
    Exceptions/toctree.rst
    Classes/toctree.rst
    Inheritance/toctree.rst
