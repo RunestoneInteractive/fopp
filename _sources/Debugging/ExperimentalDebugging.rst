@@ -11,6 +11,8 @@
    :prefix: debug-8-
    :start: 1
 
+.. index:: formal language, natural language, parse, token
+
 Experimental Debugging
 ----------------------
 
@@ -56,8 +58,6 @@ practices.
    :feedback_b: Programming can be creative, but it also follows a process and debugging can involve creativity in how you find the errors.
    :feedback_c: Some people think that debugging is actually more fun than programming (they usually become good software testers). Debugging is much like solving puzzles, which some people think is fun!
    :feedback_d: You cannot debug without first having a program, meaning that someone had to do the programming first.
+   :practice: T
 
    The difference between programming and debugging is:
-
-.. index:: formal language, natural language, parse, token
-

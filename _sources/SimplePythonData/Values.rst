@@ -49,7 +49,7 @@ You will soon encounter other types of objects as well, such as lists and dictio
 
 **Check your understanding**
 
-.. mchoice:: question2_7_0a
+.. mchoice:: question2_2_1
    :answer_a: Nothing is printed. It generates a runtime error.
    :answer_b: "Hello World!"
    :answer_c: Hello World!
@@ -57,6 +57,7 @@ You will soon encounter other types of objects as well, such as lists and dictio
    :feedback_a: "Hello World!" has a printed representation, so there will not be an error.
    :feedback_b: The literal in the program includes the quote marks, but the printed representation omits them.
    :feedback_c: The printed representation omits the quote marks that are included in the string literal.
+   :practice: T
 
    What appears in the output window when the following statement executes?
 

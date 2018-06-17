@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: data-18-
+   :start: 1
+
 Exercises
 ---------
 .. question:: spd_ex_1

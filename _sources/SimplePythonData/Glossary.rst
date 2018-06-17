@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: data-17-
+   :start: 1
+
 Glossary
 --------
 
@@ -97,7 +101,7 @@ Glossary
         names.
 
     literal
-        A number or string that is written directly in a program. Sometimes these are also referred to as literal values, or just values, but be careful not to confuse a literal value as written in a program from with an internal value maintained by the Python interpreter during execution of a program.
+        A number or string that is written directly in a program. Sometimes these are also referred to as literal values, or just values, but be careful not to confuse a literal value as written in a program with an internal value maintained by the Python interpreter during execution of a program.
         
     logical operator
         One of the operators that combines boolean expressions: ``and``,

@@ -8,8 +8,10 @@
     License".
 
 .. qnum::
-   :prefix: data-14-
+   :prefix: data-16-
    :start: 1
+
+.. index:: order of operations, rules of precedence
 
 Input
 -----
@@ -32,7 +34,7 @@ happens the text that has been entered is returned from the ``input`` function,
 and in this case assigned to the variable ``n``.  Run this example a few times and 
 try some different names in the input box that appears.
 
-.. activecode:: ac2_14_1
+.. activecode:: ac2_16_1
 
     n = input("Please enter your name: ")
     print("Hello", n)
@@ -54,7 +56,7 @@ minutes, and seconds. A call to ``input()`` allows the user to enter the number 
 Then we convert that string to an integer.  From there we use the division and modulus 
 operators to compute the results.
 
-.. activecode:: ac2_14_2
+.. activecode:: ac2_16_2
 
     str_seconds = input("Please enter the number of seconds you wish to convert")
     total_secs = int(str_seconds)
@@ -72,7 +74,7 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
 
 **Check your understanding**
 
-.. mchoice:: question2_14_1
+.. mchoice:: question2_16_1
    :answer_a: &lt;class 'str'&gt;
    :answer_b: &lt;class 'int'&gt;
    :answer_c: &lt;class 18&gt;
@@ -82,6 +84,7 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
    :feedback_b: Even though the user typed in an integer, it does not come into the program as an integer.
    :feedback_c: 18 is the value of what the user typed, not the type of the data.
    :feedback_d: 18 is the value of what the user typed, not the type of the data.
+   :practice: T
 
    What is printed when the following statements execute?
 
@@ -90,7 +93,3 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
      n = input("Please enter your age: ")
      # user types in 18
      print(type(n))
-
-
-.. index:: order of operations, rules of precedence
-

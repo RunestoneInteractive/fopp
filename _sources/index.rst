@@ -52,28 +52,28 @@ Table of Contents
 
 .. toctree::
    :numbered:
-   :maxdepth: 3 
+   :maxdepth: 4 
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
-
-.. ignore
    Debugging/toctree.rst
    PythonTurtle/toctree.rst
-   PythonModules/toctree.rst
-   Functions/toctree.rst
-   Selection/toctree.rst
-   MoreAboutIteration/toctree.rst
-   Strings/toctree.rst
-   Lists/toctree.rst
+   Sequences/toctree.rst
+   Iteration/toctree.rst
+   SequenceMutation/toctree.rst
+   Conditionals/toctree.rst
    Files/toctree.rst
    Dictionaries/toctree.rst
+   Functions/toctree.rst
+   Tuples/toctree.rst
+   MoreAboutIteration/toctree.rst
+   Sorting/toctree.rst
+   AdvancedFunctions/toctree.rst
+   TestCases/toctree.rst
    Exceptions/toctree.rst
-   GUIandEventDrivenProgramming/toctree.rst
-   IntroRecursion/toctree.rst
-   ClassesBasics/toctree.rst
-   ClassesDiggingDeeper/toctree.rst
-
+   Classes/toctree.rst
+   Inheritance/toctree.rst
+   AdvancedAccumulation/toctree.rst 
 
 Appendices
 ::::::::::
