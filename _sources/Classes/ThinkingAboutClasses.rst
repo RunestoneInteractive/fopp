@@ -8,12 +8,16 @@
 
 .. _thinking_about_classes:
 
+.. qnum::
+   :prefix: classes-11-
+   :start: 1
+
 Thinking About Classes and Instances
 ------------------------------------
 
 You can now imagine some reasons you may want to define a class. You have seen examples of creating types that are more complicated or specific than the ones built in to Python (like lists or strings). ``Turtle``, with all the instance variables and methods you learned about using earlier in the semester, is a class that programmers defined which is now included in the Python language. In this chapter, we defined ``Point`` with some functionality that can make it easier to write programs that involve ``x,y`` coordinate ``Point`` instances. And shortly, you'll see how you can define classes to represent objects in a game.
 
-You can also use self-defined classes to hold data -- for example, data you get from making a request to a REST API.
+You can also use self-defined classes to hold data -- for example, data you get from making a request to an online source or extract from a spreadsheet.
 
 Before you decide to define a new class, there are a few things to keep in mind, and questions you should ask yourself:
 

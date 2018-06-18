@@ -8,13 +8,19 @@
     License".
 
 .. index:: compound data type
+   user defined class
+   attribute
 
 .. _chap_constructor:
+
+.. qnum::
+   :prefix: classes-3-
+   :start: 1
 
 User Defined Classes
 --------------------
 
-We've already seen classes like ``str``, ``int``,  ``float`` and ``list``.  These were defined by Python and
+We've already seen classes like ``str``, ``int``,  ``float`` and ``list``, and ``Turtle``.  These were defined by Python and
 made available for us to use.  However, in many cases when we are solving problems we need to create data objects
 that are related to the problem we are trying to solve.  We need to create our own classes.
 
@@ -40,7 +46,6 @@ together with the data.
 
 .. image:: Figures/objectpic3.png
    :alt: A point also has methods
-
 
 Now that we understand what a ``point`` object might look like, we can define a new **class**. 
 We'll want our points to each have an ``x`` and a ``y`` attribute,
@@ -75,15 +80,19 @@ their initial state values.  The ``self`` parameter (you could choose any
 other name, but nobody ever does!) is automatically set to reference
 the newly created object that needs to be initialized.   
 
+You can think of a class as a factory, which can produce instances.
+
+.. image:: Figures/class_instance_representation.png
+
 So let's use our new Point class now. This next part should look a little familiar, if you remember some of the syntax for how we created instances of the Turtle class, in the :ref:`chapter on Turtle graphics <turtles_chap>`. 
 
-.. activecode:: chp13_classes1
+.. activecode:: ac19_3_1
     
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
         
         def __init__(self):
- 
+            """ Create a new point at the origin """
             self.x = 0
             self.y = 0
     
@@ -91,29 +100,30 @@ So let's use our new Point class now. This next part should look a little famili
     q = Point()         # and make a second point
 
     print("Nothing seems to have happened with the points")
-    
-   
+
 During the initialization of the objects, we created two
-attributes called `x` and `y` for each object, and gave them both the value 0.  You will note that when you run the
+attributes called ``x`` and ``y`` for each object, and gave them both the value 0.  You will note that when you run the
 program, nothing happens.  It turns out that this is not quite the case.  In fact, two ``Points`` have been created, each
 having an x and y coordinate with value 0.  However, because we have not asked the program to do anything with the points, we don't see any other result.
-
 
 .. image:: Figures/objectpic4.png
    :alt: Simple object has state and methods
 
+Below is a more detailed look at the class that's constructed as a factory which was mentioned earlier. Inside the 
+class are some methods - the __init__, met_1, and met_2 - as well as some attributes - var1 and var2.
 
+.. image:: Figures/class_example.png
 
 The following program adds a few print statements. You can see that the output suggests that each one is a ``Point object``.
 However, notice that the ``is`` operator returns ``False`` meaning that they are different objects (we will have more to say about this in a later section).
 
-.. activecode:: chp13_classes2
+.. activecode:: ac19_3_2
     
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
         
         def __init__(self):
- 
+            """ Create a new point at the origin """
             self.x = 0
             self.y = 0
     
@@ -124,7 +134,6 @@ However, notice that the ``is`` operator returns ``False`` meaning that they are
     print(q)
 
     print(p is q)
-
 
 A function like ``Point`` that creates a new object instance 
 is called a **constructor**.  Every class automatically uses the name of the class as the name of the constructor function.
@@ -143,8 +152,8 @@ to the factory default settings" is called **instantiation**.
 
 To get a clearer understanding of what happens when instantiating a new instance, examine the previous code using CodeLens.
 
-.. codelens:: chp13_classes2a
-    
+.. codelens:: clens19_1_1
+    :python: py3
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
         
@@ -164,5 +173,3 @@ To get a clearer understanding of what happens when instantiating a new instance
 At Step 6 in the CodeLens execution, you can see that Point has been bound to an object representing the point class, but there are not yet any instances. The execution of line 9, ``p = Point()``, occurs at steps 7-9. First, at step 7, you can see that a blank instance of the class has been created, and is passed as the first (and only parameter) to the ``__init__`` method. That method's code is executed, with the variable self bound to that instance. At steps 8 and 9, two instance variables are filled in: x and y are both set to 0. Nothing is returned from the ``__init__`` method, but the point object itself is returned from the call to ``Point()``. Thus, at step 10,  p is bound to the new point that was created and initialized.
 
 Skipping ahead, by the time we get to Step 16, p and q are each bound to different points. Even though both have x and y instance variables set to 0, they are *different objects*. Thus ``p is q`` evaluates to False.
-
-
