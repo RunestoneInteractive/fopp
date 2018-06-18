@@ -70,6 +70,7 @@ Table of Contents
    Sorting/toctree.rst
    AdvancedFunctions/toctree.rst
    TestCases/toctree.rst
+   TestPrograms/toctree.rst
    Exceptions/toctree.rst
    Classes/toctree.rst
    Inheritance/toctree.rst
