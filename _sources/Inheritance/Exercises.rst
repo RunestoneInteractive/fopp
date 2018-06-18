@@ -6,6 +6,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: inheritance-6-
+   :start: 1
 
 Exercises
 =========
@@ -14,7 +17,7 @@ For exercises, you can expand the Tamagotchi game even further. Try doing these 
 
 Here's *all* the code we just saw for our new and improved game, with a few additions. You can run this and play the game again.
 
-.. activecode:: tamagotchi_exercises
+.. activecode:: ac20_6_1
     :nocanvas:
 
     from random import randrange

@@ -6,11 +6,14 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: inheritance-2-
+   :start: 1
+
+.. index:: Mechanics of defining a subclass
 
 Inheriting Variables and Methods
 ================================
-
-.. index:: Mechanics of defining a subclass
 
 Mechanics of Defining a Subclass
 --------------------------------
@@ -23,10 +26,17 @@ Here is an example. Say we want to define a class ``Cat`` that inherits from ``P
 
 We want the ``Cat`` type to be exactly the same as ``Pet``, *except* we want the sound cats to start out knowing "meow" instead of "mrrp", and we want the ``Cat`` class to have its own special method called ``chasing_rats``, which only ``Cat`` s have.
 
+To map this Pet class example onto the image below, the smallest, yellow piece is an instance of the class ``Cat`` (like 
+my cat, Tommy). The yellow piece can then attach to the slightly larger, blue factory piece which represents the ``Cat`` 
+class. The blue factory piece then attaches to the largest, red factory piece, which represents the ``Pet`` class. If we 
+wanted to represent the ``Dog`` class, that might be a green factory which looks similar to the blue factory 
+piece. However, the yellow piece will not fit with the ``Dog`` class because the yellow piece represents Tommy, and Tommy is ``Cat``, not a ``Dog``.
+
+.. image:: Figures/class_inheritance.png
+
 For reference, here's the original Tamagotchi code
 
-
-.. activecode:: inheritance_cat_example
+.. activecode:: ac20_2_1
     :nocanvas:
 
     from random import randrange
@@ -95,9 +105,9 @@ We can still use all the ``Pet`` methods in the ``Cat`` class, this way. You can
 
 In the original Tamagotchi game in the last chapter, you saw code that created instances of the ``Pet`` class. Now let's write a little bit of code that uses instances of the ``Pet`` class AND instances of the ``Cat`` class.
 
-.. activecode:: tamagotchi_2
+.. activecode:: ac20_2_2
     :nocanvas:
-    :include: inheritance_cat_example
+    :include: ac20_2_1
 
     p1 = Pet("Fido")
     print(p1) # we've seen this stuff before!
@@ -119,9 +129,9 @@ In the original Tamagotchi game in the last chapter, you saw code that created i
 
 And you can continue the inheritance tree. We inherited ``Cat`` from ``Pet``. Now say we want a subclass of ``Cat`` called ``Cheshire``. A Cheshire cat should inherit everything from ``Cat``, which means it inherits everything that ``Cat`` inherits from ``Pet``, too. But the ``Cheshire`` class has its own special method, ``smile``.
 
-.. activecode:: inheritance_cheshire_example
+.. activecode:: ac20_2_3
     :nocanvas:
-    :include: inheritance_cat_example
+    :include: ac20_2_1
 
     class Cheshire(Cat): # this inherits from Cat, which inherits from Pet
 
@@ -198,33 +208,83 @@ The Python interpreter looks for an instance variable or method called ``chasing
 
 **Check your understanding**
 
-.. mchoice:: question_inheritance_1
+.. mchoice:: question20_2_1
+   :practice: T
    :answer_a: 1
    :answer_b: 2
    :answer_c: 3
    :answer_d: 4
+   :correct: d
    :feedback_a: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
    :feedback_b: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
    :feedback_c: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
    :feedback_d: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. That constructor method sets the instance variables name, hunger, boredom, and sounds.
-   :correct: d
    
    After you run the code, ``new_cat = Cheshire("Pumpkin")``, how many instance variables exist for the new_cat instance of Cheshire?
 
-.. mchoice:: question_inheritance_2
+   .. code-block:: python
+
+     class Pet():
+        boredom_decrement = 4
+        hunger_decrement = 6
+        boredom_threshold = 5
+        hunger_threshold = 10
+        sounds = ['Mrrp']
+        def __init__(self, name = "Kitty"):
+            self.name = name
+            self.hunger = randrange(self.hunger_threshold)
+            self.boredom = randrange(self.boredom_threshold)
+            self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+     class Cat(Pet): # the class name that the new class inherits from goes in the parentheses, like so.
+        sounds = ['Meow']
+
+        def chasing_rats(self):
+            return "What are you doing, Pinky? Taking over the world?!"
+
+     class Cheshire(Cat): # this inherits from Cat, which inherits from Pet
+
+        def smile(self): # this method is specific to instances of Cheshire
+            print(":D :D :D")
+
+.. mchoice:: question20_2_2
+   :practice: T
    :answer_a: We are Siamese if you please. We are Siamese if you don’t please.
    :answer_b: Error
    :answer_c: Pumpkin
    :answer_d: Nothing. There’s no print statement.
+   :correct: a
    :feedback_a: another_cat is an instance of Siamese, so its song() method is invoked.
    :feedback_b: another_cat is an instance of Siamese, so its song() method is invoked.
    :feedback_c: This would print if the statement was print new_cat.name.
    :feedback_d: There is a print statement in the method definition.
-   :correct: a
 
    What would print after running the following code:
 
    .. code-block:: python
+
+     class Pet():
+        boredom_decrement = 4
+        hunger_decrement = 6
+        boredom_threshold = 5
+        hunger_threshold = 10
+        sounds = ['Mrrp']
+        def __init__(self, name = "Kitty"):
+            self.name = name
+            self.hunger = randrange(self.hunger_threshold)
+            self.boredom = randrange(self.boredom_threshold)
+            self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+     class Cat(Pet): # the class name that the new class inherits from goes in the parentheses, like so.
+        sounds = ['Meow']
+
+        def chasing_rats(self):
+            return "What are you doing, Pinky? Taking over the world?!"
+
+     class Cheshire(Cat): # this inherits from Cat, which inherits from Pet
+
+        def smile(self): # this method is specific to instances of Cheshire
+            print(":D :D :D")
 
      new_cat = Cheshire("Pumpkin”)
      class Siamese(Cat):
@@ -234,20 +294,44 @@ The Python interpreter looks for an instance variable or method called ``chasing
      another_cat.song()
 
 
-.. mchoice:: question_inheritance_3
+.. mchoice:: question20_2_3
+   :practice: T
    :answer_a: We are Siamese if you please. We are Siamese if you don’t please.
    :answer_b: Error
    :answer_c: Pumpkin
    :answer_d: Nothing. There’s no print statement.
+   :correct: b
    :feedback_a: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
    :feedback_b: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
    :feedback_c: This would print if the statement was print new_cat.name.
    :feedback_d: There is a print statement in the method definition for Siamese.
-   :correct: b
 
    What would print after running the following code:
 
    .. code-block:: python
+
+     class Pet():
+        boredom_decrement = 4
+        hunger_decrement = 6
+        boredom_threshold = 5
+        hunger_threshold = 10
+        sounds = ['Mrrp']
+        def __init__(self, name = "Kitty"):
+            self.name = name
+            self.hunger = randrange(self.hunger_threshold)
+            self.boredom = randrange(self.boredom_threshold)
+            self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+     class Cat(Pet): # the class name that the new class inherits from goes in the parentheses, like so.
+        sounds = ['Meow']
+
+        def chasing_rats(self):
+            return "What are you doing, Pinky? Taking over the world?!"
+
+     class Cheshire(Cat): # this inherits from Cat, which inherits from Pet
+
+        def smile(self): # this method is specific to instances of Cheshire
+            print(":D :D :D")
 
      new_cat = Cheshire("Pumpkin”)
      class Siamese(Cat):
@@ -255,5 +339,4 @@ The Python interpreter looks for an instance variable or method called ``chasing
          print("We are Siamese if you please. We are Siamese if you don’t please.")
      another_cat = Siamese("Lady")
      new_cat.song()
-
 
