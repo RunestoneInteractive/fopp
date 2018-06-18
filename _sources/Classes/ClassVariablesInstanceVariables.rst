@@ -8,6 +8,10 @@
 
 .. _class_and_instance_vars:
 
+.. qnum::
+   :prefix: classes-10-
+   :start: 1
+
 Class Variables and Instance Variables
 --------------------------------------
 
@@ -19,7 +23,7 @@ For example, consider the following version of the Point class. Here we have add
 
 Note that there is an assignment to the variable printed_rep on line 4. It is not inside any method. That makes it a class variable. It is accessed in the same way as instance variables. For example, on line 16, there is a reference to self.printed_rep. If you change line 4, you have it print a different character at the x,y coordinates of the Point in the graph.
 
-.. activecode:: classvars_1
+.. activecode:: ac19_10_1
 
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
@@ -55,7 +59,7 @@ Note that there is an assignment to the variable printed_rep on line 4. It is no
     print()
     print(p2.graph())
 
-To be able to reason about class variables and instance variables, it is helpful to know the rules that the python interpreter uses. That way, you can mentally simulate what the interpreter does.
+To be able to reason about class variables and instance variables, it is helpful to know the rules that the Python interpreter uses. That way, you can mentally simulate what the interpreter does.
 
 When the interpreter sees an expression of the form <obj>.<varname>, it:
     1. Checks if the object has an instance variable set. If so, it uses that value.
@@ -63,8 +67,8 @@ When the interpreter sees an expression of the form <obj>.<varname>, it:
     3. If it doesn't find an instance or a class variable, it creates a runtime error (actually, it does one other check first, which you will learn about in the next chapter.)
 
 When the interpreter sees an assignment statement of the form <obj>.<varname> = <expr>, it:
-    1. Evaluates the expression on the right-hand side to yield some python object;
-    2. Sets the instance variable <varname> of <obj> to be bound to that python object. Note that an assignment statement of this form never sets the class variable, it only sets the instance variable.
+    1. Evaluates the expression on the right-hand side to yield some Python object;
+    2. Sets the instance variable <varname> of <obj> to be bound to that Python object. Note that an assignment statement of this form never sets the class variable, it only sets the instance variable.
 
 In order to set the class variable, you use an assignment statement of the form <varname> = <expr> at the top-level in a class definition, like on line 4 in the code above to set the class variable printed_rep.
 

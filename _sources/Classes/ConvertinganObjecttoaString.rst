@@ -7,20 +7,23 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: classes-7-
+   :start: 1
+
 Converting an Object to a String
 --------------------------------
-
  
 When we're working with classes and objects, it is often necessary to print an object (that is, to print the state of an object).
 Consider the example below.
 
-.. activecode:: chp13_classesstr1
+.. activecode:: ac19_7_1
     
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
         
         def __init__(self, initX, initY):
-
+            """ Create a new point at the given coordinates. """
             self.x = initX
             self.y = initY
 
@@ -34,7 +37,7 @@ Consider the example below.
             return ((self.x ** 2) + (self.y ** 2)) ** 0.5
 
     
-    p = Point(7,6)
+    p = Point(7, 6)
     print(p)
 
 The ``print`` function shown above produces a string representation of the Point ``p``.  The default functionality provided by
@@ -52,13 +55,13 @@ Whatever string the ``__str__`` method for a class returns, that is the string t
 
 Take a look at the code below.
 
-.. activecode:: chp13_classesstr2
+.. activecode:: ac19_7_2
 
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
 
         def __init__(self, initX, initY):
-
+            """ Create a new point at the given coordinates. """
             self.x = initX
             self.y = initY
 
@@ -72,9 +75,9 @@ Take a look at the code below.
             return ((self.x ** 2) + (self.y ** 2)) ** 0.5
           
         def __str__(self):
-            return "x = {}, y = {}".format(self.x, self.y)
+            return "x=" + str(self.x) + ", y=" + str(self.y)
 
-    p = Point(7,6)
+    p = Point(7, 6)
     print(p)
 
 
