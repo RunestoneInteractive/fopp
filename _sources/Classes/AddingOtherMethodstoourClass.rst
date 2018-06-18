@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: classes-5-
+   :start: 1
+
 Adding Other Methods to a Class
 -------------------------------
           
@@ -22,12 +26,26 @@ they apply to, and each instance of the class can have its own state.
 A **method** behaves like a function but it is invoked on a specific
 instance.  For example, with a list bound to variable L, ``L.append(7)`` calls the function append, with the list itself as the first parameter and 7 as the second parameter.   Methods are accessed using dot notation. This is why ``L.append(7)`` has 2 parameters even though you may think it only has one: the list stored in the variable ``L`` is the first parameter value and 7 is the second.  
 
+We can visualize a method (called doThing for this example) in the following way. The shapes on top will allow for two 
+parameters/arguments and the shape on the bottom will allow for one return value.
+
+.. image:: Figures/method.png
+   :alt: a square with two outcroppings on the top, which represent parameters, and one outcroping on the bottom, which represents the return value.
+
+When the method is inside the class then, we can take some of our instance variables, or even new arguments in this case, 
+and do some action. Here, when doThing is called we will provide a number as an argument (as demonstrated by the blue and 
+yellow piece.doThing(5) image above the factory). This means that for the blue/yellow piece, we will do something with 
+the number to result in a return value. A more indepth explanation will be provided later on.
+
+.. image:: Figures/class_with_method_example.png
+   :alt: the method doThing is now in the class, and takes one of the instance variables and a new number in order to put out a return value.
+
 Let's add two simple methods to allow a point to give us information about its state.  The ``getX`` method, when invoked, will return the value of the x coordinate.
 
 The implementation of this method is straight forward since we already know how
 to write functions that return values.  One thing to notice is that even though the ``getX`` method does not need any other parameter information to do its work, there is still one formal parameter, ``self``.  As we stated earlier, all methods defined in a class that operate on objects of that class will have ``self`` as their first parameter.  Again, this serves as a reference to the object itself which in turn gives access to the state data inside the object.
 
-.. activecode:: chp13_classes4
+.. activecode:: ac19_5_1
     
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
@@ -54,7 +72,7 @@ Let's add another method, ``distanceFromOrigin``, to see better how methods
 work.  This method will again not need any additional information to do its work, beyond the data stored in the instance variables.
 It will perform a more complex task.
 
-.. activecode:: chp13_classes5
+.. activecode:: ac19_5_2
     
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
