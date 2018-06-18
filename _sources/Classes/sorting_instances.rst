@@ -10,7 +10,7 @@
 ..  description:: Invoking sort and sorted on lists of instances.
 
 .. qnum::
-   :prefix: sort-instances-
+   :prefix: classes-9-
    :start: 1
    
 .. _sort_instances_chap:
@@ -22,7 +22,7 @@ You previously learned :ref:`how to sort lists <sort_chap>`. Sorting lists of in
 
 Previously, you have seen how to provide such a function when sorting lists of other kinds of objects. For example, given a list of strings, you can sort them in ascending order of their lengths by passing a key parameter. Note that if you refer to a function by name, you give the name of the function without parentheses after it, because you want the function object itself. The sorted function will take care of calling the function, passing the current item in the list. Thus, in the example below, we write ``key=len`` and not ``key=len()``.
 
-.. activecode:: sort_instances_1
+.. activecode:: ac19_9_1
 
    L = ["Cherry", "Apple", "Blueberry"]
    
@@ -32,7 +32,7 @@ Previously, you have seen how to provide such a function when sorting lists of o
 
 When each of the items in a list is an instance of a class, you need to provide a function that takes one instance as an input, and returns a number. The instances will be sorted by their numbers.
 
-.. activecode:: sort_instances_2
+.. activecode:: ac19_9_2
 
    class Fruit():
        def __init__(self, name, price):
@@ -45,7 +45,7 @@ When each of the items in a list is an instance of a class, you need to provide 
 
 Sometimes you will find it convenient to define a method for the class that does some computation on the data in an instance. In this case, our class is too simple to really illustrate that. But to simulate it, I've defined a method ``sort_priority`` that just returns the price that's stored in the instance. Now, that method, sort_priority takes one instance as input and returns a number. So it is exactly the kind of function we need to provide as the key parameter for sorted. Here it can get a little confusing: to refer to that method, without actually invoking it, you can refer to ``Fruit.sort_priority``. This is analogous to the code above that referred to ``len`` rather than invoking ``len()``.
 
-.. activecode:: sort_instances_3
+.. activecode:: ac19_9_3
 
    class Fruit():
        def __init__(self, name, price):
@@ -56,11 +56,11 @@ Sometimes you will find it convenient to define a method for the class that does
            return self.price
            
    L = [Fruit("Cherry", 10), Fruit("Apple", 5), Fruit("Blueberry", 20)]
-   print "-----sorted by price, referencing a class method-----"
+   print ("----- sorted by price, referencing a class method -----")
    for f in sorted(L, key = Fruit.sort_priority):
        print(f.name)
        
-   print "---- one more way to do the same thing-----"
+   print ("---- one more way to do the same thing -----")
    for f in sorted(L, key = lambda x: x.sort_priority()):
        print(f.name)
 

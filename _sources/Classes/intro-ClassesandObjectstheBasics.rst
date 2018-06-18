@@ -9,16 +9,19 @@
 
 .. _classes_chap:
 
+.. qnum::
+   :prefix: classes-1-
+   :start: 1
+
+.. index:: object-oriented programming
+   OOP
+   object
+
 Introduction: Classes and Objects - the Basics
 ==============================================
 
-
-.. index:: object-oriented programming
-
 Object-oriented programming
 ---------------------------
-
-
 
 Python is an **object-oriented programming language**.  That means it
 provides features that support `object-oriented programming

@@ -10,6 +10,10 @@
 
 .. index:: Tamagotchi
 
+.. qnum::
+   :prefix: classes-13-
+   :start: 1
+
 A Tamagotchi Game
 -----------------
 
@@ -32,7 +36,7 @@ To relieve boredom, the pet owner can either teach the pet a new word, using the
 
 To relieve hunger, we call the feed() method.
 
-.. activecode:: tamagotchi_1
+.. activecode:: ac19_13_1
     :nocanvas:
 
     from random import randrange
@@ -86,9 +90,9 @@ To relieve hunger, we call the feed() method.
 
 Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing p1 to see what the effects are. If you want to directly inspect the state, try printing p1.boredom or p1.hunger.
 
-.. activecode:: tamagotchi_2
+.. activecode:: ac19_13_2
     :nocanvas:
-    :include: tamagotchi_1
+    :include: ac19_13_1
 
     p1 = Pet("Fido")
     print(p1)
@@ -104,7 +108,7 @@ Let's try making a pet and playing with it a little. Add some of your own comman
 
 
 
-That's all great if you want to interact with the pet by writing python code. Let's make a game that non-programmers can play.
+That's all great if you want to interact with the pet by writing Python code. Let's make a game that non-programmers can play.
 
 We will use the `Listener Loop <chap_listener>` pattern. At each iteration, we will display a text prompt reminding the user of what commands are available.
 
@@ -112,23 +116,65 @@ The user will have a list of pets, each with a name. The user can issue a comman
 
 No matter what the user does, with each command entered, the clock ticks for all their pets. Watch out, if you have too many pets, you won't be able to keep them all satisfied!
 
-.. activecode:: tamogotchi_3:
+.. activecode:: ac19_13_3:
     :nocanvas:
-    :include: tamagotchi_1
+    :include: ac19_13_1
 
     import sys
     sys.setExecutionLimit(60000)
 
-    def whichone(petlist, name):
-        for pet in petlist:
-            if pet.name == name:
-                return pet
-        return None # no pet matched
+    def process_command(command, pets):
+        words = command.split()
+        if len(words) > 0:
+            command = words[0]
+        else:
+            command = None
+        if command == "Quit":
+            print("Exiting...")
+            return None
+        elif command == "Adopt" and len(words) > 1:
+            name = words[1]
+            if name in pets:
+                return "You already have a pet with that name"
+            else:
+                pets[name] = (Pet(name))
+                return "Adoption complete"
+        elif command == "Greet" and len(words) > 1:
+            name = words[1]
+            try:
+                pets[name].hi()
+                return "Greeted {}.".format(name)
+            except:
+                return "I didn't recognize that pet name. Please try again."
+        elif command == "Teach" and len(words) > 2:
+            name = words[1]
+            word = words[2]
+            if name not in pets:
+                return "I didn't recognize that pet name. Please try again."
+            else:
+                pet = pets[name]
+                pet.teach(word)
+                return "Taught {} to {}.".format(word, name)
+        elif command == "Feed" and len(words) > 1:
+            name = words[1]
+            try:
+                pets[name].feed()
+                return "Fed {}.".format(name)
+            except:
+                return "I didn't recognize that pet name. Please try again."
+        else:
+            return "I didn't understand that. Please try again."
+
+    def advance_clock(pets):
+        for pet in pets.values():
+            pet.clock_tick()
+
+    def status_string(pets):
+        return "\n".join([p.__str__() for p in pets.values()])
+
 
     def play():
-        animals = []
-
-        option = ""
+        animals = {}
         base_prompt = """
             Quit
             Adopt <petname_with_no_spaces_please>
@@ -136,50 +182,17 @@ No matter what the user does, with each command entered, the clock ticks for all
             Teach <petname> <word>
             Feed <petname>
 
-            Choice: """
+        Command: """
         feedback = ""
-        while True:
-            action = input(feedback + "\n" + base_prompt)
-            feedback = ""
-            words = action.split()
-            if len(words) > 0:
-                command = words[0]
-            else:
-                command = None
-            if command == "Quit":
-                print("Exiting...")
-                return
-            elif command == "Adopt" and len(words) > 1:
-                if whichone(animals, words[1]):
-                    feedback += "You already have a pet with that name\n"
-                else:
-                    animals.append(Pet(words[1]))
-            elif command == "Greet" and len(words) > 1:
-                pet = whichone(animals, words[1])
-                if not pet:
-                    feedback += "I didn't recognize that pet name. Please try again.\n"
-                    print()
-                else:
-                    pet.hi()
-            elif command == "Teach" and len(words) > 2:
-                pet = whichone(animals, words[1])
-                if not pet:
-                    feedback += "I didn't recognize that pet name. Please try again."
-                else:
-                    pet.teach(words[2])
-            elif command == "Feed" and len(words) > 1:
-                pet = whichone(animals, words[1])
-                if not pet:
-                    feedback += "I didn't recognize that pet name. Please try again."
-                else:
-                    pet.feed()
-            else:
-                feedback+= "I didn't understand that. Please try again."
-
-            for pet in animals:
-                pet.clock_tick()
-                feedback += "\n" + pet.__str__()
-
-
+        done = False
+        while not done:
+            advance_clock(animals)
+            prompt = '{}\n{}\n{}'.format(feedback,
+                                         status_string(animals),
+                                         base_prompt)
+            cmd = input(prompt)
+            feedback = process_command(cmd, animals)
+            if not feedback:
+                done = True
 
     play()

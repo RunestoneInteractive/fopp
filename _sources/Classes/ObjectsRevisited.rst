@@ -7,17 +7,22 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: classes-2-
+   :start: 1
+
 Objects Revisited
 -----------------
 
-In Python, every value is actually an object. Whether it be a dictionary, a list, or even an integer, they are all objects.  Programs manipulate those objects either by performing
-computation with them or by asking them to perform methods.  To be more specific, we say that an object has
-a **state** and a collection of **methods** that it can perform. (More about **methods** below.) The state of an object represents those things
-that the object knows about itself.  The state is stored in **instance variables**. For example, as we have seen with turtle objects, each turtle has a state consisting
-of the turtle's position, its color, its heading and so on.  Each turtle also has the ability to go forward, backward, or turn right or left.  Individual turtles are different in that even though they are
-all turtles, they differ in the specific values of the individual state attributes (maybe they are in a different location or have a different heading).
-
-
+In Python, every value is actually an object. Whether it be a dictionary, a list, or even an integer, they are all objects. Programs 
+manipulate those objects either by performing computation with them or by asking them to perform methods. To be more specific, we say 
+that an object has a **state** and a collection of **methods** that it can perform. (More about **methods** below.) The state of an object 
+represents those things that the object knows about itself. The state is stored in **instance variables**. For example each list has 
+state, the items in the list. And it has methods, such as append and pop, which can operate on the list to change its state or do 
+something else useful. Or, you can think about the turtles we've drawn with. With turtle objects, each turtle has a state consisting
+of the turtle's position, its color, its heading and so on. Each turtle also has the ability to go forward, backward, or turn right or 
+left. Individual turtles are different in that even though they are all turtles, they differ in the specific values of the individual 
+state attributes (maybe they are in a different location or have a different heading).
 
 .. image:: Figures/objectpic1.png
    :alt: Simple object has state and methods
