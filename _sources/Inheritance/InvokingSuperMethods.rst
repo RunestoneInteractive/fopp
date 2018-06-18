@@ -6,7 +6,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-
+.. qnum::
+   :prefix: inheritance-4-
+   :start: 1
 
 Invoking the Parent Class's Method
 ==================================
@@ -17,7 +19,7 @@ Say you wanted the ``Dog`` subclass of ``Pet`` to say "Arf! Thanks!" when the ``
 
 Here's the original Pet class again.
 
-.. activecode:: inheritance_pet_class
+.. activecode:: ac20_4_1
     :nocanvas:
 
     from random import randrange
@@ -72,9 +74,9 @@ Here's the original Pet class again.
 
 And here's a subclass that overrides feed() by invoking the the parent class's feed() method; it then also executes an extra line of code. Note the somewhat inelegant way of invoking the parent class' method. We explicitly refer to Pet.feed to get the method/function object. We invoke it with parentheses. However, since we are not invoking the method the normal way, with <obj>.methodname, we have to explicitly pass an instance as the first parameter. In this case, the variable self in Dog.feed() will be bound to an instance of Dog, and so we can just pass self: ``Pet.feed(self)``.
 
-.. activecode:: feed_me_example
+.. activecode:: ac20_4_2
     :nocanvas:
-    :include: inheritance_pet_class
+    :include: ac20_4_1
 
     from random import randrange
 
@@ -97,9 +99,9 @@ This technique is very often used with the ``__init__`` method for a subclass. S
 
 Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want it to take an extra parameter, ``chirp_number``, with a default value of 2, and have an extra instance variable, ``self.chirp_number``. Then, we'll use this in the ``hi`` method to make more than one sound.
 
-.. activecode:: super_methods_1
+.. activecode:: ac20_4_3
     :nocanvas:
-    :include: inheritance_pet_class
+    :include: ac20_4_1
 
     class Bird(Pet):
         sounds = ["chirp"]
@@ -119,29 +121,93 @@ Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want 
 
 **Check your understanding**
 
-.. mchoice:: question_inheritance_4
+.. mchoice:: question20_4_1
+   :practice: T
    :answer_a: 5
    :answer_b: ["Mrrp"]
    :answer_c: ["chirp"]
    :answer_d: Error
+   :correct: c
    :feedback_a: This would print if the code was print(b1.chirp_number).
    :feedback_b: We set b1 to be Bird('tweety', 5) above.  Bird is a subclass of Pet, which has ["Mrrp"] for sounds, but Bird has a different value for that class variable. The interpreter looks in the subclass first.
    :feedback_c: The interpeter finds the value in the class variable for the class Bird.
    :feedback_d: We ran set b1 to be Bird('tweety', 5) above.  Bird has a value set for the attribute sounds.
-   :correct: c
 
    What will print when ``print(b1.sounds)`` is run?
 
-.. mchoice:: question_inheritance_5
+   .. code-block:: python
+
+     class Pet():
+        boredom_decrement = 4
+        hunger_decrement = 6
+        boredom_threshold = 5
+        hunger_threshold = 10
+        sounds = ['Mrrp']
+        def __init__(self, name = "Kitty"):
+            self.name = name
+            self.hunger = randrange(self.hunger_threshold)
+            self.boredom = randrange(self.boredom_threshold)
+            self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+        def reduce_boredom(self):
+            self.boredom = max(0, self.boredom - self.boredom_decrement)
+
+     class Bird(Pet):
+        sounds = ["chirp"]
+        def __init__(self, name="Kitty", chirp_number=2):
+            Pet.__init__(self, name) # call the parent class's constructor
+            # basically, call the SUPER -- the parent version -- of the constructor, with all the parameters that it needs.
+            self.chirp_number = chirp_number # now, also assign the new instance variable
+
+        def hi(self):
+            for i in range(self.chirp_number):
+                print(self.sounds[randrange(len(self.sounds))])
+            self.reduce_boredom()
+
+     b1 = Bird('tweety', 5)
+     b1.teach("Polly wanna cracker")
+     b1.hi()
+
+.. mchoice:: question20_4_2
+   :practice: T
    :answer_a: Error when invoked
    :answer_b: The string would not print out but d1 would have its hunger reduced.
    :answer_c: The string would print but d1 would not have its hunger reduced.
    :answer_d: Nothing would be different. It is the same as the current code.
+   :correct: c
    :feedback_a: Since we are no longer calling the parent method in the subclass method definition, the actions defined in the parent method feed will not happen, and only Arf! Thanks! will be printed.
    :feedback_b: Remember that the Python interpreter checks for the existence of feed in the Dog class and looks for feed in Pet only if it isn't found in Dog.
    :feedback_c: Since we are no longer calling the parent Pet class's method in the Dog subclass's method definition, the class definition will override the parent method.
    :feedback_d: Remember that the Python interpreter checks for the existence of feed in the Dog class and looks for feed in Pet only if it isn't found in Dog.
-   :correct: c
    
-   For the Dog class defined in the earlier activecode window, what would happen when d1.feed() is run if the Pet.feed(self) line was deleted?
+   For the Dog class defined below, what would happen when d1.feed() is run if the Pet.feed(self) line was deleted?
 
+   .. code-block:: python
+
+     from random import randrange
+
+     class Pet():
+        boredom_decrement = 4
+        hunger_decrement = 6
+        boredom_threshold = 5
+        hunger_threshold = 10
+        sounds = ['Mrrp']
+        def __init__(self, name = "Kitty"):
+            self.name = name
+            self.hunger = randrange(self.hunger_threshold)
+            self.boredom = randrange(self.boredom_threshold)
+            self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+        def feed(self):
+            self.reduce_hunger()
+
+     class Dog(Pet):
+        sounds = ['Woof', 'Ruff']
+
+        def feed(self):
+            Pet.feed(self)
+            print("Arf! Thanks!")
+
+     d1 = Dog("Astro")
+
+     d1.feed()

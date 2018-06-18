@@ -6,6 +6,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: inheritance-3-
+   :start: 1
 
 Overriding Methods
 ==================
@@ -18,7 +21,7 @@ Let's return to our idea of making Cats, Dogs, and other pets generate a string 
 
 Here's the original Pet class again.
 
-.. activecode:: inheritance_pet_class
+.. activecode:: ac20_3_1
     :nocanvas:
 
     from random import randrange
@@ -71,11 +74,11 @@ Here's the original Pet class again.
         def reduce_boredom(self):
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
-Now let's make two subclasses, Dog and Cat. Dogs are always happy unless they are bored *and* hungry. Cats, on the other hand, are happy only if they are fed and if their boredom level is in a narrow range and, even then, only with probability 1/2.
+Now let's make two subclasses, ``Dog`` and ``Cat``. Dogs are always happy unless they are bored *and* hungry. Cats, on the other hand, are happy only if they are fed and if their boredom level is in a narrow range and, even then, only with probability 1/2.
 
-.. activecode:: inheritance_override
+.. activecode:: ac20_3_2
     :nocanvas:
-    :include: inheritance_pet_class
+    :include: ac20_3_1
 
     class Cat(Pet):
         sounds = ['Meow']

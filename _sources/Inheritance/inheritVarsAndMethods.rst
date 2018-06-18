@@ -159,7 +159,6 @@ And you can continue the inheritance tree. We inherited ``Cat`` from ``Pet``. No
     #p1.chasing_rats() # This will give you an error -- this method doesn't exist on instances of the Pet class.
     #p1.smile() # This will give you an error, too. This method does not exist on instances of the Pet class.
 
-
 How the interpreter looks up attributes
 ---------------------------------------
 

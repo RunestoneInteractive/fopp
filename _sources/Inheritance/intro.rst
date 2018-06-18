@@ -8,6 +8,10 @@
 
 .. _inheritance_chap:
 
+.. qnum::
+   :prefix: inheritance-1-
+   :start: 1
+
 Introduction: Class Inheritance
 ===============================
 
