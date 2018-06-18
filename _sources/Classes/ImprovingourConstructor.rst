@@ -7,6 +7,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: classes-4-
+   :start: 1
 
 Adding Parameters to the  Constructor
 -------------------------------------
@@ -31,13 +34,14 @@ the ``__init__`` method, as shown in this example.
 
 Now when we create new points, we supply the x and y coordinates as parameters.  When the point is created, the values of ``initX`` and ``initY`` are assigned to the state of the object, in the **instance variables** x and y.
 
+This process is animated below:
+
+.. image:: Figures/creating_instance.gif
+   :alt: the steps a computer takes to create a new instance of a class that takes two arguments and makes three instance variables.
+
 This is a common thing to do in the ``__init__`` method for a class: take in some parameters and save them as instance variables. Why is this useful? Keep in mind that the parameter variables will go away when the method is finished executing. The instance variables, however, will still be accessible anywhere that you have a handle on the object instance. This is a way of saving those initial values that are provided when the class constructor is invoked.
 
  Later on, you will see classes where the ``__init__`` method does more than just save parameters as instance variables. For example, it might parse the contents of those variables and do some computation on them, storing the results in instance variables. It might even make an Internet connection, download some content, and store that in instance variables.
 
 .. image:: Figures/objectpic5.png
    :alt: Simple object has state and methods
-
-
-
-       
