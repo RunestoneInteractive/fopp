@@ -85,7 +85,7 @@ Extra Exercises
    myTests().main()
 
 
-2. The attack strength for grass Pokemon does not change until they reach level 10. At level 10 and up, their attack strength increases by the attack_boost amount when they level. Modify the ``Grass_Pokemon`` subclass of ``Pokemon`` to reflect this change. To test, create an instance of the class with the name as "Bulby". Assign the instance to the variable ``p2``. Then, use ``Grass_Pokemon`` methods to train a the ``p2`` Grass_Pokemon instance until it reaches at least level 10.
+2. The attack strength for grass Pokemon does not change until they reach level 10. At level 10 and up, their attack strength increases by the attack_boost amount when they level up. Modify the ``Grass_Pokemon`` subclass of ``Pokemon`` to reflect this change. To test, create an instance of the class with the name as "Bulby". Assign the instance to the variable ``p2``. Then, use ``Grass_Pokemon`` methods to train a the ``p2`` Grass_Pokemon instance until it reaches level 10. Note that the first test will only work when you have correctly initialized ``p2``. The second test will only work when you have trained ``p2`` to level 10 but as a result, the first test will fail again.
 
 .. activecode:: ee_inheritance_02
    :tags:Inheritance/inheritVarsAndMethods.rst,Inheritance/OverrideMethods.rst
@@ -155,7 +155,7 @@ Extra Exercises
    class myTests(TestCaseGui):
 
       def testOneA(self):
-         self.assertEqual(p2.__str__(), "Pokemon name: Bulby, Type: Grass, Level: 5", "Testing that p2 is assigned to correct value.")
+         self.assertEqual(p2.__str__(), "Pokemon name: Bulby, Type: Grass, Level: 5", "Testing that p2 is assigned to correct value initially.")
       def testOneB(self):
          self.assertTrue(p2.attack_up() >= 17, "Testing that attack value is assigned to correct value at level 10.")
       
