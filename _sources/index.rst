@@ -56,6 +56,12 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
+<<<<<<< HEAD
+=======
+   NestedData/toctree.rst
+
+.. ignore
+>>>>>>> chapter17
    Debugging/toctree.rst
    PythonTurtle/toctree.rst
    Sequences/toctree.rst
