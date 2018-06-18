@@ -7,6 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: buildP-1-
+   :start: 1
+
 Building A Program: A Strategy
 ==============================
 
@@ -23,7 +27,10 @@ There are three basic steps to the strategy we recommend: Outline; Code One Sect
 Sketch an Outline
 -----------------
 
-We are suggesting you first write down all the steps you want the program to do. You can do this in any manner you like. We are going to show you how to outline using comments, but if you are more visual you might want to sketch on a piece of paper and if you are more spatial try walking around the room. The big trick is to understand everything you want to do first in your own words, so then you are translating them to the computer.
+We are suggesting you first write down all the steps you want the program to do. You can do this in any manner you like. We are going to 
+show you how to outline using comments, but if you are more visual you might want to sketch on a piece of paper and if you are more 
+spatial try walking around the room. The big trick is to understand everything you want to do first in your own words, so then you are 
+translating them to the computer.
 
 Code One Section at a Time
 --------------------------
@@ -77,3 +84,5 @@ Clean Up
 When you are done with outlining and testing your program, delete any diagnostic print statements from your program. No one really needs to see the test statements you wrote, and leaving test statements in the program might confuse you if you add more to the program.
 
 Extra comments do help other people read your code, but try to leave in only the bits that you think are useful. There is an art to writing good informative comments, and you can only learn this art by reading other people's programs and having your peers read your programs. As a rule of thumb for comments, when in doubt, keep it; it you’re worried it won’t make sense to you or someone else later, add more detail to it.
+
+In the next few pages, we'll go through this process using a question similar to something that you may have already seen before.
