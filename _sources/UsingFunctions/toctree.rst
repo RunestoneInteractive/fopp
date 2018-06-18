@@ -1,8 +1,8 @@
-Tuples
-::::::
+Using Functions
+:::::::::::::::
 
 .. toctree::
-   :caption: Tuples
+   :caption: Using Functions
    :maxdepth: 2
 
    DecodingaFunction.rst
