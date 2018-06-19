@@ -5,5 +5,5 @@ Style
    :caption: Style
    :maxdepth: 2
 
-   ProgrammingwithStyle.rst
+   ProgrammingWithStyle.rst
    

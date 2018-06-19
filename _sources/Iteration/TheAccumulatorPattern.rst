@@ -10,6 +10,8 @@
 .. qnum::
    :prefix: iter-6-
    :start: 1
+
+.. _accum_pattern:
       
 The Accumulator Pattern
 =======================

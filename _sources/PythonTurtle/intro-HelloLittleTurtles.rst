@@ -19,6 +19,8 @@
     single: definition; function
     single: turtle module
 
+.. _turtles_chap:
+
 Hello Little Turtles!
 =====================
 

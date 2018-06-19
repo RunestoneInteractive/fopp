@@ -246,7 +246,7 @@ screen until we click on it.
 
    Which of the following code would produce the following image? 
 
-   .. image:: ../_static/turtleTest1.png 
+   .. image:: Figures/turtleTest1.png 
       :alt: long line to north with shorter line to west on top
 
 **Mixed up programs**

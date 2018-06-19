@@ -69,8 +69,10 @@ Table of Contents
    Tuples/toctree.rst
    Style/toctree.rst
    MoreAboutIteration/toctree.rst
-   Sorting/toctree.rst
    AdvancedFunctions/toctree.rst
+   Sorting/toctree.rst
+   NestedData/toctree.rst
+   ExtractNestedData/toctree.rst 
    TestCases/toctree.rst
    TestPrograms/toctree.rst
    Exceptions/toctree.rst
@@ -78,8 +80,7 @@ Table of Contents
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
-   NestedData/toctree.rst
-
+   
 
 Appendices
 ::::::::::

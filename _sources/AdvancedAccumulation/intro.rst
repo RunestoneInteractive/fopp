@@ -6,11 +6,12 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. _list_comp_chap:
 
 .. qnum::
    :prefix: AdAccum-1-
    :start: 1
+
+.. _list_comp_chap:
 
 Introduction: Map, Filter, List Comprehensions, and Zip
 =======================================================

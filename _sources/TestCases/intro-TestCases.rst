@@ -7,11 +7,12 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. _test_cases_chap:
 
 .. qnum::
    :prefix: test-1-
    :start: 1
+
+.. _test_cases_chap:
 
 Introduction: Test Cases
 ========================
