@@ -22,7 +22,7 @@
 Hello Little Turtles!
 =====================
 
-.. video:: assignvid
+.. video:: turtleintrovid
     :controls:
     :thumb: ../_static/turtleintro.png
 

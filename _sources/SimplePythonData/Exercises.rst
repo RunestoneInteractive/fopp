@@ -78,14 +78,15 @@ Exercises
 
         .. tab:: Question
 
-            What do these expressions evaluate to?
-        
-            #.  ``3 == 3``
-            #.  ``3 != 3``
-            #.  ``3 >= 4``
-            #.  ``not (3 < 4)``
-        
-                .. actex:: ex_6_1
+            .. actex:: spd_ex_3q
+
+                What do these expressions evaluate to?
+            
+                #.  ``3 == 3``
+                #.  ``3 != 3``
+                #.  ``3 >= 4``
+                #.  ``not (3 < 4)``
+                ~~~~        
         
 
         .. tab:: Answer
@@ -127,7 +128,7 @@ Exercises
 
         .. tab:: Answer
             
-            .. activecode:: q5_answer
+            .. activecode:: spd_q5_answer
                 :nocanvas:
                 
                 ## question 5 solution ##
@@ -173,7 +174,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: q7_answer    
+            .. activecode:: spd_q7_answer    
                 :nocanvas:
 
                 ## question 7 solution ##
@@ -230,7 +231,7 @@ Exercises
                 
         .. tab:: Answer
 
-            .. activecode:: q9_answer
+            .. activecode:: spd_q9_answer
                 :nocanvas:
 
                 ## question 9 solution ##
@@ -268,7 +269,7 @@ Exercises
         
         .. tab:: Answer
 
-            .. activecode:: q11_answer
+            .. activecode:: spd_q11_answer
                 :nocanvas:        
 
                 ## question 11 solution
@@ -302,7 +303,7 @@ Exercises
         
         .. tab:: Answer
 
-            .. activecode:: q13_answer
+            .. activecode:: spd_q13_answer
                 :nocanvas:
 
                 ## question 13 solution ##

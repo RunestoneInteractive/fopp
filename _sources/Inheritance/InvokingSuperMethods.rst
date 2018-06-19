@@ -17,7 +17,7 @@ Say you wanted the ``Dog`` subclass of ``Pet`` to say "Arf! Thanks!" when the ``
 
 Here's the original Pet class again.
 
-.. activecode:: inheritance_pet_class
+.. activecode:: inheritance_pet_class_copy
     :nocanvas:
 
     from random import randrange

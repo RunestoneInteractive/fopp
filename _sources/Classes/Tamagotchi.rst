@@ -86,7 +86,7 @@ To relieve hunger, we call the feed() method.
 
 Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing p1 to see what the effects are. If you want to directly inspect the state, try printing p1.boredom or p1.hunger.
 
-.. activecode:: tamagotchi_2
+.. activecode:: tamagotchi_2_copy
     :nocanvas:
     :include: tamagotchi_1
 
