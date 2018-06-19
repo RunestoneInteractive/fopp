@@ -11,8 +11,8 @@
    :prefix: iter-11-
    :start: 1
 
-Extra Exercises
-===============
+Exercises
+=========
 
 1. (You may work on on this one in class. Feel free to start thinking about it.) In Robert McCloskey's
    book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack,

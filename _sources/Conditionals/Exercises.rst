@@ -11,8 +11,8 @@
    :prefix: condition-14-
    :start: 1
 
-Extra Exercises
----------------
+Exercises
+---------
 
 #.
 
