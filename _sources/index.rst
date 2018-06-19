@@ -67,6 +67,7 @@ Table of Contents
    Functions/toctree.rst
    UsingFunctions/toctree.rst
    Tuples/toctree.rst
+   Style/toctree.rst
    MoreAboutIteration/toctree.rst
    Sorting/toctree.rst
    AdvancedFunctions/toctree.rst
