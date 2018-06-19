@@ -74,9 +74,11 @@ Table of Contents
    TestPrograms/toctree.rst
    Exceptions/toctree.rst
    Classes/toctree.rst
+   BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
    NestedData/toctree.rst
+
 
 Appendices
 ::::::::::
