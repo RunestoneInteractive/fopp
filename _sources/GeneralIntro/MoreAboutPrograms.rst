@@ -47,9 +47,6 @@ breaking a large, complex task into smaller and smaller subtasks until the
 subtasks are simple enough to be performed with sequences of these basic
 instructions.
 
-.. That may be a little vague, but we will come back to this topic later when we
-.. talk about **algorithms**.
-
 Preview of Control Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,7 +69,7 @@ You might use this if you want to receive input from the user of your program bu
 
    grocery_item = ""
    while grocery_item != "done":
-       grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list then simply type: done")
+       grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
        print(grocery_item)
 
 Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found. 
