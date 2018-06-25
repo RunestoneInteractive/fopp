@@ -11,6 +11,9 @@
    :prefix: intro-3-
    :start: 1
 
+.. index:: programming language, portable, high-level language,
+           low-level language, compile, interpret
+
 The Python Programming Language
 -------------------------------
 
