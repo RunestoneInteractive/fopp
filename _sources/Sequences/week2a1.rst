@@ -11,8 +11,9 @@
    :prefix: sequences-10-
    :start: 1
 
-Week 2 Assessment 1
--------------------
+.. Week 2 Assessment 1
+Assessment
+----------
 
 **Check your understanding**
 
