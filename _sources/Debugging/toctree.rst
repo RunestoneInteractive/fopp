@@ -5,11 +5,7 @@ Debugging
    :maxdepth: 2
 
    WhatisDebugging.rst
-   intro-HowtobeaSuccessfulProgrammer.rst
-   BeginningtipsforDebugging.rst
-   ExperimentalDebugging.rst
-   Syntaxerrors.rst
+   SyntaxErrors.rst
    RuntimeErrors.rst
    SemanticErrors.rst
    KnowyourerrorMessages.rst
-   Summary.rst
