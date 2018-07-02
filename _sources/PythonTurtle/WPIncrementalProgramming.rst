@@ -43,9 +43,9 @@ more enjoyable by creating lots of small victories for yourself.
 
 Below we have already started to build a house. To practice incremental programming, try drawing 
 the rest of the house. Each time you draw something new on the screen, run the program to see if 
-it executed in the way that you were expecting!
+it executed in the way that you expected!
 
-.. activecode:: ac3_8_1
+.. activecode:: ac3_100_1
 
     import turtle
     wn = turtle.Screen()
