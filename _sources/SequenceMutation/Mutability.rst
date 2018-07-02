@@ -66,6 +66,14 @@ values, it could become difficult to keep track of them all.
 
 The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.
 
+
+As with strings, if we try to use item assignment to modify one of the elements of the tuple, we get an error.
+
+.. sourcecode:: python
+
+    julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
+
+
 Lists are Mutable
 -----------------
 

@@ -80,45 +80,16 @@ Tuples are useful for representing what other languages often call *records* ---
 together, like your student record. There is no description of what each of these *fields* means, but we can guess. A 
 tuple lets us "chunk" together related information and use it as a single thing.
 
-Tuples support the same sequence operations as strings and lists, which you will learn more about in this chapter. 
-For example, the index operator selects an element from a tuple.
-
-.. As with strings, if we try to use item assignment to modify one of the elements of the tuple, we get an error.
-
-.. source code python
-
-..     julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
-
-.. Of course, even if we can't modify the elements of a tuple, we can make a variable reference a new tuple holding 
-.. different information. To construct the new tuple, it is convenient that we can slice parts of the old tuple and join 
-.. up the bits to make the new tuple.  So ``julia`` has a new recent film, and we might want to change her tuple. We can 
-.. easily slice off the parts we want and concatenate them with the new tuple.
-
-.. active code ac12_1_1
-
-
-..     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
-..     print(julia[2])
-..     print(julia[2:6])
-
-..     print(len(julia))
-
-..     julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
-..     print(julia)
-
-
 To create a tuple with a single element (but you're probably not likely to do that too often), we have to include the 
 final comma, because without the final comma, Python treats the ``(5)`` below as an integer in parentheses:
 
-.. activecode:: ac12_1_2
+.. activecode:: ac5_2_1
 
     t = (5,)
     print(type(t))
 
     x = (5)
     print(type(x))
-
-
 
 
 **Check your understanding**
