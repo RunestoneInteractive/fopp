@@ -19,18 +19,6 @@ The iterable is the object that you will parsing through in a for loop. Generall
 
 The iterator variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.  
 
-
-.. Mostly Exercises (mix of mchoice, clickable, codelens fitb)
-
-.. What’s the type of your iterable? Five exercises, one for each of the possible answers: string, list, tuple, iterable, non-iterable (error)
-What’s the type of your iterator variable? What’s its value during the second iteration?
-One exercise for a number from a list
-One exercise for a string from a list
-One exercise for a single character from a string
-One exercise for a number from a range() output
-
-
-
 .. mchoice:: question3_2_1_2
    :answer_a: string
    :answer_b: list
@@ -231,20 +219,28 @@ One exercise for a number from a range() output
            print(z)
 
 
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
 
-   Which is the correct way to tell a turtle to move forward 20 pixels?
+One exercise for a number from a list
+One exercise for a string from a list
+One exercise for a single character from a string
+One exercise for a number from a range() output
+
+
+
+
+
+
+.. codelens:: question3_2_1_2
+   :question: What is the value of the iterator variable after line 5 executes?
+   :feedback: The value of the iterator variable is changed inside of the for loop.
+   :breakline: 5
+   :correct: globals.val
+
+    item = ["M", "I", "S", "S", "O", "U", "R", "I"]
+    for val in item:
+        val = val + "!"
+
+
 
 
 .. mchoice:: question3_2_1_2
