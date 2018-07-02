@@ -82,9 +82,9 @@ structure, syntax, and semantics --- there are many differences:
             meaning of the other shoe falling.  *Yahoo! Answers* thinks it
             knows!
 
-People who grow up speaking a natural language---everyone---often have a hard
-time adjusting to formal languages. In some ways, the difference between formal
-and natural language is like the difference between poetry and prose, but more
+People who grow up speaking a natural language---that is, everyone---often have a hard
+time adjusting to formal languages. In some ways, the difference between natural and formal
+language is like the difference between poetry and prose, but more
 so:
 
 .. glossary::

@@ -31,6 +31,10 @@ extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 
 #,'runestone.video','runestone.reveal','runestone.poll','runestone.tabbedStuff','runestone.disqus','runestone.codelens','runestone.activecode', 'runestone.assess', 'runestone.animation','runestone.meta', 'runestone.parsons', 'runestone.blockly', 'runestone.livecode']
 
+extension_exclusions = ['runestone.matrixeq', 'runestone.webgldemo']
+for ext in extension_exclusions:
+    extensions.remove(ext)
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

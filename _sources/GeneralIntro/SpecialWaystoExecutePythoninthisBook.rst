@@ -14,13 +14,6 @@
 Special Ways to Execute Python in this Book
 -------------------------------------------
 
-.. video:: codelensvid
-    :controls:
-    :thumb: ../_static/activecodethumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/activecodelens.mov
-    http://media.interactivepython.org/thinkcsVideos/activecodelens.webm
-
 This book provides two additional ways to execute Python programs.  Both techniques are designed to assist you as you
 learn the Python programming language.  They will help you increase your understanding of how Python programs work.
 
@@ -29,38 +22,32 @@ First, you can write, modify, and execute programs using a unique **activecode**
 in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
 environment for learning a programming language like Python since you can experiment with the language as you are reading.
 
-Take a look at the activecode interpreter in action.  If we use the Python code from the previous example and make it active, you will see that it can be executed directly by pressing the *Save & Run* button. Try pressing the *Save & Run* button below.
+Take a look at the activecode interpreter in action. Try pressing the *Save & Run* button below. (If you are not logged
+in, it will just say *Run*.)
 
 .. activecode:: ac1_4_1
 
    print("My first program adds two numbers, 2 and 3:")
    print(2 + 3)
 
-Now try modifying the activecode program shown above.  First, modify the string in the 
+Now try modifying the program shown above.  First, modify the string in the
 first print statement by changing the word *adds* to the word *multiplies*.  Now press 
-*run*.  You can see that the result of the program has changed.  However, it still prints 
+*Save & Run* again.  You can see that the result of the program has changed.  However, it still prints
 "5" as the answer.  Modify the second print statement by changing the addition symbol, the 
-``+``, to the multiplication symbol, ``*``.  Press *Run* to see the new results.
-
-Note that if you are logged in, you should see a green *Save & Run* button.  If you are not 
-logged in you see only *Run*.
-
-If we use the Python code from the previous example and make it active, 
-you will see that it can be executed directly by pressing the *Run* button. 
-Try pressing the *Run* (or *Save & Run*) button above.
+``+``, to the multiplication symbol, ``*``.  Press *Save & Run* again to see the new results.
 
 As the name suggests, *Save & Run* also *saves* your latest version of the code,
 and you can recover it even in later sessions when *logged in*. If *not* logged in,
 *Run* saves versions *only until your browser leaves the current web page*,
 and then you lose all modifications.
 
-After you have run your code the first time,
-a *Load History* button that was beside the *Run* button turns into a slider.
+If you are logged in, when a page first loads, each activecode window will have a *Load History* button, to the
+right of the *Save & Run* button.
+If you clock on it, or if you run any code, that button turns into a slider.
 If you click on the slider location box, you can use your left and right arrow 
 buttons to switch to other versions you ran. 
 Alternately you can drag the box on the slider. 
-Now move the slider to see a previously saved state. You can just run it
-by pressing *Run*, or edit and then save and run it as the latest version.
+Now move the slider to see a previously saved version of your code. You can edit or run any version.
 
 In addition to activecode, you can also execute Python code with the assistance of a unique 
 visualization tool. This tool, known as **codelens**, allows you to control the step by 
@@ -72,7 +59,7 @@ The light green arrow points to the line that was just executed. Click on the "S
 Codelens" button to make the codelens window show up, and then click on the Forward button 
 a few times to step through the execution.  
 
-Sometimes, we will present code examples explicitly in a codelens window, as below.
+Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.
 When we do, think of it as an encouragement to use the codelens features to step through the 
 execution of the program.
 
