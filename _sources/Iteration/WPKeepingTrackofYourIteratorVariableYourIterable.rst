@@ -19,7 +19,7 @@ The iterable is the object that you will parsing through in a for loop. Generall
 
 The iterator variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.  
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_1
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -43,7 +43,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
            print(item)
 
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_2
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -54,7 +54,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_c: Incorrect, that is not the type of the iterable.
    :feedback_d: Incorrect, that is not the type of the iterable.
    :feedback_e: Incorrect, Python can iterate over this type.
-
    :correct: a
    :practice: T
    :topics: 
@@ -67,7 +66,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
        for z in t:
            print(z)
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_3
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -91,7 +90,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
            print(z)
 
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_4
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -114,12 +113,14 @@ The iterator variable is the variable which stores a portion of the iterable whe
        for z in t:
            print(z)
 
-****************************************************************
-****************************************************************
-****************************************************************
-****************************************************************
-****************************************************************
-.. mchoice:: question3_2_1_2
+
+
+
+
+
+
+
+.. mchoice:: question6_100_5
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -129,7 +130,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_b: 
    :feedback_c: 
    :feedback_d: 
-   :correct: 
+   :correct: a
    :practice: T
    :topics: 
 
@@ -141,13 +142,14 @@ The iterator variable is the variable which stores a portion of the iterable whe
        for z in t:
            print(z)
 
-****************************************************************
-****************************************************************
-****************************************************************
-****************************************************************
-****************************************************************
 
-.. mchoice:: question3_2_1_2
+
+
+
+
+
+
+.. mchoice:: question6_100_6
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -171,7 +173,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
            print(z)
 
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_7
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -195,7 +197,7 @@ The iterator variable is the variable which stores a portion of the iterable whe
            print(z)
 
 
-.. mchoice:: question3_2_1_2
+.. mchoice:: question6_100_8
    :answer_a: string
    :answer_b: list
    :answer_c: tuple
@@ -218,122 +220,48 @@ The iterator variable is the variable which stores a portion of the iterable whe
        for z in t:
            print(z)
 
+.. mchoice:: question6_100_9
+   :answer_a: string
+   :answer_b: list
+   :answer_c: tuple
+   :answer_d: integer
+   :answer_e: error, unable to iterate and initialize the iterator variable
+   :feedback_a: Yes, the last value stored in the iterator variable is a string.
+   :feedback_b: Incorrect, there is no list in the code.
+   :feedback_c: Incorrect, there is no tuple in the code.
+   :feedback_d: Incorrect, there is no integer in the code.
+   :feedback_e: Incorrect, the for loop is iterating over an iterable object.
+   :correct: a
+   :practice: T
+   :topics: 
 
+   What’s the type of your iterator variable in the final iteration? 
 
-One exercise for a number from a list
-One exercise for a string from a list
-One exercise for a single character from a string
-One exercise for a number from a range() output
+   .. sourcecode:: python
 
+       red = "colors"
+       for blue in red:
+           print(blue)
 
+As you go through the codelens window, you will be asked a set of questions.
 
-
-
-
-.. codelens:: question3_2_1_2
-   :question: What is the value of the iterator variable after line 5 executes?
+.. codelens:: clensQuestion6_100_10
+   :question: What is the value of the iterator variable after line 3 executes?
    :feedback: The value of the iterator variable is changed inside of the for loop.
-   :breakline: 5
+   :breakline: 3
    :correct: globals.val
 
-    item = ["M", "I", "S", "S", "O", "U", "R", "I"]
-    for val in item:
-        val = val + "!"
+   item = ["M", "I", "S", "S", "O", "U", "R", "I"]
+   for val in item:
+       val = val + "!"
 
+.. codelens:: clensQuestion6_100_11
+   :question: What is the value of the iterator variable after line 2 executes?
+   :feedback: Remember that the value of the iterator variable changes each time.
+   :breakline: 2
+   :correct: globals.n
 
+   for n in range(5):
+       print(n)
 
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
-
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
-
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
-
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
-
-
-.. mchoice:: question3_2_1_2
-   :answer_a: 
-   :answer_b: 
-   :answer_c: 
-   :answer_d: 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
-   :correct: 
-   :practice: T
-   :topics: 
-
-   Which is the correct way to tell a turtle to move forward 20 pixels?
 
