@@ -7,8 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Week 3 Assignment
------------------
+.. Week 3 Assignment
+
+Assessment
+----------
 
 **Check your understanding**
 

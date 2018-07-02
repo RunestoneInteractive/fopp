@@ -11,8 +11,10 @@
    :prefix: iter-12-
    :start: 1
 
-Week 2 Assessment 2
--------------------
+.. Week 2 Assessment 2
+
+Assessment
+----------
 
 **Check your understanding**
 

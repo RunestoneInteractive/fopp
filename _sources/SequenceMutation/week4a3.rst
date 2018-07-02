@@ -7,8 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Week 4 Assessment 3
--------------------
+.. Week 4 Assessment 3
+
+Assessment 3
+------------
 
 .. mchoice:: assess_question4_1_3_1
    :answer_a: I.

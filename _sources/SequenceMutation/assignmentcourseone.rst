@@ -7,8 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Assignment
-----------
+.. Assignment
+
+Assessment 6
+------------
 
 .. activecode:: asign_c01_01
    :language: python

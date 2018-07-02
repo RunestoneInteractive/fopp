@@ -12,8 +12,9 @@
    :start: 1
 
 .. Week 1 Assessment 3
-Assessment
-----------
+
+Assessment 1
+------------
 
 **Check your understanding**
 
