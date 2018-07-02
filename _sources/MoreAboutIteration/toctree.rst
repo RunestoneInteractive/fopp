@@ -12,6 +12,5 @@ More About Iteration
    BreakandContinue.rst
    TraversalandtheforLoopByIndex.rst
    2DimensionalIterationImageProcessing.rst
-   ImageProcessingonYourOwn.rst
    Exercises.rst
    
