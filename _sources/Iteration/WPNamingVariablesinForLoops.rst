@@ -10,8 +10,8 @@
    :prefix: iter-8-
    :start: 1
 
-WP: Naming Variables in For Loops
-=================================
+👩‍💻 Naming Variables in For Loops
+===================================
 
 We've mentioned before about carefully choosing your variable names. Though the
 names you choose aren't meaningful to the program, they can be to you. When we 
