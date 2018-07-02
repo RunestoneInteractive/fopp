@@ -10,8 +10,6 @@ More About Iteration
    listenerLoop.rst
    RandomlyWalkingTurtles.rst
    BreakandContinue.rst
-   TraversalandtheforLoopByIndex.rst
-   2DimensionalIterationImageProcessing.rst
    ImageProcessingonYourOwn.rst
    Exercises.rst
    

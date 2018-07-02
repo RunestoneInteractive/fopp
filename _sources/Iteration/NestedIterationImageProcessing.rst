@@ -11,8 +11,8 @@
    :prefix: moreiter-7-
    :start: 1
 
-2-Dimensional Iteration: Image Processing
------------------------------------------
+Nested Iteration: Image Processing
+----------------------------------
 
 Two dimensional tables have both rows and columns. You have probably seen many tables like this if you have used a
 spreadsheet program. Another object that is organized in rows and columns is a digital image. In this section we will

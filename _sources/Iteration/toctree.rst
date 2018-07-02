@@ -11,6 +11,8 @@ Iteration
    Stringsandforloops.rst
    Listsandforloops.rst
    TheAccumulatorPattern.rst
+   TraversalandtheforLoopByIndex.rst
+   NestedIterationImageProcessing.rst
    WPPrintingIntermediateResults.rst
    WPNamingVariablesinForLoops.rst
    GeneralizedSequences.rst
