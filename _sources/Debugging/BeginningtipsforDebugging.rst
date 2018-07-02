@@ -26,3 +26,8 @@ Debugging a program is a different way of thinking than writing a program.  The 
 
    * Print Statements
 
+Three kinds of errors can occur in a program: `syntax errors
+<http://en.wikipedia.org/wiki/Syntax_error>`__, `runtime errors
+<http://en.wikipedia.org/wiki/Runtime_error>`__, and `semantic errors
+<http://en.wikipedia.org/wiki/Logic_error>`__.  It is useful to distinguish
+between them in order to track them down more quickly.

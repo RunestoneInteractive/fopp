@@ -4,8 +4,9 @@ Debugging
    :caption: Debugging
    :maxdepth: 2
 
-   WhatisDebugging.rst
-   SyntaxErrors.rst
+   intro-HowtobeaSuccessfulProgrammer.rst
+   BeginningtipsforDebugging.rst
+   Syntaxerrors.rst
    RuntimeErrors.rst
    SemanticErrors.rst
    KnowyourerrorMessages.rst
