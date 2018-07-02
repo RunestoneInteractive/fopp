@@ -19,7 +19,7 @@ The general syntax of a for loop is:
 
 
 
-.. activecode:: generalized_iteration
+.. code-block:: python
 
     for iter_var_name in some_seq:
         # code block line 1
@@ -54,3 +54,5 @@ Don't worry about understanding these details right now. The important point is 
 instead of ``some_seq`` you can have any Python expression that evaluates to a string, a list, or certain other Python 
 objects that act like sequences for the purposes of use in for loops. It's just something to keep in mind for later, when 
 we see some of those other Python objects that act like sequences but aren't quite.
+
+.. todo:  Add some questions to check understanding of the type of the loop variable given an iteration over a -- string, a list, a range
