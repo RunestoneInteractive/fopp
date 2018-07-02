@@ -5,7 +5,6 @@ Tuples
    :caption: Tuples
    :maxdepth: 2
 
-   Tuples.rst
    TuplePacking.rst
    TuplesasReturnValues.rst
    TupleAssignmentwithunpacking.rst
