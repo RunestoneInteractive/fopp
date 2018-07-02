@@ -51,9 +51,11 @@ friends.
         print("Hi ", name, "  Please come to my party on Saturday!")
 
 
-While this may not seem to be necessary when you're iterating over a few items, it is extremely helpful when 
+While loops may not seem to be necessary when you're iterating over a few items, it is extremely helpful when 
 iterating over lots of items. Imagine if you needed to change what happened in the code block. On the left, when you use 
 iteration, this is easy. On the right, when you have hard coded the process, this is more difficult.
  
 .. image:: Figures/iteration_vs_hardcoding.png
    :alt: Demonstration of using iteration over hard coding the iteration.
+   :scale: 30%
+   :align: center

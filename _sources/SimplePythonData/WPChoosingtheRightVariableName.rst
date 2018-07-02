@@ -11,12 +11,12 @@
    :prefix: data-9-
    :start: 1
 
-WP: Choosing the Right Variable Name
-====================================
+👩‍💻 Choosing the Right Variable Name
+=======================================
 
 Programmers generally choose names for their variables that are meaningful to
 the human readers of the program --- they help the programmer document, or
-remember, what the variable is used for.
+remember, what the variable is used for.  Beginning programmers sometimes think it is funny to use strange or obscene names for their variables.  This is not good practice and will not amuse your professor.  Get in the habit of using meaningful names right away.
 
 .. caution::
 

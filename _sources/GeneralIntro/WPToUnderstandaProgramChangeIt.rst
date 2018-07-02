@@ -11,8 +11,8 @@
    :prefix: intro-9-
    :start: 1
 
-WP: To Understand a Program, Change It!
-=======================================
+👩‍💻 To Understand a Program, Change It!
+=========================================
 
 To check your understanding or your predictions, you will run a program. 
 
