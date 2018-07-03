@@ -117,8 +117,3 @@ end of the sequence.
          self.assertEqual(sub_lst, new_lst[8:12], "Testing that sub_lst has the correct elements assigned.")
 
    myTests().main()
-
-
-
-
-

@@ -229,3 +229,62 @@ Chapter Assessment
 
     myTests().main()
 
+.. activecode:: access_ac_2_1_1_11
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
+
+   myTests().main()
+
+.. activecode:: access_ac_2_1_1_12
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the number of elements in ``lst`` to the variable ``num_lst``.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(num_lst, 30, "Testing that num_lst has the correct length assigned.")
+
+   myTests().main()
+
+.. activecode:: assess_ac_2_1_1_13
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
+   ~~~~
+   sent = "The bicentennial for our university is in 2017!"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(wrds, sent.split(), "Testing that wrds has been correctly assigned.")
+
+   myTests().main()
