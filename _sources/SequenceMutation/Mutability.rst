@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. _mutability:
+
 .. qnum::
    :prefix: seqmut-1-
    :start: 1

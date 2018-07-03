@@ -76,9 +76,8 @@ that consists of multiple other expressions, separated by commas.
 
     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
 
-Tuples are useful for representing what other languages often call *records* --- some related information that belongs 
-together, like your student record. There is no description of what each of these *fields* means, but we can guess. A 
-tuple lets us "chunk" together related information and use it as a single thing.
+The key difference between lists and tuples is that a tuple is immutable, meaning that its contents can't be changed after the tuple is 
+created. We will examine the mutability of lists in detail in the chapter on :ref:`Mutability <mutability>`.
 
 To create a tuple with a single element (but you're probably not likely to do that too often), we have to include the 
 final comma, because without the final comma, Python treats the ``(5)`` below as an integer in parentheses:
