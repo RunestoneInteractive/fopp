@@ -12,8 +12,8 @@
    :prefix: iter-9-
    :start: 1
 
-The Gory Details
-----------------
+The Gory Details: Iterables
+---------------------------
 
 The general syntax of a for loop is:
 
