@@ -12,7 +12,7 @@
    :start: 1
 
 Intro: What we can do with Turtles and Conditionals
----------------------------------------------------
+===================================================
 
 To build further on our turtle drawings, we can start to include something called a **selection** or a
 **conditional statement**. Using this kind of statement will allow us to check conditions and change the 
@@ -90,3 +90,21 @@ so that we can start using whatever color amy is set to initally. This means tha
 ``colors`` will not be used, though you can see how the icon changes to the appropriate color.
     
 This chapter will further detail how to use conditional statements.
+
+Learning Goals
+--------------
+
+* To understand boolean expressions and logical operators
+* To understand conditional execution
+* To be able to write a boolean function
+* To know when to use binary, unary, chained and nested conditional statements
+
+
+Objectives
+----------
+
+* To properly evaluate a (compound) boolean expression
+* To use parenthesis to properly demonstrate operator precedence
+* To use conditional statements to properly branch code
+
+
