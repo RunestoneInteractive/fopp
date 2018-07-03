@@ -10,8 +10,8 @@
    :prefix: iter-7-
    :start: 1
 
-WP: Keeping Track of Your Iterator Variable and Your Iterable
-=============================================================
+👩‍💻 Keeping Track of Your Iterator Variable and Your Iterable
+===============================================================
 
 When students first begin using for loops, they sometimes have difficulty understanding the difference between the iterator variable and the iterable. 
 
