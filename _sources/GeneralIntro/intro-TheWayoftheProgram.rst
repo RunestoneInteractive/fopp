@@ -11,7 +11,9 @@
 Introduction: The Way of the Program
 ====================================
 
-The goal of this book is to teach you to understand and create computer programs in Python.
+The goal of this book is to teach you to understand and create computer programs in Python. 
+At the beginning of each chapter, we will outline for you the learning goals and objectives
+that should be accomplished once you have gone through the chapter.
 
 Understanding computer programs requires algorithmic, mechanistic thinking.
 Programs specify mechanistic sequences of actions to perform; when executed,
@@ -26,6 +28,21 @@ problem solving. Problem solving means the ability to formulate problems, think
 creatively about solutions, and express a solution clearly and accurately. As
 it turns out, the process of learning to program is an excellent opportunity to
 practice problem solving skills.
+
+Learning Goals
+~~~~~~~~~~~~~~
+
+* Introduce terminology used in computer science
+* Introduce the features of this book
+* Describe the purpose of programming languages
+* Distinguish between formal & natural languages 
+
+Objectives
+~~~~~~~~~~
+
+* To be able to use the activecode component and multiple choice questions in textbook
+* To be able to use and interpret the Codelens component
+* To be able to describe what a comment is
 
 
 .. index:: programming language, portable, high-level language,
