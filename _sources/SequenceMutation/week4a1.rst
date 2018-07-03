@@ -173,7 +173,7 @@ Chapter Assessment - List Methods
     myTests().main()
 
 Chapter Assessment - Aliases and References
--------------------------------------------
+===========================================
 
 **Check your understanding**
 
@@ -294,7 +294,7 @@ Chapter Assessment - Aliases and References
       :alt: Fourth Potential Solution
 
 Chapter Assessment - Split and Join
------------------------------------
+===================================
 
 .. mchoice:: assess_question4_1_3_1
    :answer_a: I.
@@ -359,7 +359,7 @@ Chapter Assessment - Split and Join
     myTests().main()
 
 Chapter Assessment - For Loop Mechanics
----------------------------------------
+=======================================
 
 **Check your understanding**
 
@@ -464,7 +464,7 @@ Chapter Assessment - For Loop Mechanics
    myTests().main()
 
 Chapter Assessment - Accumulator Pattern
-----------------------------------------
+========================================
 
 **Check your understanding**
 
@@ -630,8 +630,48 @@ Chapter Assessment - Accumulator Pattern
 
    Given the following scenario, what are good names for the accumulator variable, iterator variable, and sequence variable? You are writing code that uses a list of sentences and accumulates the total number of sentences that have the word 'happy' in them.
 
+.. activecode:: access_ac_5_2_1_1
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   1.1 For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
+   ~~~~
+   ael = "python!"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(app, ['p','y','t','h','o','n', "!"], "Testing that app has the correct elements." )
+         self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: access_ac_5_2_1_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   3. For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   ~~~~
+   wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(past_wrds, ["ended", 'worked', "played", "started", "walked", "looked", "opened", "rained", "learned", "cleaned"], "Testing that past_wrds has the correct value." )
+
+   myTests().main()
+
 Chapter Assessment - Problem Solving
-------------------------------------
+====================================
 
 .. activecode:: asign_c01_01
    :language: python

@@ -145,3 +145,119 @@ Chapter Assessment
            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
     myTests().main()
+
+.. activecode:: assess_ac3_1_1_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create one conditional so that if "Friendly" is in ``w``, then "Friendly is here!" should be assigned to the variable ``wrd``. If it's not, check if "Friend" is in ``w``. If so, the string "Friend is here!" should be assigned to the variable ``wrd``, otherwise "No variation of friend is in here." should be assigned to the variable ``wrd``. (Also consider: does the order of your conditional statements matter for this problem? Why?)
+   ~~~~
+   w = "Friendship is a wonderful human experience!"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(wrd, "Friend is here!", "Testing the value of wrd")
+         self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+         self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: assess_ac3_1_1_7
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   We have written conditionals for you to use. Create the variable x and assign it to some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
+   ~~~~
+   if x >= 10:
+       output = "working"
+   else:
+       output = "Still working"
+   if x > 12:
+       output = "Always working"
+   elif x < 7:
+       output = "Forever working"
+   else:
+       output = "Consistently working"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(output, "Consistently working", "Testing the value of output")
+      def testTwo(self):
+         self.assertEqual(x in [7,8,9,10,11,12], True, "Testing that x was assigned a correct number" )
+
+   myTests().main()
+
+.. activecode:: assess_ac3_1_1_8
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Write code so that if ``"STATS 250"`` is in the list ``schedule``, then the string ``"You could be in Information Science!"`` is assigned to the variable ``resp``. Otherwise, the string ``"That's too bad."`` should be assigned to the variable ``resp``.
+   ~~~~
+   schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(resp, "You could be in Information Science!", "Testing the value of resp given the schedule list provided.")
+         self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: assess_ac3_1_1_9
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create the variable ``z`` whose value is ``30``. Write code to see if ``z`` is greater than ``y``. If so, add 5 to ``y``'s value, otherwise do nothing. Then, multiply ``z`` and ``y``, and assign the resulting value to the variable ``x``.
+   ~~~~
+   y = 22
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(x, 810, "Testing the value of x")
+      def testTwo(self):
+         self.assertEqual(z, 30, "Testing that z has correctly been defined.")
+
+   myTests().main()   
+
+.. activecode:: assess_ac3_1_1_10
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   For each string in ``wrd_lst``, find the number of characters in the string. If the number of characters is less than 6, add 1 to ``accum`` so that in the end, ``accum`` will contain an integer representing the total number of words in the list that have fewer than 6 characters.
+   ~~~~
+   wrd_lst = ["Hello", "activecode", "Java", "C#", "Python", "HTML and CSS", "Javascript", "Swift", "php"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(accum, 5, "Testing the value of accum")
+
+   myTests().main()
