@@ -20,9 +20,4 @@ Sequence Mutation
    Exercises.rst
    ExtraExercises.rst
    week4a1.rst
-   week4a2.rst
-   week4a3.rst
-   week5a1.rst
-   week5a2.rst  
-   assignmentcourseone.rst
    

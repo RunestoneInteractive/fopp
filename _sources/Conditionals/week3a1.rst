@@ -9,8 +9,8 @@
 
 .. Week 3 Assignment
 
-Assessment
-----------
+Chapter Assessment
+------------------
 
 **Check your understanding**
 

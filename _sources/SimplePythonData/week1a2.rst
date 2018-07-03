@@ -13,8 +13,8 @@
 
 .. Week 1 Assessment 2
 
-Assessment
-----------
+Chapter Assessment
+------------------
 
 **Check your understanding**
 
