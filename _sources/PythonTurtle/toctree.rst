@@ -10,8 +10,8 @@ Python Turtle
    InstancesAHerdofTurtles.rst
    ObjectInstances.rst
    RepetitionwithaForLoop.rst
-   SummaryOfTurtleMethods.rst
    AFewMoreturtleMethodsandObservations.rst
+   SummaryOfTurtleMethods.rst
    WPIncrementalProgramming.rst
    WPCommonTurtleErrors.rst
    Exercises.rst

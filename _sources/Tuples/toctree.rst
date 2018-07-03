@@ -1,11 +1,10 @@
-Tuples
-::::::
+Tuple Packing and Unpacking
+:::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Tuples
+   :caption: Tuple Packing and Unpacking
    :maxdepth: 2
 
-   Tuples.rst
    TuplePacking.rst
    TuplesasReturnValues.rst
    TupleAssignmentwithunpacking.rst

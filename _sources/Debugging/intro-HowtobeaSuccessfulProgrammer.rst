@@ -16,12 +16,20 @@
 Debugging
 =========
 
+Programming is a complex process.  Since it is done by human beings, errors may often occur.
+Programming errors are called **bugs** and the process
+of tracking them down and correcting them is called **debugging**.  Some claim
+that in 1945, a dead moth caused a problem on relay number 70, panel F, of one
+of the first computers at Harvard, and the term **bug** has remained in use
+since. For more about this historic event, see `first bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
+
 One of the most important skills you need to aquire to complete this book successfully is the 
 ability to debug your programs. Debugging might be the most under-appreciated, and 
 under-taught, skill in introductory computer science. For that reason we are introducing a 
 series of "debugging interludes." Debugging is a skill that you need to master over time, and 
 some of the tips and tricks are specific to different aspects of Python programming. So look 
-for additional debugging interludes throughout the rest of this book.
+for additional Way of the Programmer interludes throughout the rest of this book.
+
 
 Programming is an odd thing in a way. Here is why. As programmers we spend 99% of our time 
 trying to get our program to work. We struggle, we stress, we spend hours deep in frustration 
@@ -161,3 +169,20 @@ one final step, using the modulo operator.
 
 Of course even in this simple progression, there are other ways you could have gone astray. 
 We'll look at some of those and how you track them down in the next section.
+
+
+**Check your understanding**
+
+.. mchoice:: question4_3_1
+   :answer_a: tracking down programming errors and correcting them.
+   :answer_b: removing all the bugs from your house.
+   :answer_c: finding all the bugs in the program.
+   :answer_d: fixing the bugs in the program.
+   :correct: a
+   :feedback_a: Programming errors are called bugs and the process of finding and removing them from a program is called debugging.
+   :feedback_b: Maybe, but that is not what we are talking about in this context.
+   :feedback_c: This is partially correct.  But, debugging is more than just finding the bugs.  What do you need to do once you find them?
+   :feedback_d: This is partially correct.  But, debugging is more than just fixing the bugs. What do you need to do before you can fix them?
+   :practice: T
+
+   Debugging is:

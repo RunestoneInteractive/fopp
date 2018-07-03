@@ -56,10 +56,10 @@ expression so long as it evaluates to a valid index value.
 Note that indexing returns a *string* --- Python has no special type for a single character.
 It is just a string of length 1.
 
-Index Operator: Accessing Elements of a List
-============================================
+Index Operator: Accessing Elements of a List or Tuple
+=====================================================
 
-The syntax for accessing the elements of a list is the same as the syntax for
+The syntax for accessing the elements of a list or tuple is the same as the syntax for
 accessing the characters of a string.  We use the index operator ( ``[]`` -- not to
 be confused with an empty list). The expression inside the brackets specifies
 the index. Remember that the indices start at 0. Any integer expression can be used
@@ -76,6 +76,14 @@ will learn much more if you force yourself to make a prediction before you see t
     print(numbers[2])
     print(numbers[9-8])
     print(numbers[-2])
+
+
+.. activecode:: ac5_3_3
+
+    prices = (1.99, 2.00, 5.50, 20.95, 100.98)
+    print(prices[0])
+    print(prices[-1])
+    print(prices[3-5])
 
 **Check your understanding**
 
@@ -135,7 +143,7 @@ will learn much more if you force yourself to make a prediction before you see t
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[5])
 
-.. activecode:: ac5_3_3
+.. activecode:: ac5_3_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -155,7 +163,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
-.. activecode:: ac5_3_4
+.. activecode:: ac5_3_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -175,7 +183,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
-.. activecode:: ac5_3_5
+.. activecode:: ac5_3_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -195,6 +203,29 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
+<<<<<<< HEAD
+=======
+.. activecode:: ac5_3_7
+   :language: python
+   :autograde: unittest
+   :practice: T
+   
+   Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
+   ~~~~
+   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
+
+   myTests().main()
+
+>>>>>>> master
 
 .. note::
    Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0

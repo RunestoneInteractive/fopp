@@ -23,7 +23,7 @@ First, just as Python provides a way to define new functions in your programs, i
 Instances
 ---------
 
-Given a class like ``Turtle`` or ``Screen``, we create a new instance with a syntax that looks like a function call, ``Turtle()``. The Python interpreter figures out that Turtle is a class rather than a function, and so it creates a new instance of the class and returns it. Since the Turtle class was defined in a separate module, (confusingly, also named turtle), we had to refer to the class as turtle.Turtle. Thus, in the programs we wrote ``turtle.Turtle()``.
+Given a class like ``Turtle`` or ``Screen``, we create a new instance with a syntax that looks like a function call, ``Turtle()``. The Python interpreter figures out that Turtle is a class rather than a function, and so it creates a new instance of the class and returns it. Since the Turtle class was defined in a separate module, (confusingly, also named turtle), we had to refer to the class as turtle.Turtle. Thus, in the programs we wrote ``turtle.Turtle()`` to make a new turtle. We could also write ``turtle.Screen()`` to make a new window for our turtles to paint in.
 
 
 Attributes

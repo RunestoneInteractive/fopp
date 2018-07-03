@@ -11,8 +11,8 @@
    :prefix: intro-8-
    :start: 1
 
-WP: Predict Before You Run!
-===========================
+👩‍💻 Predict Before You Run!
+=============================
 
 You've run your first program! You'll be doing that a lot in this book and the programs will become increasingly 
 complicated. One way to help understand what is happening and learn programming is predicting the effect of running a 

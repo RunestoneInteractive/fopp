@@ -10,8 +10,8 @@
    :prefix: iter-7-
    :start: 1
 
-WP: Printing Intermediate Results
-=================================
+👩‍💻 Printing Intermediate Results
+===================================
 
 In this textbook we provide the codelens tool so that you are able to step through 
 the program and watch what happens each time a line is evaluated by the Python 

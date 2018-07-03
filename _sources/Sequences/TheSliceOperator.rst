@@ -62,6 +62,28 @@ end of the sequence.
     print(a_list[3:])
     print(a_list[:])
 
+
+Tuple Slices
+============
+
+We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information. 
+Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can 
+slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might 
+want to change her tuple. We can easily slice off the parts we want and concatenate them with the new tuple.
+
+.. activecode:: ac5_6_4
+
+    julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+    print(julia[2])
+    print(julia[2:6])
+
+    print(len(julia))
+
+    julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
+    print(julia)
+
+
+
 **Check your understanding**
 
 .. mchoice:: question5_6_1
@@ -98,7 +120,7 @@ end of the sequence.
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[4:])
 
-.. activecode:: ac5_6_4
+.. activecode:: ac5_6_5
    :language: python
    :autograde: unittest
    :practice: T

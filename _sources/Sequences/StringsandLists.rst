@@ -38,9 +38,6 @@ index. The values that make up a list are called its **elements**. Lists are sim
 are ordered collections of characters, except that the elements of a list can have any type and for 
 any one list, the items can be of different types.
 
-List Values
------------
-
 There are several ways to create a new list.  The simplest is to enclose the
 elements in square brackets ( ``[`` and ``]``).
 
@@ -64,6 +61,34 @@ another list.
     You'll likely see us do this in the textbook to give you odd combinations, but when you create lists you
     should generally not mix types together. A list of just strings or just integers or just floats is generally 
     easier to deal with.
+
+Tuples
+------
+
+A **tuple**, like a list, is a sequence of items of any type. The printed representation of a tuple is a comma-separated 
+sequence of values, enclosed in parentheses. In other words, the representation is just like lists, except with 
+parentheses () instead of square brackets [].
+
+One way to create a tuple is to write an expression, enclosed in parentheses,
+that consists of multiple other expressions, separated by commas.
+
+.. sourcecode:: python
+
+    julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+
+The key difference between lists and tuples is that a tuple is immutable, meaning that its contents can't be changed after the tuple is 
+created. We will examine the mutability of lists in detail in the chapter on :ref:`Mutability <mutability>`.
+
+To create a tuple with a single element (but you're probably not likely to do that too often), we have to include the 
+final comma, because without the final comma, Python treats the ``(5)`` below as an integer in parentheses:
+
+.. activecode:: ac5_2_1
+
+    t = (5,)
+    print(type(t))
+
+    x = (5)
+    print(type(x))
 
 
 **Check your understanding**

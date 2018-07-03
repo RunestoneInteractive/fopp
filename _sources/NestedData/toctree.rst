@@ -8,6 +8,7 @@ Nested Data and Nested Iteration
    ListswithComplexItems.rst
    NestedDictionaries.rst
    NestedIteration.rst
+   DeepandShallowCopies.rst
    Exercises.rst
    
    

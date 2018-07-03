@@ -11,8 +11,8 @@
    :prefix: turtle-8-
    :start: 1
 
-WP: Incremental Programming
-===========================
+👩‍💻  Incremental Programming
+===============================
 
 By now you've likely come across occasions where your code will be long or complex. If you 
 approach problems like this by writing out all the code and *then* running it, you'll likely
@@ -40,3 +40,21 @@ throughout your career as a programmer. It's a great way to avoid the frustratio
 above. Think of it this way. Every time you have a little success, your brain releases a tiny 
 bit of chemical that makes you happy. So, you can keep yourself happy and make programming 
 more enjoyable by creating lots of small victories for yourself.
+
+Below we have already started to build a house. To practice incremental programming, try drawing 
+the rest of the house. Each time you draw something new on the screen, run the program to see if 
+it executed in the way that you expected!
+
+.. activecode:: ac3_100_1
+
+    import turtle
+    wn = turtle.Screen()
+    bob = turtle.Turtle()
+    bob.right(90)
+    bob.forward(50)
+    bob.left(90)
+    bob.forward(50)
+
+    # Add your code below!
+
+
