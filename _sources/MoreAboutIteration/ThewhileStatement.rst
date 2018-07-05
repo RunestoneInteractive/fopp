@@ -172,3 +172,66 @@ the beginning of the iteration process how many times the block of code needs to
 
    Which type of loop can be used to perform the following iteration: You choose a positive integer at random and then print the numbers from 1 up to and including the selected integer.
 
+
+.. activecode:: ac14_2_2
+
+   Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+     def testOne(self):
+        self.assertEqual(eve_nums, [0,2,4,6,8,10,12,14], "Testing that eve_nums has been assigned the correct elements")
+
+   myTests().main()
+
+.. activecode:: ac14_2_3
+
+    Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
+    ~~~~
+
+    list1 = [8, 3, 4, 5, 6, 7, 9]
+
+    tot = 0
+    for elem in list1: 
+        tot = tot + elem
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+       def testOne(self):
+          self.assertEqual(accum, 42, "Testing that accum has the correct value.")
+          self.assertIn('while', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+    myTests().main()
+
+.. activecode:: ac14_2_4
+
+    Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
+    ~~~~
+
+    def stop_at_four():
+
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+       def testOne(self):
+          self.assertEqual(stop_at_four([0, 9, 4.5, 1, 7, 4, 8, 9, 3]), [0, 9, 4.5, 1, 7], "Testing the function stop_at_four on the input [0, 9, 4.5, 1, 7, 4, 8, 9, 3].")
+          self.assertEqual(stop_at_four([4, 1, 2, 8]), [], "Testing the function stop_at_four on the input [4, 1, 2, 8].")
+          self.assertEqual(stop_at_four([4]), [], "Testing the function stop_at_four on the input [4].")
+          self.assertEqual(stop_at_four([1, 6, 2, 3, 9]), [1, 6, 2, 3, 9], "Testing that stop_at_four([1, 6, 2, 3, 9]) returns ([1, 6, 2, 3, 9])")
+
+    myTests().main()
