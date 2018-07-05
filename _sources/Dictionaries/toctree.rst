@@ -12,9 +12,7 @@ Dictionaries
    intro-AccumulatingMultipleResultsInaDictionary.rst
    AccumulatingResultsFromaDictionary.rst
    AccumulatingtheBestKey.rst
-   DictionaryExercises.rst
-   DictionaryExtraExercises.rst
    Glossary.rst
-   DictionaryAccumulationExercises.rst
-   DictionaryAccumulationExtraExercises.rst
+   Exercises.rst
+   ChapterAssessment.rst
    

@@ -8,28 +8,107 @@
     License".
 
 .. qnum::
-   :prefix: dictionaries-12-
+   :prefix: dictionaries-8-
    :start: 1
 
-Dictionary Accumulation Extra Exercises
----------------------------------------
+Exercises
+=========
+
+#. Predict what will print out from the following code.
+
+If a line causes a run-time error, comment it out and see whether the rest of your predictions were correct.
+
+.. actex:: ac10_8_1
+
+   d = {'apples': 15, 'grapes': 12, 'bananas': 35}
+   print(d['banana'])
+   d['oranges'] = 20
+   print(len(d))
+   print('grapes' in d)
+   print(d['pears'])
+   print(d.get('pears', 0))
+   fruits = d.keys()
+   print(fruits)
+   del d['apples']
+   print('apples' in d)
+
+2. Avast, try this one, swabbies!
+
+    .. tabbed:: q5
+
+        .. tab:: Question
+
+            Here's a table of English to Pirate translations
+
+            ==========  ==============
+            English     Pirate
+            ==========  ==============
+            sir         matey
+            hotel       fleabag inn
+            student     swabbie
+            boy         matey
+            madam       proud beauty
+            professor   foul blaggart
+            restaurant  galley
+            your        yer
+            excuse      arr
+            students    swabbies
+            are         be
+            lawyer      foul blaggart
+            the         th'
+            restroom    head
+            my          me
+            hello       avast
+            is          be
+            man         matey
+            ==========  ==============
+
+            Write a program that asks the user for a sentence in English and then translates that
+            sentence to Pirate.
+
+            .. actex:: ac10_8_2
+
+
+        .. tab:: Answer
+
+            .. activecode:: answer10_8_2
+
+                pirate = {}
+                pirate['sir'] = 'matey'
+                pirate['hotel'] = 'fleabag inn'
+                pirate['student'] = 'swabbie'
+                pirate['boy'] = 'matey'
+                pirate['restaurant'] = 'galley'
+                #and so on
+
+                sentence = input("Please enter a sentence in English")
+
+                psentence = []
+                words = sentence.split()
+                for aword in words:
+                    if aword in pirate:
+                        psentence.append(pirate[aword])
+                    else:
+                        psentence.append(aword)
+
+                print(" ".join(psentence))
 
 #. (Optional: challenge exericse)
       .. tabbed:: q2
 
             .. tab:: Question
 
-                  Write a program that finds the most used 7 letter word in scarlet.txt.
+                  Write a program that finds the most used 7 letter word in scarlet3.txt.
 
-                  .. actex:: ac10_12_1
+                  .. actex:: ac10_8_13
 
                         f = open('scarlet3.txt', 'r')
 
             .. tab:: Answer
 
-                  .. activecode:: answer10_12_1
+                  .. activecode:: answer10_8_3
 
-                        f = open('scarlet.txt', 'r')
+                        f = open('scarlet3.txt', 'r')
                         contents = f.read()
                         d = {}
 
@@ -47,10 +126,9 @@ Dictionary Accumulation Extra Exercises
                                 most_used = k
 
                         print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
-    
    
 
-.. datafile::  scarlet3.txt
+.. datafile:: scarlet3.txt
    :hide:
 
    The Project Gutenberg EBook of A Study In Scarlet, by Arthur Conan Doyle
@@ -5208,3 +5286,5 @@ Dictionary Accumulation Extra Exercises
    including how to make donations to the Project Gutenberg Literary
    Archive Foundation, how to help produce our new eBooks, and how to
    subscribe to our email newsletter to hear about new eBooks.
+
+
