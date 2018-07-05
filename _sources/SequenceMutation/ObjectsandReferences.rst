@@ -85,22 +85,5 @@ The reference diagram for this example looks like this:
 .. image:: Figures/refdiag3.png
    :alt: Reference diagram for equal different lists 
 
-``a`` and ``b`` have the same value but do not refer to the same object.
+``a`` and ``b`` have equivalent values but do not refer to the same object. Because their contents are equivalent, `a==b` evaluates to True; because they are not the same object, `a is b` evaluates to False.
 
-There is one other important thing to notice about this reference diagram. The variable ``a`` is a reference to a 
-**collection of references**. Those references actually refer to the integer values in the list. In other words, a 
-list is a collection of references to objects. Interestingly, even though ``a`` and ``b`` are two different lists (two 
-different collections of references), the integer object ``81`` is shared by both. Like strings, integers are also 
-immutable so Python optimizes and lets everyone share the same object.
-
-Here is the example in codelens. Pay particular attention to the ``id`` values.
-
-.. codelens:: clens8_3_1
-    :python: py3
-    :showoutput:
-    
-    a = [81,82,83]
-    b = [81,82,83]
-
-    print(a is b)
-    print(a == b)
