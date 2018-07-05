@@ -50,3 +50,21 @@ some pretty amazing drawings with this simple capability.
 
     The turtles are fun, but the real purpose of the chapter is to teach ourselves
     a little more Python and to develop our theme of *computational thinking*. You'll first do some things with the turtles, and then we'll summarize the concepts and syntax you've learned, in particular classes, instances, and method invocations.
+
+Learning Goals
+--------------
+
+* To understand the use of loops as a way of repeating actions
+* To understand flow control and iteration through the for loop
+* To understand the idea of sequence (or list) of numbers
+* To introduce the idea of looking for patterns when problem solving
+* To distinguish between instances, attributes, and methods
+
+Objectives
+-----------
+
+* Write a multi-line program (using the turtle framework)
+* Invoke methods & set attributes using dot notation
+* Use the range function to create the correct sequence of numbers
+* Use the for loop to draw common geometric shapes with the turtle
+
