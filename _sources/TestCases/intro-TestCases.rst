@@ -99,7 +99,7 @@ look quite as neat as the tables you've seen in this textbook.
 Here's an example with test cases for the ``blanked`` function that would be useful for a Hangman game. Note that the 
 tests will fail until you fill in a correct definition for the blanked function.
 
-.. activecode:: ac18_1_1
+.. activecode:: ac19_1_1
     :language: python
     :autograde: unittest
     :chatcodes:
@@ -126,7 +126,7 @@ tests will fail until you fill in a correct definition for the blanked function.
 
 **Check your understanding**
 
-.. mchoice:: question18_1_1
+.. mchoice:: question19_1_1
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -138,7 +138,7 @@ tests will fail until you fill in a correct definition for the blanked function.
 
    When ``TestCase.assertEqual()`` is passed two values that are not the same, it generates an error and stops execution of the program.
  
-.. mchoice:: question18_1_2
+.. mchoice:: question19_1_2
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -167,7 +167,7 @@ tests will fail until you fill in a correct definition for the blanked function.
         myTests().main()
 
 
-.. mchoice:: question18_1_3
+.. mchoice:: question19_1_3
     :practice: T
     :answer_a: self.assertEqual(blanked('under', 'du', 'u_d__'))
     :answer_b: self.assertEqual(blanked('under', 'u_d__'), 'du')

@@ -28,7 +28,7 @@ their second items, in descending order. How can we do that? Perhaps it's a litt
 based on the secondary (tie-breaking) element, and then sort based on the primary element. The last sort is what matters, 
 but when there's a tie during the last sort, we get the order defined previously.
 
-.. activecode:: sort_ac16_5_1
+.. activecode:: ac18_5_1
 
     L = [(3, 4), (5, 6), (3, 7)]
     sort1 = sorted(L, key = lambda x: x[1], reverse = True)
