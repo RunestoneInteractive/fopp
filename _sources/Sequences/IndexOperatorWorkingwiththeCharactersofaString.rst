@@ -203,30 +203,6 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
-<<<<<<< HEAD
-=======
-.. activecode:: ac5_3_7
-   :language: python
-   :autograde: unittest
-   :practice: T
-   
-   Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
-   ~~~~
-   lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
-
-   myTests().main()
-
->>>>>>> master
-
 .. note::
    Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
    has a long history in computer science having to do with some low-level implementation details that we won't
