@@ -95,6 +95,8 @@ bound to x, 4 to y.
 Don't worry about mastering this idea yet. But later in the course, if you come across some code that someone else has 
 written that uses the * notation inside a parameter list, come back and look at this again.
 
+**Check your Understanding**
+
 .. mchoice:: question12_4_1
    :topics: Tuples/TupleAssignmentwithunpacking
    :multiple_answers:
@@ -130,3 +132,46 @@ written that uses the * notation inside a parameter list, come back and look at 
         y = x
         x = y   
 
+.. activecode:: ac12_4_3
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+
+   **3.** With only one line of code, assign the variables water, fire, electric, and grass to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(water, "Squirtle", "Testing that water is assigned to the correct value.")
+         self.assertEqual(fire, "Charmander", "Testing that fire is assigned to the correct value.")
+         self.assertEqual(electric, "Pikachu", "Testing that electric is assigned to the correct value.")
+         self.assertEqual(grass, "Bulbasaur", "Testing that grass is assigned to the correct value.")
+
+   myTests().main()
+   
+.. activecode:: ac12_4_4
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+
+   **4.** With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(v1, 1, "Testing that v1 was assigned correctly.")
+         self.assertEqual(v2, 2, "Testing that v2 was assigned correctly.")
+         self.assertEqual(v3, 3, "Testing that v3 was assigned correctly.")
+         self.assertEqual(v4, 4, "Testing that v4 was assigned correctly.")
+
+   myTests().main()
