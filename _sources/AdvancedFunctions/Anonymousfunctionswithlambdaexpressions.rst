@@ -77,7 +77,7 @@ Note that neither function is actually invoked. Look at the parallels between th
 defined in both functions with the variable ``s``. In the typical function, we have to use the keyword ``return`` to send 
 back the value. In a lambda function, that is not necessary - whatever is placed after the colon is what will be returned.
 
-** Check Your Understanding **
+**Check Your Understanding**
 
 .. mchoice:: question15_3_1
    :answer_a: A string with a - in front of the number.
