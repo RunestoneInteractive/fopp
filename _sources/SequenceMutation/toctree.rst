@@ -5,6 +5,7 @@ Sequence Mutation
    :caption: Sequence Mutation
    :maxdepth: 2
 
+   intro-SequenceMutation.rst
    Mutability.rst
    ListDeletion.rst
    ObjectsandReferences.rst

@@ -5,6 +5,7 @@ Dictionaries
    :caption: Dictionaries
    :maxdepth: 2
 
+   intro-DictionaryGoals.rst
    intro-Dictionaries.rst
    Dictionaryoperations.rst
    Dictionarymethods.rst
