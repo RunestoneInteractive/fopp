@@ -20,4 +20,5 @@ Functions
    SideEffects.rst
    Glossary.rst
    Exercises.rst
+   ChapterAssessment.rst
    
