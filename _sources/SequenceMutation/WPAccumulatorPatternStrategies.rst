@@ -7,7 +7,7 @@
     License".
 
 👩‍💻  Accumulator Pattern Strategies
-===================================
+=====================================
 
 When to Use it
 --------------
@@ -27,9 +27,10 @@ Learning to use the accumulator pattern can be similarly confusing. The first st
 +----------------+----------------------+
 | a list of      | list accumulation    |
 +----------------+----------------------+
-| concatenate    | string accumulation  |
-+----------------+                      +
+| concatenate    |                      |
++----------------+  string accumulation +
 | join together  |                      |
++----------------+----------------------+
 +----------------+----------------------+
 
 For example, if the problem is to compute the total distance traveled in a series of small trips, you would want to accumulate a sum. If the problem is to make a list of the cubes of all the numbers from 1-25, you want a list accumulation, starting with an empty list and appending one more cube each time. If the problem is to make a comma separated list of all the people invited to a party, you should think of concatenating them; you could start with an empty string and concatenate one more person on each iteration through a list of name.
@@ -55,7 +56,9 @@ well as what you should have by the end of your code. While it might be tempting
 such as ``a`` or ``x``, if you run into any bugs or look at your code later, you may have trouble understanding what you 
 intended to do and what your code is actually doing.
 
+
 For the accumulator variable, one thing that can help is to make the variable name end with "so_far". The prefix can be something that helps remind you of what you're supposed to end up with. For example: `count_so_far`, `total_so_far`, or `cubes_so_far`.
 
-As mentioned previously in a previous Way of the Programmer segment, `👩‍💻 Naming Variables in For Loops`_, the iterator variable should be a singular noun. It should describe what one item in the original sequence, not what one item in the final result will be. For example, when accumulating the cubes of the numbers from 1-25, don't write `for cube in range(25):`. Instead, write `for num in range(25):`.  If you name the iterator variable `cube` you run the risk of getting confused that it has already been cubed, when that's an operation that you still have to write in your code.
+As mentioned previously in a previous Way of the Programmer segment, :ref:`naming_variables_in_for_loops`, the iterator variable should be a singular noun. It should describe what one item in the original sequence, not what one item in the final result will be. For example, when accumulating the cubes of the numbers from 1-25, don't write `for cube in range(25):`. Instead, write `for num in range(25):`.  If you name the iterator variable `cube` you run the risk of getting confused that it has already been cubed, when that's an operation that you still have to write in your code.
+
 
