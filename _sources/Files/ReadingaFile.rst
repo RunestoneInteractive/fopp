@@ -80,3 +80,4 @@ use ``fileref`` will result in an error.
 .. note::
 
     A common mistake is to get confused about whether you are providing a variable name or a string literal as an input to the open function. In the code above, "qbdata.txt" is a string literal that should correspond to the name of a file on your computer. If you put something without quotes, like ``open(x, "r")``, it will be treated as a variable name. In this example, x should be a variable that's already been bound to a string value like "qbdata.txt".
+
