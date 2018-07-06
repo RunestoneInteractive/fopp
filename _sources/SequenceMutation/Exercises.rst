@@ -56,3 +56,65 @@ Exercises
          self.assertEqual(lower, ['MATH 150', 'PSYCH 111', 'PSYCH 313', 'MATH 206', 'ENG 100', 'ENG 103', 'ENG 125', 'ENG 124'], "Testing that the lower list exists and contains the correct elements.")
 
    myTests().main()
+
+.. activecode:: ac8_11_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **3.** Create a list called ``myList`` with the following six items: 76, 92.3, "hello", True, 4, 76.  Do it with both append and with concatenation, one item at a time. (Note that there are no tests for this problem.)
+   ~~~~
+
+   ====
+
+.. activecode:: ac8_11_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). (Note that there are no tests for this problem.)
+   ~~~~
+
+5.
+
+   .. tabbed:: q5
+
+        .. tab:: Question
+
+           .. actex:: ac8_11_5
+
+              Starting with the list of the previous exercise, write Python statements to do the following:
+   
+              a. Append "apple" and 76 to the list.
+              #. Insert the value "cat" at position 3.
+              #. Insert the value 99 at the start of the list.
+              #. Find the index of "hello".
+              #. Count the number of 76s in the list.
+              #. Remove the first occurrence of 76 from the list.
+              #. Remove True from the list using ``pop`` and ``index``.
+              ~~~~
+              # Your code here
+
+        .. tab:: Answer
+
+           .. activecode:: answer8_11_5
+
+              myList = [76, 92.3, 'hello', True, 4, 76]
+
+              myList.append("apple")         # a
+              myList.append(76)              # a
+              myList.insert(3, "cat")        # b
+              myList.insert(0, 99)           # c
+
+              print(myList.index("hello"))   # d
+              print(myList.count(76))        # e
+              myList.remove(76)              # f
+              myList.pop(myList.index(True)) # g
+
+              print (myList)
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_b9034b274ebe4c55a58c44315ee681a4
