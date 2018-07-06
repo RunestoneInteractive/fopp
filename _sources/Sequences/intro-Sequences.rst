@@ -31,3 +31,17 @@ out individual elements or subsequences (called slices) or computing their lengt
 examine some special functions that are defined only for strings, and we'll find out one importance
 difference between strings and lists, that lists can be changed (or mutated) while strings are 
 immutable.
+
+Learning Goals
+--------------
+
+* To understand different operations that can be performed on strings, lists, and tuples
+* To distinguish between different uses of [] in Python
+
+Objectives
+----------
+
+* Predict the output of split and join operations
+* Read and write expressions that use slices
+* Read and write expressions that use concatenation and repetition
+

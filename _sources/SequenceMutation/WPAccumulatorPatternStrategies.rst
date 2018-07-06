@@ -6,56 +6,62 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-WP: Accumulator Pattern Strategies
-==================================
-
-When to Use it
---------------
-
-When you first start learning accumulation patterns it's sometimes difficult to determine what pattern, if any, 
-is best for the problem you're trying to solve. Depending on what information you're given and what result you want, 
-using accumulation may or may not be necessary. If the problem is simple, such as determining how many e's are in a 
-string, then you may be better off using existing methods, such as the ``count`` method. If it's more complicated, 
-such as counting the number of occurrances of multiple things in a string or list, then accumulation may be 
-appropriate.
-
-Certain actions are likely to involve accumulation patterns. This includes counting the frequency of something, 
-determining a total, and creating a string or list from another string or list. Though this is not a complete list of 
-cases where accumulation may be necessary, keeping this in mind can help when creating solutions to prompts and 
-problems.
-
-Before Writing it
------------------
-
-One aspect of writing an accumulation pattern is determining the type of the accumulator variable. In this textbook, a 
-prompt will specify what the returned value should be (like asking for the 'biggest number' or 'a list of first words 
-in sentences'). However, not every problem will be clearly defined. Regardless, as a programmer you're tasked with coming 
-up with a solution. When it comes to deciding the type the accumulator variable should be, this may be dictated by the 
-problem you're solving but it can also depend on how *you* want to solve something. 
-
-For example, say you want to extract different parts of a string and then recombine those parts into a new string. 
-Think about what type your accumulator variable could be. So far you know of two options that might make sense. A 
-string is the most obvious choice as that's what you want the end result to be. However, this task could also be 
-accomplished with an accumulator variable that is a list. The solution could then use the ``join`` method or even another 
-accumulation pattern to get the desired final outcome. Using either the string or the list is fine, but one of them might 
-make your job easier so it's important to think about how the type would affect your actions.
-
-Something that can make this process easier before you start coding the program is to describe the accumulation you want 
-to do in a comment. It can help to get your thoughts down, notice if there are any faults or holes in the logic, and also 
-serve as a guide when you are writing the code. 
-
 .. qnum::
    :prefix: seqmut-11-
    :start: 1
 
-While Writing it
-----------------
+👩‍💻  Accumulator Pattern Strategies
+=====================================
+
+When to Use it
+--------------
+
+When children first encounter word problems in their math classes, they find it difficult to translate those words into arithmetic expressions involving addition, subtraction, multiplication, and division. Teachers offer heuristics. If the problem says "how many...altogether", that's an addition problem. If it says "how many are left", that's going to be a subtraction problem.
+
+Learning to use the accumulator pattern can be similarly confusing. The first step is to recognizing something in the problem statement that suggests an accumulation pattern. Here are a few. You might want to try adding some more of your own.
+
++----------------+----------------------+
+| Phrase         | Accumulation Pattern |
++----------------+----------------------+
+| how many       | count accumulation   |
++----------------+                      +
+| how frequently |                      |
++----------------+----------------------+
+| total          | sum accumulation     |
++----------------+----------------------+
+| a list of      | list accumulation    |
++----------------+----------------------+
+| concatenate    |                      |
++----------------+  string accumulation +
+| join together  |                      |
++----------------+----------------------+
++----------------+----------------------+
+
+For example, if the problem is to compute the total distance traveled in a series of small trips, you would want to accumulate a sum. If the problem is to make a list of the cubes of all the numbers from 1-25, you want a list accumulation, starting with an empty list and appending one more cube each time. If the problem is to make a comma separated list of all the people invited to a party, you should think of concatenating them; you could start with an empty string and concatenate one more person on each iteration through a list of name.
+
+Before Writing it
+-----------------
+
+Before writing any code, we recommend that you first answer the following questions:
+
+- What sequence will you iterate through as you accumulate a result? It could be a range of numbers, the letters in a string, or some existing list that you have just as a list of names.
+
+- What type of value will you accumulate? If your final result will be a number, your accumulator will start out with a number and always have a number even as it is updated each time. Similarly, if your final result will be a list, start with a list. If your final result will be a string, you'll probably want to start with a string; one other option is to accumulate a list of strings and then use the `.join()` method at the end to concatenate them all together.
+
+We recommend writing your answers to these questions in a comment. As you encounter bugs and have to look things up, it will help remind you of what you were trying to implement. Sometimes, just writing the comment can help you to realize a potential problem and avoid it before you ever write any code.
+
+Choosing Good Accumulator and Iterator Variable Names
+-----------------------------------------------------
 
 The final piece of advice regarding accumulation strategies is to be intentional when choosing variable names for the 
 accumulator and iterator variables. A good name can help remind you of what the value is assigned to the variable as 
 well as what you should have by the end of your code. While it might be tempting at first to use a short variable name, 
 such as ``a`` or ``x``, if you run into any bugs or look at your code later, you may have trouble understanding what you 
 intended to do and what your code is actually doing.
+
+For the accumulator variable, one thing that can help is to make the variable name end with "so_far". The prefix can be something that helps remind you of what you're supposed to end up with. For example: `count_so_far`, `total_so_far`, or `cubes_so_far`.
+
+As mentioned previously in a previous Way of the Programmer segment, :ref:`naming_variables_in_for_loops`, the iterator variable should be a singular noun. It should describe what one item in the original sequence, not what one item in the final result will be. For example, when accumulating the cubes of the numbers from 1-25, don't write `for cube in range(25):`. Instead, write `for num in range(25):`.  If you name the iterator variable `cube` you run the risk of getting confused that it has already been cubed, when that's an operation that you still have to write in your code.
 
 **Check Your Understanding**
 
@@ -222,18 +228,6 @@ intended to do and what your code is actually doing.
    :topics: 
 
    What sequence will you iterate through as you accumulate a result in the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
-
-
-
-
-
-
-
-
-
-
-
-
 
 .. mchoice:: question8_11_13
    :answer_a: Accumulator Variable: wrds_so_far     ; Iterator Variable: wrd

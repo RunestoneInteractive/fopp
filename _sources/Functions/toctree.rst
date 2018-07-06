@@ -5,6 +5,7 @@ Functions
    :caption: Functions
    :maxdepth: 2
 
+   intro-Functions.rst
    FunctionDefinitions.rst
    FunctionInvocation.rst
    FunctionParameters.rst

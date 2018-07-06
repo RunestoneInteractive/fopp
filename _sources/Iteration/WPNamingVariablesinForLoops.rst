@@ -10,6 +10,8 @@
    :prefix: iter-8-
    :start: 1
 
+.. _naming_variables_in_for_loops:
+
 👩‍💻 Naming Variables in For Loops
 ===================================
 

@@ -18,16 +18,8 @@
 Introduction: Dictionaries
 ==========================
 
-The compound data types we have studied in detail so far --- strings and lists --- are sequential collections. This 
-means that the items in the collection are ordered from left to right and they use integers as indices to access
-the values they contain.
-
-**Dictionaries** are a different kind of collection. They are Python's built-in **mapping type**. A map is an 
-unordered, associative collection.  The association, or mapping, is from a **key**, which can be of any immutable type 
-(e.g., a number of string), to a **value**, which can be any Python data object.
-
-As an example, we will create a dictionary to translate English words into Spanish. For this dictionary, the keys are 
-strings and the values will also be strings.
+To provide an example of this new kind of datatype, we will create a dictionary to translate English words into Spanish. 
+For this dictionary, the keys are strings and the values will also be strings.
 
 One way to create a dictionary is to start with the empty dictionary and add **key-value pairs**. The empty dictionary 
 is denoted ``{}``.

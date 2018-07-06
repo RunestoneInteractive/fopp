@@ -23,10 +23,8 @@ The easiest way to clone a list is to use the slice operator.
 Taking any slice of ``a`` creates a new list. In this case the slice happens to
 consist of the whole list.
 
-.. codelens:: clens8_5_1
-    :python: py3
-    :showoutput:
-    
+.. activecode:: clens8_5_1
+
     a = [81,82,83]
 
     b = a[:]       # make a clone using slice

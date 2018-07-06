@@ -33,14 +33,10 @@ is **aliased**. Changes made with one alias affect the other.  In the codelens e
 to the same list after executing the assignment statement ``b = a``.
 
 
-.. codelens:: ac8_4_2
-    :python: py3
-    :showoutput:
-    
+.. activecode:: ac8_4_2
+
     a = [81,82,83]
     b = [81,82,83]
-
-    print(a == b)
     print(a is b)
 
     b = a
@@ -49,7 +45,7 @@ to the same list after executing the assignment statement ``b = a``.
 
     b[0] = 5
     print(a)
-    
+
 
 
 Although this behavior can be useful, it is sometimes unexpected or
@@ -59,6 +55,29 @@ That's why Python is free to alias strings and integers when it sees an opportun
 economize.
 
 **Check your understanding**
+
+
+.. mchoice:: question8_1_3
+   :answer_a: ['Jamboree', 'get-together', 'party']
+   :answer_b: ['celebration']
+   :answer_c: ['celebration', 'Jamboree', 'get-together', 'party']
+   :answer_d: ['Jamboree', 'get-together', 'party', 'celebration']
+   :correct: a
+   :feedback_a: Yes, the value of y has been reassigned to the value of w.
+   :feedback_b: No, that was the inital value of y, but y has changed.
+   :feedback_c: No, when we assign a list to another list it does not concatenate the lists together.
+   :feedback_d: No, when we assign a list to another list it does not concatenate the lists together.
+   :practice: T
+
+   What is the value of y after the following code has been evaluated:
+
+   .. code-block:: python
+
+      w = ['Jamboree', 'get-together', 'party']
+      y = ['celebration']
+      y = w
+
+
 
 .. mchoice:: question8_4_1
    :answer_a: [4,2,8,6,5]

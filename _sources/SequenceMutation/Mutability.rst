@@ -24,6 +24,64 @@ Some Python collection types - strings and lists so far - are able to change and
 a type is able to change, then it is said to be mutable. If the type is not able to change then it
 is said to be immutable. This will be expanded below.
 
+Lists are Mutable
+-----------------
+
+Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing
+it directly as part of the assignment statement. Using the indexing operator (square brackets) on
+the left side of an assignment, we can update one of the list items.
+
+.. activecode:: ac8_1_4
+
+    fruit = ["banana", "apple", "cherry"]
+    print(fruit)
+
+    fruit[0] = "pear"
+    fruit[-1] = "orange"
+    print(fruit)
+
+
+An assignment to an element of a list is called **item assignment**. Item assignment does not work
+for strings. Recall that strings are immutable.
+
+Here is the same example in codelens so that you can step through the statements and see the
+changes to the list elements.
+
+.. codelens:: clens8_1_1
+    :python: py3
+
+    fruit = ["banana", "apple", "cherry"]
+
+    fruit[0] = "pear"
+    fruit[-1] = "orange"
+
+By combining assignment with the slice operator we can update several elements at once.
+
+.. activecode:: ac8_1_5
+
+    alist = ['a', 'b', 'c', 'd', 'e', 'f']
+    alist[1:3] = ['x', 'y']
+    print(alist)
+
+We can also remove elements from a list by assigning the empty list to them.
+
+.. activecode:: ac8_1_6
+
+    alist = ['a', 'b', 'c', 'd', 'e', 'f']
+    alist[1:3] = []
+    print(alist)
+
+We can even insert elements into a list by squeezing them into an empty slice at the
+desired location.
+
+.. activecode:: ac8_1_7
+
+    alist = ['a', 'd', 'f']
+    alist[1:1] = ['b', 'c']
+    print(alist)
+    alist[4:4] = ['e']
+    print(alist)
+
 Strings are Immutable
 ---------------------
 
@@ -68,87 +126,17 @@ values, it could become difficult to keep track of them all.
 
 The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.
 
+Tuples are Immutable
+--------------------
 
-As with strings, if we try to use item assignment to modify one of the elements of the tuple, we get an error.
+As with strings, if we try to use item assignment to modify one of the elements of a tuple, we get an error. In fact, that's the key difference between lists and tuples: tuples are like immutable lists. None of the operations on lists that mutate them are available for tuples. Once a tuple is created, it can't be changed.
 
 .. sourcecode:: python
 
     julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
 
 
-Lists are Mutable
------------------
 
-Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing
-it directly as part of the assignment statement. Using the indexing operator (square brackets) on 
-the left side of an assignment, we can update one of the list items.
-
-.. activecode:: ac8_1_4
-    
-    fruit = ["banana", "apple", "cherry"]
-    print(fruit)
-
-    fruit[0] = "pear"
-    fruit[-1] = "orange"
-    print(fruit)
-
-
-An assignment to an element of a list is called **item assignment**. Item assignment does not work 
-for strings. Recall that strings are immutable.
-
-Here is the same example in codelens so that you can step through the statements and see the 
-changes to the list elements.
-
-.. codelens:: clens8_1_1
-    :python: py3
-
-    fruit = ["banana", "apple", "cherry"]
-
-    fruit[0] = "pear"
-    fruit[-1] = "orange"
-
-By combining assignment with the slice operator we can update several elements at once.
-
-.. activecode:: ac8_1_5
-    
-    alist = ['a', 'b', 'c', 'd', 'e', 'f']
-    alist[1:3] = ['x', 'y']
-    print(alist)
-
-We can also remove elements from a list by assigning the empty list to them.
-
-.. activecode:: ac8_1_6
-    
-    alist = ['a', 'b', 'c', 'd', 'e', 'f']
-    alist[1:3] = []
-    print(alist)
-
-We can even insert elements into a list by squeezing them into an empty slice at the
-desired location.
-
-.. activecode:: ac8_1_7
-    
-    alist = ['a', 'd', 'f']
-    alist[1:1] = ['b', 'c']
-    print(alist)
-    alist[4:4] = ['e']
-    print(alist)
-
-List Assignment
----------------
-
-It is possible to assign a list to the value of an already existing list.
-
-.. activecode:: ac8_1_8
-
-    a = ['wow', 'zoinks']
-    b = a
-    print(b)
-
-If you step through the above example in code lens, you will see how - instead of two lists 
-existing - both ``a`` and ``b`` point to the list ``['wow', 'zoinks']``. This can lead to some 
-unexpected behavior which you will learn about later. Try changing b after it's been assigned the 
-value of a and see what happens to both lists!
 
 **Check your understanding**
 
@@ -187,24 +175,4 @@ value of a and see what happens to both lists!
       s = "Ball"
       s[0] = "C"
       print(s)
-    
-.. mchoice:: question8_1_3
-   :answer_a: ['Jamboree', 'get-together', 'party']
-   :answer_b: ['celebration']
-   :answer_c: ['celebration', 'Jamboree', 'get-together', 'party']
-   :answer_d: ['Jamboree', 'get-together', 'party', 'celebration']
-   :correct: a
-   :feedback_a: Yes, the value of y has been reassigned to the value of w.
-   :feedback_b: No, that was the inital value of y, but y has changed.
-   :feedback_c: No, when we assign a list to another list it does not concatenate the lists together.
-   :feedback_d: No, when we assign a list to another list it does not concatenate the lists together.
-   :practice: T
-
-   What is the value of y after the following code has been evaluated:
-   
-   .. code-block:: python
-
-      w = ['Jamboree', 'get-together', 'party']
-      y = ['celebration']
-      y = w
 

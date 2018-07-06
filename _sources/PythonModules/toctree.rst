@@ -5,6 +5,7 @@ Python Modules
    :caption: Python Modules
    :maxdepth: 2
 
+   intro-PythonModules.rst
    intro-ModulesandGettingHelp.rst
    Therandommodule.rst
    ImageProcessingonYourOwn.rst
