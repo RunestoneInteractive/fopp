@@ -11,13 +11,12 @@
    :prefix: moreiter-1-
    :start: 1
 
+.. index:: for loop
+    iteration, assignment, assignment statement, reassignment
+    single: statement; assignment
+
 Introduction
 ============
-
-.. index:: iteration, assignment, assignment statement, reassignment
-
-.. index::
-    single: statement; assignment
 
 Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making 
 errors is something that computers do well and people do poorly.
@@ -27,4 +26,15 @@ provides several language features to make it easier. We've already seen the ``f
 This is a very common form of iteration in Python. In this chapter we are going to look at the ``while`` statement --- 
 another way to have your program do iteration.
 
-.. index:: for loop
+
+Learning Goals
+--------------
+
+* To understand indefinite iteration
+* To solve problems involving convergence
+
+Objectives
+----------
+
+* To apply the while loop for indefinite iteration
+* To be able to identify while loops that are likely to be infinite loops

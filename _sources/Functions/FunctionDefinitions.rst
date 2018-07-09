@@ -14,20 +14,6 @@
 Function Definition
 -------------------
 
-.. video:: function_intro
-   :controls:
-   :thumb: ../_static/function_intro.png
-
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.mov
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.webm
-
-In Python, a **function** is a chunk of code that performs some operation that is meaningful for a person to think 
-about as a whole unit. Once a function has been defined and you are satisfied that it does what it is supposed to do, 
-you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of 
-code that make it work. 
-
-In this chapter you will learn about *named* functions, functions that can be referred to by name when you want to execute them. 
-
 The syntax for creating a named function, a **function definition**, is:
 
 .. code-block:: python
