@@ -52,7 +52,7 @@ assertion is valid and the test will pass. If it's not, then the test will fail.
 The unittest module uses classes in a way that's a little bit non-intuitive. You will never write code that explicitly 
 invokes your subclass of TestCase to make an instance of it. Instead, that will happen behind the scenes in a function 
 called ``main()`` that is defined in the unittest module. It will search for all subclasses of ``TestCase``. With each 
-subclass, it searches for every method of that class that begins with the prfeix ``test``. With each method, it then 
+subclass, it searches for every method of that class that begins with the prefix ``test``. With each method, it then 
 creates an instance of the class and calls the method to run the tests.
 
 What you will need to learn is how to import the unittest framework, which you learned about in the modules chapter, and 
@@ -177,4 +177,4 @@ tests will fail until you fill in a correct definition for the blanked function.
     :feedback_b: The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word
     :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
 
-    Which of the following is the correct way to write a test to check that 'under' will be blanked as 'u_d__' when the user has guessed letters d and u so far?
+    Which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
