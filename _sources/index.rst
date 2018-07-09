@@ -81,7 +81,7 @@ Table of Contents
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
-   
+   Projects/toctree.rst
 
 Appendices
 ::::::::::
