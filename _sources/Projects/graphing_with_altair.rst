@@ -118,7 +118,7 @@ Scatter plot
 
 Most often the mark_point option is used to make a scatter graph.  Here is a well known data set that contains the measured number of chirps per second along with the temperature at the time the number of chirps were measured.  The theory goes that if you are without your thermometer or weather app you can figure out the temperature by counting the number of times per second a nearby cricket chirps.   Using the data given make a scatter plot.
 
-.. activecode alt_cricket_scatter1
+.. activecode:: alt_cricket_scatter1
 
     chirps = [20.0, 16.0, 19.8, 18.4, 17.1, 15.5, 14.7, 15.7, 15.4, 16.3, 15.0, 17.2, 16.0, 17.0, 14.4	]
     degreesf = [88.6, 71.6, 93.3, 84.3, 80.6, 75.2, 69.7, 71.6, 69.4, 83.3, 79.6, 82.6, 80.6, 83.5, 76.3]
@@ -151,11 +151,6 @@ Kiva Graphs Revisited
 ---------------------
 
 The final step for this lab is to recreate the three graphs we made with the turtle for the Kiva data
-
-
-2. Make a bar chart that shows the number of loans in each country.
-3. Make a bar chart that shows the total amount of money loaned in each country.
-4. Make a histogram that shows the distribution of the loan amounts.
 
 .. activecode:: alt_kiva_data1
     
