@@ -70,47 +70,6 @@ Exercises
       ~~~~
       2 + (3 - 1) * 10 / 5 * (2 + 3)
 
-
-
-.. question:: spd_ex_3
-
-    .. tabbed:: q2a
-
-        .. tab:: Question
-
-            .. actex:: spd_ex_3q
-
-                What do these expressions evaluate to?
-            
-                #.  ``3 == 3``
-                #.  ``3 != 3``
-                #.  ``3 >= 4``
-                #.  ``not (3 < 4)``
-                ~~~~        
-        
-
-        .. tab:: Answer
-            
-            #. True
-            #. False
-            #. False
-            #. False
-
-
-.. question:: spd_ex_4
-
-        .. actex:: ex_2_4
-
-           Give the **logical opposites** of these conditions, meaning an expression that would 
-           produce False whenever this expression produces True, and vice versa.  You are not 
-           allowed to use the ``not`` operator.
-
-           #.  ``a > b``
-           #.  ``a >= b``
-           #.  ``a >= 18  and  day == 3``
-           #.  ``a >= 18  or  day != 3``
-           ~~~~
-
 .. question:: spd_ex_5
 
     .. tabbed:: q5

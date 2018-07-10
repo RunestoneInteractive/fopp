@@ -86,3 +86,48 @@ Exercises
     .. actex:: ac7_14_2
 
 
+
+
+#.
+
+    .. tabbed:: q3
+
+        .. tab:: Question
+
+            .. actex:: ac7_14_3
+
+                What do these expressions evaluate to?
+            
+                #.  ``3 == 3``
+                #.  ``3 != 3``
+                #.  ``3 >= 4``
+                #.  ``not (3 < 4)``
+                ~~~~        
+        
+
+        .. tab:: Answer
+            
+            #. True
+            #. False
+            #. False
+            #. False
+
+
+
+#.
+    .. tabbed:: q4
+
+        .. tab:: Question
+
+            .. actex:: ac7_14_4
+
+                Give the **logical opposites** of these conditions, meaning an expression that would 
+                produce False whenever this expression produces True, and vice versa.  You are not 
+                allowed to use the ``not`` operator.
+
+                #.  ``a > b``
+                #.  ``a >= b``
+                #.  ``a >= 18  and  day == 3``
+                #.  ``a >= 18  or  day != 3``
+                ~~~~
+
