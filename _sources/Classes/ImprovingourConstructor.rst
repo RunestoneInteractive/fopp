@@ -8,8 +8,8 @@
     License".
 
 
-Adding Parameters to the  Constructor
--------------------------------------
+Adding Parameters to the Constructor
+------------------------------------
 
 Our constructor so far can only create points at location ``(0,0)``.  To create a point at position (7, 6) requires that we
 provide some additional capability for the user to pass information to the constructor.  Since constructors are simply specially named functions, we can use parameters (as we've seen before) to provide the specific information. 
@@ -39,5 +39,24 @@ This is a common thing to do in the ``__init__`` method for a class: take in som
    :alt: Simple object has state and methods
 
 
+**Check Your Understanding**
 
+1. Create a class called ``NumberSet`` that accepts 2 integers as input, and defines two instance variables: ``num1`` and ``num2``, which hold each of the input integers. Then, create an instance of  ``NumberSet`` where its num1 is 6 and its num2 is 10. Save this instance to a variable ``t``. 
+
+.. activecode:: ee_ch13_011
+   :tags:Classes/ImprovingourConstructor.rst
+
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOneA(self):
+         self.assertEqual(t.num1, 6, "Testing that t.num1 has correct number assigned.")
+      def testOneB(self):
+         self.assertEqual(t.num2, 10, "Testing that t.num2 has correct number assigned.")
+
+   myTests().main()
        

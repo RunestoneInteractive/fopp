@@ -11,8 +11,8 @@
    :prefix: style-1-
    :start: 1
 
-WP: Programming With Style
---------------------------
+👩‍💻 Programming With Style
+----------------------------
 
 Readability is very important to programmers, since in practice programs are
 read and modified far more often then they are written.  

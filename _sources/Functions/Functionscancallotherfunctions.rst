@@ -15,6 +15,7 @@
     functional decomposition
     generalization
     abstraction
+    flow of execution
 
 Functions can call other functions
 ----------------------------------
@@ -60,4 +61,33 @@ that at step 9, y has the value 25 is one frame and 2 in the other.
 What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the 
 ``square`` function. If it didn't find it there, it would go look in the global frame.  
 
-.. index:: flow of execution
+
+**Check your Understanding**
+
+.. activecode:: ac11_9_1
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Functionscancallotherfunctions
+
+   **1.** Write two functions, one called ``addit`` and one called ``mult``. ``addit`` takes one number as an input and adds 5. ``mult`` takes one number as an input, and multiplies that input by whatever is returned by ``addit``, and then returns the result.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(mult(1), 6,"Testing the function mult with input 1 (should be 6)")
+         self.assertEqual(mult(-2), -6, "Testing the function mult with input -2 (should be -6)")
+         self.assertEqual(mult(0), 0, "Testing the function mult with input 0 (should be 0)")
+
+      def testTwo(self):
+         self.assertEqual(addit(1), 6, "Testing the function addit with input 1 (should be 6)")
+         self.assertEqual(addit(-2), 3, "Testing the function addit with input -2 (should be 3)")
+         self.assertEqual(addit(0), 5, "Testing the function addit with input 0 (should be 5)")
+
+   myTests().main()
+

@@ -11,5 +11,5 @@ Tuple Packing and Unpacking
    UnpackingDictionaryItems.rst
    Glossary.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    

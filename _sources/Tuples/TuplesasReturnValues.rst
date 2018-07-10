@@ -49,3 +49,44 @@ Again, we can take advantage of packing to make the code look a little more read
 
     print(circleInfo(10))
 
+**Check your Understanding**
+
+.. activecode:: ac12_3_3
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+
+   **1.** Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(information("Sarah", 1996, "purple", "St. Louis"), ("Sarah", 1996, "purple", "St. Louis"), "Testing that information returns the correct tuple on input ('Sarah', 1996, 'purple', 'St. Louis')")
+
+   myTests().main()
+
+.. activecode:: ac12_3_4
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+
+   **2.** Define a function called ``info`` with the following required parameters: ``name``, ``age``, ``birth_year``, ``year_in_college``, and ``hometown``. The function should return a tuple that contains all the inputted information.
+   ~~~~
+
+   def info():
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(info(name='Tina', age=20, birth_year=1996, year_in_college='sophomore', hometown='Detroit'), ('Tina', 20, 1996, 'sophomore', 'Detroit'), "Testing the function info on input: name='Tina', age=20, birth_year=1996, year_in_college='sophomore', hometown='Detroit'.")
+
+   myTests().main()

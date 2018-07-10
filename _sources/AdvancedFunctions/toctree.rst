@@ -9,5 +9,5 @@ Advanced Functions
    KeywordParameters.rst
    Anonymousfunctionswithlambdaexpressions.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    

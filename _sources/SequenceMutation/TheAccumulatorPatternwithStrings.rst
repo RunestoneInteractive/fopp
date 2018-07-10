@@ -56,3 +56,25 @@ same (try substituting x for ac everywhere in the above code).
       for item in s:
          r = item.upper() + r
       print(r)
+
+.. activecode:: ac8_10_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   1. For each character in the string already saved in the variable ``str1``, add each character to a list called ``chars``.
+   ~~~~
+   str1 = "I love python"
+   # HINT: what's the accumulator? That should go here.
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testTwo(self):
+         self.assertEqual(chars, ['I', ' ', 'l', 'o', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'o', 'n'], "Testing that chars is assigned to correct values.")
+         self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
