@@ -233,7 +233,7 @@ Exercises
 
                class myTests(TestCaseGui):
                    def testOne(self):
-              self.assertEqual(is_rightangled, False, "Testing whether is_rightangled is set correctly")
+                       self.assertEqual(is_rightangled, False, "Testing whether is_rightangled is set correctly")
 
                myTests().main()
 #.
