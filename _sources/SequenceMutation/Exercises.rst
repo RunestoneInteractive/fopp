@@ -19,71 +19,7 @@ Exercises
    :autograde: unittest
    :practice: T
 
-   1. For each character in the string already saved in the variable ``str1``, add each character to a list called ``chars``.
-   ~~~~
-   str1 = "I love python"
-   # HINT: what's the accumulator? That should go here.
-      
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testTwo(self):
-         self.assertEqual(chars, ['I', ' ', 'l', 'o', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'o', 'n'], "Testing that chars is assigned to correct values.")
-         self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-
-   myTests().main()
-
-
-.. activecode:: ac8_11_2
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   1.1 For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
-   ~~~~
-   ael = "python!"
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(app, ['p','y','t','h','o','n', "!"], "Testing that app has the correct elements." )
-         self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-
-   myTests().main()
-
-.. activecode:: ac8_11_3
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   2. For each word in the list ``verbs``, add an -ing ending. Save this new list in a new list, ``ing``.
-   ~~~~
-   verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testSix(self):
-         self.assertEqual(ing, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that the variable ing has the correct value.")
-
-   myTests().main()
-
-.. activecode:: ac8_11_4
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   2.1 **Challenge** Do the same as above, but do not create a new list. Instead, overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
+   **1.** For each word in the list ``verbs``, add an -ing ending. Overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
    ~~~~
    verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
 
@@ -98,31 +34,13 @@ Exercises
 
    myTests().main()
 
-.. activecode:: ac8_11_5
-   :language: python
-   :autograde: unittest
-   :practice: T
 
-   3. For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
-   ~~~~
-   wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(past_wrds, ["ended", 'worked', "played", "started", "walked", "looked", "opened", "rained", "learned", "cleaned"], "Testing that past_wrds has the correct value." )
-
-   myTests().main()
-
-.. activecode:: ac8_11_6
+.. activecode:: ac8_11_2
    :language: python
    :autograde: unittest
    :practice: T
       
-   **4.** **Challenge** In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
+   **2.** In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
    ~~~~
    classes = ["MATH 150", "PSYCH 111", "PSYCH 313", "PSYCH 412", "MATH 300", "MATH 404", "MATH 206", "ENG 100", "ENG 103", "ENG 201", "PSYCH 508", "ENG 220", "ENG 125", "ENG 124"]
 
@@ -138,3 +56,65 @@ Exercises
          self.assertEqual(lower, ['MATH 150', 'PSYCH 111', 'PSYCH 313', 'MATH 206', 'ENG 100', 'ENG 103', 'ENG 125', 'ENG 124'], "Testing that the lower list exists and contains the correct elements.")
 
    myTests().main()
+
+.. activecode:: ac8_11_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **3.** Create a list called ``myList`` with the following six items: 76, 92.3, "hello", True, 4, 76.  Do it with both append and with concatenation, one item at a time. (Note that there are no tests for this problem.)
+   ~~~~
+
+   ====
+
+.. activecode:: ac8_11_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). (Note that there are no tests for this problem.)
+   ~~~~
+
+5.
+
+   .. tabbed:: q5
+
+        .. tab:: Question
+
+           .. actex:: ac8_11_5
+
+              Starting with the list of the previous exercise, write Python statements to do the following:
+   
+              a. Append "apple" and 76 to the list.
+              #. Insert the value "cat" at position 3.
+              #. Insert the value 99 at the start of the list.
+              #. Find the index of "hello".
+              #. Count the number of 76s in the list.
+              #. Remove the first occurrence of 76 from the list.
+              #. Remove True from the list using ``pop`` and ``index``.
+              ~~~~
+              # Your code here
+
+        .. tab:: Answer
+
+           .. activecode:: answer8_11_5
+
+              myList = [76, 92.3, 'hello', True, 4, 76]
+
+              myList.append("apple")         # a
+              myList.append(76)              # a
+              myList.insert(3, "cat")        # b
+              myList.insert(0, 99)           # c
+
+              print(myList.index("hello"))   # d
+              print(myList.count(76))        # e
+              myList.remove(76)              # f
+              myList.pop(myList.index(True)) # g
+
+              print (myList)
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_b9034b274ebe4c55a58c44315ee681a4

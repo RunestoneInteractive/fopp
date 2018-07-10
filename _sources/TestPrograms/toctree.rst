@@ -1,8 +1,8 @@
-WP: Testing Your Programs
-:::::::::::::::::::::::::
+Testing Your Programs
+:::::::::::::::::::::
 
 .. toctree::
-   :caption: WP: Testing Your Programs
+   :caption: Testing Your Programs
    :maxdepth: 3
 
    WPProgramDevelopment.rst

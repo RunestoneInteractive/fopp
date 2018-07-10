@@ -11,8 +11,8 @@
    :prefix: condition-11-
    :start: 1
 
-WP: Setting Up Conditionals
-===========================
+👩‍💻 Setting Up Conditionals
+=============================
 
 Before writing your conditionals, it can be helpful to make your own flowchart that will 
 plot out the flow of each condition. By writing out the flow, you can better determine how 
