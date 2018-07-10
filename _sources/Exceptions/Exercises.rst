@@ -10,55 +10,67 @@
 Exercises
 =========
 
-1 Below, we have provided buggy code. Add a try/except clause so the code runs without errors. If a blog post didn't get any likes, a 'Likes' key should be added to that dictionary with a value of 0.
+#.
 
-.. activecode:: assess_ac23_5_1
-   :tags: Exceptions/intro-exceptions.rst
+    .. tabbed:: q1
 
-   blog_posts = [{'Photos': 3, 'Likes': 21, 'Comments': 2}, {'Likes': 13, 'Comments': 2, 'Shares': 1}, {'Photos': 5, 'Likes': 33, 'Comments': 8, 'Shares': 3}, {'Comments': 4, 'Shares': 2}, {'Photos': 8, 'Comments': 1, 'Shares': 1}, {'Photos': 3, 'Likes': 19, 'Comments': 3}]
+        .. tab:: Question
 
-   total_likes = 0
+            .. actex:: assess_ac23_5_1
 
-   for post in blog_posts: 
-       total_likes = total_likes + post['Likes']
+               Below, we have provided buggy code. Add a try/except clause so the code runs without errors. If a blog post didn't get any likes, a 'Likes' key should be added to that dictionary with a value of 0.
 
-   =====
+               ~~~~
 
-   from unittest.gui import TestCaseGui
+               blog_posts = [{'Photos': 3, 'Likes': 21, 'Comments': 2}, {'Likes': 13, 'Comments': 2, 'Shares': 1}, {'Photos': 5, 'Likes': 33, 'Comments': 8, 'Shares': 3}, {'Comments': 4, 'Shares': 2}, {'Photos': 8, 'Comments': 1, 'Shares': 1}, {'Photos': 3, 'Likes': 19, 'Comments': 3}]
 
-   class myTests(TestCaseGui):
+               total_likes = 0
 
-      def testA(self):
-         self.assertEqual(total_likes, 86, "Testing that total_likes has the correct value.")
-      def testB(self):
-         accum = 0
-         for d in blog_posts: 
-            if 'Likes' in d:
-               accum +=1
-         self.assertEqual(accum, 6, "Testing that blog_post dictionaries all have a 'Likes' key.")   
+               for post in blog_posts: 
+                   total_likes = total_likes + post['Likes']
 
-   myTests().main()  
+               =====
 
-2. The code below assigns the 5th letter of each word in ``food`` to the new list ``fifth``. However, the code currently produces errors. Insert a try/except clause that will allow the code to run and produce of list of the 5th letter in each word. If the word is not long enough, it should not print anything out. Note: The pass statement is a null operation; nothing will happen when it executes.
+               from unittest.gui import TestCaseGui
 
-.. activecode:: assess_ac23_5_2
-   :tags:Exceptions/intro-exceptions.rst
+               class myTests(TestCaseGui):
 
-   food = ["chocolate", "chicken", "corn", "sandwich", "soup", "potatoes", "beef", "lox", "lemonade"]
-   fifth = []
+                   def testA(self):
+                       self.assertEqual(total_likes, 86, "Testing that total_likes has the correct value.")
+                   def testB(self):
+                        accum = 0
+                        for d in blog_posts: 
+                            if 'Likes' in d:
+                                accum +=1
+                        self.assertEqual(accum, 6, "Testing that blog_post dictionaries all have a 'Likes' key.")   
 
-   for x in food:
+               myTests().main()  
+
+#.
+
+    .. tabbed:: q2
+
+        .. tab:: Question
+
+            .. actex:: assess_ac23_5_2
+
+               The code below assigns the 5th letter of each word in ``food`` to the new list ``fifth``. However, the code currently produces errors. Insert a try/except clause that will allow the code to run and produce of list of the 5th letter in each word. If the word is not long enough, it should not print anything out. Note: The pass statement is a null operation; nothing will happen when it executes.
+               ~~~~
+
+               food = ["chocolate", "chicken", "corn", "sandwich", "soup", "potatoes", "beef", "lox", "lemonade"]
+               fifth = []
+
+               for x in food:
       
-           fifth.append(x[4])
+                   fifth.append(x[4])
 
-   =====
+               =====
 
-   from unittest.gui import TestCaseGui
+               from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+               class myTests(TestCaseGui):
 
-      def testOneA(self):
-         self.assertEqual(fifth, ['o', 'k', 'w', 't', 'n'], "Testing that fifth is assigned to correct values.")
+                   def testOneA(self):
+                       self.assertEqual(fifth, ['o', 'k', 'w', 't', 'n'], "Testing that fifth is assigned to correct values.")
      
-      
-   myTests().main()
+                myTests().main()
