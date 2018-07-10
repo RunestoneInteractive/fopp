@@ -16,30 +16,29 @@ Exercises
 
 #.
 
-    .. tabbed:: q3
+    .. tabbed:: q1
 
         .. tab:: Question
 
-            Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and 
-            corresponding letter grade, according to the table below.
-        
-            .. table::
-        
-               =======   =====
-               Score     Grade
-               =======   =====
-               >= 90     A
-               [80-90)   B
-               [70-80)   C
-               [60-70)   D
-               < 60      F
-               =======   =====
-        
-            The square and round brackets denote closed and open intervals.
-            A closed interval includes the number, and open interval excludes it.   So 79.99999 gets grade C , but 80 gets grade B.
-        
-         
             .. actex:: ac7_14_1
+
+               Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
+        
+               .. table::
+        
+                  =======   =====
+                  Score     Grade
+                  =======   =====
+                  >= 90     A
+                  [80-90)   B
+                  [70-80)   C
+                  [60-70)   D
+                  < 60      F
+                  =======   =====
+        
+               The square and round brackets denote closed and open intervals.
+               A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.
+               ~~~~
            
         .. tab:: Answer
 
@@ -61,30 +60,33 @@ Exercises
                
                print("Score", fl_sc, "gets a grade of", gr)
                  
-            
 
+#.
 
-#.  A year is a **leap year** if it is divisible by 4, unless it is a century that is not divisible by 400.
-    Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
+    .. tabbed:: q2
+
+        .. tab:: Question
+
+           .. actex:: ac7_14_2
+
+               A year is a **leap year** if it is divisible by 4. If the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400. Then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
     
-    Here are some examples of what the output should be for various inputs.
+               .. table::
     
-    .. table::
-    
-         =======  =====
-         Year     Leap?
-         =======  =====
-         1944     True
-         2011     False
-         1986     False
-         1800     False     
-         1900     False
-         2000     True
-         2056     True
-         =======  =====
-
-    .. actex:: ac7_14_2
-
+                  =======  =====
+                  Year     Leap?
+                  =======  =====
+                  1944     True
+                  2011     False
+                  1986     False
+                  1800     False     
+                  1900     False
+                  2000     True
+                  2056     True
+                  =======  =====
+                
+               Above are some examples of what the output should be for various inputs.
+               ~~~~
 
 
 
@@ -131,3 +133,165 @@ Exercises
                 #.  ``a >= 18  or  day != 3``
                 ~~~~
 
+#.
+
+    .. tabbed:: q5
+
+        .. tab:: Question
+
+            .. actex:: ac7_14_5
+                :nocodelens:
+
+                Provided are the lengths of two sides of a right-angled triangle. Assign the length of the hypotenuse the the variable ``hypo_len``.  (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
+                ~~~~
+
+                side1 = 3
+                side2 = 4
+
+                ====
+
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(hypo_len,5,"Testing that hypo_len has been set correctly")
+
+                myTests().main()
+
+#.
+   .. tabbed:: q6
+
+        .. tab:: Question
+
+           .. actex:: ac7_14_6
+               :nocodelens:
+
+               Provided is a list of numbers. For each of the numbers in the list, determine whether they are even. If the number is even, add ``True`` to a new list called ``is_even``. If the number is odd, then add ``False``.
+               ~~~~
+               num_lst = [3, 20, -1, 9, 10]
+
+               ====
+
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(is_even, [False, True, False, False, True],"Testing that is_even is set correctly.")
+
+               myTests().main()
+
+
+#.
+   .. tabbed:: q7
+
+        .. tab:: Question
+
+           .. actex:: ac7_14_7
+               :nocodelens:
+
+               Provided is a list of numbers. For each of the numbers in the list, determine whether they are odd. If the number is odd, add ``True`` to a new list called ``is_odd``. If the number is even, then add ``False``.
+               ~~~~
+               num_lst = [3, 20, -1, 9, 10]
+
+
+               ====
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                   def testOne(self):
+                       self.assertEqual(is_odd, [True, False, True, True, False],"Testing that is_odd is set correctly.")
+
+               myTests().main()
+
+#.
+   .. tabbed:: q8
+
+        .. tab:: Question
+
+           .. actex:: ac7_14_8
+
+               Given the lengths of three sides of a triange, determine whether the triangle is right angled. If it is, the assign ``True`` to the variable ``is_rightangled``. If it's not, then assign ``False`` to the variable ``is_rightangled``.
+
+               Hint: floating point arithmetic is not always exactly accurate,
+               so it is not safe to test floating point numbers for equality.
+               If a good programmer wants to know whether
+               ``x`` is equal or close enough to ``y``, they would probably code it up as
+   
+               .. sourcecode:: python
+   
+                   if  abs(x - y) < 0.001:      # if x is approximately equal to y
+                       ...
+
+               ~~~~
+               a = 5
+               b = 6
+               c = 8
+
+
+               ====
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                   def testOne(self):
+              self.assertEqual(is_rightangled, False, "Testing whether is_rightangled is set correctly")
+
+               myTests().main()
+#.
+
+   .. tabbed:: q9
+
+        .. tab:: Question
+
+            .. actex:: ac7_14_9
+
+               Implement the calculator for the date of Easter.
+   
+               The following algorithm computes the date for Easter Sunday for any year between 1900 to 2099.
+   
+               Ask the user to enter a year.
+               Compute the following:
+   
+   
+   
+                   1. a = year % 19
+                   #. b = year % 4
+                   #. c = year % 7
+                   #. d = (19 * a + 24) % 30
+                   #. e = (2 * b + 4 * c + 6 * d + 5) % 7
+                   #. dateofeaster = 22 + d + e
+   
+   
+               Special note: The algorithm can give a date in April.  Also, if the year is one of four special
+               years (1954, 1981, 2049, or 2076) then subtract 7 from the date.
+   
+               Your program should print an error message if the user provides a date that is out of range.
+               ~~~~
+
+        .. tab:: Answer
+
+            .. activecode:: answer_ex_6_13
+
+                year = int(input("Please enter a year"))
+                if year >= 1900 and year <= 2099:
+                    a = year % 19
+                    b = year % 4
+                    c = year % 7
+                    d = (19*a + 24) % 30
+                    e = (2*b + 4*c + 6*d + 5) % 7
+                    dateofeaster = 22 + d + e
+
+                    if year == 1954 or year == 2981 or year == 2049 or year == 2076:
+                        dateofeaster = dateofeaster - 7
+
+                    if dateofeaster > 31:
+                        print("April", dateofeaster - 31)
+                    else:
+                        print("March", dateofeaster)
+                else:
+                    print("ERROR...year out of range")
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_2dfd6acf1ca849c2853dad606d1ba255
