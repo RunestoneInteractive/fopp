@@ -10,7 +10,7 @@
 Exercises
 =========
 
-For exercises, you can expand the Tamagotchi game even further. Try doing these on your own and then we will do some of them together in lecture.
+For exercises, you can expand the Tamagotchi game even further. Try these out.
 
 Here's *all* the code we just saw for our new and improved game, with a few additions. You can run this and play the game again.
 

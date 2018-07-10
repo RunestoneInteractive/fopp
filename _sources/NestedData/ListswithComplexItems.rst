@@ -177,3 +177,50 @@ Step through it in Codelens if that's not all clear to you yet.
     print(L[0])
     print(L[0](3))
 
+**Check Your Understanding**
+
+.. activecode:: ac17_1_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **1.** Below, we have provided a list of lists. Use indexing to assign the element 'horse' to the variable name ``idx1``.
+
+   ~~~~
+
+   animals = [['cat', 'dog', 'mouse'], ['horse', 'cow', 'goat'], ['cheetah', 'giraffe', 'rhino']]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(idx1, 'horse', "Testing that idx1 was assigned correctly.")
+
+   myTests().main()
+
+
+.. activecode:: ac17_1_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **2.** Using indexing, retrieve the string 'willow' from the list and assign that to the variable ``plant``.
+
+   ~~~~
+
+   data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []], [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(plant, 'willow', "Testing that plant has the correct value.")
+
+   myTests().main()
+

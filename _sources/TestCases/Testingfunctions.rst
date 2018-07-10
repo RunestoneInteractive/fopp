@@ -52,7 +52,7 @@ floating point number.
 
 Try adding one or two more test cases for the square function in the code below, based on the suggestions for edge cases.
 
-.. activecode:: ac18_2_1
+.. activecode:: ac19_2_1
 
     def square(x):
         return x*x
@@ -84,7 +84,7 @@ counts are computed manually when we write the test. We have to know what the co
 a test). You can think of it like writing a small exam for your code -- we would not give you an exam without knowing the 
 answers ourselves.
 
-.. activecode:: ac18_2_2
+.. activecode:: ac19_2_2
 
     def update_counts(letters, counts_dict):
         for c in letters:
@@ -131,7 +131,7 @@ Testing Optional Parameters
 If a function takes an optional parameter, one of the edge cases to test for is when no parameter value is supplied 
 during execution. Below are some tests for the built-in sorted function.
 
-.. activecode:: ac18_2_3
+.. activecode:: ac19_2_3
 
     from unittest.gui import TestCaseGui
     # because we're in the textbook interface, use TestCaseGui instead of unittest.TestCase, like this...

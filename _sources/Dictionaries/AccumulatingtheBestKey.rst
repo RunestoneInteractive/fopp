@@ -62,4 +62,47 @@ but you'll learn more if you try to write it yourself first.
             
          print("key " + best_key_so_far + " has the highest value, " + str(d[best_key_so_far]))
          
+**Check your Understanding**
 
+.. activecode:: ac10_7_2
+   :language: python
+   :autograde: unittest
+
+   **1.** Create a dictionary called ``d`` that keeps track of all the characters in the string ``placement`` and notes how many times each character was seen. Then, find the key with the lowest value in this dictionary and assign that key to ``min_value``.
+   ~~~~
+   placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(d.keys()), sorted(['B', 'e', 'a', 'c', 'h', 's', ' ', 'r', 'o', 'l', 'p', 't', 'v', 'i', 'n', 'g', 'w', 'M', 'k', 'd', '.', 'x']), "Testing the keys were created correctly")
+         self.assertEqual(sorted(d.values()), sorted([2, 17, 12, 8, 4, 10, 27, 7, 10, 8, 6, 8, 3, 13, 7, 2, 3, 3, 2, 2, 2, 1]), "Testing the values were created correctly")
+      def testTwo(self):
+         self.assertEqual(min_value, "x", "Testing that min_value has been correctly assigned")
+
+   myTests().main()
+
+.. activecode:: ac10_7_3
+   :language: python
+   :autograde: unittest
+
+   **5.** Create a dictionary called ``lett_d`` that keeps track of all of the characters in the string ``product`` and notes how many times each character was seen. Then, find the key with the highest value in this dictionary and assign that key to ``max_value``.
+   ~~~~
+   product = "iphone and android phones"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(lett_d.items()), sorted([('h', 2), ('a', 2), (' ', 3), ('n', 4), ('d', 3), ('o', 3), ('i', 2), ('p', 2), ('e', 2), ('r', 1), ('s', 1)]), "Testing that lett_d has been created correctly.")
+      def testTwo(self):
+         self.assertEqual(max_value, "n", "Testing that max_value has been correctly assigned")
+
+   myTests().main()
