@@ -14,74 +14,62 @@
 Exercises
 =========
 
-.. activecode:: ac8_11_1
-   :language: python
-   :autograde: unittest
-   :practice: T
+#.
 
-   **1.** For each word in the list ``verbs``, add an -ing ending. Overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
-   ~~~~
-   verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testSeven(self):
-         self.assertEqual(verbs, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that verbs is assigned to correct values.")
-
-   myTests().main()
-
-
-.. activecode:: ac8_11_2
-   :language: python
-   :autograde: unittest
-   :practice: T
-      
-   **2.** In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
-   ~~~~
-   classes = ["MATH 150", "PSYCH 111", "PSYCH 313", "PSYCH 412", "MATH 300", "MATH 404", "MATH 206", "ENG 100", "ENG 103", "ENG 201", "PSYCH 508", "ENG 220", "ENG 125", "ENG 124"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testEightA(self):
-         self.assertEqual(upper, ['PSYCH 412', 'MATH 300', 'MATH 404', 'ENG 201', 'PSYCH 508', 'ENG 220'], "Testing that the upper list exists and contains the correct elements.")
-      def testEightB(self):
-         self.assertEqual(lower, ['MATH 150', 'PSYCH 111', 'PSYCH 313', 'MATH 206', 'ENG 100', 'ENG 103', 'ENG 125', 'ENG 124'], "Testing that the lower list exists and contains the correct elements.")
-
-   myTests().main()
-
-.. activecode:: ac8_11_3
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   **3.** Create a list called ``myList`` with the following six items: 76, 92.3, "hello", True, 4, 76.  Do it with both append and with concatenation, one item at a time. (Note that there are no tests for this problem.)
-   ~~~~
-
-   ====
-
-.. activecode:: ac8_11_4
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   Create a list containing 100 random integers between 0 and 1000 (use iteration, append, and the random module). (Note that there are no tests for this problem.)
-   ~~~~
-
-5.
-
-   .. tabbed:: q5
+   .. tabbed:: q1
 
         .. tab:: Question
 
-           .. actex:: ac8_11_5
+           .. actex:: ac8_11_1
+
+              For each word in the list ``verbs``, add an -ing ending. Overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
+              ~~~~
+              verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
+
+              =====
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testSeven(self):
+                      self.assertEqual(verbs, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that verbs is assigned to correct values.")
+
+              myTests().main()
+
+
+#.
+
+   .. tabbed:: q2
+
+        .. tab:: Question
+
+           .. actex:: ac8_11_2
+
+              In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
+              ~~~~
+              classes = ["MATH 150", "PSYCH 111", "PSYCH 313", "PSYCH 412", "MATH 300", "MATH 404", "MATH 206", "ENG 100", "ENG 103", "ENG 201", "PSYCH 508", "ENG 220", "ENG 125", "ENG 124"]
+
+              =====
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testEightA(self):
+                      self.assertEqual(upper, ['PSYCH 412', 'MATH 300', 'MATH 404', 'ENG 201', 'PSYCH 508', 'ENG 220'], "Testing that the upper list exists and contains the correct elements.")
+              def testEightB(self):
+                      self.assertEqual(lower, ['MATH 150', 'PSYCH 111', 'PSYCH 313', 'MATH 206', 'ENG 100', 'ENG 103', 'ENG 125', 'ENG 124'], "Testing that the lower list exists and contains the correct elements.")
+
+              myTests().main()
+
+#.
+
+   .. tabbed:: q3
+
+        .. tab:: Question
+
+           .. actex:: ac8_11_3
 
               Starting with the list of the previous exercise, write Python statements to do the following:
    
@@ -97,7 +85,7 @@ Exercises
 
         .. tab:: Answer
 
-           .. activecode:: answer8_11_5
+           .. activecode:: answer8_11_3
 
               myList = [76, 92.3, 'hello', True, 4, 76]
 
