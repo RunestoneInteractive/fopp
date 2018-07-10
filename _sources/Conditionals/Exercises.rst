@@ -295,3 +295,41 @@ Exercises
             .. disqus::
                 :shortname: interactivepython
                 :identifier: disqus_2dfd6acf1ca849c2853dad606d1ba255
+
+#.
+
+   .. parsonsprob:: pp7_14_10
+
+      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
+      -----
+      students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
+      =====
+      num_students = 0
+      =====
+      for student in students:
+      =====
+          print("Welcome to class, " + student)
+          num_students += 1
+      =====
+          if num_students == 1:
+              print("The first student has entered!")
+      =====
+          elif num_students > 1:
+              print("There are " + str(num_students) + " students in the classroom!")
+
+#.
+
+   .. parsonsprob:: pp7_14_11
+
+      Piece together a program so that it can successfully print out one print statement, given the value of x.
+      -----
+      x = 16
+      =====
+      if x > 10:
+      =====
+          if x > 20:
+              print("This is a large number!")
+      =====
+          else:
+              print("This is a pretty big number.")
+
