@@ -14,8 +14,9 @@
 Exercises
 ---------
 
+Below are the datafiles that you have been using so far, and will continue to use for the rest of the chapter.
+
 .. datafile:: travel_plans.txt
-   :hide:
 
    This summer I will be travelling.
    I will go to...
@@ -29,8 +30,20 @@ Exercises
    However, I wonder how I will get by with all the different languages.
    I only know English!
 
+.. datafile:: school_prompt.txt
+
+   Writing essays for school can be difficult but
+   many students find that by researching their topic that they
+   have more to say and are better informed. Here are the university
+   we require many undergraduate students to take a first year writing requirement
+   so that they can
+   have a solid foundation for their writing skills. This comes
+   in handy for many students.
+   Different schools have different requirements, but everyone uses
+   writing at some point in their academic career, be it essays, research papers,
+   technical write ups, or scripts.
+
 .. datafile:: emotion_words.txt
-   :hide: 
 
    Sad upset blue down melancholy somber bitter troubled
    Angry mad enraged irate irritable wrathful outraged infuriated
