@@ -106,7 +106,7 @@ to read it. And when you start dealing with big files, you may notice the effici
 
 **Check your Understanding**
 
-.. datafile:: emotion.txt
+.. datafile:: emotion_words.txt
    :hide: 
 
    Sad upset blue down melancholy somber bitter troubled
@@ -117,7 +117,7 @@ to read it. And when you start dealing with big files, you may notice the effici
    Scared afraid fearful panicked terrified petrified startled
    Nervous anxious jittery jumpy tense uneasy apprehensive
 
-1. Write code to find out how many lines are in the file ``emotion.txt``. Save this value to the variable ``num_lines``. Do not use the len method.
+1. Write code to find out how many lines are in the file ``emotion_words.txt``. Save this value to the variable ``num_lines``. Do not use the len method.
 
 .. activecode:: ac9_5_3
 

@@ -29,7 +29,7 @@ Exercises
    However, I wonder how I will get by with all the different languages.
    I only know English!
 
-.. datafile:: emotion_equiv.txt
+.. datafile:: emotion_words.txt
    :hide: 
 
    Sad upset blue down melancholy somber bitter troubled
@@ -119,11 +119,11 @@ Exercises
 
         .. tab:: Question
 
-            Create a list called ``j_emotions`` that contains every word in ``emotion_equiv.txt`` that begins with the letter "j".
+            Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
 
             .. actex:: ac9_9_3
                :nocodelens:
-               :available_files: emotion_equiv.txt
+               :available_files: emotion_words.txt
 
                
                =====
