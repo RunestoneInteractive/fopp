@@ -44,7 +44,7 @@ Chapter Assessment
    technical write ups, or scripts.
 
 .. datafile:: emotion_words.txt
-   :hide: 
+   :hide:
 
    Sad upset blue down melancholy somber bitter troubled
    Angry mad enraged irate irritable wrathful outraged infuriated

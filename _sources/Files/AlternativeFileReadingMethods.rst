@@ -64,45 +64,49 @@ until later in this course. We don't need them for handling data from files.
 
 **Check your Understanding**
 
-.. datafile:: travel_plans.txt
-   :hide:
+.. raw:: html
 
-   This summer I will be travelling.
-   I will go to...
-   Italy: Rome
-   Greece: Athens
-   England: London, Manchester
-   France: Paris, Nice, Lyon
-   Spain: Madrid, Barcelona, Granada
-   Austria: Vienna
-   I will probably not even want to come back! 
-   However, I wonder how I will get by with all the different languages.
-   I only know English!
+    <pre id="travel_plans.txt">
+    This summer I will be travelling.
+    I will go to...
+    Italy: Rome
+    Greece: Athens
+    England: London, Manchester
+    France: Paris, Nice, Lyon
+    Spain: Madrid, Barcelona, Granada
+    Austria: Vienna
+    I will probably not even want to come back! 
+    However, I wonder how I will get by with all the different languages.
+    I only know English!
+    </pre>
 
-.. datafile:: school_prompt.txt
-   :hide:
+.. raw:: html
 
-   Writing essays for school can be difficult but
-   many students find that by researching their topic that they
-   have more to say and are better informed. Here are the university
-   we require many undergraduate students to take a first year writing requirement
-   so that they can
-   have a solid foundation for their writing skills. This comes
-   in handy for many students.
-   Different schools have different requirements, but everyone uses
-   writing at some point in their academic career, be it essays, research papers,
-   technical write ups, or scripts.
+    <pre id="school_prompt.txt">
+    Writing essays for school can be difficult but
+    many students find that by researching their topic that they
+    have more to say and are better informed. Here are the university
+    we require many undergraduate students to take a first year writing requirement
+    so that they can
+    have a solid foundation for their writing skills. This comes
+    in handy for many students.
+    Different schools have different requirements, but everyone uses
+    writing at some point in their academic career, be it essays, research papers,
+    technical write ups, or scripts.
+    </pre>
 
-.. datafile:: emotion_words.txt
-   :hide: 
+.. raw:: html
 
-   Sad upset blue down melancholy somber bitter troubled
-   Angry mad enraged irate irritable wrathful outraged infuriated
-   Happy cheerful content elated joyous delighted lively glad
-   Confused disoriented puzzled perplexed dazed befuddled
-   Excited eager thrilled delighted
-   Scared afraid fearful panicked terrified petrified startled
-   Nervous anxious jittery jumpy tense uneasy apprehensive
+    <pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+    </pre>
+
 
 
 1. Using the file ``school_prompt.txt``, find the number of characters in the file and assign that value to the variable ``num_char``. 
