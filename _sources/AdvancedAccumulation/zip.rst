@@ -145,3 +145,33 @@ However, we can rewrite that using ``zip``, to be a little more comprehensible.
 
    myTests().main()        
 
+**Check Your Understanding**
+
+.. activecode:: ac21_5_8
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/zip
+
+   **1.** Below we have provided two lists of numbers, ``L1`` and ``L2``. Using zip and list comprehension, create a new list, ``L3``, that sums the two numbers if the number from ``L1`` is greater than 10 and the number from ``L2`` is less than 5. This can be accomplished in one line of code.
+   ~~~~
+
+   L1 = [1, 5, 2, 16, 32, 3, 54, 8, 100]
+   L2 = [1, 3, 10, 2, 42, 2, 3, 4, 3]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testSix(self):
+         self.assertEqual(L3, [18, 57, 103], "Testing that L3 is assigned to correct values")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      
+   myTests().main()
+

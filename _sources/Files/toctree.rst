@@ -14,5 +14,5 @@ Files
    WritingTextFiles.rst
    Glossary.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    

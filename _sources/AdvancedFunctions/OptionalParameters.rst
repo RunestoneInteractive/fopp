@@ -157,3 +157,24 @@ When the default value is used, the same list is shared. But on lines 8 and 9 tw
            return x * y
            
        print(f(1))
+
+.. activecode:: ac15_1_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **3.** Write a function called ``str_mult`` that takes in a required string parameter and an optional integer parameter. The default value for the integer parameter should be 3. The function should return the string multiplied by the integer parameter.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(str_mult("ha"), "hahaha", "Testing that str_mult('ha') returns 'hahaha'")
+         self.assertEqual(str_mult("ha", 10), "hahahahahahahahahaha", "Testing that str_mult('ha') returns 'hahahahahahahahahaha'")
+         self.assertEqual(str_mult("ha", 0), "", "Testing that str_mult('ha', 0) returns ''")
+
+   myTests().main()

@@ -19,7 +19,7 @@ a key function, which will be described in the next section. The second optional
 determines whether to sort the items in reverse order. By default, it is False, but if you set it to True, the list will 
 be sorted in reverse order.
 
-.. activecode:: ac16_2_1
+.. activecode:: ac18_2_1
 
     L2 = ["Cherry", "Apple", "Blueberry"]
     print(sorted(L2, reverse = True))
@@ -30,3 +30,27 @@ be sorted in reverse order.
     possible to provide the value True for the reverse parameter without naming that parameter, but then we would have 
     to provide a value for the second parameter as well, rather than allowing the default parameter value to be used. We 
     would have had to write ``sorted(L2, None, True)``. That's a lot harder for humans to read and understand.
+
+
+**Check Your Understanding**
+
+.. activecode:: ac18_2_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **1.** Sort the list, ``lst`` from largest to smallest. Save this new list to the variable ``lst_sorted``.
+   ~~~~
+
+   lst = [3, 5, 1, 6, 7, 2, 9, -2, 5]
+   
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(lst_sorted, sorted(lst, reverse = True), "Testing that lst_sorted value is assigned to correct values.")
+
+   myTests().main()

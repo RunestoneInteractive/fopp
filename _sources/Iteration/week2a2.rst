@@ -11,8 +11,10 @@
    :prefix: iter-12-
    :start: 1
 
-Week 2 Assessment 2
--------------------
+.. Week 2 Assessment 2
+
+Chapter Assessment
+------------------
 
 **Check your understanding**
 
@@ -188,3 +190,39 @@ Week 2 Assessment 2
 
     myTests().main()
 
+.. activecode:: assess_ps_02_09
+   :language: python
+   :autograde: unittest
+
+   Write code to create a list of numbers from 0 to 67 and assign that list to the variable ``nums``. Do not hard code the list.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(nums, range(68), "Testing that nums is a list that contains the correct elements.")
+
+   myTests().main()
+
+.. activecode:: assess_pc_02_10
+   :language: python
+   :autograde: unittest
+
+   Create an empty string and assign it to the variable ``lett``. Then using range, write code such that when your code is run, ``lett`` has 7 b's (``"bbbbbbb"``).
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(lett, "bbbbbbb", "Testing that lett has the correct value." )
+         self.assertNotIn("bbbbbbb", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()

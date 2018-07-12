@@ -11,8 +11,10 @@
    :prefix: data-19-
    :start: 1
 
-Week 1 Assessment 2
--------------------
+.. Week 1 Assessment 2
+
+Chapter Assessment
+------------------
 
 **Check your understanding**
 

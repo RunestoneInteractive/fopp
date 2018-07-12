@@ -19,4 +19,4 @@ Defining your own Classes
    Tamagotchi.rst
    Glossary.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst

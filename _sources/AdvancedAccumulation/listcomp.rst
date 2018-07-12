@@ -88,3 +88,63 @@ You can also combine ``map`` and ``filter`` operations by chaining them together
      alist = [4,2,8,6,5]
      blist = [num*2 for num in alist if num%2==1]
      print(blist)
+
+.. activecode:: ac21_4_4
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/listcomp
+
+   **2.** The for loop below produces a list of numbers greater than 10. Below the given code, use list comprehension to accomplish the same thing. Assign it the the variable ``lst2``. Only one line of code is needed.
+   ~~~~
+
+   L = [12, 34, 21, 4, 6, 9, 42]
+   lst = []
+   for x in L:
+       if x > 10:
+           lst.append(x)
+   print(lst)
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFourA(self):
+         self.assertEqual(lst2, [12, 34, 21, 42], "Testing that lst2 is assigned to correct values")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac21_4_5
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/listcomp
+
+   **3.** Write code to assign to the variable ``compri`` all the values of the key name in the dictionary ``tester``. Do this using list comprehension.
+   ~~~~
+
+   tester = {'info': [{"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science"},{'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science'}, {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology'}, {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science'}, {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History'}, {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior'}]}
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(compri), sorted(['Lauren', 'Ayo', 'Kathryn', 'Nick', 'Gladys', 'Adam']), "Testing that compri has the correct values.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
