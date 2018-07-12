@@ -79,7 +79,18 @@ interested in knowing about. You can see in the example below that a real id is 
     print("origlist:", origlist)
     print("the identifier:", id(origlist))             #id of the list after append is used
 
-Note how even though ``newlist`` and ``origlist`` appear the same, they have different identifiers. 
+Note how even though ``newlist`` and ``origlist`` appear the same, they have different identifiers.
+
+We have previously described `x += 1` as a shorthand for `x = x + 1`. With lists, `+=` is actually a little different. In particular, `origlist += ["cat"] appends "cat" to the end of the original list object. If there is another alias for `origlist`, this can make a difference, as in the code below. See if you can follow (or, better yet, predict, changes in the reference diagram).
+
+.. codelens:: clens8_7_2a
+    :python: py3
+
+    origlist = [45,32,88]
+    aliaslist = origlist
+    origlist += ["cat"]
+    origlist = origlist + ["cow"]
+
 
 We can use append or concatenate repeatedly to create new objects. If we had a string and wanted to make a new list, where each element in the list is a character in the string, where do you think you should start? In both cases, you'll need to first create a variable to store the new object.
 
