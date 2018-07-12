@@ -19,8 +19,7 @@ by using the concatenation operator. However, you need to be careful.
 
 Consider the following example. The original list has 3 integers. We want to add the word "cat" to the end of the list.
 
-.. codelens:: clens8_7_1
-    :python: py3
+.. activecode:: clens8_7_1
 
     origlist = [45,32,88]
 
@@ -35,7 +34,6 @@ Note that the word "cat" needs to be placed in a list since the concatenation op
 to do its work.
 
 .. activecode:: clens8_7_2
-    :python: py3
 
     origlist = [45,32,88]
 
@@ -48,7 +46,6 @@ where``newlist`` refers to a list which is a copy of the original list, ``origli
 This is why the assignment operation is necessary as part of the accumulator pattern.
 
 .. activecode:: clens8_7_3
-    :python: py3
 
     origlist = [45,32,88]
 
