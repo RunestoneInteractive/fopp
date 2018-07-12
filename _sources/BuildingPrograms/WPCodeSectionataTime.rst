@@ -11,8 +11,8 @@
    :prefix: buildP-3-
    :start: 1
 
-WP: Code one section at a time
-==============================
+👩‍💻 Code one section at a time
+================================
 
 As a reminder, this is our prompt:
 

@@ -175,28 +175,6 @@ other versions must follow the same order as seen below.
 
    myTests().main()
 
-.. activecode:: ac7_9_3
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   Create one conditional so that if "Friendly" is in ``w``, then "Friendly is here!" should be assigned to the variable ``wrd``. If it's not, check if "Friend" is in ``w``. If so, the string "Friend is here!" should be assigned to the variable ``wrd``, otherwise "No variation of friend is in here." should be assigned to the variable ``wrd``. (Also consider: does the order of your conditional statements matter for this problem? Why?)
-   ~~~~
-   w = "Friendship is a wonderful human experience!"
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(wrd, "Friend is here!", "Testing the value of wrd")
-         self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
-         self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
-
-   myTests().main()
-
 .. activecode:: ac7_9_4
    :language: python
    :autograde: unittest
@@ -250,36 +228,5 @@ other versions must follow the same order as seen below.
 
       def testSixB(self):
          self.assertEqual(x in [64, 65, 66, 67], True, "Testing that value of x is reasonable for this problem")
-
-   myTests().main()
-
-.. activecode:: ac7_9_6
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   We have written conditionals for you to use. Create the variable x and assign it to some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
-   ~~~~
-   if x >= 10:
-       output = "working"
-   else:
-       output = "Still working"
-   if x > 12:
-       output = "Always working"
-   elif x < 7:
-       output = "Forever working"
-   else:
-       output = "Consistently working"
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(output, "Consistently working", "Testing the value of output")
-      def testTwo(self):
-         self.assertEqual(x in [7,8,9,10,11,12], True, "Testing that x was assigned a correct number" )
 
    myTests().main()

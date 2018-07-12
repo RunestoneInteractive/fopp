@@ -16,7 +16,7 @@ The Accumulator Pattern with Lists
 We can accumulate values into a list rather than accumulating a single numeric value. Consider, for 
 example, the following program which transforms a list into a new list by squaring each of the values.
 
-.. activecode:: iter_accumlist1
+.. activecode:: ac8_9_1
 
    nums = [3, 5, 8]
    accum = []
@@ -84,3 +84,23 @@ Note how this differs from mutating the original list, as you saw in a previous 
      for i in range(len(list)):
         new_list.append(list[i]+5)
      print(new_list)
+
+.. activecode:: ac8_9_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   2. For each word in the list ``verbs``, add an -ing ending. Save this new list in a new list, ``ing``.
+   ~~~~
+   verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testSix(self):
+         self.assertEqual(ing, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that the variable ing has the correct value.")
+
+   myTests().main()

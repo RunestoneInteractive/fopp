@@ -100,3 +100,61 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
     produces the items as they are needed. Most places in Python where you can use a list (e.g., in a for loop) you can 
     use an "iterator" as if it was actually a list. So you probably won't ever notice the difference. If you ever really 
     need a list, you can explicitly turn the output of map into a list: ``list(map(...))``.
+
+**Check Your Understanding**
+
+.. activecode:: ac21_2_4
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/map
+
+   **1.** Using map, create a list assigned to the variable ``greeting_doubled`` that doubles each element in the list ``lst``.
+   ~~~~
+
+   lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOneA(self):
+         self.assertEqual(greeting_doubled, [['hi', 'bye', 'hi', 'bye'], 'hellohello', 'goodbyegoodbye', [9, 2, 9, 2], 8], "Testing that greeting_doubled is assigned to correct values")
+         self.assertIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+   myTests().main()
+
+.. activecode:: ac21_2_5
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/map
+
+   **2.** Below, we have provided a list of strings called ``abbrevs``. Use map to produce a new list called ``abbrevs_upper`` that contains all the same strings in upper case.
+   ~~~~
+
+   abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(abbrevs_upper, ["USA", "ESP", "CHN", "JPN", "MEX", "CAN", "RUS", "RSA", "JAM"], "Testing that abbrevs_upper is correct.")
+         self.assertIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+   myTests().main()

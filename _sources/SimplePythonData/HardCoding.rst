@@ -11,8 +11,8 @@
    :prefix: data-15-
    :start: 1
 
-WP: Hard-Coding
----------------
+👩‍💻 Hard-Coding
+-----------------
 
 As you begin programming, you'll see that there are many ways to solve problems. You'll also find that one of the thrills 
 of programming is how easily you can do things correctly that humans could easily make errors on. For example, you'll 

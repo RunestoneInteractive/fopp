@@ -28,15 +28,14 @@ A **module** is a file containing Python definitions and statements intended for
 use in other Python programs. There are many Python modules that come with
 Python as part of the **standard library**. 
 
-The  `Python Documentation <https://docs.python.org/3.4/>`_ site for Python version
-3.4 is an extremely useful reference for all aspects of Python. The site
+The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
+3.6 is an extremely useful reference for all aspects of Python. The site
 contains a listing of all the standard modules that are available with Python
-(see `Global Module Index <https://docs.python.org/3.4/py-modindex.html>`_). You
+(see `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). You
 will also see that there is a
-`Standard Library Reference <https://docs.python.org/3.4/library/index.html>`_
-(Next week, there will be a chapter explaining how to read the language
-reference documentation) and a
-`Tutorial <https://docs.python.org/3.4/tutorial/index.html>`_, as well as
+`Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
+ and a
+`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_, as well as
 installation instructions, how-tos, and frequently asked questions.  We
 encourage you to become familiar with this site and to use it often.
 
@@ -68,7 +67,7 @@ Note that it is ``import morecode``, not ``import morecode.py``, but the other f
 
 The python interpreter will look for ``morecode.py`` in the following places, in this order:
 
-1. The directory where the current file lives (``~\Desktop\mycode\`` in the example). If it finds ``morecode.py`` there, it uses it. If not, it goes on to step 2.
+1. The directory where the current file lives (``~/Desktop/mycode/`` in the example). If it finds ``morecode.py`` there, it uses it. If not, it goes on to step 2.
 
 2. Other directories that are on the PYTHONPATH. PYTHONPATH is a list of directories on your computer that is automatically configured for you when you install python on your computer. It can be changed if you know what you're doing, but you probably shouldn't mess with it. Indeed, for the duration of this class, you should never need to know what your PYTHONPATH is set to. You will use an installer called ``pip`` to download new modules from the Internet; it will automatically figure out what your PYTHONPATH is and copy the files in those modules to directories that are on the PYTHONPATH. If the interpreter fails to find ``morecode.py`` on the PYTHONPATH, it goes on to step 3.
 

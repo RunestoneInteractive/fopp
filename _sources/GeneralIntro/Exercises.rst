@@ -11,8 +11,8 @@
    :prefix: intro-12-
    :start: 1
 
-Assessment 1
-------------
+Chapter Assessment
+------------------
 
 **Check your understanding**
 

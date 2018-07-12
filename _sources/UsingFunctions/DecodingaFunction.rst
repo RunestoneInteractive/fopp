@@ -11,8 +11,8 @@
    :prefix: UFunc-1-
    :start: 1
 
-WP: Decoding a Function
------------------------
+👩‍💻 Decoding a Function
+-------------------------
 
 In general, when you see a function definition you will try figure out what the function does, but, 
 unless you are writing the function, you won't care *how it does it*. 

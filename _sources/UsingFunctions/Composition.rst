@@ -14,9 +14,8 @@
 .. index:: composition
    function; composition
 
-
-WP: Composition
----------------
+👩‍💻 Composition
+-----------------
 
 As we have already seen, you can call one function from within another. This ability to build functions 
 by using other functions is called **composition**.

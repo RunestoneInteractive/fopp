@@ -26,7 +26,7 @@ First, let's define a function absolute that takes a number and returns its abso
 (Actually, python provides a built-in function ``abs`` that does this, but we are going to 
 define our own, for reasons that will be explained in a minute.)
 
-.. activecode:: ac16_3_1
+.. activecode:: ac18_3_1
 
     L1 = [1, 7, 4, -2, 3]
 
@@ -46,7 +46,7 @@ define our own, for reasons that will be explained in a minute.)
 Now, we can pass the absolute function to L1 in order to specify that we want the items 
 sorted in order of their absolute value, rather than in order of their actual value.
 
-.. activecode:: ac16_3_2
+.. activecode:: ac18_3_2
 
     L1 = [1, 7, 4, -2, 3]
      
@@ -80,7 +80,7 @@ items in order of the values written on their associated post-it notes.
 To illustrate that the absolute function is invoked once on each item, during the execution of sorted, I have 
 added some print statements into the code.
 
-.. activecode:: ac16_3_3
+.. activecode:: ac18_3_3
 
     L1 = [1, 7, 4, -2, 3]
      
@@ -105,3 +105,80 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    ``key``. We will usually pass a parameter value using the keyword parameter passing mechanism. When we write 
    ``key = some_function`` in the function invocation, the word key is there because it is the name of the parameter, 
    specified in the definition of the sort function, not because we are using keyword-based parameter passing.
+
+**Check Your Understanding**
+
+.. activecode:: ac18_3_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **1.** You will be sorting the following list by each element's second letter a to z. Create a function to use when sorting that takes a string as input and return the second letter of that string and name it ``second_let``. Create a variable called ``func_sort`` and assign the sorted list to it. Do not use lambda.
+   ~~~~
+
+   ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(func_sort, sorted(ex_lst, key = second_let), "Testing that func_sort has the correct value.")
+         self.assertNotIn("lambda", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac18_3_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **2.** Below, we have provided a list of strings called ``nums``. Write a function called ``last_char`` that takes a string as input, and returns only its last character. Use this function to sort the list ``nums`` by the last digit of each number, from highest to lowest, and save this as a new list called ``nums_sorted``.
+   ~~~~
+
+   nums = ['1450', '33', '871', '19', '14378', '32', '1005', '44', '8907', '16']
+
+   def last_char(): 
+
+   nums_sorted = 
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testA(self):
+         self.assertEqual(nums_sorted, ['19', '14378', '8907', '16', '1005', '44', '33', '32', '871', '1450'], "Testing that nums_sorted was created correctly.")
+      def testB(self): 
+         self.assertEqual(last_char('pants'), 's', "Testing the function last_char on input 'pants'.")
+
+
+   myTests().main() 
+
+.. activecode:: ac18_3_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **3.** Once again, sort the list ``nums`` based on the last digit of each number from highest to lowest. However, now you should do so by writing a lambda function. Save the new list as ``nums_sorted_lambda``.
+   ~~~~
+
+   nums = ['1450', '33', '871', '19', '14378', '32', '1005', '44', '8907', '16']
+
+   nums_sorted_lambda = 
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testA(self):
+         self.assertEqual(nums_sorted_lambda, ['19', '14378', '8907', '16', '1005', '44', '33', '32', '871', '1450'], "Testing that nums_sorted_lambda was created correctly.")
+         self.assertIn("lambda", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+   myTests().main() 

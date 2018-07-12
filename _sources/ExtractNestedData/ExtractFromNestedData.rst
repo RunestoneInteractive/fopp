@@ -12,8 +12,8 @@
    :prefix: WPNested-1-
    :start: 1
 
-WP: Extracting from Nested Data
-===============================
+👩‍💻 Extracting from Nested Data
+=================================
 
 A common problem, especially when dealing with data returned from a web site, is to extract certain elements from deep 
 inside a nested data structure. In principle, there's nothing more difficult about pulling something out from deep inside 
