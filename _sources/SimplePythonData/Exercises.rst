@@ -70,47 +70,6 @@ Exercises
       ~~~~
       2 + (3 - 1) * 10 / 5 * (2 + 3)
 
-
-
-.. question:: spd_ex_3
-
-    .. tabbed:: q2a
-
-        .. tab:: Question
-
-            .. actex:: spd_ex_3q
-
-                What do these expressions evaluate to?
-            
-                #.  ``3 == 3``
-                #.  ``3 != 3``
-                #.  ``3 >= 4``
-                #.  ``not (3 < 4)``
-                ~~~~        
-        
-
-        .. tab:: Answer
-            
-            #. True
-            #. False
-            #. False
-            #. False
-
-
-.. question:: spd_ex_4
-
-        .. actex:: ex_2_4
-
-           Give the **logical opposites** of these conditions, meaning an expression that would 
-           produce False whenever this expression produces True, and vice versa.  You are not 
-           allowed to use the ``not`` operator.
-
-           #.  ``a > b``
-           #.  ``a >= b``
-           #.  ``a >= 18  and  day == 3``
-           #.  ``a >= 18  or  day != 3``
-           ~~~~
-
 .. question:: spd_ex_5
 
     .. tabbed:: q5
@@ -328,3 +287,46 @@ Exercises
       Optional. Write a program that will convert degrees fahrenheit to degrees celsius.
       ~~~~
 
+.. question:: spd_ex_15
+
+   .. parsonsprob:: pp_2_15
+      :noindent:
+
+      Piece together the code so that a user is asked for two numbers, and then the sum of those two numbers is printed out.
+      -----
+      num_one = input("Please enter your first number: ")
+      =====
+      num_two = input("Please enter your second number: ")
+      =====
+      sum_of_input = int(num_one) + int(num_two)
+      =====
+      print(sum_of_input)
+
+.. question:: spd_ex_16
+
+   .. parsonsprob:: pp_2_16
+      :noindent:
+
+      Write a program that will convert gallons to liters. This program will also need to get input from a user to see how many gallons should be converted and the result should be printed to the user.
+      -----
+      user_gallons = input("How many gallons should be converted?: ")
+      =====
+      num_gallons = int(user_gallons)
+      =====
+      liters = num_gallons * 3.785
+      =====
+      print("Number of liters: " + str(liters))
+
+
+.. question:: spd_ex_17
+
+   .. parsonsprob:: pp_2_17
+      :noindent:
+
+      Write a program that will convert table spoons to teaspons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
+      -----
+      user_tablespoons = float(input("How many tablespoons should be converted?: "))
+      =====
+      teaspoons = user_tablespoons / 3
+      =====
+      print("Number of teaspoons: " + str(teaspoons))

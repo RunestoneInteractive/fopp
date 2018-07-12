@@ -34,8 +34,8 @@ contains a listing of all the standard modules that are available with Python
 (see `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). You
 will also see that there is a
 `Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
- and a
-`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_, as well as
+and a
+`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ as well as
 installation instructions, how-tos, and frequently asked questions.  We
 encourage you to become familiar with this site and to use it often.
 

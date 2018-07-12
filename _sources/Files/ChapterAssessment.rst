@@ -14,7 +14,7 @@
 Chapter Assessment
 ==================
 
-.. datafile:: files_extra.txt
+.. datafile:: travel_plans.txt
    :hide:
 
    This summer I will be travelling.
@@ -44,7 +44,7 @@ Chapter Assessment
    technical write ups, or scripts.
 
 .. datafile:: emotion_words.txt
-   :hide: 
+   :hide:
 
    Sad upset blue down melancholy somber bitter troubled
    Angry mad enraged irate irritable wrathful outraged infuriated
@@ -54,7 +54,7 @@ Chapter Assessment
    Scared afraid fearful panicked terrified petrified startled
    Nervous anxious jittery jumpy tense uneasy apprehensive
 
-1. The textfile, ``files_extra.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
+1. The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
 
 .. activecode:: ac9_10_1
 
@@ -146,7 +146,7 @@ Chapter Assessment
    myTests().main() 
 
 
-7. Assign the first 33 characters from the textfile, ``files_extra.txt`` to the variable ``first_chars``.
+7. Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
 
 .. activecode:: ac9_10_7
 

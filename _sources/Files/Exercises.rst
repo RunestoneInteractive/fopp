@@ -14,31 +14,57 @@
 Exercises
 ---------
 
-.. datafile:: travel_plans.txt
-   :hide:
+Below are the datafiles that you have been using so far, and will continue to use for the rest of the chapter.
 
-   This summer I will be travelling.
-   I will go to...
-   Italy: Rome
-   Greece: Athens
-   England: London, Manchester
-   France: Paris, Nice, Lyon
-   Spain: Madrid, Barcelona, Granada
-   Austria: Vienna
-   I will probably not even want to come back! 
-   However, I wonder how I will get by with all the different languages.
-   I only know English!
+The file below is ``travel_plans.txt``.
 
-.. datafile:: emotion_equiv.txt
-   :hide: 
+.. raw:: html
 
-   Sad upset blue down melancholy somber bitter troubled
-   Angry mad enraged irate irritable wrathful outraged infuriated
-   Happy cheerful content elated joyous delighted lively glad
-   Confused disoriented puzzled perplexed dazed befuddled
-   Excited eager thrilled delighted
-   Scared afraid fearful panicked terrified petrified startled
-   Nervous anxious jittery jumpy tense uneasy apprehensive
+    <pre id="travel_plans.txt">
+    This summer I will be travelling.
+    I will go to...
+    Italy: Rome
+    Greece: Athens
+    England: London, Manchester
+    France: Paris, Nice, Lyon
+    Spain: Madrid, Barcelona, Granada
+    Austria: Vienna
+    I will probably not even want to come back! 
+    However, I wonder how I will get by with all the different languages.
+    I only know English!
+    </pre>
+
+The file below is ``school_prompt.txt``.
+
+.. raw:: html
+
+    <pre id="school_prompt.txt">
+    Writing essays for school can be difficult but
+    many students find that by researching their topic that they
+    have more to say and are better informed. Here are the university
+    we require many undergraduate students to take a first year writing requirement
+    so that they can
+    have a solid foundation for their writing skills. This comes
+    in handy for many students.
+    Different schools have different requirements, but everyone uses
+    writing at some point in their academic career, be it essays, research papers,
+    technical write ups, or scripts.
+    </pre>
+
+The file below is ``emotion_words.txt``.
+
+.. raw:: html
+
+    <pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+    </pre>
+
 
 .. question:: files_ex_1
    :number: 1
@@ -119,11 +145,11 @@ Exercises
 
         .. tab:: Question
 
-            Create a list called ``j_emotions`` that contains every word in ``emotion_equiv.txt`` that begins with the letter "j".
+            Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
 
             .. actex:: ac9_9_3
                :nocodelens:
-               :available_files: emotion_equiv.txt
+               :available_files: emotion_words.txt
 
                
                =====
