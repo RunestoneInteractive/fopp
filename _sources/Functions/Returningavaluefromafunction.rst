@@ -321,3 +321,152 @@ interpreter does these steps:
            print("All done with accumulation!")
 
        show_me_numbers([4,2,3])
+
+.. activecode:: ac11_4_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **8.** Write a function named ``same`` that takes a string as input, and simply returns that string.
+   ~~~~
+   
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
+
+   myTests().main()
+
+
+.. activecode:: ac11_4_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **9.** Write a function called ``same_thing`` that returns the parameter, unchanged.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(same_thing(5), 5,"Testing the function same_thing with input 5")
+         self.assertEqual(same_thing("Welcome"), "Welcome", "Testing the function same_thing with input 'Welcome'")
+
+   myTests().main()
+
+.. activecode:: ac11_4_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **10.** Write a function called ``subtract_three`` that takes an integer or any number as input, and returns that number minus three.
+   ~~~~
+   
+   ===== 
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(subtract_three(9), 6, "Testing the subtract_three function on input 9.")
+         self.assertEqual(subtract_three(-5), -8, "Testing the subtract_three function on input -5.")
+
+   myTests().main()
+
+
+.. activecode:: ac11_4_7
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **11.** Write a function called ``change`` that takes one number as its input and returns that number, plus 7.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(change(5), 12,"Testing the function change with input 5")
+         self.assertEqual(change(-10), -3, "Testing the function change with input -10")
+
+   myTests().main()
+
+.. activecode:: ac11_4_8
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **12.** Write a function named ``intro`` that takes a string as input. Given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(intro("Mike"), "Hello, my name is Mike and I love SI 106.", "Testing the intro function on input 'Mike'.")
+
+   myTests().main()
+
+
+.. activecode:: ac11_4_9
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **13.** Write a function called ``s_change`` that takes one string as input and returns that string, concatenated with the string " for fun.".
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(s_change("Coding"), "Coding for fun." ,"Testing the function s_change with input coding")
+         self.assertEqual(s_change("We go to the beach"), "We go to the beach for fun." , "Testing the function s_change with input We go to the beach")
+
+   myTests().main()
+
+.. activecode:: ac11_4_10
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Returningavaluefromafunction
+
+   **14.** Write a function called ``decision`` that takes a string as input, and then checks the number of characters. If it has over 17 characters, return "This is a long string", if it is shorter or has 17 characters, return "This is a short string".
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(decision("Well hello dolly"), "This is a short string", "Testing the function decision with input 'Well hello dolly'")
+         self.assertEqual(decision("In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes"), "This is a long string", "Testing the function decision with input 'In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes'")
+         self.assertEqual(decision("how do you do sir"), "This is a short string", "Testing the function decision with input 'how do you do sir'")
+
+   myTests().main()

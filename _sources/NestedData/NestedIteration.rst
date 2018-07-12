@@ -37,6 +37,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
         for y in x:
             print("    level2: " + y)
 
+**Check Your Understanding**
 
 .. parsonsprob:: pp17_3_1
    :practice: T
@@ -53,4 +54,48 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    =====
                count = count + 1
    =====
-       return count    
+       return count   
+
+.. activecode:: ac17_3_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **2.** Below, we have provided a list of lists that contain information about people. Write code to create a new list that contains every person's last name, and save that list as ``last_names``.
+
+   ~~~~
+
+   info = [['Tina', 'Turner', 1939, 'singer'], ['Matt', 'Damon', 1970, 'actor'], ['Kristen', 'Wiig', 1973, 'comedian'], ['Michael', 'Phelps', 1985, 'swimmer'], ['Barack', 'Obama', 1961, 'president']]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(last_names, ['Turner', 'Damon', 'Wiig', 'Phelps', 'Obama'], "Testing that last_names was created correctly.")
+
+   myTests().main() 
+
+.. activecode:: ac17_3_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **3.** Below, we have provided a list of lists named ``L``. Use nested iteration to save every string containing "b" into a new list named ``b_strings``.
+
+   ~~~~
+
+   L = [['apples', 'bananas', 'oranges', 'blueberries', 'lemons'], ['carrots', 'peas', 'cucumbers', 'green beans'], ['root beer', 'smoothies', 'cranberry juice']]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(b_strings, ['bananas', 'blueberries', 'cucumbers', 'green beans', 'root beer', 'cranberry juice'], "Testing that b_strings was created correctly.")
+
+   myTests().main() 

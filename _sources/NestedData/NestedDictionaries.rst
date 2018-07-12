@@ -21,6 +21,9 @@ lists or dictionaries can also contain lists and dictionaries. There can be many
 Only the values in dictionaries can be objects of arbitrary type. The keys in dictionaries must be one of the immutable 
 data types (numbers, strings, tuples).
 
+
+**Check Your Understanding**
+
 .. mchoice:: question17_2_1
    :practice: T
    :multiple_answers:
@@ -39,4 +42,27 @@ data types (numbers, strings, tuples).
    .. code-block:: python 
     
        d = {'key1': {'a': 5, 'c': 90, 5: 50}, 'key2':{'b': 3, 'c': "yes"}}
+
+.. activecode:: ac17_2_1
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **1.** Extract the value associated with the key color and assign it to the variable ``color``. Do not hard code this.
+
+   ~~~~
+
+   info = {'personal_data': 
+            {'name': 'Lauren', 'age': 20, 'major': 'Information Science', 'physical_features': {'color': {'eye': 'blue', 'hair': 'brown'}, 'height': "5'8"}}, 'other': {'favorite_colors': ['purple', 'green', 'blue'], 'interested_in': ['social media', 'intellectual property', 'copyright', 'music', 'books']}}
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(color, {'eye': 'blue', 'hair': 'brown'}, "Testing that color has the correct value.")
+
+   myTests().main()
 

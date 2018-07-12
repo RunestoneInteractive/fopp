@@ -162,3 +162,50 @@ execution.
           print "x, y, z are:", x, y, z
       initial = 0
       f(2)
+
+.. activecode:: ac15_2_1
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **5.** Define a function called ``multiply``. It should have one required parameter, a string. It should also have one optional parameter, an integer, named ``mult_int``, with a default value of 10. The function should return the string multiplied by the integer. (i.e.: Given inputs "Hello", mult_int=3, the function should return "HelloHelloHello")
+   ~~~~
+
+   def multiply():
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(multiply("Hello", mult_int = 3), "HelloHelloHello", "Testing the function multiply on inputs 'Hello', 3.")
+         self.assertEqual(multiply("Goodbye"), "GoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbye", "Testing the function mulitply on input 'Goodbye'.")
+
+   myTests().main()
+
+.. activecode:: ac15_2_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **6.** Currently the function is supposed to take 1 required parameter, and 2 optional parameters, however the code doesn't work. Fix the code so that it passes the test. This should only require changing one line of code.
+   ~~~~
+
+   def waste(var = "Water", mar, marble = "type"):
+       final_string = var + " " + marble + " " + mar
+       return final_string
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(waste("Pokemon"), "Water type Pokemon", "Testing that waste returns the correct string on input 'Pokemon'")
+
+   myTests().main()
+
+

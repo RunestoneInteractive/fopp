@@ -11,4 +11,5 @@ More About Iteration
    RandomlyWalkingTurtles.rst
    BreakandContinue.rst
    Exercises.rst
+   ChapterAssessment.rst
    

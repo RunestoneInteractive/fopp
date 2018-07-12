@@ -440,3 +440,126 @@ Exercises
          self.assertEqual(maxs, [4, 5, 3, 5], "Testing whether maxs has been correctly defined.")
 
    myTests().main()
+
+.. activecode:: ac21_6_17
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/listcomp
+
+   Write code to assign to the variable ``compri_sample`` all the values of the key name in the dictionary ``tester`` if they are Juniors. Do this using list comprehension.
+   ~~~~
+
+   tester = {'info': [{"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science"},{'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science'}, {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology'}, {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science'}, {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History'}, {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior'}]}
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(compri_sample), sorted(['Lauren', 'Nick']), "Testing that compri_sample has the correct values.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac21_6_18
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/listcomp
+
+   **Challenge** The nested for loop given takes in a list of lists and combines the elements into a single list. Do the same thing using a list comprehension for the list ``L``. Assign it to the variable ``result2``.
+   ~~~~
+
+   def onelist(lst):
+       result = []
+       for each_list in lst:
+           for item in each_list:
+               result.append(item)
+       return result
+
+   L = [["hi", "bye"], ["hello", "goodbye"], ["hola", "adios", "bonjour", "au revoir"]]
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testSeven(self):
+         self.assertEqual(result2, ['hi', 'bye', 'hello', 'goodbye', 'hola', 'adios', 'bonjour', 'au revoir'], "Testing that result2 is assigned to correct values")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      
+   myTests().main()
+
+.. activecode:: ac21_6_19
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/listcomp
+
+   **Challenge:** Write code to assign to the variable ``class_sched`` all the values of the key ``important classes``. Do this using list comprehension.
+   ~~~~
+
+   tester = {'info': [
+            {"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science", 'important classes': ['SI 106', 'ENGLISH 125', 'SI 110', 'AMCULT 202']},
+            {'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science', "important classes": ['SI 106', 'SI 410', 'PSYCH 111']}, 
+            {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology', 'important classes': ['WOMENSTD 220', 'SOC 101', 'ENS 384']}, 
+            {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science', "important classes": ['SOC 101', 'AMCULT 334', 'EECS 281']}, 
+            {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History', 'important classes': ['ENGLISH 125', 'HIST 259', 'ENGLISH 130']}, 
+            {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior', 'important classes': ['PIANO 101', 'STUDIO 300', 'THEORY 229', 'MUSC 356']}]}
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(class_sched), sorted(['SI 106', 'ENGLISH 125', 'SI 110', 'AMCULT 202','SI 106', 'SI 410', 'PSYCH 111', 'WOMENSTD 220', 'SOC 101', 'ENS 384', 'SOC 101', 'AMCULT 334', 'EECS 281', 'ENGLISH 125', 'HIST 259', 'ENGLISH 130', 'PIANO 101', 'STUDIO 300', 'THEORY 229', 'MUSC 356']), "Testing that class_sched has the correct list.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac21_6_20
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+
+   **Challenge:** Below, we have provided a list of lists that contain numbers. Using list comprehension, create a new list ``threes`` that contains all the numbers from the original list that are divisible by 3. This can be accomplished in one line of code.
+   ~~~~
+
+   nums = [[4, 3, 12, 10], [8, 7, 6], [5, 18, 15, 7, 11], [9, 4], [24, 20, 17], [3, 5]]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(threes, [3, 12, 6, 18, 15, 9, 24, 3], "Testing that threes was created correctly.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main() 

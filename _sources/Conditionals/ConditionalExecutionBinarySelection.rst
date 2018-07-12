@@ -173,27 +173,6 @@ There is no limit on the number of statements that can appear under the two clau
 
    myTests().main()
 
-.. activecode:: ac7_6_3
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   Write code so that if ``"STATS 250"`` is in the list ``schedule``, then the string ``"You could be in Information Science!"`` is assigned to the variable ``resp``. Otherwise, the string ``"That's too bad."`` should be assigned to the variable ``resp``.
-   ~~~~
-   schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(resp, "You could be in Information Science!", "Testing the value of resp given the schedule list provided.")
-         self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
-
-   myTests().main()
-
 .. activecode:: ac7_6_4
    :language: python
    :autograde: unittest
@@ -216,25 +195,3 @@ There is no limit on the number of statements that can appear under the two clau
          self.assertEqual(c, 35, "Testing that c has the correct value.")
 
    myTests().main()
-
-.. activecode:: ac7_6_5
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   Create the variable ``z`` whose value is ``30``. Write code to see if ``z`` is greater than ``y``. If so, add 5 to ``y``'s value, otherwise do nothing. Then, multiply ``z`` and ``y``, and assign the resulting value to the variable ``x``.
-   ~~~~
-   y = 22
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(x, 810, "Testing the value of x")
-      def testTwo(self):
-         self.assertEqual(z, 30, "Testing that z has correctly been defined.")
-
-   myTests().main()   

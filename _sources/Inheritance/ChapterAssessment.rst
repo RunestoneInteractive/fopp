@@ -7,8 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Extra Exercises
-===============
+Chapter Assessment
+==================
 
 1. The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create. ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different. For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string "[name of pokemon] knows a lot of different moves!". Create an instance of this class with the name as "Belle". Assign this instance to the variable ``p1``.
 

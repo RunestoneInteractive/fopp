@@ -34,7 +34,7 @@ write an assignment statement that uses the accumulator pattern::
 Note that the word "cat" needs to be placed in a list since the concatenation operator needs two lists 
 to do its work.
 
-.. activecode:: clens8_7_2
+.. codelens:: clens8_7_2
     :python: py3
 
     origlist = [45,32,88]
@@ -47,7 +47,7 @@ where``newlist`` refers to a list which is a copy of the original list, ``origli
 "cat" added to the end.  ``origlist`` still contains the three values it did before the concatenation. 
 This is why the assignment operation is necessary as part of the accumulator pattern.
 
-.. activecode:: clens8_7_3
+.. codelens:: clens8_7_3
     :python: py3
 
     origlist = [45,32,88]

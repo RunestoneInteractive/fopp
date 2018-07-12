@@ -11,8 +11,8 @@
    :prefix: progdev-1-
    :start: 1
 
-WP: Program Development
------------------------
+👩‍💻 Program Development
+-------------------------
 
 At this point, you should be able to look at complete functions and tell what
 they do. Also, if you have been doing the exercises, you have written some

@@ -11,8 +11,8 @@
    :prefix: buildP-2-
    :start: 1
 
-WP: Sketch an Outline
-=====================
+👩‍💻 Sketch an Outline
+=======================
 
 The prompt that we will be using is the following:
 

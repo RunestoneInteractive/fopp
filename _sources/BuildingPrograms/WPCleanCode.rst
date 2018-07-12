@@ -11,8 +11,8 @@
    :prefix: buildP-4-
    :start: 1
 
-WP: Clean Up
-============
+👩‍💻 Clean Up
+==============
 
 Congrats! We've solved the problem now, but our code isn't very nice to read. We can clean it up now and remove the print statements.
 

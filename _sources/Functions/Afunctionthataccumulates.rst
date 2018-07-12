@@ -53,3 +53,49 @@ the original len function, and our implementation may not be a very good one.
    print(mylen("hello"))
    print(mylen([1, 2, 7]))
 
+**Check your Understanding**
+
+.. activecode:: ac11_5_2
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Afunctionthataccumulates
+
+   **1.** Write a function named ``total`` that takes a list of integers as input, and returns the total value of all those integers added together.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(total([1, 2, 3, 4, 5]), 15, "Testing the total function on input [1, 2, 3, 4, 5].")
+         self.assertEqual(total([0, 0, 0, 0]), 0, "Testing the total function on input [0, 0, 0, 0].")
+         self.assertEqual(total([]), 0, "Testing the total function on input [].")
+         self.assertEqual(total([2]), 2, "Testing the total function on input [2].")
+
+   myTests().main() 
+
+.. activecode:: ac11_5_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Functions/Afunctionthataccumulates
+
+   **2.** Write a function called ``count`` that takes a list of numbers as input and returns all of the elements added togther.
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(count([]), 0, "Testing the function count with input []")
+         self.assertEqual(count([1, 5, 9, -2, 9, 23]), 45, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
+
+   myTests().main()
+
