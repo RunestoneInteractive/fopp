@@ -190,30 +190,13 @@ Level 1 Questions
 Level 2 Questions
 -----------------
 
-#. What is the average amount of money loaned per individual?
 #. In which country was the loan granted that took the longest to fund?
 #. What is the average amount of time / dollar it takes to fund a loan?
 #. What is the average amount of loans made to people in the Philippines?
-#. What percentage of the loans were funded (some could be expired)
 #. Is there a relationship between the loan amount and the number of people?  Or time to fund?  How would we measure this? Covariance? Correlation?
 #. What is the standard deviation of the money loaned?   The Empirical Rule or 68-95-99.7% Rule reminds us that 68% of the population falls within 1 standard  deviation.  Does this hold for our data?
 
-.. math::
 
-    covariance = \frac{\sum{x -\bar{x}} \cdot \sum{y-\bar{y}}}{n}
-
-.. math::
-
-    variance = \frac{\sum{ (x-\bar{x})^2}}{n}
-
-.. math::
-
-    stdev = \sqrt{variance}
-
-.. math::
-
-    pearson = \frac{covariance(x,y)}{std(x) std(y)}
-    
 
 .. activecode:: act_kiva_8
     :include: act_kiva_1
@@ -257,3 +240,91 @@ Level 2 Questions
     
     MyTests().main()
 
+
+
+.. activecode:: act_kiva_10
+    :include: act_kiva_1
+
+    What is the arithmetic mean of the time / dollar it takes to fund a loan?  The arithmetic mean is the average of the individual time/dollar calculations, not the average of the sum of time divided by the sum of dollar amounts.
+    ~~~~
+    # Your code here
+    ====
+    from unittest.gui import TestCaseGui
+
+    class MyTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
+            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
+            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+    
+    MyTests().main()
+
+For our final few exercises we are interested in exploring the distribution of the data as well as the relationships between two of our variables.  To do this we need to introduce a few more statistical concepts including variance, standard deviation, covariance and correlation.
+
+**Variance** looks at a single variable and measures how far the set of numbers are spread out from their average value.  However its a bit hard to interpret because the units are squared so its not on the same scale as our original numbers.  This is why most of the time we use the **standard devation**, which is just the square root of the variance.  A large standard deviation tells us that our data is quite spread out while a small standard deviation tells us that most of our data is pretty close to the mean. 
+
+.. math::
+
+    variance = \frac{\sum{ (x-\bar{x})^2}}{n}
+
+.. math::
+
+    stdev = \sqrt{variance}
+
+Don't let the fancy math get you down the variance is just the sum of the squared values of each value minus the average for that value divided by the number of values.  This is a little more complicated that what you have done before but you can definitely do this.
+
+.. activecode:: act_kiva_10
+    :include: act_kiva_1
+
+    Calculate the standard deviation of the loan_amount variable and store the result in ``loan_stdev``.
+    ~~~~
+    # Your code here
+    ====
+    from unittest.gui import TestCaseGui
+
+    class MyTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
+            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
+            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+    
+    MyTests().main()
+
+In data science we are often most interested in two variables that seem to influence one another.  That is, we can observe that as one variable grows a second grows with it, or as one variable grows another variable shrinks at a similar rate.  We will look at two ways to explore the relationships between these variables.
+
+**Covariance** measures the the larger values of one variable correspond to the larger values of a second variable as well as the extent to which the smaller values of one variable correspond to the smaller values of a second variable.  If the covariance is positive it  means the two variables grow together (positive correlation).  If the magnitude is negative it means one variable grows while the other shrinks.  The magnitude is hard to interpret because it depends on the values of the variables.  So Most often the covariance is normalized so that the values are between minus 1 and positive 1, this is the **pearson correlation coefficient**  A -1 indicates a strong negative correlation, a value of 0 indicates that the variables are not correlated at all, and a +1 indicates a strong positive correlation.
+
+Historically the pearson correlation coefficient has been used in recommender systems to find groups of like minded shoppers that can recommend products to each other.  It was the basis of Amazon.com's recommender system from 1997 to 2000.  I know this because I was part of the team that wrote that software :-)
+
+
+.. math::
+
+    covariance = \frac{\sum{x -\bar{x}} \cdot \sum{y-\bar{y}}}{n}
+
+
+.. math::
+
+    pearson = \frac{covariance(x,y)}{std(x) std(y)}
+
+
+.. activecode:: act_kiva_10
+    :include: act_kiva_1
+
+    Calculate the pearson correlation between the loan_amount and the num_lenders_total or between time_to_raise and the loan_amout or between num_lenders_total and time_to_raise.  If you divide up the class you can compare values to see which pair has the strongest correlation.
+    ~~~~
+    loan_amount_num_lenders = 0
+    loan_amount_ttr = 0
+    num_lenders_ttr = 0
+    ====
+    from unittest.gui import TestCaseGui
+
+    class MyTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
+            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
+            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+    
+    MyTests().main()
