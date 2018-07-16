@@ -60,8 +60,8 @@ Table of Contents
    PythonTurtle/toctree.rst
    Sequences/toctree.rst
    Iteration/toctree.rst
-   SequenceMutation/toctree.rst
    Conditionals/toctree.rst
+   SequenceMutation/toctree.rst
    Files/toctree.rst
    Dictionaries/toctree.rst
    Functions/toctree.rst

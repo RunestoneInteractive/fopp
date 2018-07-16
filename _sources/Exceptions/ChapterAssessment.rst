@@ -45,7 +45,7 @@ Chapter Assessment
    for diction in di:
        total = total + diction['Puppies']
 
-   print "Total number of puppies:", total
+   print("Total number of puppies:", total)
 
 
    =====
@@ -162,7 +162,7 @@ Chapter Assessment
 
    for x in sport:
       
-        print ppl_play[x]
+        print(ppl_play[x])
        
    =====
 
@@ -186,7 +186,7 @@ Chapter Assessment
    for diction in di:
        total = total + diction['Puppies']
 
-   print "Total number of puppies:", total
+   print("Total number of puppies:", total)
 
 
    =====

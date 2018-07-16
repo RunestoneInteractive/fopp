@@ -256,10 +256,10 @@ Chapter Assessment - Aliases and References
    :answer_b: II.
    :answer_c: III.
    :answer_d: IV.
-   :feedback_a: When an object is concatinated with another using +=, a new copy is made. If this is done in the longer form (item = item + object) then it edits the original object.
-   :feedback_b: When an object is concatinated with another using +=, a new copy is made. If this is done in the longer form (item = item + object) then it edits the original object.
-   :feedback_c: When an object is concatinated with another using +=, a new copy is made. If this is done in the longer form (item = item + object) then it edits the original object.
-   :feedback_d: Yes, the behavior of item = item + object_two is different than item += object_two where the first version makes a new object entirely and the second version changes the original object so that object_two is added to the first.
+   :feedback_a: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
+   :feedback_b: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
+   :feedback_c: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
+   :feedback_d: Yes, the behavior of obj = obj + object_two is different than obj += object_two when obj is a list. The first version makes a new object entirely and reassigns to obj. The second version changes the original object so that the contents of object_two are added to the end of the first.
    :correct: d
    :practice: T
    :topics: 
