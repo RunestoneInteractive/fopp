@@ -3,35 +3,10 @@ Computing Statistics with Kiva Data
 
 `Kiva <http://kiva.org>`_ is an international nonprofit, founded in 2005 and based in San Francisco, with a mission to connect people through lending to alleviate poverty. We celebrate and support people looking to create a better future for themselves, their families and their communities.  By lending as little as $25 on Kiva, anyone can help a borrower start or grow a business, go to school, access clean energy or realize their potential. For some, it’s a matter of survival, for others it’s the fuel for a life-long ambition.  The following table contains some data that we will use to practice on some basic descriptive statistics that are commonly used in data science.
 
-======= =========== ============ ====== ============= =================
-id      loan_amount country_name status time_to_raise num_lenders_total
-======= =========== ============ ====== ============= =================
-212763  1250.0      Azerbaijan   funded 193075.0      38
-76281   500.0       El Salvador  funded 1157108.0     18
-444097  1450.0      Bolivia      funded 1552939.0     51
-402224  200.0       Paraguay     funded 244945.0      3
-634949  700.0       El Salvador  funded 238797.0      21
-1383386 100.0       Philippines  funded 1248909.0     1
-351     250.0       Philippines  funded 773599.0      10
-35651   225.0       Nicaragua    funded 116181.0      8
-784253  1200.0      Guatemala    funded 2288095.0     42
-1328839 150.0       Philippines  funded 51668.0       1
-1094905 600.0       Paraguay     funded 26717.0       18
-336986  300.0       Philippines  funded 48030.0       6
-163170  700.0       Bolivia      funded 24078.0       28
-1323915 125.0       Philippines  funded 71117.0       5
-528261  650.0       Philippines  funded 580401.0      16
-495978  175.0       Madagascar   funded 800427.0      7
-1251510 1800.0      Georgia      funded 1156218.0     54
-642684  1525.0      Uganda       funded 1166045.0     1
-974324  575.0       Kenya        funded 2924705.0     18
-7487    700.0       Tajikistan   funded 470622.0      22
-957     1450.0      Jordan       funded 3046687.0     36
-647494  400.0       Kenya        funded 260044.0      12
-706941  200.0       Philippines  funded 445938.0      8
-889708  1000.0      Ecuador      funded 201408.0      24
-882568  350.0       Kenya        funded 2370450.0     8
-======= =========== ============ ====== ============= =================
+.. csv-table:: Kiva Lending Data
+    :file: kiva_smallest.csv
+    :header-rows: 1
+
 
 
 There are some great (more advanced) tools in Python for working with massive tables of data.  In fact this table is a random sample of a data set from Kiva that contains 1.4 million rows!  We will move on to more and bigger data sets in time, but for now we need a simple way to work with this sample.  To do that we will represent each column of the table as its own list.
@@ -274,7 +249,7 @@ For our final few exercises we are interested in exploring the distribution of t
 
 Don't let the fancy math get you down the variance is just the sum of the squared values of each value minus the average for that value divided by the number of values.  This is a little more complicated that what you have done before but you can definitely do this.
 
-.. activecode:: act_kiva_10
+.. activecode:: act_kiva_11
     :include: act_kiva_1
 
     Calculate the standard deviation of the loan_amount variable and store the result in ``loan_stdev``.
@@ -309,7 +284,7 @@ Historically the pearson correlation coefficient has been used in recommender sy
     pearson = \frac{covariance(x,y)}{std(x) std(y)}
 
 
-.. activecode:: act_kiva_10
+.. activecode:: act_kiva_12
     :include: act_kiva_1
 
     Calculate the pearson correlation between the loan_amount and the num_lenders_total or between time_to_raise and the loan_amout or between num_lenders_total and time_to_raise.  If you divide up the class you can compare values to see which pair has the strongest correlation.
