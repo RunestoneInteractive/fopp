@@ -177,9 +177,9 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 
 .. activecode:: act_kiva_graph_4
 
-    Given a list of numbers compute the counts for each bucket as represented by the bucket list. (get it!)  Do not cheat and count these manually.  Tell yourself that test_numbers has ten thousand numbers on it.
+    Given a list of numbers compute the counts for each bucket as represented by the bucket list. (get it!)  Assume that the numbers can be in the range from 0 -- 100. Do not cheat and count these manually.  Tell yourself that test_numbers has ten thousand numbers on it.
     ~~~~
-    test_numbers = [1,1,1,22,22,22,99,99,99, 74, 75, 76, 80, 70]
+    test_numbers = [0,1,1,9,10,20,25,29,99,99,99, 74, 75, 76, 80, 89, 70, 100]
     bucket_list = [0,0,0,0,0,0,0,0,0,0]
 
     ====
@@ -188,13 +188,17 @@ Calculating the buckets is the hard part of this project, the rest of the code y
     class MyTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(bucket_list[0], 3)
-            self.assertEqual(bucket_list[2], 3)
-            self.assertEqual(bucket_list[9], 3)
-            self.assertEqual(bucket_list[1], 0)
-            self.assertEqual(bucket_list[8], 1)
-            self.assertEqual(bucket_list[7], 4)
-            self.assertTrue('for' in self.getEditorText())
+            self.assertEqual(bucket_list[0], 4, "bucket 0")
+            self.assertEqual(bucket_list[1], 1, 'bucket 1')
+            self.assertEqual(bucket_list[2], 3, 'bucket 2')
+            self.assertEqual(bucket_list[3], 0, 'bucket 3')
+            self.assertEqual(bucket_list[4], 0, 'bucket 4')
+            self.assertEqual(bucket_list[5], 0, 'bucket 5')
+            self.assertEqual(bucket_list[6], 0, 'bucket 6')            
+            self.assertEqual(bucket_list[7], 4, 'bucket 7')
+            self.assertEqual(bucket_list[8], 2, 'bucket 8')
+            self.assertEqual(bucket_list[9], 4, 'bucket 9')
+            self.assertTrue('for' in self.getEditorText(), "for loop check")
     
     MyTests().main()
 
@@ -203,7 +207,7 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 .. activecode:: act_kiva_graph_5
     :include: act_kiva_graph_data
 
-    Now repeat what you did before, but use the ``loan_amount`` list.  This time it is a little more complicated because you will need to create your own bucket list, and the numbers are spread out over a much larger range.
+    Now repeat what you did before, but use the ``loan_amount`` list.  This time it is a little more complicated because you will need to create your own bucket list, and the numbers are spread out over a much larger range that does not start at 0.  You don't want to waste any bins so you need to evenly divide the spread of the numbers in the ``loan_amount`` list.  Note:  This is a good problem for learning about boundary conditions.
     ~~~~
     # Your code here
     ====
@@ -212,16 +216,16 @@ Calculating the buckets is the hard part of this project, the rest of the code y
     class MyTests(TestCaseGui):
 
         def testOne(self):
-            self.assert_equal(bucket_list[0] = 51
-            self.assert_equal(bucket_list[1] = 22
-            self.assert_equal(bucket_list[2] = 14
-            self.assert_equal(bucket_list[3] = 6
-            self.assert_equal(bucket_list[4] = 1
-            self.assert_equal(bucket_list[5] = 2
-            self.assert_equal(bucket_list[6] = 1
-            self.assert_equal(bucket_list[7] = 0
-            self.assert_equal(bucket_list[8] = 1
-            self.assert_equal(bucket_list[9] = 2
+            self.assertEqual(bucket_list[0], 51, "bucket 0")
+            self.assertEqual(bucket_list[1], 22, "bucket 1")
+            self.assertEqual(bucket_list[2], 14, "bucket 2")
+            self.assertEqual(bucket_list[3], 6 , "bucket 3")
+            self.assertEqual(bucket_list[4], 1 , "bucket 4")
+            self.assertEqual(bucket_list[5], 2 , "bucket 5")
+            self.assertEqual(bucket_list[6], 1 , "bucket 6")
+            self.assertEqual(bucket_list[7], 0 , "bucket 7")
+            self.assertEqual(bucket_list[8], 1 , "bucket 8")
+            self.assertEqual(bucket_list[9], 2 , "bucket 9")
 
     MyTests().main()
 
