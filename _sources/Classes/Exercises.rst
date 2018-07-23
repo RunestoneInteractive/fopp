@@ -10,75 +10,82 @@
 Exercises
 ---------
 
-#. Add a method ``reflect_x`` to Point which returns a new Point, one which is the 
-   reflection of the point about the x-axis.  For example, 
-   ``Point(3, 5).reflect_x()`` is (3, -5)
-   
-   .. activecode:: ch_cl_02
+.. question:: classes_ex_1
 
-        class Point:
-            """ Point class for representing and manipulating x,y coordinates. """
+    .. tabbed:: q1
 
-            def __init__(self, initX, initY):
+        .. tab:: Question
 
-                self.x = initX
-                self.y = initY
 
-            def getX(self):
-                return self.x
+           .. actex:: ch_cl_01
 
-            def getY(self):
-                return self.y
+              Add a method ``reflect_x`` to Point which returns a new Point, one which is the reflection of the point about the x-axis. For example, ``Point(3, 5).reflect_x()`` is (3, -5)
 
-            def distanceFromOrigin(self):
-                return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+              ~~~~
+
+              class Point:
+                  """ Point class for representing and manipulating x,y coordinates. """
+
+                  def __init__(self, initX, initY):
+
+                      self.x = initX
+                      self.y = initY
+
+                  def getX(self):
+                      return self.x
+
+                  def getY(self):
+                      return self.y
+
+                  def distanceFromOrigin(self):
+                      return ((self.x ** 2) + (self.y ** 2)) ** 0.5
                     
-            def move(self, dx, dy):
-                self.x = self.x + dx
-                self.y = self.y + dy
+                  def move(self, dx, dy):
+                      self.x = self.x + dx
+                      self.y = self.y + dy
                         
-            def __str__(self):
-                return str(self.x)+","+str(self.y)
+                  def __str__(self):
+                      return str(self.x)+","+str(self.y)
 
 
-#.
+.. question:: classes_ex_2
 
     .. tabbed:: q2
 
         .. tab:: Question
 
-           Add a method called ``move`` that will take two parameters, call them ``dx`` and ``dy``.  The method will
-           cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
-           state of the point)
+           .. actex:: ch_cl_02
 
-           .. activecode:: ch_cl_05_question
+              Add a method called ``move`` that will take two parameters, call them ``dx`` and ``dy``.  The method will cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the state of the point)
 
-                class Point:
-                    """ Point class for representing and manipulating x,y coordinates. """
+              ~~~~
 
-                    def __init__(self, initX, initY):
+              class Point:
+                  """ Point class for representing and manipulating x,y coordinates. """
 
-                        self.x = initX
-                        self.y = initY
+                  def __init__(self, initX, initY):
 
-                    def getX(self):
-                        return self.x
+                      self.x = initX
+                      self.y = initY
 
-                    def getY(self):
-                        return self.y
+                  def getX(self):
+                      return self.x
 
-                    def distanceFromOrigin(self):
-                        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+                  def getY(self):
+                      return self.y
+
+                  def distanceFromOrigin(self):
+                      return ((self.x ** 2) + (self.y ** 2)) ** 0.5
                     
-                    # Put your new method here
+                  # Put your new method here
                         
-                    def __str__(self):
-                        return str(self.x)+","+str(self.y)
+                  def __str__(self):
+                      return str(self.x)+","+str(self.y)
            
 
         .. tab:: Answer
             
-            .. activecode:: ch_cl_05_answer
+            .. activecode:: ch_cl_02_answer
             
                 class Point:
                     """ Point class for representing and manipulating x,y coordinates. """
