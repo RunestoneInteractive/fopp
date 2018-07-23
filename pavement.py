@@ -22,6 +22,7 @@ options(
         builddir="./build/fopp",
         sourcedir="_sources",
         outdir="./build/fopp",
+#        warnerror=True,
         confdir=".",
         project_name = "fopp",
         template_args={'course_id': 'fopp',
