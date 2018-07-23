@@ -35,8 +35,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
 
-   1 Write code to print out the phrase "Hello World".
-   ~~~~
+   Write code to print out the phrase "Hello World".
 
    =====
 
@@ -44,7 +43,7 @@ Chapter Assessment
 
    class myTests(TestCaseGui):
 
-      def testOne(self):
-         self.assertIn("Hello World", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+       def testOne(self):
+           self.assertIn("Hello World", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
 
-   myTests().main()
+    myTests().main()
