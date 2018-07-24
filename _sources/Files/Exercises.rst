@@ -73,6 +73,10 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
+            .. actex:: ac9_9_1
+               :nocodelens:
+               :available_files: studentdata.txt
+
                The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The 
                students name is the first thing on each line, followed by some exam scores.  
                The number of scores might be different for each student.
@@ -87,12 +91,9 @@ The file below is ``emotion_words.txt``.
                    john 14 32 25 16 89
                    </pre>
 
-            Using the text file ``studentdata.txt`` write a program that prints out the names of
-            students that have more than six quiz scores. 
-
-            .. actex:: ac9_9_1
-               :nocodelens:
-               :available_files: studentdata.txt
+               Using the text file ``studentdata.txt`` write a program that prints out the names of
+               students that have more than six quiz scores. 
+               ~~~~
 
                # Hint: first see if you can write a program that just prints out the number of scores on each line
                # Then, make it print the number only if the number is at least six
@@ -120,12 +121,12 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
-            Create a list called ``destination`` using the data stored in ``travel_plans.txt``. Each element of the list should contain a line from the file that lists a country and cities inside that country. Hint: each line that has this information also has a colon ``:`` in it.
-
             .. actex:: ac9_9_2
                :nocodelens:
                :available_files: travel_plans.txt
 
+               Create a list called ``destination`` using the data stored in ``travel_plans.txt``. Each element of the list should contain a line from the file that lists a country and cities inside that country. Hint: each line that has this information also has a colon ``:`` in it.
+               ~~~~
                
                =====
 
@@ -145,12 +146,12 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
-            Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
-
             .. actex:: ac9_9_3
                :nocodelens:
                :available_files: emotion_words.txt
 
+               Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
+               ~~~~
                
                =====
 

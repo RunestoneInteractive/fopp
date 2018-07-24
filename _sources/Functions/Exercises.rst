@@ -126,11 +126,12 @@ Exercises
 
         .. tab:: Question
 
-           Write a function that mirrors its string argument, 
-           generating a string containing the original string and the string backwards.
-
            .. actex:: ac11_14_4
               :nocodelens:
+
+              Write a function that mirrors its string argument, 
+              generating a string containing the original string and the string backwards.
+              ~~~~
 
               def mirror(mystr):
                   # your code here
@@ -320,9 +321,10 @@ Exercises
 
         .. tab:: Question
 
-           Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
-
            .. actex:: ac11_14_8
+
+              Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
+              ~~~~
 
 
         .. tab:: Answer

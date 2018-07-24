@@ -17,10 +17,11 @@ Exercises
 #.  .. tabbed:: q1
 
         .. tab:: Question
-
-           Use a ``for`` statement to print 10 random numbers.
            
-           .. activecode:: ac13_5_1
+           .. actex:: ac13_5_1
+
+              Use a ``for`` statement to print 10 random numbers.
+              ~~~~
 
         .. tab:: Answer
             
@@ -38,17 +39,19 @@ Exercises
 
         .. tab:: Question
 
-            Repeat the above exercise but this time print 10 random numbers between 25 and 35.
-
             .. actex:: ac13_5_2
+
+               Repeat the above exercise but this time print 10 random numbers between 25 and 35.
+               ~~~~
 
 #.  .. tabbed:: q3
 
         .. tab:: Question
-
-           The module ``keyword`` determines if a string is a keyword. e.g. ``keyword.iskeyword(s)`` where ``s`` is a string will return either ``True`` or ``False``, depending on whether or not the string is a Python keyword. Import the ``keyword`` module and test to see whether each of the words in list ``test`` are keywords. Save the respective answers in a list, ``keyword_test``.
            
            .. activecode:: ac13_5_3
+
+              The module ``keyword`` determines if a string is a keyword. e.g. ``keyword.iskeyword(s)`` where ``s`` is a string will return either ``True`` or ``False``, depending on whether or not the string is a Python keyword. Import the ``keyword`` module and test to see whether each of the words in list ``test`` are keywords. Save the respective answers in a list, ``keyword_test``.
+              ~~~~
 
               test = ["else", "integer", "except", "elif"]
               keyword_test = []
@@ -69,10 +72,11 @@ Exercises
 #.  .. tabbed:: q4
 
         .. tab:: Question
-
-           The ``string`` module provides sequences of various types of Python characters. It has an attribute called ``digits`` that produces the string '0123456789'. Import the module and assign this string to the variable ``nums``. Below, we have provided a list of characters called ``chars``. Using ``nums`` and ``chars``, produce a list called ``is_num`` that consists of tuples. The first element of each tuple should be the character from ``chars``, and the second element should be a Boolean that reflects whether or not it is a Python digit. 
            
            .. activecode:: ac13_5_4
+
+              The ``string`` module provides sequences of various types of Python characters. It has an attribute called ``digits`` that produces the string '0123456789'. Import the module and assign this string to the variable ``nums``. Below, we have provided a list of characters called ``chars``. Using ``nums`` and ``chars``, produce a list called ``is_num`` that consists of tuples. The first element of each tuple should be the character from ``chars``, and the second element should be a Boolean that reflects whether or not it is a Python digit. 
+              ~~~~
 
               chars = ['h', '1', 'C', 'i', '9', 'True', '3.1', '8', 'F', '4', 'j']
 
@@ -86,5 +90,3 @@ Exercises
                     self.assertEqual(is_num, [('h', False), ('1', True), ('C', False), ('i', False), ('9', True), ('True', False), ('3.1', False), ('8', True), ('F', False), ('4', True), ('j', False)], "Testing that is_num was created correctly.")
       
               myTests().main()
-
-
