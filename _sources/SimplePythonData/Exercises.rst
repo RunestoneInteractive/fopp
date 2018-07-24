@@ -115,9 +115,6 @@ Exercises
        stay, and it will tell you the number of day of the week you will return on.
        ~~~~
 
-        # Problem 6
-        # My Name:
-
 
 .. question:: spd_ex_7
 
@@ -168,19 +165,20 @@ Exercises
 
         .. tab:: Question
 
-            Optional. The formula for computing the final amount if one is earning
-            compound interest is given on Wikipedia as
-
-            .. image:: Figures/compoundInterest.png
-                :alt: formula for compound interest
-
-            Write a Python program that assigns the principal amount of 10000 to
-            variable ``P``, assign to ``n`` the value 12, and assign to ``r`` the interest
-            rate of 8% (0.08).  Then have the program prompt the user for the number of years,
-            ``t``, that the money will be compounded for.  Calculate and print the final
-            amount after ``t`` years.
-
             .. actex:: ex_2_9
+
+                Optional. The formula for computing the final amount if one is earning
+                compound interest is given on Wikipedia as
+
+                .. image:: Figures/compoundInterest.png
+                   :alt: formula for compound interest
+
+                Write a Python program that assigns the principal amount of 10000 to
+                variable ``P``, assign to ``n`` the value 12, and assign to ``r`` the interest
+                rate of 8% (0.08).  Then have the program prompt the user for the number of years,
+                ``t``, that the money will be compounded for.  Calculate and print the final
+                amount after ``t`` years.
+                ~~~~
             
                 P = 10000
                 n = 12
@@ -210,8 +208,7 @@ Exercises
 
    .. actex:: ex_2_10
 
-      Optional: Write a program that will compute the area of a circle.  Prompt the user to 
-      enter the radius and print a nice messageback to the user with the answer.
+      Optional: Write a program that will compute the area of a circle. Prompt the user to enter the radius and print a nice message back to the user with the answer.
       ~~~~
 
   
@@ -221,10 +218,11 @@ Exercises
 
         .. tab:: Question
 
-            Optional. Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
-            Print a nice message with the answer.
-
             .. actex:: ex_2_11
+
+               Optional. Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
+               Print a nice message with the answer.
+               ~~~~
         
         .. tab:: Answer
 
@@ -256,9 +254,10 @@ Exercises
 
         .. tab:: Question
 
-            Optional. Write a program that will convert degrees celsius to degrees fahrenheit.
-
             .. actex:: ex_2_13
+
+               Optional. Write a program that will convert degrees celsius to degrees fahrenheit.
+               ~~~~
         
         .. tab:: Answer
 

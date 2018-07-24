@@ -14,23 +14,28 @@
 Exercises
 =========
 
-#. Predict what will print out from the following code.
+#.
+    .. tabbed:: q1
 
-If a line causes a run-time error, comment it out and see whether the rest of your predictions were correct.
+        .. tab:: Question
 
-.. actex:: ac10_8_1
+            .. actex:: ac10_8_1
 
-   d = {'apples': 15, 'grapes': 12, 'bananas': 35}
-   print(d['banana'])
-   d['oranges'] = 20
-   print(len(d))
-   print('grapes' in d)
-   print(d['pears'])
-   print(d.get('pears', 0))
-   fruits = d.keys()
-   print(fruits)
-   del d['apples']
-   print('apples' in d)
+               Predict what will print out from the following code. If a line causes a run-time error, comment it out and see whether the rest of your predictions were correct.
+
+               ~~~~
+
+               d = {'apples': 15, 'grapes': 12, 'bananas': 35}
+               print(d['banana'])
+               d['oranges'] = 20
+               print(len(d))
+               print('grapes' in d)
+               print(d['pears'])
+               print(d.get('pears', 0))
+               fruits = d.keys()
+               print(fruits)
+               del d['apples']
+               print('apples' in d)
 
 2. Avast, try this one, swabbies!
 
@@ -38,36 +43,37 @@ If a line causes a run-time error, comment it out and see whether the rest of yo
 
         .. tab:: Question
 
-            Here's a table of English to Pirate translations
-
-            ==========  ==============
-            English     Pirate
-            ==========  ==============
-            sir         matey
-            hotel       fleabag inn
-            student     swabbie
-            boy         matey
-            madam       proud beauty
-            professor   foul blaggart
-            restaurant  galley
-            your        yer
-            excuse      arr
-            students    swabbies
-            are         be
-            lawyer      foul blaggart
-            the         th'
-            restroom    head
-            my          me
-            hello       avast
-            is          be
-            man         matey
-            ==========  ==============
-
-            Write a program that asks the user for a sentence in English and then translates that
-            sentence to Pirate.
-
             .. actex:: ac10_8_2
 
+               Here's a table of English to Pirate translations
+
+               .. table::
+        
+                  ==========  ==============
+                  English     Pirate
+                  ==========  ==============
+                  sir         matey
+                  hotel       fleabag inn
+                  student     swabbie
+                  boy         matey
+                  madam       proud beauty
+                  professor   foul blaggart
+                  restaurant  galley
+                  your        yer
+                  excuse      arr
+                  students    swabbies
+                  are         be
+                  lawyer      foul blaggart
+                  the         th'
+                  restroom    head
+                  my          me
+                  hello       avast
+                  is          be
+                  man         matey
+                  ==========  ==============
+
+               Write a program that asks the user for a sentence in English and then translates that sentence to Pirate.
+               ~~~~
 
         .. tab:: Answer
 
@@ -94,39 +100,40 @@ If a line causes a run-time error, comment it out and see whether the rest of yo
                 print(" ".join(psentence))
 
 #. (Optional: challenge exericse)
+
       .. tabbed:: q2
 
             .. tab:: Question
 
-                  Write a program that finds the most used 7 letter word in scarlet3.txt.
-
                   .. actex:: ac10_8_3
 
-                        f = open('scarlet3.txt', 'r')
+                     Write a program that finds the most used 7 letter word in scarlet3.txt.
+                     ~~~~
+
+                     f = open('scarlet3.txt', 'r')
 
             .. tab:: Answer
 
                   .. activecode:: answer10_8_3
 
-                        f = open('scarlet3.txt', 'r')
-                        contents = f.read()
-                        d = {}
+                      f = open('scarlet3.txt', 'r')
+                      contents = f.read()
+                      d = {}
 
-                        for w in contents.split():
-                            if len(w) == 7:
-                                if w not in d:
-                                    d[w] = 1
-                                else:
-                                    d[w] = d[w] + 1
+                      for w in contents.split():
+                          if len(w) == 7:
+                              if w not in d:
+                                  d[w] = 1
+                              else:
+                                  d[w] = d[w] + 1
 
-                        dkeys = d.keys()
-                        most_used = dkeys[0]
-                        for k in dkeys:
-                            if d[k] > d[most_used]:
-                                most_used = k
+                      dkeys = d.keys()
+                      most_used = dkeys[0]
+                      for k in dkeys:
+                          if d[k] > d[most_used]:
+                              most_used = k
 
-                        print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
-   
+                      print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
 
 .. question:: dict_ex_4
    :number: 4
