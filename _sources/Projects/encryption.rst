@@ -1,6 +1,9 @@
 Substitution Cipher
 ===================
 
+.. qnum::
+    :prefix: encrypt-
+    :start: 1
 
 Perhaps one of the earliest uses of computers was in the area of encrypting and decrypting secret messages.  the image below is a picture I took in the Deutsches Museum in germany.  It is a picture of the german enigma machine.  The operator of this machine would type in a message using the keyboard, and the machine would output the encrypted version of the letter.  For example you might type the letter p but the machine would output the letter b.
 
@@ -19,7 +22,7 @@ The engigma machine was used by the Germans during World War II to encrypt order
 
 The enigma encrypted messages using a much more sophisticated code than the previous question.  The secret message I gave you uses a simple substitution cipher.  I have given you one hint but if you still don't have it This matching question will reveal a few more hints that should help you solve it.  
 
-The letters on the left correspond to the letters in the ciphertext and the letters on the right correspond to the plaintext
+The letters on the left correspond to the letters in the ciphertext and the letters on the right correspond to the plaintext.  Drag the letters on the left to their corresponding letters on the right.
 
 .. dragndrop:: act_enc_match1
     :match_1: a|||o
