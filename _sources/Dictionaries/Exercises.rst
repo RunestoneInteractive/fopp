@@ -99,7 +99,7 @@ Exercises
 
                 print(" ".join(psentence))
 
-#. (Optional: challenge exericse)
+#. (challenge exericse)
 
       .. tabbed:: q2
 
