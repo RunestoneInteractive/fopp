@@ -132,7 +132,7 @@ Level 1 Questions
 
         def testOne(self):
             self.assertTrue('philippines_count' in self.getEditorText(), "you need a philippines_count variable")
-            self.assertEqual(philipines_count, country_name.count('Philippines'), "")
+            self.assertEqual(philippines_count, country_name.count('Philippines'), "")
             self.assertTrue('country_name.count' in self.getEditorText(), "you should use a list method to count")
 
     
