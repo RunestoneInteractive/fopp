@@ -8,7 +8,6 @@ Python Modules
    intro-PythonModules.rst
    intro-ModulesandGettingHelp.rst
    Therandommodule.rst
-   ImageProcessingonYourOwn.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
