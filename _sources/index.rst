@@ -61,7 +61,7 @@ Table of Contents
    Sequences/toctree.rst
    Iteration/toctree.rst
    Conditionals/toctree.rst
-   SequenceMutation/toctree.rst
+   TransformingSequences/toctree.rst
    Files/toctree.rst
    Dictionaries/toctree.rst
    Functions/toctree.rst
