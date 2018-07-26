@@ -11,11 +11,10 @@
    :prefix: seqmut-1-
    :start: 1
 
-Introduction: Sequence Mutation
-===============================
+Introduction: Transforming Sequences
+====================================
 
-The build further on sequences, the following chapter will detail more of the methods that can be used. 
-Additionally, you will learn more about how objects are treated in Python, and how they can change!
+To build further on sequences, the following chapter will detail more of the methods that can be used to transform lists and strings.  Generally, the two methods that can be used are changing the list object, in place, by mutating it; or by constructing a new string object using a copy-with-change operation.
 
 Learning Goals
 --------------
@@ -37,3 +36,4 @@ Demonstrate the correct use of:
 * append
 * join
 * split
+* string format method
