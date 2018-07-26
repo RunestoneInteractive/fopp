@@ -200,7 +200,7 @@ Level 2 Questions
 .. activecode:: act_kiva_9
     :include: act_kiva_1
 
-    What is the name of the country with the loan that took the longest to raise?
+    What is the name of the country with the loan that took the longest to raise?  Store your result in the variable ``longest_to_fund``
     ~~~~
     # Your code here
     ====
@@ -209,9 +209,8 @@ Level 2 Questions
     class MyTests(TestCaseGui):
 
         def testOne(self):
-            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+            self.assertTrue('longest_to_fund' in self.getEditorText(), "you need a loan_total variable")
+            self.assertEqual(longest_to_fund, country_name[time_to_raise.index(max(time_to_raise))], "Hint: max and index are your friends")
     
     MyTests().main()
 
@@ -220,7 +219,7 @@ Level 2 Questions
 .. activecode:: act_kiva_10
     :include: act_kiva_1
 
-    What is the arithmetic mean of the time / dollar it takes to fund a loan?  The arithmetic mean is the average of the individual time/dollar calculations, not the average of the sum of time divided by the sum of dollar amounts.
+    What is the arithmetic mean of the time / dollar it takes to fund a loan?  The arithmetic mean is the average of the individual time/dollar calculations, not the average of the sum of time divided by the sum of dollar amounts. Store your result in the variable ``a_mean``
     ~~~~
     # Your code here
     ====
@@ -229,9 +228,10 @@ Level 2 Questions
     class MyTests(TestCaseGui):
 
         def testOne(self):
-            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+            self.assertTrue('a_mean' in self.getEditorText(), "you need a a_mean variable")
+            self.assertAlmostEqual(a_mean, 1974.424, places=3, feedback="Use the accumulator pattern to add up all the loans")
+            self.assertFalse('sum(' in self.getEditorText(), "you should not use sum")
+
     
     MyTests().main()
 
@@ -252,7 +252,7 @@ Don't let the fancy math get you down the variance is just the sum of the square
 .. activecode:: act_kiva_11
     :include: act_kiva_1
 
-    Calculate the standard deviation of the loan_amount variable and store the result in ``loan_stdev``.
+    Calculate the standard deviation of the loan_amount variable and store the variance in loan_var and the standard deviation in ``loan_stdev``.
     ~~~~
     # Your code here
     ====
@@ -260,10 +260,11 @@ Don't let the fancy math get you down the variance is just the sum of the square
 
     class MyTests(TestCaseGui):
 
-        def testOne(self):
-            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
+        def testOne(self):            
+            self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_total variable")
+            self.assertAlmostEqual(loan_var, 250456.0, 1, "")
+            self.assertAlmostEqual(loan_stdev, 500.456, 3,  "Hint: x ** 0.5  is the same as the square root")
+
     
     MyTests().main()
 
@@ -292,14 +293,3 @@ Historically the pearson correlation coefficient has been used in recommender sy
     loan_amount_num_lenders = 0
     loan_amount_ttr = 0
     num_lenders_ttr = 0
-    ====
-    from unittest.gui import TestCaseGui
-
-    class MyTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-            self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-            self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
-    
-    MyTests().main()
