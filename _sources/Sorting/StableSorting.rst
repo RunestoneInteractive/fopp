@@ -12,26 +12,89 @@
    :prefix: sort-5-
    :start: 1
 
-Breaking ties with stable sorting
----------------------------------
+Breaking Ties: Second Sorting
+-----------------------------
 
 What happens when two items are "tied" in the sort order? For example, suppose we sort a list of words by their lengths. 
 Which five letter word will appear first?
 
 The answer is that the python interpreter will sort the tied items in the same order they were in before the sorting. 
-This is called "stable" sorting. Not all sorting algorithms have this stability property, but python's interpreter is 
-required to use a stable sorting algorithm.
+What if we wanted to sort them alphabetically though when the words were the same length? Python allows us to specify multiple conditions when we perform a sort by returning a tuple to the key parameter.
 
-Stable sorting can be useful. For example, suppose that we want to sort a list of tuples based on the first element of 
-the tuple, in ascending order. For a pair of tuples where the first items are equal, we'd like to sort them based on 
-their second items, in descending order. How can we do that? Perhaps it's a little counter-intuitive, but we first sort 
-based on the secondary (tie-breaking) element, and then sort based on the primary element. The last sort is what matters, 
-but when there's a tie during the last sort, we get the order defined previously.
+In the code below, we are going to sort the words first by their length, smallest to largest, and then alphabetically.
 
 .. activecode:: ac18_5_1
 
-    L = [(3, 4), (5, 6), (3, 7)]
-    sort1 = sorted(L, key = lambda x: x[1], reverse = True)
-    print(sort1)
-    sort2 = sorted(sort1, key = lambda x: x[0])
-    print(sort2)
+    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruit, key = lambda x: (len(x), x))
+    print(new_order)
+
+Here, each word is evaluated first on it's length, then by its alphabetical order. Note that we could continue to specify other conditions by including more elements in the tuple. What would happen though if we wanted to sort it by largest to smallest, and then by alphabetical order?
+
+.. activecode:: ac18_5_2
+
+    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruit, key = lambda x: (len(x), x), reverse = True)
+    print(new_order)
+
+Do you see a problem here? Not only does it sort the words from largest to smallest, but also in reverse alphabetical order! Can you think of any ways you can solve this issue?
+
+One solution is to add a negative sign in front of ``len(x)``, which will convert all positive numbers to negative, and all negative numbers to positive. As a result, the longest elements would be first and the shortest elements would be last.
+
+.. activecode:: ac18_5_3
+
+    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruit, key = lambda x: (-len(x), x))
+    print(new_order)
+   
+We can use this for any numerical value that we want to sort, however this will not work for strings.
+
+**Check Your Understanding**
+
+.. mchoice:: question18_5_1
+      :answer_a: first country name (alphabetically), then temperature (lowest to highest)
+      :answer_b: first temperature (highest to lowest), then country name (alphabetically)
+      :answer_c: first country name (alphabetically), then temperature (highest to lowest)
+      :answer_d: first temperature (lowest to highest), then country name (alphabetically)
+      :feedback_a: Correct! First we sort alphabetically by country name, then by the temperature, from lowest to highest.
+      :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
+      :feedback_c: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
+      :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
+      :correct: a
+
+      What will the sorted function sort by?
+
+      .. code-block:: python
+
+         weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'}, 
+                    'Buenos Aires': {'temp': 55, 'condition': 'cloudy'}, 
+                    'Cairo': {'temp': 96, 'condition': 'sunny'}, 
+                    'Berlin': {'temp': 89 'condition': 'sunny'}, 
+                    'Caloocan': {'temp': 78 'condition': 'sunny'}}
+
+         sorted_weather = sorted(weather, key = lambda w: (w, weather[w]['temp']))
+
+.. mchoice:: question18_5_2
+      :answer_a: first country name (reverse alphabetically), then temperature (lowest to highest)
+      :answer_b: first temperature (highest to lowest), then country name (alphabetically)
+      :answer_c: first country name (reverse alphabetically), then temperature (lowest to highest)
+      :answer_d: first temperature (lowest to highest), then country name (alphabetically)
+      :answer_e: first country name (alphabetically), then temperature (lowest to highest)
+      :feedback_a: Correct! In this case, the reverse parameter will cause the country name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.
+      :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort. Also, take note of the reverse parameter - what will it do in this instance?
+      :feedback_c: Not quite - is the reverse parameter set to True? Has a negative sign been used in the key parameter? What happens when those are both used?
+      :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort. 
+      :feedback_e: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
+      :correct: a
+
+      What how will the following data be sorted?
+
+      .. code-block:: python
+
+         weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'}, 
+                    'Buenos Aires': {'temp': 55, 'condition': 'cloudy'}, 
+                    'Cairo': {'temp': 96, 'condition': 'sunny'}, 
+                    'Berlin': {'temp': 89 'condition': 'sunny'}, 
+                    'Caloocan': {'temp': 78 'condition': 'sunny'}}
+
+         sorted_weather = sorted(weather, key = lambda w: (w, -weather[w]['temp']), reverse = True)

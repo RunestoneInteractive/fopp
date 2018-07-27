@@ -298,7 +298,19 @@ Exercises
 
 #.
 
-   .. parsonsprob:: pp7_14_10
+   .. tabbed:: q9
+
+        .. tab:: Question
+
+            .. actex:: ac7_14_10
+
+               Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
+               some of your code from the last question. The == operator compares two values to see if they are the same)
+               ~~~~
+
+#.
+
+   .. parsonsprob:: pp7_14_11
 
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
       -----
@@ -319,7 +331,7 @@ Exercises
 
 #.
 
-   .. parsonsprob:: pp7_14_11
+   .. parsonsprob:: pp7_14_12
 
       Piece together a program so that it can successfully print out one print statement, given the value of x.
       -----

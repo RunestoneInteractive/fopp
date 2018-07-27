@@ -41,15 +41,6 @@ Exercises
         Get the user to enter some text and print it out in reverse order.
         ~~~~
 
-.. question:: q6_11_3
-
-
-    .. actex:: ex6_11_3
-
-        Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
-        some of your code from the last question. The == operator compares two values to see if they are the same)
-        ~~~~
-
 .. question:: iter_ex_3
 
     .. tabbed:: q3
