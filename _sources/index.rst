@@ -57,7 +57,6 @@ Table of Contents
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
    Debugging/toctree.rst
-   PythonModules/toctree.rst
    PythonTurtle/toctree.rst
    Sequences/toctree.rst
    Iteration/toctree.rst
@@ -69,6 +68,7 @@ Table of Contents
    UsingFunctions/toctree.rst
    Tuples/toctree.rst
    Style/toctree.rst
+   PythonModules/toctree.rst
    MoreAboutIteration/toctree.rst
    AdvancedFunctions/toctree.rst
    Sorting/toctree.rst
