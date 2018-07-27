@@ -32,18 +32,19 @@ Chapter Assessment
    Why create an algorithm?
 
 .. activecode:: assess_question1_1_2
-   :language: python
-   :autograde: unittest
+    :language: python
+    :autograde: unittest
 
-   Write code to print out the phrase "Hello World".
+    Write code to print out the phrase "Hello World".
+    ~~~~
 
-   =====
+    =====
 
-   from unittest.gui import TestCaseGui
+    from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+    class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertIn("Hello World", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+        def testOne(self):
+            self.assertIn("Hello World", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
 
-   myTests().main()
+    myTests().main()
