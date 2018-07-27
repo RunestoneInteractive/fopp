@@ -750,7 +750,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **3.** Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
+   **4.** Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
    ~~~~
    p_phrase = "was it a car or a cat I saw"
 
@@ -769,3 +769,28 @@ Chapter Assessment - Problem Solving
 
    myTests().main()
 
+.. activecode:: asign_c01_05
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: 
+
+   **5.** Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
+   ~~~~
+   inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweaters, 10, 30.00", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+          self.assertIn('.format(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+          self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your code (Don't worry about actual and expected values).")
+
+         
+
+   myTests().main()
