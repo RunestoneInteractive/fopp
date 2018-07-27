@@ -1,8 +1,8 @@
-Simple Python Data
-::::::::::::::::::
+Variables, Statements, and Expressions
+::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Simple Python Data
+   :caption: Variables, Statements, and Expressions
    :maxdepth: 2
 
    intro-VariablesExpressionsandStatements.rst
