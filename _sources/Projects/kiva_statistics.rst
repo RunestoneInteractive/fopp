@@ -165,11 +165,11 @@ Level 1 Questions
 Level 2 Questions
 -----------------
 
+#. What is the average amount of loans made to people in the Philippines?
 #. In which country was the loan granted that took the longest to fund?
 #. What is the average amount of time / dollar it takes to fund a loan?
-#. What is the average amount of loans made to people in the Philippines?
-#. Is there a relationship between the loan amount and the number of people?  Or time to fund?  How would we measure this? Covariance? Correlation?
 #. What is the standard deviation of the money loaned?   The Empirical Rule or 68-95-99.7% Rule reminds us that 68% of the population falls within 1 standard  deviation.  Does this hold for our data?
+#. Is there a relationship between the loan amount and the number of people?  Or time to fund?  How would we measure this? Covariance? Correlation?
 
 
 
