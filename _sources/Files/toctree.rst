@@ -12,6 +12,9 @@ Files
    Iteratingoverlinesinafile.rst
    FilesRecipe.rst
    WritingTextFiles.rst
+   CSVFormat.rst
+   ReadingCSVFiles.rst
+   WritingCSVFiles.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
