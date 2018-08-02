@@ -10,6 +10,7 @@ Functions
    FunctionInvocation.rst
    FunctionParameters.rst
    Returningavaluefromafunction.rst
+   DecodingaFunction.rst
    Afunctionthataccumulates.rst
    MethodInvocations.rst
    Variablesandparametersarelocal.rst
