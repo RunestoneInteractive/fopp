@@ -15,6 +15,8 @@ Files
    CSVFormat.rst
    ReadingCSVFiles.rst
    WritingCSVFiles.rst
+   WPTipsHandlingFiles.rst
+   WPWith.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
