@@ -20,8 +20,7 @@ Again, python provides a module for doing this. The module is called json. We wi
 
 ``json.loads()`` takes a string as input and produces a python object (a dictionary or a list) as output.
 
-Consider, for example, the iTunes REST API. If we request data from iTunes, the response we get back will be a string 
-that begins with the following:
+Consider, for example, some data that we might get from Apple's iTunes, in the JSON format:
 
 ``'\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892'``
 
@@ -34,20 +33,4 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
    def pretty(obj):
        return json.dumps(obj, sort_keys=True, indent=2)
 
-
-.. mchoice:: question17_3_1
-   :multiple_answers:
-   :answer_a: result.json()
-   :answer_b: resp.json()
-   :answer_c: resp.json
-   :answer_d: json.dumps(resp.text)
-   :answer_e: json.loads(resp.text)
-   :feedback_a: result was the name of the variable in the examples on this page, but not for this question.
-   :feedback_b: .json() invokes the json method
-   :feedback_c: .json refers to the method, but doesn't invoke it
-   :feedback_d: dumps turns a list or dictionary into a json-formatted string
-   :feedback_e: loads turns a json-formatted string into a list or dictionary
-   :correct: b,e
-
-   If ``resp`` is a response object returned by a call to ``requests.get()``, which of the following is a way to extract the contents into a python dictionary or list?
 
