@@ -1,5 +1,5 @@
-Sequence Mutation
-:::::::::::::::::
+TransformingSequences
+:::::::::::::::::::::
 
 .. toctree::
    :caption: Sequence Mutation

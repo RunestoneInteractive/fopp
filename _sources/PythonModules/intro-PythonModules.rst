@@ -22,6 +22,6 @@ Learning Goals
 Objectives
 ==========
 
-* To import an entire modules
+* To import an entire module
 * To import a single function from a module
 * To import a module giving it an alias

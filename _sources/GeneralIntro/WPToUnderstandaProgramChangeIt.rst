@@ -31,7 +31,7 @@ doing, you will remove these extra print statements.
 Even if you feel that you have a good grasp on the program though, we advise changing it at least a few times to see if you understand how it behaves in different situations. Sometimes you'll surprise yourself!
 
 If you get any surprises, then you will want to revise your understanding or your predictions. If you were wrong 
-about the values or types of variables before the code snippet was run, you may to revisit your understanding of 
+about the values or types of variables before the code snippet was run, you may want to revisit your understanding of 
 the previous code. Once you understand how that result came to be, you should make some changes to the program to make sure your new understanding is accurate.
 
 

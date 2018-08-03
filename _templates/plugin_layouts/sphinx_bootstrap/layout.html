@@ -189,28 +189,30 @@
         <li class="divider-vertical"></li>
 
       </ul>
-      </div>
-
-
-
-
-
 
       <ul class="nav navbar-nav">
         <li class="divider-vertical"></li>
-        <!--{% block sidebartoc %}
-          {% include "localtoc.html" %}
+        {% block sidebartoc %}
+          {% include "globaltoc.html" %}
           <li class="divider-vertical"></li>
         {% endblock %}
-        {% block sidebarrel %}
+        <!-- {% block sidebarrel %}
           {% include "relations.html" %}
         {% endblock %}-->
         {% if theme_source_link_position == "nav" %}
           <li>{% include "sourcelink.html" %}</li>
         {% endif %}
       </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
       
-    </div>
+    </div> <!-- container -->
   </div>
 </div>
 {% endmacro %}
@@ -321,6 +323,8 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script async src="https://hypothes.is/embed.js"></script>
+
 {% endif %}
 
 {% endblock %}
