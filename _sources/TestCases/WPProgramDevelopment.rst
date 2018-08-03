@@ -142,7 +142,7 @@ we compute and return the result.
 
 ..    - Type ``, 2`` after 1.41. (The 2 represents the precision of the test -- how many digits to the right of the decimal that must be correct.) Run.
 
-..    Now all four the tests pass! Wonderful! However, you may still need to perform additional tests.
+..    Now all four of the tests pass! Wonderful! However, you may still need to perform additional tests.
 
 When you start out, you might add only a line or two of code at a time. As you gain more experience, you might find 
 yourself writing and debugging bigger conceptual chunks. As you improve your programming skills you should find yourself
