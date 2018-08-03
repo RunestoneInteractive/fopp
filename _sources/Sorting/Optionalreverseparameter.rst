@@ -20,6 +20,7 @@ determines whether to sort the items in reverse order. By default, it is False, 
 be sorted in reverse order.
 
 .. activecode:: ac18_2_1
+    :practice: T
 
     L2 = ["Cherry", "Apple", "Blueberry"]
     print(sorted(L2, reverse = True))
