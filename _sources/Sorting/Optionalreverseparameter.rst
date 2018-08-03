@@ -20,7 +20,6 @@ determines whether to sort the items in reverse order. By default, it is False, 
 be sorted in reverse order.
 
 .. activecode:: ac18_2_1
-    :practice: T
 
     L2 = ["Cherry", "Apple", "Blueberry"]
     print(sorted(L2, reverse = True))
@@ -38,6 +37,7 @@ be sorted in reverse order.
 .. activecode:: ac18_2_2
    :language: python
    :autograde: unittest
+   :practice: T
 
    **1.** Sort the list, ``lst`` from largest to smallest. Save this new list to the variable ``lst_sorted``.
    ~~~~
