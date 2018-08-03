@@ -34,20 +34,31 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
    def pretty(obj):
        return json.dumps(obj, sort_keys=True, indent=2)
 
+**Check Your Understanding**
 
 .. mchoice:: question17_3_1
+   :answer_a: json.loads(dictionary)
+   :answer_b: json.dumps(dictionary)
+   :answer_c: dictionary.json()
+   :feedback_a: loads turns a json-formatted string into a list or dictionary
+   :feedback_b: dumps turns a list or dictionary into a json-formatted string
+   :feedback_c: .json() invokes the json method, which functions the same as the json.loads and turns a json-formatted string into a list or dictionary
+   :correct: b
+
+   Because we can only write strings into a file, if we wanted to convert a dictionary into a json-formatted string so that we could store it in a file, what would we use?
+
+.. mchoice:: question17_3_2
    :multiple_answers:
-   :answer_a: result.json()
-   :answer_b: resp.json()
-   :answer_c: resp.json
-   :answer_d: json.dumps(resp.text)
-   :answer_e: json.loads(resp.text)
-   :feedback_a: result was the name of the variable in the examples on this page, but not for this question.
-   :feedback_b: .json() invokes the json method
-   :feedback_c: .json refers to the method, but doesn't invoke it
-   :feedback_d: dumps turns a list or dictionary into a json-formatted string
-   :feedback_e: loads turns a json-formatted string into a list or dictionary
-   :correct: b,e
+   :answer_a: entertainment.json()
+   :answer_b: json.dumps(entertainment)
+   :answer_c: json.loads(entertainment)
+   :feedback_a: .json() invokes the json method
+   :feedback_b: dumps turns a list or dictionary into a json-formatted string
+   :feedback_c: loads turns a json-formatted string into a list or dictionary
+   :correct: a,c
 
-   If ``resp`` is a response object returned by a call to ``requests.get()``, which of the following is a way to extract the contents into a python dictionary or list?
+   Say we had a JSON string in the following format. How would you convert it so that it is a python list?
 
+   .. sourcecode:: python
+
+       entertainment = """[{"Library Data": {"count": 3500, "rows": 10, "locations": 3}}, {"Movie Theater Data": {"count": 8, "rows": 25, "locations": 2}}]"""
