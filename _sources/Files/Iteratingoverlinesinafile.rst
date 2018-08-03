@@ -21,8 +21,7 @@ lines of text, we can use the *for* loop to iterate through each line of the fil
 A **line** of a file is defined to be a sequence of characters up to and including a special character called 
 the **newline** character. If you evaluate a string that contains a newline character you will see the character 
 represented as ``\n``. If you print a string that contains a newline you will not see the ``\n``, you will just 
-see its effects (a carriage return). When you are typing a Python program and you press the enter or return key 
-on your keyboard, the editor inserts a newline character into your text at that point.
+see its effects (a carriage return).
 
 As the *for* loop iterates through each line of the file the loop variable will contain the current line of the 
 file as a string of characters. The general pattern for processing each line of a text file is as follows:
@@ -36,7 +35,7 @@ file as a string of characters. The general pattern for processing each line of 
 
 To process all of our olypmics data, we will use a *for* loop to iterate over the lines of the file. Using
 the ``split`` method, we can break each line into a list containing all the fields of interest about the
-quarterback. We can then take the values corresponding to name, team and event to
+athlete. We can then take the values corresponding to name, team and event to
 construct a simple sentence.
 
 .. activecode:: ac9_5_1
@@ -50,8 +49,7 @@ construct a simple sentence.
     olypmicsfile.close()
 
 To make the code a little simpler, and to allow for more efficient processing, Python provides a built-in way to 
-iterate through the contents of a file one line at a time, without first reading them all into a list. I have 
-found that this is confusing to students initially, so I don't recommend doing it this way, until you get a 
+iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a 
 little more comfortable with python. But this idiom is preferred by Python programmers, so you should be prepared 
 to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.
 
