@@ -66,13 +66,11 @@ Table of Contents
    Files/toctree.rst
    Dictionaries/toctree.rst
    Functions/toctree.rst
-   UsingFunctions/toctree.rst
    Tuples/toctree.rst
    MoreAboutIteration/toctree.rst
    AdvancedFunctions/toctree.rst
    Sorting/toctree.rst
    NestedData/toctree.rst
-   ExtractNestedData/toctree.rst 
    TestCases/toctree.rst
    TestPrograms/toctree.rst
    Exceptions/toctree.rst

@@ -13,8 +13,8 @@
 
 .. index:: boundary conditions, testing, debugging
 
-Debugging
-=========
+👩‍💻 Debugging
+==============
 
 Programming is a complex process.  Since it is done by human beings, errors may often occur.
 Programming errors are called **bugs** and the process
