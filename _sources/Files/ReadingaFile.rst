@@ -14,11 +14,11 @@
 Reading a File
 ~~~~~~~~~~~~~~
 
-As an example, suppose we have a text file called ``olypmics.txt`` that contains
+As an example, suppose we have a text file called ``olympics.txt`` that contains
 the following data representing statistics about olypians across different years. Although it
 would be possible to consider entering this data by hand each time it is used,
 you can imagine that it would be time-consuming and error-prone to do this. In
-addition, it is likely that there could be data from more olypians and
+addition, it is likely that there could be data from more olympians and
 other years. The format of the data file is as follows
 
 ::
@@ -57,10 +57,10 @@ use ``fileref`` will result in an error.
 
 ::
 
-   fileref = open("olypmics.txt","r")
+   fileref = open("olympics.txt","r")
    ## other code here that refers to variable fileref
    fileref.close()
 
 .. note::
 
-    A common mistake is to get confused about whether you are providing a variable name or a string literal as an input to the open function. In the code above, "olypmics.txt" is a string literal that should correspond to the name of a file on your computer. If you put something without quotes, like ``open(x, "r")``, it will be treated as a variable name. In this example, x should be a variable that's already been bound to a string value like "olypmics.txt".
+    A common mistake is to get confused about whether you are providing a variable name or a string literal as an input to the open function. In the code above, "olympics.txt" is a string literal that should correspond to the name of a file on your computer. If you put something without quotes, like ``open(x, "r")``, it will be treated as a variable name. In this example, x should be a variable that's already been bound to a string value like "olympics.txt".
