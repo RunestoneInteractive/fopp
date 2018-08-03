@@ -17,13 +17,13 @@ Writing Text Files
 One of the most commonly performed data processing tasks is to read data from a file, 
 manipulate it in some way, and then write the resulting data out to a new data file to be used 
 for other purposes later. To accomplish this, the ``open`` function discussed above can also be 
-used to create a new file prepared for writing. Note in :ref:`Table 1<filemethods1a>` above 
+used to create a new file prepared for writing. Note in :ref:`Table 1<filemethods1a>` 
 that the only difference between opening a file for writing and opening a file for reading is 
 the use of the ``'w'`` flag instead of the ``'r'`` flag as the second parameter. When we open 
 a file for writing, a new, empty file with that name is created and made ready to accept our 
-data. As before, the function returns a reference to the new file object.
+data. If an existing file has the same name, its contents are overwritten. As before, the function returns a reference to the new file object.
 
-:ref:`Table 2 <filemethods2a>` above shows one additional file method that we have not used 
+:ref:`Table 2 <filemethods2a>` shows one additional method on file objects that we have not used 
 thus far. The ``write`` method allows us to add data to a text file. Recall that text files 
 contain sequences of characters. We usually think of these character sequences as being the 
 lines of the file where each line ends with the newline ``\n`` character. Be very careful to 
@@ -31,7 +31,7 @@ notice that the ``write`` method takes one parameter, a string. When invoked, th
 the string will be added to the end of the file. This means that it is the programmer's job to 
 include the newline characters as part of the string if desired.
 
-Assume that we have been asked to provide a file consisting of all the sqaured numbers from 1 
+Assume that we have been asked to provide a file consisting of all the squared numbers from 1 
 to 12.
 
 First, we will need to open the file. Afterwards, we will iterate through the numbers 1 through 
