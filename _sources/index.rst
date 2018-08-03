@@ -71,7 +71,6 @@ Table of Contents
    AdvancedFunctions/toctree.rst
    Sorting/toctree.rst
    NestedData/toctree.rst
-   ExtractNestedData/toctree.rst 
    TestCases/toctree.rst
    TestPrograms/toctree.rst
    Exceptions/toctree.rst
