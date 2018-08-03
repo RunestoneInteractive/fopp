@@ -182,7 +182,6 @@ sort in reverse order.
 **Check Your Understanding**
 
 .. mchoice:: question18_4_1
-   :practice: T
    :multiple_answers:
    :answer_a: sorted(ks, key=g) 
    :answer_b: sorted(ks, key=lambda x: g(x, d))
@@ -191,6 +190,7 @@ sort in reverse order.
    :feedback_a: g is a function that takes two parameters. The key function passed to sorted must always take just one parameter.
    :feedback_b: The lambda function takes just one parameter, and calls g with two parameters.
    :feedback_c: The lambda function looks up the value of x in d.
+   :practice: T
 
    Which of the following will sort the keys of d in ascending order of their values (i.e., from lowest to highest)?
    
