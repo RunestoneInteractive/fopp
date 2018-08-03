@@ -173,7 +173,7 @@ that is expecting a list, its the same as passing the list of keys.
   for k in sorted(d, key=lambda k: d[k], reverse=True):
       print(str(k) + " appears " + str(d[k]) + " times")
 
-Eventually, you will be able to read code like that above and immediately know what it's doing. For now, when you come 
+Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come 
 across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter 
 value is a dictionary, which really means the keys of the dictionary. The third parameter, the key function, decorates 
 the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to 
