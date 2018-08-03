@@ -190,7 +190,6 @@ sort in reverse order.
    :feedback_a: g is a function that takes two parameters. The key function passed to sorted must always take just one parameter.
    :feedback_b: The lambda function takes just one parameter, and calls g with two parameters.
    :feedback_c: The lambda function looks up the value of x in d.
-   :practice: T
 
    Which of the following will sort the keys of d in ascending order of their values (i.e., from lowest to highest)?
    
@@ -213,7 +212,6 @@ sort in reverse order.
 .. activecode:: ac18_4_8
    :language: python
    :autograde: unittest
-   :practice: T
 
    **2.** Sort the following dictionary based on the keys so that they are sorted a to z. Assign the resulting value to the variable ``sorted_keys``.
    ~~~~
@@ -234,7 +232,6 @@ sort in reverse order.
 .. activecode:: ac18_4_9
    :language: python
    :autograde: unittest
-   :practice: T
 
    **3.** Below, we have provided the dictionary ``groceries``, whose keys are grocery items, and values are the number of each item that you need to buy at the store. Sort the dictionary's keys into alphabetical order, and save them as a list called ``grocery_keys_sorted``.
    ~~~~
@@ -255,7 +252,6 @@ sort in reverse order.
 .. activecode:: ac18_4_10
    :language: python
    :autograde: unittest
-   :practice: T
 
    **4.** Sort the following dictionary based on the value from highest to lowest. Assign the resulting value to the variable ``sorted_values``.
    ~~~~

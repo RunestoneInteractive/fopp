@@ -37,7 +37,6 @@ be sorted in reverse order.
 .. activecode:: ac18_2_2
    :language: python
    :autograde: unittest
-   :practice: T
 
    **1.** Sort the list, ``lst`` from largest to smallest. Save this new list to the variable ``lst_sorted``.
    ~~~~

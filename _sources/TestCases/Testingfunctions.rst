@@ -146,8 +146,7 @@ during execution. Below are some tests for the built-in sorted function.
     myTests().main()
 
 
-.. mchoice:: question18_2_1
-   :practice: T
+.. mchoice:: question19_2_1
    :answer_a: True
    :answer_b: False
    :correct: b
