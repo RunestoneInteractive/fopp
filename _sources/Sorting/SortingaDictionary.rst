@@ -173,7 +173,7 @@ that is expecting a list, its the same as passing the list of keys.
   for k in sorted(d, key=lambda k: d[k], reverse=True):
       print(str(k) + " appears " + str(d[k]) + " times")
 
-Eventually, you will be able to read code like that above and immediately know what it's doing. For now, when you come 
+Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come 
 across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter 
 value is a dictionary, which really means the keys of the dictionary. The third parameter, the key function, decorates 
 the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to 
@@ -182,6 +182,7 @@ sort in reverse order.
 **Check Your Understanding**
 
 .. mchoice:: question18_4_1
+   :practice: T
    :multiple_answers:
    :answer_a: sorted(ks, key=g) 
    :answer_b: sorted(ks, key=lambda x: g(x, d))
@@ -212,6 +213,7 @@ sort in reverse order.
 .. activecode:: ac18_4_8
    :language: python
    :autograde: unittest
+   :practice: T
 
    **2.** Sort the following dictionary based on the keys so that they are sorted a to z. Assign the resulting value to the variable ``sorted_keys``.
    ~~~~
@@ -232,6 +234,7 @@ sort in reverse order.
 .. activecode:: ac18_4_9
    :language: python
    :autograde: unittest
+   :practice: T
 
    **3.** Below, we have provided the dictionary ``groceries``, whose keys are grocery items, and values are the number of each item that you need to buy at the store. Sort the dictionary's keys into alphabetical order, and save them as a list called ``grocery_keys_sorted``.
    ~~~~
@@ -252,6 +255,7 @@ sort in reverse order.
 .. activecode:: ac18_4_10
    :language: python
    :autograde: unittest
+   :practice: T
 
    **4.** Sort the following dictionary based on the value from highest to lowest. Assign the resulting value to the variable ``sorted_values``.
    ~~~~
