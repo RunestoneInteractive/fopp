@@ -91,3 +91,25 @@ methods that we as programmers will probably want to change.  When a programmer 
 say that we **override** the method.  Note also that the ``str`` type converter function uses whatever ``__str__`` method we
 provide.
 
+
+**Check Your Understanding**
+
+1. Create a class called Cereal that accepts three inputs: 2 strings and 1 integer, and assigns them to 3 instance variables in the constructor: ``name``, ``brand``, and ``fiber``. When an instance of ``Cereal`` is printed, the user should see the following: "[name] cereal is produced by [brand] and has [fiber integer] grams of fiber in every serving!" To the variable name ``c1``, assign an instance of ``Cereal`` whose name is ``"Corn Flakes"``, brand is ``"Kellogg's"``, and fiber is ``2``. To the variable name ``c2``, assign an instance of ``Cereal`` whose name is ``"Honey Nut Cheerios"``, brand is ``"General Mills"``, and fiber is ``3``. Practice printing both! 
+
+.. activecode:: ac_ch13_classstr_01
+   :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst, Classes/ConvertinganObjecttoaString.rst
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(c1.__str__(), "Corn Flakes cereal is produced by Kellogg's and has 2 grams of fiber in every serving!", "Testing that c1 prints correctly.")
+      def testTwo(self): 
+         self.assertEqual(c2.__str__(), "Honey Nut Cheerios cereal is produced by General Mills and has 3 grams of fiber in every serving!", "Testing that c2 prints correctly.")
+
+   myTests().main()  
+

@@ -10,7 +10,8 @@ Sorting
    Optionalkeyparameter.rst
    SortingaDictionary.rst
    StableSorting.rst
+   WPWhenToUseLambdaVsFunction.rst
    Glossary.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    

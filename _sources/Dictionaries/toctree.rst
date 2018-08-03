@@ -5,6 +5,7 @@ Dictionaries
    :caption: Dictionaries
    :maxdepth: 2
 
+   intro-DictionaryGoals.rst
    intro-Dictionaries.rst
    Dictionaryoperations.rst
    Dictionarymethods.rst
@@ -12,9 +13,7 @@ Dictionaries
    intro-AccumulatingMultipleResultsInaDictionary.rst
    AccumulatingResultsFromaDictionary.rst
    AccumulatingtheBestKey.rst
-   DictionaryExercises.rst
-   DictionaryExtraExercises.rst
    Glossary.rst
-   DictionaryAccumulationExercises.rst
-   DictionaryAccumulationExtraExercises.rst
+   Exercises.rst
+   ChapterAssessment.rst
    

@@ -5,10 +5,12 @@ Functions
    :caption: Functions
    :maxdepth: 2
 
+   intro-Functions.rst
    FunctionDefinitions.rst
    FunctionInvocation.rst
    FunctionParameters.rst
    Returningavaluefromafunction.rst
+   DecodingaFunction.rst
    Afunctionthataccumulates.rst
    MethodInvocations.rst
    Variablesandparametersarelocal.rst
@@ -20,4 +22,5 @@ Functions
    SideEffects.rst
    Glossary.rst
    Exercises.rst
+   ChapterAssessment.rst
    

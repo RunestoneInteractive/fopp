@@ -30,7 +30,7 @@ effect test.
 
 Try adding some more tests in the code below, once you understand what's there.
 
-.. activecode:: ac18_3_1
+.. activecode:: ac19_3_1
 
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
@@ -70,7 +70,7 @@ Try adding some more tests in the code below, once you understand what's there.
 
 **Check your understanding**
 
-.. mchoice:: question18_3_1
+.. mchoice:: question19_3_1
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -80,7 +80,7 @@ Try adding some more tests in the code below, once you understand what's there.
 
    For each function, you should create exactly one test case.
  
-.. mchoice:: question18_3_2
+.. mchoice:: question19_3_2
    :practice: T
    :answer_a: return value test
    :answer_b: side effect test
@@ -90,7 +90,7 @@ Try adding some more tests in the code below, once you understand what's there.
 
    To test a method that changes the value of an instance variable, which kind of test case should you write?
 
-.. mchoice:: question18_3_3
+.. mchoice:: question19_3_3
    :practice: T
    :answer_a: return value test
    :answer_b: side effect test
@@ -106,7 +106,7 @@ Try adding some more tests in the code below, once you understand what's there.
          """L should be a list of numbers (ints or floats). The return value should be the maximum absolute value of the numbers in L."""
          return max(L, key = abs)
 
-.. mchoice:: question18_3_4
+.. mchoice:: question19_3_4
    :practice: T
    :answer_a: return value test
    :answer_b: side effect test

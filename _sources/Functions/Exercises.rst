@@ -11,395 +11,625 @@
    :prefix: func-14-
    :start: 1
 
-Extra Exercises
-===============
+Exercises
+=========
+#.
 
-.. activecode:: ac11_14_1
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+    .. tabbed:: q1
 
-   **1.** Write a function called ``int_return`` that takes an integer as input and returns the same integer.
-   ~~~~
-   =====
+        .. tab:: Question
 
-   from unittest.gui import TestCaseGui
+           .. actex:: ac11_14_1
 
-   class myTests(TestCaseGui):
+              Write a function named ``num_test`` that takes a number as input. If the number is greater than 10, the function should return "Greater than 10." If the number is less than 10, the function should return "Less than 10." If the number is equal to 10, the function should return "Equal to 10."
+              ~~~~
+              
 
-      def testOne(self):
-         self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+              ====
 
-   myTests().main()
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                def testOne(self):
+                    self.assertEqual(num_test(5), "Less than 10.", "Testing the num_test function on input 5.")
+                    self.assertEqual(num_test(0), "Less than 10.", "Testing the num_test function on input 0.")
+                    self.assertEqual(num_test(12.99), "Greater than 10.", "Testing the num_test function on input 12.99.")
+                    self.assertEqual(num_test(10.00), "Equal to 10.", "Testing the num_test function on input 10.00.")
 
 
-.. activecode:: ac11_14_2
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
-   **1.1** Write a function named ``same`` that takes a string as input, and simply returns that string.
-   ~~~~
+              myTests().main()
+
+#.
+
+    .. tabbed:: q2
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_2
+
+              Write a function that will return the number of digits in an integer.
+              ~~~~
+              def numDigits(n):
+                  # your code here
+
+              ====
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                def testOne(self):
+                    self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
+                    self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
+                    self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
+                    self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
+
+
+
+              myTests().main()
+
+
+        .. tab:: Answer
+
+            .. activecode:: answer11_14_2
+
+                def numDigits(n):
+                    n_str = str(n)
+                    return len(n_str)
+
+
+                print(numDigits(50))
+                print(numDigits(20000))
+                print(numDigits(1))
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_bfd6f74a183c4682b29c72c4411200fb
+
+
+#.
+
+    .. tabbed:: q3
+
+        .. tab:: Question 
+
+           .. actex:: ac11_14_3
+      
+              Write a function that reverses its string argument.
+              ~~~~
+              def reverse(astring):
+                  # your code here
+
+              ====
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testOne(self):
+                      self.assertEqual(reverse("happy"),"yppah","Tested reverse on input of 'happy'")
+                      self.assertEqual(reverse("Python"),"nohtyP","Tested reverse on input of 'Python'")
+                      self.assertEqual(reverse(""),"","Tested reverse on input of ''")
+
+
+
+
+              myTests().main()
+
+#.
+
+    .. tabbed:: q4
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_4
+              :nocodelens:
+
+              Write a function that mirrors its string argument, 
+              generating a string containing the original string and the string backwards.
+              ~~~~
+
+              def mirror(mystr):
+                  # your code here
+
+              ====
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testOne(self):
+                      self.assertEqual(mirror("good"),"gooddoog","Tested mirror on input of 'good'")
+                      self.assertEqual(mirror("Python"),"PythonnohtyP","Tested mirror on input of 'Python'")
+                      self.assertEqual(mirror(""),"","Tested mirror on input of ''")
+                      self.assertEqual(mirror("a"),"aa","Tested mirror on input of 'a'")
+
+
+              myTests().main()
+
+
+
+        .. tab:: Answer
+
+            .. activecode:: answer11_14_4
+                :nocodelens:
+
+                from test import testEqual
+
+                def reverse(mystr):
+                    reversed = ''
+                    for char in mystr:
+                        reversed = char + reversed
+                    return reversed
+
+                def mirror(mystr):
+                    return mystr + reverse(mystr)
+
+                testEqual(mirror('good'), 'gooddoog')
+                testEqual(mirror('Python'), 'PythonnohtyP')
+                testEqual(mirror(''), '')
+                testEqual(mirror('a'), 'aa')
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_70b7ac515456497c952a2de5caa27ab9
+
+#.
+
+    .. tabbed:: q5
+
+        .. tab:: Question 
+
+           .. actex:: ac11_14_5
+              :nocodelens:
+
+              Write a function that removes all occurrences of a given letter from a string.
+              ~~~~
+              def remove_letter(theLetter, theString):
+                  # your code here
+
+              ====
+
+
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testOne(self):
+                      self.assertEqual(remove_letter("a","apple"),"pple","Tested remove_letter on inputs of 'a' and 'apple'")
+                      self.assertEqual(remove_letter("a","banana"),"bnn","Tested remove_letter on inputs of 'a' and 'banana'")
+                      self.assertEqual(remove_letter("z","banana"),"banana","Tested remove_letter on inputs of 'z' and 'banana'")
+
+
+
+              myTests().main()
+
+
+#.
+
+   .. tabbed:: q6
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_6
+
+              Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Implement a Python function that works like the following:
    
-   =====
+              a. count
+              #. in
+              #. reverse
+              #. index
+              #. insert
+              ~~~~ 
 
-   from unittest.gui import TestCaseGui
+        .. tab:: Answer
 
-   class myTests(TestCaseGui):
+            .. activecode:: answer11_14_6
 
-      def testOne(self):
-         self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
+                def count(obj, lst):
+                    count = 0
+                    for e in lst:
+                        if e == obj:
+                            count = count + 1
+                    return count
 
-   myTests().main()
+                def is_in(obj, lst):  # cannot be called in() because in is a reserved keyword
+                    for e in lst:
+                        if e == obj:
+                            return True
+                    return False
 
+                def reverse(lst):
+                    reversed = []
+                    for i in range(len(lst)-1, -1, -1): # step through the original list backwards
+                        reversed.append(lst[i])
+                    return reversed
 
-.. activecode:: ac11_14_3
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+                def index(obj, lst):
+                    for i in range(len(lst)):
+                        if lst[i] == obj:
+                            return i
+                    return -1
 
-   **1.2** Write a function called ``same_thing`` that returns the parameter, unchanged.
-   ~~~~
+                def insert(obj, index, lst):
+                    newlst = []
+                    for i in range(len(lst)):
+                        if i == index:
+                            newlst.append(obj)
+                        newlst.append(lst[i])
+                    return newlst
 
-   =====
+                lst = [0, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9]
+                print(count(1, lst))
+                print(is_in(4, lst))
+                print(reverse(lst))
+                print(index(2, lst))
+                print(insert('cat', 4, lst))
 
-   from unittest.gui import TestCaseGui
+        .. tab:: Discussion
 
-   class myTests(TestCaseGui):
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_39ee0274e51d4c888cc20b6fefa4069c
 
-      def testOne(self):
-         self.assertEqual(same_thing(5), 5,"Testing the function same_thing with input 5")
-         self.assertEqual(same_thing("Welcome"), "Welcome", "Testing the function same_thing with input 'Welcome'")
+#.
 
-   myTests().main()
+    .. tabbed:: q7
 
+        .. tab:: Question 
 
-.. activecode:: ac11_14_4
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+           .. actex:: ac11_14_7
 
-   **2.** Write a function called ``add`` that takes any number as its input and returns that sum with 2 added.
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testTwo(self):
-         self.assertEqual(add(-2), 0, "Testing that add(-2) returns 0")
-         self.assertEqual(add(6), 8, "Testing that add(6) returns 8")
-         self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
-
-   myTests().main()
-
-
-.. activecode:: ac11_14_5
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
-
-   **2.1** Write a function called ``subtract_three`` that takes an integer or any number as input, and returns that number minus three.
-   ~~~~
+              Write a function ``replace(s, old, new)`` that replaces all occurences of
+              ``old`` with ``new`` in a string ``s``::
    
-   ===== 
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(subtract_three(9), 6, "Testing the subtract_three function on input 9.")
-         self.assertEqual(subtract_three(-5), -8, "Testing the subtract_three function on input -5.")
-
-   myTests().main()
-
-
-.. activecode:: ac11_14_6
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
-
-   **2.2** Write a function called ``change`` that takes one number as its input and returns that number, plus 7.
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(change(5), 12,"Testing the function change with input 5")
-         self.assertEqual(change(-10), -3, "Testing the function change with input -10")
-
-   myTests().main()
-
-
-.. activecode:: ac11_14_7
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
-
-   **3.** Write a function called ``change`` that takes any string, adds "Nice to meet you!" to the end of the argument given, and returns that new string.
-   ~~~~
-
+                 test(replace('Mississippi', 'i', 'I'), 'MIssIssIppI')
    
-   =====
+                 s = 'I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!'
+                 test(replace(s, 'om', 'am'), 
+                        'I love spam!  Spam is my favorite food.  Spam, spam, spam, yum!')
+   
+                 test(replace(s, 'o', 'a'), 
+                        'I lave spam!  Spam is my favarite faad.  Spam, spam, spam, yum!')
+   
+              *Hint*: use the ``split`` and ``join`` methods.
+              ~~~~
+              def replace(s, old, new):
+                  # your code here
 
-   from unittest.gui import TestCaseGui
+              ====
+              from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+              class myTests(TestCaseGui):
 
-      def testThree(self):
-         self.assertEqual(change("I'm Bob. "), "I'm Bob. Nice to meet you!", "Tests that change('I'm Bob. '') returns 'I'm Bob. Nice to meet you!'")   
-         self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
+                  def testOne(self):
+                      self.assertEqual(replace('Mississippi','i','I'),'MIssIssIppI',"Tested replace on input 'Mississippi','i','I'")
+                      self.assertEqual(replace('Bookkeeper','e','A'),'BookkAApAr',"Tested failed on input 'Bookkeeper','e','A'")
+                      self.assertEqual(replace('Deeded','e','q'),'Dqqdqd',"Tested failed on input 'Deeded','e','q'")
 
-   myTests().main()
+              myTests().main()
 
+#.
 
-.. activecode:: ac11_14_8
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+   .. tabbed:: q8
 
-   **3.1** Write a function named ``intro`` that takes a string as input. Given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
-   ~~~~
+        .. tab:: Question
 
-   =====
+           .. actex:: ac11_14_8
 
-   from unittest.gui import TestCaseGui
+              Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
+              ~~~~
 
-   class myTests(TestCaseGui):
 
-      def testOne(self):
-         self.assertEqual(intro("Mike"), "Hello, my name is Mike and I love SI 106.", "Testing the intro function on input 'Mike'.")
+        .. tab:: Answer
 
-   myTests().main()
+            .. activecode:: answer11_14_8
 
+                import random
 
-.. activecode:: ac11_14_9
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+                def max(lst):
+                    max = 0
+                    for e in lst:
+                        if e > max:
+                            max = e
+                    return max
 
-   **3.2** Write a function called ``s_change`` that takes one string as input and returns that string, concatenated with the string " for fun.".
-   ~~~~
+                lst = []
+                for i in range(100):
+                    lst.append(random.randint(0, 1000))
 
-   =====
+                print(max(lst))
 
-   from unittest.gui import TestCaseGui
+        .. tab:: Discussion
 
-   class myTests(TestCaseGui):
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_714fd5537ebf41189ce5fb6fb16d1d26
 
-      def testOne(self):
-         self.assertEqual(s_change("Coding"), "Coding for fun." ,"Testing the function s_change with input coding")
-         self.assertEqual(s_change("We go to the beach"), "We go to the beach for fun." , "Testing the function s_change with input We go to the beach")
+#.
 
-   myTests().main()
+   .. tabbed:: q9
 
+        .. tab:: Question
 
-.. activecode:: ac11_14_10
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Afunctionthataccumulates
+           .. actex:: ac11_14_9
 
-   **4.** Write a function, ``accum``, that takes a list of integers as input and returns the sum of those integers.
-   ~~~~
+              Write a function ``sum_of_squares(xs)`` that computes the sum
+              of the squares of the numbers in the list ``xs``.  For example,
+              ``sum_of_squares([2, 3, 4])`` should return 4+9+16 which is 29:
+              ~~~~   
+              def sum_of_squares(xs):
+                  # your code here
 
-   =====
+              ====
+              from unittest.gui import TestCaseGui
 
-   from unittest.gui import TestCaseGui
+              class myTests(TestCaseGui):
 
-   class myTests(TestCaseGui):
+                  def testOne(self):
+                      self.assertEqual(sum_of_squares([2,3,4]),29,"Tested sum_of_squares on input [2,3,4]")
+                      self.assertEqual(sum_of_squares([0,1,-1]),2,"Tested sum_of_squares on input [0,1,-1]")
+                      self.assertEqual(sum_of_squares([5,12,14]),365,"Tested sum_of_squares on input [5,12,14]")
 
-      def testFourA(self):
-         self.assertEqual(accum([5]), 5, "Tests that accum([5]) returns 5")
-         self.assertEqual(accum([]), 0, "Tests that accum([]) returns 0")
-         self.assertEqual(accum([2,4,6,8]), 20, "Tests that accum([2,4,6,8]) returns 20")
+              myTests().main()
 
-   myTests().main()
+#.
 
+   .. tabbed:: q10
 
-.. activecode:: ac11_14_11
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Afunctionthataccumulates
+        .. tab:: Question
 
-   **4.1** Write a function named ``total`` that takes a list of integers as input, and returns the total value of all those integers added together.
-   ~~~~
+           .. actex:: ac11_14_10
 
-   =====
+              Write a function to count how many odd numbers are in a list.
+              ~~~~
+              def countOdd(lst):
+                  # your code here
 
-   from unittest.gui import TestCaseGui
+              ====
+              from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+              class myTests(TestCaseGui):
 
-      def testOne(self):
-         self.assertEqual(total([1, 2, 3, 4, 5]), 15, "Testing the total function on input [1, 2, 3, 4, 5].")
-         self.assertEqual(total([0, 0, 0, 0]), 0, "Testing the total function on input [0, 0, 0, 0].")
-         self.assertEqual(total([]), 0, "Testing the total function on input [].")
-         self.assertEqual(total([2]), 2, "Testing the total function on input [2].")
+                  def testOne(self):
+                      self.assertEqual(countOdd([1,3,5,7,9]),5,"Tested countOdd on input [1,3,5,7,9]")
+                      self.assertEqual(countOdd([1,2,3,4,5]),3,"Tested countOdd on input [-1,-2,-3,-4,-5]")
+                      self.assertEqual(countOdd([2,4,6,8,10]),0,"Tested countOdd on input [2,4,6,8,10]")
+                      self.assertEqual(countOdd([0,-1,12,-33]),2,"Tested countOdd on input [0,-1,12,-33]")
 
-   myTests().main() 
+              myTests().main()
 
 
-.. activecode:: ac11_14_12
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Afunctionthataccumulates
 
-   **4.2** Write a function called ``count`` that takes a list of numbers as input and returns all of the elements added togther.
-   ~~~~
+        .. tab:: Answer
 
-   =====
+            .. activecode:: answer11_14_10
 
-   from unittest.gui import TestCaseGui
+                import random
 
-   class myTests(TestCaseGui):
+                def countOdd(lst):
+                    odd = 0
+                    for e in lst:
+                        if e % 2 != 0:
+                            odd = odd + 1
+                    return odd
 
-      def testOne(self):
-         self.assertEqual(count([]), 0, "Testing the function count with input []")
-         self.assertEqual(count([1, 5, 9, -2, 9, 23]), 45, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
+                # make a random list to test the function
+                lst = []
+                for i in range(100):
+                    lst.append(random.randint(0, 1000))
 
-   myTests().main()
+                print(countOdd(lst))
 
+        .. tab:: Discussion
 
-.. activecode:: ac11_14_13
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_fdd366b1b4c8494082a385e1e1197844
 
-   **5.** Write a function, ``length``, that takes in a list as the input. If the length of the list is greater than or equal to 5, return "Longer than 5". If the length is less than 5, return "Less than 5".
-   ~~~~
 
-   =====
+#.
 
-   from unittest.gui import TestCaseGui
+   .. tabbed:: q11
 
-   class myTests(TestCaseGui):
+        .. tab:: Question
 
-      def testFive(self):
-         self.assertEqual(length([]), "Less than 5", "Tests that length([]) returns 'Less than 5'")
-         self.assertEqual(length([2, 2]), "Less than 5", "Tests that length([2, 2]) returns 'Less than 5'")
-         self.assertEqual(length([4, 4, 4, 3, 5, 6, 7, 8, 9]), "Longer than 5", "Tests that length([4, 4, 4, 3, 5, 6, 7, 8, 9]) returns 'Longer than 5'")
-         self.assertEqual(length([1, 1, 1, 1, 1]), "Longer than 5", "Tests that length([1, 1, 1, 1, 1]) returns 'Longer than 5'")
+           .. actex:: ac11_14_11
 
-   myTests().main()
+              Sum up all the even numbers in a list.
+              ~~~~
+              def sumEven(lst):
+                  # your code here
 
+              ====
+              from unittest.gui import TestCaseGui
 
-.. activecode:: ac11_14_14
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+              class myTests(TestCaseGui):
 
-   **5.1** Write a function named ``num_test`` that takes a number as input. If the number is greater than 10, the function should return "Greater than 10." If the number is less than 10, the function should return "Less than 10." If the number is equal to 10, the function should return "Equal to 10."
-   ~~~~
+              def testOne(self):
+                  self.assertEqual(sumEven([1,3,5,7,9]),0,"Tested sumEven on input [1,3,5,7,9]")
+                  self.assertEqual(sumEven([-1,-2,-3,-4,-5]),-6,"Tested sumEven on input [-1,-2,-3,-4,-5]")
+                  self.assertEqual(sumEven([2,4,6,7,9]),12,"Tested sumEven on input [2,4,6,7,9]")
+                  self.assertEqual(sumEven([0,1,12,33]),12,"Tested sumEven on input [0,1,12,33]")
 
-   =====
+              myTests().main()
 
-   from unittest.gui import TestCaseGui
+#.
 
-   class myTests(TestCaseGui):
+   .. tabbed:: q12
 
-      def testOne(self):
-         self.assertEqual(num_test(5), "Less than 10.", "Testing the num_test function on input 5.")
-         self.assertEqual(num_test(0), "Less than 10.", "Testing the num_test function on input 0.")
-         self.assertEqual(num_test(12.99), "Greater than 10.", "Testing the num_test function on input 12.99.")
-         self.assertEqual(num_test(10.00), "Equal to 10.", "Testing the num_test function on input 10.00.")
+        .. tab:: Question
 
-   myTests().main() 
+           .. actex:: ac11_14_12
 
+              Sum up all the negative numbers in a list.
+              ~~~~
+              def sumNegatives(lst):
+                  # your code here
 
-.. activecode:: ac11_14_15
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
+              ====
+              from unittest.gui import TestCaseGui
 
-   **5.2** Write a function called ``decision`` that takes a string as input, and then checks the number of characters. If it has over 17 characters, return "This is a long string", if it is shorter or has 17 characters, return "This is a short string".
-   ~~~~
+              class myTests(TestCaseGui):
 
-   =====
+                  def testOne(self):
+                      self.assertEqual(sumNegatives([-1,-2,-3,-4,-5]),-15,"Tested sumNegatives on input [-1,-2,-3,-4,-5]")
+                      self.assertEqual(sumNegatives([1,-3,5,-7,9]),-10,"Tested sumNegatives on input [1,-3,5,-7,9]")
+                      self.assertEqual(sumNegatives([-2,-4,6,-7,9]),-13,"Tested sumNegatives on input [-2,-4,6,-7,9]")
+                      self.assertEqual(sumNegatives([0,1,2,3,4]),0,"Tested sumNegatives on input [0,1,2,3,4]")
 
-   from unittest.gui import TestCaseGui
+              myTests().main()
 
-   class myTests(TestCaseGui):
 
-      def testOne(self):
-         self.assertEqual(decision("Well hello dolly"), "This is a short string", "Testing the function decision with input 'Well hello dolly'")
-         self.assertEqual(decision("In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes"), "This is a long string", "Testing the function decision with input 'In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes'")
-         self.assertEqual(decision("how do you do sir"), "This is a short string", "Testing the function decision with input 'how do you do sir'")
 
-   myTests().main()
+        .. tab:: Answer
 
+            .. activecode:: answer11_14_12
 
-.. activecode:: ac11_14_16
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Functionscancallotherfunctions
+                import random
 
-   **6.** You will need to write two functions for this problem. The first function, ``divide`` that takes in any number and returns that same number divided by 2. The second function called ``sum`` should take any number, divide it by 2, and add 6. It should return this new number. You should call the ``divide`` function within the ``sum`` function. Do not worry about decimals.
-   ~~~~
+                def sumNegative(lst):
+                    sum = 0
+                    for e in lst:
+                        if e < 0:
+                            sum = sum + e
+                    return sum
 
-   =====
+                lst = []
+                for i in range(100):
+                    lst.append(random.randrange(-1000, 1000))
 
-   from unittest.gui import TestCaseGui
+                print(sumNegative(lst))
 
-   class myTests(TestCaseGui):
+        .. tab:: Discussion
 
-      def testSixA(self):
-         self.assertEqual(divide(4), 2, "Tests that divide(4) returns 2")
-      def testSixB(self):
-         self.assertEqual(sum(4), 8, "Tests that sum(4) returns 8")
-         self.assertEqual(sum(2), 7, "Tests that sum(2) returns 7")
-         self.assertEqual(sum(-6), 3, "Tests that sum(-6) returns 3")
-         self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: disqus_bfe671ac1e0942f2be4de7179921f83f
 
-   myTests().main()
+#.
 
+    .. tabbed:: q13
 
-.. activecode:: ac11_14_17
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Functionscancallotherfunctions
+        .. tab:: Question
 
-   **6.1** Write two functions, one called ``addit`` and one called ``mult``. ``addit`` takes one number as an input and adds 5. ``mult`` takes one number as an input, and multiplies that input by whatever is returned by ``addit``, and then returns the result.
-   ~~~~
+            .. actex:: ac11_14_13
+                :nocodelens:
 
-   =====
+                Write a function ``findHypot``.  The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse. (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
+                ~~~~
 
-   from unittest.gui import TestCaseGui
+                def findHypot(a,b):
+                    # your code here
 
-   class myTests(TestCaseGui):
+                ====
 
-      def testOne(self):
-         self.assertEqual(mult(1), 6,"Testing the function mult with input 1 (should be 6)")
-         self.assertEqual(mult(-2), -6, "Testing the function mult with input -2 (should be -6)")
-         self.assertEqual(mult(0), 0, "Testing the function mult with input 0 (should be 0)")
+                from unittest.gui import TestCaseGui
 
-      def testTwo(self):
-         self.assertEqual(addit(1), 6, "Testing the function addit with input 1 (should be 6)")
-         self.assertEqual(addit(-2), 3, "Testing the function addit with input -2 (should be 3)")
-         self.assertEqual(addit(0), 5, "Testing the function addit with input 0 (should be 5)")
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(findHypot(12.0,5.0),13.0,"Tested findHypot on inputs of 12.0 and 5.0")
+                        self.assertEqual(findHypot(14.0,48.0),50.0,"Tested findHypot on inputs of 14.0 and 48.0")
+                        self.assertEqual(findHypot(21.0,72.0),75.0,"Tested findHypot on inputs of 21.0 and 72.0")
+                        self.assertAlmostEqual(findHypot(1,1.73205),1.999999,2,"Tested findHypot on inputs of 1 and 1.73205")
 
-   myTests().main()
+                myTests().main()
 
+#.
+   .. tabbed:: q14
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_14
+               :nocodelens:
+
+               Write a function called ``is_even(n)`` that takes an integer as an argument and returns ``True`` if the argument is an **even number** and ``False`` if it is **odd**.
+               ~~~~
+               def is_even(n):
+                   #your code here
+
+               ====
+
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(is_even(10),True,"Tested is_even on input of 10")
+                        self.assertEqual(is_even(5),False,"Tested is_even on input of 5")
+                        self.assertEqual(is_even(1),False,"Tested is_even on input of 1")
+                        self.assertEqual(is_even(0),True,"Tested is_even on input of 0")
+
+               myTests().main()
+
+#.
+   .. tabbed:: q15
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_15
+               :nocodelens:
+
+               Now write the function ``is_odd(n)`` that returns ``True`` when ``n`` is odd and ``False`` otherwise.
+               ~~~~
+
+               def is_odd(n):
+                   # your code here
+
+
+               ====
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                   def testOne(self):
+                       self.assertEqual(is_odd(10),False,"Tested is_odd on input of 10")
+                       self.assertEqual(is_odd(5),True,"Tested is_odd on input of 5")
+                       self.assertEqual(is_odd(1),True,"Tested is_odd on input of 1")
+                       self.assertEqual(is_odd(0),False,"Tested is_odd on input of 0")
+
+               myTests().main()
+
+
+
+#.
+   .. tabbed:: q16
+
+        .. tab:: Question
+
+           .. actex:: ac11_14_16
+
+               Write a function ``is_rightangled`` which, given the length of three sides of a triangle, will determine whether the triangle is right-angled. Assume that the third argument to the function is always the longest side. It will return ``True`` if the triangle is right-angled, or ``False`` otherwise.
+
+               Hint: floating point arithmetic is not always exactly accurate,
+               so it is not safe to test floating point numbers for equality.
+               If a good programmer wants to know whether
+               ``x`` is equal or close enough to ``y``, they would probably code it up as
+   
+               .. sourcecode:: python
+   
+                   if  abs(x - y) < 0.001:      # if x is approximately equal to y
+                       ...
+
+               ~~~~
+               def is_rightangled(a, b, c):
+                   # your code here
+
+
+               ====
+               from unittest.gui import TestCaseGui
+
+               class myTests(TestCaseGui):
+                   def testOne(self):
+                       self.assertEqual(is_rightangled(1.5,2.0,2.5),True,"Tested is_rightangled on inputs of 1.5, 2.0 and 2.5")
+                       self.assertEqual(is_rightangled(4.0,8.0,16.0),False,"Tested is_rightangled on inputs of 4.0, 8.0 and 16.0")
+                       self.assertEqual(is_rightangled(4.1,8.2,9.1678787077),True,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.1678787077")
+                       self.assertEqual(is_rightangled(4.1,8.2,9.16787),True,"Tested is_rightangled on inputs of 4.1, 8.2, and 9.16787")
+                       self.assertEqual(is_rightangled(4.1,8.2,9.168),False,"Tested is_rightangled on inputs of 4.1, 8.2 and 9.168")
+                       self.assertEqual(is_rightangled(0.5,0.4,0.64031),True,"Tested is_rightangled on inputs of 0.5, 0.4 and 0.64031")
+
+               myTests().main()

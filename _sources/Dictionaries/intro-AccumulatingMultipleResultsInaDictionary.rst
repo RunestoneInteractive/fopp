@@ -230,6 +230,7 @@ That's actually saying that the newline character, ``\\n``, appears 5155 times i
 the text. In other words, there are 5155 lines of text in the file. Let's
 test that hypothesis. 
 
+
 .. activecode:: ac10_5_7
 
    f = open('scarlet.txt', 'r')
@@ -239,7 +240,48 @@ test that hypothesis.
    print(len(txt_lines))
    print(txt_lines[70:85])
 
-.. datafile::  scarlet.txt
+Now, here are some additional problems to try.
+
+.. activecode:: ac10_5_8
+   :language: python
+   :autograde: unittest
+
+   **2.** Provided is a string saved to the variable name ``sentence``. Split the string into a list of words, then create a dictionary that contains each word and the number of times it occurs. Save this dictionary to the variable name ``word_counts``.
+   ~~~~
+   sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(word_counts.items()), sorted([('The', 1), ('dog', 1), ('chased', 1), ('the', 3), ('rabbit', 2), ('into', 1), ('forest', 1), ('but', 1), ('was', 1), ('too', 1), ('quick.', 1)]), "Testing that word_counts was created correctly.")
+
+   myTests().main()
+
+.. activecode:: ac10_5_9
+   :language: python
+   :autograde: unittest
+
+   **3.** Create a dictionary called ``char_d`` from the string ``stri``, so that the key is a character and the value is how many times it occurs.
+   ~~~~
+   stri = "what can I do"
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(char_d.items()), sorted([('w', 1), ('h', 1), ('a', 2), ('t', 1), (' ', 3), ('c', 1), ('n', 1), ('I', 1), ('d', 1), ('o', 1)]), "Testing that char_d has been created correctly.")
+
+   myTests().main()
+
+
+.. datafile:: scarlet.txt
    :hide:
 
     The Project Gutenberg EBook of A Study In Scarlet, by Arthur Conan Doyle

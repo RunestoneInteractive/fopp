@@ -21,7 +21,7 @@ order of items in the list is changed. If no optional parameters are specified, 
 whatever the natural ordering is for the item type. For example, if the items are all integers, then 
 smaller numbers go earlier in the list. If the items are all strings, they are arranged in alphabetic order.
 
-.. activecode:: ac16_1_1
+.. activecode:: ac18_1_1
 
     L1 = [1, 7, 4, -2, 3]
     L2 = ["Cherry", "Apple", "Blueberry"]
@@ -40,7 +40,7 @@ the method ``sort``. Because it is a function rather than a method, it is invoke
 list as a parameter inside the parentheses, rather than putting the list before the period. More importantly, 
 ``sorted`` does not change the original list. Instead, it returns a new list.
 
-.. activecode:: ac16_1_2
+.. activecode:: ac18_1_2
 
     L2 = ["Cherry", "Apple", "Blueberry"]
     

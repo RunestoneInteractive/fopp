@@ -13,8 +13,8 @@
 
 .. index:: boundary conditions, testing, debugging
 
-Debugging
-=========
+👩‍💻 Debugging
+==============
 
 Programming is a complex process.  Since it is done by human beings, errors may often occur.
 Programming errors are called **bugs** and the process
@@ -173,7 +173,7 @@ We'll look at some of those and how you track them down in the next section.
 
 **Check your understanding**
 
-.. mchoice:: question4_3_1
+.. mchoice:: question4_1_1
    :answer_a: tracking down programming errors and correcting them.
    :answer_b: removing all the bugs from your house.
    :answer_c: finding all the bugs in the program.

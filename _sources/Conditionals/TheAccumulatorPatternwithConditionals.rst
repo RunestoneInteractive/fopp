@@ -207,26 +207,6 @@ first element in ``nums``, but the result is still the same!
 
    myTests().main()
 
-.. activecode:: ac7_10_6
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   For each string in ``wrd_lst``, find the number of characters in the string. If the number of characters is less than 6, add 1 to ``accum`` so that in the end, ``accum`` will contain an integer representing the total number of words in the list that have fewer than 6 characters.
-   ~~~~
-   wrd_lst = ["Hello", "activecode", "Java", "C#", "Python", "HTML and CSS", "Javascript", "Swift", "php"]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(accum, 5, "Testing the value of accum")
-
-   myTests().main()
-
 .. activecode:: ac7_10_7
    :language: python
    :autograde: unittest

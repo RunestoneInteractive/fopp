@@ -105,23 +105,3 @@ you can use empty glue or multi-character strings as glue.
 
    myTests().main()
 
-.. activecode:: ac5_9_6
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
-   ~~~~
-   sent = "The bicentennial for our university is in 2017!"
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(wrds, sent.split(), "Testing that wrds has been correctly assigned.")
-
-   myTests().main()
-

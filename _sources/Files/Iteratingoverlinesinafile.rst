@@ -103,3 +103,33 @@ to read it. And when you start dealing with big files, you may notice the effici
     Sam Bradford QB STL    354 590 3512    18  15  60.0%   76.5
     Shaun Hill QB DET  257 416 2686    16  12  61.8%   81.3
     </pre>
+
+**Check your Understanding**
+
+.. raw:: html
+
+    <pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+    </pre>
+
+1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
+
+.. activecode:: ac9_5_3
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(num_lines, 7, "Testing that num_lines was assigned to the correct value.")
+         self.assertNotIn('len', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main() 

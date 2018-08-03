@@ -13,10 +13,10 @@
 Recipe for Reading and Processing a File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here's a foolproof recipe for processing the contents of a text file. If you've fully digested the previous 
-sections, you'll understand that there are other options as well. Some of those options are preferable for some 
-situations, and some are preferred by python programmers for efficiency reasons. In this course, though, you can 
-always succeed by following this recipe.
+Here's a foolproof recipe for processing the contents of a text file. If you've fully digested the previous sections, 
+you'll understand that there are other options as well. Some of those options are preferable for some situations, and 
+some are preferred by python programmers for efficiency reasons. In this course, though, you can always succeed by 
+following this recipe.
 
 #1. Open the file with ``open``
 
@@ -34,3 +34,17 @@ always succeed by following this recipe.
    for lin in lines:           # step 3
        ## some code that reference the variable lin
    fileref.close()             # step 4
+
+However, this will not be good to use when you are working with large data. Imagine working with a datafile that has 1000 
+rows of data. It would take a long time to read in all the data and then if you had to iterate over it, even more time 
+would be necessary. This would be a case where programmers prefer another option for efficiency reasons.
+
+This option involves iterating over the file itself while still iterating over each line in the file:
+
+::
+
+   fname = "yourfile.txt"
+   fileref = open(fname,"r")   # step 1
+   for lin in fileref:           # step 2
+       ## some code that reference the variable lin
+   fileref.close()             # step 3

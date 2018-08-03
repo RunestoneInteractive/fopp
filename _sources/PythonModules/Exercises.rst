@@ -17,14 +17,15 @@ Exercises
 #.  .. tabbed:: q1
 
         .. tab:: Question
-
-           Use a ``for`` statement to print 10 random numbers.
            
-           .. activecode:: ac13_5_1
+           .. actex:: ac13_5_1
+
+              Use a ``for`` statement to print 10 random numbers.
+              ~~~~
 
         .. tab:: Answer
             
-            .. activecode:: ac13_5_2
+            .. activecode:: answer_ac13_5_1
             
                import random
             
@@ -33,7 +34,13 @@ Exercises
                    arandom = random.random() 
                    print(arandom)
 
-#.  Repeat the above exercise but this time print 10 random numbers between
-    25 and 35.
 
-    .. actex:: ac13_5_3
+#.  .. tabbed:: q2
+
+        .. tab:: Question
+
+            .. actex:: ac13_5_2
+
+               Repeat the above exercise but this time print 10 random numbers between 25 and 35.
+               ~~~~
+

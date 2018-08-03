@@ -39,3 +39,61 @@ iterate with a for loop.
        return new_list
       
    print(keep_odds([3, 4, 6, 7, 0, 1]))
+
+**Check Your Understanding**
+
+.. activecode:: ac21_3_3
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/filter
+
+   **1.** Write code to assign to the variable ``filter_testing`` all the elements in lst_check that have a w in them using filter.
+   ~~~~
+
+   lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(filter_testing, ['watermelon', 'kiwi', 'strawberries'], "Testing that filter_testing has the correct values.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+   myTests().main()
+
+.. activecode:: ac21_3_4
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: AdvancedAccumulation/filter
+
+   **2.** Using filter, filter ``lst`` so that it only contains words containing the letter "o". Assign to variable ``lst2``. Do not hardcode this.
+   ~~~~
+
+   lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
+      
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testTwo(self):
+         self.assertEqual(lst2, ['halloween', 'wagon', 'moon'], "Testing that lst is assigned to correct values.")
+         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+   myTests().main()

@@ -28,15 +28,14 @@ A **module** is a file containing Python definitions and statements intended for
 use in other Python programs. There are many Python modules that come with
 Python as part of the **standard library**. 
 
-The  `Python Documentation <https://docs.python.org/3.4/>`_ site for Python version
-3.4 is an extremely useful reference for all aspects of Python. The site
+The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
+3.6 is an extremely useful reference for all aspects of Python. The site
 contains a listing of all the standard modules that are available with Python
-(see `Global Module Index <https://docs.python.org/3.4/py-modindex.html>`_). You
+(see `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). You
 will also see that there is a
-`Standard Library Reference <https://docs.python.org/3.4/library/index.html>`_
-(Next week, there will be a chapter explaining how to read the language
-reference documentation) and a
-`Tutorial <https://docs.python.org/3.4/tutorial/index.html>`_, as well as
+`Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
+and a
+`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ as well as
 installation instructions, how-tos, and frequently asked questions.  We
 encourage you to become familiar with this site and to use it often.
 
@@ -66,20 +65,8 @@ and make its object bindings available for reference in the rest of the code in 
 
 Note that it is ``import morecode``, not ``import morecode.py``, but the other file has to be called ``morecode.py``.
 
-The python interpreter will look for ``morecode.py`` in the following places, in this order:
-
-1. The directory where the current file lives (``~\Desktop\mycode\`` in the example). If it finds ``morecode.py`` there, it uses it. If not, it goes on to step 2.
-
-2. Other directories that are on the PYTHONPATH. PYTHONPATH is a list of directories on your computer that is automatically configured for you when you install python on your computer. It can be changed if you know what you're doing, but you probably shouldn't mess with it. Indeed, for the duration of this class, you should never need to know what your PYTHONPATH is set to. You will use an installer called ``pip`` to download new modules from the Internet; it will automatically figure out what your PYTHONPATH is and copy the files in those modules to directories that are on the PYTHONPATH. If the interpreter fails to find ``morecode.py`` on the PYTHONPATH, it goes on to step 3.
-
-3. The directory for modules that are built into the python **standard library**. The code files for those libraries are automatically copied into a folder on your computer when you install python. You don't need to worry about where they are installed. In this course, you will use some modules that are part of the python standard library (e.g., the ``random`` module for generating random numbers). The interpreter will fail to find ``morecode.py`` in the standard library and will then yield an error message of the form ``ImportError: No module named morecode``.
-
-.. note::
-
-    Bottom line: make sure you put ``morecode.py`` in the same directory as ``myprog.py``
-
 The tests you see in your problem sets are also using a Python module that's in the standard library, called 
-``UnitTest``. Right now, you can't see the code that causes those tests to run, because we have hidden it from you, 
+``unittest``. Right now, you can't see the code that causes those tests to run, because we have hidden it from you, 
 but later in the course, you will learn how to write your own Unit Tests for code, and to do so, you will need to 
 write an import statement at the beginning of your programs. Even before you learn how to write your own tests, you 
 will see code for Unit Tests in your problem set files.
@@ -148,8 +135,8 @@ When you see imported modules in a Python program, there are a few variations th
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: Only turtle, math, and random have been ported to work in activecode at this time.
-   :feedback_b: Only turtle, math, and random have been ported to work in activecode at this time.
+   :feedback_a: Only a few modules have been ported to work in activecode at this time.
+   :feedback_b: Only a few modules have been ported to work in activecode at this time.
 
    True / False:  All standard Python modules will work in activecode.
 

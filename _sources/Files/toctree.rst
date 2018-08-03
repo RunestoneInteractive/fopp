@@ -12,7 +12,12 @@ Files
    Iteratingoverlinesinafile.rst
    FilesRecipe.rst
    WritingTextFiles.rst
+   CSVFormat.rst
+   ReadingCSVFiles.rst
+   WritingCSVFiles.rst
+   WPTipsHandlingFiles.rst
+   WPWith.rst
    Glossary.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    

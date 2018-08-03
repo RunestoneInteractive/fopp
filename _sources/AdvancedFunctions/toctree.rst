@@ -8,6 +8,7 @@ Advanced Functions
    OptionalParameters.rst
    KeywordParameters.rst
    Anonymousfunctionswithlambdaexpressions.rst
+   ProgrammingWithStyle.rst
    Exercises.rst
-   ExtraExercises.rst
+   ChapterAssessment.rst
    
