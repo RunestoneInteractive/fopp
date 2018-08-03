@@ -16,12 +16,12 @@
 
 Although the textbook has a time limit which prevents an active code window from running 
 indefinitely, you'll still have to wait a little while if your program has an ininite loop. If 
-you accidentally make one outside of the textbook, you wont have that same protection.
+you accidentally make one outside of the textbook, you won't have that same protection.
 
 So how can you recognize when you are in danger of making an infinite loop?
 
 First off, if the variable that you are using to determine if the while loop should continue is 
-not reset, then your code will have an infinite loop. (Unless of course you use ``break`` to 
+never reset inside the while loop, then your code will have an infinite loop. (Unless of course you use ``break`` to 
 break out of the loop.) 
 
 Additionally, if the while condition is ``while True:`` and there is no break, then that is another case of an infinite loop!
@@ -49,7 +49,7 @@ the value of 5 inside, on line 4. By the time 7 has been added to b on line 6, w
 check if b is less than 60. Because it isn't we again run line 4, and set the value of b to 5 
 again. There is no way to break out of this loop.
 
-Sometimes programs can take a while to run, so how can you determine if your code is just talking a while or if it is stuck inside an infinite loop? Print statements are for people, so take advantage of them! You can add print statements to keep track of how your variables are changing as the program processes the instructions given to them. Provided is an example of an infinite loop. Try adding print statments to see where it's coming from. When you're done, check out the answer to see what our solution was. 
+Sometimes programs can take a while to run, so how can you determine if your code is just talking a while or if it is stuck inside an infinite loop? Print statements are for people, so take advantage of them! You can add print statements to keep track of how your variables are changing as the program processes the instructions given to them. Below is an example of an infinite loop. Try adding print statments to see where it's coming from. When you're done, check out the answer to see what our solution was. 
 
 #.
 
