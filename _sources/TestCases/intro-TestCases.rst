@@ -7,7 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-
 .. qnum::
    :prefix: test-1-
    :start: 1
@@ -32,102 +31,31 @@ You've actually been using test cases throughout this book in some of the active
 exercises. The code for them has been hidden, so as not to confuse you and also to avoid giving away the answers. Now 
 it's time to learn how to write code for test cases.
 
-Python provides a built-in module for writing and running test cases, called ``unittest``. As you write larger programs, 
-as part of larger software development teams, you will learn a lot more details about how to structure collections of 
-test cases and learn a discipline for where to collect them and when to run them. This course introduces just a few 
-features of the ``unittest`` module.
-
-As with other modules, the first step is to write a statement to import it. Having done that, you can refer to the 
-classes and functions that are defined in the unittest module.
-
-The unittest module defines a class called ``TestCase``. Rather than directly creating instances of this class, the 
-normal way to use this class is to create a subclass of it. Within the subclass, you define one or more methods. By 
-convention, the name of each method should begin with the word ``test_``. This helps you, and other programmers, keep 
-track of what's going on in your code. Each method that you define in the subclass of ``TestCase`` is one test case.
-
-The code defining test case methods can make "assertions", by invoking one of the assertion methods that is defined for 
-the TestCase class. For example, we can write self.assertEqual(x, 3). If the current value of the variable x is 3, the 
-assertion is valid and the test will pass. If it's not, then the test will fail.
-
-The unittest module uses classes in a way that's a little bit non-intuitive. You will never write code that explicitly 
-invokes your subclass of TestCase to make an instance of it. Instead, that will happen behind the scenes in a function 
-called ``main()`` that is defined in the unittest module. It will search for all subclasses of ``TestCase``. With each 
-subclass, it searches for every method of that class that begins with the prefix ``test``. With each method, it then 
-creates an instance of the class and calls the method to run the tests.
-
-What you will need to learn is how to import the unittest framework, which you learned about in the modules chapter, and 
-write code to:
-
-1. Make a subclass of ``unittest.TestCase``.
-2. Define methods for test cases.
-3. Use assertion methods inside the methods that you define to test specifics about your code.
-
-For example, the code snippet below, illustrates a set of tests for string methods. It is a simplified version of the 
-code provided in the `python documentation for the unittest module <https://docs.python.org/3/library/unittest.html>`_. 
-The full unittest module can do a lot more than we've shown here, including automatically running a setUp method before 
-running each test in a TestCase subclass.
-
-.. sourcecode:: python
-
-    import unittest
-
-    class TestStringMethods(unittest.TestCase): # make a sublcass
-
-        def test_upper(self): # define a method 
-            self.assertEqual('foo'.upper(), 'FOO') # use an assert method to test if something is true
-
-        def test_isupper(self):
-            self.assertTrue('FOO'.isupper())
-            self.assertFalse('Foo'.isupper())
-
-        def test_split(self): # any name ok
-        # but note the convention that it should start with the word test
-            s = 'hello world'
-            self.assertEqual(s.split(), ['hello', 'world'])
-
-    # invoke the main() function from the unittest module, which runs all the tests
-    unittest.main(verbosity=2)
-
-
-In the online textbook, we use a special module that is built on top of the unittest module. This one, however, handles 
-making a nice tabular display of the results of the tests, and putting them into HTML form to display on the web page. To 
-use it, we import the module ``unittest.gui`` rather than just unittest, and then we work with the ``TestCaseGui`` class 
-rather than the ``TestCase`` class. TestCaseGui includes a main() method that does pretty much what the unittest.main 
-function does. In your own code files, you will use the ``TestCase`` class, and get output in your console that does not 
-look quite as neat as the tables you've seen in this textbook.
-
-Here's an example with test cases for the ``blanked`` function that would be useful for a Hangman game. Note that the 
-tests will fail until you fill in a correct definition for the blanked function.
+To write a **unit test**, we must know the correct result when calling the function with a specific input. 
 
 .. activecode:: ac19_1_1
-    :language: python
-    :autograde: unittest
-    :chatcodes:
-    :practice: T
 
-    Define the function blanked(). It takes a word and a string of letters that have been revealed. It should return a 
-    string with the same number of characters as the original word, but with the unrevealed characters replaced by _
+    def square(x):
+        '''raise x to the second power'''
+        return x * x
+    
+    import test
+    print('testing square function')
+    test.testEqual(square(10), 100)
 
-    ~~~~
-    def blanked(word, revealed_letters):
-        return word
 
-    from unittest.gui import TestCaseGui
+``testEqual`` (from the ``test`` module) is a function that allows us to perform a unit test. It takes two parameters. The first is a call to the function we want to test (``square`` in this example) with a particular input (10 in this example). The second parameter is the correct result that should be produced (100 in this example). ``test.testEqual`` compares what the function returns with the correct result and displays whether the unit test passes or fails.
 
-    class myTests(TestCaseGui):
+.. admonition:: Extend the program ...
 
-        def testOne(self):
-            self.assertEqual(blanked('hello', 'elj'), "_ell_", "testing blanking of hello when e,l, and j have been guessed.")
-            self.assertEqual(blanked('hello', ''), '_____', "testing blanking of hello when nothing has been guessed.")
-            self.assertEqual(blanked('ground', 'rn'), '_r__n_', "testing blanking of ground when r and n have been guessed.")
-            self.assertEqual(blanked('almost', 'vrnalmqpost'), 'almost', "testing blanking of almost when all the letters have been guessed.")
+   On line 8, write another unit test (that should pass) for the ``square`` function.
 
-    myTests().main()
+.. note::
+   The ``test`` module is not a standard Python module. Instead, there are other more powerful and more modern modules, such as one called ``unittest`` which will be taught in more advanced courses. However, the ``test`` module offers a simple introduction to testing that is appropriate at this stage in the interactive text.
 
 **Check your understanding**
 
 .. mchoice:: question19_1_1
-   :practice: T
    :answer_a: True
    :answer_b: False
    :answer_c: It depends
@@ -136,10 +64,9 @@ tests will fail until you fill in a correct definition for the blanked function.
    :feedback_b: A message is printed out, but the program does not stop executing
    :feedback_c: A message is printed out, but the program does not stop executing
 
-   When ``TestCase.assertEqual()`` is passed two values that are not the same, it generates an error and stops execution of the program.
+   When ``test.testEqual()`` is passed two values that are not the same, it generates an error and stops execution of the program.
  
 .. mchoice:: question19_1_2
-   :practice: T
    :answer_a: True
    :answer_b: False
    :correct: b
@@ -149,32 +76,25 @@ tests will fail until you fill in a correct definition for the blanked function.
    Test cases are a waste of time, because the python interpreter will give an error
    message when the program runs incorrectly, and that's all you need for debugging.
 
-   .. code-block:: python
-
-        def blanked(word, revealed_letters):
-            return word
-
-        from unittest.gui import TestCaseGui
-
-        class myTests(TestCaseGui):
-
-            def testOne(self):
-                self.assertEqual(blanked('hello', 'elj'), "_ell_", "testing blanking of hello when e,l, and j have been guessed.")
-                self.assertEqual(blanked('hello', ''), '_____', "testing blanking of hello when nothing has been guessed.")
-                self.assertEqual(blanked('ground', 'rn'), '_r__n_', "testing blanking of ground when r and n have been guessed.")
-                self.assertEqual(blanked('almost', 'vrnalmqpost'), 'almost', "testing blanking of almost when all the letters have been guessed.")
-
-        myTests().main()
-
-
 .. mchoice:: question19_1_3
-    :practice: T
-    :answer_a: self.assertEqual(blanked('under', 'du', 'u_d__'))
-    :answer_b: self.assertEqual(blanked('under', 'u_d__'), 'du')
-    :answer_c: self.assertEqual(blanked('under', 'du'), 'u_d__')
+    :answer_a: test.testEqual(blanked('under', 'du', 'u_d__'))
+    :answer_b: test.testEqual(blanked('under', 'u_d__'), 'du')
+    :answer_c: test.testEqual(blanked('under', 'du'), 'u_d__')
     :correct: c
     :feedback_a: blanked only takes two inputs; this provides three inputs to the blanked function
     :feedback_b: The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word
     :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
 
     Which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
+
+    .. code-block:: python
+
+        def blanked(word, revealed_letters):
+            return word
+
+        import test
+
+        test.testEqual(blanked('hello', 'elj'), "_ell_")
+        test.testEqual(blanked('hello', ''), '_____')
+        test.testEqual(blanked('ground', 'rn'), '_r__n_')
+        test.testEqual(blanked('almost', 'vrnalmqpost'), 'almost')

@@ -122,25 +122,27 @@ we compute and return the result.
 
     test.testEqual(distance(1,2, 1,2), 0)
     test.testEqual(distance(1,2, 4,6), 5)
-    test.testEqual(distance(0,0, 1,1), 1.41)
 
-.. admonition:: Fix the error ...
 
-   Two of the tests pass but the last one fails. Is there still an error in the function?
+..     test.testEqual(distance(0,0, 1,1), 1.41)
 
-   Frequently we discover errors in the functions that we are writing. However, it is possible that there is an error in a test. Here the error is in the precision of the correct answer.
+.. .. admonition Fix the error ...
 
-   The third test fails because by default testEqual checks 5 digits to the right of the decimal point.
+..    Two of the tests pass but the last one fails. Is there still an error in the function?
 
-   - Change ``1.41`` to ``1.41421`` and run. The test will pass.
+..    Frequently we discover errors in the functions that we are writing. However, it is possible that there is an error in a test. Here the error is in the precision of the correct answer.
+
+..    The third test fails because by default testEqual checks 5 digits to the right of the decimal point.
+
+..    - Change ``1.41`` to ``1.41421`` and run. The test will pass.
    
-   There are circumstances where 2 digits to the right of the decimal point is sufficiently precise.
+..    There are circumstances where 2 digits to the right of the decimal point is sufficiently precise.
 
-   - Copy line 11 on to line 12. On line 12, change ``1.41421`` to ``1.41``. Run. The test fails.
+..    - Copy line 11 on to line 12. On line 12, change ``1.41421`` to ``1.41``. Run. The test fails.
 
-   - Type ``, 2`` after 1.41. (The 2 represents the precision of the test -- how many digits to the right of the decimal that must be correct.) Run.
+..    - Type ``, 2`` after 1.41. (The 2 represents the precision of the test -- how many digits to the right of the decimal that must be correct.) Run.
 
-   Now all four the tests pass! Wonderful! However, you may still need to perform additional tests.
+..    Now all four the tests pass! Wonderful! However, you may still need to perform additional tests.
 
 When you start out, you might add only a line or two of code at a time. As you gain more experience, you might find 
 yourself writing and debugging bigger conceptual chunks. As you improve your programming skills you should find yourself

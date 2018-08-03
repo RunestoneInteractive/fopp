@@ -72,7 +72,6 @@ Table of Contents
    Sorting/toctree.rst
    NestedData/toctree.rst
    TestCases/toctree.rst
-   TestPrograms/toctree.rst
    Exceptions/toctree.rst
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
