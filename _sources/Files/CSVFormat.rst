@@ -24,5 +24,4 @@ For example, we can make a file with the following contents. If you save it as a
    Jamal, 98, A+
    Eloise, 87, B+
    Madeline, 99, A+
-   
-As long as none of your data contains commas, you can do this by hand using output formatting. You previously learned about writing output to a text file.
+   Wei, 94, A
