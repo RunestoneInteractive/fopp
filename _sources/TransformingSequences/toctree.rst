@@ -1,8 +1,8 @@
-TransformingSequences
-:::::::::::::::::::::
+Transforming Sequences
+::::::::::::::::::::::
 
 .. toctree::
-   :caption: Sequence Mutation
+   :caption: Transforming Sequences
    :maxdepth: 2
 
    intro-SequenceMutation.rst
@@ -17,6 +17,7 @@ TransformingSequences
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
    WPAccumulatorPatternStrategies.rst
+   WPDontMutateAListYouIterateThrough.rst
    Glossary.rst
    Exercises.rst
    week4a1.rst
