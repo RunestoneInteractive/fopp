@@ -11,8 +11,8 @@
    :prefix: debug-7-
    :start: 1
 
-Know Your Error Messages
-~~~~~~~~~~~~~~~~~~~~~~~~
+👩‍💻 Know Your Error Messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Many problems in your program will lead to an error message. For example as I was 
 writing and testing this chapter of the book I wrote the following version of the 
