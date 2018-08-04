@@ -20,8 +20,7 @@ Again, python provides a module for doing this. The module is called json. We wi
 
 ``json.loads()`` takes a string as input and produces a python object (a dictionary or a list) as output.
 
-Consider, for example, the iTunes REST API. If we request data from iTunes, the response we get back will be a string 
-that begins with the following:
+Consider, for example, some data that we might get from Apple's iTunes, in the JSON format:
 
 ``'\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892'``
 

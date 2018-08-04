@@ -11,23 +11,15 @@
    :prefix: files-11-
    :start: 1
 
-👩‍💻 Tips to Handling Files
+👩‍💻 Tips on Handling Files
 ============================
 
 When working with files, there are a few things to keep in mind. When naming files, it's best to not include spaces. 
-While most operating systems can handle opening files with spaces in their names, not all can.
+While most operating systems can handle files with spaces in their names, not all can.
 
 Additionally, suffixes in files names, for example the .txt in ``FileNameExample.txt``, are not magic. Instead, these 
-suffixes are convention. For some operating systems the suffixes have no special significance, and only have meaning when 
+suffixes are a convention. For some operating systems the suffixes have no special significance, and only have meaning when 
 used in a program. Other operating systems infer information from the suffixes - for example, ``.EXE`` is a suffix that 
 means a file is executable. 
 
-When dealing with CSV files specifically, there are a few things to keep in mind. First is that because CSV files separate cells by using commas, you may have issues using commas inside of a value. For example, imagine the following data is inside a file that is being read:
-
-:: 
-    
-    "19-9-1999", 89.99, "A date, price, and description"
-
-Not only are commas used to separate the cells but are used within one of the values. It's important to keep that in mind when dealing with csv files.
-
-Because programmers often have to use CSV files, there is a Python module built specifically to deal with them (aptly named csv!). However, this module is beyond the scope of this course, so we will not teach more about it.
+It's a good idea to follow the conventions. If a file contains CSV formatted data, name it with the extension ``.csv``, not ``.txt``. A python program will be able to read it either way, but if you follow the convention you will help other people guess what's in the file. And you will also help the computer's operating system to guess what application program it should open when you double-click on the file.
