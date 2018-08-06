@@ -73,6 +73,7 @@ and a point on the perimeter, and computes the area of the circle.
 To start off, we'll introduce two functions that will be used in the process, ``distance`` which calculates the distance between two points and ``area`` which calculates the area of a circle:
 
 .. sourcecode:: python
+
     def distance(x1, y1, x2, y2):
         dx = x2 - x1
         dy = y2 - y1

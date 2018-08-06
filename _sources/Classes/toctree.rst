@@ -16,6 +16,7 @@ Defining your own Classes
    sorting_instances.rst
    ClassVariablesInstanceVariables.rst
    ThinkingAboutClasses.rst
+   TestingClasses.rst
    Tamagotchi.rst
    Glossary.rst
    Exercises.rst

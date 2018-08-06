@@ -25,4 +25,16 @@ problem is zero. **It is important to have a test at each boundary.**
 
 .. admonition:: Extend the program ...
 
-   Starting on line 9, write two more unit tests (that should pass) so that all input equivalence classes and boundaries are covered.
+   Starting on line 9, write two unit tests (that should pass) so that all input equivalence classes and boundaries are covered.
+
+.. activecode:: ac19_5_1
+
+    def square(x):
+        '''raise x to the second power'''
+        return x * x
+    
+    import test
+    print('testing square function')
+    test.testEqual(square(10), 100)
+    test.testEqual(square(10.0), 100)
+

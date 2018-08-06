@@ -11,53 +11,28 @@
    :prefix: files-2-
    :start: 1
 
-Finding a File on your Disk
-===========================
+Finding a File in your Filesystem
+=================================
 
-Opening a file requires that you, as a programmer, and Python agree about the location of the file on your disk.  
-The way that files are located on disk is by their **path**. You can think of the filename as the short name for a file, 
-and the path as the full name. For example on a Mac if you save the file ``hello.txt`` in your home directory the path to 
-that file is ``/Users/yourname/hello.txt`` On a Windows machine the path looks a bit different but the same principles 
-are in use. For example on windows the path might be ``C:\Users\yourname\My Documents\hello.txt``
+In the examples we have provided, and in the simulated file system that we've built for this online textbook, all files sit in a single directory, and it's the same directory where the python program is stored. Thus, we can just write ``open('myfile.txt','r')``.
 
-You can access files in folders, also called directories, under your home directory by adding a slash and the name of the 
-folder. For example, if you had a file called ``hello.py`` in a folder called ``SI106``  that was inside a folder called 
-``PyCharmProjects`` under your home directory, then the full name for ``hello.py`` stored in the SI106 folder would be 
-``/Users/yourname/PyCharmProjects/SI106/hello.py``
-
-Here's the important rule to remember: If your file and your Python program are in the same directory you can simply use 
-the filename. ``open('myfile.txt','r')`` If your file and your Python program are in different directories then you 
-should use the path to the file ``open(/Users/joebob01/myfile.txt)``. This is called an *absolute file path*. An 
-*absolute file path* typically only works on a specific computer. Think about it for a second. What other computer in the 
-world is going to have an *absolute file path* that starts with ``/Users/yourname``?
-
-If a file is not in the same folder as your python program, you need to tell the computer how to reach it. A 
-*relative file path* starts from the folder that contains your python program and follows a computer's file hierarchy. A 
-file hierarchy contains folders which contains files and other sub-folders. Specifying a sub-folder is easy -- you simply 
-specify the sub-folder's name. To specify a *parent* folder you use the special ``..`` notation because every file and 
-folder has one unique parent. You can use the ``..`` notation multiple times in a file path to move multiple levels up a 
-file hierarchy. Here is an example file hierarchy that contains multiple folders, files, and sub-folders. Folders in the 
-diagram are displayed in **bold** type.
+If you have installed python on your local computer and you are trying to get file reading and writing operations to work, there's a little more that you may need to understand. Computer operating systems (like Windows and the Mac OS) organize files into a hierarchy of folders, with some folders containing other folders. 
 
 .. image:: Figures/ExampleFileHierarchy.png
   :align: center
 
-Using the example file hierarchy above, the program, ``myPythonProgram.py``
-could access each of the data files using the following *relative file paths*:
 
-* ``data1.txt``
-* ``../myData/data2.txt``
-* ``../myData/data3.txt``
-* ``../../otherFiles/extraData/data4.txt``
+If your file and your Python program are in the same directory you can simply use 
+the filename. For example, with the file hierarchy in the diagram, the file `myPythonProgram.py` could contain the code ``open('data1.txt','r')``. 
 
-While working in the textbook, you do not need to worry about different directories. The files can be treated as if they 
-are in the same directory. Only on your own computer, outside of the textbook, will you need to worry about getting the 
-correct file path.
+If your file and your Python program are in different directories, however, then you need to specify a **path**. You can think of the filename as the short name for a file, and the path as the full name. Typically, you will specify a *relative file path*, which says where to find the file to open, relative to the directory where the code is running from. For example, the file `myPythonProgram.py` could contain the code ``open('../myData/data2.txt','r')``. The ``../`` means to go up one level in the directory structure, to the containing folder (allProjects); ``myData/`` says to descend into the myData subfolder.
+
+There is also an option to use an *absolute file path*. For example, suppose the file structure in the figure is stored on a computer in the user's home directory,``/Users/joebob01/myFiles``. Then code in any python program running from any file folder could open data2.txt via ``open('/Users/joebob01/myFiles/allProjects/myData/data2.txt','r')``. You can tell an absolute file path because it begins with a `/`. 
+If you will ever move your programs and data to another computer (e.g., to share them with someone else), it will be much more convenient if your use relative file paths rather than absolute. That way, if you preserve the folder structure when moving everything, you won't need to change your code. If you use absolute paths, then the person you are sharing with probably not have the same home directory name, `/Users/joebob01/`. Note that python pathnames follow the UNIX conventions (Mac OS is a UNIX variant), rather than the Windows file pathnames that use `:` and '\'. The python interpreter will translate to Windows pathnames when running on a Windows machine; you should be able to share your python program between a Windows machine and a MAC without having to rewrite the file open commands. 
 
 .. note::
 
    For security reasons, our code running in your browser doesn't read or write files to your computer's file 
    system. Later, when you run python natively on your own computer, you will be able to truly read files, using 
    path names as suggested above. To get you started, we have faked it by providing a few files that you can read 
-   *as if* they were on your hard disk. In this chapter, we simulate the existence of a textfile called 
-   ``qbdata.txt``. You can't open any other files from your local computer from code running this chapter.
+   *as if* they were on your hard disk. In this chapter, we simulate the existence of one textfile; you can't open any other files from your local computer from textbook code running in your browser.
