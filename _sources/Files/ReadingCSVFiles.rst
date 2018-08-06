@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: files-9-
+   :prefix: files-13-
    :start: 1
 
 Reading in data from a .CSV File
@@ -23,7 +23,7 @@ each following row in the file will contain data that corresponds to the appropr
 All file methods that we have mentioned - ``read``, ``readline``, and ``readlines``, as simply iterating over the file object itself - will work on CSV files. In our examples, we will use ``readlines``, as that will make it easier for us to 
 manipulate the data in Python.
 
-.. activecode:: ac9_9_1
+.. activecode:: ac9_13_1
 
     fileconnection = open("olympics.txt", 'r')
     data = fileconnection.readlines()
@@ -45,10 +45,12 @@ For example, the data file might look like:
 
 .. raw:: html
 
-    "Name","Sex","Age","Team","Event","Medal
+    <pre id="sample.txt">
+    "Name","Sex","Age","Team","Event","Medal"
     "A Dijiang","M","24","China","Basketball","NA"
     "Edgar Lindenau Aabye","M","34","Denmark/Sweden","Tug-Of-War","Gold"
     "Christine Jacoba Aaftink","F","21","Netherlands","Speed Skating","NA"
+    </pre>
 
 If you are reading a .csv file that has enclosed all values in double quotes, it's actually a pretty tricky programming problem to split the text for one row into a list of values. You won't want to try to do it directly. Instead, you should use python's built-in CSV module. However, there's a bit of a learning curve for that, and we find that students gain a better understanding of reading .csv files by first learning to read unquoted .csv file and splitting lines on commas.
 

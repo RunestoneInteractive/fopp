@@ -13,6 +13,7 @@ Dictionaries
    intro-AccumulatingMultipleResultsInaDictionary.rst
    AccumulatingResultsFromaDictionary.rst
    AccumulatingtheBestKey.rst
+   WPChoosingDictionaries.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
