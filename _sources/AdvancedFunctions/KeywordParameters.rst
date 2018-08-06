@@ -67,6 +67,45 @@ execution.
    definition, ``x=3`` says that 3 should be the value for x in every invocation of the function where no value is 
    explicitly provided for x.
 
+
+Keyword Parameters with .format
+-------------------------------
+
+Earlier you learned how to use the ``format`` method for strings, which allows you to structure strings like 
+fill-in-the-blank sentences. Now that you've learned about optional and keyword parameters, we can introduce a new way to 
+use the ``format`` method.
+
+This other option is to specifically refer to keywords for interpolation values, like below.
+
+.. activecode:: ac15_2_1
+ 
+   names_scores = [("Jack",[67,89,91]),("Emily",[72,95,42]),("Taylor",[83,92,86])]
+   for name, scores in names_scores:
+       print("The scores {nm} got were: {s1},{s2},{s3}.".format(nm=name,s1=scores[0],s2=scores[1],s3=scores[2]))
+
+
+Sometimes, you may want to use the ``.format`` method to insert the same value into a string 
+multiple times. You can do this by simply passing the same string into the format method, 
+assuming you have included ``{}`` s in the string everywhere you want to interpolate them. But 
+you can also use positional passing references to do this! The order in which you pass 
+arguments into the ``format`` method matters: the first one is argument ``0``, the second is 
+argument ``1``, and so on.
+
+For example,
+
+.. activecode:: ac15_2_2
+ 
+   # this works
+   names = ["Jack","Jill","Mary"]
+   for n in names:
+       print("'{}!' she yelled. '{}! {}, {}!'".format(n,n,n,"say hello"))
+
+   # but this also works!
+   names = ["Jack","Jill","Mary"]
+   for n in names:
+       print("'{0}!' she yelled. '{0}! {0}, {1}!'".format(n,"say hello"))
+
+
 **Check your understanding**
 
 .. mchoice:: question15_2_1
@@ -163,7 +202,26 @@ execution.
       initial = 0
       f(2)
 
-.. activecode:: ac15_2_1
+.. mchoice:: question15_2_5
+   :answer_a: 'first!' she yelled. 'Come here, first! f_one, f_two, and f_three are here!'
+   :answer_b: 'Alexey!' she yelled. 'Come here, Alexey! Catalina, Misuki, and Pablo are here!'
+   :answer_c: 'Catalina!' she yelled. 'Come here, Catalina! Alexey, Misuki, and Pablo are here!'
+   :answer_d: There is an error. You cannot repeatedly use the keyword parameters.
+   :correct: c
+   :feedback_a: Remember, the values inside of {} are variable names. The values of the variables will be used.
+   :feedback_b: Look again at what value is set to the variable first.
+   :feedback_c: Yes, the keyword parameters will determine the order of the strings.
+   :feedback_d: This is not an error, you can do that in Python!
+   :practice: T
+
+   What value will be printed below?
+   
+   .. code-block:: python 
+
+      names = ["Alexey", "Catalina", "Mitsuki", "Pablo"]
+      print("'{first}!' she yelled. 'Come here, {first}! {f_one}, {f_two}, and {f_three} are here!'".format(first = names[1], f_one = names[0], f_two = names[2], f_three = names[3]))
+
+.. activecode:: ac15_2_3
    :language: python
    :autograde: unittest
    :practice: T
@@ -185,7 +243,7 @@ execution.
 
    myTests().main()
 
-.. activecode:: ac15_2_2
+.. activecode:: ac15_2_4
    :language: python
    :autograde: unittest
    :practice: T
