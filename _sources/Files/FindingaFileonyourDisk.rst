@@ -36,3 +36,36 @@ If you will ever move your programs and data to another computer (e.g., to share
    system. Later, when you run python natively on your own computer, you will be able to truly read files, using 
    path names as suggested above. To get you started, we have faked it by providing a few files that you can read 
    *as if* they were on your hard disk. In this chapter, we simulate the existence of one textfile; you can't open any other files from your local computer from textbook code running in your browser.
+
+**Check Your Understanding**
+
+.. mchoice:: question9_2_1
+   :answer_a: open("YearlyProjections.csv", "r")
+   :answer_b: open("../CompanyData/YearlyProjections.csv", "r")
+   :answer_c: open("CompanyData/YearlyProjections.csv", "r")
+   :answer_d: open("Project/CompanyData/YearlyProjections.csv", "r")
+   :answer_e: open("../YearlyProjections.csv", "r")
+   :correct: c
+   :feedback_a: This would try to open a csv file inside of Project (but that is not where the csv file is.)
+   :feedback_b: Though this technically works, there is a more direct way to access the file.
+   :feedback_c: Yes, this is how you can access the csv file!
+   :feedback_d: Because the python program is inside of Project, this is incorrect. Remember, the python file and the directory called CompanyData are at the same level.
+   :feedback_e: Incorrect, remember that .. will bring you up one level. This would try to open a csv file inside of Project (but that is not where the csv file is.)
+   :practice: T 
+
+   Say you are in a directory called Project. In it, you have a file with your python code. You would like to read in data from a file called "YearlyProjections.csv" which is in a folder called CompanyData, which is inside of Project. What is the best way to open the file in your python program?
+
+.. mchoice:: question9_2_2
+   :multiple_answers:
+   :answer_a: "Stacy/Applications/README.txt"
+   :answer_b: "/Users/Raquel/Documents/graduation_plans.doc"
+   :answer_c: "/private/tmp/swtag.txt"
+   :answer_d: "ScienceData/ProjectFive/experiment_data.csv"
+   :correct: a,d
+   :feedback_a: Yes, this is a relative file path. You can tell by the lack of "/" at the beginning of the path.
+   :feedback_b: No, this is an absolute file path. All absolute file paths start with "/".
+   :feedback_c: No, this is an absolute file path. Not all absolute file paths contain "User"! Instead, check to see if the path starts with "/".
+   :feedback_d: Yes, this is a relative file path. You can tell by the lack of "/" at the beginning of the path.
+   :practice: T 
+
+   Which of the following paths are relative file paths?
