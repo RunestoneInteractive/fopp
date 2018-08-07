@@ -20,7 +20,7 @@ produce the correct return values and side effects, especially side effects that
 variables. To illustrate, we will use the Point class that was used in the introduction to classes.
 
 To test whether the class constructor (the ``__init__``) method is working correctly, create an instance and then make 
-assertions to see whether its instance variables are set correctly. Note that this is a side effect test: the constructor 
+tests to see whether its instance variables are set correctly. Note that this is a side effect test: the constructor 
 method's job is to set instance variables, which is a side effect. Its return value doesn't matter.
 
 A method like ``distanceFromOrigin`` in the ``Point`` class you saw does its work by computing a return value, so it 
@@ -47,26 +47,22 @@ Try adding some more tests in the code below, once you understand what's there.
             self.x = self.x + dx
             self.y = self.y + dy
 
-    from unittest.gui import TestCaseGui
+    import test
 
-    class myTests(TestCaseGui):
+    #testing instance variables x and y
+    p = Point(3, 4)
+    test.testEqual(p.y, 4)
+    test.testEqual(p.x, 3)
 
-        def test_int(self):
-            p = Point(3, 4)
-            self.assertEqual(p.y, 4)
-            self.assertEqual(p.x, 3)
+    #testing the distance method
+    p = Point(3, 4)
+    test.testEqual(p.distanceFromOrigin(), 5.0)
 
-        def test_distance(self):
-            p = Point(3, 4)
-            self.assertEqual(p.distanceFromOrigin(), 5.0)
-
-        def test_move(self):
-            p = Point(3, 4)
-            p.move(-2, 3)
-            self.assertEqual(p.x, 1)
-            self.assertEqual(p.y, 7)
-
-    myTests().main()
+    #testing the move method
+    p = Point(3, 4)
+    p.move(-2, 3)
+    test.testEqual(p.x, 1)
+    test.testEqual(p.y, 7)
 
 **Check your understanding**
 
@@ -104,7 +100,7 @@ Try adding some more tests in the code below, once you understand what's there.
    
       def maxabs(L):
          """L should be a list of numbers (ints or floats). The return value should be the maximum absolute value of the numbers in L."""
-         return max(L, key = abs)
+         return max(L, key=abs)
 
 .. mchoice:: question19_3_4
    :practice: T
@@ -115,4 +111,3 @@ Try adding some more tests in the code below, once you understand what's there.
    :feedback_b: You want to check whether it has the correct side effect, whether it correctly mutates the list.
       
    We have usually used the ``sorted`` function, which takes a list as input and returns a new list containing the same items, possibly in a different order. There is also a method called ``sort`` for lists (e.g. ``[1,6,2,4].sort()``). It changes the order of the items in the list itself, and it returns the value ``None``. Which kind of test case would you use on the sort method?    
-   

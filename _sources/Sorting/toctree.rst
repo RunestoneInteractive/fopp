@@ -9,7 +9,7 @@ Sorting
    Optionalreverseparameter.rst
    Optionalkeyparameter.rst
    SortingaDictionary.rst
-   StableSorting.rst
+   SecondarySortOrder.rst
    WPWhenToUseLambdaVsFunction.rst
    Glossary.rst
    Exercises.rst

@@ -14,8 +14,8 @@
 👩‍💻 Writing Test Cases
 ========================
 
-It is a good idea to write one or more test cases for each function, method, or class that you define. 
-We will start with functions, and then move on to classes.
+It is a good idea to write one or more test cases for each function or method that you define. 
+We will start with functions.
 
 Testing functions
 -----------------
@@ -34,10 +34,10 @@ Return Value Tests
 ~~~~~~~~~~~~~~~~~~
 
 Testing whether a function returns the correct value is the easiest test case to define. You simply check whether the 
-result of invoking the function on a particular input produces the particular output that you expect. If f is your 
-function, and you think that it should transform inputs x and y into output z, then you could write a test as 
-``self.assertEqual(f(x, y), z)``. Or, to give a more concrete example, if you have a function ``square``, you could have 
-a test case ``self.assertEqual(square(3), 9)``. Call this a **return value test**.
+result of invoking the function on a particular input produces the particular output that you expect. If ``f`` is your 
+function, and you think that it should transform inputs ``x`` and ``y`` into output ``z``, then you could write a test as 
+``test.testEqual(f(x, y), z)``. Or, to give a more concrete example, if you have a function ``square``, you could have 
+a test case ``test.testEqual(square(3), 9)``. Call this a **return value test**.
 
 Because each test checks whether a function works properly on specific inputs, the test cases will never be complete: in 
 principle, a function might work properly on all the inputs that are tested in the test cases, but still not work 
@@ -57,16 +57,10 @@ Try adding one or two more test cases for the square function in the code below,
     def square(x):
         return x*x
 
-    from unittest.gui import TestCaseGui
-    # because we're in the textbook interface, use TestCaseGui instead of unittest.TestCase, like this...
-    # from unittest import TestCase
+    import test
 
-    class myTests(TestCaseGui):
+    test.testEqual(square(3), 9)
 
-        def test_return_value(self):
-            self.assertEqual(square(3), 9)
-
-    myTests().main()
 
 Side Effect Tests
 ~~~~~~~~~~~~~~~~~
@@ -79,7 +73,7 @@ effect on the mutable object.
 An example follows, testing the ``update_counts`` function (which is deliberately implemented incorrectly...). This 
 function takes a string called ``letters`` and updates the counts in ``counts_diction`` that are associated with each 
 character in the string. To do a side effect test, we first create a dictionary with initial counts for some letters. 
-Then we invoke the function. Then we assert that the dictionary has the correct counts for some letters (those correct 
+Then we invoke the function. Then we test that the dictionary has the correct counts for some letters (those correct 
 counts are computed manually when we write the test. We have to know what the correct answer should be in order to write 
 a test). You can think of it like writing a small exam for your code -- we would not give you an exam without knowing the 
 answers ourselves.
@@ -92,21 +86,14 @@ answers ourselves.
             if c in counts_dict:
                 counts_dict[c] = counts_dict[c] + 1
 
-    from unittest.gui import TestCaseGui
-    # because we're in the textbook interface, use TestCaseGui instead of unittest.TestCase, like this...
-    # from unittest import TestCase
+    import test
 
-    class myTests(TestCaseGui):
-
-        def test_side_effect(self):
-            counts_dict = {'a': 3, 'b': 2}
-            update_counts("aaab", counts_dict)
-            # 3 more occurrences of a, so 6 in all
-            self.assertEqual(counts_dict['a'], 6)
-            # 1 more occurrence of b, so 3 in all
-            self.assertEqual(counts_dict['b'], 3)
-
-    myTests().main()
+    counts_dict = {'a': 3, 'b': 2}
+    update_counts("aaab", counts_dict)
+    # 3 more occurrences of a, so 6 in all
+    test.testEqual(counts_dict['a'], 6)
+    # 1 more occurrence of b, so 3 in all
+    test.testEqual(counts_dict['b'], 3)
 
 
 Testing Conditionals and Loops
@@ -133,21 +120,13 @@ during execution. Below are some tests for the built-in sorted function.
 
 .. activecode:: ac19_2_3
 
-    from unittest.gui import TestCaseGui
-    # because we're in the textbook interface, use TestCaseGui instead of unittest.TestCase, like this...
-    # from unittest import TestCase
+    import test
 
-    class myTests(TestCaseGui):
-
-        def test_sorted(self):
-            self.assertEqual(sorted([1, 7, 4]), [1, 4, 7])
-            self.assertEqual(sorted([1, 7, 4], reverse=True), [7, 4, 1])
-
-    myTests().main()
+    test.testEqual(sorted([1, 7, 4]), [1, 4, 7])
+    test.testEqual(sorted([1, 7, 4], reverse=True), [7, 4, 1])
 
 
-.. mchoice:: question18_2_1
-   :practice: T
+.. mchoice:: question19_2_1
    :answer_a: True
    :answer_b: False
    :correct: b

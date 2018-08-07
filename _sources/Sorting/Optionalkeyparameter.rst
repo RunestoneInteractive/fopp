@@ -60,7 +60,7 @@ sorted in order of their absolute value, rather than in order of their actual va
     print(L2)
     
     #or in reverse order
-    print(sorted(L1, reverse = True, key = absolute))
+    print(sorted(L1, reverse=True, key=absolute))
      
 What's really going on there? We've done something pretty strange. Before, all the values we have 
 passed as parameters have been pretty easy to understand: numbers, strings, lists, Booleans, dictionaries. 
@@ -92,7 +92,7 @@ added some print statements into the code.
             return -x
     
     print("About to call sorted")
-    L2 = sorted(L1, None, absolute)
+    L2 = sorted(L1, key=absolute)
     print("Finished execution of sorted")
     print(L2)
 
@@ -103,7 +103,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
 
    It is a little confusing that we are reusing the word *key* so many times. The name of the optional parameter is 
    ``key``. We will usually pass a parameter value using the keyword parameter passing mechanism. When we write 
-   ``key = some_function`` in the function invocation, the word key is there because it is the name of the parameter, 
+   ``key=some_function`` in the function invocation, the word key is there because it is the name of the parameter,
    specified in the definition of the sort function, not because we are using keyword-based parameter passing.
 
 **Check Your Understanding**

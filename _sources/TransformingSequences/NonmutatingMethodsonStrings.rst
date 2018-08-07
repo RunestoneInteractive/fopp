@@ -84,6 +84,7 @@ You should experiment with these methods so that you understand what they do.  N
    :feedback_a: There are definitely o and p characters.
    :feedback_b: There are 2 o characters but what about p?
    :feedback_c: Yes, add the number of o characters and the number of p characters.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -102,6 +103,7 @@ You should experiment with these methods so that you understand what they do.  N
    :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
    :feedback_c: This expression uses the index of n
    :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -130,7 +132,9 @@ Or perhaps more realistically:
 .. activecode:: ac8_8_5
  
    scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
-   for (name, score) in scores:
+   for person in scores:
+       name = person[0]
+       score = person[1]
        print("Hello " + name + ". Your score is " + str(score))
 
 In this section, you will learn to write that in a more readable way:
@@ -138,7 +142,9 @@ In this section, you will learn to write that in a more readable way:
 .. activecode:: ac8_8_6
  
    scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
-   for (name, score) in scores:
+   for person in scores:
+       name = person[0]
+       score = person[1]
        print("Hello {}. Your score is {}.".format(name, score))
 
 In grade school quizzes a common convention is to use fill-in-the blanks. For instance,
@@ -217,9 +223,9 @@ specified number of digits.
 
 This kind of format string depends directly on the order of the
 parameters to the format method. There are other approaches that we will
-skip here, explicitly numbering substitutions and taking substitutions from a dictionary.
+skip here, such as explicitly numbering substitutions.
 
-It is also important that you give ``format`` the same amount of arguments as there are ``{}`` waiting for interpolation in the string. If you have ``{}`` in a string that you do not pass arguments for, you may not get an error, but you will see a weird ``undefined`` value you probably did not intend suddenly inserted into your string. You can see an example below.
+It is also important that you give ``format`` the same amount of arguments as there are ``{}`` waiting for interpolation in the string. If you have a ``{}`` in a string that you do not pass arguments for, you may not get an error, but you will see a weird ``undefined`` value you probably did not intend suddenly inserted into your string. You can see an example below.
 
 For example,
 
@@ -235,36 +241,6 @@ For example,
 
    print(s.format(name)) # 2 {}s, only one interpolation item! Not ideal.
 
-Another option is to specifically refer to keywords (think back to keyword arguments for 
-functions!) for interpolation values, like below.
-
-.. activecode:: ac8_8_12
- 
-   names_scores = [("Jack",[67,89,91]),("Emily",[72,95,42]),("Taylor",[83,92,86])]
-   for name, scores in names_scores:
-       print("The scores {nm} got were: {s1},{s2},{s3}.".format(nm=name,s1=scores[0],s2=scores[1],s3=scores[2]))
-
-
-Sometimes, you may want to use the ``.format`` method to insert the same value into a string 
-multiple times. You can do this by simply passing the same string into the format method, 
-assuming you have included ``{}`` s in the string everywhere you want to interpolate them. But 
-you can also use positional passing references to do this! The order in which you pass 
-arguments into the ``format`` method matters: the first one is argument ``0``, the second is 
-argument ``1``, and so on.
-
-For example,
-
-.. activecode:: ac8_8_13
- 
-   # this works
-   names = ["Jack","Jill","Mary"]
-   for n in names:
-       print("'{}!' she yelled. '{}! {}, {}!'".format(n,n,n,"say hello"))
-
-   # but this also works!
-   names = ["Jack","Jill","Mary"]
-   for n in names:
-       print("'{0}!' she yelled. '{0}! {0}, {1}!'".format(n,"say hello"))
 
 A technical point: Since braces have special meaning in a format string, there must be a 
 special rule if you want braces to actually be included in the final *formatted* string. The 
@@ -290,6 +266,7 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    :feedback_b: Put the data into the format string; not after it.
    :feedback_c: Yes, correct substitutions!
    :feedback_d: Close:  REPLACE the braces.
+   :practice: T
 
 
    What is printed by the following statements?
@@ -309,6 +286,7 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    :feedback_a: The numbers before the f in the braces give the number of digits to display after the decimal point.
    :feedback_b: Close, but round to the number of digits and display the full number of digits specified.
    :feedback_c: Yes, correct number of digits with rounding!
+   :practice: T
    
 
    What is printed by the following statements?

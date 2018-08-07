@@ -8,39 +8,55 @@
     License".
 
 .. qnum::
-   :prefix: files-9-
+   :prefix: files-13-
    :start: 1
 
 Reading in data from a .CSV File
 ================================
 
-We are able to read in csv files like we have so far with regular text files. To practice this, 
+We are able to read in csv files the same way we have with other text files. Because of the standardized structure of the data, there is a common pattern for processing it. To practice this, 
 we will be using data about olympic events.
 
 Typically, CSV files will have a header as the first line, which contains column names. Then, 
 each following row in the file will contain data that corresponds to the appropriate columns. 
 
-All file methods that we have mentioned - ``read``, ``readline``, and ``readlines`` - will work 
-on CSV files. In our examples, we will use ``readlines``, as that will make it easier for us to 
+All file methods that we have mentioned - ``read``, ``readline``, and ``readlines``, as simply iterating over the file object itself - will work on CSV files. In our examples, we will use ``readlines``, as that will make it easier for us to 
 manipulate the data in Python.
 
-.. activecode:: ac9_9_1
+.. activecode:: ac9_13_1
 
-    fileconnection = open("olymics.txt", 'r')
+    fileconnection = open("olympics.txt", 'r')
     data = fileconnection.readlines()
     for row in data:
         print(row)
         print(row.split(",")[0])
 
-In the above code, we open the file, olymics, which contains a bit of data on some olympians. 
-We then use readlines so that each line is an element in a new list which is assigned to data. 
-Then, we loop through data, and print out each row. Because the file is separated by commas, 
+In the above code, we open the file, olympics.txt, which contains data on some olympians. 
+We then use readlines so that each line is an element in a new list. 
+Then, we iterate over the list, and print out each row. Because the file is separated by commas, 
 we can split on the comma, to further extract the data that we want. As a result, we can print 
 the full data, as well as just the first column.
 
+Note that the trick of splitting the text for each row based on the presence of commas only works because commas are not used in any of the field values. Suppose that some of our events were more specific, and used commas. For example, "Swimming, 100M Freestyle". 
+
+How will a program processing a .csv file know when a comma is separating columns, and when it is just part of the text string giving a value within a column? The .csv format is actually a little more general than we have described and has a couple of solutions for that problem. One solution is to use a different column separator, such as `|` or a tab (sometimes, when a tab is used, the format is called tsv, for tab-separated values). The other solution is to enclose all values in double quotes. 
+
+For example, the data file might look like:
+
 .. raw:: html
 
-    <pre hidden id="olymics.txt">
+    <pre id="sample.txt">
+    "Name","Sex","Age","Team","Event","Medal"
+    "A Dijiang","M","24","China","Basketball","NA"
+    "Edgar Lindenau Aabye","M","34","Denmark/Sweden","Tug-Of-War","Gold"
+    "Christine Jacoba Aaftink","F","21","Netherlands","Speed Skating","NA"
+    </pre>
+
+If you are reading a .csv file that has enclosed all values in double quotes, it's actually a pretty tricky programming problem to split the text for one row into a list of values. You won't want to try to do it directly. Instead, you should use python's built-in CSV module. However, there's a bit of a learning curve for that, and we find that students gain a better understanding of reading .csv files by first learning to read unquoted .csv file and splitting lines on commas.
+
+.. raw:: html
+
+    <pre hidden id="olympics.txt">
     Name,Sex,Age,Team,Event,Medal
     A Dijiang,M,24,China,Basketball,NA
     A Lamusi,M,23,China,Judo,NA

@@ -22,7 +22,7 @@ So far we've shown you how to iterate through a list:
     for color in colors:
         print(color)
 
-As well as accumulate a list or delete one!
+As well as accumulate a list by appending or deleting items!
 
 .. activecode:: ac8_12_2
 
@@ -68,18 +68,5 @@ We can also try to accumulate a list that we're iterating through as well. What 
 Though there is not an error, the behavior may not be expected. When we come across a color that begins with a vowel, 
 that color is added to the end of the list. Again, because Python does not reevaluate the iterator variable we are not 
 stuck adding colors that start with vowels for an infinite number of times. That's good in this case! Ultimately though, 
-it can be confusing to write code like this. We would not recommend iterating over an object that you will be mutating 
-within the same iteration.
-
-.. ac8_12_3
-
-..    colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Purple", "Pink", "Brown", "Teal", "Turquois", "Peach", "Beige"]
-
-..    for color in colors:
-..        if color[0] in ["P", "B", "T"]:
-..
-..            # we need to find the position of the string in the list.
-..            position = colors.index(color)
-..            del colors[position]
-
-..    print(colors)
+it can be confusing to write code like this. We recommend not iterating over a list that you will be mutating 
+within the for loop.

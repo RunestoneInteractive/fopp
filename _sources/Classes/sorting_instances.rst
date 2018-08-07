@@ -40,7 +40,7 @@ When each of the items in a list is an instance of a class, you need to provide 
            self.price = price
                       
    L = [Fruit("Cherry", 10), Fruit("Apple", 5), Fruit("Blueberry", 20)]
-   for f in sorted(L, key = lambda x: x.price):
+   for f in sorted(L, key=lambda x: x.price):
        print(f.name)
 
 Sometimes you will find it convenient to define a method for the class that does some computation on the data in an instance. In this case, our class is too simple to really illustrate that. But to simulate it, I've defined a method ``sort_priority`` that just returns the price that's stored in the instance. Now, that method, sort_priority takes one instance as input and returns a number. So it is exactly the kind of function we need to provide as the key parameter for sorted. Here it can get a little confusing: to refer to that method, without actually invoking it, you can refer to ``Fruit.sort_priority``. This is analogous to the code above that referred to ``len`` rather than invoking ``len()``.
@@ -57,10 +57,10 @@ Sometimes you will find it convenient to define a method for the class that does
            
    L = [Fruit("Cherry", 10), Fruit("Apple", 5), Fruit("Blueberry", 20)]
    print "-----sorted by price, referencing a class method-----"
-   for f in sorted(L, key = Fruit.sort_priority):
+   for f in sorted(L, key=Fruit.sort_priority):
        print(f.name)
        
    print "---- one more way to do the same thing-----"
-   for f in sorted(L, key = lambda x: x.sort_priority()):
+   for f in sorted(L, key=lambda x: x.sort_priority()):
        print(f.name)
 

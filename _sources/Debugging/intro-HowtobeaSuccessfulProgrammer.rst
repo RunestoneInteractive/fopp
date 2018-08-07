@@ -14,7 +14,7 @@
 .. index:: boundary conditions, testing, debugging
 
 👩‍💻 Debugging
-==============
+===============
 
 Programming is a complex process.  Since it is done by human beings, errors may often occur.
 Programming errors are called **bugs** and the process
@@ -116,7 +116,6 @@ Hmm, when you run that example you see that something funny has happened.
    :feedback_b: No, try adding the two numbers together yourself, you will definitely get a different result.
    :feedback_c: Yes!  Remember that input returns a string.  Now we will need to convert the string to an integer
    :correct: c
-   :practice: T
 
    Which of the following best describes what is wrong with the previous example?
 
@@ -183,6 +182,5 @@ We'll look at some of those and how you track them down in the next section.
    :feedback_b: Maybe, but that is not what we are talking about in this context.
    :feedback_c: This is partially correct.  But, debugging is more than just finding the bugs.  What do you need to do once you find them?
    :feedback_d: This is partially correct.  But, debugging is more than just fixing the bugs. What do you need to do before you can fix them?
-   :practice: T
 
    Debugging is:
