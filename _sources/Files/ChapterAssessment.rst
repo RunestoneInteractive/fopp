@@ -43,7 +43,7 @@ Chapter Assessment
    writing at some point in their academic career, be it essays, research papers,
    technical write ups, or scripts.
 
-.. datafile:: emotion_words.txt
+.. datafile:: emotion_words2.txt
    :hide:
 
    Sad upset blue down melancholy somber bitter troubled
@@ -69,7 +69,7 @@ Chapter Assessment
 
    myTests().main()
 
-2. We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``. 
+2. We have provided a file called ``emotion_words2.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
 
 .. activecode:: ac9_10_2
 
