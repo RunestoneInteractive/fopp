@@ -6,6 +6,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. _generating_request_urls:
+
 Generating Request URLs
 =======================
 

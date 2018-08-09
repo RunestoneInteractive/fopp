@@ -16,6 +16,7 @@ Internet APIs
    DebugURLs.rst
    functionswithrestapis.rst
    requestsCookbook.rst
+   iTunes.rst
    flickr.rst
    unicode.rst
 
