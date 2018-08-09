@@ -27,7 +27,7 @@ other years. The format of the data file is as follows
 
 .. raw:: html
 
-    <pre id="olypmics.txt">
+    <pre id="olympics0.txt">
     A Dijiang,                      M,    24,     China,          Basketball
     A Lamusi,                       M,    23,     China,          Judo
     Gunnar Nielsen Aaby,            M,    24,     Denmark,        Football
@@ -55,9 +55,9 @@ To open this file, we would call the ``open`` function. The variable,
 the ``close`` method. After the file is closed any further attempts to
 use ``fileref`` will result in an error.
 
-::
+.. activecode:: ac9_2_1
 
-   fileref = open("olympics.txt","r")
+   fileref = open("olympics0.txt","r")
    ## other code here that refers to variable fileref
    fileref.close()
 

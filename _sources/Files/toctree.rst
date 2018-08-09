@@ -6,10 +6,10 @@ Files
    :maxdepth: 2
 
    intro-WorkingwithDataFiles.rst
-   FindingaFileonyourDisk.rst
    ReadingaFile.rst
    AlternativeFileReadingMethods.rst
    Iteratingoverlinesinafile.rst
+   FindingaFileonyourDisk.rst
    FilesRecipe.rst
    WritingTextFiles.rst
    CSVFormat.rst
