@@ -16,24 +16,25 @@ Recipe for Reading and Processing a File
 Here's a foolproof recipe for processing the contents of a text file. If you've fully digested the previous sections, 
 you'll understand that there are other options as well. Some of those options are preferable for some situations, and 
 some are preferred by python programmers for efficiency reasons. In this course, though, you can always succeed by 
-following this recipe.
+following this recipe. (For more information on ``with``, see :ref:`Using with for files<with_page>`.)
 
-#1. Open the file with ``open``
+#1. Open the file using ``with`` and ``open``.
 
 #2. Use ``.readlines()`` to get a list of the lines of text in the file.
 
 #3. Use a ``for`` loop to iterate through the strings in the list, each being one line from the file. On each iteration, process that line of text
 
-#4. Close the file with ``.close()``
+#4. When you are done extracting data from the file, continue writing your code outside of the indentation. Using ``with`` will automatically close the file once the program exits the with block.
 
 ::
 
    fname = "yourfile.txt"
-   fileref = open(fname,"r")   # step 1
-   lines = fileref.readlines() # step 2
-   for lin in lines:           # step 3
-       ## some code that reference the variable lin
-   fileref.close()             # step 4
+   with open(filename, 'r') as fileref:      # step 1
+       lines = fileref.readlines()           # step 2
+       for lin in lines:                     # step 3
+           #some code that references the variable lin
+   #some other code not relying on fileref   # step 4
+
 
 However, this will not be good to use when you are working with large data. Imagine working with a datafile that has 1000 
 rows of data. It would take a long time to read in all the data and then if you had to iterate over it, even more time 
@@ -44,7 +45,7 @@ This option involves iterating over the file itself while still iterating over e
 ::
 
    fname = "yourfile.txt"
-   fileref = open(fname,"r")   # step 1
-   for lin in fileref:           # step 2
-       ## some code that reference the variable lin
-   fileref.close()             # step 3
+   with open(fname, 'r') as fileref:         # step 1
+       for lin in lines:                     # step 2
+           ## some code that reference the variable lin
+   #some other code not relying on fileref   # step 3
