@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. _with_page:
+
 .. qnum::
    :prefix: files-12-
    :start: 1
