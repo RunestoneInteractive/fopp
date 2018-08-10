@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: moreiter-10-
+   :prefix: moreiter-11-
    :start: 1
 
 👩‍💻 Infinite Loops
@@ -35,7 +35,7 @@ Additionally, if the while condition is ``while True:`` and there is no break, t
 
 Another case where an infinite loop is likely to occur is when you have reassiged the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below (if it takes too long, try reloading the page and stepping through this example in codelens):
 
-.. activecode:: ac14_10_1
+.. activecode:: ac14_11_1
 
     b = 15
 
@@ -57,7 +57,7 @@ Sometimes programs can take a while to run, so how can you determine if your cod
 
         .. tab:: Question
 
-            .. actex:: ac14_10_2
+            .. actex:: ac14_11_2
 
                 d = {'x': []}
 
@@ -68,7 +68,7 @@ Sometimes programs can take a while to run, so how can you determine if your cod
 
         .. tab:: Answer
 
-            .. actex:: ac14_10_3
+            .. actex:: ac14_11_3
 
                 d = {'x': []}
                 print("starting the while loop")
