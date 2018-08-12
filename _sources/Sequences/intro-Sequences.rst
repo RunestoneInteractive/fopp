@@ -14,7 +14,7 @@
 Introduction: Sequences
 =======================
 
-In the real world most of the data we care about doesn't exist on its own.  usually data is in the form of some kind of collection or sequence.  For example, a grocery list helps us keep track of the individual food items we need to buy, and our todo list organizes the things we need to do each day.  Notice that both the grocery list and the todo list are not even concerned with numbers as much as they are concerned with words.  This is true of much of our daily life, and so Python provides us with many features to work with lists of things as well as words, which you can think of as a sequence of individual letters.
+In the real world most of the data we care about doesn't exist on its own.  Usually data is in the form of some kind of collection or sequence.  For example, a grocery list helps us keep track of the individual food items we need to buy, and our todo list organizes the things we need to do each day.  Notice that both the grocery list and the todo list are not even concerned with numbers as much as they are concerned with words.  This is true of much of our daily life, and so Python provides us with many features to work with lists of all kinds of objects (numbers, words, etc.) as well as special kind of sequence, the character string, which you can think of as a sequence of individual letters.
 
 So far we have seen built-in types like: ``int``, ``float``, and ``str``. 
 ``int`` and ``float`` are considered to be simple or primitive or atomic data types because their 
