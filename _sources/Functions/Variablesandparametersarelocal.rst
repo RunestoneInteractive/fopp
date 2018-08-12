@@ -50,3 +50,70 @@ Formal parameters are also local and act like local variables. For example, the 
 So it is not possible for a function to set some local variable to a value, complete its execution, and then when it 
 is called again next time, recover the local variable. Each call of the function creates new local variables, and 
 their lifetimes expire when the function returns to the caller.
+
+**Check Your Understanding**
+
+.. mchoice:: question11_7_1
+   :answer_a: True
+   :answer_b: False
+   :correct: b
+   :feedback_a: Local variables cannot be referenced outside of the function they were defined in.
+   :feedback_b: Local variables cannot be referenced outside of the function they were defined in.
+   :practice: T
+
+   True or False: Local variables can be referenced outside of the function they were defined in.
+
+.. fillintheblank:: question11_7_2
+
+   Which of the following are local variables? Please, write them in order of what line they are on in the code.
+
+   .. sourcecode:: python
+
+    numbers = [1, 12, 13, 4]
+    def foo(bar):
+        aug = str(bar) + "street"
+        return aug
+
+    addresses = []
+    for item in numbers:
+        addresses.append(foo(item))
+
+
+   The local variables are
+
+   -  :bar: Good work!
+      :aug: While aug is a local variable, it is not the first one in the code.
+      :item: item is not a local variable.
+      :.*: Incorrect, try again.
+   -  :aug: Good work!
+      :bar: While bar is a local variable, it is not the first one in the code.
+      :item: item is not a local variable.
+      :.*: Incorrect, try again.
+
+.. mchoice:: question11_7_3
+   :answer_a: 33
+   :answer_b: 12
+   :answer_c: There is an error in the code.
+   :correct: c
+   :feedback_a: Incorrect, look again at what is happening in producing.
+   :feedback_b: Incorrect, look again at what is happening in producing.
+   :feedback_c: Yes! There is an error because we reference y in the producing function, but it was defined in adding. Because y is a local variable, we can't use it in both functions without initializing it in both. If we initialized y as 3 in both though, the answer would be 33.
+   :practice: T
+
+   What is the result of the following code?
+
+   .. sourcecode:: python
+
+     def adding(x):
+         y = 3
+         z = y + x + x
+         return z
+
+     def producing(x):
+         z = x * y 
+         return z
+
+     print(producing(adding(4)))
+
+
+
