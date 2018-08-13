@@ -61,8 +61,9 @@ no basic color. On the other hand, "White" has maximum values for all three basi
 	 =======  =======  =======  =======
 
 In order to manipulate an image, we need to be able to access individual pixels. This capability is provided by a module 
-called **image**, provided in ActiveCode. See :ref:`image-processing-on-own` for ways to deal with images in standard 
-Python. The image module defines two classes: ``Image`` and ``Pixel``.
+called **image**, provided in ActiveCode [1]_.  The image module defines two classes: ``Image`` and ``Pixel``.
+
+.. [1] If you want to explore image processing on your own outside of the browser you can install the cImage module from http://pypi.org.
 
 Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity. A pixel provides 
 three methods that allow us to ask for the intensity values. They are called ``getRed``, ``getGreen``, and ``getBlue``.  
