@@ -16,7 +16,7 @@ Recipe for Reading and Processing a File
 Here's a foolproof recipe for processing the contents of a text file. If you've fully digested the previous sections, 
 you'll understand that there are other options as well. Some of those options are preferable for some situations, and 
 some are preferred by python programmers for efficiency reasons. In this course, though, you can always succeed by 
-following this recipe. (For more information on ``with``, see :ref:`Using with for files<with_page>`.)
+following this recipe.
 
 #1. Open the file using ``with`` and ``open``.
 
@@ -29,7 +29,7 @@ following this recipe. (For more information on ``with``, see :ref:`Using with f
 ::
 
    fname = "yourfile.txt"
-   with open(filename, 'r') as fileref:      # step 1
+   with open(fname, 'r') as fileref:         # step 1
        lines = fileref.readlines()           # step 2
        for lin in lines:                     # step 3
            #some code that references the variable lin

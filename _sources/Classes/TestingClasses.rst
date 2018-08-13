@@ -100,7 +100,7 @@ Try adding some more tests in the code below, once you understand what's there.
    
       def maxabs(L):
          """L should be a list of numbers (ints or floats). The return value should be the maximum absolute value of the numbers in L."""
-         return max(L, key = abs)
+         return max(L, key=abs)
 
 .. mchoice:: question19_3_4
    :practice: T
