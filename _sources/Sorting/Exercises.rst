@@ -105,7 +105,7 @@ Exercises
                 else:
                     d[x] = 1
 
-            s = sorted(d, key = lambda x: d[x], reverse=True)
+            s = sorted(d, key=lambda x: d[x], reverse=True)
             
             print(s[:5])
             
@@ -132,7 +132,7 @@ Exercises
                     else:
                         d[x] = 1
                 
-                s = sorted(d, key = lambda x: d[x], reverse=True)
+                s = sorted(d, key=lambda x: d[x], reverse=True)
             
                 return s[:5]
                 

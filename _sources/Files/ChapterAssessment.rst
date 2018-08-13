@@ -43,17 +43,6 @@ Chapter Assessment
    writing at some point in their academic career, be it essays, research papers,
    technical write ups, or scripts.
 
-.. datafile:: emotion_words.txt
-   :hide:
-
-   Sad upset blue down melancholy somber bitter troubled
-   Angry mad enraged irate irritable wrathful outraged infuriated
-   Happy cheerful content elated joyous delighted lively glad
-   Confused disoriented puzzled perplexed dazed befuddled
-   Excited eager thrilled delighted
-   Scared afraid fearful panicked terrified petrified startled
-   Nervous anxious jittery jumpy tense uneasy apprehensive
-
 1. The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
 
 .. activecode:: ac9_10_1
@@ -69,7 +58,7 @@ Chapter Assessment
 
    myTests().main()
 
-2. We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``. 
+2. We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
 
 .. activecode:: ac9_10_2
 

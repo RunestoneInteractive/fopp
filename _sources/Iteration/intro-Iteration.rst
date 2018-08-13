@@ -15,7 +15,7 @@ Introduction: Iteration
 =======================
 
 A basic building block of all programs is to be able to repeat some code
-over and over again.  In computing, we refer to this repetitive execution as **iteration**.  In this section, we will explore some mechanisms for basic iteration.
+over and over again.  Whether it is updating the bank balances of millions of customers each night, or sending email messages to thousands of people programming involves instructing the computer to do many repetitive actions. In computing, we refer to this repetitive execution as **iteration**.  In this section, we will explore some mechanisms for basic iteration.
 
 With collections (lists and strings), a lot of computations involve processing one item at a time.  
 For strings this means that we would like to process one character at a time.
