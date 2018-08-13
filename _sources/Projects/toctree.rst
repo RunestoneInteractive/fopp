@@ -12,6 +12,7 @@ Class Projects
    kiva_graphs
    encryption
    graphing_with_altair
+   image_processing
    l_systems
    split_apply_combine
    
