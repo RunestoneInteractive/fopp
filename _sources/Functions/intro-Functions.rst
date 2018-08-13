@@ -28,18 +28,21 @@ code that make it work.
 
 In this chapter you will learn about *named* functions, functions that can be referred to by name when you want to execute them. 
 
-Learning Goals
---------------
+Topics
+------
 
-* To introduce functions as a means of abstraction
-* To introduce the concepts behind scope
-* To learn to use functions as part of a top-down stepwise refinement development process
-* To introduce unit testing
+* functions as a means of abstraction
+* local and global scope
+* side effects
 
-Objectives
-----------
+Learning Objectives
+-------------------
 
-* To be able to identify formal parameters and actual parameters in a code sample
-* To Write a unit test to cover all preconditions and postconditions of a problem statement
-* To correctly predict the return value of a function given sample actual parameters
-* Given a problem statement and a set of unittests write a function that passes all of the unittests
+At the end of this chapter, you should be able to:
+
+* identify formal parameters and parameter values in a code sample
+* predict the return value of a function given sample parameter values
+* define functions with appropriate names for formal parameter
+* avoid the use of global variables in function definitions by creating formal parameters for all values that are needed
+* identify whether a function has any side effects
+
