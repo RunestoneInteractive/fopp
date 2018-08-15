@@ -23,6 +23,5 @@ Variables, Statements, and Expressions
    Glossary.rst
    Exercises.rst
    week1a2.rst
-   drawing_a_circle.rst
    input_compute_output.rst
    
