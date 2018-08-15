@@ -23,4 +23,5 @@ Functions
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
+   l_systems.rst
    

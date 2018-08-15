@@ -1,5 +1,5 @@
-Substitution Cipher
-===================
+🤔 Substitution Cipher
+========================
 
 .. qnum::
     :prefix: encrypt-

@@ -1,5 +1,5 @@
-Input Compute Output
-====================
+🤔 Input Compute Output
+=========================
 
 In this lesson we will use Python to do some calculations for us to solve some problems.  There are two important problem solving strategies that we will employ to help us along the way that you will find useful in many situations.
 

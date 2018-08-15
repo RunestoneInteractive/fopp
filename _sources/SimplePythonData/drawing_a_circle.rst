@@ -1,5 +1,5 @@
-Drawing a Circle with the Turtle
-================================
+🤔 Drawing a Circle with the Turtle
+=====================================
 
 Suppose that we want our turtle to draw a circle, the circle should have a certain radius that the user can supply and then the turtle can draw one from the current location of the turtle.
 

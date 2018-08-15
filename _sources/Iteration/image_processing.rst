@@ -1,5 +1,5 @@
-Image Processing
-================
+🤔 Image Processing
+=====================
 
 Whether you are into Facebook, Instagram, or Snapchat you are probably familiar with all kinds of image filters and manipulations.  It turns out that lots of the filters you can apply to images are pretty fun to code.  Hopefully you have read the :ref:`Nested Iteration and Image Processing section<image_proc>` to get yourself ready for this project.  In any case you will probably want to open up that section in another tab so you can refer to the image module functions that are provided.
 

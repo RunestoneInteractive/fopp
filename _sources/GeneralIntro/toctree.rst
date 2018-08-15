@@ -17,4 +17,5 @@ General Introduction
    Comments.rst
    Glossary.rst
    Exercises.rst
+   turtle_driving.rst
    

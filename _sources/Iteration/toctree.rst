@@ -20,4 +20,6 @@ Iteration
    Glossary.rst
    Exercises.rst
    week2a2.rst
+   kiva_statistics.rst
+   image_processing.rst
    

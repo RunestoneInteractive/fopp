@@ -1,5 +1,5 @@
-Computing Statistics with Kiva Data
-===================================
+🤔 Computing Statistics with Kiva Data
+========================================
 
 `Kiva <http://kiva.org>`_ is an international nonprofit, founded in 2005 and based in San Francisco, with a mission to connect people through lending to alleviate poverty. We celebrate and support people looking to create a better future for themselves, their families and their communities.  By lending as little as $25 on Kiva, anyone can help a borrower start or grow a business, go to school, access clean energy or realize their potential. For some, it’s a matter of survival, for others it’s the fuel for a life-long ambition.  The following table contains some data that we will use to practice on some basic descriptive statistics that are commonly used in data science.
 

@@ -1,5 +1,5 @@
-Graphing Kiva Data with the Turtle
-==================================
+🤔 Graphing Kiva Data with the Turtle
+=======================================
 
 Computing statistics about numbers gives you a pretty narrow understanding of your data.  Its really important to look at your data visually, that is to graph it.  While there are many tools that you can use to graph your data, for this project we'll be coding our own graphs from scratch.  Don't worry in the next lab we'll explore one of the many high powered graphing tools that will will make the process easier.  Its good to know how the tools work behind the easy to use interface, and writing the code for some of these tools makes for a good learning experience.  Or as my dad would say:  "It builds character."
 

@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+:skipreading:`True`
+
 .. qnum::
    :prefix: data-18-
    :start: 1

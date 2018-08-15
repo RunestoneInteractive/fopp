@@ -17,4 +17,4 @@ Dictionaries
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
-   
+   split_apply_combine.rst
