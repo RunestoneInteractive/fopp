@@ -65,8 +65,8 @@ What happens when you to refer to variable y on line 3? Python looks up the valu
 
 Let's use composition to build up a little more useful function. Recall from the dictionaries chapter that we had a two-step process for finding the letter that appears most frequently in a text string:
 
-    1. Accumulate a dictionary with letters as keys and counts as values. See :ref:`example <accumulating_counts>`.
-    2. Find the best key from that dictionary. See :ref:`example <accumulating_best_key>`.
+1. Accumulate a dictionary with letters as keys and counts as values. See :ref:`example <accumulating_counts>`.
+2. Find the best key from that dictionary. See :ref:`example <accumulating_best_key>`.
 
 We can make functions for each of those and then compose them into a single function that finds the most common letter.
 
