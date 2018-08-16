@@ -20,7 +20,7 @@ For example, the following code counts the frequencies of different numbers in t
 
 .. activecode:: ac18_4_1
 
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
+    L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
 
     d = {}
     for x in L:
@@ -29,14 +29,14 @@ For example, the following code counts the frequencies of different numbers in t
         else:
             d[x] = 1
     for x in d.keys():
-        print(str(x) + " appears " + str(d[x]) + " times")
+        print("{} appears {} times".format(x, d[x]))
 
 The dictionary's keys are not sorted in any particular order. In fact, you may get a different order of output than 
 someone else running the same code. We can force the results to be displayed in some fixed ordering, by sorting the keys.
 
 .. activecode:: ac18_4_2
 
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
+    L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
 
     d = {}
     for x in L:
@@ -45,70 +45,20 @@ someone else running the same code. We can force the results to be displayed in 
         else:
             d[x] = 1
     y = sorted(d.keys())
-    for x in y:
-        print(str(x) + " appears " + str(d[x]) + " times")
+    for k in y:
+        print("{} appears {} times".format(k, d[k]))
 
-    # or in reverse order
-    print("---------")
-    for x in sorted(d.keys(), None, None, True):
-         print(str(x) + " appears " + str(d[x]) + " times")
-    
 
 With a dictionary that's maintaining counts or some other kind of score, we might prefer to get the outputs sorted based 
-on the count rather than based on the items. There are a couple ways to do that. The first is, I think, a little easier 
-to understand. The second is the more standard idiom for python programmers; once you get used to it, it's a lot easier 
-to read.
+on the count rather than based on the items. The standard way to do that in python is to sort based on a property of the key, in particular its value in the dictionary.
 
-Here's the first way, using a lambda expression.
+Here things get a little confusing because we have two different meaning of the word "key". One meaning is a key in a dictionary. The other meaning is the parameter name for the function that you pass into the sorted function.
 
-.. activecode:: ac18_4_3
-
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
-
-    d = {}
-    for x in L:
-        if x in d:
-            d[x] = d[x] + 1
-        else:
-            d[x] = 1
-            
-    items = d.items();
-    sorted_items = sorted(items, key = lambda x: x[1], reverse=True)
-    for x in sorted_items:
-        print(str(x[0]) + " appears " + str(x[1]) + " times")
-
-Here's that same way of doing it, using a named function instead of a lambda expression that produces an anonymous function.
-
-.. activecode:: ac18_4_4
-
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
-
-    d = {}
-    for x in L:
-        if x in d:
-            d[x] = d[x] + 1
-        else:
-            d[x] = 1
-    
-    def g(pair):
-        return pair[1]        
-        
-    items = d.items();
-    sorted_items = sorted(items, key=g, reverse=True)
-    for x in sorted_items:
-        print(str(x[0]) + " appears " + str(x[1]) + " times")
-
-
-Most python programmers would never sort the items (the key, value pairs) from a dictionary. Instead, the standard 
-idiom is to sort just the keys, based on their associated values. Because python lets you pass a function to the 
-sorted parameter, you can pass a function that looks up the value associated with a key and causes that value to be 
-written on the post-it notes that determine the sort order.
- 
-Here's a version based on sorting the keys rather than the complete items, using a lambda expression.
+Remember that the key function always takes as input one item from the sequence and returns a property of the item. In our case, the items to be sorted are the dictionary's keys, so each item is one key from the dictionary. To remind ourselves of that, we've named the parameter in tha lambda expression *k*. The property of key k that is supposed to be returned is its associated value in the dictionary. Hence, we have the lambda expression ``lambda k: d[k]``.
 
 .. activecode:: ac18_4_5
 
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
+    L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
     
     d = {}
     for x in L:
@@ -117,18 +67,15 @@ Here's a version based on sorting the keys rather than the complete items, using
         else:
             d[x] = 1
     
-    # just sort the keys, not the key-value pairs        
     y = sorted(d.keys(), key=lambda k: d[k], reverse=True)
-    
-    # now loop through the keys
     for k in y:
-        print(str(k) + " appears " + str(d[k]) + " times")
+        print("{} appears {} times".format(k, d[k]))
 
-And here's a version of that using a named function. 
+Here's a version of that using a named function.
 
 .. activecode:: ac18_4_6
 
-    L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
+    L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
 
     d = {}
     for x in L:
@@ -140,16 +87,15 @@ And here's a version of that using a named function.
     def g(k):
         return d[k]
 
-    # just sort the keys, not the key-value pairs        
     y =(sorted(d.keys(), key=g, reverse=True))
     
     # now loop through the keys
     for k in y:
-        print(str(k) + " appears " + str(d[k]) + " times")
+        print("{} appears {} times".format(x, d[x]))
 
 .. note::
 
-   When we sort the keys, passing a function with ``key = lambda x: d[x]`` does not specify to sort the keys of a 
+   When we sort the keys, passing a function with ``key=lambda x: d[x]`` does not specify to sort the keys of a
    dictionary. The lists of keys are passed as the first parameter value in the invocation of sort. The key parameter 
    provides a function that says *how* to sort them.
 
@@ -160,7 +106,7 @@ that is expecting a list, its the same as passing the list of keys.
 
 .. activecode:: ac18_4_7
 
-  L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
+  L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
 
   d = {}
   for x in L:
@@ -171,13 +117,15 @@ that is expecting a list, its the same as passing the list of keys.
       
   # now loop through the sorted keys
   for k in sorted(d, key=lambda k: d[k], reverse=True):
-      print(str(k) + " appears " + str(d[k]) + " times")
+        print("{} appears {} times".format(x, d[x]))
 
 Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come 
 across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter 
 value is a dictionary, which really means the keys of the dictionary. The third parameter, the key function, decorates 
 the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to 
 sort in reverse order.
+
+There is another way to sort dictionaries, by calling .items() to extract a sequence of (key, value) tuples, and then sorting that sequence of tuples. But it's better to learn the pythonic way of doing it, sorting the dictionary keys using a key function that takes one key as input and looks up the value in the dictionary.
    
 **Check Your Understanding**
 
@@ -257,7 +205,7 @@ sort in reverse order.
    :autograde: unittest
    :practice: T
 
-   **4.** Sort the following dictionary based on the value from highest to lowest. Assign the resulting value to the variable ``sorted_values``.
+   **4.** Sort the following dictionary's keys based on the value from highest to lowest. Assign the resulting value to the variable ``sorted_values``.
    ~~~~
 
    dictionary = {"Flowers": 10, 'Trees': 20, 'Chairs': 6, "Firepit": 1, 'Grill': 2, 'Lights': 14}
@@ -269,6 +217,6 @@ sort in reverse order.
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(sorted_values, sorted(dictionary, key = lambda x: dictionary[x], reverse = True), "Testing that sorted_values has the correct value.")
+         self.assertEqual(sorted_values, sorted(dictionary, key=lambda x: dictionary[x], reverse = True), "Testing that sorted_values has the correct value.")
 
    myTests().main()
