@@ -56,80 +56,46 @@ until it is called from inside the ``sum_of_squares`` function for the first tim
 
 Also notice that when ``square`` is called (at Step 8, for example), there are two groups of local variables, one for 
 ``square`` and one for ``sum_of_squares``.  Each group of local variables is called a **stack frame**. The variables 
-``x``, and ``y`` are local variables in both functions. These are completely differenet variables, even though they 
+``x``, and ``y`` are local variables in both functions. These are completely different variables, even though they
 have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice 
 that at step 9, y has the value 25 is one frame and 2 in the other.  
 
 What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the 
 ``square`` function. If it didn't find it there, it would go look in the global frame.  
 
+Let's use composition to build up a little more useful function. Recall from the dictionaries chapter that we had a two-step process for finding the letter that appears most frequently in a text string:
+
+    1. Accumulate a dictionary with letters as keys and counts as values. See :ref:`example <accumulating_counts>`.
+    2. Find the best key from that dictionary. See :ref:`example <accumulating_best_key>`.
+
+We can make functions for each of those and then compose them into a single function that finds the most common letter.
+
+.. activecode:: ac_11_9_1
+
+    def most_common_letter(s):
+        frequencies = count_freqs(s)
+        return best_key(frequencies)
+
+    def count_freqs(st):
+        d = {}
+        for c in st:
+            if c not in d:
+                 d[c] = 0
+            d[c] = d[c] + 1
+        return d
+
+    def best_key(dictionary):
+        ks = dictionary.keys()
+        best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
+        for k in ks:
+            if dictionary[k] > dictionary[best_key_so_far]:
+                best_key_so_far = k
+        return best_key_so_far
+
+    print(most_common_letter("abbbbbbbbbbbccccddddd"))
+
 As we have already seen, you can call one function from within another. This ability to build functions 
 by using other functions is called **composition**.
-
-In the above code, we actually did this in the ``sum_of_squares`` function, where we called our ``square`` function to get 
-the values for a, b, and c. As an additional example, we'll write a function that takes two points, the center of the circle 
-and a point on the perimeter, and computes the area of the circle.
-
-To start off, we'll introduce two functions that will be used in the process, ``distance`` which calculates the distance between two points and ``area`` which calculates the area of a circle:
-
-.. sourcecode:: python
-
-    def distance(x1, y1, x2, y2):
-        dx = x2 - x1
-        dy = y2 - y1
-        dsquared = dx**2 + dy**2
-        result = dsquared**0.5
-        return result
-
-    def area(radius):
-        b = 3.14159 * radius**2
-        return b
-
-Assume that the center point is stored in the variables ``xc`` and ``yc``, and the perimeter point is in ``xp`` and 
-``yp``. The first step is to find the radius of the circle, which is the distance between the two points:
-
-.. sourcecode:: python
-    
-    radius = distance(xc, yc, xp, yp)
-
-The second step is to find the area of a circle with that radius and return it.
-
-.. sourcecode:: python
-    
-    result = area(radius)
-    return result
-
-Wrapping that up in a function, we get:
-
-.. activecode:: ac200_2_1
-    
-    def distance(x1, y1, x2, y2):
-      dx = x2 - x1
-      dy = y2 - y1
-      dsquared = dx**2 + dy**2
-      result = dsquared**0.5
-      return result
-
-    def area(radius):
-        b = 3.14159 * radius**2
-        return b
-
-    def area2(xc, yc, xp, yp):
-        radius = distance(xc, yc, xp, yp)
-        result = area(radius)
-        return result
-
-    print(area2(0, 0, 1, 1))
-
-We called this function ``area2`` to distinguish it from the ``area`` function defined earlier. There can 
-only be one function with a given name within a module.
-
-Note that we could have written the composition without storing the intermediate results.
-
-.. sourcecode:: python
-    
-    def area2(xc, yc, xp, yp):
-        return area(distance(xc, yc, xp, yp))
 
 **Check your Understanding**
 
