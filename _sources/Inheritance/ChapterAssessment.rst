@@ -10,10 +10,11 @@
 Chapter Assessment
 ==================
 
-1. The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create. ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different. For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string "[name of pokemon] knows a lot of different moves!". Create an instance of this class with the name as "Belle". Assign this instance to the variable ``p1``.
-
 .. activecode:: ee_inheritance_01
    :tags:Inheritance/inheritVarsAndMethods.rst
+
+   The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create. ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different. For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string "[name of pokemon] knows a lot of different moves!". Create an instance of this class with the name as "Belle". Assign this instance to the variable ``p1``.
+   ~~~~
 
    class Pokemon(object):
        attack = 12
@@ -84,11 +85,11 @@ Chapter Assessment
       
    myTests().main()
 
-
-2. The attack strength for grass Pokemon does not change until they reach level 10. At level 10 and up, their attack strength increases by the attack_boost amount when they level. Modify the ``Grass_Pokemon`` subclass of ``Pokemon`` to reflect this change. To test, create an instance of the class with the name as "Bulby". Assign the instance to the variable ``p2``. Then, use ``Grass_Pokemon`` methods to train a the ``p2`` Grass_Pokemon instance until it reaches at least level 10.
-
 .. activecode:: ee_inheritance_02
    :tags:Inheritance/inheritVarsAndMethods.rst,Inheritance/OverrideMethods.rst
+
+   The attack strength for grass Pokemon does not change until they reach level 10. At level 10 and up, their attack strength increases by the attack_boost amount when they level. Modify the ``Grass_Pokemon`` subclass of ``Pokemon`` to reflect this change. To test, create an instance of the class with the name as "Bulby". Assign the instance to the variable ``p2``. Then, use ``Grass_Pokemon`` methods to train a the ``p2`` Grass_Pokemon instance until it reaches at least level 10.
+   ~~~~
 
    class Pokemon(object):
        attack = 12
@@ -161,12 +162,11 @@ Chapter Assessment
       
    myTests().main()
 
-
-
-3. Along with the Pokemon parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses called ``opponent`` that will show which type of pokemon the current type is weak against and strong against. For instance, if the p_type of the subclass is grass, fire will be assigned to the variable ``weak`` and water will be assigned to the variable ``strong``. Grass is weak against fire, but strong against water. Ghost is weak against dark but strong against psychic. Fire is weak against water but strong against grass. Finally, flying is weak against electric but strong against fighting.
-
 .. activecode:: ee_inheritance_05
    :tags:Inheritance/inheritVarsAndMethods.rst
+
+   Along with the Pokemon parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses called ``opponent`` that will show which type of pokemon the current type is weak against and strong against. For instance, if the p_type of the subclass is grass, fire will be assigned to the variable ``weak`` and water will be assigned to the variable ``strong``. Grass is weak against fire, but strong against water. Ghost is weak against dark but strong against psychic. Fire is weak against water but strong against grass. Finally, flying is weak against electric but strong against fighting.
+   ~~~~
 
    class Pokemon():
        attack = 12

@@ -19,7 +19,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **1.** The variable ``nested`` contains a nested list. Assign 'snake' to the variable ``output`` using indexing.
+   The variable ``nested`` contains a nested list. Assign 'snake' to the variable ``output`` using indexing.
 
    ~~~~
 
@@ -41,7 +41,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **2.** Below, a list of lists is provided. Use in and not in tests to create variables with Boolean values. See comments for further instructions.
+   Below, a list of lists is provided. Use in and not in tests to create variables with Boolean values. See comments for further instructions.
 
    ~~~~
 
@@ -75,7 +75,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **3.** Below, we've provided a list of lists. Use in statements to create variables with Boolean values - see the ActiveCode window for further directions.
+   Below, we've provided a list of lists. Use in statements to create variables with Boolean values - see the ActiveCode window for further directions.
 
    ~~~~
 
@@ -108,7 +108,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **4.** Provided is a nested data structure. Follow the instructions in the comments below. Do not hard code.
+   Provided is a nested data structure. Follow the instructions in the comments below. Do not hard code.
 
    ~~~~
 
@@ -145,7 +145,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **5.** The variable ``nested_d`` contains a nested dictionary with the gold medal counts for the top four countries in the past three Olympics. Assign the value of Great Britain's gold medal count from the London Olympics to the variable ``london_gold``. Use indexing. Do not hardcode.
+   The variable ``nested_d`` contains a nested dictionary with the gold medal counts for the top four countries in the past three Olympics. Assign the value of Great Britain's gold medal count from the London Olympics to the variable ``london_gold``. Use indexing. Do not hardcode.
 
    ~~~~
 
@@ -168,7 +168,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **6.** Below, we have provided a nested dictionary. Index into the dictionary to create variables that we have listed in the ActiveCode window.
+   Below, we have provided a nested dictionary. Index into the dictionary to create variables that we have listed in the ActiveCode window.
 
    ~~~~
 
@@ -212,7 +212,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **7.** Given the list, ``nested_d``, save the medal count for the USA from all three Olympics in the dictionary to the list ``US_count``.
+   Given the list, ``nested_d``, save the medal count for the USA from all three Olympics in the dictionary to the list ``US_count``.
 
    ~~~~
 
@@ -238,7 +238,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **8.** Iterate through the contents of ``l_of_l`` and assign the third element of sublist to a new list called ``third``.
+   Iterate through the contents of ``l_of_l`` and assign the third element of sublist to a new list called ``third``.
 
    ~~~~
 
@@ -261,7 +261,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   **9.** Given below is a list of lists of athletes. Create a list, ``t``, that saves only the athlete's name if it contains the letter "t". If it does not contain the letter "t", save the athlete name into list ``other``.
+   Given below is a list of lists of athletes. Create a list, ``t``, that saves only the athlete's name if it contains the letter "t". If it does not contain the letter "t", save the athlete name into list ``other``.
 
    ~~~~
 

@@ -20,7 +20,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   **1.** Write a function called ``int_return`` that takes an integer as input and returns the same integer.
+   Write a function called ``int_return`` that takes an integer as input and returns the same integer.
    ~~~~
    =====
 
@@ -39,7 +39,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   **2.** Write a function called ``add`` that takes any number as its input and returns that sum with 2 added.
+   Write a function called ``add`` that takes any number as its input and returns that sum with 2 added.
    ~~~~
 
    =====
@@ -61,7 +61,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   **3.** Write a function called ``change`` that takes any string, adds "Nice to meet you!" to the end of the argument given, and returns that new string.
+   Write a function called ``change`` that takes any string, adds "Nice to meet you!" to the end of the argument given, and returns that new string.
    ~~~~
    
    =====
@@ -82,7 +82,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Afunctionthataccumulates
 
-   **4.** Write a function, ``accum``, that takes a list of integers as input and returns the sum of those integers.
+   Write a function, ``accum``, that takes a list of integers as input and returns the sum of those integers.
    ~~~~
 
    =====
@@ -104,7 +104,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   **5.** Write a function, ``length``, that takes in a list as the input. If the length of the list is greater than or equal to 5, return "Longer than 5". If the length is less than 5, return "Less than 5".
+   Write a function, ``length``, that takes in a list as the input. If the length of the list is greater than or equal to 5, return "Longer than 5". If the length is less than 5, return "Less than 5".
    ~~~~
 
    =====
@@ -127,7 +127,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Functionscancallotherfunctions
 
-   **6.** You will need to write two functions for this problem. The first function, ``divide`` that takes in any number and returns that same number divided by 2. The second function called ``sum`` should take any number, divide it by 2, and add 6. It should return this new number. You should call the ``divide`` function within the ``sum`` function. Do not worry about decimals.
+   You will need to write two functions for this problem. The first function, ``divide`` that takes in any number and returns that same number divided by 2. The second function called ``sum`` should take any number, divide it by 2, and add 6. It should return this new number. You should call the ``divide`` function within the ``sum`` function. Do not worry about decimals.
    ~~~~
 
    =====
