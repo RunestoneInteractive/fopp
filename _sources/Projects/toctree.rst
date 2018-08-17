@@ -5,6 +5,6 @@ Class Projects
    :caption: Projects
    :maxdepth: 2
 
-   graphing_with_altair
+
    
    

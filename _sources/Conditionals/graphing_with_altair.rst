@@ -1,8 +1,8 @@
 ..  Copyright (C)  Brad Miller
     Creative Commons Attribution-ShareAlike 4.0 International License
 
-Graphing Kiva Data with Altair
-==============================
+🤔 Graphing Kiva Data with Altair
+===================================
 
 Although making graphs with the turtle is a good way to learn about a few basics of computer graphics it is definitely not going to encourage you to make lots of graphs to explore your data.  Exploring a new pile of data is something that every curious data scientist should want and need to do.  There are many many graphing options available for Python programmers including:
 
