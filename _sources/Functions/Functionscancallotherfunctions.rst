@@ -67,73 +67,73 @@ As we have already seen, you can call one function from within another. This abi
 by using other functions is called **composition**.
 
 In the above code, we actually did this in the ``sum_of_squares`` function, where we called our ``square`` function to get 
-the values for a, b, and c. As an additional example, we'll write a function that takes two points, the center of the circle 
-and a point on the perimeter, and computes the area of the circle.
+the values for a, b, and c. 
 
-To start off, we'll introduce two functions that will be used in the process, ``distance`` which calculates the distance between two points and ``area`` which calculates the area of a circle:
+As an additional example, we can build functions to find the most common letter in a string. 
+
+You've done this recently with dictionary accumulation and the process followed a pattern where we accumulated a dictionary to hold letter counts and then found the max key in that dictionary. We can actually write functions to do these operations.
+
+First off is the function that will accumulate a counts dictionary. Notice how we're replacing all spaces with an empty string. If we don't want to include other characters, such as punctuation or apostrophies, then we could change the function. For example, we could add an optional parameter to the function which would specify what characters should not be included in the dictionary. However, this solution should suffice for this prompt.
+
+.. sourcecode:: python
+
+    def letter_counts(phrase):
+        letter_freq = {}
+        for char in phrase.replace(" ", ""):
+            if char not in letter_freq:
+                letter_freq[char] = 0
+            letter_freq[char] += 1
+        return letter_freq
+
+Then, we can write the function to find the key that occurs most frequently.
 
 .. sourcecode:: python
 
-    def distance(x1, y1, x2, y2):
-        dx = x2 - x1
-        dy = y2 - y1
-        dsquared = dx**2 + dy**2
-        result = dsquared**0.5
-        return result
+    def max_key_in_a_dictionary(diction):
+        best_key = list(diction.keys())[0]
+        for k in diction:
+            if diction[k] > diction[best_key]:
+                best_key = k
+        return best_key
 
-    def area(radius):
-        b = 3.14159 * radius**2
-        return b
+To combine them all, we can then write a function that will find the most common letter in any string we provide as input!
 
-Assume that the center point is stored in the variables ``xc`` and ``yc``, and the perimeter point is in ``xp`` and 
-``yp``. The first step is to find the radius of the circle, which is the distance between the two points:
+.. activecode:: ac11_9_1
 
-.. sourcecode:: python
-    
-    radius = distance(xc, yc, xp, yp)
+    def letter_counts(phrase):
+        letter_freq = {}
+        for char in phrase.replace(" ", ""):
+            if char not in letter_freq:
+                letter_freq[char] = 0
+            letter_freq[char] += 1
+        return letter_freq
 
-The second step is to find the area of a circle with that radius and return it.
+    def max_key_in_a_dictionary(diction):
+        best_key = list(diction.keys())[0]
+        for k in diction:
+            if diction[k] > diction[best_key]:
+                best_key = k
+        return best_key
 
-.. sourcecode:: python
-    
-    result = area(radius)
-    return result
+    def most_common_letter(string_to_parse):
+        letter_dict = letter_counts(string_to_parse)
+        most_common = max_key_in_a_dictionary(letter_dict)
+        return most_common
 
-Wrapping that up in a function, we get:
+    print("Most common letter: " + most_common_letter("We must include in any language with which we hope to describe complex data-processing situations the capability for describing data."))
+    print("Most common letter: " + most_common_letter("I've always been more interested in the future than in the past."))
 
-.. activecode:: ac200_2_1
-    
-    def distance(x1, y1, x2, y2):
-      dx = x2 - x1
-      dy = y2 - y1
-      dsquared = dx**2 + dy**2
-      result = dsquared**0.5
-      return result
-
-    def area(radius):
-        b = 3.14159 * radius**2
-        return b
-
-    def area2(xc, yc, xp, yp):
-        radius = distance(xc, yc, xp, yp)
-        result = area(radius)
-        return result
-
-    print(area2(0, 0, 1, 1))
-
-We called this function ``area2`` to distinguish it from the ``area`` function defined earlier. There can 
-only be one function with a given name within a module.
-
-Note that we could have written the composition without storing the intermediate results.
+As a note, we can also write the ``most_common_letter`` function so that the output of ``letter_counts`` is 
+passed directly to ``max_key_in_a_dictionary``.
 
 .. sourcecode:: python
-    
-    def area2(xc, yc, xp, yp):
-        return area(distance(xc, yc, xp, yp))
+
+    def most_common_lett(string_to_parse):
+        return max_key_in_a_dictionary(letter_counts(string_to_parse))
 
 **Check your Understanding**
 
-.. activecode:: ac11_9_1
+.. activecode:: ac11_9_2
    :language: python
    :autograde: unittest
    :practice: T
