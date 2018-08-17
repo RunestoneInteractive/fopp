@@ -94,9 +94,6 @@ We can make functions for each of those and then compose them into a single func
 
     print(most_common_letter("abbbbbbbbbbbccccddddd"))
 
-As we have already seen, you can call one function from within another. This ability to build functions 
-by using other functions is called **composition**.
-
 **Check your Understanding**
 
 .. activecode:: ac11_9_1
