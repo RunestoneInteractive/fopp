@@ -6,6 +6,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+:skipreading:`True`
+
 .. qnum::
    :prefix: AdAccum-6-
    :start: 1 
