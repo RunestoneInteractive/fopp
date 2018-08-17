@@ -22,7 +22,7 @@ be sorted in reverse order.
 .. activecode:: ac18_2_1
 
     L2 = ["Cherry", "Apple", "Blueberry"]
-    print(sorted(L2, reverse = True))
+    print(sorted(L2, reverse=True))
     
 .. note::
 
@@ -51,6 +51,6 @@ be sorted in reverse order.
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(lst_sorted, sorted(lst, reverse = True), "Testing that lst_sorted value is assigned to correct values.")
+         self.assertEqual(lst_sorted, sorted(lst, reverse=True), "Testing that lst_sorted value is assigned to correct values.")
 
    myTests().main()

@@ -19,33 +19,51 @@ What happens when two items are "tied" in the sort order? For example, suppose w
 Which five letter word will appear first?
 
 The answer is that the python interpreter will sort the tied items in the same order they were in before the sorting. 
-What if we wanted to sort them alphabetically though when the words were the same length? Python allows us to specify multiple conditions when we perform a sort by returning a tuple to the key parameter.
 
-In the code below, we are going to sort the words first by their length, smallest to largest, and then alphabetically.
+What if we wanted to sort them by some other property, say alphabetically, when the words were the same length? Python allows us to specify multiple conditions when we perform a sort by returning a tuple from a key function.
+
+First, let's see how python sorts tuples. We've already seen that there's a built-in sort order, if we don't specify any key function. For numbers, it's lowest to highest. For strings, it's alphabetic order. For a sequence of tuples, the default sort order is based on the default sort order for the first elements of the tuples, with ties being broken by the second elements, and then third elements if necessary, etc. For example,
+
+.. activecode:: ac18_5_0
+
+    tups = [('A', 3, 2),
+            ('C', 1, 4),
+            ('B', 3, 1),
+            ('A', 2, 4),
+            ('C', 1, 2)]
+    for tup in sorted(tups):
+        print(tup)
+
+In the code below, we are going to sort a list of fruit words first by their length, smallest to largest, and then alphabetically to break ties among words of the same length. To do that, we have the key function return a tuple whose first element is the length of the fruit's name, and second element is the fruit name itself.
 
 .. activecode:: ac18_5_1
 
-    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
-    new_order = sorted(fruit, key = lambda x: (len(x), x))
-    print(new_order)
+    fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruits, key=lambda fruit_name: (len(fruit_name), fruit_name))
+    for fruit in new_order:
+        print(fruit)
 
-Here, each word is evaluated first on it's length, then by its alphabetical order. Note that we could continue to specify other conditions by including more elements in the tuple. What would happen though if we wanted to sort it by largest to smallest, and then by alphabetical order?
+Here, each word is evaluated first on it's length, then by its alphabetical order. Note that we could continue to specify other conditions by including more elements in the tuple.
+
+What would happen though if we wanted to sort it by largest to smallest, and then by alphabetical order?
 
 .. activecode:: ac18_5_2
 
-    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
-    new_order = sorted(fruit, key = lambda x: (len(x), x), reverse = True)
-    print(new_order)
+    fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruits, key=lambda fruit_name: (len(fruit_name), fruit_name), reverse=True)
+    for fruit in new_order:
+        print(fruit)
 
 Do you see a problem here? Not only does it sort the words from largest to smallest, but also in reverse alphabetical order! Can you think of any ways you can solve this issue?
 
-One solution is to add a negative sign in front of ``len(x)``, which will convert all positive numbers to negative, and all negative numbers to positive. As a result, the longest elements would be first and the shortest elements would be last.
+One solution is to add a negative sign in front of ``len(fruit_name)``, which will convert all positive numbers to negative, and all negative numbers to positive. As a result, the longest elements would be first and the shortest elements would be last.
 
 .. activecode:: ac18_5_3
 
-    fruit = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
-    new_order = sorted(fruit, key = lambda x: (-len(x), x))
-    print(new_order)
+    fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+    new_order = sorted(fruits, key=lambda fruit_name: (-len(fruit_name), fruit_name), reverse=True)
+    for fruit in new_order:
+        print(fruit)
    
 We can use this for any numerical value that we want to sort, however this will not work for strings.
 
@@ -72,7 +90,7 @@ We can use this for any numerical value that we want to sort, however this will 
                     'Berlin': {'temp': 89 'condition': 'sunny'}, 
                     'Caloocan': {'temp': 78 'condition': 'sunny'}}
 
-         sorted_weather = sorted(weather, key = lambda w: (w, weather[w]['temp']))
+         sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
 
 .. mchoice:: question18_5_2
       :answer_a: first country name (reverse alphabetically), then temperature (lowest to highest)
@@ -97,4 +115,4 @@ We can use this for any numerical value that we want to sort, however this will 
                     'Berlin': {'temp': 89 'condition': 'sunny'}, 
                     'Caloocan': {'temp': 78 'condition': 'sunny'}}
 
-         sorted_weather = sorted(weather, key = lambda w: (w, -weather[w]['temp']), reverse = True)
+         sorted_weather = sorted(weather, key=lambda w: (w, -weather[w]['temp']), reverse=True)

@@ -43,6 +43,7 @@ Chapter Assessment
    writing at some point in their academic career, be it essays, research papers,
    technical write ups, or scripts.
 
+
 .. datafile:: emotion_words.txt
    :hide:
 
@@ -70,7 +71,6 @@ Chapter Assessment
          self.assertEqual(num, 316, "Testing that num value is assigned to correct value.")
 
    myTests().main()
-
 
 .. activecode:: ac9_10_2
    

@@ -14,6 +14,12 @@
 Introduction to Python Modules
 ------------------------------
 
+One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to some of the amazing packages that allow you to solve real world problems without starting from scratch.
+
+.. image:: https://imgs.xkcd.com/comics/python.png
+
+As you may have gathered, Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules you still need to know the python basics in order to glue everything together.  You have already seen one module for turtle graphics and we will introduce more as we go along.  This chapter will help you learn how to make use of other modules in your programs.
+
 Learning Goals
 ==============
 

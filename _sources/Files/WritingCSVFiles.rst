@@ -19,7 +19,7 @@ The typical pattern for writing data to a CSV file will be to write a header row
 through the items in a list, outputting one row for 
 each. Here we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
 
-.. sourcecode:: python
+.. activecode:: ac9_14_1
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing"),
                ("Minna Maarit Aalto", 30, "Sailing"),
@@ -28,17 +28,22 @@ each. Here we a have a list of tuples, each representing one Olympian, a subset 
 
    outfile = open("reduced_olympics.csv","w")
    # output the header row
-   outfile.write("Name, Age, Sport\n")
+   outfile.write('Name,Age,Sport')
+   outfile.write('\n')
    # output each of the rows:
    for olympian in olympians:
-       outfile.write("{}, {}, {}\n".format(olympian[0], olympian[1], olympian[2]))
+       row_string = '{},{},{}'.format(olympian[0], olympian[1], olympian[2])
+       outfile.write(row_string)
+       outfile.write('\n')
    outfile.close()
    
-There are a couple of things worth noting in the code above. First, unlike the print statement, 
-the .write() method on a file object does not automatically insert a newline. Instead, we had to 
-explicitly add the character ``\n`` at the end of each line.
+There are a few things worth noting in the code above.
 
-Second, we had to explicitly refer to each of the elements of olympian when building the string to write. Note just putting ``.format(olympian)`` wouldn't work because the interpreter would see only one value (a tuple) when it was expecting three values to try to substitute into the string template.  Later in the coruse we will see that python provides an advanced technique for automatically unpacking the three values from the tuple, with ``.format(*olympian)``.
+First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join(olympian[0], olympian[1], olympian[2])``.
+
+Second, unlike the print statement, remember that the .write() method on a file object does not automatically insert a newline. Instead, we have to explicitly add the character ``\n`` at the end of each line.
+
+Third, we have to explicitly refer to each of the elements of olympian when building the string to write. Note that just putting ``.format(olympian)`` wouldn't work because the interpreter would see only one value (a tuple) when it was expecting three values to try to substitute into the string template. Later in the coruse we will see that python provides an advanced technique for automatically unpacking the three values from the tuple, with ``.format(*olympian)``.
 
 As described previously, if one or more columns contain text, and that text could contain commas, we need to do something 
 to distinguish a comma in the text from a comma that is separating different values (cells in the 
