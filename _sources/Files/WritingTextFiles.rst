@@ -68,17 +68,22 @@ We also need to close the file when we are done.
 The complete program is shown below.
 
 .. note::
-   Unfortunately, as described above, you can't actually write to a file when executing activecode in the browser. 
-   So for now, you'll just have to look at this program without being able to execute it.
 
-.. sourcecode:: python
+    As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename. Below, we have printed the first 10 characters to the output window.
 
-    outfile = open("squared_numbers.txt", "w")
+.. activecode:: ac9_7_2
+    :nocodelens:
+
+    filename = "squared_numbers.txt"
+    outfile = open(filename, "w")
 
     for number in range(1, 13):
         square = number * number
         outfile.write(str(square) + "\n")
 
     outfile.close()
+
+    infile = open(filename, "r")
+    print(infile.read()[:10])
 
     

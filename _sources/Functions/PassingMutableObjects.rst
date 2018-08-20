@@ -14,7 +14,7 @@
 Passing Mutable Objects
 -----------------------
 
-As you have seen, when a function (or method is invoked) and a parameter value is provided, a new stack frame is 
+As you have seen, when a function (or method) is invoked and a parameter value is provided, a new stack frame is
 created, and the parameter name is bound to the parameter value. What happens when the value that is provided is a 
 mutable object, like a list or dictionary? Is the parameter name bound to a *copy* of the original object, or does it 
 become an alias for exactly that object? In python, the answer is that it becomes an alias for the original object. 
@@ -46,7 +46,7 @@ Consider the following example.
    double(y)
    print(y)
       
-   mylst = ['106', 'students', 'are', 'awesome']
+   mylst = ['our', 'students', 'are', 'awesome']
    changeit(mylst)
    print(mylst)
 

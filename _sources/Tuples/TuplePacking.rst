@@ -11,18 +11,37 @@
    :prefix: tuples-2-
    :start: 1
 
+
+Introduction
+============
+
+You have previously seen tuples, a sequence type that works just like lists except that they are immutable.
+
+When working with multiple values or multiple variable names, the Python interpreter does some automatic packing and unpacking to and from tuples, which allows some simplifications in the code you write.
+
+Learning Objectives
+-------------------
+
+At the end of this chapter, you will be able to:
+
+* Recognize when code is using implicit tuple packing
+* Use implicit tuple packing to return multiple values from a function
+* Read and write code that unpacks a tuple into multiple variables
+
+
 Tuple Packing
--------------
+=============
 
 Wherever python expects a single value, if multiple expressions are provided, separated
 by commas, they are automatically **packed** into a tuple. For example, we could
 have omitted the parentheses when first assigning a tuple to the variable julia.
 
-.. sourcecode:: python
+.. activecode:: ac13-1-1
 
     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
     # or equivalently
     julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+    print(julia[4])
     
 
 **Check your understanding**

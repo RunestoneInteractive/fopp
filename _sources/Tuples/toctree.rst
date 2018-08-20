@@ -8,7 +8,6 @@ Tuple Packing and Unpacking
    TuplePacking.rst
    TuplesasReturnValues.rst
    TupleAssignmentwithunpacking.rst
-   UnpackingDictionaryItems.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
