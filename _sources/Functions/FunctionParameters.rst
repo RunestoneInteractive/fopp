@@ -54,14 +54,14 @@ function personalizes the greeting: the person to greet is specified by the para
       print("Hello " + s)
       print("Glad to meet you")
          
-   hello2("Nick")
+   hello2("Iman")
    hello2("Jackie")
 
 First, notice that hello2 has one formal parameter, s. You can tell that because
 there is exactly one variable name inside the parentheses on line 1.
 
 Next, notice what happened during Step 2. Control was passed to the function, just like we saw before. But in 
-addition, the variable s was bound to a value, the string "Nick". When it got to Step 7, for the second invocation of 
+addition, the variable s was bound to a value, the string "Iman". When it got to Step 7, for the second invocation of
 the function, s was bound to "Jackie".
 
 Function invocations always work that way. The expression inside the parentheses on the line that invokes the function 
@@ -93,7 +93,7 @@ To get a feel for that, let's invoke hello2 using some more complicated expressi
        print("Hello " + s)
        print("Glad to meet you")
          
-   hello2("Nick" + " and Jackie")
+   hello2("Iman" + " and Jackie")
    hello2("Class " * 3)
 
 Now let's consider a function with two parameters. This version of hello takes
@@ -103,14 +103,15 @@ a parameter that controls how many times the greeting will be printed.
    :python: py3
 
    def hello3(s, n):
-      print((" hello " + s)*n)
+      greeting = "Hello {} ".format(s)
+      print(greeting*n)
          
-   hello3("world", 4)
+   hello3("Wei", 4)
    hello3("", 1)
    hello3("Kitty", 11)
 
 At Step 3 of the execution, in the first invocation of hello3, notice that the variable s is bound
-to the value "world" and the variable n is bound to the value 4.
+to the value "Wei" and the variable n is bound to the value 4.
 
 That's how function invocations always work. Each of the expressions, separated by commas, that are inside the
 parentheses are evaluated to produce values. Then those values are matched up positionally

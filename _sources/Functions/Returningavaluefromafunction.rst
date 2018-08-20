@@ -42,7 +42,7 @@ number. Here is the black-box diagram with the Python code following.
 
     toSquare = 10
     result = square(toSquare)
-    print("The result of " + str(toSquare) + " squared is " + str(result))
+    print("The result of {} squared is {}.".format(toSquare, result))
 
 The **return** statement is followed by an expression which is evaluated. Its result is returned to the caller as the 
 "fruit" of calling this function. Because the return statement can contain any Python expression we could have 
@@ -80,7 +80,7 @@ value in the local variables listing. Then look at what is printed when the func
 
     toSquare = 10
     squareResult = square(toSquare)
-    print("The result of " + str(toSquare) + " squared is " + str(squareResult))
+    print("The result of {} squared is {}.".format(toSquare, squareResult))
 
 The problem with this function is that even though it prints the value of the squared input, that value will not be 
 returned to the place where the call was done. Instead, the value ``None`` will be returned. Since line 6 uses the 
@@ -144,7 +144,7 @@ Now, the code:
 
   # Here are a couple sample calls to the function with different lists of names. Try running this code in Codelens a few times and make sure you understand exactly what is happening.
 
-  list1 = ["Sam","Tera","Sal","Paul"]
+  list1 = ["Sam","Tera","Sal","Amita"]
   list2 = ["Rey","Ayo","Lauren","Natalie"]
 
   print(longer_than_five(list1))
