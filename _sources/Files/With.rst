@@ -34,19 +34,18 @@ The Python with statement makes using context managers easy. The general form of
         do some stuff with the object
         ...
 
-When the program exits the with block, the context manager handles the common stuff that normally happens at the end, in our case closing a file. A simple example will clear up all of this abstract discussion of contexts.
+When the program exits the with block, the context manager handles the common stuff that normally happens at the end, in our case closing a file. A simple example will clear up all of this abstract discussion of contexts. Here are the contents of a file called "mydata.txt".
 
 .. datafile:: mydata.txt
 
    1 2 3
    4 5 6
 
-
 .. activecode:: ac9_12_1
    :nocodelens:
    :available_files: mydata.txt
    
-   with open('mydata.txt') as md:
+   with open('mydata.txt', 'r') as md:
        for line in md:
            print(line)
    # continue on with other code          
@@ -61,7 +60,7 @@ This is equivalent to code that specifically closes the file at the end, but nea
    :nocodelens:
    :available_files: mydata.txt
    
-   md = open('mydata.txt')
+   md = open('mydata.txt', 'r')
    for line in md:
        print(line)
    md.close()
