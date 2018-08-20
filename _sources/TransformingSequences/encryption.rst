@@ -1,3 +1,6 @@
+
+:skipreading:`True`
+
 🤔 Substitution Cipher
 ========================
 

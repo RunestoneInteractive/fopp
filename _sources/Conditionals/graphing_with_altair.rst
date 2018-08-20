@@ -1,6 +1,9 @@
 ..  Copyright (C)  Brad Miller
     Creative Commons Attribution-ShareAlike 4.0 International License
 
+:skipreading:`True`
+
+
 🤔 Graphing Kiva Data with Altair
 ===================================
 

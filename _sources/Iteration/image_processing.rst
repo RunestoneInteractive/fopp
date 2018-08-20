@@ -1,3 +1,7 @@
+
+:skipreading:`True`
+
+
 🤔 Image Processing
 =====================
 
