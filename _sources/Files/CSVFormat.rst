@@ -11,8 +11,8 @@
    :prefix: files-8-
    :start: 1
 
-.CSV Format
-===========
+CSV Format
+==========
 
 CSV stands for Comma Separated Values. If you print out tabular data in CSV format, it can be easily imported into other programs like Excel, Google spreadsheets, or a statistics package (R, stata, SPSS, etc.).
 
@@ -20,8 +20,8 @@ For example, we can make a file with the following contents. If you save it as a
 
 .. sourcecode:: python
 
-   Name, score, grade
-   Jamal, 98, A+
-   Eloise, 87, B+
-   Madeline, 99, A+
-   Wei, 94, A
+   Name,score,grade
+   Jamal,98,A+
+   Eloise,87,B+
+   Madeline,99,A+
+   Wei,94,A

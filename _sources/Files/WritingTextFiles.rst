@@ -69,7 +69,10 @@ The complete program is shown below.
 
 .. note::
 
-    As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename. Below, we have printed the first 10 characters to the output window.
+    As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename.  If you try to overwrite a file that's built in to the page, it may not let you; don't try to get too fancy with our file system simulator!
+
+    Below, we have printed the first 10 characters to the output window.
+
 
 .. activecode:: ac9_7_2
     :nocodelens:

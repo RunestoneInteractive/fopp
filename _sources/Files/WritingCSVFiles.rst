@@ -59,7 +59,7 @@ that one can be used to delimit the string and the other can be a character in t
                ("Win Valdemar Aaltonen", 54, "Art Competitions"),
                ("Wakako Abe", 18, "Cycling")]
 
-   outfile = open("reduced_olympics.csv","w")
+   outfile = open("reduced_olympics2.csv","w")
    # output the header row
    outfile.write('"Name","Age","Sport"')
    outfile.write('\n')
