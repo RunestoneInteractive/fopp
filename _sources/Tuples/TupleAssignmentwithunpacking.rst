@@ -22,9 +22,11 @@ Python has a very powerful **tuple assignment** feature that allows a tuple of v
 assignment statement to be assigned values from a tuple on the right of the assignment. Another way to think of this 
 is that the tuple of values is **unpacked** into the variable names.
 
-.. sourcecode:: python
+.. activecode:: ac12_4_1
 
-    (name, surname, birth_year, movie, movie_year, profession, birth_place) = julia
+    julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+
+    name, surname, birth_year, movie, movie_year, profession, birth_place = julia
 
 This does the equivalent of seven assignment statements, all on one easy line. One requirement is that the number of 
 variables on the left must match the number of elements in the tuple. 
@@ -32,17 +34,23 @@ variables on the left must match the number of elements in the tuple.
 Once in a while, it is useful to swap the values of two variables. With conventional assignment statements, we have to 
 use a temporary variable. For example, to swap ``a`` and ``b``:
 
-.. sourcecode:: python
+.. activecode:: ac12_4_2
 
+    a = 1
+    b = 2
     temp = a
     a = b
     b = temp
+    print(a, b, temp)
 
 Tuple assignment solves this problem neatly:
 
-.. sourcecode:: python
+.. activecode:: ac12_4_3
 
+    a = 1
+    b = 2
     (a, b) = (b, a)
+    print(a, b)
 
 The left side is a tuple of variables; the right side is a tuple of values. Each value is assigned to its respective 
 variable. All the expressions on the right side are evaluated before any of the assignments. This feature makes
@@ -50,14 +58,14 @@ tuple assignment quite versatile.
 
 Naturally, the number of variables on the left and the number of values on the right have to be the same.
 
-.. sourcecode:: python
+.. activecode:: ac12_4_4
 
     (a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack 
 
 Earlier we were demonstrating how to use tuples as return values when calculating the area and circumference of a 
 circle. Here we can unpack the return values after calling the function.
 
-.. activecode:: ac12_4_1
+.. activecode:: ac12_4_5
     
     def circleInfo(r):
         """ Return (circumference, area) of a circle of radius r """
@@ -78,7 +86,7 @@ circle. Here we can unpack the return values after calling the function.
 Python even provides a way to pass a single tuple to a function and have it be unpacked for assignment to the named 
 parameters. 
 
-.. activecode:: ac12_4_2
+.. activecode:: ac12_4_6
 
     def add(x, y):
         return x + y
@@ -95,10 +103,46 @@ bound to x, 4 to y.
 Don't worry about mastering this idea yet. But later in the course, if you come across some code that someone else has 
 written that uses the * notation inside a parameter list, come back and look at this again.
 
+.. note::
+
+    Unpacking into multiple variable names also works with lists, or any other sequence type, as long as there is exactly one value for each variable. For example, you can write ``x, y = [3, 4]``.
+
+Unpacking Into Iterator Variables
+---------------------------------
+
+Multiple assignment with unpacking is particularly useful when you iterate through a list of tuples or lists.
+
+For example, a dictionary consists of key-value pairs. When you call the items() method on a dictionary, you get back a sequence of
+key-value pairs. Each of those pairs is a two-item tuple. (More generally, we refer to any two-item tuple as a
+**pair**). You can iterate over the key-value pairs.
+
+.. activecode:: ac12_4_7
+
+    d = {"k1": 3, "k2": 7, "k3": "some other value"}
+
+    for p in d.items():
+        print("key: {}, value: {}".format(p[0], p[1]))
+
+Each time line 4 is executed, p will refer to one key-value pair from d. A pair is just a tuple, so p[0] refers to the
+key and p[1] refers to the value.
+
+That code is easier to read if we unpack the key-value pairs into two variable names.
+
+.. activecode:: ac12_4_8
+
+    d = {"k1": 3, "k2": 7, "k3": "some other value"}
+
+    for k, v in d.items():
+        print("key: {}, value: {}".format(k, v))
+
+More generally, if you have a list of tuples that each has more than two items, and you iterate through them with a for
+loop pulling out information from the tuples, the code will be far more readable if you unpack them into separate
+variable names right after the word ``for``.
+
 **Check your Understanding**
 
 .. mchoice:: question12_4_1
-   :topics: Tuples/TupleAssignmentwithunpacking
+   :practice: T
    :multiple_answers:
    :answer_a: Make the last two lines of the function be "return x" and "return y"  
    :answer_b: Include the statement "return [x, y]" 
@@ -115,7 +159,7 @@ written that uses the * notation inside a parameter list, come back and look at 
    If you want a function to return two values, contained in variables x and y, which of the following methods will work?
 
 .. mchoice:: question12_4_2
-   :topics: Tuples/TupleAssignmentwithunpacking
+   :practice: T
    :answer_a: You can't use different variable names on the left and right side of an assignment statement.
    :answer_b: At the end, x still has it's original value instead of y's original value.
    :answer_c: Actually, it works just fine!
@@ -132,9 +176,10 @@ written that uses the * notation inside a parameter list, come back and look at 
         y = x
         x = y   
 
-.. activecode:: ac12_4_3
+.. activecode:: ac12_4_9
    :language: python
    :autograde: unittest
+   :practice: T
    :chatcodes:
 
    **3.** With only one line of code, assign the variables water, fire, electric, and grass to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
@@ -154,10 +199,11 @@ written that uses the * notation inside a parameter list, come back and look at 
 
    myTests().main()
    
-.. activecode:: ac12_4_4
+.. activecode:: ac12_4_10
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **4.** With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
    ~~~~
@@ -173,5 +219,57 @@ written that uses the * notation inside a parameter list, come back and look at 
          self.assertEqual(v2, 2, "Testing that v2 was assigned correctly.")
          self.assertEqual(v3, 3, "Testing that v3 was assigned correctly.")
          self.assertEqual(v4, 4, "Testing that v4 was assigned correctly.")
+
+   myTests().main()
+
+
+.. activecode:: ac12_4_11
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+
+   **1.** If you remember, the .items() dictionary method produces a sequence of tuples. Keeping this in mind, we have provided you a dictionary called ``pokemon``. For every key value pair, append the key to the list ``p_names``, and append the value to the list ``p_number``. Do not use the .keys() or .values() methods.
+   ~~~~
+
+   pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(p_names), sorted(['Rattata', 'Machop', 'Seel', 'Volbeat', 'Solrock']), "Testing that p_name has the correct values")
+      def testTwo(self):
+         self.assertEqual(sorted(p_number), sorted([19,66,86,86,126]), "Testing that p_number hsa the correct values")
+         self.assertNotIn('.keys()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('.items()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('.values()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ac12_4_12
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+
+   **2.** The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary ``track_medal_counts`` and assign the list to the variable name ``track_events``. Do **NOT** use the .keys() method.
+   ~~~~
+
+   track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(sorted(track_events), sorted(['shot put', 'long jump', '100 meters', '400 meters', '100 meter hurdles', 'triple jump', 'steeplechase', '1500 meters', '5K', '10K', 'marathon', '200 meters', '400 meter hurdles', 'high jump']) , "Testing that track_events was created correctly.")
+         self.assertNotIn('.keys()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('.items()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('in track_medal_counts:', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()

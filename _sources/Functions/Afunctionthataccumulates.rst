@@ -25,10 +25,10 @@ the original len function, and our implementation may not be a very good one.
 
 .. activecode:: ac11_5_1
 
-   def mylen(x):
+   def mylen(seq):
        c = 0 # initialize count variable to 0
-       for y in x:
-           c = c + 1   # increment the counter for each item in x
+       for _ in seq:
+           c = c + 1   # increment the counter for each item in seq
        return c
       
    print(mylen("hello"))
@@ -59,7 +59,6 @@ the original len function, and our implementation may not be a very good one.
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Afunctionthataccumulates
 
    **1.** Write a function named ``total`` that takes a list of integers as input, and returns the total value of all those integers added together.
    ~~~~
@@ -82,9 +81,8 @@ the original len function, and our implementation may not be a very good one.
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Afunctionthataccumulates
 
-   **2.** Write a function called ``count`` that takes a list of numbers as input and returns all of the elements added togther.
+   **2.** Write a function called ``count`` that takes a list of numbers as input and returns a count of the number of elements in the list.
    ~~~~
 
    =====
@@ -95,7 +93,7 @@ the original len function, and our implementation may not be a very good one.
 
       def testOne(self):
          self.assertEqual(count([]), 0, "Testing the function count with input []")
-         self.assertEqual(count([1, 5, 9, -2, 9, 23]), 45, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
+         self.assertEqual(count([1, 5, 9, -2, 9, 23]), 6, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
 
    myTests().main()
 

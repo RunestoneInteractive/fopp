@@ -160,6 +160,8 @@ which letters to keep accumulator counts for, we can start with an empty diction
 add a counter to the dictionary each time we encounter a new thing that we want to
 start keeping count of.
 
+.. _accumulating_counts:
+
 .. activecode:: ac10_5_5
 
    f = open('scarlet.txt', 'r')
