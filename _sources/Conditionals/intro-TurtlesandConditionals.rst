@@ -14,9 +14,9 @@
 Intro: What we can do with Turtles and Conditionals
 ===================================================
 
-To build further on our turtle drawings, we can start to include something called a **selection** or a
-**conditional statement**. Using this kind of statement will allow us to check conditions and change the 
-behavior of the program accordingly. 
+So far, our programs have either been a series of statements which always execute sequentially or operations that are applied to each item in an iterable. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters that are not asleep. This is done with something called a **selection** or a **conditional statement**. 
+
+In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly
 
 .. activecode:: ac7_1_1
 
