@@ -35,6 +35,8 @@ This chapter introduces several basic building blocks of Python programs:
 - function calls, which take values as inputs and compute new values
 - variables, which save values so they can be used later in the program
 
+These are the basic building blocks that are assembled to create programs that you interact with everyday—from the software running on your smartwatch, to the infrastructure behind the largest websites, and every app running on your phone.
+
 Learning Goals
 --------------
 
