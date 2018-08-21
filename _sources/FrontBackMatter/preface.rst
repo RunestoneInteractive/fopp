@@ -1,6 +1,8 @@
 Preface
 =======
 
+.. youtube:: RxNDC0V25iQ
+
 Today, it is hard to imagine life without computers.  We carry them in our pockets, read with them on the couch, and use them on our desk at work.  Computing is the Swiss Army knife of the 21st century: a convenient tool that can be used to solve a wide array of problems. The original computers were large and limited in function: nothing more than very basic calculators. The military was the first to find some of the many applications of this technology: made small, computers could be used to improve the precision of bombing; made large and (relatively) powerful, they could be used to break military codes. As computers continued to grow in power and drop in price, many more peaceful applications were found:
 
 * Scientists in both natural and social sciences can use them to analyze vast quantities of data. For example, astronomers are able to identify distant stars in large images of the sky and sociologists are able to analyze the behavior of all the citizens of a country.
@@ -34,3 +36,5 @@ Programs execute very reliably, and very quickly, but not creatively. Computers 
 .. image:: Figures/LearningZones.png
 
 In addition to mechanistic thinking, writing computer programs requires creative problem solving or the ability to identify a complex situation, think creatively about possible solutions, and express those solutions clearly and accurately. As it turns out, the process of learning to program is an excellent opportunity to practice problem solving skills you can use in other parts of your life. We sincerely believe that the combination of knowledge of Python, creative problem solving skills and expressing those solutions in such a way that a computer can effectively carry them out (computational thinking) will make you more productive and efficient in tackling your work in future classes,whether in Computer Science, Business, Psychology or History. And it may even pique your interest in becoming a Data Scientist or a Computer Scientist.  
+
+

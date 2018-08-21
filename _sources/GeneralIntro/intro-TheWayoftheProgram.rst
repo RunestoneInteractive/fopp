@@ -11,6 +11,8 @@
 Introduction: The Way of the Program
 ====================================
 
+.. youtube:: 2fYNcqVM7T0
+
 The goal of this book is to teach you to understand and create computer programs in Python. 
 At the beginning of each chapter, we will outline for you the learning goals and objectives
 that should be accomplished once you have gone through the chapter.
