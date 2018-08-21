@@ -22,3 +22,4 @@ Transforming Sequences
    Exercises.rst
    week4a1.rst
    encryption.rst
+   image_processing.rst
