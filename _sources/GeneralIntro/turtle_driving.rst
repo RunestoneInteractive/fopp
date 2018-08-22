@@ -3,7 +3,7 @@
 
 :skipreading:`True`
 
-This first activity is designed to get you started writing some simple programs in Python using the `turtle graphics <https://en.wikipedia.org/wiki/Turtle_graphics>`_ system.  There is a :ref:` chapter <turtles_chap>` on turtle graphics that will go into more detail but for today you can have some fun and do a lot by simply modifying the following example:
+This first activity is designed to get you started writing some simple programs in Python using the `turtle graphics <https://en.wikipedia.org/wiki/Turtle_graphics>`_ system.  There is a :ref:`chapter<turtles_chap>` on turtle graphics that will go into more detail but for today you can have some fun and do a lot by simply modifying the following example:
 
 .. activecode:: act_turtle_1
     :nocodelens:
