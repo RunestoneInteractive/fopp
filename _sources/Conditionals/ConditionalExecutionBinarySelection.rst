@@ -18,12 +18,11 @@
 Conditional Execution: Binary Selection
 ---------------------------------------
 
-.. video:: binaryselection
-   :controls:
-   :thumb: ../_static/binaryselection.png
-
-   http://media.interactivepython.org/thinkcsVideos/binaryselection.mov
-   http://media.interactivepython.org/thinkcsVideos/binaryselection.webm
+.. youtube:: HriDtn-0Dcw
+    :divid: binaryselection
+    :height: 315
+    :width: 560
+    :align: left
 
 
 In order to write useful programs, we almost always need the ability to check

@@ -17,12 +17,11 @@
 The **for** Loop
 ----------------
 
-.. video:: forloopvid
-   :controls:
-   :thumb: ../_static/for_loop.png
-
-   http://media.interactivepython.org/thinkcsVideos/for_loop.mov
-   http://media.interactivepython.org/thinkcsVideos/for_loop.webm
+.. youtube:: xGSfiZt5cdw
+    :divid: forloopvid
+    :height: 315
+    :width: 560
+    :align: left
 
 
 Back when we drew the images with turtle it could be quite tedious. If we wanted to draw a square 

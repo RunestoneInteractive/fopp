@@ -17,12 +17,11 @@
 Omitting the ``else`` Clause: Unary Selection
 ---------------------------------------------
 
-.. video:: unaryselection
-   :controls:
-   :thumb: ../_static/unaryselection.png
-
-   http://media.interactivepython.org/thinkcsVideos/unaryselection.mov
-   http://media.interactivepython.org/thinkcsVideos/unaryselection.webm
+.. youtube:: Fd4a8ktQURc
+    :divid: unaryselection
+    :height: 315
+    :width: 560
+    :align: left
 
 .. sidebar::  Flowchart of an **if** with no **else**
 

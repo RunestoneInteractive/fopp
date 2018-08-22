@@ -16,12 +16,11 @@
 Statements and Expressions
 --------------------------
 
-.. video:: expression_vid
-    :controls:
-    :thumb: ../_static/expressions.png
-
-    http://media.interactivepython.org/thinkcsVideos/Expressions.mov
-    http://media.interactivepython.org/thinkcsVideos/Expressions.webm
+.. youtube:: 3WgmLIsXFkI
+    :divid: expression_vid
+    :height: 315
+    :width: 560
+    :align: left
 
 A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
 statement so far. Some other kinds of statementsthat you'll see in future chapters are ``while`` statements, 

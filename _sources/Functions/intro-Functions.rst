@@ -14,12 +14,11 @@
 Introduction to Functions
 =========================
 
-.. video:: function_intro
-   :controls:
-   :thumb: ../_static/function_intro.png
-
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.mov
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.webm
+.. youtube:: 4wKtB57J5J4
+    :divid: function_intro
+    :height: 315
+    :width: 560
+    :align: left
 
 In Python, a **function** is a chunk of code that performs some operation that is meaningful for a person to think about as a whole unit, for example calculating a student's GPA in a learning system or responding to the jump action in a video game. Once a function has been defined and you are satisfied that it does what it is supposed to do, you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of code that make it work.
 
