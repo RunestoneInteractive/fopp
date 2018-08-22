@@ -24,7 +24,6 @@ The  metaphor to have in your head for this is that you have a turtle that you c
 
 Don't worry about making mistakes, it is normal and happens to even the most experienced programmers.  At worst you can simply reload the page if you get stuck.  If you try something and don't like it the slider at the top of the window where you enter code can be used to back up to a previous version of your program.
 
-
 .. activecode:: act_turtle_2
     :nocodelens:
 
@@ -34,4 +33,33 @@ Don't worry about making mistakes, it is normal and happens to even the most exp
 
     # Your code here
 
+**Post Project Questions**
+
+.. poll:: learningzone_1
+    :option_1: Comfort Zone
+    :option_2: Learning Zone
+    :option_3: Panic Zone
+
+    During this project I was primarily in my...
+
+.. poll:: Time_1
+    :option_1: Very little time
+    :option_2: A reasonable amount of time
+    :option_3: More time than is reasonable
+
+    Completing this project took...
+
+.. poll:: TaskValue_1
+    :option_1: Don't seem worth learning
+    :option_2: May be worth learning
+    :option_3: Are definitely worth learning
+
+    Based on my own interests and needs, the things taught in this project...
+
+.. poll:: Expectancy_1
+    :option_1: Definitely within reach
+    :option_2: Within reach if I try my hardest
+    :option_3: Out of reach no matter how hard I try
+
+    For me to master the things taught in this project feels...
 
