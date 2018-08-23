@@ -1,6 +1,10 @@
 
 :skipreading:`True`
 
+.. qnum::
+    :prefix: DCCX-
+    :start: 1
+
 🤔 Converting Roman Numerals
 ==============================
 
@@ -38,8 +42,12 @@ Knowing all of that you can now re-write 1904 in a proper way.
     :match_4: MMDXLIX|||2549
     :match_5: MMCCCXLV|||2345
 
+    Match the roman numerals to the correct arabic numbers
 
-Now that you are an expert in converting roman numerals to numbers its time to save yourself the trouble and write a program that does the following:
+Converting Roman to Arabic
+--------------------------
+
+Now that you are an expert in converting roman numerals to numbers its time to save yourself the trouble and write a program that does it for you. Here's an outline of what you should do.
 
 1.  Ask the user to enter a roman numeral
 2.  Validate the number to make sure it follows all the rules.  The number in the picture should cause you to print an error message.
@@ -53,15 +61,16 @@ Hint:  You will want to start by using a dictionary to map each single character
     # Your code here
 
 
-**Challenge:**
+Converting Arabic To Roman
+--------------------------
 
-Can you write a program to go the opposite direction?  Given an Arabic number can you convert it to a roman numeral?  This program uses a special kind of dictionary that preserves the order so that if you iterate over the key value pairs you know you are going to get them in the same order you created them.
+Can you write a program to go the opposite direction?  Given an Arabic number can you convert it to a roman numeral?  This program uses a special kind of dictionary that preserves the order so that if you iterate over the keys you know you are going to get them in the same order you created them.  (This is the default behavior for dictionaries in Python 3.6 and later, but not for our browser Python) 
 
 .. activecode:: act_rom_c1
 
     from collections import OrderedDict
 
-    ROMAN = OrderedDict([
+    roman = OrderedDict([
     (1000, "M"),
     ( 900, "CM"),
     ( 500, "D"),
@@ -71,25 +80,29 @@ Can you write a program to go the opposite direction?  Given an Arabic number ca
     (   1, "I"),
     ])
 
-    # your code here
+    # The rest of your code here
 
 .. shortanswer:: act_rom_ref1
 
-    Can you explain why the dictionary given to you needs to be ordered the way it is?  Why does this dictionary have more entries in it than the dictionary you used for part 1?
+    Can you explain why the dictionary used for this part uses the keys and values it does?  Why does it need to be ordered?  Why does this dictionary have more entries in it than the dictionary you used for part 1?
+
 
 **Super Challenge:**
 
 1.  Write a program that converts an incorrectly repeated number like CCCC into the proper form of CD
 2.  Write a program that converts a correctly negated roman numeral into a non-negated incorrect equivalent.  For example IV becomes IIII
-3.  If you can do that then you can do addition of roman numerals WITHOUT converting them to Arabic first!  This one might take some extra research beyond what we have covered in class up to this point.
+3.  If you can do the first two parts then you are ready to do addition of roman numerals WITHOUT converting them to Arabic first!  This one might take some extra research beyond what we have covered in class up to this point.
 
 To add two roman numerals follow these steps:
 
 1. Convert any negated prefixes to additive suffixes. So, for example, IX would be rewritten to VIIII.
 2. Concatenate the two strings you want to add.
-3. Sort the letters, large to small.
-4. Do internal sums (e.g., replace “IIIII” with “V”)
-5. Convert back to subtractive prefixes.
+3. Sort the letters, large to small. (research required)
+
+If you've made it this far you have *an* answer but its not the simplest answer. Keep going.
+
+4. Do internal sums (e.g., replace "IIIII" with "V")
+5. Convert back to subtractive prefixes. (e.g. replace "XIIII" with "XIV")
 
 .. activecode:: act_rom_c2
 
