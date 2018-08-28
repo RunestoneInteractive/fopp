@@ -6,6 +6,7 @@ August 28 2018
 
 * Some template fixes to improve WCAG compliance
 * Add a short project (XKCD password) to Sequences chapter
+* Replace old for loop video with new Google produced Video!
 
 August 27 2018
 --------------
