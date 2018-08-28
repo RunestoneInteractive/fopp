@@ -45,13 +45,13 @@
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar"></span>
+        <span class="icon-bar" aria-label="navbar toggle"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
-        <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;' href="/{{appname}}/default/user/login">&nbsp; </a>
+        <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;' href="/{{appname}}/default/user/login">&nbsp;<span aria-label="logo"></span> </a>
         <a class="navbar-brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
       </div>
     </div>
@@ -66,7 +66,7 @@
         <!-- social media dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"></i>
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social"></span></i>
           </a>
           <ul class="dropdown-menu social-menu">
               <li>
@@ -102,7 +102,7 @@
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search"></span></i>
           </a>
           <ul class='dropdown-menu'>
             {% if 'overview' in course_id %}
@@ -136,7 +136,7 @@
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User"></span></i>
           </a>
           <ul class="dropdown-menu user-menu">
             <li><span class='loggedinuser'></span></li>
@@ -166,7 +166,7 @@
 
         <!-- <li class="dropdown">             -->
           <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"></i></a></li>
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode"></span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -174,7 +174,7 @@
         <!-- help menu dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help"></span></i>
           </a>
           <ul class="dropdown-menu user-menu">
             <li><a href='/{{appname}}/static/{{course_id}}/navhelp.html'>Navigation Help</a></li>
