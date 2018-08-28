@@ -17,12 +17,14 @@
 The **for** Loop
 ----------------
 
-.. youtube:: xGSfiZt5cdw
+.. youtube:: EFYhxHafE08
     :divid: forloopvid
     :height: 315
     :width: 560
     :align: left
 
+
+.. xGSfiZt5cdw   -- this was the old one.
 
 Back when we drew the images with turtle it could be quite tedious. If we wanted to draw a square 
 then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon, 
