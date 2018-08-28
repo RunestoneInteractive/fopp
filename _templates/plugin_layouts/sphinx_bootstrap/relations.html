@@ -1,7 +1,7 @@
 {%- if prev %}
   <li id="relations-prev" title="Previous Chapter - {{ prev.title }}" data-toggle="tooltip">
     <a href="{{ prev.link|e }}" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'><span aria-label="previous page"></span></i>
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'><span aria-label="previous page" class="visuallyhidden">previoius page</span></i>
     </a>
   </li>
   {% if not next %}
@@ -13,7 +13,7 @@
 {%- if next %}
   <li id="relations-next" title='Next Chapter - {{ next.title }}' data-toggle="tooltip" >              
     <a href="{{ next.link|e }}" >
-        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'><span aria-label="next page"></span></i>
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'><span aria-label="next page" class="visuallyhidden">next page</span></i>
     </a>
   </li>
   <li class="divider-vertical"></li>
