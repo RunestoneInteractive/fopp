@@ -101,7 +101,7 @@ with a little bit of work you can work out that the slope (remember slope is ris
 More Fun with words
 -------------------
 
-You can probably come up with an in interesting list of questions about this list of popular words all on your own.  But a couple of ideas to get you started are as follows:
+You can probably come up with an interesting list of questions about this list of popular words all on your own, but a couple of ideas to get you started are as follows:
 
 Which of the words when spelled forward are also on the list when spelled backward?  For example 'pot' is one of the most common words and when you spell pot backwards you get 'top' which is also on the list.
 
@@ -113,8 +113,6 @@ How many new words can be reversed if you you add an 's' on the end?  For exampl
 .. activecode:: act_files_5
     :nocodelens:
 
-.. [Logarithm] A quantity representing the power to which a fixed number (the base) must be raised to produce a given number.  For example the base 10 log of 100 is 2.0 because :math:`10^2` is 100.  the base 2 log of 16 is 4.0 because :math:`2^4` is 16.
-
 
 Finally lets look at the distribution of the different parts of speech in this 5000 word dataset.  Create a bar chart where the part of speech is on the x-axis and the number of words on the list that fall into that category is the y axis.
 
@@ -122,4 +120,5 @@ Finally lets look at the distribution of the different parts of speech in this 5
     :nocodelens:
 
 
+.. [Logarithm] A quantity representing the power to which a fixed number (the base) must be raised to produce a given number.  For example the base 10 log of 100 is 2.0 because :math:`10^2` is 100.  the base 2 log of 16 is 4.0 because :math:`2^4` is 16.
 
