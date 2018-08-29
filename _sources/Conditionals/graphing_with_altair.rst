@@ -209,3 +209,36 @@ The final step for this lab is to recreate the three graphs we made with the tur
 .. raw:: html
 
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+
+
+
+**Post Project Questions**
+
+.. poll:: LearningZone_8b
+    :option_1: Comfort Zone
+    :option_2: Learning Zone
+    :option_3: Panic Zone
+
+    During this project I was primarily in my...
+
+.. poll:: Time_8b
+    :option_1: Very little time
+    :option_2: A reasonable amount of time
+    :option_3: More time than is reasonable
+
+    Completing this project took...
+
+.. poll:: TaskValue_8b
+    :option_1: Don't seem worth learning
+    :option_2: May be worth learning
+    :option_3: Are definitely worth learning
+
+    Based on my own interests and needs, the things taught in this project...
+
+.. poll:: Expectancy_8b
+    :option_1: Definitely within reach
+    :option_2: Within reach if I try my hardest
+    :option_3: Out of reach no matter how hard I try
+
+    For me to master the things taught in this project feels...

@@ -10,7 +10,7 @@ We will do three simulations in this project.  The first to help us calculate th
 Approximating Pi
 ================
 
- As you may recall from trigonometry pi is an irrational number with a decimal that goes on forever without repeating.  There is no simple fraction that precisely equals pi, and there are many different formulas and techniques for `approximating the value of pi <https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Practical_approximations>`_ such as the Leibniz formula:
+As you may recall from trigonometry pi is an irrational number with a decimal that goes on forever without repeating.  There is no simple fraction that precisely equals pi, and there are many different formulas and techniques for `approximating the value of pi <https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Practical_approximations>`_ such as the Leibniz formula:
 
 .. math::
 
@@ -37,14 +37,135 @@ Try to simulate about 1000 dart throws and see what you get.
     :nocodelens:
 
     #your code here
+    # recommmend myturtle.tracer(12,25) for faster animation
 
+
+Now that you have the animation working you can add in the counting and make a calculation of the value of pi.
+
+
+.. activecode:: act_monte_2
+    :nocodelens:
+
+
+Probably your first try with 1000 or 2000 repetitions will get you to around 3.1 or so.  If you want to get a lot closer to the actual value for pi 3.1415926... then you will need to repeat the simulation itself several hundred  or a thousand times and take the average of the predictions.  To keep in practice with your graphing, you can keep track of each value for pi in a list and make a histogram of the predicted values for pi.  It should be a nice "bell shape" with the center close to 3.14.   You can experiment and compare notes with other students to try different values for the number of darts to throw and the number of experiments to try.
+
+.. note:: Extending the Time Limit
+
+    When doing a long running simulation like the pi calculation you may run up against the time limit we have set for your program.  25 seconds.  to increase the time you can do the following in your program:
+
+    .. code-block:: python
+        
+        import sys
+        sys.setExecutionLimit(60000)
+
+    That ups the time limit to 60 seconds.  The value you pass is in milliseconds.
+
+
+.. activecode:: act_monte_3
 
 
 
 Predicting Stock Prices
 -----------------------
 
+Next we want to turn our attention to doing a monte carlo simulation of a stock price.  Many money managers do a very similar simulation for their clients to help them with financial planning for retirement or saving for a college education.
+
+The idea behind a stock simulation derives from Burton Malkiel's random walk theory.  In the random walk theory we flip a coin, if the coin is heads then the stock goes up a little bit, but if the coin is tails the stock goes down a little bit.  How much the stock goes up or down will be determined based on analyzing how much it typically changes from day to day in the past.
+
+Lets begin by first reading the stock data from a CSV file.  You can see the columns below for the data which is real historical data.  You could obtain this data from a number of different sources and use your own favorite stock if you would like.  You'll notice there are two columns for the closing price of the stock:  Close and Adj Close.  We are interested in the Adj Close column as that adjusts the stock price for future splits.  A split happens when a company decides to lower their price by increasing the number of shares.  A two for one split is common, so when a split happens, instead of 1 share at $60.00 per share you now have 2 shares at $30.00.  You can see how on a graph this would make it look like the price was cut in half.
+
+.. datafile:: AAPL_train.csv
+    :fromfile: AAPL_train.csv
 
 
-Monty Hall
-----------
+First, lets use Altair to graph the closing price of the stock over 1000 days.
+
+.. activecode:: act_monte_4
+    :nocodelens:
+
+Once you have your initial graph lets look at how much the stock changes from day to day.  To do this we will make a new list of numbers where we take the price from day N and subtract the price from day N-1.   Next we'll use Altair to graph these changes to see if we can detect any pattern in how the stock changes from day to day.  In fact it should look quite random.  
+
+.. activecode:: act_monte_5
+    :nocodelens:
+
+
+Now that we have the deltas and have confirmed a random behavior from day to day let's make a histogram to see the distribution of the daily changes.  Hey its bell shaped!
+
+.. activecode:: act_monte_6
+    :nocodelens:
+
+ Now we will compute some statistics -- the mean change from day to day as well as the standard deviation of the changes.  We want to know the standard deviation because we will use that to determine how much our stock might go up or down on any given day. You should get a mean of about 0.03 and a standard deviation of 0.548
+
+
+ **Let's Predict**
+
+ Armed with the information from above we can make predictions for the next 250 days.  We have the real data for the next 250 days below so we can see how accurate we are.  To do this we'll use the ``random.gauss`` function from the random module.  This function returns a random number where the numbers are distributed according to a bell shaped curve, that is most of the numbers will be close the mean and some will be closer to the boundaries defined by our standard deviation.  The gauss function takes two parameters: the mean si first and the standard deviation is next.
+
+ To predict the next 250 days we'll take the closing price of our last day as the starting point and then add whatever value we get from our call to ``random.gauss(mean,std)``  This gives us a prediction for the next day. To predict the day after we use the first predicted value as our starting point and then add a random amount to that.  We can repeat this 250 times to get our final prediction.
+
+ When professional money managers do this they will run the calculation a few hundred thousand times or even a million times and they will keep track of the worst case -- that is the lowest closing price at the end of the 250 day period, the best case -- the highest closing price at the end of the 250 day period, and the median case.  That is the closing price that falls in the middle of all the possible closing prices.
+
+You probably don't want to run this a million times in your browser but let us give it a try for 10,000 times.  What is your worst case, best case and average price for the final price.
+
+.. activecode:: act_monte_7
+
+
+Once you have those values you can use the real numbers below and compare your prediction to see how well you did.   You can also join forces with the rest of your class to see if you did even better as a group.
+
+
+.. datafile:: AAPL_test.csv
+    :fromfile: AAPL_test.csv
+
+
+
+
+
+
+Monty Hall Challenge
+--------------------
+
+This is a pretty famous problem that can even get experienced statisticians arguing with each other.  It comes from the famous game show of the 70's called Let's make a deal.  Here's a video, but please don't throw away an entire half hour, you can get the gist of it in a few minutes.  And then skip ahead to the end to see the "Big Deal of the Day" at around 18:30.
+
+.. youtube:: 5-pEPE4LCFE
+    :height: 315
+    :width: 420
+    :align: left
+
+
+The big deal of the day works like this. There is usually one big prize, and  two `booby prizes <https://en.wikipedia.org/wiki/Booby_prize>`_, such as a goat. You can choose to get the whatever is behind door number 1, door number 2, or door number 3.  Once you have picked your door then Monty will reveal what is behind one of the other doors.  He won't reveal the grand prize but he might show you the goat.  Then Monty will give you the opportunity to switch your door.  The question is, should you switch?  Do you increase your odds of getting the grand prize by switching doors?  Does it stay the same?  Or, do your odds of winning go down if you switch?  If you have already heard this keep it to yourself and let everyone make their best guess before find out the truth.
+
+The math behind this is pretty complicated, but now that you are an experienced Monte Carlo simulator you can solve this one. With some Python code.  Using the random number generator you can put a prize behind a door.  Then using the random number generator you can let the 'contestant' pick a door.  You will then remove a door using the rule that you cannot reveal the grand prize.  Then you can simulate what happens if the contestant switches doors or not.  You can do this 10,000 times to determine the odds of winning if you switch and the odds of winning of you stick. Since this is meant to be the challenge section I'll leave it at that and you can start coding.
+
+.. activecode:: act_monte_8
+
+
+**Post Project Questions**
+
+.. poll:: LearningZone_10b
+    :option_1: Comfort Zone
+    :option_2: Learning Zone
+    :option_3: Panic Zone
+
+    During this project I was primarily in my...
+
+.. poll:: Time_10b
+    :option_1: Very little time
+    :option_2: A reasonable amount of time
+    :option_3: More time than is reasonable
+
+    Completing this project took...
+
+.. poll:: TaskValue_10b
+    :option_1: Don't seem worth learning
+    :option_2: May be worth learning
+    :option_3: Are definitely worth learning
+
+    Based on my own interests and needs, the things taught in this project...
+
+.. poll:: Expectancy_10b
+    :option_1: Definitely within reach
+    :option_2: Within reach if I try my hardest
+    :option_3: Out of reach no matter how hard I try
+
+    For me to master the things taught in this project feels...
+    

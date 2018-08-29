@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+August 29 2018
+--------------
+
+* Fix the numbering for all end of chapter assessments
+* Monte Carlo Simulation project
+* Add post project questions to all current projects
+
 August 28 2018
 --------------
 

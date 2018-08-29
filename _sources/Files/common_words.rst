@@ -122,3 +122,33 @@ Finally lets look at the distribution of the different parts of speech in this 5
 
 .. [Logarithm] A quantity representing the power to which a fixed number (the base) must be raised to produce a given number.  For example the base 10 log of 100 is 2.0 because :math:`10^2` is 100.  the base 2 log of 16 is 4.0 because :math:`2^4` is 16.
 
+
+**Post Project Questions**
+
+.. poll:: LearningZone_10a
+    :option_1: Comfort Zone
+    :option_2: Learning Zone
+    :option_3: Panic Zone
+
+    During this project I was primarily in my...
+
+.. poll:: Time_10a
+    :option_1: Very little time
+    :option_2: A reasonable amount of time
+    :option_3: More time than is reasonable
+
+    Completing this project took...
+
+.. poll:: TaskValue_10a
+    :option_1: Don't seem worth learning
+    :option_2: May be worth learning
+    :option_3: Are definitely worth learning
+
+    Based on my own interests and needs, the things taught in this project...
+
+.. poll:: Expectancy_10a
+    :option_1: Definitely within reach
+    :option_2: Within reach if I try my hardest
+    :option_3: Out of reach no matter how hard I try
+
+    For me to master the things taught in this project feels...
