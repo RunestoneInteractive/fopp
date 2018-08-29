@@ -19,7 +19,7 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    **1.** ``rainfall_mi`` is a string that contains the average number of inches of rainfall in Michigan for every month (in inches) with every month separated by a comma.
+    ``rainfall_mi`` is a string that contains the average number of inches of rainfall in Michigan for every month (in inches) with every month separated by a comma.
     Write code to compute the number of months that have more than 3 inches of rainfall. Store the result in the variable ``num_rainy_months``.
     In other words, count the number of items with values ``> 3.0``.
 
@@ -42,7 +42,7 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    **2.** The variable ``sentence`` stores a string. Write code to determine how many words in ``sentence`` start and end with the same letter, including one-letter words.
+    The variable ``sentence`` stores a string. Write code to determine how many words in ``sentence`` start and end with the same letter, including one-letter words.
     Store the result in the variable ``same_letter_count``.
 
 
@@ -68,7 +68,7 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    **3.** Write code to count the number of strings in list ``items`` that have the character ``w`` in it. Assign that number to the variable ``acc_num``.
+    Write code to count the number of strings in list ``items`` that have the character ``w`` in it. Assign that number to the variable ``acc_num``.
 
     HINT 1: Use the accumulation pattern!
 
@@ -95,7 +95,7 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    **4.** Write code that counts the number of words in ``sentence`` that contain *either* an "a" or an "e". Store the result in the variable ``num_a_or_e``.
+    Write code that counts the number of words in ``sentence`` that contain *either* an "a" or an "e". Store the result in the variable ``num_a_or_e``.
 
     Note 1: be sure to not double-count words that contain both an a and an e.
 
@@ -124,7 +124,7 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    **3.** Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``. For this problem, vowels are only a, e, i, o, and u. Hint: use the ``in`` operator with ``vowels``.
+    Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``. For this problem, vowels are only a, e, i, o, and u. Hint: use the ``in`` operator with ``vowels``.
     ~~~~
     s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
     vowels = ['a','e','i','o','u']

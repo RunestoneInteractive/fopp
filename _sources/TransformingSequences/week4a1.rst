@@ -77,7 +77,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_4
     :language: python
 
-    **8.** Write code to add 'horseback riding' to the third position (english third) in the list ``sports``.
+    Write code to add 'horseback riding' to the third position (english third) in the list ``sports``.
     ~~~~
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
@@ -96,7 +96,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_5
     :language: python
 
-    **9.** Write code to take 'London' out of the list ``trav_dest``.
+    Write code to take 'London' out of the list ``trav_dest``.
     ~~~~
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'London', 'Melbourne']
 
@@ -115,7 +115,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_6
     :language: python
 
-    **10.** Write code to add 'Guadalajara' to the end of the list ``trav_dest`` using a list method.
+    Write code to add 'Guadalajara' to the end of the list ``trav_dest`` using a list method.
     ~~~~
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne']
 
@@ -136,7 +136,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_7
     :language: python
 
-    **12.** Write code to rearrage the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
+    Write code to rearrage the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
     ~~~~
     winners = ['Kazuo Ishiguro', 'Rainer Weiss', 'Youyou Tu', 'Malala Yousafzai', 'Alice Munro', 'Alvin E. Roth']
 
@@ -156,7 +156,7 @@ Chapter Assessment - List Methods
     :language: python
     :topics: Sequences/ListSlices
 
-    **13.** Write code to switch the order of the ``winners`` list so that it is now Z to A. Assign this list to the variable ``z_winners``. 
+    Write code to switch the order of the ``winners`` list so that it is now Z to A. Assign this list to the variable ``z_winners``. 
     ~~~~
     winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
 
@@ -342,7 +342,7 @@ Chapter Assessment - Split and Join
 .. activecode:: assess_ac_4_1_3_2
     :language: python
 
-    **11.** Write code to find the postion of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
+    Write code to find the postion of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
     ~~~~
     awards = ['Emmy', 'Tony', 'Academy', 'Grammy']
 
@@ -447,7 +447,7 @@ Chapter Assessment - For Loop Mechanics
    :autograde: unittest
    :practice: T
 
-   2. Currently there is a string called ``str1``. Write code to create a list called ``chars`` which should contain the characters from ``str1``. Each character in ``str1`` should be its own element in the list ``chars``.
+   Currently there is a string called ``str1``. Write code to create a list called ``chars`` which should contain the characters from ``str1``. Each character in ``str1`` should be its own element in the list ``chars``.
    ~~~~
    str1 = "I love python"
    # HINT: what's the accumulator? That should go here.
@@ -635,7 +635,7 @@ Chapter Assessment - Accumulator Pattern
    :autograde: unittest
    :practice: T
 
-   1.1 For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
+   For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
    ~~~~
    ael = "python!"
 
@@ -656,7 +656,7 @@ Chapter Assessment - Accumulator Pattern
    :autograde: unittest
    :practice: T
 
-   3. For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
    ~~~~
    wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
    =====
@@ -679,7 +679,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **1.** Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value ``a_scores``.
+   Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value ``a_scores``.
    ~~~~
    scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
@@ -702,7 +702,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **2.** Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a captial letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
+   Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a captial letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
    ~~~~
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and']
    org = "The organization for health, saftey, and education"
@@ -726,7 +726,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **3.** Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a captial letter, and each element of the acronym should be separated by a ". ". Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO". 
+   Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a captial letter, and each element of the acronym should be separated by a ". ". Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO". 
    ~~~~
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and']
    sent = "The water, earth, and air are vital."
@@ -750,7 +750,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **4.** Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
+   Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
    ~~~~
    p_phrase = "was it a car or a cat I saw"
 
@@ -775,7 +775,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: 
 
-   **5.** Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
+   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
    ~~~~
    inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweaters, 10, 30.00", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 

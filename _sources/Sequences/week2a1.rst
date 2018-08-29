@@ -45,7 +45,7 @@ Chapter Assessment
 .. activecode:: assess_ac_2_1_1_2
     :language: python
 
-    **2.** Write a program that extracts the last three items in the list ``sports`` and assigns it to the variable ``last``. Make sure to write your code so that it works no matter how many items are in the list.
+    Write a program that extracts the last three items in the list ``sports`` and assigns it to the variable ``last``. Make sure to write your code so that it works no matter how many items are in the list.
     ~~~~
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
@@ -66,7 +66,7 @@ Chapter Assessment
 .. activecode:: assess_ac_2_1_1_3
     :language: python
 
-    **3.** Write code that combines the following variables so that the sentence "You are doing a great job, keep it up!" is assigned to the variable ``message``. Do not edit the values assigned to ``by``, ``az``, ``io``, or ``qy``.
+    Write code that combines the following variables so that the sentence "You are doing a great job, keep it up!" is assigned to the variable ``message``. Do not edit the values assigned to ``by``, ``az``, ``io``, or ``qy``.
     ~~~~
     by = "You are"
     az = "doing a great "
@@ -193,7 +193,7 @@ Chapter Assessment
 .. activecode:: assess_ac2_1_1_9
     :language: python
 
-    **9.** Write code to determine how many 9's are in the list ``nums`` and assign that value to the variable ``how_many``. Do not use a for loop to do this.
+    Write code to determine how many 9's are in the list ``nums`` and assign that value to the variable ``how_many``. Do not use a for loop to do this.
     ~~~~
     nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
@@ -213,7 +213,7 @@ Chapter Assessment
 .. activecode:: assess_ac2_1_1_10
     :language: python
 
-    **10.** Write code to get rid of the the second 8 so that here are only two 8's in the list nums. 
+    Write code to get rid of the the second 8 so that here are only two 8's in the list nums. 
     ~~~~
     nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
