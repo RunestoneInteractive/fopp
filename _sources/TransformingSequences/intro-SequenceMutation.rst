@@ -14,7 +14,11 @@
 Introduction: Transforming Sequences
 ====================================
 
-To build further on sequences, the following chapter will detail more of the methods that can be used to transform lists and strings.  Generally, the two methods that can be used are changing the list object, in place, by mutating it; or by constructing a new string object using a copy-with-change operation.
+The sequences that we have used so far have been static: a list of colors that doesn't change or the characters in a string that stays the same.
+The real world is more complicated than that. A list of users for your social network may need to grow to accommodate new users (or shrink when users leave your service). The letters in a string may need to be modified to personalize a message ("Welcome to Wonderland, <your name>"), or to encode a secret message. 
+
+The following chapter will detail more of the methods that can be used to transform lists and strings. Generally, the two methods that can be used are changing the list object, in place, by mutating it; or by constructing a new string object using a copy-with-change operation.
+
 
 Learning Goals
 --------------
