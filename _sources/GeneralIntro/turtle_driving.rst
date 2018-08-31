@@ -35,7 +35,7 @@ Don't worry about making mistakes, it is normal and happens to even the most exp
 
 **Post Project Questions**
 
-.. poll:: learningzone_1
+.. poll:: LearningZone_1
     :option_1: Comfort Zone
     :option_2: Learning Zone
     :option_3: Panic Zone
