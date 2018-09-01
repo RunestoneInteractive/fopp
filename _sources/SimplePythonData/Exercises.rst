@@ -328,6 +328,6 @@ Exercises
       -----
       user_tablespoons = float(input("How many tablespoons should be converted?: "))
       =====
-      teaspoons = user_tablespoons / 3
+      teaspoons = user_tablespoons * 3
       =====
       print("Number of teaspoons: " + str(teaspoons))
