@@ -14,6 +14,11 @@
 Introduction to Debugging
 =========================
 
+.. rst-class:: blockquote
+
+    “The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.”  — Andrew Singer
+
+
 This chapter will spend some time talking about what happens when errors occur as well as how to fix 
 the errors that you will inevitably come across.
 

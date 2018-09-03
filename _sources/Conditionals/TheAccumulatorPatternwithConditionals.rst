@@ -38,7 +38,7 @@ At the end, we have accumulated a the total number of letters in the phrase. Wit
 we would have only been able to count how many characters there are in the string and not been able to 
 differentiate between spaces and non-spaces.
 
-We can use conditionals to also count if particular items are in a string or list. The following code finds all occurances of vowels in the following string.
+We can use conditionals to also count if particular items are in a string or list. The following code finds all occurrences of vowels in the following string.
 
 .. activecode:: ac7_10_2
 
@@ -73,7 +73,7 @@ The following example shows how we can get the maximum value from a list of inte
            best_num = n
    print(best_num)
 
-Here, we initalize best_num to zero, assuming that there are no negative numbers in the list.
+Here, we initialize best_num to zero, assuming that there are no negative numbers in the list.
 
 In the for loop, we check to see if the current value of n is greater than the current value of ``best_num``. 
 If it is, then we want to **update** ``best_num`` so that it now is assigned the higher number. Otherwise, we 
@@ -156,36 +156,6 @@ first element in ``nums``, but the result is still the same!
    :feedback_d: That will set a to be the current key, a string like 'a', not a value like 194.
    :practice: T
 
-   Which is the right code block to use in place of line 5 if we want to print out the maximum value?
-
-   .. code-block:: python
-   
-      d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
-      
-      a = 0
-      for c in d:
-        # <what code goes here? See below options>
-         
-      print("max value is " + a)
-
-
-   .. code-block:: python
-
-      # I.
-      if c > a:
-         a = c
-    
-      # II.
-      if d[c] > a:
-         d[a] = c
-         
-      # III.
-      if d[c] > a:
-         a = d[c]
-         
-      # IV.
-      if d[c] > a:
-         a = c
 
 .. activecode:: ac7_10_5
    :language: python
