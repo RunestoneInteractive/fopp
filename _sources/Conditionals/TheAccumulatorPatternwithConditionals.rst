@@ -144,25 +144,12 @@ first element in ``nums``, but the result is still the same!
             min_value = item
      print(min_value)
 
-.. mchoice:: question7_10_3
-   :answer_a: I
-   :answer_b: II
-   :answer_c: III
-   :answer_d: IV
-   :correct: c
-   :feedback_a: c will be bound to a key, which is a string; you can't compare that to a number.   
-   :feedback_b: That will treate the current value of a as a key in the dictionary and update that key's value. You want to update a instead.
-   :feedback_c: When the value associated with the current key c is bigger than the max so far, replace the max so far with that value.
-   :feedback_d: That will set a to be the current key, a string like 'a', not a value like 194.
-   :practice: T
-
-
 .. activecode:: ac7_10_5
    :language: python
    :autograde: unittest
    :practice: T
       
-   For each word in list ``words``, find the number of characters in the string. If the number of characters in each string is greater than 3, add 1 to the variable ``num_words`` so that ``num_words`` should end up with the total number of words with more than 3 characters.
+   For each string in the list ``words``, find the number of characters in the string. If the number of characters in the string is greater than 3, add 1 to the variable ``num_words`` so that ``num_words`` should end up with the total number of words with more than 3 characters.
    ~~~~
    words = ["water", "chair", "pen", "basket", "hi", "car"]
 
