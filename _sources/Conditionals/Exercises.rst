@@ -166,6 +166,8 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac7_14_6
+               :practice: T
+               :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
                Provided is a list of numbers. For each of the numbers in the list, determine whether they are even. If the number is even, add ``True`` to a new list called ``is_even``. If the number is odd, then add ``False``.
@@ -189,6 +191,8 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac7_14_7
+               :practice: T
+               :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
                Provided is a list of numbers. For each of the numbers in the list, determine whether they are odd. If the number is odd, add ``True`` to a new list called ``is_odd``. If the number is even, then add ``False``.
@@ -313,6 +317,8 @@ Exercises
 #.
 
    .. parsonsprob:: pp7_14_11
+      :practice: T
+      :topics: Conditionals/ConditionalExecutionBinarySelection
 
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
       -----
@@ -334,6 +340,8 @@ Exercises
 #.
 
    .. parsonsprob:: pp7_14_12
+      :practice: T
+      :topics: Conditionals/Nestedconditionals
 
       Piece together a program so that it can successfully print out one print statement, given the value of x.
       -----
