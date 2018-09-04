@@ -30,7 +30,7 @@ Glossary
         the other program by using the *import* statement.
 
     namespace
-        A naming system for making names unique to avoid duplication and confusion.
+        A naming system for making names unique, to avoid duplication and confusion. Within a namespace, no two names can be the same. 
         
     pseudo-random number
         A number that is not genuinely random but is instead created algorithmically.
