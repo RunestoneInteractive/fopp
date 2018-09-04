@@ -61,7 +61,7 @@ lead to some confusions, so it's best to follow the convention.
 Where do these other files that you can import come from? It could be a code file that you wrote yourself, or it could 
 be code that someone else wrote and you copied on to your computer.
 
-For example, if you have a file ``myprog.py`` in directory ``~\Desktop\mycode\``, and myprog.py contains a line of 
+For example, if you have a file ``myprog.py`` in directory ``~/Desktop/mycode/``, and myprog.py contains a line of 
 code ``import morecode``, then the python interpreter will look for a file called ``morecode.py``, excecute its code, 
 and make its object bindings available for reference in the rest of the code in myprog.py. 
 
