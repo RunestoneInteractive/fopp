@@ -12,7 +12,7 @@
    :start: 1
 
 .. index:: documentation online, Global Module Index
-   module; standard
+   module; standard, namespace
 
 Modules
 =======
@@ -26,7 +26,9 @@ Modules
 
 A **module** is a file containing Python definitions and statements intended for
 use in other Python programs. There are many Python modules that come with
-Python as part of the **standard library**. 
+Python as part of the **standard library**. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.  
+
+Functions imported as part of a module live in their own **namespace**.  A namespace is simply a naming system for making names unique to avoid duplication and confusion. Some namespaces you use every day include the names of people through the use of first name and family name (surname). That doesn't make names completely unique as there are lots of John Smiths in the world, but for most small-ish groups of people it works fine.  Another example example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the parent folder, which is a namespace.
 
 The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
 3.6 is an extremely useful reference for all aspects of Python. The site

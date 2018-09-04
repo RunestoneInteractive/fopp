@@ -29,7 +29,9 @@ Glossary
         other Python programs. The contents of a module are made available to
         the other program by using the *import* statement.
 
-
+    namespace
+        A naming system for making names unique to avoid duplication and confusion.
+        
     pseudo-random number
         A number that is not genuinely random but is instead created algorithmically.
 
