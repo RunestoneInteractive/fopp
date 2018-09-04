@@ -62,6 +62,17 @@ Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the f
 
 Note that we don't have the requests module in the browser environment, so you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook.
 
+**TEST SPACE FOR THE NEW REQUESTS MODULE**
+
+.. activecode:: ac400_5_1
+
+   import restrictedrequests
+
+   obj = restrictedrequests.get("https://www.michigandaily.com?")
+
+   print(obj)
+
+
 **Check your understanding**
 
 .. mchoice:: question400_5_1
