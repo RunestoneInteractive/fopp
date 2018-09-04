@@ -71,6 +71,7 @@ works on dictionaries. It returns the number of key-value pairs.
    :feedback_b: The key mouse will be associated with the sum of the two values.
    :feedback_c: Yes, add the value for cat and the value for dog (12 + 6) and create a new entry for mouse.
    :feedback_d: Since the new key is introduced on the left hand side of the assignment statement, a new key-value pair is added to the dictionary.
+   :practice: T
 
    What is printed by the following statements?
    

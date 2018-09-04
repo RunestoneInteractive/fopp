@@ -56,6 +56,7 @@ Try changing some of the letter values and see how it affects the total. Try cha
 .. activecode:: ac10_6_2
    :language: python
    :autograde: unittest
+   :practice: T
 
    **1.** The dictionary ``travel`` contains the number of countries within each continent that Jackie has traveled to. Find the total number of countries that Jackie has been to, and save this number to the variable name ``total``. Do not hard code this!
    ~~~~
@@ -75,6 +76,7 @@ Try changing some of the letter values and see how it affects the total. Try cha
 .. activecode:: ac10_6_3
    :language: python
    :autograde: unittest
+   :practice: T
 
    **2.** ``schedule`` is a dictionary where a class name is a key and its value is how many credits it was worth. Go through and accumulate the total number of credits that have been earned so far and assign that to the variable ``total_credits``. Do not hardcode.
    ~~~~

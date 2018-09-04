@@ -247,6 +247,7 @@ Now, here are some additional problems to try.
 .. activecode:: ac10_5_8
    :language: python
    :autograde: unittest
+   :practice: T
 
    **2.** Provided is a string saved to the variable name ``sentence``. Split the string into a list of words, then create a dictionary that contains each word and the number of times it occurs. Save this dictionary to the variable name ``word_counts``.
    ~~~~
@@ -266,6 +267,7 @@ Now, here are some additional problems to try.
 .. activecode:: ac10_5_9
    :language: python
    :autograde: unittest
+   :practice: T
 
    **3.** Create a dictionary called ``char_d`` from the string ``stri``, so that the key is a character and the value is how many times it occurs.
    ~~~~
