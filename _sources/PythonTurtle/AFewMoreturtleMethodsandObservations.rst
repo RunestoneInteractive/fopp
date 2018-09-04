@@ -83,8 +83,8 @@ Let's do an example that shows off some of these new features.
     wn.exitonclick()
 
 
-The list of integers printed above for ``list(range(5,60,2))`` is only displayed to show you the 
-distances being used to move the turtle forward. The actual use appears as part of the ``for`` loop.
+If you are curious about how far the turtle is traveling each time the for loop iterates, you can add a print 
+statement inside of the for loop to print out the value of ``dist``.
 
 One more thing to be careful about. All except one of the shapes you see on the screen here are
 footprints created by ``stamp``. But the program still only has *one* turtle instance --- can you 
