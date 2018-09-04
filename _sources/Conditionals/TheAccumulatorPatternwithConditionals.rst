@@ -38,7 +38,7 @@ At the end, we have accumulated a the total number of letters in the phrase. Wit
 we would have only been able to count how many characters there are in the string and not been able to 
 differentiate between spaces and non-spaces.
 
-We can use conditionals to also count if particular items are in a string or list. The following code finds all occurances of vowels in the following string.
+We can use conditionals to also count if particular items are in a string or list. The following code finds all occurrences of vowels in the following string.
 
 .. activecode:: ac7_10_2
 
@@ -73,7 +73,7 @@ The following example shows how we can get the maximum value from a list of inte
            best_num = n
    print(best_num)
 
-Here, we initalize best_num to zero, assuming that there are no negative numbers in the list.
+Here, we initialize best_num to zero, assuming that there are no negative numbers in the list.
 
 In the for loop, we check to see if the current value of n is greater than the current value of ``best_num``. 
 If it is, then we want to **update** ``best_num`` so that it now is assigned the higher number. Otherwise, we 
@@ -144,55 +144,12 @@ first element in ``nums``, but the result is still the same!
             min_value = item
      print(min_value)
 
-.. mchoice:: question7_10_3
-   :answer_a: I
-   :answer_b: II
-   :answer_c: III
-   :answer_d: IV
-   :correct: c
-   :feedback_a: c will be bound to a key, which is a string; you can't compare that to a number.   
-   :feedback_b: That will treate the current value of a as a key in the dictionary and update that key's value. You want to update a instead.
-   :feedback_c: When the value associated with the current key c is bigger than the max so far, replace the max so far with that value.
-   :feedback_d: That will set a to be the current key, a string like 'a', not a value like 194.
-   :practice: T
-
-   Which is the right code block to use in place of line 5 if we want to print out the maximum value?
-
-   .. code-block:: python
-   
-      d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
-      
-      a = 0
-      for c in d:
-        # <what code goes here? See below options>
-         
-      print("max value is " + a)
-
-
-   .. code-block:: python
-
-      # I.
-      if c > a:
-         a = c
-    
-      # II.
-      if d[c] > a:
-         d[a] = c
-         
-      # III.
-      if d[c] > a:
-         a = d[c]
-         
-      # IV.
-      if d[c] > a:
-         a = c
-
 .. activecode:: ac7_10_5
    :language: python
    :autograde: unittest
    :practice: T
       
-   For each word in list ``words``, find the number of characters in the string. If the number of characters in each string is greater than 3, add 1 to the variable ``num_words`` so that ``num_words`` should end up with the total number of words with more than 3 characters.
+   For each string in the list ``words``, find the number of characters in the string. If the number of characters in the string is greater than 3, add 1 to the variable ``num_words`` so that ``num_words`` should end up with the total number of words with more than 3 characters.
    ~~~~
    words = ["water", "chair", "pen", "basket", "hi", "car"]
 
