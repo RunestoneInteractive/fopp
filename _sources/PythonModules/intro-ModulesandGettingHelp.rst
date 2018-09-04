@@ -28,7 +28,7 @@ A **module** is a file containing Python definitions and statements intended for
 use in other Python programs. There are many Python modules that come with
 Python as part of the **standard library**. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.  
 
-Functions imported as part of a module live in their own **namespace**.  A namespace is simply a naming system for making names unique to avoid duplication and confusion. Some namespaces you use every day include the names of people through the use of first name and family name (surname). That doesn't make names completely unique as there are lots of John Smiths in the world, but for most small-ish groups of people it works fine.  Another example example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the parent folder, which is a namespace.
+Functions imported as part of a module live in their own **namespace**.  A namespace is simply a space within which all names are distinct from each other. The same name can be reused in different namespaces but two objects can't have the same name within a single namespace. One example of a namespace is the set of street names within a single city. Many cities have a street called "Main Street", but it's very confusing if two streets in the same city have that name! Another example example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the  folder it's in; each folder has its own namespace for files. Note that human names are not part of a namespace that enforces uniqueness; that's why governments have invented unique identifiers to assign to people, like passport numbers.  
 
 The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
 3.6 is an extremely useful reference for all aspects of Python. The site
@@ -86,7 +86,7 @@ Syntax for Importing Modules and Functionality
 
 When you see imported modules in a Python program, there are a few variations that have slightly different consequences.
 
-1. The most common is ``import morecode``. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write ``morecode.f1()``. Note that you have to explicitly mention morecode again, to specify that you want the f1 function from morecode namespace. If you just write ``f1()``, python will look for an f1 that was defined in the current file, rather than in morecode.py.
+1. The most common is ``import morecode``. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write ``morecode.f1()``. Note that you have to explicitly mention morecode again, to specify that you want the f1 function from the morecode namespace. If you just write ``f1()``, python will look for an f1 that was defined in the current file, rather than in morecode.py.
 
 2. You can also give the imported module an alias (a different name, just for when you use it in your program). For example, after executing ``import morecode as mc``, you would invoke ``f1`` as ``mc.f1()``. You have now given the ``morecode`` module the alias ``mc``. Programmers often do this to make code easier to type.
 
