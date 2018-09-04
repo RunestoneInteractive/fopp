@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+Sept 4 2018
+-----------
+
+* Remove duplicated section on accumulating max
+* Typos
+
 August 29 2018
 --------------
 
