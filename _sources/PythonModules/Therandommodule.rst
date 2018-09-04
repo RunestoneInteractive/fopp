@@ -40,8 +40,7 @@ Here are the key things we can do with it.
 Press the run button a number of times.  Note that the values change each time. These are random numbers.
 
 
-The ``randrange`` function generates an integer between its lower and upper argument, using the same semantics as 
-``range`` --- so the lower bound is included, but the upper bound is excluded. All the values have an equal probability 
+The ``randrange`` function generates an integer between its lower and upper argument where the lower bound is included, but the upper bound is excluded. So, ``randrange(1,7)`` will include numbers from 1-6.  If you omit the first parameter it is assumed to be 0 so ``randrange(10)`` will give you numbers from 0-9.  All the values have an equal probability 
 of occurring (i.e. the results are *uniformly* distributed).
 
 The ``random()`` function returns a floating point number in the range [0.0, 1.0) --- the square bracket means "closed 
