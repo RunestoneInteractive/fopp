@@ -11,6 +11,8 @@
    :prefix: intro-7-
    :start: 1
 
+.. index:: debugging, bug
+
 A Typical First Program
 -----------------------
 
@@ -56,7 +58,3 @@ possible.
    :feedback_d: That would be nice! But no...
 
    The print function:
-
-
-.. index:: debugging, bug
-

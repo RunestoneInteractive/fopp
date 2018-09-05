@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. index:: programming language, portable, high-level language,
+           low-level language, compile, interpret
 
 Introduction: The Way of the Program
 ====================================
@@ -43,8 +45,3 @@ Objectives
 * To be able to use the activecode component and multiple choice questions in textbook
 * To be able to use and interpret the Codelens component
 * To be able to describe what a comment is
-
-
-.. index:: programming language, portable, high-level language,
-           low-level language, compile, interpret
-
