@@ -65,5 +65,3 @@ on it. Two additional parameter values are provided, "s", and an empty string. S
 "s" are replaced with the empty string. A new string is returned, "Thi i a entence." There is another period followed 
 by the word replace, so the replace method is called again on that string, returning the shorter string, which is 
 printed.
-
-
