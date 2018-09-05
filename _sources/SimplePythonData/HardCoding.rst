@@ -55,4 +55,3 @@ In the code above, if the value of ``x`` were ``40``, ``55`` would not be the co
 Try as much as you can not to rely on your brilliant but fallible human brain to do *computation* when you program -- use 
 your brain to determine how to write the correct code to solve the problem for you! That's why we require you to avoid hard
 -coding for most exercises in this book.
-

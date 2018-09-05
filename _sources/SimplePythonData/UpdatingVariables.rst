@@ -156,7 +156,6 @@ easier way to do this kind of task.
      print(x)
 
 .. parsonsprob:: pp2_14_1
-   :practice: T
 
    Construct the code that will result in the value 134 being printed.
    -----

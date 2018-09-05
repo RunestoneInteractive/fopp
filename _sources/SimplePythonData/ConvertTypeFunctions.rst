@@ -86,5 +86,3 @@ the type. Think about which type you'd need to convert, a string to an integer o
    .. code-block:: python
 
       print(int(53.785))
-
-

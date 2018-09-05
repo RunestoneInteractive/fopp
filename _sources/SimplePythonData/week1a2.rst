@@ -45,7 +45,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
-    :topics: Sequences/SplitandJoin
+    :topics: SimplePythonData/StatementsandExpressions
 
     Write code to assign the number of *characters* in the string ``rv`` to a variable ``num_chars``.
     ~~~~
@@ -84,7 +84,7 @@ Chapter Assessment
    :feedback_e: At least one of these solutions is considered hardcoding. Take another look.
    :correct: a,b,d
    :practice: T
-   :topics: 
+   :topics: SimplePythonData/StatementsandExpressions
 
    The code below initializes two variables, ``z`` and ``y``. We want assign the total number of characters in ``z`` and in ``y`` to the variable ``a``. Which of the following solutions, if any, would be considered hard coding?
    
@@ -92,7 +92,6 @@ Chapter Assessment
 
     z = "hello world"
     y = "welcome!"
-
 
 .. activecode:: assess_addl_functions
     :language: python
