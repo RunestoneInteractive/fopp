@@ -32,6 +32,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_d: This is not the correct structure to execute the task.
    :feedback_e: You are allowed to write expressions inside of methods, so this is correctly written.
    :practice: T
+   :topics: PythonTurtle/InstancesAHerdofTurtles
 
    What are correct ways to tell a turtle named Tex to move forward 20 pixels? Select as many as apply.
 
@@ -46,6 +47,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_c: turtle represents the class and should be first.
    :feedback_d: When making a new instace of the turtle class, you need to use dot notation.
    :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    Which is the correct way to make a new instance of the Turtle class?
 
@@ -58,6 +60,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_b: Each instance that is made using the turtle class is unique. Remember how you can have multiple 'turtles' in a single drawing? Each of those are different turtles but they are all instances of the turtle class.
    :feedback_c: Yes, an instance of the turtle class represents a unique turtle. The turtle class is like a stencil or mold that can be used to make as many turtles as you would like.
    :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    What does each instance of the Turtle class represent?
 
@@ -68,6 +71,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_a: Just like the variables you've learned about so far, you can assign values to an attribute and look up the values that are assigned to the attribute.
    :feedback_b: The only difference is the structure that is used to refer to it.
    :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    True or False, attributes/instance variables are just like other variables in Python.
 
@@ -85,6 +89,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_d: Methods cannot delete instances of a class.
    :feedback_e: Methods can do at least one of the above. Take another look.
    :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    Select all of the following things that methods can do:
 
@@ -102,10 +107,13 @@ Chapter Assessment - Turtle and Object Mechanics
    :feedback_d: This would be the syntax for a function named student being called on a variable named title.
    :feedback_e: Yes, this is the correct structure to use.
    :practice: T 
+   :topics: PythonTurtle/ObjectInstances
 
    For an instance of a class that is assigned to the variable ``student``, what is the propper way to refer to the ``title`` attribute/instance variable?
 
 .. fillintheblank:: assess_question1_3_1_1_7
+   :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    What is the name of the attribute in the following code?
 
@@ -127,6 +135,8 @@ Chapter Assessment - Turtle and Object Mechanics
       :.*: Incorrect, try again.
 
 .. fillintheblank:: assess_question1_3_1_1_8
+   :practice: T
+   :topics: PythonTurtle/ObjectInstances
 
    What is the name of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them.
 
