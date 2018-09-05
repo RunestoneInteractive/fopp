@@ -317,8 +317,6 @@ Exercises
 #.
 
    .. parsonsprob:: pp7_14_11
-      :practice: T
-      :topics: Conditionals/ConditionalExecutionBinarySelection
 
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
       -----
@@ -340,8 +338,6 @@ Exercises
 #.
 
    .. parsonsprob:: pp7_14_12
-      :practice: T
-      :topics: Conditionals/Nestedconditionals
 
       Piece together a program so that it can successfully print out one print statement, given the value of x.
       -----

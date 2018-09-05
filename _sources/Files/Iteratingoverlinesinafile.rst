@@ -107,9 +107,10 @@ to read it. And when you start dealing with big files, you may notice the effici
     Nervous anxious jittery jumpy tense uneasy apprehensive
     </pre>
 
-1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
-
 .. activecode:: ac9_5_3
+
+   1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
+   ~~~~
 
    =====
 
