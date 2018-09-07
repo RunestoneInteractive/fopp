@@ -60,17 +60,33 @@ More importantly, you'll want to print out the contents. Sometimes the text that
 
 Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the following url, ``https://www.google.com/search?tbm=isch&q=%22violins+and+guitars%22``. (Don't look at the previous page of the textbook, at least not yet. If you can't figure it out after 15 minutes of trying the approaches on this page, then look back.)
 
-Note that we don't have the requests module in the browser environment, so you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook.
+Note that we don't have access to a full version of the requests module in the browser environment, but we do have a modified and limited version of the requests module for the textbook. If you would like to work with the full version - which lets you access the status_code, headers, and history attributes - you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook. There you can also access the json module so that you can convert the json-formatted strings into python objects.
 
-**TEST SPACE FOR THE NEW REQUESTS MODULE**
+Below is our version of the function ``requestURL`` that works without making a call to the full requests module. Try to understand what's going on in this function and test it out!
 
 .. activecode:: ac400_5_1
 
-   import restrictedrequests
+   def requestURL(baseurl, params = {}):
+       if len(params) == 0:
+           return baseurl
+       complete_url = baseurl + "?"
+       pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
+       complete_url += "&".join(pairs)
+       return complete_url
 
-   obj = restrictedrequests.get("https://www.michigandaily.com?")
+In this version of requestURL, we first check to see if there are any parameters that need to be added. Some APIs don't need additional parameters. For example, making a request to ``https://events.umich.edu/day/json`` will return a json-formatted string containing information on events at the University of Michigan. If we did not include the conditional, then a ``?`` would be added to the end of that url and it would result in a 400 error. On line five, we iterate through the dictionary assigned to params. We access the value in each key-value pair, convert it to a string, and then replace all spaces with ``+`` signs. Then, we concatenate the key, an equal sign, and the newly formatted value together into one string and add each to a list called ``pairs``. Finally, we join together each item in ``pairs`` with a ``&``, and add that to the end of ``complete_url`` and return that variable at the end of the function.
 
-   print(obj)
+We have implemented a reduced version of the ``get`` method available in the requests module. This will return a requests object, that has two attributes: text and url.
+
+.. activecode:: ac400_5_2
+    :include: ac400_5_3
+
+    # this is an example of a request to the iTunes API
+    # open up the iTunes API's documentation and try making some requests of your own!
+    obj = get("https://itunes.apple.com/search", params = {"term": "Helen Merrill", 'limit': 10})
+    print(obj)
+    print(obj.url)
+    print(obj.text)
 
 
 **Check your understanding**
@@ -102,3 +118,40 @@ Note that we don't have the requests module in the browser environment, so you'l
    :correct: c
 
    If there is a runtime error and you don't get a response object back from the call to ``requests.get()``, what should you do?
+
+
+.. activecode:: ac400_5_3
+    :hidecode:
+
+    from urllib.request import urlopen
+
+    class Response:
+
+        def __init__(self, data, url):
+            self.text = data
+            self.url = url
+
+        def __str__(self):
+            return "A response object for the following request: {}".format(self.url)
+
+
+    def requestURL(baseurl, params = {}):
+        if len(params) == 0:
+            return baseurl
+        complete_url = baseurl + "?"
+        pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
+        complete_url += "&".join(pairs)
+        return complete_url
+
+    def get(baseurl, params = {}):
+        user_req = requestURL(baseurl, params)
+        try:
+            data = urlopen(user_req)
+            text_data = data.read().strip()
+            if len(text_data) > 0:
+                user_resp_obj = Response(text_data, user_req)
+                return user_resp_obj
+            else:
+                return Response("ERROR: You did not get anything back from the response. The data will need to be converted to a string or the query might not be valid.", user_req)
+        except:
+            return Response("ERROR: We are unable to get a response at this time, likely due to a server error. Try another API or try again later.", user_req)

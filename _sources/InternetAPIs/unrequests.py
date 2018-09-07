@@ -8,7 +8,7 @@ class Response:
 	def __init__(self, data, url, status_code = 0):
 		self.text = data.decode('utf-8')
 		self.status_code = status_code
-		self.request_url = url
+		self.url = url
 
 	def json(self):
 		return loads(self.text)
@@ -17,7 +17,7 @@ class Response:
 		return "A response object for the following request: {}".format(self.request_url)
 
 
-def create_url(baseurl, params = {}):
+def requestURL(baseurl, params = {}):
 	if len(params) == 0:
 		return baseurl
 	complete_url = baseurl + "?"
@@ -26,7 +26,7 @@ def create_url(baseurl, params = {}):
 	return complete_url
 
 def get(baseurl, params = {}):
-	user_req = create_url(baseurl, params)
+	user_req = requestURL(baseurl, params)
 	try: 
 		data = urlopen(user_req)
 		text_data = data.read().decode('unicode_escape').encode('utf-8').strip()
@@ -57,7 +57,7 @@ def get(baseurl, params = {}):
 # obj = get("https://api.flickr.com/services/rest/", params = pd)
 
 # obj = get("https://events.umich.edu/day/json")
-# other = create_url("https://events.umich.edu/day/json")
+# other = requestURL("https://events.umich.edu/day/json")
 # print(other)
 # obj = get("https://www.umich.edu")
 # obj = get("https://www.google.com/")
