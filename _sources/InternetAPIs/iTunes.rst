@@ -67,6 +67,14 @@ Now, our code can now make a request to the iTunes API:
     parameters = {"term": "Ann Arbor", "entity": "podcast"}
     iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
 
+In the textbook, this first step would look like this:
+
+.. activecode:: ac400_11_1
+    :include: ac400_11_3
+
+    parameters = {"term": "Ann Arbor", "entity": "podcast"}
+    iTunes_response = get("https://itunes.apple.com/search", params = parameters)    
+
 All that is left to do is to convert the JSON response to a python object, and we'll be all set to work with the data we have retreived:
 
 .. sourcecode:: python
@@ -78,4 +86,42 @@ All that is left to do is to convert the JSON response to a python object, and w
     iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
 
     py_data = json.loads(iTunes_response.text)
+
+Remember though, that we don't have json implemeted yet, so we can't convert the data into a python object just yet.
+
+.. activecode:: ac400_11_3
+    :hidecode:
+
+    from urllib.request import urlopen
+
+    class Response:
+
+        def __init__(self, data, url):
+            self.text = data
+            self.url = url
+
+        def __str__(self):
+            return "A response object for the following request: {}".format(self.url)
+
+
+    def requestURL(baseurl, params = {}):
+        if len(params) == 0:
+            return baseurl
+        complete_url = baseurl + "?"
+        pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
+        complete_url += "&".join(pairs)
+        return complete_url
+
+    def get(baseurl, params = {}):
+        user_req = requestURL(baseurl, params)
+        try:
+            data = urlopen(user_req)
+            text_data = data.read().strip()
+            if len(text_data) > 0:
+                user_resp_obj = Response(text_data, user_req)
+                return user_resp_obj
+            else:
+                return Response("ERROR: You did not get anything back from the response. The data will need to be converted to a string or the query might not be valid.", user_req)
+        except:
+            return Response("ERROR: We are unable to get a response at this time, likely due to a server error. Try another API or try again later.", user_req)
 
