@@ -45,6 +45,8 @@ def get(baseurl, params = {}):
 #obj = get("https://www.omdbapi.com/", params = {"apikey": "d9ef00e2", 't': "The Matrix", 'r': 'json'})
 # obj = get("https://itunes.apple.com/search", params = {"term": "Cell7", "limit": 10})
 # obj = get("https://itunes.apple.com/search", params = {"term": "Cell7"})
+# obj = get("https://github.com/presnick/runestone")
+# print(obj.text)
 
 # pd = {}
 # pd["method"] = "flickr.photos.search"

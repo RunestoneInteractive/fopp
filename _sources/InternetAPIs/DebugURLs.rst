@@ -60,7 +60,9 @@ More importantly, you'll want to print out the contents. Sometimes the text that
 
 Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the following url, ``https://www.google.com/search?tbm=isch&q=%22violins+and+guitars%22``. (Don't look at the previous page of the textbook, at least not yet. If you can't figure it out after 15 minutes of trying the approaches on this page, then look back.)
 
-Note that we don't have access to a full version of the requests module in the browser environment, but we do have a modified and limited version of the requests module for the textbook. If you would like to work with the full version - which lets you access the status_code, headers, and history attributes - you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook. There you can also access the json module so that you can convert the json-formatted strings into python objects.
+Note that we don't have access to a full version of the requests module in the browser environment. If you would like to work with the full version - which lets you access the status_code, headers, and history attributes - you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook. 
+
+However, we do have a modified and limited version of the requests module for the textbook which we haven't introduced yet. We have created a ``requestURL`` and ``get`` function for your use on this page and the iTunes page. Though you are not able to use the json module to convert the response to a python object, you can still practice making requests.
 
 Below is our version of the function ``requestURL`` that works without making a call to the full requests module. Try to understand what's going on in this function and test it out!
 
