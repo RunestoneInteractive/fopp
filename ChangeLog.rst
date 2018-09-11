@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+Sept 10 2018
+------------
+
+* Add Programming in the Real world Video
+* Add visualizer for How python processes arguments when calling a function
+
 Sept 4 2018
 -----------
 

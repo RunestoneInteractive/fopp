@@ -13,6 +13,16 @@
 
 .. index:: boundary conditions, testing, debugging
 
+👩‍💻 Programming in the Real World
+===================================
+
+Before we dive into the nitty gritty details of debugging, here is a video to give you a flavor for what its like to be a programmer in the real world.
+
+.. youtube:: 14ObVtyySbw
+    :height: 315
+    :width: 560
+    :align: left
+
 👩‍💻 Debugging
 ===============
 
