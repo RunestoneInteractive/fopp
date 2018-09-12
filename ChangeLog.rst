@@ -1,6 +1,11 @@
 ChangeLog
 =========
 
+Sept 12 2018
+------------
+
+* Add the Stack Overflow split-apply-combine project
+
 Sept 10 2018
 ------------
 
