@@ -11,7 +11,7 @@
    :prefix: intro-5-
    :start: 1
 
-   .. index:: formal language, natural language, parse, token
+.. index:: formal language, natural language, parse, token
 
 More About Programs
 -------------------
