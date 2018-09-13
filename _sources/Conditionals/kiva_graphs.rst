@@ -160,11 +160,15 @@ Once you have the graph constructed think about what it tells you.
 Histogram
 ---------
 
-In one of our previous labs we calculated the variance and the standard deviation of a list of numbers.  Either number gives us an indication of how much the data is spread out.  But a histogram tells a much richer story.  For example here is a histogram that shows the distribution of heights in women ages 16-20.
+In one of our previous labs we calculated the variance and the standard deviation of a list of numbers.  Either number gives us an indication of how much the data is spread out.  But a histogram tells a much richer story.  For example here is a histogram that shows the distribution of heights in women and men.
+
+.. image:: http://www.usablestats.com/images/men_women_height_histogram.jpg
 
 Here is a histogram of our kiva data and the amount of money loaned.
 
-Notice that the two graphs tell very different stories.  One shows that most young women are close to the mean varying just a little on either side of the mean.  Most young woment are X inches tall plus or minus a couple inches.  Sure there are a few that are much taller and a few that are much shorter.  This graph is a great example of what we call a **normal distribution**.  You have probably heard of the bell curve before and the histogram of heights is a great example.
+.. image:: Figures/histogram.png
+
+Notice that the graphs tell very different stories.  One shows that most young women are close to the mean varying just a little on either side of the mean.  Most young women are X inches tall plus or minus a couple inches.  Sure there are a few that are much taller and a few that are much shorter.  This graph is a great example of what we call a **normal distribution**.  You have probably heard of the bell curve before and the histogram of heights is a great example.
 
 The graph of kiva data is very different, what it says is that the vast majority of the loans are quite small with the amount tapering off quite quickly.  But, there are a very few loans that are very large.  In fact if you investigated these large loans you would find that they are all part of a new initiative at Kiva that is aimed at helping small businesses in the USA.
 
