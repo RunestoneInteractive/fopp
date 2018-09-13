@@ -162,7 +162,9 @@ Histogram
 
 In one of our previous labs we calculated the variance and the standard deviation of a list of numbers.  Either number gives us an indication of how much the data is spread out.  But a histogram tells a much richer story.  For example here is a histogram that shows the distribution of heights in women and men.
 
-.. image:: http://www.usablestats.com/images/men_women_height_histogram.jpg
+.. figure:: http://www.usablestats.com/images/men_women_height_histogram.jpg
+    
+`Image from Usable Stats <http://www.usablestats.com/lessons/normal>`_
 
 Here is a histogram of our kiva data and the amount of money loaned.
 
