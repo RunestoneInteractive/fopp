@@ -28,7 +28,7 @@ Now that you are experienced with working with files lets look at a bit of the d
 * LanguageWorkedWith
 
 
-.. datafile:: act_so_d1
+.. datafile:: so_survey.csv
     :fromfile: so_survey.csv
 
 
@@ -209,7 +209,7 @@ Challenge: Ask your own Question
 
 A `description <https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey>`_ of the full data set will give you a good idea of what all the columns mean.  The stack overflow folks claim there are some interesting answers to questions about ethics as well as the future of AI.  But you may find something even more interesting.  Can you develop one or more questions that require the use of the split-apply-combine pattern to answer?
 
-.. datafile:: act_so_all1
+.. datafile:: allc_survey.csv
     :fromfile: allc_survey.csv
 
 
