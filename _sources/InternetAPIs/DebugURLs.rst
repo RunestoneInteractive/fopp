@@ -147,13 +147,20 @@ We have implemented a reduced version of the ``get`` method available in the req
 
     def get(baseurl, params = {}):
         user_req = requestURL(baseurl, params)
-        try:
-            data = urlopen(user_req)
-            text_data = data.read().strip()
-            if len(text_data) > 0:
-                user_resp_obj = Response(text_data, user_req)
-                return user_resp_obj
-            else:
-                return Response("ERROR: You did not get anything back from the response. The data will need to be converted to a string or the query might not be valid.", user_req)
-        except:
-            return Response("ERROR: We are unable to get a response at this time, likely due to a server error. Try another API or try again later.", user_req)
+        data = urlopen(user_req)
+        text_data = data.read().strip()
+        if len(text_data) > 0:
+            user_resp_obj = Response(text_data, user_req)
+            return user_resp_obj
+        else:
+            # Right now I'm returning a string because 
+            # when I have this activecode window included 
+            # in the windows above, it will not pass on the 
+            # exception, and instead say that there is a 
+            # problem in another window. Not sure what the best
+            # way around that is.
+
+
+            return "requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl)
+            #raise Exception("requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl))
+        
