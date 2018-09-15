@@ -43,8 +43,8 @@ construct a simple sentence.
     olypmicsfile = open("olypmics.txt","r")
 
     for aline in olypmicsfile.readlines():
-        values = aline.split()
-        print(values[0] "is from", values[3], "and is on the roster for", values[4])
+        values = aline.split(',')
+        print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
     olypmicsfile.close()
 
@@ -58,8 +58,8 @@ to read it. And when you start dealing with big files, you may notice the effici
     olypmicsfile = open("olypmics.txt","r")
 
     for aline in olypmicsfile:
-        values = aline.split()
-        print(values[0] "is from", values[3], "and is on the roster for", values[4])
+        values = aline.split(',')
+        print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
     olypmicsfile.close()
 
