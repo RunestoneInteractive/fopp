@@ -118,8 +118,8 @@ Chapter Assessment
    :answer_d: list
    :correct: d
    :feedback_a: Not quite, is it slicing or accessing an element?
-   :feedback_b: What is happening in the assigment statement for m?
-   :feedback_c: What is happening in the assigment statement for m?
+   :feedback_b: What is happening in the assignment statement for m?
+   :feedback_c: What is happening in the assignment statement for m?
    :feedback_d: Yes, a slice returns a list no matter how large the slice.
    :practice: T
 
