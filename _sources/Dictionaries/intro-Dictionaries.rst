@@ -18,7 +18,15 @@
 Introduction: Dictionaries
 ==========================
 
-To provide an example of this new kind of datatype, we will create a dictionary to translate English words into Spanish. 
+Here is a video to help introduce you to the important concepts in creating and using Python dictionaries.
+
+.. youtube:: OlW_7XL9muI
+    :divid: vid_keyvalpairs
+    :height: 315
+    :width: 560
+    :align: left
+
+Let us look at an example of using a dictionary for a simple problem. We will create a dictionary to translate English words into Spanish. 
 For this dictionary, the keys are strings and the values will also be strings.
 
 One way to create a dictionary is to start with the empty dictionary and add **key-value pairs**. The empty dictionary 
