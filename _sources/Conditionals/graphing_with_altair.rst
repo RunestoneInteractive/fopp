@@ -55,23 +55,23 @@ To make a chart in Altair you have to specify the data that you want to work wit
 
 Lets make a Bar chart.  Here is a table of data:
 
-========  =====  ======
-category  value  t_size
-========  =====  ======
-a         5      large
-b         9      medium
-c         7      small
-========  =====  ======
+========  =====  ==========
+customer  cakes  flavor
+========  =====  ==========
+Alice     5      chocolate
+Bob       9      vanilla
+Clair     7      strawberry
+========  =====  ==========
 
 .. activecode:: alt_kiva_bar1
     :nocodelens:
 
     import altair
 
-    data = altair.Data(category='abc', value=[5,9,7], t_size=['large', 'medium', 'small'])
+    data = altair.Data(customer=['Alice', 'Bob', 'Claire'], cakes=[5,9,7], flavor=['chocolate', 'vanilla', 'strawberry'])
     chart = altair.Chart(data)
     mark = chart.mark_bar()
-    enc = mark.encode(x='category:N',y='value',color='t_size:N')
+    enc = mark.encode(x='customer:N',y='cakes',color='flavor:N')
     enc.display()
 
 
@@ -86,7 +86,7 @@ First we create a representation of the table for altair by calling ``altair.Dat
 
         import altair
 
-        data = altair.Data(category='abc', value=[5,9,7], t_size=['large', 'medium', 'small'])
+        data = altair.Data(customer=['Alice', 'Bob', 'Claire'], cakes=[5,9,7], flavor=['chocolate', 'vanilla', 'strawberry'])
         print(data)
 
 Back to the original code:
@@ -95,27 +95,27 @@ On line 4 of the program we make a Chart.  The chart is the holder of the data t
 
 On line 5 we tell the chart that it is going to be a bar chart by calling the method ``mark_bar()``
 
-On line 6 we tell the mark the encodings to use.  We tell it that the values for the x axis should come from the category column and to treat them as nominal data.  That is great for a bar chart as the columns often do correspond to names.  The values for the y axis will come from the value column. In a bar chart its natural to think of the values being proportional to the height of the bar.  Which is exactly what Altair does for a bar chart.  We are also going to color the bars (this is optional) using the value from t_size.  
+On line 6 we tell the mark the encodings to use.  We tell it that the values for the x axis should come from the customer column and to treat them as nominal data.  That is great for a bar chart as the columns often do correspond to names.  The values for the y axis will come from the cakes column. In a bar chart its natural to think of the values being proportional to the height of the bar.  Which is exactly what Altair does for a bar chart.  We are also going to color the bars (this is optional) using the value from flavor column.  
 
 On line 7 we tell Altair to display the chart.
 
 **You Try**
 
 1. Change the values so they are all bigger by a factor of 10.  Does the Chart automatically re-scale itself?
-2. Add more data to category, value, and t_size to represent five more rows in the table and redo the graph.
+2. Add more data to customer, cakes, and flavor to represent five more rows in the table and redo the graph.
 3. What happens if you change the columns for x and y ?
 
 Did you notice anything interesting?  Suppose the additional rows looked like this:
 
-========  =====  ======
-category  value  t_size
-========  =====  ======
-d         10     large
-e         82     medium
-a         70     small
-e         42     large
-g         64     small
-========  =====  ======
+========  =====  ==========
+customer  cakes  flavor
+========  =====  ==========
+Drake     10     chocolate
+Emma      82     vanilla
+Alice     70     strawberry
+Emma      42     chocolate
+Ginger    64     strawberry
+========  =====  ==========
 
 Can you explain why the graph looks like it does? Just to be sure we are seeing the same thing, here's the code for the two tables combined below.
 
@@ -124,10 +124,12 @@ Can you explain why the graph looks like it does? Just to be sure we are seeing 
 
     import altair
 
-    data = altair.Data(category='abcdeaeg', value=[5,9,7,10,82,70,42,64], t_size=['large', 'medium', 'small', 'large','medium','small','large','small'])
+    data = altair.Data(customer=['Alice', 'Bob', 'Claire', 'Drake', 'Emma','Alice', 'Emma', 'Ginger'], 
+        cakes=[5,9,7,10,82,70,42,64], 
+        flavor=['chocolate', 'vanilla', 'strawberry','chocolate','vanilla','strawberry','chocolate','strawberry'])
     chart = altair.Chart(data)
     mark = chart.mark_bar()
-    enc = mark.encode(x='category:N',y='value',color='t_size:N')
+    enc = mark.encode(x='customer:N',y='cakes',color='flavor:N')
     enc.display()
 
 Notice that it adds together all of the the rows for the x channel.  This is just what you would want to if you wanted to show a total for a particular category.  Such as Graph the total amount of money lent in each country.  It also further shows the distribution -- by color -- of another variable within that category.  Sometimes this is called a stacked bar chart.  Just think of the work you would need to do to replicate this if you had to compute it all yourself and then draw it with a turtle.
