@@ -106,13 +106,29 @@ In order to evaluate an operator expression, the Python interpreter first comple
 
 If a function call expression is a sub-expression of some more complicated expression, as ``square(x)`` is in ``sub(square(y), square(x))``, then the return value from ``square(x)`` is passed as an input to the ``sub`` function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the ``square`` function is called (twice) before the ``sub`` function is called, even though the ``sub`` function comes first when reading the code from left to right.
 
+.. showeval:: eval2_10_1
+    :trace_mode: true
+
+    x = 5
+    y = 7
+    add(square(y), square(x))
+    ~~~~
+    {{add}}{{add}}(square(y), square(x)) ## add is a function so eval its arguments
+    add({{square}}{{square}}(y), square(x)) ## square is a function so eval its arguments
+    add(square({{y}}{{7}}), square(x)) 
+    add({{square(7)}}{{49}}, square(x))
+    add(49, {{square}}{{square}}(x)) ## square is a function so eval its arguments
+    add(49, square({{x}}{{5}}))
+    add(49, {{square(5)}}{{25}})
+    {{add(49, 25)}}{{74}}
+
 To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that's something that will come later in the course.
 
 
 .. parsonsprob:: pp2_10_1
    :practice: T
 
-   Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing ``square(x + sub(square(y), 2 *x))``.
+   Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing `square(x + sub(square(y), 2 *x))`.
 
    -----
    look up the variable square to get the function object

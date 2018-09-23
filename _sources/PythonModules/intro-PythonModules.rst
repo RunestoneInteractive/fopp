@@ -18,12 +18,12 @@ One of the best things about the Python programming language is the ecosystem th
 
 .. image:: https://imgs.xkcd.com/comics/python.png
 
-As you may have gathered, Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules you still need to know the python basics in order to glue everything together.  You have already seen one module for turtle graphics and we will introduce more as we go along.  This chapter will help you learn how to make use of other modules in your programs.
+As you may have gathered, Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules you still need to know the python basics in order to glue everything together.  We will start by looking at a module used to generate random numbers to learn how to make use of other modules in your programs.
 
 Learning Goals
 ==============
 
-* Python is extensible through modules
+* Understand that Python is extensible through modules
 
 Objectives
 ==========

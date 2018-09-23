@@ -42,7 +42,7 @@ Exercises
 
       Write code to determine how many t's are in the following sentences.
       -----
-      sentences = ["My, what a lovely day today is!", 
+      phrases = ["My, what a lovely day today is!", 
       "Have you mastered cooking yet? A tasty treat could be in your future.", 
       "Have you ever seen the leaves change color?"]
       =====

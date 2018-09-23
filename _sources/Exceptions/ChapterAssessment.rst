@@ -11,10 +11,11 @@
 Chapter Assessment
 ==================
 
-1. The code below takes the list of country, ``country``, and searches to see if it is in the dictionary ``gold`` which shows some countries who won gold during the Olympics. However, this code currently does not work. Correctly add try/except clause in the code so that it will correctly populate the list, ``country_gold``, with either the number of golds won or the string "Did not get gold".
-
 .. activecode:: ac_exceptions_01
    :tags: Exceptions/intro-exceptions.rst
+
+   The code below takes the list of country, ``country``, and searches to see if it is in the dictionary ``gold`` which shows some countries who won gold during the Olympics. However, this code currently does not work. Correctly add try/except clause in the code so that it will correctly populate the list, ``country_gold``, with either the number of golds won or the string "Did not get gold".
+   ~~~~
 
    gold = {"US":46, "Fiji":1, "Great Britain":27, "Cuba":5, "Thailand":2, "China":26, "France":10}
    country = ["Fiji", "Chile", "Mexico", "France", "Norway", "US"]
@@ -35,10 +36,12 @@ Chapter Assessment
       
    myTests().main()
 
-1.1 Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes.
 
 .. activecode:: ac_exceptions_011
    :tags: Exceptions/intro-exceptions.rst
+
+   Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes.
+   ~~~~
 
    di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
    total = 0
@@ -59,10 +62,12 @@ Chapter Assessment
 
    myTests().main()
 
-2. The list, ``numb``, contains integers. Write code that populates the list ``remainder`` with the remainder of 36 divided by each number in ``numb``. For example, the first element should be 0, because 36/6 has no remainder. If there is an error, have the string "Error" appear in the ``remainder``.
 
 .. activecode:: ac_exceptions_02
    :tags:Exceptions/intro-exceptions.rst
+
+   The list, ``numb``, contains integers. Write code that populates the list ``remainder`` with the remainder of 36 divided by each number in ``numb``. For example, the first element should be 0, because 36/6 has no remainder. If there is an error, have the string "Error" appear in the ``remainder``.
+   ~~~~
 
    numb = [6, 0, 36, 8, 2, 36, 0, 12, 60, 0, 45, 0, 3, 23]
 
@@ -79,10 +84,11 @@ Chapter Assessment
      
    myTests().main()
 
-2.1 Provided is buggy code, insert a try/except so that the code passes.
-
 .. activecode:: ac_exceptions_021
    :tags: Exceptions/intro-exceptions.rst
+
+   Provided is buggy code, insert a try/except so that the code passes.
+   ~~~~
 
    lst = [2,4,10,42,12,0,4,7,21,4,83,8,5,6,8,234,5,6,523,42,34,0,234,1,435,465,56,7,3,43,23]
 
@@ -104,10 +110,12 @@ Chapter Assessment
 
    myTests().main()
 
-3. Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list ``attempt`` the string "Error"
 
 .. activecode:: ac_exceptions_03
    :tags: Exceptions/intro-exceptions.rst
+
+   Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list ``attempt`` the string "Error".
+   ~~~~
 
    full_lst = ["ab", 'cde', 'fgh', 'i', 'jkml', 'nop', 'qr', 's', 'tv', 'wxy', 'z']
 
@@ -127,10 +135,11 @@ Chapter Assessment
 
    myTests().main()
 
-3.1 The following code tries to append the third element of each list in ``conts`` to the new list ``third_countries``. Currently, the code does not work. Add a try/except clause so the code runs without errors, and the string 'Continent does not have 3 countries' is appended to ``countries`` instead of producing an error.
-
 .. activecode:: ac_exceptions_031
    :tags: Exceptions/intro-exceptions.rst
+
+   The following code tries to append the third element of each list in ``conts`` to the new list ``third_countries``. Currently, the code does not work. Add a try/except clause so the code runs without errors, and the string 'Continent does not have 3 countries' is appended to ``countries`` instead of producing an error.
+   ~~~~
 
    conts = [['Spain', 'France', 'Greece', 'Portugal', 'Romania', 'Germany'], ['USA', 'Mexico', 'Canada'], ['Japan', 'China', 'Korea', 'Vietnam', 'Cambodia'], ['Argentina', 'Chile', 'Brazil', 'Ecuador', 'Uruguay', 'Venezuela'], ['Australia'], ['Zimbabwe', 'Morocco', 'Kenya', 'Ethiopa', 'South Africa'], ['Antarctica']]
 
@@ -151,10 +160,12 @@ Chapter Assessment
 
    myTests().main()   
 
-4. The buggy code below prints out the value of the sport in the list ``sport``. Use try/except so that the code will run properly. If the sport is not in the dictionary, ``ppl_play``, add it in with the value of 1.
 
 .. activecode:: ac_exceptions_04
    :tags:Exceptions/intro-exceptions.rst
+
+   The buggy code below prints out the value of the sport in the list ``sport``. Use try/except so that the code will run properly. If the sport is not in the dictionary, ``ppl_play``, add it in with the value of 1.
+   ~~~~
 
    sport = ["hockey", "basketball", "soccer", "tennis", "football", "baseball"]
 
@@ -176,10 +187,11 @@ Chapter Assessment
    myTests().main()
 
 
-4.1 Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes. If the key is not there, initialize it in the dictionary and set the value to zero.
-
 .. activecode:: ac_exceptions_041
    :tags: Exceptions/intro-exceptions.rst
+
+   Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes. If the key is not there, initialize it in the dictionary and set the value to zero.
+   ~~~~
 
    di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
    total = 0
@@ -203,4 +215,3 @@ Chapter Assessment
          self.assertEqual(accum, 4, "Testing that every dictionary in di has the key 'Puppies'.")
 
    myTests().main()
-

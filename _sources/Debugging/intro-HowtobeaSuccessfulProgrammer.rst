@@ -23,7 +23,7 @@ that in 1945, a dead moth caused a problem on relay number 70, panel F, of one
 of the first computers at Harvard, and the term **bug** has remained in use
 since. For more about this historic event, see `first bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
 
-One of the most important skills you need to aquire to complete this book successfully is the 
+One of the most important skills you need to acquire to complete this book successfully is the 
 ability to debug your programs. Debugging might be the most under-appreciated, and 
 under-taught, skill in introductory computer science. For that reason we are introducing a 
 series of "debugging interludes." Debugging is a skill that you need to master over time, and 

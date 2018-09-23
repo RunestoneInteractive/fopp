@@ -43,9 +43,23 @@ Chapter Assessment
    writing at some point in their academic career, be it essays, research papers,
    technical write ups, or scripts.
 
-1. The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
+
+.. datafile:: emotion_words.txt
+   :hide:
+
+   Sad upset blue down melancholy somber bitter troubled
+   Angry mad enraged irate irritable wrathful outraged infuriated
+   Happy cheerful content elated joyous delighted lively glad
+   Confused disoriented puzzled perplexed dazed befuddled
+   Excited eager thrilled delighted
+   Scared afraid fearful panicked terrified petrified startled
+   Nervous anxious jittery jumpy tense uneasy apprehensive
+
 
 .. activecode:: ac9_10_1
+
+   The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
+   ~~~~
 
    =====
 
@@ -58,9 +72,10 @@ Chapter Assessment
 
    myTests().main()
 
-2. We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
-
 .. activecode:: ac9_10_2
+   
+   We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
+   ~~~~
 
    =====
 
@@ -73,9 +88,11 @@ Chapter Assessment
 
    myTests().main()
 
-3. Assign to the variable ``num_lines`` the number of lines in the file ``school_prompt.txt``.
 
 .. activecode:: ac9_10_3
+
+   Assign to the variable ``num_lines`` the number of lines in the file ``school_prompt.txt``.
+   ~~~~
 
    =====
 
@@ -88,9 +105,11 @@ Chapter Assessment
 
    myTests().main()
 
-4. Assign the first 30 characters of ``school_prompt.txt`` as a string to the variable ``beginning_chars``.
 
 .. activecode:: ac9_10_4
+
+   Assign the first 30 characters of ``school_prompt.txt`` as a string to the variable ``beginning_chars``.
+   ~~~~
 
    =====
 
@@ -104,9 +123,11 @@ Chapter Assessment
 
    myTests().main()   
 
-5. **Challenge:** Using the file ``school_prompt.txt``, assign the third word of every line to a list called ``three``.
 
 .. activecode:: ac9_10_5
+
+   **Challenge:** Using the file ``school_prompt.txt``, assign the third word of every line to a list called ``three``.
+   ~~~~
 
    =====
 
@@ -118,10 +139,12 @@ Chapter Assessment
          self.assertEqual(three, ['for', 'find', 'to', 'many', 'they', 'solid', 'for', 'have', 'some', 'ups,'], "Testing that three has the correct value.")
 
    myTests().main()
-
-6. **Challenge:** Create a list called ``emotions`` that contains the first word of every line in ``emotion_words.txt``. 
+ 
 
 .. activecode:: ac9_10_6
+
+   **Challenge:** Create a list called ``emotions`` that contains the first word of every line in ``emotion_words.txt``.
+   ~~~~
 
    =====
 
@@ -135,9 +158,10 @@ Chapter Assessment
    myTests().main() 
 
 
-7. Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
-
 .. activecode:: ac9_10_7
+
+   Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
+   ~~~~
 
    =====
 
@@ -150,9 +174,11 @@ Chapter Assessment
 
    myTests().main()
 
-8. **Challenge:** Using the file ``school_prompt.txt``, if the character 'p' is in a word, then add the word to a list called ``p_words``.
 
 .. activecode:: ac9_10_8
+
+   **Challenge:** Using the file ``school_prompt.txt``, if the character 'p' is in a word, then add the word to a list called ``p_words``.
+   ~~~~
 
    =====
 
