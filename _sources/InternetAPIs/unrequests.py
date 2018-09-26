@@ -1,5 +1,5 @@
 # least restrictive version
-from json import loads
+import json
 from urllib.request import urlopen
 from urllib.request import HTTPError
 
@@ -11,7 +11,7 @@ class Response:
 		self.url = url
 
 	def json(self):
-		return loads(self.text)
+		return json.loads(self.text)
 
 	def __str__(self):
 		return "A response object for the following request: {}".format(self.request_url)

@@ -13,12 +13,16 @@ Might be because it returns binary data, and can't be converted to a
 string because we can't use encode/decode.
 """
 from urllib.request import urlopen
+import json
 
 class Response:
 
 	def __init__(self, data, url):
 		self.text = data
 		self.url = url
+
+    def json(self):
+        return json.loads(self.text)
 
 	def __str__(self):
 		return "A response object for the following request: {}".format(self.request_url)

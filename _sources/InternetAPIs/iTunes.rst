@@ -77,28 +77,31 @@ In the textbook, this first step would look like this:
 
 All that is left to do is to convert the JSON response to a python object, and we'll be all set to work with the data we have retreived:
 
-.. sourcecode:: python
+.. activecode:: ac400_11_2
+    :include: ac400_11_3
 
-    import requests
     import json 
 
     parameters = {"term": "Ann Arbor", "entity": "podcast"}
-    iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
+    iTunes_response = get("https://itunes.apple.com/search", params = parameters)
 
     py_data = json.loads(iTunes_response.text)
 
-Remember though, that we don't have json implemeted yet, so we can't convert the data into a python object just yet.
 
 .. activecode:: ac400_11_3
     :hidecode:
 
     from urllib.request import urlopen
+    import json
 
     class Response:
 
         def __init__(self, data, url):
             self.text = data
             self.url = url
+
+        def json(self):
+            return json.loads(self.text)
 
         def __str__(self):
             return "A response object for the following request: {}".format(self.url)
