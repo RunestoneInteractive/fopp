@@ -281,7 +281,7 @@ Historically the pearson correlation coefficient has been used in recommender sy
 
 .. math::
 
-    covariance = \frac{\sum{x -\bar{x}} \cdot \sum{y-\bar{y}}}{n}
+    covariance = \frac{\sum{(x -\bar{x}) \cdot (y-\bar{y})}}{n}
 
 
 .. math::
