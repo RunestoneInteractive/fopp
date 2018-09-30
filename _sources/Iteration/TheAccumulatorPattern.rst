@@ -117,6 +117,7 @@ won't be useful but we will still need to count.
    :feedback_a: The variable accum will be reset to 0 each time through the loop. Then it will add the current item. Only the last item will count.  
    :feedback_b: Assignment statements are perfectly legal inside loops and will not cause an error.
    :feedback_c: Good thought: the variable accum will be reset to 0 each time through the loop. But then it adds the current item.
+   :practice: T
 
    Consider the following code:
 
@@ -131,7 +132,7 @@ won't be useful but we will still need to count.
    What happens if you put the initialization of accum inside the for loop as the first
    instruction in the loop?
 
-.. parsonsprob:: pp6_6_
+.. parsonsprob:: pp6_6_1
 
    Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.
    -----
@@ -149,6 +150,7 @@ won't be useful but we will still need to count.
 .. activecode:: ac6_6_4
    :language: python
    :autograde: unittest
+   :practice: T
 
    Write code to create a list of integers from 0 through 52 and assign that list to the variable ``numbers``. You should use a special Python function -- do not type out the whole list yourself. HINT: You can do this in one line of code!
    ~~~~
@@ -164,85 +166,10 @@ won't be useful but we will still need to count.
 
    myTests().main()
 
-.. activecode:: ac6_6_6
-   :language: python
-   :autograde: unittest
-
-   Assign an empty string to the variable ``output``. Using the ``range`` function, write code to make it so that the variable ``output`` has 35 ``a`` s inside it (like ``"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"``). Hint: use the accumulation pattern!
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testThree(self):
-         self.assertEqual(output, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Testing that output has the correct value.")
-         self.assertNotIn("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-
-   myTests().main()
-
-.. activecode:: ac6_6_8
-   :language: python
-   :autograde: unittest
-
-   Given the list of numbers, ``numbs``, create a new list of those same numbers increased by 5. Save this new list to the variable ``newlist``.
-   ~~~~
-   numbs = [5, 10, 15, 20, 25]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testFour(self):
-         self.assertEqual(newlist, [10, 15, 20, 25, 30], "Testing that the newlist value contains the correct elements.")
-
-   myTests().main()
-
-.. activecode:: ac6_8_7
-   :language: python
-   :autograde: unittest
-
-   **Challenge** Now do the same as in the previous problem, but do not create a new list. Overwrite the list ``numbs`` so that each of the original numbers are increased by 5.
-   ~~~~
-   numbs = [5, 10, 15, 20, 25]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testFive(self):
-         self.assertEqual(numbs, [10, 15, 20, 25, 30], "Testing that numbs is assigned to correct values.")
-
-   myTests().main()
-
-.. activecode:: ac6_6_9
-   :language: python
-   :autograde: unittest
-
-   For each number in ``lst_nums``, multiply that number by 2 and append it to a new list called ``larger_nums``.
-   ~~~~
-   lst_nums = [4, 29, 5.3, 10, 2, 1817, 1967, 9, 31.32]
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(larger_nums, [8, 58, 10.6, 20, 4, 3634, 3934, 18, 62.64], "Testing that larger_nums has been created correctly." )
-
-   myTests().main()
-
 .. activecode:: ac6_6_10
    :language: python
    :autograde: unittest
+   :practice: T
 
    Count the number of characters in string ``str1``. Do not use ``len()``. Save the number in variable ``numbs``.
    ~~~~
@@ -263,6 +190,7 @@ won't be useful but we will still need to count.
 .. activecode:: ac6_8_9
    :language: python
    :autograde: unittest
+   :practice: T
 
    Create a list of numbers 0 through 40 and assign this list to the variable ``numbers``. Then, accumulate the total of the list's values and assign that sum to the variable ``sum1``.
    ~~~~

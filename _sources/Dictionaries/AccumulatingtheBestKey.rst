@@ -69,6 +69,7 @@ but you'll learn more if you try to write it yourself first.
 .. activecode:: ac10_7_2
    :language: python
    :autograde: unittest
+   :practice: T
 
    **1.** Create a dictionary called ``d`` that keeps track of all the characters in the string ``placement`` and notes how many times each character was seen. Then, find the key with the lowest value in this dictionary and assign that key to ``min_value``.
    ~~~~
@@ -91,6 +92,7 @@ but you'll learn more if you try to write it yourself first.
 .. activecode:: ac10_7_3
    :language: python
    :autograde: unittest
+   :practice: T
 
    **5.** Create a dictionary called ``lett_d`` that keeps track of all of the characters in the string ``product`` and notes how many times each character was seen. Then, find the key with the highest value in this dictionary and assign that key to ``max_value``.
    ~~~~

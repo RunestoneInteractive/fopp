@@ -104,3 +104,64 @@ Note how this differs from mutating the original list, as you saw in a previous 
          self.assertEqual(ing, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that the variable ing has the correct value.")
 
    myTests().main()
+
+.. activecode:: ac8_9_3
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Given the list of numbers, ``numbs``, create a new list of those same numbers increased by 5. Save this new list to the variable ``newlist``.
+   ~~~~
+   numbs = [5, 10, 15, 20, 25]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFour(self):
+         self.assertEqual(newlist, [10, 15, 20, 25, 30], "Testing that the newlist value contains the correct elements.")
+
+   myTests().main()
+
+.. activecode:: ac8_9_4
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   **Challenge** Now do the same as in the previous problem, but do not create a new list. Overwrite the list ``numbs`` so that each of the original numbers are increased by 5.
+   ~~~~
+   numbs = [5, 10, 15, 20, 25]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFive(self):
+         self.assertEqual(numbs, [10, 15, 20, 25, 30], "Testing that numbs is assigned to correct values.")
+
+   myTests().main()
+
+.. activecode:: ac8_9_5
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   For each number in ``lst_nums``, multiply that number by 2 and append it to a new list called ``larger_nums``.
+   ~~~~
+   lst_nums = [4, 29, 5.3, 10, 2, 1817, 1967, 9, 31.32]
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(larger_nums, [8, 58, 10.6, 20, 4, 3634, 3934, 18, 62.64], "Testing that larger_nums has been created correctly." )
+
+   myTests().main()
+

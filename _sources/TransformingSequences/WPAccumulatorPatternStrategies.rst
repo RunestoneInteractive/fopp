@@ -74,7 +74,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: In this case, an accumulation pattern would be good to use!
    :correct: a
    :practice: T
-   :topics: 
 
    Does the following prompt require an accumulation pattern? If so, what words indicate that? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
 
@@ -87,7 +86,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: In this case, an accumulation pattern would be good to use!
    :correct: a
    :practice: T
-   :topics: 
 
    Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
 
@@ -100,7 +98,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: Correct!
    :correct: c
    :practice: T
-   :topics: 
 
    Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to print out each character of the string ``my_str`` on a separate line.
 
@@ -113,7 +110,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: In this case, an accumulation pattern would be good to use!
    :correct: b
    :practice: T
-   :topics: 
 
    Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
@@ -128,7 +124,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_d: Incorrect, we will need an accumulator variable.
    :correct: c
    :practice: T
-   :topics: 
 
    What type should be used for the accumulator variable in the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
@@ -141,7 +136,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: It is stated in the prompt.
    :correct: b
    :practice: T
-   :topics: 
 
    What sequence will you iterate through as you accumulate a result in the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
@@ -156,7 +150,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_d: Incorrect, we will need an accumulator variable.
    :correct: b
    :practice: T
-   :topics: 
 
    What type should be used for the accumulator variable in the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
 
@@ -169,7 +162,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
-   :topics: 
 
    What sequence will you iterate through as you accumulate a result in the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
 
@@ -184,7 +176,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_d: Incorrect, we will need an accumulator variable.
    :correct: c
    :practice: T
-   :topics: 
 
    What type should be used for the accumulator variable in the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
 
@@ -197,7 +188,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
-   :topics: 
 
     What sequence will you iterate through as you accumulate a result in the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
 
@@ -212,7 +202,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_d: Correct, because this prompt does not require an accumulator pattern
    :correct: d
    :practice: T
-   :topics: 
 
    What type should be used for the accumulator variable in the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
 
@@ -225,7 +214,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
-   :topics: 
 
    What sequence will you iterate through as you accumulate a result in the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
 
@@ -238,7 +226,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: The iterator variable is not the clearest here
    :correct: a
    :practice: T
-   :topics: 
 
    Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
 
@@ -251,7 +238,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: Though the iterator variable is good, the accumulator variable is not very clear.
    :correct: b
    :practice: T
-   :topics: 
 
    WWhich of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
@@ -264,7 +250,6 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: Neither the accumulator nor iterator variable are clear enough. The accumulator variable is better, but could be more clear.
    :correct: b
    :practice: T
-   :topics: 
 
    Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
 
@@ -277,6 +262,5 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_c: Yes, there is no accumulator variable needed and the iterator variable is clear (char is a common short form of character)
    :correct: c
    :practice: T
-   :topics: 
 
    Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.

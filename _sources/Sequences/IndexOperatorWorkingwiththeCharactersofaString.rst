@@ -97,6 +97,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :feedback_b: Yes, index locations start with 0.
    :feedback_c: s[-3] would return c, counting from right to left.
    :feedback_d: [ ] is the index operator.
+   :practice: T
 
    What is printed by the following statements?
       
@@ -117,6 +118,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :feedback_c: p is at location 0, not 2.
    :feedback_d: n is at location 5, not 2.
    :feedback_e: [ ] operator returns a string that can be concatenated with another string.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -135,6 +137,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :feedback_b: Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.
    :feedback_c: False is at index 6.
    :feedback_d: Look again, the element at index 3 is a list. This list only counts as one element.
+   :practice: T
    
    What is printed by the following statements?
    

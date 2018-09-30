@@ -15,7 +15,7 @@ Function Invocation
 -------------------
 
 Defining a new function does not make the function run.
-To execute the function, we need a **function call**.  This is also known as a **function invocation**.
+To execute the function, we need a **function call**. This is also known as a **function invocation**.
 
 .. note::
 
@@ -107,6 +107,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
    :feedback_a: The code only defines the function. Nothing prints until the function is called.
    :feedback_b: Check again.
    :feedback_c: When the function is invoked, it will print two lines, but it has only been defined, not invoked.
+   :practice: T
 
    How many lines will be output by executing this code?
    
@@ -127,7 +128,8 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
    :feedback_b: There is only one print statement outside the funciton, but the invocations of hello also cause lines to print.
    :feedback_c: There are three print statements, but the function is invoked more than once.
    :feedback_d: Each time the function is invoked, it will print two lines, not one.
-   :feedback_e: Three invocations generate two lines each, plus the line "It works"
+   :feedback_e: Three invocations generate two lines each, plus the line "It works".
+   :practice: T
 
    How many lines will be output by executing this code?
 

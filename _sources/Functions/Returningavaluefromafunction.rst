@@ -184,6 +184,7 @@ interpreter does these steps:
    :feedback_b: This is a very common mistake so be sure to watch out for it when you write your code!
    :feedback_c: Python will automatically calculate the value x+y+z and then return it in the statement as it is written
    :feedback_d: Functions can return any legal data, including (but not limited to) numbers, strings, lists, dictionaries, etc.
+   :practice: T
 
    What is wrong with the following function definition:
 
@@ -201,6 +202,7 @@ interpreter does these steps:
    :feedback_a: We have accidentally used print where we mean return.  Therefore, the function will return the value None by default.  This is a VERY COMMON mistake so watch out!  This mistake is also particularly difficult to find because when you run the function the output looks the same.  It is not until you try to assign its value to a variable that you can notice a difference.
    :feedback_b: Careful!  This is a very common mistake.  Here we have printed the value x+y+z but we have not returned it.  To return a value we MUST use the return keyword.
    :feedback_c: x+y+z calculates a number (assuming x+y+z are numbers) which represents the sum of the values x, y and z.
+   :practice: T
 
    What will the following function return?
 
@@ -217,6 +219,7 @@ interpreter does these steps:
    :feedback_a: It squares 5 twice, and adds them together.
    :feedback_b: The two return values are added together.
    :feedback_c: The two results are substituted into the expression and then it is evaluated. The returned values are integers in this case, not strings.
+   :practice: T
 
    What will the following code output?
    
@@ -259,6 +262,7 @@ interpreter does these steps:
    :feedback_c: cyu2 returns the value 1, which is assigned to z.
    :feedback_d: cyu2 returns the value 1, which is assigned to z.
    :feedback_e: what do you think will cause an error.
+   :practice: T
 
    What will the following code output?
    
@@ -283,6 +287,7 @@ interpreter does these steps:
    :feedback_a: Before executing square, it has to figure out what value to pass in, so g is executed first
    :feedback_b: g has to be executed and return a value in order to know what paramater value to provide to x.
    :feedback_c: square and g both have to execute before the number is printed.
+   :practice: T
 
    Which will print out first, square, g, or a number?
    
@@ -306,6 +311,7 @@ interpreter does these steps:
    :feedback_a: The function gets to a return statement after 2 lines are printed, so the third print statement will not run.
    :feedback_b: Yes! Two printed lines, and then the function body execution reaches a return statement.
    :feedback_c: The function returns an integer value! However, this code does not print out the result of the function invocation, so you can't see it (print is for people). The only lines you see printed are the ones that occur in the print statements before the return statement.
+   :practice: T
 
    How many lines will the following code print?
    
@@ -326,7 +332,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **8.** Write a function named ``same`` that takes a string as input, and simply returns that string.
    ~~~~
@@ -347,7 +352,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **9.** Write a function called ``same_thing`` that returns the parameter, unchanged.
    ~~~~
@@ -368,7 +372,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **10.** Write a function called ``subtract_three`` that takes an integer or any number as input, and returns that number minus three.
    ~~~~
@@ -390,7 +393,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **11.** Write a function called ``change`` that takes one number as its input and returns that number, plus 7.
    ~~~~
@@ -411,7 +413,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **12.** Write a function named ``intro`` that takes a string as input. Given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
    ~~~~
@@ -432,7 +433,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **13.** Write a function called ``s_change`` that takes one string as input and returns that string, concatenated with the string " for fun.".
    ~~~~
@@ -453,7 +453,6 @@ interpreter does these steps:
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: Functions/Returningavaluefromafunction
 
    **14.** Write a function called ``decision`` that takes a string as input, and then checks the number of characters. If it has over 17 characters, return "This is a long string", if it is shorter or has 17 characters, return "This is a short string".
    ~~~~

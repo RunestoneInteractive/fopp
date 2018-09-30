@@ -96,6 +96,7 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :feedback_b: That would be s[7:].
    :feedback_c: Yes, start with the character at index 3 and go up to but not include the character at index 8.
    :feedback_d: This is called slicing, not indexing. It requires a start and an end.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -112,6 +113,7 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :feedback_a: Yes, the slice starts at index 4 and goes up to and including the last item.
    :feedback_b: By leaving out the upper bound on the slice, we go up to and including the last item.
    :feedback_c: Index values start at 0.
+   :practice: T
 
    What is printed by the following statements?
    

@@ -74,6 +74,3 @@ Now it's time to combine this with the Turtle module. We can do a lot of cool st
 
        import turtle
        wn = turtle.Screen()
-
-
-

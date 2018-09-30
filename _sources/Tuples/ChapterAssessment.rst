@@ -18,6 +18,8 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
+   :topics: Tuples/TuplePacking
       
    Create a tuple called ``olympics`` with four elements: "Beijing", "London", "Rio", "Tokyo".
    ~~~~
@@ -38,6 +40,8 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
+   :topics: Tuples/TuplePacking
 
    The list below, ``tuples_lst``, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable ``country``.
    ~~~~
@@ -59,6 +63,8 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
+   :topics: Tuples/TuplePacking
 
    With only one line of code, assign the variables ``city``, ``country``, and ``year`` to the values of the tuple ``olymp``.
    ~~~~
@@ -82,6 +88,8 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
+   :topics: Tuples/TuplesasReturnValues
 
    Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order.
    ~~~~
@@ -101,6 +109,8 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
+   :topics: Tuples/TupleAssignmentwithunpacking
 
    Given is the dictionary, ``gold``, which shows the country and the number of gold medals they have earned so far in the 2016 Olympics. Create a list, ``num_medals``, that contains only the number of medals for each country. You must use the .items() method. Note: The .items() method provides a list of tuples. Do not use .keys() method.
    ~~~~
