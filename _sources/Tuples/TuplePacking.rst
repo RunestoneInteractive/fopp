@@ -59,6 +59,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :feedback_c: Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.
    :feedback_d: Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.
    :feedback_e: Indexing starts at 0. You want the seventh item, which is julia[6]
+   :practice: T
 
    Which of the following statements will output Atlanta, Georgia
 
@@ -66,6 +67,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **2.** Create a tuple called ``practice`` that has four elements: 'y', 'h', 'z', and 'x'.
    ~~~~
@@ -85,6 +87,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **3.** Create a tuple named ``tup1`` that has three elements: 'a', 'b', and 'c'.
    ~~~~
@@ -104,6 +107,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **4.** Provided is a list of tuples. Create another list called ``t_check`` that contains the third element of every tuple.
    ~~~~
@@ -125,6 +129,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **5.** Below, we have provided a list of tuples. Write a for loop that saves the second element of each tuple into a list called ``seconds``.
    ~~~~

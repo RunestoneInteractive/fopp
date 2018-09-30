@@ -108,7 +108,6 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/map
 
    **1.** Using map, create a list assigned to the variable ``greeting_doubled`` that doubles each element in the list ``lst``.
    ~~~~
@@ -136,7 +135,6 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/map
 
    **2.** Below, we have provided a list of strings called ``abbrevs``. Use map to produce a new list called ``abbrevs_upper`` that contains all the same strings in upper case.
    ~~~~

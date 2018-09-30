@@ -20,6 +20,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_1
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    At the halfway point during the Rio Olympics, the United States had 70 medals, Great Britain had 38 medals, China had 45 medals, Russia had 30 medals, and Germany had 17 medals. Create a dictionary assigned to the variable ``medal_count`` with the country names as the keys and the number of medals the country had as each key's value.
    ~~~~
@@ -38,6 +40,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_2
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    Given the dictionary ``swimmers``, add an additional key-value pair to the dictionary with ``"Phelps"`` as the key and the integer ``23`` as the value. Do not rewrite the entire dictionary.
    ~~~~
@@ -58,6 +62,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_3
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    Add the string "hockey" as a key to the dictionary ``sports_periods`` and assign it the value of 3. Do not rewrite the entire dictionary.
    ~~~~
@@ -79,6 +85,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_4
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    The dictionary ``golds`` contains information about how many gold medals each country won in the 2016 Olympics. But today, Spain won 2 more gold medals. Update ``golds`` to reflect this information.
    ~~~~
@@ -100,6 +108,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_5
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/Dictionarymethods
 
    Create a list of the countries that are in the dictionary ``golds``, and assign that list to the variable name ``countries``. Do not hard code this.
    ~~~~
@@ -121,6 +131,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_6
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    Provided is the dictionary, ``medal_count``, which lists countries and their respective medal count at the halfway point in the 2016 Rio Olympics. Using dictionary mechanics, assign the medal count value for ``"Belarus"`` to the variable ``belarus``. Do not hardcode this.
    ~~~~
@@ -142,6 +154,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_7
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    The dictionary ``total_golds`` contains the total number of gold medals that countries have won over the course of history. Use dictionary mechanics to find the number of golds Chile has won, and assign that number to the variable name ``chile_golds``. Do not hard code this!
    ~~~~
@@ -163,6 +177,8 @@ Assessment - Dictionaries
 .. activecode:: ac10_9_8
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/intro-Dictionaries
 
    Provided is a dictionary called ``US_medals`` which has the first 70 metals that the United States has won in 2016, and in which category they have won it in. Using dictionary mechanics, assign the value of the key ``"Fencing"`` to a variable ``fencing_value``. Remember, do not hard code this.
    ~~~~
@@ -180,14 +196,14 @@ Assessment - Dictionaries
 
    myTests().main()
 
-
-
 Assessment - Dictionary Accumulation
 ====================================
 
 .. activecode:: ac10_9_9
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
    The dictionary ``Junior`` shows a schedule for a junior year semester. The key is the course name and the value is the number of credits. Find the total number of credits taken this semester and assign it to the variable ``credits``. Do not hardcode this -- use dictionary accumulation!
    ~~~~
@@ -206,6 +222,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_10
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
    Create a dictionary, ``freq``, that displays each letter in string ``str1`` as the key and its frequency as the value.
    ~~~~
@@ -225,6 +243,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_11
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
    Provided is a string saved to the variable name ``s1``. Create a dictionary named ``counts`` that contains each letter in ``s1`` and the number of times it occurs.
    ~~~~
@@ -264,6 +284,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_13
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
    Create a dictionary called ``wrd_d`` from the string ``sent``, so that the key is a word and the value is how many times you have seen that word. Don't worry about punctuation or capitalization in this problem.
    ~~~~
@@ -284,6 +306,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_14
    :language: python3
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingtheBestKey
 
    Create the dictionary ``characters`` that shows each character from the string ``sally`` and its frequency. Then, find the most frequent letter based on the dictionary. Assign this letter to the variable ``best_char``.
    ~~~~
@@ -328,6 +352,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_16
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
    Create a dictionary named ``letter_counts`` that contains each letter and the number of times it occurs in ``string1``. **Challenge:** Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
    ~~~~
@@ -356,6 +382,8 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_17
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingtheBestKey
 
    Create a dictionary called ``low_d`` that keeps track of all the characters in the string ``p`` and notes how many times each character was seen. Make sure that there are no repeats of characters as keys, such that "T" and "t" are both seen as a "t" for example.
    ~~~~
@@ -374,4 +402,3 @@ Assessment - Dictionary Accumulation
 
 
    myTests().main()
-

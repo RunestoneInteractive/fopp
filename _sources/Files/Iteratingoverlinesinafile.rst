@@ -43,14 +43,14 @@ construct a simple sentence.
     olypmicsfile = open("olypmics.txt","r")
 
     for aline in olypmicsfile.readlines():
-        values = aline.split(',')
+        values = aline.split(",")
         print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
     olypmicsfile.close()
 
 To make the code a little simpler, and to allow for more efficient processing, Python provides a built-in way to 
 iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a 
-little more comfortable with python. But this idiom is preferred by Python programmers, so you should be prepared 
+little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared 
 to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.
 
 .. activecode:: ac9_5_2
@@ -58,7 +58,7 @@ to read it. And when you start dealing with big files, you may notice the effici
     olypmicsfile = open("olypmics.txt","r")
 
     for aline in olypmicsfile:
-        values = aline.split(',')
+        values = aline.split(",")
         print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
     olypmicsfile.close()
@@ -107,9 +107,12 @@ to read it. And when you start dealing with big files, you may notice the effici
     Nervous anxious jittery jumpy tense uneasy apprehensive
     </pre>
 
-1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
-
 .. activecode:: ac9_5_3
+   :available_files: emotion_words.txt
+   :practice: T
+
+   1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
+   ~~~~
 
    =====
 

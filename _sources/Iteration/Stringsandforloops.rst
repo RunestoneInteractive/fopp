@@ -39,6 +39,7 @@ processes the characters in a string or items in a sequence one at a time from l
    :feedback_b: The blank is part of the sequence.
    :feedback_c: Yes, there are 12 characters, including the blank.
    :feedback_d: The for statement can iterate over a sequence item by item.
+   :practice: T
 
    How many times is the word HELLO printed by the following statements?
    
@@ -58,6 +59,7 @@ processes the characters in a string or items in a sequence one at a time from l
    :feedback_b: Yes, The blank is part of the sequence returned by slice.
    :feedback_c: Check the result of s[3:8]. It does not include the item at index 8.
    :feedback_d: Slice returns a sequence.
+   :practice: T
 
    How many times is the word HELLO printed by the following statements?
    

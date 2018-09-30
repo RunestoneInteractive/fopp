@@ -79,6 +79,7 @@ We can use this for any numerical value that we want to sort, however this will 
       :feedback_c: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
       :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
       :correct: a
+      :practice: T
 
       What will the sorted function sort by?
 
@@ -104,6 +105,7 @@ We can use this for any numerical value that we want to sort, however this will 
       :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort. 
       :feedback_e: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
       :correct: a
+      :practice: T
 
       What how will the following data be sorted?
 

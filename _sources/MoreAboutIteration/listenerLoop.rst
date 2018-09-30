@@ -14,6 +14,8 @@
 .. index::
     single: sentinel value
     single: value; sentinel
+    single: validation
+    single: input; validating
 
 The Listener Loop
 =================
@@ -122,10 +124,6 @@ There are still a few problems with this program.
   division by zero and tell the user that you can't compute an average without data.
 * This program doesn't display the amounts to two decimal places. You'll be introduced to that in another
   chapter.
-
-.. index::
-    single: validation
-    single: input; validating
 
 Validating Input
 ~~~~~~~~~~~~~~~~~~~

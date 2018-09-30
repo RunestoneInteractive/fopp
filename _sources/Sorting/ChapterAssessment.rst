@@ -18,6 +18,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/Optionalkeyparameter
 
    Sort the following string alphabetically, **from z to a**, and assign it to the variable ``sorted_letters``.
    ~~~~
@@ -38,6 +39,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/Optionalreverseparameter
 
    Sort the list below, ``animals``, into alphabetical order, a-z. Save the new list as ``animals_sorted``.
    ~~~~
@@ -60,6 +62,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/SortingaDictionary
 
    The dictionary, ``medals``, shows the medal count for six countries during the Rio Olympics. Sort the country names so they appear alphabetically. Save this list to the variable ``alphabetical``.
    ~~~~
@@ -81,6 +84,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/SortingaDictionary
 
    Given the same dictionary, ``medals``, now sort by the medal count. Save the three countries with the highest medal count to the list, ``top_three``.
    ~~~~
@@ -102,6 +106,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/SortingaDictionary
 
    We have provided the dictionary ``groceries``. You should return a list of its keys, but they should be sorted by their values, from highest to lowest. Save the new list as ``most_needed``.
    ~~~~
@@ -124,6 +129,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/Optionalkeyparameter
 
    Create a function called ``last_four`` that takes in an ID number and returns the last four digits. For example, the number 17573005 should return 3005. Then, use this function to sort the list of ids stored in the variable, ``ids``, from lowest to highest. Save this sorted list in the variable, ``sorted_ids``. Hint: Remember that only strings can be indexed, so conversions may be needed.
    ~~~~
@@ -148,6 +154,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/Optionalkeyparameter
 
    Sort the list ``ids`` by the last four digits of each id. Do this using lambda and not using a defined function. Save this sorted list in the variable ``sorted_id``.
    ~~~~
@@ -171,6 +178,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sorting/Optionalkeyparameter
 
    Sort the following list by each element's second letter a to z. Do so by using lambda. Assign the resulting value to the variable ``lambda_sort``.
    ~~~~

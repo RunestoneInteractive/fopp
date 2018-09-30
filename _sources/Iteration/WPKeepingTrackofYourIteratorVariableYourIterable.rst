@@ -32,7 +32,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, Python can iterate over this type.
    :correct: b
    :practice: T
-   :topics: 
 
    What is the type of your iterable?
 
@@ -56,7 +55,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, Python can iterate over this type.
    :correct: a
    :practice: T
-   :topics: 
 
    What is the type of your iterable?
 
@@ -79,7 +77,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Yes, Python is unable to iterate over integers and floats.
    :correct: e
    :practice: T
-   :topics: 
 
    What is the type of your iterable?
 
@@ -103,7 +100,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, Python can iterate over this type.
    :correct: c
    :practice: T
-   :topics: 
 
    What is the type of your iterable?
 
@@ -112,12 +108,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
        t = ("couch", "chair", "washer", "dryer", "table")
        for z in t:
            print(z)
-
-
-
-
-
-
 
 
 .. mchoice:: question6_100_5
@@ -132,7 +122,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_d: 
    :correct: a
    :practice: T
-   :topics: 
 
    What is the type of your iterable?
 
@@ -141,11 +130,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
        t = "couch"
        for z in t:
            print(z)
-
-
-
-
-
 
 
 
@@ -162,7 +146,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, the for loop is iterating over an iterable object.
    :correct: a
    :practice: T
-   :topics: 
 
    What’s the type of your iterator variable? 
 
@@ -186,7 +169,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, the for loop is iterating over an iterable object.
    :correct: d
    :practice: T
-   :topics: 
 
    What’s the type of your iterator variable in the first iteration? 
 
@@ -210,7 +192,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, the for loop is iterating over an iterable object.
    :correct: a
    :practice: T
-   :topics: 
 
    What’s the type of your iterator variable in the second iteration? 
 
@@ -233,7 +214,6 @@ The iterator variable is the variable which stores a portion of the iterable whe
    :feedback_e: Incorrect, the for loop is iterating over an iterable object.
    :correct: a
    :practice: T
-   :topics: 
 
    What’s the type of your iterator variable in the final iteration? 
 
@@ -263,5 +243,3 @@ As you go through the codelens window, you will be asked a set of questions.
 
    for n in range(5):
        print(n)
-
-

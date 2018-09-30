@@ -70,4 +70,3 @@ Try running it. Similar to examples we have seen before, running ``double`` does
    mylst = ['106', 'students', 'are', 'awesome']
    changeit(mylst)
    print(mylst)
-

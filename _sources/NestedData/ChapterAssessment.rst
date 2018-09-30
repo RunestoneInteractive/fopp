@@ -18,6 +18,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/ListswithComplexItems
 
    The variable ``nested`` contains a nested list. Assign 'snake' to the variable ``output`` using indexing.
 
@@ -40,6 +41,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/ListswithComplexItems
 
    Below, a list of lists is provided. Use in and not in tests to create variables with Boolean values. See comments for further instructions.
 
@@ -74,6 +76,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/ListswithComplexItems
 
    Below, we've provided a list of lists. Use in statements to create variables with Boolean values - see the ActiveCode window for further directions.
 
@@ -107,6 +110,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedDictionaries
 
    Provided is a nested data structure. Follow the instructions in the comments below. Do not hard code.
 
@@ -144,6 +148,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedDictionaries
 
    The variable ``nested_d`` contains a nested dictionary with the gold medal counts for the top four countries in the past three Olympics. Assign the value of Great Britain's gold medal count from the London Olympics to the variable ``london_gold``. Use indexing. Do not hardcode.
 
@@ -167,6 +172,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedDictionaries
 
    Below, we have provided a nested dictionary. Index into the dictionary to create variables that we have listed in the ActiveCode window.
 
@@ -211,8 +217,9 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedIteration
 
-   Given the list, ``nested_d``, save the medal count for the USA from all three Olympics in the dictionary to the list ``US_count``.
+   Given the dictionary, ``nested_d``, save the medal count for the USA from all three Olympics in the dictionary to the list ``US_count``.
 
    ~~~~
 
@@ -237,6 +244,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedIteration
 
    Iterate through the contents of ``l_of_l`` and assign the third element of sublist to a new list called ``third``.
 
@@ -260,6 +268,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: NestedData/NestedIteration
 
    Given below is a list of lists of athletes. Create a list, ``t``, that saves only the athlete's name if it contains the letter "t". If it does not contain the letter "t", save the athlete name into list ``other``.
 

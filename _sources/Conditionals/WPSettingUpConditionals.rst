@@ -65,6 +65,5 @@ clause. The program should just continue onward!
    :feedback_d: Yes, this is the most concise way of writing a conditional for that prompt.
    :feedback_e: The else statement is unnecessary.
    :practice: T
-   :topics: 
 
    Select the most appropriate set of conditonal statements for the situation described: You want to keep track of all the words that contain both "t" and "z".

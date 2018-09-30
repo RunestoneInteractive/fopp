@@ -78,3 +78,24 @@ same (try substituting x for ac everywhere in the above code).
          self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()
+
+.. activecode:: ac6_6_6
+   :language: python
+   :autograde: unittest
+   :practice: T
+
+   Assign an empty string to the variable ``output``. Using the ``range`` function, write code to make it so that the variable ``output`` has 35 ``a`` s inside it (like ``"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"``). Hint: use the accumulation pattern!
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testThree(self):
+         self.assertEqual(output, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Testing that output has the correct value.")
+         self.assertNotIn("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+   
