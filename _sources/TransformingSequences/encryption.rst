@@ -8,17 +8,17 @@
     :prefix: encrypt-
     :start: 1
 
-Perhaps one of the earliest uses of computers was in the area of encrypting and decrypting secret messages.  the image below is a picture I took in the Deutsches Museum in germany.  It is a picture of the german enigma machine.  The operator of this machine would type in a message using the keyboard, and the machine would output the encrypted version of the letter.  For example you might type the letter p but the machine would output the letter b.
+Perhaps one of the earliest uses of computers was in the area of encrypting and decrypting secret messages.  the image below is a picture I took in the Deutsches Museum in Germany.  It is a picture of the german enigma machine.  The operator of this machine would type in a message using the keyboard, and the machine would output the encrypted version of the letter.  For example you might type the letter p but the machine would output the letter b.
 
 .. image:: Figures/enigma.jpg
     :height: 200
     :align: center
 
-The engigma machine was used by the Germans during World War II to encrypt orders for the movements of troops and german U-boats.  Alan Turing (one of the fathers of computer science) worked in England and built the Bombe one of the first computers that decrypted the messages encrypted by the Enigma.  The efforts of Turing and his co-workers helped bring the war to and end and saved many thousands of lives.
+The enigma machine was used by the Germans during World War II to encrypt orders for the movements of troops and german U-boats.  Alan Turing (one of the fathers of computer science) worked in England and built the Bombe one of the first computers that decrypted the messages encrypted by the Enigma.  The efforts of Turing and his co-workers helped bring the war to and end and saved many thousands of lives.
 
 .. fillintheblank:: act_enc_fb
 
-    Here is a secret message ``bkfgamdabje`` we call this the ciphertext. Can you decode it and enter the decrypted message which we call the plaintext in the following space:
+    Here is a secret message ``bkfgamdabje`` we call this the ciphertext. Can you decode it using paper and pencil and enter the decrypted message which we call the plaintext in the following space:
 
     - :pythonrocks: Is the correct answer
       :x: Try again, here is a hint:  a == o
@@ -54,7 +54,7 @@ A cipher is a secret or disguised way of writing, and a caesar cipher is one of 
     class MyTests(TestCaseGui):
 
         def testOne(self):
-            self.assertTrue('ciphertext' in self.getEditorText(), "you need a loan_total variable")
+            self.assertTrue('ciphertext' in self.getEditorText(), "you need a ciphertext variable")
             self.assertEqual(ciphertext, 'gurdhvpxoebjasbkwhzcfbiregurynmlqbt')
     
     MyTests().main()
@@ -78,7 +78,7 @@ The problem with the caesar cipher is that there are only 25 possible rotations.
       :x: Try again, You should print out the amount you are rotating along with the string.  You'll need to find one that makes sense.
 
 
-As you have just discovered, the casear cipher is not very secure.  Even in ancient times I'm sure with enough slave scientists working on the problem in parallel they could decrypt just about any message.  We might call the number of characters we shift the **key**.  As we have noted, there are only 26 possible keys!  However, if we agree that we can mix up the alphabet into any with the mixed up alphabet acting as the key then we have a much larger set to choose from and it becomes much much harder to break.  How many different arrangements of the letters in the alphabet are there? If you said 403,291,461,126,605,635,584,000,000 Then you are correct!  That is there are '26 factorial' possible arrangements for the alphabet.  Think of it like this: You have 26 letters to choose from as the first letter.  Then you have 25 letters to choose as the second and 24 letters for the third etc.  So, that is 26*25*24*23...*1  You can even write a loop and have python calculate that if you want.
+As you have just discovered, the Caesar cipher is not very secure.  Even in ancient times I'm sure with enough slave scientists working on the problem in parallel they could decrypt just about any message.  We might call the number of characters we shift the **key**.  As we have noted, there are only 26 possible keys!  However, if we agree that we can mix up the alphabet into any with the mixed up alphabet acting as the key then we have a much larger set to choose from and it becomes much much harder to break.  How many different arrangements of the letters in the alphabet are there? If you said 403,291,461,126,605,635,584,000,000 Then you are correct!  That is there are '26 factorial' possible arrangements for the alphabet.  Think of it like this: You have 26 letters to choose from as the first letter.  Then you have 25 letters to choose as the second and 24 letters for the third etc.  So, that is 26*25*24*23...*1  You can even write a loop and have python calculate that if you want.
 
 Scrambled Key
 -------------
