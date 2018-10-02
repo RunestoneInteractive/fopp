@@ -47,7 +47,6 @@ iterate with a for loop.
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/filter
 
    **1.** Write code to assign to the variable ``filter_testing`` all the elements in lst_check that have a w in them using filter.
    ~~~~
@@ -75,7 +74,6 @@ iterate with a for loop.
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/filter
 
    **2.** Using filter, filter ``lst`` so that it only contains words containing the letter "o". Assign to variable ``lst2``. Do not hardcode this.
    ~~~~

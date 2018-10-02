@@ -149,8 +149,9 @@ the beginning of the iteration process how many times the block of code needs to
    :feedback_b: While it is true that answer will always be positive, answer is not considered in the loop condition.
    :feedback_c: It is perfectly valid to compare n to 0.  Though indirectly, this is what causes the infinite loop.
    :feedback_d: The loop condition must become False for the loop to terminate, but n by itself is not the condition in this case.
+   :practice: T
 
-   The following code contains an infinite loop.  Which is the best explanation for why the loop does not terminate?
+   The following code contains an infinite loop. Which is the best explanation for why the loop does not terminate?
 
    .. code-block:: python
 
@@ -169,11 +170,13 @@ the beginning of the iteration process how many times the block of code needs to
    :feedback_a: Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so either a for-loop or a while-loop will work.
    :feedback_b: As you learned in section 7.2, a while-loop can always be used for anything a for-loop can be used for.
    :feedback_c: Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so this is an example of definite iteration.
+   :practice: T
 
    Which type of loop can be used to perform the following iteration: You choose a positive integer at random and then print the numbers from 1 up to and including the selected integer.
 
 
 .. activecode:: ac14_2_2
+   :practice: T
 
    Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
    ~~~~
@@ -190,6 +193,7 @@ the beginning of the iteration process how many times the block of code needs to
    myTests().main()
 
 .. activecode:: ac14_2_3
+    :practice: T
 
     Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
     ~~~~
@@ -214,6 +218,7 @@ the beginning of the iteration process how many times the block of code needs to
     myTests().main()
 
 .. activecode:: ac14_2_4
+    :practice: T
 
     Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
     ~~~~

@@ -191,6 +191,7 @@ There's one other useful feature. The exception code can access a variable that 
    :feedback_d: It will print the fraction for three values of i, and then one error message.
    :feedback_e: When i=3, it will get a run-time error, and execution stops after that.
    :correct: d
+   :practice: T
 
    How many lines will print out when the following code is executed?
    
@@ -202,10 +203,12 @@ There's one other useful feature. The exception code can access a variable that 
       except Exception, error_inst:
           print("Got an error", error_inst)
 
-5. Below, we have provided a list of tuples that consist of student names, final exam scores, and whether or not they will pass the class. For some students, the tuple does not have a third element because it is unknown whether or not they will pass. Currently, the for loop does not work. Add a try/except clause so the code runs without an error - if there is no third element in the tuple, no changes should be made to the dictionary.
-
 .. activecode:: ee_exceptions_012
    :tags: Exceptions/intro-exceptions.rst
+   :practice: T
+
+   5. Below, we have provided a list of tuples that consist of student names, final exam scores, and whether or not they will pass the class. For some students, the tuple does not have a third element because it is unknown whether or not they will pass. Currently, the for loop does not work. Add a try/except clause so the code runs without an error - if there is no third element in the tuple, no changes should be made to the dictionary.
+   ~~~~
 
    students = [('Timmy', 95, 'Will pass'), ('Martha', 70), ('Betty', 82, 'Will pass'), ('Stewart', 50, 'Will not pass'), ('Ashley', 68), ('Natalie', 99, 'Will pass'), ('Archie', 71), ('Carl', 45, 'Will not pass')]
 
@@ -227,10 +230,12 @@ There's one other useful feature. The exception code can access a variable that 
 
    myTests().main()
 
-6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four. 
-
 .. activecode:: ee_exceptions_022
    :tags: Exceptions/intro-exceptions.rst
+   :practice: T
+
+   6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four. 
+   ~~~~
 
    nums = [5, 9, '4', 3, 2, 1, 6, 5, '7', 4, 3, 2, 6, 7, 8, '0', 3, 4, 0, 6, 5, '3', 5, 6, 7, 8, '3', '1', 5, 6, 7, 9, 3, 2, 5, 6, '9', 2, 3, 4, 5, 1]
 

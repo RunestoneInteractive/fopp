@@ -55,6 +55,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **1.** Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
    ~~~~
@@ -74,6 +75,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **2.** Define a function called ``info`` with the following required parameters: ``name``, ``age``, ``birth_year``, ``year_in_college``, and ``hometown``. The function should return a tuple that contains all the inputted information.
    ~~~~

@@ -88,6 +88,7 @@ between print and return. Keep working at it until it makes sense to you!
    :feedback_c: First square 2, then add 3.
    :feedback_d: 3 is added to the result of squaring 2
    :feedback_e: When square is called, x is bound to the parameter value that is passed in, 2.
+   :practice: T
 
    What will the following code output?
 
@@ -116,6 +117,7 @@ between print and return. Keep working at it until it makes sense to you!
    :feedback_c: That's h(2), but it is passed to g.
    :feedback_d: h(2) returns 7, so y is bound to 7 when g is invoked.
    :feedback_e: Ah, but you can nest function calls.
+   :practice: T
 
    What will the following code output?
    

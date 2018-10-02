@@ -63,6 +63,7 @@ To write a **unit test**, we must know the correct result when calling the funct
    :feedback_a: A message is printed out, but the program does not stop executing
    :feedback_b: A message is printed out, but the program does not stop executing
    :feedback_c: A message is printed out, but the program does not stop executing
+   :practice: T
 
    When ``test.testEqual()`` is passed two values that are not the same, it generates an error and stops execution of the program.
  
@@ -72,6 +73,7 @@ To write a **unit test**, we must know the correct result when calling the funct
    :correct: b
    :feedback_a: You might not notice the error, if the code just produces a wrong output rather generating an error. And it may be difficult to figure out the original cause of an error when you do get one.
    :feedback_b: Test cases let you test some pieces of code as you write them, rather than waiting for problems to show themselves later.
+   :practice: T
 
    Test cases are a waste of time, because the python interpreter will give an error
    message when the program runs incorrectly, and that's all you need for debugging.
@@ -84,6 +86,7 @@ To write a **unit test**, we must know the correct result when calling the funct
     :feedback_a: blanked only takes two inputs; this provides three inputs to the blanked function
     :feedback_b: The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word
     :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
+    :practice: T
 
     Which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
 

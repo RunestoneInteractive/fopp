@@ -93,6 +93,7 @@ algorithmically, you will likely get random behavior each time you execute.
    :feedback_b: This will generate a number between 1 and 100, but does not include 100.  The highest value generated will be 99.
    :feedback_c: This will generate a number between 0 and 100.  The lowest value generated is 0.  The highest value generated will be 100.
    :feedback_d: This will generate a number between 0 and 100, but does not include 100.  The lowest value generated is 0 and the highest value generated will be 99.
+   :practice: T
 
    The correct code to generate a random number between 1 and 100 (inclusive) is:
 

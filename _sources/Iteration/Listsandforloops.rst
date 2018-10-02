@@ -114,6 +114,7 @@ statement, ``wn.exitonclick()``.
    :feedback_b: Yes, there are nine elements in the list so the for loop will iterate nine times.
    :feedback_c: Iteration by item will process once for each item in the sequence. Each string is viewed as a single item, even if you are able to iterate over a string itself.
    :feedback_d: The for statement can iterate over a sequence item by item.
+   :practice: T
 
    How many times will the for loop iterate in the following statements?
    

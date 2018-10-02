@@ -130,6 +130,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :feedback_b: A function needs to specify its parameters in its header. If there are no paramters, put () after the function name.
    :feedback_c: A function definition needs to include the keyword def.
    :feedback_d: A function definition header must end in a colon (:).
+   :practice: T
 
    Which of the following is a valid function header (first line of a function definition)?
 
@@ -162,7 +163,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :feedback_a: i is a variable used inside of the function, but not a parameter, which is passed in to the function.
    :feedback_b: x is only one of the parameters to this function.
    :feedback_c: Yes, the function specifies two parameters: x and y.
-   :feedback_d: the parameters include only those variables whose values that the function expects to receive as input.  They are specified in the header of the function.
+   :feedback_d: the parameters include only those variables whose values that the function expects to receive as input. They are specified in the header of the function.
 
    What are the parameters of the following function?
 
@@ -202,7 +203,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_b: False
    :correct: a
    :feedback_a: Yes, you can call a function multiple times by putting the call in a loop.
-   :feedback_b: One of the purposes of a function is to allow you to call it more than once.   Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.
+   :feedback_b: One of the purposes of a function is to allow you to call it more than once. Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.
 
    True or false: A function can be called several times by placing a function call in the body of a for loop.
 
@@ -216,6 +217,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :feedback_b: "Goodbye" is longer than "Hello"
    :feedback_c: s1 is a variable name; its value would print out, not the variable name.
    :feedback_d: s2 is a variable name; its value would print out, not the variable name.
+   :practice: T
 
    What output will the following code produce?
    

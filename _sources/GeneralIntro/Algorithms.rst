@@ -35,5 +35,3 @@ These programs are written in **programming languages**.
    :feedback_d: Programmers sometimes use a special notation to illustrate or document an algorithm, but this is not the definition of an algorithm.
 
    An algorithm is:
-
-

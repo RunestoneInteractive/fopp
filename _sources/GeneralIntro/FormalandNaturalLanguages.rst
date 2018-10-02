@@ -135,5 +135,3 @@ natural languages, can make a big difference in a formal language.
    :feedback_b: It usually takes longer to read a program because the structure is as important as the content and must be interpreted in smaller pieces for understanding.
 
    True or False:  Reading a program is like reading other kinds of text.
-
-

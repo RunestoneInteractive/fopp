@@ -59,4 +59,3 @@ At the end of this chapter, you should be able to:
 * define functions with appropriate names for formal parameter
 * avoid the use of global variables in function definitions by creating formal parameters for all values that are needed
 * identify whether a function has any side effects
-

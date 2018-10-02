@@ -107,6 +107,7 @@ is looking for). Remember that an error occurs if the argument is not in the str
    :feedback_c: Remember that index returns the left most occurance of the argument.
    :feedback_d: Remember that index returns the left most occurance of the argument.
    :feedback_e: There is at least one 'we' in the string assigned to qu.
+   :practice: T
 
    What will be stored in the variable ty below?
 
@@ -125,6 +126,7 @@ is looking for). Remember that an error occurs if the argument is not in the str
    :feedback_b: Yes, there is a difference between "we" and "We" which means there are only two in the string.
    :feedback_c: there is a difference between "we" and "We".
    :feedback_d: There is no error in the code.
+   :practice: T
 
    What will be stored in the variable ty below?
 
@@ -141,6 +143,7 @@ is looking for). Remember that an error occurs if the argument is not in the str
    :feedback_a: No, the first element is 'bathroom', not 'garden'.
    :feedback_b: Though there is no 'garden' in the list, we do not get back -1 when we use index. Instead, we get an error.
    :feedback_c: Yes, there is no 'garden' in the list, so we get back an error.
+   :practice: T
 
    What will be stored in the variable ht below?
 

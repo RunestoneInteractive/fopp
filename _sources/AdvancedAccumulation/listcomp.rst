@@ -94,7 +94,6 @@ You can also combine ``map`` and ``filter`` operations by chaining them together
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/listcomp
 
    **2.** The for loop below produces a list of numbers greater than 10. Below the given code, use list comprehension to accomplish the same thing. Assign it the the variable ``lst2``. Only one line of code is needed.
    ~~~~
@@ -126,7 +125,6 @@ You can also combine ``map`` and ``filter`` operations by chaining them together
    :autograde: unittest
    :chatcodes:
    :practice: T
-   :topics: AdvancedAccumulation/listcomp
 
    **3.** Write code to assign to the variable ``compri`` all the values of the key name in the dictionary ``tester``. Do this using list comprehension.
    ~~~~

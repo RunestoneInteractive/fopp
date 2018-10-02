@@ -11,6 +11,8 @@ Chapter Assessment
 ==================
 
 .. activecode:: ac_ch13_01
+   :practice: T
+   :topics: Classes/ImprovingourConstructor.rst
    :tags: Classes/ImprovingourConstructor.rst
 
    Define a class called Bike that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, ``color`` and ``price``. Assign to the variable ``testOne`` an instance of ``Bike`` whose color is **blue** and whose price is **89.99**. Assign to the variable ``testTwo`` an instance of Bike whose color is **purple** and whose price is **25.0**. 
@@ -34,6 +36,8 @@ Chapter Assessment
    myTests().main()
 
 .. activecode:: ac_ch13_021
+   :practice: T
+   :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst
 
    Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string reprsenting a color, and a number representing a quantity of apples. The constructor should initialize 2 instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by 1 each time it is invoked. You should also write a string method for this class that returns a string of the format: **A basket of QUANTITY# COLOR apples.** e.g. *A basket of 4 red apples.* or *A basket of 50 blue apples.* (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
@@ -61,6 +65,8 @@ Chapter Assessment
 
 
 .. activecode:: ac_ch13_03
+   :practice: T
+   :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/AddingOtherMethodstoourClass.rst, Classes/ImprovingourConstructor.rst, Classes/ConvertinganObjecttoaString.rst
 
    Define a class called ``Bank`` that accepts the name you want associated with your bank account in a string, and a float that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``Bank``, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with ``"Bob"`` as the name and ``100.0`` as the amount. Save this to the variable ``t1``.

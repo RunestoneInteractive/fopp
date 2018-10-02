@@ -31,6 +31,7 @@ Chapter Assessment
    :feedback_d: Think about the order that the program is executed in, what occurs first?
    :feedback_e: This is correct syntax and no errors will occur.
    :practice: T
+   :topics: Sequences/ConcatenationandRepetition
 
    What will the output be for the following code?
   
@@ -44,6 +45,8 @@ Chapter Assessment
 
 .. activecode:: assess_ac_2_1_1_2
     :language: python
+    :practice: T
+    :topics: Sequences/TheSliceOperator
 
     Write a program that extracts the last three items in the list ``sports`` and assigns it to the variable ``last``. Make sure to write your code so that it works no matter how many items are in the list.
     ~~~~
@@ -65,6 +68,8 @@ Chapter Assessment
 
 .. activecode:: assess_ac_2_1_1_3
     :language: python
+    :practice: T
+    :topics: Sequences/ConcatenationandRepetition
 
     Write code that combines the following variables so that the sentence "You are doing a great job, keep it up!" is assigned to the variable ``message``. Do not edit the values assigned to ``by``, ``az``, ``io``, or ``qy``.
     ~~~~
@@ -102,6 +107,7 @@ Chapter Assessment
    :feedback_c: Yes, python is a zero-index based language and slices are inclusive of the first number and exclusive of the second.
    :feedback_d: Python is a zero-index based language.
    :practice: T
+   :topics: Sequences/TheSliceOperator
 
    What will the output be for the following code?
    
@@ -122,6 +128,7 @@ Chapter Assessment
    :feedback_c: What is happening in the assignment statement for m?
    :feedback_d: Yes, a slice returns a list no matter how large the slice.
    :practice: T
+   :topics: Sequences/TheSliceOperator
 
    What is the type of ``m``?
    
@@ -141,6 +148,7 @@ Chapter Assessment
    :feedback_c: Not quite, look again at what is being extracted.
    :feedback_d: Not quite, is it slicing or accessing an element?
    :practice: T
+   :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
 
    What is the type of ``m``?
    
@@ -160,6 +168,7 @@ Chapter Assessment
    :feedback_c: Not quite, look again at what types are present and what the result of .split() is.
    :feedback_d: Yes, the .split() method returns a list.
    :practice: T
+   :topics: Sequences/SplitandJoin
 
    What is the type of ``x``?
    
@@ -179,6 +188,7 @@ Chapter Assessment
    :feedback_c: Not quite, look again at what types are present and what the result of .split() is.
    :feedback_d: Not quite, think about what .split() and .join() return.
    :practice: T
+   :topics: Sequences/SplitandJoin
 
    What is the type of ``a``?
    
@@ -192,6 +202,8 @@ Chapter Assessment
 
 .. activecode:: assess_ac2_1_1_9
     :language: python
+    :practice: T
+    :topics: Sequences/CountandIndex
 
     Write code to determine how many 9's are in the list ``nums`` and assign that value to the variable ``how_many``. Do not use a for loop to do this.
     ~~~~
@@ -212,6 +224,8 @@ Chapter Assessment
 
 .. activecode:: assess_ac2_1_1_10
     :language: python
+    :practice: T
+    :topics: Sequences/CountandIndex
 
     Write code to get rid of the the second 8 so that here are only two 8's in the list nums. 
     ~~~~
@@ -233,6 +247,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
    
    Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
    ~~~~
@@ -253,6 +268,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sequences/Length
    
    Assign the number of elements in ``lst`` to the variable ``num_lst``.
    ~~~~
@@ -273,6 +289,7 @@ Chapter Assessment
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: Sequences/SplitandJoin
 
    Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
    ~~~~
