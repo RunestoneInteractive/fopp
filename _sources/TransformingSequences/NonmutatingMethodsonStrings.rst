@@ -295,5 +295,3 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    
        v = 2.34567
        print('{:.1f} {:.2f} {:.7f}'.format(v, v, v))
-
-

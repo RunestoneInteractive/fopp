@@ -23,7 +23,7 @@ Chapter Assessment - List Methods
    :feedback_c: One of the diagrams is correct - look again at what is happening to lst.
    :correct: a
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/MutatingMethods
 
    Which of these is a correct reference diagram following the execution of the following code?
 
@@ -54,7 +54,7 @@ Chapter Assessment - List Methods
    :feedback_d: Yes, index will return the position of the first occurance of an item.
    :correct: d
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/MutatingMethods
 
    Which method would you use to figure out the position of an item in a list?
 
@@ -69,13 +69,15 @@ Chapter Assessment - List Methods
    :feedback_d: remove gets rid of the first occurance of any item that it is told. It does not add an item.
    :correct: c
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/MutatingMethods
 
    Which method best to use when adding an item to the end of a list?
 
 
 .. activecode:: assess_ac4_1_1_4
     :language: python
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to add 'horseback riding' to the third position (english third) in the list ``sports``.
     ~~~~
@@ -95,6 +97,8 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_5
     :language: python
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to take 'London' out of the list ``trav_dest``.
     ~~~~
@@ -114,6 +118,8 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_6
     :language: python
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to add 'Guadalajara' to the end of the list ``trav_dest`` using a list method.
     ~~~~
@@ -135,6 +141,8 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_7
     :language: python
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to rearrage the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
     ~~~~
@@ -154,7 +162,8 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_8
     :language: python
-    :topics: Sequences/ListSlices
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to switch the order of the ``winners`` list so that it is now Z to A. Assign this list to the variable ``z_winners``. 
     ~~~~
@@ -178,6 +187,8 @@ Chapter Assessment - Aliases and References
 **Check your understanding**
 
 .. fillintheblank:: assess_question3_3_1_1
+   :practice: T
+   :topics: TransformingSequences/ObjectsandReferences
 
    What will be the value of ``a`` after the following code has executed?
 
@@ -201,7 +212,7 @@ Chapter Assessment - Aliases and References
    :feedback_b: If the intent was to print the list ['q', 'u'] then aliasing would cause a problem because z also replaces the 'u' with an 'i'.
    :correct: a
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/Aliasing
 
    Could aliasing cause potential confusion in this problem?
 
@@ -220,7 +231,7 @@ Chapter Assessment - Aliases and References
    :feedback_b: These operations on the lists are not likely to cause confusion.
    :correct: b
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/Aliasing
 
    Could aliasing cause potential confusion in this problem?
 
@@ -241,7 +252,7 @@ Chapter Assessment - Aliases and References
    :feedback_b: Since a string is immutable, aliasing won't be as confusing. Beware of using something like item = item + new_item with mutable objects though because it creates a new object. However, when we use += then that doesn't happen.
    :correct: b
    :practice: T
-   :topics:
+   :topics: TransformingSequences/Aliasing
 
    Could aliasing cause potential confusion in this problem?
 
@@ -262,7 +273,7 @@ Chapter Assessment - Aliases and References
    :feedback_d: Yes, the behavior of obj = obj + object_two is different than obj += object_two when obj is a list. The first version makes a new object entirely and reassigns to obj. The second version changes the original object so that the contents of object_two are added to the end of the first.
    :correct: d
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/ObjectsandReferences
 
    Which of these is a correct reference diagram following the execution of the following code?
    
@@ -307,7 +318,7 @@ Chapter Assessment - Split and Join
    :feedback_d: What happens to the spaces in a string when it is split by whitespace?
    :correct: a
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/MutatingMethods
 
    Which of these is a correct reference diagram following the execution of the following code?
 
@@ -341,6 +352,8 @@ Chapter Assessment - Split and Join
 
 .. activecode:: assess_ac_4_1_3_2
     :language: python
+    :practice: T
+    :topics: TransformingSequences/MutatingMethods
 
     Write code to find the postion of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
     ~~~~
@@ -374,6 +387,7 @@ Chapter Assessment - For Loop Mechanics
    :feedback_c: This is a variable inside the for loop. It changes each time but does not accumulate or retain the old expressions that were assigned to it.
    :feedback_d: Yes, this is the accumulator variable. By the end of the program, it will have a full count of how many items are in byzo.
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Which of these is the accumulator variable?
    
@@ -395,6 +409,7 @@ Chapter Assessment - For Loop Mechanics
    :feedback_b: This is the iterator variable. It changes each time but is not the whole sequence itself.
    :feedback_c: This is the accumulator variable. By the end of the program, it will have a full count of how many items are in cawdra.
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    Which of these is the sequence?
    
@@ -414,6 +429,7 @@ Chapter Assessment - For Loop Mechanics
    :feedback_b: This is the sequence that we iterate over.
    :feedback_c: This is the accumulator variable. By the end of the program, it will have the total value of the integers that are in lst.
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    Which of these is the iterator variable?
    
@@ -425,6 +441,8 @@ Chapter Assessment - For Loop Mechanics
         num += item
 
 .. fillintheblank:: assess_question5_1_1_4
+   :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    What is the iterator variable in the following?
 
@@ -446,6 +464,7 @@ Chapter Assessment - For Loop Mechanics
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Currently there is a string called ``str1``. Write code to create a list called ``chars`` which should contain the characters from ``str1``. Each character in ``str1`` should be its own element in the list ``chars``.
    ~~~~
@@ -479,6 +498,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_c: Yes, this will solve the problem.
    :feedback_d: One of the patterns above is a correct way to solve the problem.
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Given that we want to accumulate the total sum of a list of numbers, which of the following accumulator patterns would be appropriate?
    
@@ -522,6 +542,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_d: Yes, this will solve the problem.
    :feedback_e: One of the patterns above is a correct way to solve the problem.
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Given that we want to accumulate the total number of strings in the list, which of the following accumulator patterns would be appropriate?
 
@@ -577,6 +598,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_d: Yes, accum is a good name. It's both short and easy to remember.
    :feedback_e: At least one of the answers above is a good name for an accumulator variable.
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Which of these are good names for an accumulator variable? Select as many as apply.
 
@@ -594,6 +616,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_d: Yes, char can be a good name to use when iterating over a string, because the iterator variable would be assigned a character each time.
    :feedback_e: At least one of the answers above is a good name for an iterator variable.
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Which of these are good names for an iterator variable? Select as many as apply.
 
@@ -611,6 +634,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_d: Yes, names is good, assuming that the for loop is iterating through actual names and not something unrelated to names.
    :feedback_e: At least one of the answers above is a good name for a sequence variable
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Which of these are good names for a sequence variable? Select as many as apply.
 
@@ -627,6 +651,7 @@ Chapter Assessment - Accumulator Pattern
    :feedback_d: Yes, this combination of variable names is the most clear.
    :feedback_e: One of the options above has good names for the scenario.
    :practice: T
+   :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Given the following scenario, what are good names for the accumulator variable, iterator variable, and sequence variable? You are writing code that uses a list of sentences and accumulates the total number of sentences that have the word 'happy' in them.
 
@@ -634,6 +659,7 @@ Chapter Assessment - Accumulator Pattern
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
    ~~~~
@@ -655,6 +681,7 @@ Chapter Assessment - Accumulator Pattern
    :language: python
    :autograde: unittest
    :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
    ~~~~
@@ -670,6 +697,52 @@ Chapter Assessment - Accumulator Pattern
 
    myTests().main()
 
+.. activecode:: assess_ps_02_06
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: TransformingSequences/TheAccumulatorPatternwithLists
+
+    Write code to create a **list of word lengths** for the words in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_words_list``. (You should use the ``len`` function).
+
+    ~~~~
+    original_str = "The quick brown rhino jumped over the extremely lazy fox."
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+           self.assertEqual(num_words_list, map(len, original_str.split()), "Testing whether num_words_list has the correct value")
+           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code. (Don't worry about Actual and Expected Values.)")
+
+    myTests().main()
+
+
+.. activecode:: assess_pc_02_10
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
+
+   Create an empty string and assign it to the variable ``lett``. Then using range, write code such that when your code is run, ``lett`` has 7 b's (``"bbbbbbb"``).
+   ~~~~
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testOne(self):
+         self.assertEqual(lett, "bbbbbbb", "Testing that lett has the correct value." )
+         self.assertNotIn("bbbbbbb", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
 Chapter Assessment - Problem Solving
 ====================================
 
@@ -677,7 +750,7 @@ Chapter Assessment - Problem Solving
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value ``a_scores``.
    ~~~~
@@ -700,7 +773,7 @@ Chapter Assessment - Problem Solving
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a captial letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
    ~~~~
@@ -724,7 +797,7 @@ Chapter Assessment - Problem Solving
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a captial letter, and each element of the acronym should be separated by a ". ". Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO". 
    ~~~~
@@ -748,7 +821,7 @@ Chapter Assessment - Problem Solving
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
    ~~~~
@@ -773,7 +846,7 @@ Chapter Assessment - Problem Solving
    :language: python
    :autograde: unittest
    :practice: T
-   :topics: 
+   :topics: TransformingSequences/NonmutatingMethodsonStrings
 
    Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
    ~~~~

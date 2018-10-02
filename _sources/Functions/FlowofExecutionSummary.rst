@@ -48,6 +48,7 @@ should skip the body of the function until you reach a point where that function
    :feedback_b: What is printed is the output of the square function.  5 is the input to the square function.
    :feedback_c: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
    :feedback_d: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
+   :practice: T
 
    Consider the following Python code. Note that line numbers are included on the left.
 

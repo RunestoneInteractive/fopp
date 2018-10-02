@@ -126,7 +126,6 @@ To start giving you some practice in reading and understanding complicated expre
 
 
 .. parsonsprob:: pp2_10_1
-   :practice: T
 
    Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing `square(x + sub(square(y), 2 *x))`.
 

@@ -41,6 +41,7 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
    :feedback_b: dumps turns a list or dictionary into a json-formatted string
    :feedback_c: .json() invokes the json method, which functions the same as the json.loads and turns a json-formatted string into a list or dictionary
    :correct: b
+   :practice: T
 
    Because we can only write strings into a file, if we wanted to convert a dictionary into a json-formatted string so that we could store it in a file, what would we use?
 
@@ -53,6 +54,7 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
    :feedback_b: dumps (dump to string) turns a list or dictionary into a json-formatted string
    :feedback_c: loads (load from string) turns a json-formatted string into a list or dictionary
    :correct: c
+   :practice: T
 
    Say we had a JSON string in the following format. How would you convert it so that it is a python list?
 

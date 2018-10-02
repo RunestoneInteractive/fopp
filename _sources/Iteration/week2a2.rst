@@ -22,6 +22,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/Stringsandforloops
 
     Write one for loop to print out each character of the string ``my_str`` on a separate line.
     ~~~~
@@ -44,6 +45,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/Listsandforloops
 
     Write one for loop to print out each element of the list ``several_things``. Then, write *another* for loop to print out the TYPE of each element of the list ``several_things``. To complete this problem you should have written two different for loops, each of which iterates over the list ``several_things``, but each of those 2 for loops should have a different result.
     ~~~~
@@ -68,6 +70,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/Listsandforloops
 
     Write code that uses iteration to print out **the length** of each element of the list stored in ``str_list``.
     ~~~~
@@ -98,6 +101,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/TheAccumulatorPattern
 
     Write code to count the number of characters in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_chars``. Do NOT use the ``len`` function to solve the problem (if you use it while you are working on this problem, comment it out afterward!)
     ~~~~
@@ -116,35 +120,11 @@ Chapter Assessment
 
     myTests().main()
 
-
-.. activecode:: assess_ps_02_06
-    :language: python
-    :autograde: unittest
-    :practice: T
-
-    Write code to create a **list of word lengths** for the words in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_words_list``. (You should use the ``len`` function).
-
-    ~~~~
-    original_str = "The quick brown rhino jumped over the extremely lazy fox."
-
-
-    =====
-
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-           self.assertEqual(num_words_list, map(len, original_str.split()), "Testing whether num_words_list has the correct value")
-           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code. (Don't worry about Actual and Expected Values.)")
-
-    myTests().main()
-
-
 .. activecode:: assess_ps_02_07
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/TraversalandtheforLoopByIndex
 
     ``addition_str`` is a string with a list of numbers separated by the ``+`` sign. Write code that uses the accumulation pattern to take the sum of all of the numbers and assigns it to ``sum_val`` (an integer). (You should use the ``.split("+")`` function to split by ``"+"`` and ``int()`` to cast to an integer).
 
@@ -170,6 +150,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
     :practice: T
+    :topics: Iteration/TraversalandtheforLoopByIndex
 
     ``week_temps_f`` is a string with a list of fahrenheit temperatures separated by the ``,`` sign. Write code that uses the accumulation pattern to compute the **average** (sum divided by number of items) and assigns it to ``avg_temp``. Do not hard code your answer (i.e., make your code compute both the sum or the number of items in ``week_temps_f``) (You should use the ``.split(",")`` function to split by ``","`` and ``float()`` to cast to a float).
 
@@ -193,6 +174,8 @@ Chapter Assessment
 .. activecode:: assess_ps_02_09
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Iteration/TraversalandtheforLoopByIndex
 
    Write code to create a list of numbers from 0 to 67 and assign that list to the variable ``nums``. Do not hard code the list.
    ~~~~
@@ -205,24 +188,5 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(nums, range(68), "Testing that nums is a list that contains the correct elements.")
-
-   myTests().main()
-
-.. activecode:: assess_pc_02_10
-   :language: python
-   :autograde: unittest
-
-   Create an empty string and assign it to the variable ``lett``. Then using range, write code such that when your code is run, ``lett`` has 7 b's (``"bbbbbbb"``).
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(lett, "bbbbbbb", "Testing that lett has the correct value." )
-         self.assertNotIn("bbbbbbb", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()

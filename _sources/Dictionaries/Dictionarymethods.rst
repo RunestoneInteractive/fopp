@@ -144,6 +144,7 @@ a key, return 0 (instead of None).
    :correct: a
    :feedback_a: Yes, dog is a key in the dictionary.
    :feedback_b: The in operator returns True if a key is in the dictionary, False otherwise.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -159,6 +160,7 @@ a key, return 0 (instead of None).
    :correct: b
    :feedback_a: 23 is a value in the dictionary, not a key.  
    :feedback_b: Yes, the in operator returns True if a key is in the dictionary, False otherwise.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -174,9 +176,10 @@ a key, return 0 (instead of None).
    :answer_d: 61
    :correct: b
    :feedback_a: Add the values that have keys longer than 3 characters, not those with exactly 3 characters.
-   :feedback_b: Yes, the for statement iterates over the keys.  It adds the values of the keys that have length greater than 3.
-   :feedback_c: This is the accumulator pattern.  Total starts at 0 but then changes as the iteration proceeds.
-   :feedback_d: Not all the values are added together.  The if statement only chooses some of them.
+   :feedback_b: Yes, the for statement iterates over the keys. It adds the values of the keys that have length greater than 3.
+   :feedback_c: This is the accumulator pattern. Total starts at 0 but then changes as the iteration proceeds.
+   :feedback_d: Not all the values are added together. The if statement only chooses some of them.
+   :practice: T
 
    What is printed by the following statements?
    
@@ -192,6 +195,7 @@ a key, return 0 (instead of None).
 .. activecode:: ac10_3_6
    :language: python
    :autograde: unittest
+   :practice: T
 
    **5.** Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
    ~~~~
@@ -212,6 +216,7 @@ a key, return 0 (instead of None).
 .. activecode:: ac10_3_7
    :language: python
    :autograde: unittest
+   :practice: T
 
    **6.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Do not hard code this.
    ~~~~

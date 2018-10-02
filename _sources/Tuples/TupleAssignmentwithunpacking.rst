@@ -254,6 +254,7 @@ variable names right after the word ``for``.
    :language: python
    :autograde: unittest
    :chatcodes:
+   :practice: T
 
    **2.** The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary ``track_medal_counts`` and assign the list to the variable name ``track_events``. Do **NOT** use the .keys() method.
    ~~~~

@@ -114,6 +114,3 @@ their lifetimes expire when the function returns to the caller.
          return z
 
      print(producing(adding(4)))
-
-
-

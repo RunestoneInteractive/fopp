@@ -166,6 +166,8 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac7_14_6
+               :practice: T
+               :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
                Provided is a list of numbers. For each of the numbers in the list, determine whether they are even. If the number is even, add ``True`` to a new list called ``is_even``. If the number is odd, then add ``False``.
@@ -189,6 +191,8 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac7_14_7
+               :practice: T
+               :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
                Provided is a list of numbers. For each of the numbers in the list, determine whether they are odd. If the number is odd, add ``True`` to a new list called ``is_odd``. If the number is even, then add ``False``.
