@@ -56,7 +56,7 @@ Now that you have a grayscale image, try turning it into a black and white image
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("golden_gate.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -79,7 +79,7 @@ Here is another pretty standard filter for photos called "Sepia tone"  It will r
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("golden_gate.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
@@ -101,7 +101,7 @@ And finally here's an activecode place for you to go wild.  Try making everythin
 
     import image
 
-    img = image.Image("luther.jpg")
+    img = image.Image("golden_gate.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
     img.setDelay(1,15)   # setDelay(0) turns off animation
