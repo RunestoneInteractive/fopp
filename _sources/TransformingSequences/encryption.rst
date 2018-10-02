@@ -18,7 +18,7 @@ The enigma machine was used by the Germans during World War II to encrypt orders
 
 .. fillintheblank:: act_enc_fb
 
-    Here is a secret message ``bkfgamdabje`` we call this the ciphertext. Can you decode it using paper and pencil and enter the decrypted message which we call the plaintext in the following space:
+    Here is a secret message ``bkfgamdazje`` we call this the ciphertext. Can you decode it using paper and pencil and enter the decrypted message which we call the plaintext in the following space:
 
     - :pythonrocks: Is the correct answer
       :x: Try again, here is a hint:  a == o
