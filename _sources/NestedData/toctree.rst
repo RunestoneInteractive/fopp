@@ -11,8 +11,9 @@ Nested Data and Nested Iteration
    NestedIteration.rst
    WPStructuringNestedData.rst
    DeepandShallowCopies.rst
+   WPExtractFromNestedData.rst
    Exercises.rst
    ChapterAssessment.rst
-   WPExtractFromNestedData.rst
+
    
    

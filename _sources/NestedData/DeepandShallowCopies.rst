@@ -26,6 +26,8 @@ of the original sublists, the copied version will also change. We can see this h
     original = [['dogs', 'puppies'], ['cats', "kittens"]]
     copied_version = original[:]
     print(copied_version)
+    print(copied_version is original)
+    print(copied_version == original)
     original[0].append(["canines"])
     print(original)
     print("-------- Now look at the copied version -----------")
@@ -49,7 +51,7 @@ This process above works fine when there are only two layers or levels in a nest
 list that has *more* than two levels, then we recommend using the ``copy`` module. In the ``copy`` module there is a method called 
 ``deepcopy`` that will take care of the operation for you.
 
-.. sourcecode:: python
+.. activecode:: ac17_100_3
 
     original = [['canines', ['dogs', 'puppies']], ['felines', ['cats', 'kittens']]]
     deep_version = copy.deepcopy(original)
