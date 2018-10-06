@@ -223,6 +223,7 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: assess_ac2_1_1_10
+    :autograde: unittest
     :language: python
     :practice: T
     :topics: Sequences/CountandIndex
