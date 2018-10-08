@@ -38,14 +38,14 @@ methods and the following session shows them in action.
                                                       newline character. If n is provided as
                                                       a parameter than only n characters
                                                       will be returned if the line is longer
-                                                      than ``n``.
+                                                      than ``n``. **Note** the parameter ``n`` is not supported in the browser version of Python, and in fact is rarely used in practice, you can safely ignore it.
 ``readlines(n)``          ``filevar.readlines()``     Returns a list of strings, each
                                                       representing a single line of the file.
                                                       If n is not provided then all lines of
                                                       the file are returned. If n is provided
                                                       then n characters are read but n is
                                                       rounded up so that an entire line is
-                                                      returned.
+                                                      returned.  **Note** Like ``readline`` ``readlines`` ignores the parameter ``n`` in the browser.
 ======================== =========================== =====================================
 
 
