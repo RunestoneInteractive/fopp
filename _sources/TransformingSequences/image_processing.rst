@@ -73,6 +73,11 @@ Now that you have a grayscale image, try turning it into a black and white image
 
 Here is another pretty standard filter for photos called "Sepia tone"  It will remind you of the old-west photographer style images.  The formula to convert a photo into sepia tone is as follows:
 
+::
+
+    newR = (R × 0.393 + G × 0.769 + B × 0.189)
+    newG = (R × 0.349 + G × 0.686 + B × 0.168)
+    newB = (R × 0.272 + G × 0.534 + B × 0.131)
 
 .. activecode::  act_ip_3
     :nocodelens:
