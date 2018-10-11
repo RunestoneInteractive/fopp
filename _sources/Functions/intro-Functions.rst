@@ -14,8 +14,8 @@
 Introduction to Functions
 =========================
 
-.. youtube:: 4wKtB57J5J4
-    :divid: function_intro
+.. youtube:: KJfuq5KqVkU
+    :divid: new_function_intro
     :height: 315
     :width: 560
     :align: left
