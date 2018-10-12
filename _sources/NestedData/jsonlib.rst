@@ -26,7 +26,7 @@ Consider, for example, some data that we might get from Apple's iTunes, in the J
     :language: python
 
     import json
-    a_string = '\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892'
+    a_string = '\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892}]}'
     d = json.loads(a_string)
     print(type(d))
     print(d.keys())
