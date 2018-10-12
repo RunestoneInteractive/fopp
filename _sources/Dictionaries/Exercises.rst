@@ -39,6 +39,23 @@ Exercises
                del d['apples']
                print('apples' in d)
 
+    .. fillintheblank:: assess_question1_11_11_1
+        :practice: T
+        :topics: Dictionaries/DictionaryLookup
+
+        What would the following code print? 
+
+        .. sourcecode:: python
+
+            d = {'spring': 'autumn', 'autumn': 'fall', 'fall': 'spring'}
+            print d['autumn']
+
+        -   :fall: Good work!
+            :autumn: This is a value when the key is 'spring'.
+            :spring: This ia a value when the key is 'fall'.
+            :.*: Incorrect, try again. 
+
+
 2. Avast, try this one, swabbies!
 
     .. tabbed:: q5
@@ -101,6 +118,24 @@ Exercises
 
                 print(" ".join(psentence))
 
+    .. fillintheblank:: assess_question1_11_11_2
+        :practice: T
+        :topics: Dictionaries/DictionaryLookup
+
+        In order to get the last line to print "success", what should the value *x* (in the last line) be? 
+
+        .. sourcecode:: python
+
+            d = { 'work': 'success', 'success': 'failure', 'failure': 'money', 'time': 'work', 'industry': 'time'}
+            print d[d[x]]
+
+        -   :time: Good Work!
+            :industry: It prints "work".
+            :work: It prints "failure".
+            :success: It prints "money".
+            :.*: Incorrect, try again. 
+
+
 #. (challenge exericse)
 
       .. tabbed:: q2
@@ -137,6 +172,33 @@ Exercises
 
                       print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
 
+.. mchoice:: assess_question1_11_11_3
+    :multiple_answers: 
+    :answer_a: It creates a new copy of <code>d</code>.
+    :answer_b: It creates a new dictionary which swaps the keys and values in <code>d</code>.
+    :answer_c: It throws an error.
+    :answer_d: It creates a new dictionary which maps each of <code>d</code>'s keys to itself. 
+    :answer_e: It creates a new dictionary which maps each of <code>d</code>'s values to itself. 
+    :correct: b
+    :feedback_a: It is not exactly a copy. 
+    :feedback_b: Yes, <code>d[c]</code> gets the value from dictionary <code>d</code>  with key <code>c</code>. In dictionary <code>e</code>, we are putting <code>d[c]</code> as a key and value as <code>c</code>.
+    :feedback_c: It is a valid code. 
+    :feedback_d: The key of dictionary <code>e</code> is different from that of <code>d</code>.
+    :feedback_e: The value of dictionary <code>e</code> is different from that of <code>d</code>.
+    :practice: T
+    :topics: Dictionaries/DictionaryKeyValueAssignment
+
+    What does the following block of code do? 
+
+    .. sourcecode:: python
+
+        d =  {'a': 2, 'b': 3, 'c': 1}
+        e = {}
+        for c in d:
+            e[d[c]] = c
+        print e
+
+    
 .. question:: dict_ex_4
    :number: 4
 
@@ -198,6 +260,32 @@ Exercises
             .. disqus::
                 :shortname: interactivepython
                 :identifier: disqus_de4f21e35d3a41a4a3ac4ac888f78d1a
+
+.. fillintheblank:: assess_question1_11_11_4
+    :practice: T
+    :topics: Dictionaries/KeyValueLookupAssignment
+
+    Consider the following function: 
+
+    .. sourcecode:: python
+
+        alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        values = {}
+        for i in range(len(alphabet)):
+            values[alphabet[i]] = i+1; 
+        answer  = 0
+        for c in s: 
+            answer += values[c]
+        return answer
+    
+    When the ``foo()`` is called with the input "baa", what value does it return? (Write "error" if you think it would raise an error instead.)
+
+    -   :4: Good Work!
+        :error: The code is valid.
+        :.*: Incorrect, try again. (*Hint:* Lookup value of each character of "baa" in ``values``.) 
+
+
+
 
 
 .. datafile:: scarlet3.txt
