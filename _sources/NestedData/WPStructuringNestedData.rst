@@ -28,7 +28,7 @@ For example, let's reconsider this nested iteration, but suppose not all the ite
     for x in nested1:
         print("level1: ")
         for y in x:
-            print("     level2: " + y)
+            print("     level2: {}".format(y))
 
 Now the nested iteration fails.
 
@@ -40,10 +40,10 @@ We can solve this with special casing, a conditional that checks the type.
     nested1 = [1, 2, ['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
     for x in nested1:
         print("level1: ")
-        if type(x) == type([]):
+        if type(x) is list:
             for y in x:
-                print("     level2: " + y)
+                print("     level2: {}".format(y))
         else:
-            print("     level2: " + x)
+            print(x)
 
 You can imagine how many special case if-thens we'd need, and how complicated the code would get, if we had many layers of nesting but not always a consistent structure.
