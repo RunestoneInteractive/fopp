@@ -19,7 +19,7 @@ Chapter Assessment - List Methods
    :answer_b: II.
    :answer_c: Neither is the correct reference diagram.
    :feedback_a: Yes, when we are using the remove method, we are just editing the existing list, not making a new copy.
-   :feedback_b: When we use the remove method, we just edit the existing list. We do not make a new copy that does not include the removed object.
+   :feedback_b: When we use the remove method, we just edit the existing list. We do not make a new copy that does not include the removed object. 
    :feedback_c: One of the diagrams is correct - look again at what is happening to lst.
    :correct: a
    :practice: T
@@ -31,7 +31,7 @@ Chapter Assessment - List Methods
    
     lst = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto']
     lst.remove('pluto')
-    first_three = lst[:2]
+    first_three = lst[:3]
 
    I. 
 

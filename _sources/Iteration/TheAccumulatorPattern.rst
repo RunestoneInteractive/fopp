@@ -67,7 +67,28 @@ We can utilize the range function in this situation as well. Previously, you've 
 turtle. There we used it to iterate a certain number of times. We can do more than that though. The ``range`` function 
 takes at least one input - which should be an integer - and returns a list as long as your input. While you can provide 
 two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but 
-not include - the input.
+not include - the input. Here are the examples: 
+
+.. activecode:: ac6_8_10
+
+    print("range(5): ")
+    for i in range(5):
+        print(i)
+
+    print("range(0,5): ")
+    for i in range(0, 5):
+        print(i)
+
+    # Notice the casting of `range` to the `list`
+    print(list(range(5)))
+    print(list(range(0,5)))
+
+    # Note: `range` function is already casted as `list` in the textbook
+    print(range(5))
+
+
+
+
 
 One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we 
 have to cast it as a list using ``list()``. Inside the textbook you'll notice that ``range`` works with or without 
