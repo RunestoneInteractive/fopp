@@ -81,7 +81,8 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
+   AdvancedAccumulation/toctree.rst
+   InternetAPIs/toctree.rst
    
 
 Appendices
