@@ -46,7 +46,7 @@ so on.
 
    L1 = [3, 4, 5]
    L2 = [1, 2, 3]
-   L4 = zip(L1, L2)
+   L4 = list(zip(L1, L2))
    print(L4)
 
 Here's what happens when you loop through the tuples.
@@ -56,7 +56,7 @@ Here's what happens when you loop through the tuples.
    L1 = [3, 4, 5]
    L2 = [1, 2, 3]
    L3 = []
-   L4 = zip(L1, L2)
+   L4 = list(zip(L1, L2))
 
    for (x1, x2) in L4:
        L3.append(x1+x2)
@@ -69,7 +69,7 @@ Or, simplifying and using a list comprehension:
 
    L1 = [3, 4, 5]
    L2 = [1, 2, 3]
-   L3 = [x1 + x2 for (x1, x2) in zip(L1, L2)]
+   L3 = [x1 + x2 for (x1, x2) in list(zip(L1, L2))]
    print(L3)
    
 Or, using ``map`` and not unpacking the tuple (our online environment has trouble with unpacking the tuple in a lambda expression):
