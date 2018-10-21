@@ -63,6 +63,7 @@ Exercises
         .. tab:: Question
 
             .. actex:: ac10_8_2
+               :tie: pirateTranslator 
 
                Here's a table of English to Pirate translations
 
@@ -94,29 +95,6 @@ Exercises
                Write a program that asks the user for a sentence in English and then translates that sentence to Pirate.
                ~~~~
 
-        .. tab:: Answer
-
-            .. activecode:: answer10_8_2
-
-                pirate = {}
-                pirate['sir'] = 'matey'
-                pirate['hotel'] = 'fleabag inn'
-                pirate['student'] = 'swabbie'
-                pirate['boy'] = 'matey'
-                pirate['restaurant'] = 'galley'
-                #and so on
-
-                sentence = input("Please enter a sentence in English")
-
-                psentence = []
-                words = sentence.split()
-                for aword in words:
-                    if aword in pirate:
-                        psentence.append(pirate[aword])
-                    else:
-                        psentence.append(aword)
-
-                print(" ".join(psentence))
 
     .. fillintheblank:: assess_question1_11_11_2
         :practice: T
@@ -207,6 +185,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac10_8_4
+               :tie: findMostCommonCharacter
 
                Write a program that allows the user to enter a string.  It then prints a
                table of the letters of the alphabet in alphabetical order which occur in
@@ -233,27 +212,6 @@ Exercises
                    $
                ~~~~
                
-        .. tab:: Answer
-
-            .. activecode:: answer10_8_4
-
-                x = input("Enter a sentence")
-
-                x = x.lower()   # convert to all lowercase
-
-                alphabet = 'abcdefghijklmnopqrstuvwxyz'
-
-                letter_count = {} # empty dictionary
-                for char in x:
-                    if char in alphabet: # ignore any punctuation, numbers, etc
-                        if char in letter_count:
-                            letter_count[char] = letter_count[char] + 1
-                        else:
-                            letter_count[char] = 1
-
-                keys = letter_count.keys()
-                for char in sorted(keys):
-                    print(char, letter_count[char])
 
         .. tab:: Discussion
 
