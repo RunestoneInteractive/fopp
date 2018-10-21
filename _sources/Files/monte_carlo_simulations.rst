@@ -8,7 +8,7 @@ In this project we are going to investigate the Monte-Carlo simulation, named af
 We will do three simulations in this project.  The first to help us calculate the value of pi. The second to predict the price of a stock, and the third to explore the "Monty Hall Paradox"
 
 Approximating Pi
-================
+----------------
 
 As you may recall from trigonometry pi is an irrational number with a decimal that goes on forever without repeating.  There is no simple fraction that precisely equals pi, and there are many different formulas and techniques for `approximating the value of pi <https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Practical_approximations>`_ such as the Leibniz formula:
 
@@ -18,7 +18,7 @@ As you may recall from trigonometry pi is an irrational number with a decimal th
 
 While calculating infinite sums might be fun, and Python can certainly handle it, The Monte Carlo simulation is definitely more fun and a lot more intuitive to understand.
 
-Suppose you are throwing darts at a dartboard.  Many of the darts are going to hit the board and some are going to miss.  We are interested in exploring the ratio of the number of darts that hit the dartboard to the overall number of darts you throw:  :math:`darts_on_board / total_darts`.  Not too bad so far, but how do we get from here to a value for pi?
+Suppose you are throwing darts at a dartboard.  Many of the darts are going to hit the board and some are going to miss.  We are interested in exploring the ratio of the number of darts that hit the dartboard to the overall number of darts you throw:  :math:`darts\_on\_board / total\_darts`.  Not too bad so far, but how do we get from here to a value for pi?
 
 Let me describe our simulation a little more precisely.
 
@@ -37,10 +37,10 @@ Try to simulate about 1000 dart throws and see what you get.
     :nocodelens:
 
     #your code here
-    # recommmend myturtle.tracer(12,25) for faster animation
+    # recommend myturtle.tracer(12,25) for faster animation
 
 
-Now that you have the animation working you can add in the counting and make a calculation of the value of pi.
+Now that you have the animation working you can add in the counting and make a calculation of the value of pi.  You can speed up the animation considerably with the use of the tracer function.  Ordinarily the turtle draws the picture incrementally every time you perform a drawing operation.  For example a straight line of 100 might be drawn in 10 segments with a small pause between each segment.  The ``tracer(skips,pause)`` function allows you to say only perform every ``skips`` updates and to wait for only ``pause`` milliseconds.  One funny side effect of this is that in a few odd cases your picture might look incomplete so if you use this its a good idea to also call ``update`` at the end of all your drawing to be sure you have the full picture.
 
 
 .. activecode:: act_monte_2
