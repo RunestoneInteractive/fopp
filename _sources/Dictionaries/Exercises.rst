@@ -16,7 +16,9 @@
 Exercises
 =========
 
-#.
+.. question:: ac10_8_1_q
+    :number: 1
+    
     .. tabbed:: q1
 
         .. tab:: Question
@@ -39,24 +41,25 @@ Exercises
                del d['apples']
                print('apples' in d)
 
-    .. fillintheblank:: assess_question1_11_11_1
-        :practice: T
-        :topics: Dictionaries/DictionaryLookup
+.. fillintheblank:: assess_question1_11_11_1
+    :practice: T
+    :topics: Dictionaries/DictionaryLookup
 
-        What would the following code print? 
+    What would the following code print? 
 
-        .. sourcecode:: python
+    .. sourcecode:: python
 
-            d = {'spring': 'autumn', 'autumn': 'fall', 'fall': 'spring'}
-            print d['autumn']
+        d = {'spring': 'autumn', 'autumn': 'fall', 'fall': 'spring'}
+        print d['autumn']
 
-        -   :fall: Good work!
-            :autumn: This is a value when the key is 'spring'.
-            :spring: This ia a value when the key is 'fall'.
-            :.*: Incorrect, try again. 
+    -   :fall: Good work!
+        :autumn: This is a value when the key is 'spring'.
+        :spring: This ia a value when the key is 'fall'.
+        :.*: Incorrect, try again. 
 
 
-2. Avast, try this one, swabbies!
+.. question:: ac10_8_2_q
+    :number: 2
 
     .. tabbed:: q5
 
@@ -65,7 +68,7 @@ Exercises
             .. actex:: ac10_8_2
                :tie: pirateTranslator 
 
-               Here's a table of English to Pirate translations
+               Avast!  Try this one swabbies.  Here's a table of English to Pirate translations
 
                .. table::
         
@@ -96,25 +99,25 @@ Exercises
                ~~~~
 
 
-    .. fillintheblank:: assess_question1_11_11_2
-        :practice: T
-        :topics: Dictionaries/DictionaryLookup
+.. fillintheblank:: assess_question1_11_11_2
+    :practice: T
+    :topics: Dictionaries/DictionaryLookup
 
-        In order to get the last line to print "success", what should the value *x* (in the last line) be? 
+    In order to get the last line to print "success", what should the value *x* (in the last line) be? 
 
-        .. sourcecode:: python
+    .. sourcecode:: python
 
-            d = { 'work': 'success', 'success': 'failure', 'failure': 'money', 'time': 'work', 'industry': 'time'}
-            print d[d[x]]
+        d = { 'work': 'success', 'success': 'failure', 'failure': 'money', 'time': 'work', 'industry': 'time'}
+        print d[d[x]]
 
-        -   :time: Good Work!
-            :industry: It prints "work".
-            :work: It prints "failure".
-            :success: It prints "money".
-            :.*: Incorrect, try again. 
+    -   :time: Good Work!
+        :industry: It prints "work".
+        :work: It prints "failure".
+        :success: It prints "money".
+        :.*: Incorrect, try again. 
 
 
-#. (challenge exericse)
+.. question:: ac10_8_3_1
 
       .. tabbed:: q2
 
