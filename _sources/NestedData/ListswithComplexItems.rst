@@ -19,7 +19,7 @@ Introduction: Nested Data and Nested Iteration
 Lists with Complex Items
 ------------------------
 
-The lists we have seen so far have had numbers or strings as items. We've snuck a few more complex items, but without
+The lists we have seen so far have had numbers or strings as items. We've snuck in a few more complex items, but without
 ever explicitly discussing what it meant to have more complex items.
 
 In fact, the items in a list can be any type of python object. For example, we can have a list of lists.
