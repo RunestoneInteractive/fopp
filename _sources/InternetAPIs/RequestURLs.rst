@@ -6,59 +6,7 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. _generating_request_urls:
 
-Generating Request URLs
-=======================
-
-In a REST API, the client or application program-- the kind of program you will be writing-- makes an HTTP request 
-that includes information about what kind of request it is making. Web sites are free to define whatever format 
-they want for how the request should be formatted. This chapter covers a particularly common and particularly 
-simple format, where the request information is encoded right in the URL. This is convenient, because if something 
-goes wrong, we can debug by copying the URL into a browser and see what happens when it tries to visit that URL.
-
-In this format, the URL has a standard structure:
-
-* the base URL
-* a ``?`` character
-* one or more key-value pairs, formatted as ``key=value`` pairs and separated by the ``&`` character.
-
-For example, consider the URL ``https://itunes.apple.com/search?term=Ann+Arbor&entity=podcast``. 
-Try copying that URL into a browser. It data about podcasts posted from Ann Arbor, MI. Depending on your browser, 
-it may put the contents into a file attachment that you have to open up to see the contents.
-
-Let's pull apart that URL.
-
-* the base URL is ``https://itunes.apple.com/search``
-* a ``?`` character
-* key=value pairs. In this case, there are two pairs. The keys are ``term`` and ``entity``.
-   
-.. image:: Figures/parameterformat.png
-
-All those parts are concatenated together to form the full URL.
-
-.. image:: Figures/urlstructure.png
-
-Note that in the search term Ann Arbor, the space had to be "encoded" as ``+``. More on that below.
-
-Encoding URL Parameters
------------------------
-      
-Here's another URL that has a similar format. ``https://www.google.com/search?q=%22violins+and+guitars%22&tbm=isch``. It's a search on Google for images that match the string "violins and guitars". It's not actually based on a REST 
-API, because the contents that come back are meant to be displayed in a browser. But the URL has the same structure 
-we have been exploring above and introduces the idea of "encoding" URL parameters.
-
-* The base URL is ``https://www.google.com/search``
-* ``?``
-* Two key=value parameters, separated by ``&``
-   * ``q=%22violins+and+guitars%22`` says that the query to search for is "violins and guitars".
-   *  ``tbm=isch`` says to go to the tab for image search
-
-Now why is ``"violins and guitars"`` represented in the URL as ``%22violins+and+guitars%22``? The answer is that 
-some characters are not safe to include, as is, in URLs. For example, a URL path is not allowed to include the double
--quote character. It also can't include a : or / or a space. Whenever we want to include one of those characters in 
-a URL, we have to *encode* them with other characters. A space is encoded as ``+``. ``"`` is encoded as ``%22``. 
-``:`` would be encoded as ``%3A``. And so on.  
 
 Using requests.get to encode URL parameters
 -------------------------------------------
