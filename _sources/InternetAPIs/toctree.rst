@@ -7,11 +7,11 @@ Internet APIs
 
 
    URLintro.rst
+   how_the_Internet_works.rst
    urls.rst
    http.rst
-   fetching_a_page.rst
-   requests_details.rst
    RESTintro.rst
+   fetching_a_page.rst
    RequestURLs.rst
    DebugURLs.rst
    functionswithrestapis.rst
