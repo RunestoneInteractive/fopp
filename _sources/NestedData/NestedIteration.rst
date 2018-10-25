@@ -17,7 +17,7 @@ Nested Iteration
 When you have nested data structures, especially lists and/or dictionaries, you will frequently need nested for loops
 to traverse them.
 
-.. activecode:: ac17_3_1
+.. activecode:: ac17_4_1
 
     nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
     for x in nested1:
@@ -28,7 +28,7 @@ to traverse them.
 Line 3 executes once for each top-level list, three times in all. With each sub-list,
 line 5 executes once for each item in the sub-list. Try stepping through it in Codelens to make sure you understand what the nested iteration does.
 
-.. codelens:: clens17_3_1
+.. codelens:: clens17_4_1
     :python: py3
 
     nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
@@ -39,7 +39,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
 
 **Check Your Understanding**
 
-.. parsonsprob:: pp17_3_1
+.. parsonsprob:: pp17_4_1
 
    Now try rearranging these code fragments to make a function that counts all the *leaf* items in a nested list like nested1 above, the items at the lowest level of nesting (8 of them in nested1).
    -----
@@ -55,7 +55,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    =====
        return count   
 
-.. activecode:: ac17_3_2
+.. activecode:: ac17_4_2
    :language: python
    :autograde: unittest
    :practice: T
@@ -77,7 +77,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
 
    myTests().main() 
 
-.. activecode:: ac17_3_3
+.. activecode:: ac17_4_3
    :language: python
    :autograde: unittest
    :practice: T

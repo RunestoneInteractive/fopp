@@ -22,28 +22,46 @@ Again, python provides a module for doing this. The module is called json. We wi
 
 Consider, for example, some data that we might get from Apple's iTunes, in the JSON format:
 
-``'\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892'``
+.. activecode:: ac17_3_1
+    :language: python
+
+    import json
+    a_string = '\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892}]}'
+    print(a_string)
+    d = json.loads(a_string)
+    print("------")
+    print(type(d))
+    print(d.keys())
+    print(d['resultCount'])
+    # print(a_string['resultCount'])
 
 The other function we will use is ``dumps``. It does the inverse of ``loads``. It takes a python object, typically a dictionary or a list, and returns a string, in JSON format. It has a few other parameters. Two useful parameters are sort_keys and indent. When the value True is passed for the sort_keys parameter, the keys of dictionaries are output in alphabetic order with their values. The indent parameter expects an integer. When it is provided, dumps generates a string suitable for displaying to people, with newlines and indentation for nested lists or dictionaries. For example, the following function uses json.dumps to make a human-readable printout of a nested data structure.
 
-.. sourcecode:: python
+.. activecode:: ac17_3_2
+    :language: python
 
-   def pretty(obj):
-       return json.dumps(obj, sort_keys=True, indent=2)
+    def pretty(obj):
+        return json.dumps(obj, sort_keys=True, indent=2)
+
+    d = {'key1': {'c': True, 'a': 90, 5: 50}, 'key2':{'b': 3, 'c': "yes"}}
+
+    print(d)
+    print('--------')
+    print(pretty(d))
 
 **Check Your Understanding**
 
 .. mchoice:: question17_3_1
-   :answer_a: json.loads(dictionary)
-   :answer_b: json.dumps(dictionary)
-   :answer_c: dictionary.json()
+   :answer_a: json.loads(d)
+   :answer_b: json.dumps(d)
+   :answer_c: d.json()
    :feedback_a: loads turns a json-formatted string into a list or dictionary
    :feedback_b: dumps turns a list or dictionary into a json-formatted string
-   :feedback_c: .json() invokes the json method, which functions the same as the json.loads and turns a json-formatted string into a list or dictionary
+   :feedback_c: .json() tries to invoke the json method, but that method is not defined for dictionaries
    :correct: b
    :practice: T
 
-   Because we can only write strings into a file, if we wanted to convert a dictionary into a json-formatted string so that we could store it in a file, what would we use?
+   Because we can only write strings into a file, if we wanted to convert a dictionary `d` into a json-formatted string so that we could store it in a file, what would we use?
 
 .. mchoice:: question17_3_2
    :multiple_answers:

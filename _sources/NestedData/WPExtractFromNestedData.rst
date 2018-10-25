@@ -18,7 +18,7 @@
 A common problem, especially when dealing with data returned from a web site, is to extract certain elements from deep 
 inside a nested data structure. In principle, there's nothing more difficult about pulling something out from deep inside 
 a nested data structure: with lists, you use [] to index or a for loop to get them them all; with dictionaries, you get 
-the value associated with a particular key using []. But it's easy to get lost in the process and think you've extracted 
+the value associated with a particular key using [] or iterate through all the keys, accessing the value for each. But it's easy to get lost in the process and think you've extracted
 something different than you really have. Because of this, we have created a usable technique to help you during the 
 debugging process. 
 
@@ -31,8 +31,8 @@ following steps:
 
 Understand. Extract. Repeat.
 
-To illustrate this, we will walk through extracting information from the data returned from the Twitter API, which you 
-will work with later in the course. This nested dictionary results from querying Twitter, asking for three tweets 
+To illustrate this, we will walk through extracting information from data formatted in a way that it's return by the Twitter API.
+This nested dictionary results from querying Twitter, asking for three tweets
 matching "University of Michigan". As you'll see, it's quite a daunting data structure, even when printed with nice 
 indentation as it's shown below. 
 
@@ -759,10 +759,11 @@ extracted. There are few options here.
 .. sourcecode:: python
 
    import json
-   json.dumps(res, indent = 2)
+   print(json.dumps(res, indent=2))
 
 2. If printing the entire object gives you something that's too unwieldy, you have other options for making sense of it.
 
+   * Copy and paste it to a site like https://jsoneditoronline.org/ which will let you explore and collapse levels
    * Print the type of the object.
    * If it's a dictionary:
       * print the keys
@@ -774,6 +775,9 @@ extracted. There are few options here.
 .. activecode:: ac300_1_2
    :include: ac300_1_1
 
+   import json
+   print(json.dumps(res, indent=2)[:100])
+   print("-----------")
    print(type(res))
    print(res.keys())
 
@@ -809,25 +813,30 @@ First understand.
 
    print(type(res))
    print(res.keys())
-   res2 = res['statuses'] 
+   res2 = res['statuses']
+   print("----Level 2-----")
    print(type(res2)) # it's a list!
-   print(len(res2))  # looks like one item representing each of the three tweets
+   print(len(res2))
       
 It's a list, with three items, so it's a good guess that each item represents one tweet.
 
 Now extract. Since it's a list, we'll want to work with each item, but to keep things manageable for now, let's use the 
-trick for just looking at the first item.
+trick for just looking at the first item. Later we'll switch to processing all the items.
 
 .. activecode:: ac300_1_5
    :include: ac300_1_1
 
+   import json
    print(type(res))
    print(res.keys())
    res2 = res['statuses'] 
+   print("----Level 2: a list of tweets-----")
    print(type(res2)) # it's a list!
    print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2[:1]:
-       print("working with a tweet, bound to variable res3")
+      print("----Level 3: a tweet----")
+      print(json.dumps(res3, indent=2)[:30])
+
   
 Level 3
 ^^^^^^^
@@ -837,14 +846,18 @@ First understand.
 .. activecode:: ac300_1_6
    :include: ac300_1_1
 
+   import json
    print(type(res))
    print(res.keys())
-   res2 = res['statuses'] 
+   res2 = res['statuses']
+   print("----Level 2: a list of tweets-----")
    print(type(res2)) # it's a list!
    print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2[:1]:
-       print(type(res3)) # it's a dictionary
-       print(res3.keys())
+      print("----Level 3: a tweet----")
+      print(json.dumps(res3, indent=2)[:30])
+      print(type(res3)) # it's a dictionary
+      print(res3.keys())
 
 Then extract. Let's pull out the information about who sent each of the tweets. Probably that's the value associated with 
 the 'user' key.
@@ -852,15 +865,17 @@ the 'user' key.
 .. activecode:: ac300_1_7
    :include: ac300_1_1
 
-   #print(type(res))
-   #print(res.keys())
-   res2 = res['statuses'] 
-   #print(type(res2)) # it's a list!
-   #print(len(res2))  # looks like one item representing each of the three tweets
+   import json
+   print(type(res))
+   print(res.keys())
+   res2 = res['statuses']
+   print("----Level 2: a list of tweets-----")
+   print(type(res2)) # it's a list!
+   print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2[:1]:
-       #print(type(res3)) # it's a dictionary
-       #print(res3.keys())
-       res4 = res3['user']
+      print("----Level 3: a tweet----")
+      print(json.dumps(res3, indent=2)[:30])
+      res4 = res3['user']
       
 Now repeat.
 
@@ -872,53 +887,62 @@ Understand.
 .. activecode:: ac300_1_8
    :include: ac300_1_1
 
-   #print(type(res))
-   #print(res.keys())
-   res2 = res['statuses'] 
-   #print(type(res2)) # it's a list!
-   #print(len(res2))  # looks like one item representing each of the three tweets
+   import json
+   print(type(res))
+   print(res.keys())
+   res2 = res['statuses']
+   print("----Level 2: a list of tweets-----")
+   print(type(res2)) # it's a list!
+   print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2[:1]:
-       #print(type(res3)) # it's a dictionary
-       #print(res3.keys())
-       res4 = res3['user']
-       print(type(res4)) # it's a dictionary
-       print(res4.keys()) 
+      print("----Level 3: a tweet----")
+      print(json.dumps(res3, indent=2)[:30])
+      res4 = res3['user']
+      print("----Level 4: the user who wrote the tweet----")
+      print(type(res4)) # it's a dictionary
+      print(res4.keys())
 
 Extract. Let's print out the user's screen name and when their account was created.
 
 .. activecode:: ac300_1_9
    :include: ac300_1_1
 
-   #print(type(res))
-   #print(res.keys())
-   res2 = res['statuses'] 
-   #print(type(res2)) # it's a list!
-   #print(len(res2))  # looks like one item representing each of the three tweets
+   import json
+   # print(type(res))
+   # print(res.keys())
+   res2 = res['statuses']
+   # print("----Level 2: a list of tweets-----")
+   # print(type(res2)) # it's a list!
+   # print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2[:1]:
-       #print(type(res3)) # it's a dictionary
-       #print(res3.keys())
-       res4 = res3['user']
-       print(type(res4)) # it's a dictionary
-       print(res4.keys()) 
-       print(res4['screen_name'], res4['created_at'])
+      print("----Level 3: a tweet----")
+      # print(json.dumps(res3, indent=2)[:30])
+      res4 = res3['user']
+      print("----Level 4: the user who wrote the tweet----")
+      # print(type(res4)) # it's a dictionary
+      # print(res4.keys())
+      print(res4['screen_name'], res4['created_at'])
 
 Now, we may want to go back have it extract for all the items rather than only the first item in res2.  
 
 .. activecode:: ac300_1_10
    :include: ac300_1_1
 
-   #print(type(res))
-   #print(res.keys())
-   res2 = res['statuses'] 
+   import json
+   # print(type(res))
+   # print(res.keys())
+   res2 = res['statuses']
+   #print("----Level 2: a list of tweets-----")
    #print(type(res2)) # it's a list!
    #print(len(res2))  # looks like one item representing each of the three tweets
    for res3 in res2:
-       #print(type(res3)) # it's a dictionary
-       #print(res3.keys())
-       res4 = res3['user']
-       #print(type(res4)) # it's a dictionary
-       #print(res4.keys())
-       print(res4['screen_name'], res4['created_at'])
+      #print("----Level 3: a tweet----")
+      #print(json.dumps(res3, indent=2)[:30])
+      res4 = res3['user']
+      #print("----Level 4: the user who wrote the tweet----")
+      #print(type(res4)) # it's a dictionary
+      #print(res4.keys())
+      print(res4['screen_name'], res4['created_at'])
 
 Reflections
 ^^^^^^^^^^^
