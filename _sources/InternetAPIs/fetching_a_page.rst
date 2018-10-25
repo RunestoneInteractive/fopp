@@ -43,8 +43,8 @@ Here, the code is only printing the first 1000 characters. It turns out that som
    print(json.dumps(x), indent=2) # pretty print the results
 
 
-More Details of the Requests Module
------------------------------------
+More Details of Response objects
+--------------------------------
 
 Once we run ``requests.get``, a python object is returned. It's an instance of a class called Response that is defined in the requests module. We won't look at it's definition. Think of it as analogous to the Turtle class. Each instance of the class has some attributes; different instances have different values for the same attribute. All instances can also invoke certain methods that are defined for the class.
 
@@ -78,6 +78,53 @@ To summarize, a Response object, in the full implementation of the ``requests`` 
     * .status_code (not available in Runestone implementation)
     * .headers (not available in Runestone implementation)
     * .history (not available in Runestone implementation)
+
+
+Using requests.get to encode URL parameters
+-------------------------------------------
+
+Fortunately, when you want to pass information as a URL parameter value, you don't have to remember all the
+substitutions that are required to encode special characters. Instead, that capability is built into the requests
+module.
+
+The ``get`` function in the requests module takes an optional parameter called ``params``. If a value is specified for
+that parameter, it should be a dictionary. The keys and values in that dictionary are used to append something to
+the URL that is requested from the remote site.
+
+For example, in the following, the base url is https://google.com/search. A dictionary with two parameters is
+passed. Thus, the whole url is that base url, plus a question mark, "?", plus a "q=..." and a "tbm=..." separated
+by an "&". In other words, the final url that is visited is `<https://www.google.com/search?q=%22violins+and+guitars%22&tbm=isch>`_. Actually, because dictionary keys are unordered in python, the
+final url might sometimes have the encoded key-value pairs in the other order: `<https://www.google.com/search?tbm=isch&q=%22violins+and+guitars%22>`_. Fortunately, most websites that accept URL parameters in this
+form will accept the key-value pairs in any order.
+
+.. sourcecode:: python
+
+    d = {'q': 'violins and guitars', 'tbm': 'isch'}
+    results = requests.get("https://google.com/search", params=d)
+    print(results.url)
+
+Below are more examples of urls, outlining the base part of the url - which would be the first argument when
+calling ``request.get()`` - and the parameters - which would be written as a dictionary and passed into the params
+argument when calling ``request.get()``.
+
+.. image:: Figures/urlexamples.png
+
+
+
+.. activecode:: ac200_1_2
+
+   import requests
+
+   # page = requests.get("https://api.datamuse.com/words?rel_rhy=funny")
+   kval_pairs = {'rel_rhy': 'funny'}
+   page = requests.get("https://api.datamuse.com/words", params=kval_pairs)
+   print(page.text[:150]) # print the first 150 characters
+   print(page.url) # print the url that was fetched
+
+.. note::
+
+    If you're ever unsure exactly what url has been produced when calling requests.get and passing a value for params, you can access the .url attribute of the object that is returned. This will be a helpful debugging strategy. You can take that url and plug it into a browser and see what results come back! We will talk about this more in the next section, on debugging calls to ``requests.get()`` when they don't do exactly what you expect.
+
 
 **Check Your Understanding**
 

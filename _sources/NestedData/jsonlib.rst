@@ -40,6 +40,7 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
 .. activecode:: ac17_3_2
     :language: python
 
+    import json
     def pretty(obj):
         return json.dumps(obj, sort_keys=True, indent=2)
 
