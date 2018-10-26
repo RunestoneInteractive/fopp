@@ -28,7 +28,7 @@ If you were to draw a straight line through the points that came as close as pos
 .. image:: Figures/pizza_best_fit.png
 
 
-The orange line called the trendline or the regression line is our best guess at a line that describes the data.  This is important because we can come up with an equation for the line that will allow us to predict the y value (price) for any given x value (diameter).  Linear regression is all about finding the best equation for the line.  
+The orange line called the trend-line or the regression line is our best guess at a line that describes the data.  This is important because we can come up with an equation for the line that will allow us to predict the y value (price) for any given x value (diameter).  Linear regression is all about finding the best equation for the line.  
 
 How do we do that?  There are actually several different ways we can come up with the equation for the line.  We will look at two different solutions, one is a closed form equation that will work for any problem like this in just two dimensions.  The second is a solution that will allow us to generalize the idea of a best fit line to many dimensions!
 
@@ -73,3 +73,33 @@ For two dimensional data there is even a closed form solution to this problem th
 
 .. activecode:: act_pizza_6
 
+
+**Post Project Questions**
+
+.. poll:: LearningZone_12b
+    :option_1: Comfort Zone
+    :option_2: Learning Zone
+    :option_3: Panic Zone
+
+    During this project I was primarily in my...
+
+.. poll:: Time_12b
+    :option_1: Very little time
+    :option_2: A reasonable amount of time
+    :option_3: More time than is reasonable
+
+    Completing this project took...
+
+.. poll:: TaskValue_12b
+    :option_1: Don't seem worth learning
+    :option_2: May be worth learning
+    :option_3: Are definitely worth learning
+
+    Based on my own interests and needs, the things taught in this project...
+
+.. poll:: Expectancy_12b
+    :option_1: Definitely within reach
+    :option_2: Within reach if I try my hardest
+    :option_3: Out of reach no matter how hard I try
+
+    For me to master the things taught in this project feels...
