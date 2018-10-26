@@ -23,4 +23,7 @@ Functions
    Exercises.rst
    ChapterAssessment.rst
    l_systems.rst
+   image_processing_revisited.rst
+   regression_analysis.rst
+   diy_google.rst
    
