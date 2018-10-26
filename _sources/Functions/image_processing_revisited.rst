@@ -38,7 +38,19 @@ Do the smoothing here using our old friend the noisyman.
 
 Do the edge detection here.
 
+
 .. activecode:: act_imfunc_4
+
+Write a function called ``montage`` that takes a background image and a foreground image and a row and column.  The foreground image should be a green-backgrounded image so you can place it anywhere on the background image.  The row and column parameters tell you where to put the foreground image in the background image.
+
+.. raw:: html
+
+    <img src="../_static/ducky.jpg" id="ducky.jpg"><br />
+    ducky.jpg
+
+A fun test for this and your other functions is to write a program that makes a row of small rubber ducks swimming in the bay under the golden gate bridge!
+
+.. activecode:: act_imfunc_5
 
 
 **Post Project Questions**
