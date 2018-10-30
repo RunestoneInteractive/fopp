@@ -94,16 +94,16 @@ Now that we have the deltas and have confirmed a random behavior from day to day
 .. activecode:: act_monte_6
     :nocodelens:
 
- Now we will compute some statistics -- the mean change from day to day as well as the standard deviation of the changes.  We want to know the standard deviation because we will use that to determine how much our stock might go up or down on any given day. You should get a mean of about 0.03 and a standard deviation of 0.548
+Now we will compute some statistics -- the mean change from day to day as well as the standard deviation of the changes.  We want to know the standard deviation because we will use that to determine how much our stock might go up or down on any given day. You should get a mean of about 0.03 and a standard deviation of 0.548
 
 
- **Let's Predict**
+**Let's Predict**
 
- Armed with the information from above we can make predictions for the next 250 days.  We have the real data for the next 250 days below so we can see how accurate we are.  To do this we'll use the ``random.gauss`` function from the random module.  This function returns a random number where the numbers are distributed according to a bell shaped curve, that is most of the numbers will be close the mean and some will be closer to the boundaries defined by our standard deviation.  The gauss function takes two parameters: the mean si first and the standard deviation is next.
+Armed with the information from above we can make predictions for the next 250 days.  We have the real data for the next 250 days below so we can see how accurate we are.  To do this we'll use the ``random.gauss`` function from the random module.  This function returns a random number where the numbers are distributed according to a bell shaped curve, that is most of the numbers will be close the mean and some will be closer to the boundaries defined by our standard deviation.  The gauss function takes two parameters: the mean si first and the standard deviation is next.
 
- To predict the next 250 days we'll take the closing price of our last day as the starting point and then add whatever value we get from our call to ``random.gauss(mean,std)``  This gives us a prediction for the next day. To predict the day after we use the first predicted value as our starting point and then add a random amount to that.  We can repeat this 250 times to get our final prediction.
+To predict the next 250 days we'll take the closing price of our last day as the starting point and then add whatever value we get from our call to ``random.gauss(mean,std)``  This gives us a prediction for the next day. To predict the day after we use the first predicted value as our starting point and then add a random amount to that.  We can repeat this 250 times to get our final prediction.
 
- When professional money managers do this they will run the calculation a few hundred thousand times or even a million times and they will keep track of the worst case -- that is the lowest closing price at the end of the 250 day period, the best case -- the highest closing price at the end of the 250 day period, and the median case.  That is the closing price that falls in the middle of all the possible closing prices.
+When professional money managers do this they will run the calculation a few hundred thousand times or even a million times and they will keep track of the worst case -- that is the lowest closing price at the end of the 250 day period, the best case -- the highest closing price at the end of the 250 day period, and the median case.  That is the closing price that falls in the middle of all the possible closing prices.
 
 You probably don't want to run this a million times in your browser but let us give it a try for 10,000 times.  What is your worst case, best case and average price for the final price.
 
