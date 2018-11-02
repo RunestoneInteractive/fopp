@@ -11,20 +11,42 @@
 Debugging calls to requests.get()
 =================================
 
-The first thing that might go wrong is that you get a runtime error when you call ``requests.get()``. There are two possibilities for what's gone wrong in that case.
+In the Runestone environment
+----------------------------
 
-The first possibility is that the variable dest_url is either not bound to a string, or is bound to a string that isn't a valid URL. For example, it might be bound to the string ``"http://foo.bar/bat"``. foo.bar is not a valid domain name that can be resolved to an ip address, so there's no server to contact. That will yield an error of type requests.exceptions.ConnectionError. Here's a complete error message:
+In our limited implementation of the ``requests`` library for the Runestone environment, if your request fails for any reason, you will still get a Response object. Most likely, you will realize there is an error because you invoke the ``.json()`` method on the Response object and you get an error that refers to an "unexpected token" in the JSON. When that happens, you should print out the values of the ``.text`` and ``.url`` attributes.
+
+1. If it was unable to use your baseurl and params value to create a url string, the ``.url`` attribute will be "Couldn't generate a valid URL" and the ``.text`` attribute will be set to "<html><body><h1>invalid request</h1></body></html>".
+2. If it generated a url string but failed to fetch data from the server described by the url string, the ``.url`` attribute will be set correctly and the ``.text`` attribute will be set to "Failed to retrieve that URL".
+
+In case of the first problem, you should check that the value you passed for the ``params`` parameter is indeed a dictionary and that its keys and values are all strings.
+
+In case of the second problem, you should examine the url to try to figure out what went wrong. In particular, print it, then copy and paste it to a browser window and see what happens.
+
+In a full python environment
+----------------------------
+
+In a full python environment, you will not always get a Response object back from a call to ``requests.get``. What you get back will generally be even more informative than what you get in the Runestone environment.
+
+The first thing that might go wrong is that you get a runtime error when you call ``requests.get(dest_url)``. There are two possibilities for what's gone wrong in that case.
+
+One possibility is that the value provided for the ``params`` parameter is not a valid dictionary or doesn't have key-value pairs that can be converted into text strings suitable for putting into a URL. For example, if you execute ``requests.get("http://github.com", params = [0,1])``, [0,1] is a list rather than a dictionary and the python interpreter generates the error, ``TypeError: 'int' object is not iterable``.
+
+The second possibility is that the variable ``dest_url`` is either not bound to a string, or is bound to a string that isn't a valid URL. For example, it might be bound to the string ``"http://foo.bar/bat"``. foo.bar is not a valid domain name that can be resolved to an ip address, so there's no server to contact. That will yield an error of type requests.exceptions.ConnectionError. Here's a complete error message:
 
 ::
 
     requests.exceptions.ConnectionError: HTTPConnectionPool(host='foo.bar', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)
 
-A second possibility is that the value provided for the params parameter is not a valid dictionary or doesn't have key-value pairs that can be converted into text strings suitable for putting into a URL. For example, if you execute ``requests.get("http://github.com", params = [0,1])``, [0,1] is a list rather than a dictionary and the python interpreter generates the error, ``TypeError: 'int' object is not iterable``.
 
-The best approach is to look at the URL that is produced and eyeball it to see whether it matches what the documentation of the particular API suggests the url should look like. To check the url, the first step is to print it out. Unfortunately, there's no way to force the ``requests.get()`` invocation to print out the url that it has constructed from the parameters that were passed to it. Instead, we've provided a little function ``requestURL()`` for you that takes the same parameters as ``requests.get()``, and returns the url that ``requests.get()`` is generating from those parameters. The function reaches a little into the internals of the requests module, so don't worry about understanding the function if you don't want to. If you do want to, check the documentation of the requests module: Request is a class in the requests module and prepare is a method defined for that class which creates a url.
+
+
+
+The best approach is to look at the URL that is produced, eyeball it, and plug it into a browser to see what happens. Unfortunately, if the call to ``requests.get`` produces an error, you won't get a Response object, so you'll need some other way to see what URL was produced. The function defined below takes the same parameters as ``requests.get`` and returns the URL as a string, without trying to fetch it.
 
 .. sourcecode:: python
 
+    import requests
     def requestURL(baseurl, params = {}):
         # This function accepts a URL path and a params diction as inputs.
         # It calls requests.get() with those inputs,
@@ -33,12 +55,10 @@ The best approach is to look at the URL that is produced and eyeball it to see w
         prepped = req.prepare()
         return prepped.url
 
-    print(params)
     print(requestURL(some_base_url, some_params_dictionary))
 
-If you get a runtime error when you call ``requestURL()``, that means that it can't create a URL at all. Usually, that means that you didn't pass in a string for the baseurl or didn't pass in a dictionary with keys that are strings for the params parameter.
 
-Assuming ``requestURL()`` does return a URL, match up what you see from the printout of the params dictionary to what you see in the URL that was printed out. If you have a sample of a URL from the API documentation, see if the structure of your URL matches what's there. Perhaps you have misspelled one of the API parameter names or you misspelled the base url.
+Assuming ``requestURL()`` returns a URL, match up what you see from the printout of the params dictionary to what you see in the URL that was printed out. If you have a sample of a URL from the API documentation, see if the structure of your URL matches what's there. Perhaps you have misspelled one of the API parameter names or you misspelled the base url.
 
 You can also try cutting and pasting the printed URL into a browser window, to see what error message you get from the website. You can then try changing the URL in the browser and reloading. When you finally get a url that works, you will need to translate the changes you made in the url back into changes to make to your baseurl or params dictionary.
 
@@ -60,43 +80,14 @@ More importantly, you'll want to print out the contents. Sometimes the text that
 
 Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the following url, ``https://www.google.com/search?tbm=isch&q=%22violins+and+guitars%22``. (Don't look at the previous page of the textbook, at least not yet. If you can't figure it out after 15 minutes of trying the approaches on this page, then look back.)
 
-Note that we don't have access to a full version of the requests module in the browser environment. If you would like to work with the full version - which lets you access the status_code, headers, and history attributes - you'll have to try this on your local computer, by creating a file and then executing it with your native python interpreter, or by running it in a Jupyter notebook. 
-
-However, we do have a modified and limited version of the requests module for the textbook which we haven't introduced yet. We have created a ``requestURL`` and ``get`` function for your use on this page and the iTunes page. Though you are not able to use the json module to convert the response to a python object, you can still practice making requests.
-
-Below is our version of the function ``requestURL`` that works without making a call to the full requests module. Try to understand what's going on in this function and test it out!
-
-.. activecode:: ac400_5_1
-
-   def requestURL(baseurl, params = {}):
-       if len(params) == 0:
-           return baseurl
-       complete_url = baseurl + "?"
-       pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
-       complete_url += "&".join(pairs)
-       return complete_url
-
-In this version of requestURL, we first check to see if there are any parameters that need to be added. Some APIs don't need additional parameters. For example, making a request to ``https://events.umich.edu/day/json`` will return a json-formatted string containing information on events at the University of Michigan. If we did not include the conditional, then a ``?`` would be added to the end of that url and it would result in a 400 error. On line five, we iterate through the dictionary assigned to params. We access the value in each key-value pair, convert it to a string, and then replace all spaces with ``+`` signs. Then, we concatenate the key, an equal sign, and the newly formatted value together into one string and add each to a list called ``pairs``. Finally, we join together each item in ``pairs`` with a ``&``, and add that to the end of ``complete_url`` and return that variable at the end of the function.
-
-We have implemented a reduced version of the ``get`` method available in the requests module. This will return a requests object, that has two attributes: text and url.
-
-.. activecode:: ac400_5_2
-    :include: ac400_5_3
-
-    # this is an example of a request to the iTunes API
-    # open up the iTunes API's documentation and try making some requests of your own!
-    obj = get("https://itunes.apple.com/search", params = {"term": "Helen Merrill", 'limit': 10})
-    print(obj)
-    print(obj.url)
-    print(obj.text)
 
 
 **Check your understanding**
 
 .. mchoice:: question400_5_1
    :practice: T
-   :answer_a: look at the .url attribute of the response object
-   :answer_b: look at the first few characters of the .text attribute of the response object
+   :answer_a: look at the .url attribute of the Response object
+   :answer_b: look at the first few characters of the .text attribute of the Response object
    :answer_c: look at the .status attribute of the response object
    :answer_d: look carefully at your code and compare it to the sample code here
    :feedback_a: Checking the url that was generated may be helpful, but first check what the contents of the response are
@@ -108,10 +99,9 @@ We have implemented a reduced version of the ``get`` method available in the req
    If the results you are getting back from a call to ``requests.get()`` are not what you expected, what's the first thing you should do?
 
 .. mchoice:: question400_5_2
-   :practice: T
-   :answer_a: look at the .url attribute of the response object
+   :answer_a: look at the .url attribute of the Response object
    :answer_b: look at the values you passed in to requests.get()
-   :answer_c: invoke the requestURL() function above with the same parameters you used to invoke requests.get()
+   :answer_c: invoke the requestURL() function with the same parameters you used to invoke requests.get()
    :answer_d: look carefully at your code and compare it to the sample code on this page
    :feedback_a: It's a good idea to examine the url that was generated, but you didn't get a response object so you can't get it this way
    :feedback_b: This is a reasonable approach, but it may be easier to figure out what's wrong if you look at the URL that was generated
@@ -119,52 +109,19 @@ We have implemented a reduced version of the ``get`` method available in the req
    :feedback_d: Try to understand the nature of the problem rather than just matching code to a template; you may not always have a template
    :correct: c
 
-   If there is a runtime error and you don't get a response object back from the call to ``requests.get()``, what should you do?
+   In a full python environment, if there is a runtime error and you don't get a Response object back from the call to ``requests.get()``, what should you do?
 
+.. mchoice:: question400_5_3
+   :practice: T
+   :answer_a: look at the .url attribute of the Response object
+   :answer_b: look at the values you passed in to requests.get()
+   :answer_c: invoke the requestURL() function with the same parameters you used to invoke requests.get()
+   :answer_d: look carefully at your code and compare it to the sample code on this page
+   :feedback_a: You didn't get a Response object, because you had a runtime error, so this won't work
+   :feedback_b: Generally, a runtime error when you invoke ``requests.get`` in the Runestone environment is caused by the value of the ``params`` parameter not being a dictionary, or not having only strings as keys and values.
+   :feedback_c: the ``requestURL()`` function won't work in the Runestone environment
+   :feedback_d: Try to understand the nature of the problem rather than just matching code to a template; you may not always have a template
+   :correct: b
 
-.. activecode:: ac400_5_3
-    :hidecode:
+   In the runestone environment, if there is a runtime error and you don't get a Response object back from the call to ``requests.get()``, what should you do?
 
-    from urllib.request import urlopen
-    import json
-
-    class Response:
-
-        def __init__(self, data, url):
-            self.text = data
-            self.url = url
-
-        def json(self):
-            return json.loads(self.text)
-
-        def __str__(self):
-            return "A response object for the following request: {}".format(self.url)
-
-
-    def requestURL(baseurl, params = {}):
-        if len(params) == 0:
-            return baseurl
-        complete_url = baseurl + "?"
-        pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
-        complete_url += "&".join(pairs)
-        return complete_url
-
-    def get(baseurl, params = {}):
-        user_req = requestURL(baseurl, params)
-        data = urlopen(user_req)
-        text_data = data.read().strip()
-        if len(text_data) > 0:
-            user_resp_obj = Response(text_data, user_req)
-            return user_resp_obj
-        else:
-            # Right now I'm returning a string because 
-            # when I have this activecode window included 
-            # in the windows above, it will not pass on the 
-            # exception, and instead say that there is a 
-            # problem in another window. Not sure what the best
-            # way around that is.
-
-
-            return "requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl)
-            #raise Exception("requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl))
-        

@@ -12,9 +12,8 @@ Internet APIs
    http.rst
    RESTintro.rst
    fetching_a_page.rst
-   RequestURLs.rst
+   RESTdocumentation.rst
    DebugURLs.rst
-   functionswithrestapis.rst
    requestsCookbook.rst
    iTunes.rst
    flickr.rst
