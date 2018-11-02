@@ -44,6 +44,7 @@ Chapter Assessment
     print(m)
 
 .. activecode:: assess_ac_2_1_1_2
+    :autograde: unittest
     :language: python
     :practice: T
     :topics: Sequences/TheSliceOperator
@@ -67,6 +68,7 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: assess_ac_2_1_1_3
+    :autograde: unittest
     :language: python
     :practice: T
     :topics: Sequences/ConcatenationandRepetition
@@ -201,6 +203,7 @@ Chapter Assessment
     a = "".join(y)
 
 .. activecode:: assess_ac2_1_1_9
+    :autograde: unittest
     :language: python
     :practice: T
     :topics: Sequences/CountandIndex
@@ -223,6 +226,7 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: assess_ac2_1_1_10
+    :autograde: unittest
     :language: python
     :practice: T
     :topics: Sequences/CountandIndex
