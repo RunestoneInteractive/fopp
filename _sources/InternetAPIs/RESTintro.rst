@@ -26,7 +26,7 @@ We will examine a common pattern used in REST APIs, where there is a base URL th
 .. _generating_request_urls:
 
 URL Structure for REST APIs
-===========================
+---------------------------
 
 In a REST API, the client or application program-- the kind of program you will be writing-- makes an HTTP request
 that includes information about what kind of request it is making. Web sites are free to define whatever format

@@ -21,26 +21,28 @@ Fetching in python with requests.get
 
 You don't need to use a browser to fetch the contents of a page, though.  In Python, there's a module available, called ``requests``. You can use the ``get`` function in the ``requests`` module to fetch the contents of a page.
 
-Here, the code is only printing the first 1000 characters. It turns out that somewhere later on the page there is an ellipsis character (a single character representing an ellipsis ``...``). If we try to print out the whole contents, we get an error. (You'll learn a little bit more about handling unicode characters in another chapter.) For now, if you try this code, just extract the first 1000 characters when printing it out.
-
 .. note::
 
     Because of cross-site scripting limitations, many urls that you might try to access using ``requests.get`` will not be available in the Runestone environment, executing from a browser. However, we have implemented a limited version of the requests module in Runestone and ``requests.get`` will work in Runestone for some sites, especially sites that are designed to return data in the JSON format, sites that provide REST APIs.
 
     For illustration purposes, try visiting `<https://api.datamuse.com/words?rel_rhy=funny>`_ in your browser. It returns data in JSON format, not in HTML. Your browser will display the results, information about some words that rhyme with "funny", but it won't look like a normal web page. Then try running the code below to fetch the same text string in a python program. Try changing "funny" to some other word, both in the browser, and in the code below. You'll see that, either way, you are retrieving the same thing, the datamuse API's response to your request for words that rhyme with some word that you are sending as a query parameter.
 
-.. activecode:: ac200_1_1
+.. activecode:: ac27_1_1
 
    import requests
    import json
 
    page = requests.get("https://api.datamuse.com/words?rel_rhy=funny")
+   print(type(page))
    print(page.text[:150]) # print the first 150 characters
    print(page.url) # print the url that was fetched
+   print("------")
    x = page.json() # turn page.text into a python object
    print(type(x))
+   print("---first item in the list---")
    print(x[0])
-   print(json.dumps(x), indent=2) # pretty print the results
+   print("---the whole list, pretty printed---")
+   print(json.dumps(x, indent=2)) # pretty print the results
 
 
 More Details of Response objects
@@ -72,12 +74,12 @@ The full Requests module provides some additional attributes in the Response obj
 
 To summarize, a Response object, in the full implementation of the ``requests`` module has the following useful attributes that can be accessed in your program:
 
-    * .text
-    * .url
-    * .json()
-    * .status_code (not available in Runestone implementation)
-    * .headers (not available in Runestone implementation)
-    * .history (not available in Runestone implementation)
+* .text
+* .url
+* .json()
+* .status_code (not available in Runestone implementation)
+* .headers (not available in Runestone implementation)
+* .history (not available in Runestone implementation)
 
 
 Using requests.get to encode URL parameters
@@ -99,7 +101,7 @@ form will accept the key-value pairs in any order.
 
 .. sourcecode:: python
 
-    d = {'q': 'violins and guitars', 'tbm': 'isch'}
+    d = {'q': '"violins and guitars"', 'tbm': 'isch'}
     results = requests.get("https://google.com/search", params=d)
     print(results.url)
 
@@ -109,9 +111,9 @@ argument when calling ``request.get()``.
 
 .. image:: Figures/urlexamples.png
 
+Here's an executable sample, using the optional params parameter of ``requests.get``. It gets the same data from the datamus api that we saw previously. Here, however, the full url is built inside the call to ``requests.get``; we can see what url was built by printing it out, on line 5.
 
-
-.. activecode:: ac200_1_2
+.. activecode:: ac27_1_2
 
    import requests
 
@@ -121,14 +123,24 @@ argument when calling ``request.get()``.
    print(page.text[:150]) # print the first 150 characters
    print(page.url) # print the url that was fetched
 
-.. note::
-
-    If you're ever unsure exactly what url has been produced when calling requests.get and passing a value for params, you can access the .url attribute of the object that is returned. This will be a helpful debugging strategy. You can take that url and plug it into a browser and see what results come back! We will talk about this more in the next section, on debugging calls to ``requests.get()`` when they don't do exactly what you expect.
-
-
 **Check Your Understanding**
 
-.. mchoice:: question400_3_1
+.. mchoice:: question27_1_1
+   :practice: T
+   :answer_a: requests.get("http://bar.com/goodstuff", '?", {'greet': 'hi there'}, '&', {'frosted':'no'})
+   :answer_b: requests.get("http://bar.com/", params = {'goodstuff':'?', 'greet':'hi there', 'frosted':'no'})
+   :answer_c: requests.get("http://bar.com/goodstuff", params = ['greet', 'hi', 'there', 'frosted', 'no'])
+   :answer_d: requests.get("http://bar.com/goodstuff", params = {'greet': 'hi there', 'frosted':'no'})
+   :feedback_a: The ? and the & are added automatically.
+   :feedback_b: goodstuff is part of the base url, not the query params
+   :feedback_c: The value of params should be a dictionary, not a list
+   :feedback_d: The ? and & are added automatically, and the space in hi there is automatically encoded as %3A.
+   :correct: d
+
+   How would you request the URL ``http://bar.com/goodstuff?greet=hi+there&frosted=no`` using the requests module?
+
+
+.. mchoice:: question27_1_2
    :multiple_answers:
    :answer_a: resp.json()
    :answer_b: resp.json
@@ -143,7 +155,7 @@ argument when calling ``request.get()``.
    :correct: a,d
    :practice: T
 
-   If ``resp`` is a response object returned by a call to ``requests.get()``, which of the following is a way to extract the contents into a python dictionary or list?
+   If ``resp`` is a Response object returned by a call to ``requests.get()``, which of the following is a way to extract the contents into a python dictionary or list?
 
 
 
