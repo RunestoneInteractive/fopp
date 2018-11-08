@@ -6,6 +6,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: requests-6-
+   :start: 1
 
 Fetching a page
 ===============
@@ -23,7 +26,6 @@ You don't need to use a browser to fetch the contents of a page, though.  In Pyt
 
 .. note::
 
-    Because of cross-site scripting limitations, many urls that you might try to access using ``requests.get`` will not be available in the Runestone environment, executing from a browser. However, we have implemented a limited version of the requests module in Runestone and ``requests.get`` will work in Runestone for some sites, especially sites that are designed to return data in the JSON format, sites that provide REST APIs.
 
     For illustration purposes, try visiting `<https://api.datamuse.com/words?rel_rhy=funny>`_ in your browser. It returns data in JSON format, not in HTML. Your browser will display the results, information about some words that rhyme with "funny", but it won't look like a normal web page. Then try running the code below to fetch the same text string in a python program. Try changing "funny" to some other word, both in the browser, and in the code below. You'll see that, either way, you are retrieving the same thing, the datamuse API's response to your request for words that rhyme with some word that you are sending as a query parameter.
 

@@ -6,6 +6,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: requests-3-
+   :start: 1
+
 Anatomy of URLs
 ===============
 
@@ -36,8 +40,7 @@ For example, consider the url https://github.com/presnick/runestone:
 * /presnick/runestone says to ask the remote server for the page presnick/runestone. It is up to the remote server to decide how to map that to the contents of a file it has access to, or to some content that it generates on the fly.
 
 The url http://blueserver.com/path?k=val is another example that we can consider. The path here a bit different 
-from https://github.com/presnick/runestone because of how we ask for a specific page. Here the path is structured 
-similar to how we assign values of variables.
+from https://github.com/presnick/runestone because it includes what are called "query parameters", the information after the ``?``.
 
 .. image:: Figures/internet_requests.png
 

@@ -6,6 +6,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: requests-9-
+   :start: 1
+
 .. _using_RESTAPIs_chap:
 
 Requests Cookbook
