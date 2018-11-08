@@ -35,7 +35,7 @@ For example, consider the url https://github.com/presnick/runestone:
 
 * https:// says to use the secure http protocol
 
-* github.com says to connect to the server at github.com, which currently maps to the IP address 192.30.252.130. The connection will be made on the default port, 80.
+* github.com says to connect to the server at github.com, which currently maps to the IP address 192.30.252.130. The connection will be made on the default port, which is 443 for https.
 
 * /presnick/runestone says to ask the remote server for the page presnick/runestone. It is up to the remote server to decide how to map that to the contents of a file it has access to, or to some content that it generates on the fly.
 
