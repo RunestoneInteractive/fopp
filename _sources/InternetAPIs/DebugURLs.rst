@@ -6,6 +6,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: requests-8-
+   :start: 1
+
 .. _debug_urls_chap:
 
 Debugging calls to requests.get()
@@ -14,19 +18,20 @@ Debugging calls to requests.get()
 In the Runestone environment
 ----------------------------
 
-In our limited implementation of the ``requests`` library for the Runestone environment, if your request fails for any reason, you will still get a Response object. Most likely, you will realize there is an error because you invoke the ``.json()`` method on the Response object and you get an error that refers to an "unexpected token" in the JSON. When that happens, you should print out the values of the ``.text`` and ``.url`` attributes.
+In our limited implementation of the ``requests`` library for the Runestone environment, if your request fails for any reason, you will still get a Response object. Most likely, you will realize there was a problem because you invoke the ``.json()`` method on the Response object and you get an error that refers to an "unexpected token" in the JSON. When that happens, you should print out the values of the ``.text`` and ``.url`` attributes.
 
 1. If it was unable to use your baseurl and params value to create a url string, the ``.url`` attribute will be "Couldn't generate a valid URL" and the ``.text`` attribute will be set to "<html><body><h1>invalid request</h1></body></html>".
+
+   * In that case, you should check that the value you passed for the ``params`` parameter is indeed a dictionary and that its keys and values are all strings.
+
 2. If it generated a url string but failed to fetch data from the server described by the url string, the ``.url`` attribute will be set correctly and the ``.text`` attribute will be set to "Failed to retrieve that URL".
 
-In case of the first problem, you should check that the value you passed for the ``params`` parameter is indeed a dictionary and that its keys and values are all strings.
-
-In case of the second problem, you should examine the url to try to figure out what went wrong. In particular, print it, then copy and paste it to a browser window and see what happens.
+   * In that case, you should examine the url to try to figure out what went wrong. In particular, print it, then copy and paste it to a browser window and see what happens.
 
 In a full python environment
 ----------------------------
 
-In a full python environment, you will not always get a Response object back from a call to ``requests.get``. What you get back will generally be even more informative than what you get in the Runestone environment.
+In a full python environment, you will not always get a Response object back from a call to ``requests.get``. What you get back will generally be even more informative than what you get in the Runestone environment, but you have to know where to look.
 
 The first thing that might go wrong is that you get a runtime error when you call ``requests.get(dest_url)``. There are two possibilities for what's gone wrong in that case.
 
@@ -79,7 +84,6 @@ More importantly, you'll want to print out the contents. Sometimes the text that
     print(resp.text[:200])
 
 Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the following url, ``https://www.google.com/search?tbm=isch&q=%22violins+and+guitars%22``. (Don't look at the previous page of the textbook, at least not yet. If you can't figure it out after 15 minutes of trying the approaches on this page, then look back.)
-
 
 
 **Check your understanding**

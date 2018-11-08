@@ -12,13 +12,12 @@ Internet APIs
    http.rst
    RESTintro.rst
    fetching_a_page.rst
+   cachingResponses.rst
    RESTdocumentation.rst
    DebugURLs.rst
    requestsCookbook.rst
    iTunes.rst
    flickr.rst
    unicode.rst
-   cachingResponses.rst
-   cachingPattern.rst
 
    

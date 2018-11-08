@@ -6,7 +6,9 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. could get rid of this page
+.. qnum::
+   :prefix: requests-2-
+   :start: 1
 
 The Internet: Behind the Scenes
 ===============================

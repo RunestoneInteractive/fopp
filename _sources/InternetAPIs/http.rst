@@ -6,6 +6,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+.. qnum::
+   :prefix: requests-4-
+   :start: 1
+
 The HTTP protocol
 =================
 
@@ -13,7 +17,7 @@ A protocol specifies the order in which parties will speak and the format of wha
 appropriate responses.
 
 HTTP is the protocol that specifies how web browsers or other programs communicate with web servers. One version of 
-the formal specific, before it was later split into multiple documents, was IETF `RFC 2616 <https://www.ietf.org/rfc/rfc2616.txt>`_. It is 176 pages long! Fortunately, the basics are pretty easy to understand.
+the formal specification, before it was later split into multiple documents, was IETF `RFC 2616 <https://www.ietf.org/rfc/rfc2616.txt>`_. It is 176 pages long! Fortunately, the basics are pretty easy to understand.
 
 * Step 1: the client makes a request to the server.
    * If the request only involves fetching data, the client sends a message of the form ``GET <path>``, where <path> is the path part of the URL   
