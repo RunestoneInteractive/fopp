@@ -246,7 +246,7 @@ Your first task will be to
 
     myTests().main()
 
-.. datafile:: project_cache.txt
+.. datafile:: permanent_cache.txt
 
     {
   "https://tastedive.com/api/similark-249694-JazzComp-89VNLWSG_limit-10_q-Black Panther_type-movies": "{\"Similar\": {\"Info\": [{\"Name\": \"Black Panther\", \"Type\": \"movie\"}], \"Results\": [{\"Name\": \"Avengers: Infinity War\", \"Type\": \"movie\"}, {\"Name\": \"Captain Marvel\", \"Type\": \"movie\"}, {\"Name\": \"Ant-Man And The Wasp\", \"Type\": \"movie\"}, {\"Name\": \"The Fate Of The Furious\", \"Type\": \"movie\"}, {\"Name\": \"Deadpool 2\", \"Type\": \"movie\"}, {\"Name\": \"Ready Player One\", \"Type\": \"movie\"}, {\"Name\": \"Jumanji: Welcome To The Jungle\", \"Type\": \"movie\"}, {\"Name\": \"Solo: A Star Wars Story\", \"Type\": \"movie\"}, {\"Name\": \"Independence Day: Resurgence\", \"Type\": \"movie\"}, {\"Name\": \"Thor: Ragnarok\", \"Type\": \"movie\"}]}}",
