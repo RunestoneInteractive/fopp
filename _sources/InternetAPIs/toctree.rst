@@ -19,5 +19,6 @@ Internet APIs
    iTunes.rst
    flickr.rst
    unicode.rst
+   chapterProject.rst
 
    
