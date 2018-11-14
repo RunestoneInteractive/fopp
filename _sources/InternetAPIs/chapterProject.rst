@@ -20,32 +20,16 @@ Project - OMDB and TasteDive
 
     This project will take you through the process of mashing up data from two different APIs to make movie recommendations. The TasteDive API lets you provide a movie (or bands, TV shows, etc.) as a query input, and returns a set of related items. The OMDB API lets you provide a movie title as a query input and get back data about the movie, including scores from various review sites (Rotten Tomatoes, IMDB, etc.).
 
-You will put those two together. You will use TasteDive to get related movies for a whole list of titles. You'll combine the resulting lists of related movies, and sort them according to their IMDB scores (which will require making API calls to the OMDB API.
+    You will put those two together. You will use TasteDive to get related movies for a whole list of titles. You'll combine the resulting lists of related movies, and sort them according to their IMDB scores (which will require making API calls to the OMDB API.
 
-To avoid problems with rate limits, we have provided a cache file with results for all the queries you need to make to both OMDB and TasteDive. Just use ``requests_with_caching.get()`` rather than ``requests.get()``. You're welcome to try other queries, but if you do, you will need to get an api key from OMDB.
+    To avoid problems with rate limits, we have provided a cache file with results for all the queries you need to make to both OMDB and TasteDive. Just use ``requests_with_caching.get()`` rather than ``requests.get()``. You're welcome to try other queries, but if you do, you will need to get an api key from OMDB.
 
-Your first task will be to
+    Your first task will be to fetch data from TasteDive. The documentation for the API is at https://tastedive.com/read/api.
 
-    We will be using data extracted from the TasteDive API, which has been stored in a cache for your use, as well as making requests to the OMDB API to provide recommendations. To start the project, initialize a variable called ``omdb_key`` which stores your api key from omdb. You can obtain a key from https://www.omdbapi.com/ but be sure to activate the key in the email that you recieve from the site, otherwise your key will not work! Then write a function called ``get_movie_data`` that takes in one parameter which is a string that should represent the title of a movie you want to search. The function should make a request to the OMDB API to get data about that movie. The function should return ``False`` if you are unable to get data about that title, and otherwise should return the results as a python object if you are able to get data about that title.
+    Define a function, called ``get_movies_from_tastedive``. It should take three input parameters, the first of which is a string that is the name of a movie or music artist, the second should be called use_limit which stores a boolean value, and the third should be called restrict_type and also stores a boolean value. The function should return the 5 TasteDive results that are associated with that string; be sure to only get movies, not other kinds of media. it will be a python dictionary with just one key, 'Similar'.
+
+    Try invoking your function with the input "Black Panther".
     ~~~~
-    
-    import requests
-
-    omdb_key = "d9ef00e2"
-
-    def get_movie_data(title):
-        baseurl = "http://www.omdbapi.com/"
-        params_diction = {} # Set up an empty dictionary for query parameters
-        params_diction["apikey"] = omdb_key
-        params_diction["t"] = title
-        params_diction['r'] = 'json'
-        resp = requests.get(baseurl, params=params_diction)
-        if resp.json()["Response"] == 'False':
-            return False
-        return resp.json()
-        
-        
-    # print(get_movie_data("The Matrix"))
 
 
     =====
@@ -54,11 +38,29 @@ Your first task will be to
 
     class myTests(TestCaseGui):
 
-      def test_output(self):
-        self.assertEqual(type(get_movie_data("The Matrix")), type({}), "Testing that the correct python object is returned.")
-        sample_name = "The Matrix"
-        self.assertEqual(get_movie_data(sample_name)['Title'], sample_name, "Testing that the results match the query.")
-        self.assertEqual(get_movie_data("afwawafd"), False, "Testing that False is returned when the title does not exist in OMDB database.")
+      def test_get_movies_from_tastedive_typical(self):
+        results = get_movies_from_tastedive("Bridesmaids")['Similar']["Info"][0]["Name"]
+        expected = "Bridesmaids"
+        self.assertEqual(results, expected, "Testing that the results for Bridesmaids is the expected result.")
+        self.assertEqual(type(get_movies_from_tastedive("Black Panther")), type({}), "Testing that the correct python type is returned.")
+
+      def test_get_movies_from_tastedive_limits(self):
+        unlimited = get_movies_from_tastedive("Black Panther", use_limit = False)
+        self.assertNotEqual(len(get_movies_from_tastedive("Black Panther")), len(unlimited), "Testing that, by default, get_movies_from_tastedive returns 5 results")  
+    
+        unrestricted = get_movies_from_tastedive("Tony Bennett", restrict_type = False)
+        names = filter((lambda x: x['Name'] == "Ricky Nelson"), unrestricted['Similar']["Results"])
+        not_only_movies = len(list(names))
+        self.assertEqual(not_only_movies, 1, "Testing that restricted_type is set correctly for get_movies_from_tastedive.")
+
+      def test_get_movies_from_tastedive_restrictions(self):
+        restricted = get_movies_from_tastedive("Tony Bennett")
+        unnames = filter((lambda x: x['Name'] == "Ricky Nelson"), restricted['Similar']["Results"])
+        only_movies = len(list(unnames))
+        self.assertEqual(only_movies, 0, "Testing that, by default, get_movies_from_tastedive returns movie results,")
+        restricted = filter(lambdax: x['Type'] != "Movies"), restricted['Similar']["Results"])
+        self.assertNotEqual(len(list(restricted), 0, "Testing that, by default, get_movies_from_tastedive returns movie results."))
+    
         
 
     myTests().main()
@@ -68,29 +70,9 @@ Your first task will be to
     :language: python
     :practice: T
 
-    Please copy the completed function from above into this active code window. Next, you should write a function called ``set_of_movies`` which takes one parameter, a list, and iterates through the list to retain only movies which have provided valid data (i.e. a movie title that does not return ``False``.) The function should return the movies that have provided valid data. 
+    Please copy the completed function from above into this active code window. Next, you will need to write a function that extracts just the list of movie titles from a dictionary returned by ``get_movies_from_tastedive``. Call it ``extract_movie_titles``.
     ~~~~
 
-    import requests
-
-    omdb_key = "d9ef00e2"
-
-    def get_movie_data(title):
-        baseurl = "http://www.omdbapi.com/"
-        params_diction = {} # Set up an empty dictionary for query parameters
-        params_diction["apikey"] = omdb_key
-        params_diction["t"] = title
-        params_diction['r'] = 'json'
-        resp = requests.get(baseurl, params=params_diction)
-        if resp.json()["Response"] == 'False':
-            return False
-        return resp.json()
-
-    def set_of_movies(movies):
-
-        all_movies = [get_movie_data(data) for data in movies]
-        valid_movies = [movie_data for movie_data in all_movies if movie_data != False]
-        return valid_movies
 
     =====
 
@@ -98,10 +80,11 @@ Your first task will be to
 
     class myTests(TestCaseGui):
 
-      def test_output(self):
-        data = set_of_movies(["The Great Gatsby", "dfhgjhkljhg", "The Giver", "Space Jam", "dfghjk"]
-        self.assertEqual(len(data), 3, "Checking that the correct number of responses are returned when some titles are invalid."))
-        self.assertEqual(data[-1]['Title'], "Space Jam", "Checking that the right response is stored in the ")
+      def test_extract_movie_titles(self):
+        results = ['A Place In The Sun','The Startup Kids','The Englishman Who Went Up A Hill But Came Down A Mountain','The Stand','The African Queen']
+        self.assertEqual(extract_movie_titles(get_movies_from_tastedive("Tony Bennett")), results, "Testing that the correct results are retrieved using the cache.")
+        sample_from_cache = extract_movie_titles(get_movies_from_tastedive("Black Panther"))
+        self.assertEqual(type(sample_from_cache), type([]), "Testing that the correct type is returned by the function." )
         
         
 
@@ -112,13 +95,8 @@ Your first task will be to
     :language: python
     :practice: T
 
-    Here your task is to create a function called ``read_from_file`` that takes in a string, which represents a file name. The function should read in the data from the file and return the data as a python object. If you would like to check that it is functioning, you can test it using the filename ``tastedive_cache.txt`` which we will be using later. 
+    Please copy the completed functions from the two code windows above into this active code window. Next, you'll write a function, called ``get_related_titles``. It takes *a list of movie titles* as input. It gets five related movies for each, from TasteDive, extracts the titles for all of them, and combines them all into a single list. Don't include the same movie twice.
     ~~~~
-
-    def read_from_file(file_name):
-        f = open(file_name).read()
-        return json.loads(f)
-    
 
 
     =====
@@ -127,9 +105,12 @@ Your first task will be to
 
     class myTests(TestCaseGui):
 
-      def test_output(self):
-        file_to_test = "tastedive_cache.txt"
-        self.assertEqual(type(read_from_file(file_to_test)), type({}), "Testing that your code returns the expected python object type. ")
+      def test_related_titles(self):
+        expected_results_from_cache = ['Avengers: Infinity War', 'Captain Marvel', 'Ant-Man And The Wasp', 'The Fate Of The Furious', 'Deadpool 2', 'Inhumans', 'Venom', 'American Assassin', 'Cars 3']
+        actual_results_from_cache = get_related_titles(["Black Panther", "Captain Marvel"])
+        self.assertEqual(get_related_titles([]), [], 'Testing that the correct response is returned when no titles are included.')
+        self.assertEqual(actual_results_from_cache, expected_results_from_cache, 'Testing that the correct response is returned when multiple titles are listed.')
+    
         
 
     myTests().main()
@@ -139,21 +120,14 @@ Your first task will be to
     :language: python
     :practice: T
 
-    Copy the code from the previous active code window into this window. Now create a function called ``get_from_tastedive`` that takes one parameter which is a string that is the name of a movie or music artist. The function should return the TasteDive results that are associated with that string. The information from TasteDive should be in the cache which is called ``tastedive_cache.txt``. Remember that the cache is limited, it doesn't contain an infinite amount of data. In the case where the data does not exist in the cache, return ``False``. If you would like to test your work on your own, try it out with the name "Black Panther".
+    Your next task will be to fetch data from OMDB. The documentation for the API is at https://www.omdbapi.com/
+
+    Define a function called ``get_movie_data``. It takes in one parameter which is a string that should represent the title of a movie you want to search. The function should return a dictionary with information about that movie.
+
+    Again, use ``requests_with_caching.get()``. For the queries on movies that are already in the cache, you won't need an api key. (If you want to run queries for other movies, you'll have to get an api key from OMDB).
+
     ~~~~
-    def read_from_file(file_name):
-        f = open(file_name).read()
-        return json.loads(f)
 
-    file_name = "tastedive_cache.txt"
-
-    def get_from_tastedive(name):
-        data = read_from_file(file_name)
-        response = False
-        for key in data:
-            if name in key:
-                response = data[key]
-        return response
 
     =====
 
@@ -161,10 +135,9 @@ Your first task will be to
 
     class myTests(TestCaseGui):
 
-      def test_output(self):
-        self.assertEqual(get_from_tastedive("Tony Bennett"), {"Similar": {"Results": [{"Type": "movie", "Name": "A Place In The Sun"}, {"Type": "movie", "Name": "The Startup Kids"}, {"Type": "movie", "Name": "The Englishman Who Went Up A Hill But Came Down A Mountain"}, {"Type": "movie", "Name": "The Stand"}, {"Type": "movie", "Name": "The African Queen"}, {"Type": "movie", "Name": "Sleuth"}, {"Type": "movie", "Name": "Venus In Fur"}, {"Type": "movie", "Name": "The Man With Two Brains"}], "Info": [{"Type": "music", "Name": "Tony Bennett"}]}}, "Testing that the correct data is extracted when searching for Tony Bennett")
-        self.assertEqual(get_from_tastedive("Avengers"), False, "Testing that the correct response is sent back when data is not in the cache")
-        self.assertEqual(type(get_from_tastedive("Your Name")), type({}), "Testing that the correct response type is sent back when a query is in the cache")
+      def test_get_movie_data(self):
+        self.assertEqual(type(get_movie_data("Venom")), type({}), "Testing that the correct python type is returned.")
+        self.assertEqual("Baby Mama")["Title"], "Baby Mama", "Testing that the results match the query.")
         
         
 
@@ -175,57 +148,32 @@ Your first task will be to
     :language: python
     :practice: T
 
-    Now it's time to start combining the work you've done so far. Copy the code from the active code windows above so that you have the unique code that you've written so far, in the order that the active code windows are arranged. Here your task is to write a function called ``make_rec`` which takes in a list of queries to the TasteDive cache. Based on the movie recommendations from the cache, sort the movies from highest to lowest based on their IMDB rating, and return the top 10 movies, incuding the movie title and it's IMDB rating, in a list of tuples.
+    Please copy the completed function from above into this active code window. Now write a function called ``get_movie_rating``. It takes an OMDB dictionary result for one movie and extracts the Rotten Tomatoes rating as an integer. For example, if given the OMDB dictionary for "Black Panther", it would return 97. If there is no Rotten Tomatoes rating, return 0.
     ~~~~
-    
-    import requests
 
-    omdb_key = "d9ef00e2"
 
-    def get_movie_data(title):
-        baseurl = "http://www.omdbapi.com/"
-        params_diction = {} # Set up an empty dictionary for query parameters
-        params_diction["apikey"] = omdb_key
-        params_diction["t"] = title
-        params_diction['r'] = 'json'
-        resp = requests.get(baseurl, params=params_diction)
-        if resp.json()["Response"] == 'False':
-            return False
-        return resp.json()
+    =====
 
-    def set_of_movies(movies):
+    from unittest.gui import TestCaseGui
 
-        all_movies = [get_movie_data(data) for data in movies]
-        valid_movies = [movie_data for movie_data in all_movies if movie_data != False]
-        return valid_movies
+    class myTests(TestCaseGui):
 
-    def read_from_file(file_name):
-        f = open(file_name).read()
-        return json.loads(f)
+      def test_type(self):
+        self.assertEqual(type(get_movie_rating(get_movie_data("Deadpool 2"))), type(9), "Testing that the code returns the correct python type.")
+        
+      def test_output(self):
+        self.assertEqual(get_movie_rating(get_movie_data("Venom")), 0, "Testing that the code is acurate for movies without a rotten tomatoes rating.")
+        self.assertEqual(get_movie_rating(get_movie_data("Deadpool 2")), 82, "Testing that the code returns the correct value for movies with a rotten tomatoes rating.")
 
-    file_name = "tastedive_cache.txt"
-    
-    def get_from_tastedive(name):
-        data = read_from_file(file_name)
-        response = False
-        for key in data:
-            if name in key:
-                response = data[key]
-        return response
+    myTests().main()
 
-    def make_rec(queries):
-        recommendations = []
-        for name in queries:
-            taste_recs = json.loads(get_from_tastedive(name))
-            for rec in taste_recs["Similar"]["Results"]:
-                recommendations.append(rec["Name"])
-        results_omdb = set_of_movies(recommendations)
-        interesting_data = [(movie["Title"], float(movie['imdbRating'])) for movie in results_omdb]
-        sorted_data = sorted(interesting_data, key = lambda x: x[1], reverse = True)
-        if len(sorted_data) > 10:
-            return sorted_data[:10]
-        else:
-            return sorted_data
+.. activecode:: assess_ac_24_1_1_6
+    :autograde: unittest
+    :language: python
+    :practice: T
+
+    PNow, you'll put it all together. Don't forget to copy all of the functions that you have previously defined into this code window. Define a function ``get_sorted_recommendations``. It takes a list of movie titles as an input. It returns a sorted list of related movie titles as output, up to five related movies for each input movie title. The movies should be sorted in descending order by their Rotten Tomatoes rating, as returned by the ``get_movie_rating`` function.
+    ~~~~
 
 
     =====
@@ -235,13 +183,10 @@ Your first task will be to
     class myTests(TestCaseGui):
 
       def test_output(self):
-        results  = make_rec(["Your Name", "Black Panther"])
-        self.assertEqual(len(results), 10, )
-        self.assertEqual(type(results[0]), type(("tuple", "example")), "Testing that your code is returning the correct type")
-        self.assertEqual(type(results), type([]), "Testing that your code is returning the correct type")
-      def test_output2(self):
-        results = make_rec(["Tony Bennett"])
-        self.assertNotEqual(len(results), 10, "Testing that your code returns correctly if there are less than 10 items")
+        sample_actual_recommendations = get_sorted_recommendations(["Bridesmaids", "Sherlock Holmes"])
+        sample_expected_recommendations = ['Date Night', 'Baby Mama', 'The Five-Year Engagement', 'Sherlock Holmes: A Game Of Shadows', 'Bachelorette', 'The A-Team', 'Bad Teacher', 'Angels & Demons', 'Prince Of Persia: The Sands Of Time', 'Pirates Of The Caribbean: On Stranger Tides']
+        self.assertEqual(sample_actual_recommendations, sample_expected_recommendations, "Testing that actual value returned is the expected value returned.")
+        self.assertEqual(type(sample_actual_recommendations), type([]), "Testing that the correct python type is returned.")
         
 
     myTests().main()
