@@ -18,9 +18,13 @@ elif hostname == 'fopp.learningpython.today':
 else:
     master_url = 'http://127.0.0.1:8000'
 
+
+master_url = ''
 master_app = 'runestone'
 serving_dir = "./build/fopp"
 dest = "../../static"
+
+
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -44,9 +48,11 @@ options(
                        'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
-                       'downloads_enabled': 'false',
-                       'enable_chatcodes': 'false'
-                        }
+                       'downloads_enabled': 'true',
+                       'enable_chatcodes': 'false',
+                       'google_ga_account': 'UA-21213626-9',
+                       'lockdown': "True"
+                     }
     )
 )
 
