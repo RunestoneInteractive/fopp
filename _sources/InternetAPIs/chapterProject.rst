@@ -20,17 +20,17 @@ Project - OMDB and TasteDive
 
     This project will take you through the process of mashing up data from two different APIs to make movie recommendations. The TasteDive API lets you provide a movie (or bands, TV shows, etc.) as a query input, and returns a set of related items. The OMDB API lets you provide a movie title as a query input and get back data about the movie, including scores from various review sites (Rotten Tomatoes, IMDB, etc.).
 
-    You will put those two together. You will use TasteDive to get related movies for a whole list of titles. You'll combine the resulting lists of related movies, and sort them according to their IMDB scores (which will require making API calls to the OMDB API.)
+    You will put those two together. You will use TasteDive to get related movies for a whole list of titles. You'll combine the resulting lists of related movies, and sort them according to their Rotten Tomatoes scores (which will require making API calls to the OMDB API.)
 
     To avoid problems with rate limits and site accessibility, we have provided a cache file with results for all the queries you need to make to both OMDB and TasteDive. Just use ``requests_with_caching.get()`` rather than ``requests.get()``. You're welcome to try other queries, but if you do, you will need to get an api key from OMDB.
 
     Your first task will be to fetch data from TasteDive. The documentation for the API is at https://tastedive.com/read/api.
 
-    Define a function, called ``get_movies_from_tastedive``. It should take three input parameters, the first of which is a string that is the name of a movie or music artist, the second should be called use_limit which stores a boolean value, and the third should be called restrict_type and also stores a boolean value. The function should return the 5 TasteDive results that are associated with that string; be sure to only get movies, not other kinds of media. it will be a python dictionary with just one key, 'Similar'.
+    Define a function, called ``get_movies_from_tastedive``. It should take three input parameters, the first of which is a string that is the name of a movie or music artist, the second should be called use_limit which stores a boolean value, and the third should be called restrict_type and also stores a boolean value. The function should return the 5 TasteDive results that are associated with that string; be sure to only get movies, not other kinds of media. It will be a python dictionary with just one key, 'Similar'.
 
     Try invoking your function with the input "Black Panther".
 
-    HINT: If, when you invoke the function, the results aren't found in the cache, you don't haven't passed all the right key-value pairs in the params dictionary that you passed to ``requests_with_caching.get()``.
+    HINT: If, when you invoke the function, the results aren't found in the cache, you haven't passed the exact same key-value pairs in the params dictionary as you passed to ``requests_with_caching.get()``.
 
     ~~~~
 
@@ -91,7 +91,7 @@ Project - OMDB and TasteDive
     :language: python
     :practice: T
 
-    Please copy the completed functions from the two code windows above into this active code window. Next, you'll write a function, called ``get_related_titles``. It takes *a list of movie titles* as input. It gets five related movies for each, from TasteDive, extracts the titles for all of them, and combines them all into a single list. Don't include the same movie twice.
+    Please copy the completed functions from the two code windows above into this active code window. Next, you'll write a function, called ``get_related_titles``. It takes *a list of movie titles* as input. It gets five related movies for each from TasteDive, extracts the titles for all of them, and combines them all into a single list. Don't include the same movie twice.
     ~~~~
 
 
