@@ -298,8 +298,11 @@
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
+      {% if lockdown != 'True' -%}
+        <span id='numuserspan'></span> readers online now |
+      {%- endif -%}
       {% if use_services == 'true' %}
-      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      <span class='loggedinuser'></span>
       {% endif %}
       | <a href="#">Back to top</a>
       {% if theme_source_link_position == "footer" %}
