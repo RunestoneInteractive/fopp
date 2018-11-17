@@ -17,8 +17,10 @@ elif hostname == 'fopp.umsi.education':
     master_url = 'https://fopp.umsi.education'
 else:
     master_url = 'http://127.0.0.1:8000'
+
+master_url = 'http://127.0.0.1:8000'
 # master_url = 'https://fopp.umsi.education'
-master_url = ''  # use relative paths
+# master_url = ''  # use relative paths
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
