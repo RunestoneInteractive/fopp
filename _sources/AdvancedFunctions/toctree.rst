@@ -9,6 +9,7 @@ Advanced Functions
    KeywordParameters.rst
    Anonymousfunctionswithlambdaexpressions.rst
    ProgrammingWithStyle.rst
+   MethodInvocations.rst
    Exercises.rst
    ChapterAssessment.rst
    
