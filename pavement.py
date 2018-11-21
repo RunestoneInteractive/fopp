@@ -38,7 +38,7 @@ options(
         confdir=".",
         project_name = "fopp",
         template_args={'course_id': 'fopp',
-                       'login_required':'false',
+                       'login_required':'true',
                        'appname':master_app,
                        'loglevel': 10,
                        'course_url':master_url,
