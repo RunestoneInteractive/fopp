@@ -20,7 +20,7 @@
     function; composition
 
 Functions can call other functions (Composition)
------------------------------------------------
+------------------------------------------------
 
 It is important to understand that each of the functions we write can be used and called from other functions we 
 write. This is one of the most important ways that computer programmers take a large problem and break it down into a 
