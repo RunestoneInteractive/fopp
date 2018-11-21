@@ -19,7 +19,7 @@
     composition
     function; composition
 
-Functions can call other functions (Compostion)
+Functions can call other functions (Composition)
 -----------------------------------------------
 
 It is important to understand that each of the functions we write can be used and called from other functions we 
