@@ -26,6 +26,12 @@ Functions that return values are sometimes called **fruitful functions**. In man
 doesn't return a value is called a **procedure**, but we will stick here with the Python way of also calling it a 
 function, or if we want to stress it, a *non-fruitful* function.
 
+.. youtube:: u8Gx9Sc1nTk
+    :height: 315
+    :width: 560
+    :align: left
+
+
 .. image:: Figures/blackboxfun.png
 
 How do we write our own fruitful function? Let's start by creating a very simple mathematical function that we will 

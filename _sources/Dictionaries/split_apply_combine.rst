@@ -72,7 +72,7 @@ Lets practice this pattern, by reading the data from the CSV file, note that to 
 
 .. activecode:: act_sac_1
 
-    Read the ``so_servey.csv`` file and produce a report that shows the number of people from each country that responded.
+    Read the ``so_survey.csv`` file and produce a report that shows the number of people from each country that responded.
     ~~~~
 
 

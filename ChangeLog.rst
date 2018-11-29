@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+Nov 29 2018
+-----------
+
+* Typos and bug fixes
+* add videos for function chapter
+
 Sept 12 2018
 ------------
 

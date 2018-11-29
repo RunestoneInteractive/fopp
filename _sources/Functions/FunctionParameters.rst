@@ -19,6 +19,11 @@ and not think too much about what they do. With parameters, functions are even m
 pretty much the same thing on each invocation, but not exactly the same thing. The parameters can cause them to do 
 something a little different. 
 
+.. youtube:: HoW5_PHONoY
+    :height: 315
+    :width: 560
+    :align: left
+
 The figure below shows this relationship. A function needs certain information to do its work. These values, often 
 called **arguments** or **actual parameters** or **parameter values**, are passed to the function by the user.
 
