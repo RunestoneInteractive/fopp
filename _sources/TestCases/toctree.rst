@@ -7,7 +7,6 @@ Test Cases
 
    intro-TestCases.rst
    Testingfunctions.rst
-   WPGoodUnittests.rst
    WPProgramDevelopment.rst
    Glossary.rst
    
