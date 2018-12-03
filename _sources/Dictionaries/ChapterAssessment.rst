@@ -304,7 +304,7 @@ Assessment - Dictionary Accumulation
 
 
 .. activecode:: ac10_9_14
-   :language: python3
+   :language: python
    :autograde: unittest
    :practice: T
    :topics: Dictionaries/AccumulatingtheBestKey
