@@ -189,6 +189,8 @@
 
         <li class="divider-vertical"></li>
 
+
+       {% if lockdown != 'True' -%}
         <!-- help menu dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -205,7 +207,7 @@
         <!-- end help menu dropdown -->
 
         <li class="divider-vertical"></li>
-
+       {%- endif -%}
       </ul>
 
       <ul class="nav navbar-nav">
