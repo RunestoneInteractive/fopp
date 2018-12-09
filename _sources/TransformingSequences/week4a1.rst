@@ -71,7 +71,7 @@ Chapter Assessment - List Methods
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which method best to use when adding an item to the end of a list?
+   Which method is best to use when adding an item to the end of a list?
 
 
 .. activecode:: assess_ac4_1_1_4
@@ -849,9 +849,9 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/NonmutatingMethodsonStrings
 
-   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
+   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting, using the .format method (not string concatenation). For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
    ~~~~
-   inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweaters, 10, 30.00", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+   inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 
 
    =====
@@ -861,9 +861,9 @@ Chapter Assessment - Problem Solving
    class myTests(TestCaseGui):
 
       def testOne(self):
-          self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-          self.assertIn('.format(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-          self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your code (Don't worry about actual and expected values).")
+          self.assertIn('for', self.getEditorText(), "Testing whether your code includes a for loop (Don't worry about actual and expected values).")
+          self.assertIn('.format(', self.getEditorText(), "Testing whether your code invokes the .format method (Don't worry about actual and expected values).")
+          self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your output.")
 
          
 
