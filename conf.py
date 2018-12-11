@@ -235,6 +235,8 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
 # For custom jinja2 filter
 import jinja2
+
+#
 def extractText(blob):
     if "<code" in blob:
         title = ""
@@ -257,4 +259,26 @@ def extractText(blob):
 
     return blob
 
+
+def extractTextII(blob):
+    if "<strong>" in blob:
+        title = ""
+        idx0 = blob.find("<strong>")
+
+        firstSub = blob[0:idx0]
+        title += firstSub
+
+        idx1 = blob.find("</strong")
+        secondSub = blob[idx0+8:idx1]
+        title += secondSub
+        title += " "
+
+        thirdSub = blob[idx1+10:]
+        title += thirdSub
+
+        return title
+
+    return blob
+
 jinja2.filters.FILTERS['extractText'] = extractText
+jinja2.filters.FILTERS['extractTextII'] = extractTextII
