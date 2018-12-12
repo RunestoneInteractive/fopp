@@ -18,6 +18,8 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
+sys.path.insert(0, os.path.abspath('./_filter'))
+
 from runestone import runestone_static_dirs, runestone_extensions
 
 # -- General configuration -----------------------------------------------------
@@ -235,56 +237,7 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
 # For custom jinja2 filter
 import jinja2
-
-def extractText(blob):
-    if "<code" in blob:
-        return extractTextHelper("", blob)
-
-    return blob
-
-def extractTextHelper(title, blob):
-    if "<code" not in blob:
-        title += blob
-        return title
-
-
-    idx0 = blob.find("<code")
-
-    firstSub = blob[0:idx0]
-    title += firstSub
-
-    idx1 = blob.find("\"pre\">")
-    idx2 = blob.find("</span>")
-    secondSub = blob[idx1+6:idx2]
-    title += secondSub
-    title += " "
-
-    idx3 = blob.find("</code>")
-
-    thirdSub = blob[idx3+7:]
-
-    return extractTextHelper(title, thirdSub)
-
-
-def extractTextII(blob):
-    if "<strong>" in blob:
-        title = ""
-        idx0 = blob.find("<strong>")
-
-        firstSub = blob[0:idx0]
-        title += firstSub
-
-        idx1 = blob.find("</strong")
-        secondSub = blob[idx0+8:idx1]
-        title += secondSub
-        title += " "
-
-        thirdSub = blob[idx1+10:]
-        title += thirdSub
-
-        return title
-
-    return blob
+from custom_jinja2_filter import extractText, extractTextII
 
 jinja2.filters.FILTERS['extractText'] = extractText
 jinja2.filters.FILTERS['extractTextII'] = extractTextII
