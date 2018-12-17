@@ -298,7 +298,7 @@ Assessment - Dictionary Accumulation
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(sorted(wrd_d.items()), sorted([('Singing', 1), ('in', 2), ('the', 2), ('rain', 2), ('and', 1), ('playing', 1), ('are', 1), ('two', 1), ('entirely', 1), ('different', 1), ('situations,', 1), ('but', 1), ('both', 1), ('can', 1), ('be', 1), ('good.', 1)]), "Testing that wrd_d has been created correctly.")
+         self.assertEqual(sorted(wrd_d.items()), sorted([('Singing', 1), ('in', 2), ('the', 2), ('rain', 2), ('and', 1), ('playing', 1), ('are', 1), ('two', 1), ('entirely', 1), ('different', 1), ('situations', 1), ('but', 1), ('both', 1), ('can', 1), ('be', 1), ('good', 1)]), "Testing that wrd_d has been created correctly.")
 
    myTests().main()
 
