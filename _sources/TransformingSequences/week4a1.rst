@@ -71,7 +71,7 @@ Chapter Assessment - List Methods
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which method best to use when adding an item to the end of a list?
+   Which method is best to use when adding an item to the end of a list?
 
 
 .. activecode:: assess_ac4_1_1_4
@@ -203,7 +203,7 @@ Chapter Assessment - Aliases and References
 
    -  :\[["']holiday["'], ["']celebrate!["'], ["']company["']\]: Good work!
       :\[["']holiday["'], ["']celebrate!["']\]: This is the old value of a - a has changed.
-      :.*: Incorrect, try again.
+      :.*: Incorrect, try again. Don't forget to include a space between list elements.
 
 .. mchoice:: assess_question3_3_1_2
    :answer_a: yes
@@ -531,10 +531,10 @@ Chapter Assessment - Accumulator Pattern
         s = s + n
 
 .. mchoice:: assess_question5_2_1_2
-   :answer_a: I.
-   :answer_b: II.
-   :answer_c: III.
-   :answer_d: IV.
+   :answer_a: 1.
+   :answer_b: 2.
+   :answer_c: 3.
+   :answer_d: .
    :answer_e: none of the above would be appropriate for the problem. 
    :correct: d
    :feedback_a: How does this solution know that the element of lst is a string and that s should be updated?
@@ -547,42 +547,42 @@ Chapter Assessment - Accumulator Pattern
 
    Given that we want to accumulate the total number of strings in the list, which of the following accumulator patterns would be appropriate?
 
-   I.
+   1.
    
    .. sourcecode:: python
    
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
-    for n in nums:
+    for n in lst:
         s = s + n
    
-   II.
+   2.
    
    .. sourcecode:: python
    
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-    for n in nums:
+    for item in lst:
         s = 0
-        if type(n) == type("string"):
+        if type(item) == type("string"):
             s = s + 1
    
-   III.
-   
+   3.
+
    .. sourcecode:: python
    
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = ""
-    for n in nums:
+    for n in lst:
         s = s + n
    
-   IV.
+   4.
    
    .. sourcecode:: python
    
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
-    for n in nums:
-        if type(n) == type("string"):
+    for item in lst:
+        if type(item) == type("string"):
             s = s + 1
  
 .. mchoice:: assess_question5_2_1_3
@@ -642,14 +642,14 @@ Chapter Assessment - Accumulator Pattern
 .. mchoice:: assess_question5_2_1_6
    :answer_a: accumulator variable: x | iterator variable: s | sequence variable: lst
    :answer_b: accumulator variable: total | iterator variable: s | sequence variable: lst
-   :answer_c: accumulator variable: x | iterator variable: sentences | sequence variable: word_lst
-   :answer_d: accumulator variable: total | iterator variable: sentences |sequence variable: word_lst
+   :answer_c: accumulator variable: x | iterator variable: sentences | sequence variable: sentence_lst
+   :answer_d: accumulator variable: total | iterator variable: sentence |sequence variable: sentence_lst
    :answer_e: none of the above
    :correct: d
-   :feedback_a: Though lst may be a good name, x and s are not clear names for accumulator and iterator variables.
-   :feedback_b: Though total, and lst may be good names, there is a more clear option since s is not very clear.
-   :feedback_c: Though sentences and word_lst are good names, x is not the best name for an accumulator variable.
-   :feedback_d: Yes, this combination of variable names is the most clear.
+   :feedback_a: Though lst is an acceptable name, x and s are not informative names for accumulator and iterator variables.
+   :feedback_b: Though total is great and lst is an acceptable name, s is a little bit cryptic as a variable name referring to a sentence.
+   :feedback_c: Though sentence_lst is a good name, the iterator variable should be singular rather than plural, and x is not an informative name for the accumulator variable.
+   :feedback_d: Yes, this combination of variable names is the clearest.
    :feedback_e: One of the options above has good names for the scenario.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
@@ -764,9 +764,9 @@ Chapter Assessment - Problem Solving
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(a_scores, 10, "Testing that num_vowels is a number that contains the correct elements.")
-         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values.)")
-         self.assertIn('if', self.getEditorText(), "Testing your code (Don't worry about actual and expected values.)")
+         self.assertEqual(a_scores, 10, "Testing that you got the right count.")
+         self.assertIn('for', self.getEditorText(), "Testing that you used a for loop (Don't worry about actual and expected values.)")
+         self.assertIn('if', self.getEditorText(), "Testing that you used a conditional (Don't worry about actual and expected values.)")
 
    myTests().main()
 
@@ -776,10 +776,10 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a captial letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
+   Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a capital letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
    ~~~~
-   stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and']
-   org = "The organization for health, saftey, and education"
+   stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', "The"]
+   org = "The organization for health, safety, and education"
 
    =====
 
@@ -824,7 +824,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Write code that checks if ``p_phrase`` is a palindrome. A palindrome is a phrase that, if reversed, would read the exact same. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase``.  
+   A palindrome is a phrase that, if reversed, would read the exact same. Write code that checks if ``p_phrase`` is a palindrome by reversing it and then checking if the reversed version is equal to the original. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase`` so that we can check your work.
    ~~~~
    p_phrase = "was it a car or a cat I saw"
 
@@ -849,9 +849,9 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/NonmutatingMethodsonStrings
 
-   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting. For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
+   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting, using the .format method (not string concatenation). For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
    ~~~~
-   inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweaters, 10, 30.00", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+   inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 
 
    =====
@@ -861,9 +861,9 @@ Chapter Assessment - Problem Solving
    class myTests(TestCaseGui):
 
       def testOne(self):
-          self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-          self.assertIn('.format(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-          self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your code (Don't worry about actual and expected values).")
+          self.assertIn('for', self.getEditorText(), "Testing whether your code includes a for loop (Don't worry about actual and expected values).")
+          self.assertIn('.format(', self.getEditorText(), "Testing whether your code invokes the .format method (Don't worry about actual and expected values).")
+          self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your output.")
 
          
 

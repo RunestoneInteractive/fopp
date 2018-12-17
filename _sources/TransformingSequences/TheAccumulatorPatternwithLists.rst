@@ -69,20 +69,20 @@ Note how this differs from mutating the original list, as you saw in a previous 
    :answer_c: [3,0,9,4,1,7,5]
    :answer_d: Error, you cannot concatenate inside an append.
    :correct: b
-   :feedback_a: 5 is added to each list[i] before the append is performed.
-   :feedback_b: Yes, the for loop processes each list[i] of the list. 5 is added before list[i] is appended to blist.
-   :feedback_c: There are too many items in this list. Only 5 append operations are performed.
-   :feedback_d: 5 is added to each list[i] before the append operation is performed.
+   :feedback_a: Don't forget the last item!
+   :feedback_b: Yes, the for loop processes each item in lst. 5 is added before lst[i] is appended to blist.
+   :feedback_c: 5 is added to each item before the append operation is performed.
+   :feedback_d: It is OK to have a complex expression inside the call to the append method. The expression `lst[i]+5` is fully evaluated before the append operation is performed.
    :practice: T
 
    What is printed by the following statements?
 
    .. code-block:: python
 
-     list= [3,0,9,4,1,7]
+     lst= [3,0,9,4,1,7]
      new_list=[]
-     for i in range(len(list)):
-        new_list.append(list[i]+5)
+     for i in range(len(lst)):
+        new_list.append(lst[i]+5)
      print(new_list)
 
 .. activecode:: ac8_9_2
