@@ -70,11 +70,11 @@ We can use this for any numerical value that we want to sort, however this will 
 **Check Your Understanding**
 
 .. mchoice:: question18_5_1
-      :answer_a: first country name (alphabetically), then temperature (lowest to highest)
-      :answer_b: first temperature (highest to lowest), then country name (alphabetically)
-      :answer_c: first country name (alphabetically), then temperature (highest to lowest)
-      :answer_d: first temperature (lowest to highest), then country name (alphabetically)
-      :feedback_a: Correct! First we sort alphabetically by country name, then by the temperature, from lowest to highest.
+      :answer_a: first city name (alphabetically), then temperature (lowest to highest)
+      :answer_b: first temperature (highest to lowest), then city name (alphabetically)
+      :answer_c: first city name (alphabetically), then temperature (highest to lowest)
+      :answer_d: first temperature (lowest to highest), then city name (alphabetically)
+      :feedback_a: Correct! First we sort alphabetically by city name, then by the temperature, from lowest to highest.
       :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
       :feedback_c: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
       :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
@@ -94,11 +94,11 @@ We can use this for any numerical value that we want to sort, however this will 
          sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
 
 .. mchoice:: question18_5_2
-      :answer_a: first country name (reverse alphabetically), then temperature (lowest to highest)
-      :answer_b: first temperature (highest to lowest), then country name (alphabetically)
-      :answer_c: first country name (reverse alphabetically), then temperature (lowest to highest)
-      :answer_d: first temperature (lowest to highest), then country name (alphabetically)
-      :answer_e: first country name (alphabetically), then temperature (lowest to highest)
+      :answer_a: first city name (reverse alphabetically), then temperature (lowest to highest)
+      :answer_b: first temperature (highest to lowest), then city name (alphabetically)
+      :answer_c: first city name (reverse alphabetically), then temperature (lowest to highest)
+      :answer_d: first temperature (lowest to highest), then city name (alphabetically)
+      :answer_e: first city name (alphabetically), then temperature (lowest to highest)
       :feedback_a: Correct! In this case, the reverse parameter will cause the country name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.
       :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort. Also, take note of the reverse parameter - what will it do in this instance?
       :feedback_c: Not quite - is the reverse parameter set to True? Has a negative sign been used in the key parameter? What happens when those are both used?
