@@ -27,7 +27,7 @@ The **for** Loop
 
 Back when we drew the images with turtle it could be quite tedious. If we wanted to draw a square 
 then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon, 
-or an octogon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.
+or an octagon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.
 
 A basic building block of all programs is to be able to repeat some code over and over again. We 
 refer to this repetitive idea as **iteration**. In this section, we will explore some mechanisms for 
