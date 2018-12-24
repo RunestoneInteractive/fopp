@@ -52,7 +52,7 @@ operator.  The *is* operator will return true if the two references are to the s
 
 The answer is ``True``. This tells us that both ``a`` and ``b`` refer to the same object, and that it is the second 
 of the two reference diagrams that describes the relationship. Python assigns every object a unique id and when we 
-ask ``a is b`` what python is really doing is checking to see if the id(a) == id(b). 
+ask ``a is b`` what python is really doing is checking to see if id(a) == id(b).
 
 .. activecode:: ac8_3_2
 
@@ -62,11 +62,11 @@ ask ``a is b`` what python is really doing is checking to see if the id(a) == id
     print(id(a))
     print(id(b))
 
-Since strings are *immutable*, Python optimizes resources by making two names that refer to the same string value 
-refer to the same object.
+Since strings are *immutable*, the Python interpreter often optimizes resources by making two names that refer to the same string value
+refer to the same object. You shouldn't count on this (that is, use ``==`` to compare strings, not ``is``), but don't be surprised if you find that two variables,each bound to the string "banana", have the same id..
 
-This is not the case with lists. Consider the following example. Here, ``a`` and ``b`` refer to two different lists, 
-each of which happens to have the same element values.
+This is not the case with lists, which never share an id just because they have the same contents. Consider the following example. Here, ``a`` and ``b`` refer to two different lists,
+each of which happens to have the same element values. They need to have different ids so that mutations of list ``a`` do not affect list ``b``.
 
 .. activecode:: ac8_3_3
     

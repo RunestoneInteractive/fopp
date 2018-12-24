@@ -61,11 +61,10 @@ quotes are removed in the output window.  However, if we print the type, we can 
     print(str(123.45))
     print(type(str(123.45)))
 
-Because we can only print one type at a time, if we want to print out a string and an integer then we have to convert 
-the type. Think about which type you'd need to convert, a string to an integer or an integer to a string?
+One common operation where you might need to do a type conversion is when you are concatenating several strings together but want to include a numeric value as part of the final string. Because we can't concatenate a string with an integer or floating point number, we will often have to convert numbers to strings before concatenating them.
 
 .. image:: Figures/type_cast.gif
-   :alt: a variable stores the value 55. a print statement tries to print "the value is" and the integer, but a runtime error occurs. Solution is to convert the integer into a string so that it only prints one type.
+   :alt: a variable stores the value 55. a print statement tries to print "the value is" concatenated with the integer, but a runtime error occurs. Solution is to convert the integer into a string so that it can be concatenated.
 
 **Check your understanding**
 

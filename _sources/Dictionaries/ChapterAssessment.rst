@@ -267,7 +267,7 @@ Assessment - Dictionary Accumulation
 
    Create a dictionary, ``freq_words``, that displays each word in string ``str1`` as the key and its frequency as the value.
    ~~~~
-   str1 = "I wish, I wish, with all my heart, to fly with dragons, in a land apart"
+   str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
    =====
 
@@ -276,7 +276,7 @@ Assessment - Dictionary Accumulation
    class myTests(TestCaseGui):
 
       def testThree(self):
-         self.assertEqual(sorted(freq_words.items()), sorted([('a', 1), ('I', 2), ('wish,', 2), ('with', 2), ('all', 1), ('my', 1), ('heart,', 1), ('to', 1), ('fly', 1), ('dragons,', 1), ('in', 1), ('land', 1), ('apart', 1)]), "Testing that freq_words was created correctly.")     
+         self.assertEqual(sorted(freq_words.items()), sorted([('a', 1), ('I', 2), ('wish', 2), ('with', 2), ('all', 1), ('my', 1), ('heart', 1), ('to', 1), ('fly', 1), ('dragons', 1), ('in', 1), ('land', 1), ('apart', 1)]), "Testing that freq_words was created correctly.")
 
    myTests().main()
 
@@ -287,9 +287,9 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary called ``wrd_d`` from the string ``sent``, so that the key is a word and the value is how many times you have seen that word. Don't worry about punctuation or capitalization in this problem.
+   Create a dictionary called ``wrd_d`` from the string ``sent``, so that the key is a word and the value is how many times you have seen that word.
    ~~~~
-   sent = "Singing in the rain and playing in the rain are two entirely different situations, but both can be good."
+   sent = "Singing in the rain and playing in the rain are two entirely different situations but both can be good"
 
    =====
 
@@ -304,7 +304,7 @@ Assessment - Dictionary Accumulation
 
 
 .. activecode:: ac10_9_14
-   :language: python3
+   :language: python
    :autograde: unittest
    :practice: T
    :topics: Dictionaries/AccumulatingtheBestKey

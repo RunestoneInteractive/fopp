@@ -179,7 +179,7 @@ pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few othe
    :answer_c: 165 161 158
    :answer_d: 201 104 115
    :correct: b
-   :feedback_a: These are the values for the pixel at row 30, column 100.  Get the values for row 100 and column 30 with p = img.getPixel(100, 30).
+   :feedback_a: These are the values for the pixel at row 30, column 100.  Get the values for row 100 and column 30 with p = img.getPixel(30, 100). (Note that the first argument to getPixel is the column, not the row.)
    :feedback_b: Yes, the RGB values are 183 179 170 at row 100 and column 30.
    :feedback_c: These are the values from the original example (row 45, column 55). Get the values for row 100 and column 30 with p = img.getPixel(30, 100).
    :feedback_d: These are simply made-up values that may or may not appear in the image.  Get the values for row 100 and column 30 with p = img.getPixel(30, 100).
