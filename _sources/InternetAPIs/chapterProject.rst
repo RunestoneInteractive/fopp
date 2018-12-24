@@ -77,7 +77,7 @@ Project - OMDB and TasteDive
     class myTests(TestCaseGui):
 
       def test_extract_movie_titles(self):
-        results = ['A Place In The Sun','The Startup Kids','The Englishman Who Went Up A Hill But Came Down A Mountain','The Stand','The African Queen']
+        results = ['The Startup Kids', Charlie Chaplin', 'Venus In Fur', 'Loving', 'The African Queen']
         self.assertEqual(extract_movie_titles(get_movies_from_tastedive("Tony Bennett")), results, "Testing that correct results are returned for 'Tony Bennett'.")
         sample_from_cache = extract_movie_titles(get_movies_from_tastedive("Black Panther"))
         self.assertEqual(type(sample_from_cache), type([]), "Testing that correct results are returned for 'Black Panther'." )
@@ -102,7 +102,7 @@ Project - OMDB and TasteDive
     class myTests(TestCaseGui):
 
       def test_related_titles(self):
-        expected_results_from_cache = ['Avengers: Infinity War', 'Captain Marvel', 'Ant-Man And The Wasp', 'The Fate Of The Furious', 'Deadpool 2', 'Inhumans', 'Venom', 'American Assassin', 'Cars 3']
+        expected_results_from_cache = ['Captain Marvel', 'Avengers: Infinity War', 'Ant-Man And The Wasp', 'The Fate Of The Furious', 'Deadpool 2', 'Inhumans', 'Venom', 'American Assassin', 'Black Panther']
         actual_results_from_cache = get_related_titles(["Black Panther", "Captain Marvel"])
         self.assertEqual(get_related_titles([]), [], 'Testing that the correct response is returned when no titles are included.')
         self.assertEqual(actual_results_from_cache, expected_results_from_cache, 'Testing that the correct response is returned when searching for Black Panther and Captain Marvel.')
@@ -159,7 +159,7 @@ Project - OMDB and TasteDive
 
       def test_output(self):
         self.assertEqual(get_movie_rating(get_movie_data("Venom")), 0, "Testing that the code is acurate for Venom (no rating).")
-        self.assertEqual(get_movie_rating(get_movie_data("Deadpool 2")), 82, "Testing that the code for 'Deadpool 2'.")
+        self.assertEqual(get_movie_rating(get_movie_data("Deadpool 2")), 83, "Testing that the code for 'Deadpool 2'.")
 
     myTests().main()
 
