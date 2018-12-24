@@ -50,7 +50,7 @@ Take a look at the output produced when you press the ``run`` button. There is o
 each friend. Here's how it works:
 
 
-* **name** in this ``for`` statement is called the **loop variable**.
+* **name** in this ``for`` statement is called the **loop variable** or, alternatively, the **iterator variable**.
 * The list of names in the square brackets is the sequence over which we will iterate.
 * Line 2  is the **loop body**.  The loop body is always
   indented. The indentation determines exactly what statements are "in the
@@ -68,7 +68,7 @@ each friend. Here's how it works:
 
 
 The overall syntax is ``for <loop_var_name> in <sequence>:``
+
 * Between the words for and in, there must be a variable name for the loop variable. You can't put a whole expression there.
 * A colon is required at the end of the line
 * After the word in and before the colon is an expression that must evaluate to a sequence (e.g, a string or a list or a tuple). It could be a literal, or a variable name, or a more complex expression.
-
