@@ -9,24 +9,11 @@ import pkg_resources
 
 sys.path.append(os.getcwd())
 
-home_dir = os.getcwd()
-hostname = socket.gethostname()
-if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
-    master_url = 'https://runestone.academy'
-elif hostname == 'fopp.umsi.education':
-    master_url = 'https://fopp.umsi.education'
-else:
-    master_url = 'http://127.0.0.1:8000'
-
-master_url = 'http://127.0.0.1:8000'
-master_url = 'https://fopp.umsi.education'
-# master_url = ''  # use relative paths
+master_url = ''
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
 dest = "../../static"
-
-
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -38,7 +25,7 @@ options(
         confdir=".",
         project_name = "fopp",
         template_args={'course_id': 'fopp',
-                       'login_required':'true',
+                       'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
                        'course_url':master_url,
@@ -50,11 +37,10 @@ options(
                        'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
-                       'downloads_enabled': 'true',
+                       'downloads_enabled': 'false',
                        'enable_chatcodes': 'false',
-                       'google_ga_account': 'UA-21213626-9',
                        'lockdown': "True"
-                     }
+                        }
     )
 )
 
