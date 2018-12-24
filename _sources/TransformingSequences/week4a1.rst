@@ -144,7 +144,7 @@ Chapter Assessment - List Methods
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to rearrage the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
+    Write code to rearrange the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
     ~~~~
     winners = ['Kazuo Ishiguro', 'Rainer Weiss', 'Youyou Tu', 'Malala Yousafzai', 'Alice Munro', 'Alvin E. Roth']
 
@@ -534,7 +534,7 @@ Chapter Assessment - Accumulator Pattern
    :answer_a: 1.
    :answer_b: 2.
    :answer_c: 3.
-   :answer_d: .
+   :answer_d: 4.
    :answer_e: none of the above would be appropriate for the problem. 
    :correct: d
    :feedback_a: How does this solution know that the element of lst is a string and that s should be updated?
