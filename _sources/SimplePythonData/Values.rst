@@ -37,7 +37,7 @@ The printed representation of a character string, however, is not exactly the sa
     print("Hello, World!")
 
 .. note::
-   **Literals** appear in programs. The Python interpreter turns literals into **values**, which have internal representations that people never get to see directly.  **Outputs** are external representations of values that appear in the output window. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external reprsentations as values.
+   **Literals** appear in programs. The Python interpreter turns literals into **values**, which have internal representations that people never get to see directly.  **Outputs** are external representations of values that appear in the output window. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external representations as values.
 
 Numbers with a decimal point belong to a class
 called **float**, because these numbers are represented in a format called

@@ -14,6 +14,10 @@
 Testing classes
 ---------------
 
+.. note::
+
+    This page depends on the use of the test module, which is introduced in :ref:`the testing chapter <test_cases_chap>`. If you haven't covered that chapter yet, you will want to delay reading this page until you do.
+
 To test a user-defined class, you will create test cases that check whether instances are created properly, and you will 
 create test cases for each of the methods as functions, by invoking them on particular instances and seeing whether they 
 produce the correct return values and side effects, especially side effects that change data stored in the instance 
@@ -49,7 +53,7 @@ Try adding some more tests in the code below, once you understand what's there.
 
     import test
 
-    #testing instance variables x and y
+    #testing class constructor (__init__ method)
     p = Point(3, 4)
     test.testEqual(p.y, 4)
     test.testEqual(p.x, 3)

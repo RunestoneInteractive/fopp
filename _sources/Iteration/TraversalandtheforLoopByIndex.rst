@@ -18,7 +18,7 @@ Traversal and the ``for`` Loop: By Index
 
 It is also possible to iterate through the *indexes* of a string or sequence. The ``for`` loop can then be used to 
 iterate over these positions. These positions can be used together with the indexing operator to access the individual
-characters in the string. We can use **Enumerate**, a built-in Python function, to make this proccess easier because it 
+characters in the string. We can use **Enumerate**, a built-in Python function, to make this process easier because it 
 allows us to loop through something and have an automatic counter.
 
 .. activecode:: ac14_6_1

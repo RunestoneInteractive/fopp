@@ -46,6 +46,6 @@ This option involves iterating over the file itself while still iterating over e
 
    fname = "yourfile.txt"
    with open(fname, 'r') as fileref:         # step 1
-       for lin in lines:                     # step 2
+       for lin in fileref:                   # step 2
            ## some code that reference the variable lin
    #some other code not relying on fileref   # step 3

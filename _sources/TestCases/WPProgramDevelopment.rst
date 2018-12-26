@@ -24,6 +24,9 @@ called **incremental development**. The goal of incremental development is to
 avoid long debugging sessions by adding and testing only a small amount of code
 at a time.
 
+If you write unit tests before doing the incremental development, you will be able to track your progress as the code passes more and more of the tests. Alternatively, you can write additional tests at each stage of incremental development.
+ Then you will be able to check whether any code change you make at a later stage of development causes one of the earlier tests, which used to pass, to not pass any more.
+
 As an example, suppose you want to find the distance between two points, given
 by the coordinates (x\ :sub:`1`\ , y\ :sub:`1`\ ) and
 (x\ :sub:`2`\ , y\ :sub:`2`\ ).  By the Pythagorean theorem, the distance is:
@@ -43,26 +46,38 @@ Already we can write an outline of the function that captures our thinking so fa
 .. sourcecode:: python
     
     def distance(x1, y1, x2, y2):
-        return 0.0
+        return None
 
 Obviously, this version of the function doesn't compute distances; it always
-returns zero. But it is syntactically correct, and it will run, which means
+returns None. But it is syntactically correct, and it will run, which means
 that we can test it before we make it more complicated.
 
-We import the test module to enable us to write a unit test for the function.
+We import the test module to enable us to write a unit test for the function. The distance between any point and itself should be 0.
 
 .. activecode:: ac400_1_1
     
     import test
     def distance(x1, y1, x2, y2):
-        return 0.0
+        return None
 
     test.testEqual(distance(1, 2, 1, 2), 0)
 
 The ``testEqual`` function from the test module calls the distance function with sample inputs: (1,2, 1,2).
 The first 1,2 are the coordinates of the first point and the second 1,2 are the coordinates of the second point.
 What is the distance between these two points? Zero. ``testEqual`` compares what is returned by the distance function
-and the 0 (the correct answer).
+and the None that is returned.
+
+It's not returning the correct answer, so we don't pass the test. Let's fix that.
+
+.. activecode:: ac400_1_2
+
+    import test
+    def distance(x1, y1, x2, y2):
+        return 0.0
+
+    test.testEqual(distance(1, 2, 1, 2), 0)
+
+Now we pass the test. But really, that's not a sufficient test.
 
 .. admonition:: Extend the program ...
 
@@ -70,13 +85,27 @@ and the 0 (the correct answer).
 
    On line 7, write another unit test. Use (0,0, 1,1) as the parameters to the distance function. How far apart are these two points? Use that value as the correct answer for this unit test.
 
-   The first test passes but the others fail since the distance function does not yet contain all the necessary steps.
+   Are there any other edge cases that you think you should consider? Perhaps points with negative numbers for x-values or y-values?
 
 
 **When testing a function, it is essential to know the right answer.**
 
 For the second test the horizontal distance equals 3 and the vertical distance equals 4; that way, the result is 
 5 (the hypotenuse of a 3-4-5 triangle). For the third test, we have a 1-1-sqrt(2) triangle.
+
+.. activecode:: ac400_1_3
+
+    import test
+    def distance(x1, y1, x2, y2):
+        return 0
+
+    test.testEqual(distance(1,2, 1,2), 0)
+    test.testEqual(distance(1,2, 4,6), 5)
+    test.testEqual(distance(0,0, 1,1), 2**0.5)
+
+
+
+The first test passes but the others fail since the distance function does not yet contain all the necessary steps.
 
 At this point we have confirmed that the function is syntactically correct, and we can start adding lines of code. 
 After each incremental change, we test the function again. If an error occurs at any point, we know where it must be 
@@ -110,7 +139,7 @@ we compute and return the result.
 
 .. index:: testing, unit test
 
-.. activecode:: ac400_1_2
+.. activecode:: ac400_1_4
     
     import test
     def distance(x1, y1, x2, y2):
@@ -122,6 +151,7 @@ we compute and return the result.
 
     test.testEqual(distance(1,2, 1,2), 0)
     test.testEqual(distance(1,2, 4,6), 5)
+    test.testEqual(distance(0,0, 1,1), 2**0.5)
 
 
 ..     test.testEqual(distance(0,0, 1,1), 1.41)
