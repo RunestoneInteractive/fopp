@@ -108,7 +108,7 @@ casting it as a list but it is best for you to try and get into the habit of cas
        sec_accum = sec_accum + w
    print(sec_accum)
 
-Because the the range function is exclusive of the ending number, we have to use 11 as the function input. 
+Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
 
 We can use the accumulation pattern is count the number of something or to sum up a total. The 
 above examples only covered how to get the sum for a list, but we can also count how many items are 

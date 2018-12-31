@@ -104,9 +104,9 @@ Chapter Assessment
    :answer_c: ['travel', 'lights']
    :answer_d: ['world', 'travel']
    :correct: c 
-   :feedback_a: When we take a slice of something, it is inclusive of the first number and exclusive of the second.
-   :feedback_b: When we take a slice of something, it is inclusive of the first number and exclusive of the second. Additionally, Python is a zero-index based language.
-   :feedback_c: Yes, python is a zero-index based language and slices are inclusive of the first number and exclusive of the second.
+   :feedback_a: When we take a slice of something, it includes the item at the first index and excludes the item at the second index.
+   :feedback_b: When we take a slice of something, it includes the item at the first index and excludes the item at the second index. Additionally, Python is a zero-index based language.
+   :feedback_c: Yes, python is a zero-index based language and slices are inclusive of the first index and exclusive of the second.
    :feedback_d: Python is a zero-index based language.
    :practice: T
    :topics: Sequences/TheSliceOperator
@@ -165,7 +165,7 @@ Chapter Assessment
    :answer_c: float
    :answer_d: list
    :correct: d
-   :feedback_a: Not quite, think about what the result of .split() is.
+   :feedback_a: Not quite; .split() returns a list, each of whose elements is a string.
    :feedback_b: Not quite, look again at what types are present and what the result of .split() is.
    :feedback_c: Not quite, look again at what types are present and what the result of .split() is.
    :feedback_d: Yes, the .split() method returns a list.
@@ -220,8 +220,8 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(how_many, 3, "Testing that how_many is set correctly (Don't worry about actual and expected values).")
-        self.assertNotIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+        self.assertEqual(how_many, 3, "Testing that how_many is set correctly.")
+        self.assertNotIn('for', self.getEditorText(), "Testing that you didn't use a for loop (Don't worry about actual and expected values).")
 
     myTests().main()
 
@@ -231,7 +231,7 @@ Chapter Assessment
     :practice: T
     :topics: Sequences/CountandIndex
 
-    Write code to get rid of the the second 8 so that here are only two 8's in the list nums. 
+    Write code that uses slicing to get rid of the the second 8 so that here are only two 8's in the list bound to the variable `nums`.
     ~~~~
     nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
@@ -243,7 +243,7 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(nums, [4, 2, 8, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4], "Testing that nums is set correctly (Don't worry about actual and expected values).")
+        self.assertEqual(nums, [4, 2, 8, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4], "Testing that nums is set correctly.")
 
     myTests().main()
 
@@ -297,7 +297,7 @@ Chapter Assessment
 
    Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
    ~~~~
-   sent = "The bicentennial for our university is in 2017!"
+   sent = "The bicentennial for our university was in 2017"
 
    =====
 
