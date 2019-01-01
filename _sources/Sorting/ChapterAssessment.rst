@@ -57,6 +57,70 @@ Chapter Assessment
 
    myTests().main()
 
+.. activecode:: assess_ac18_7_2a
+    :language: python
+    :practice: T
+    :topics: Sorting/intro-SortingwithSortandSorted
+
+    Write code to rearrange the strings in the list ``winners`` so that they are in alphabetical order by first name from A to Z.
+    ~~~~
+    winners = ['Kazuo Ishiguro', 'Rainer Weiss', 'Youyou Tu', 'Malala Yousafzai', 'Alice Munro', 'Alvin E. Roth']
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def test_output(self):
+        self.assertEqual(winners, ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu'], "Testing that winners is set correctly.")
+
+    myTests().main()
+
+.. activecode:: assess_ac18_7_2b
+    :language: python
+    :practice: T
+    :topics: Sorting/Optionalreverseparameter
+
+    Write code to switch the order of the ``winners`` list so that it is now Z to A, by first name. Assign this list to the variable ``z_winners``.
+    ~~~~
+    winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def test_output(self):
+        self.assertEqual(z_winners, ['Youyou Tu','Rainer Weiss', 'Malala Yousafzai','Kazuo Ishiguro', 'Alvin E. Roth', 'Alice Munro'], "Testing that z_winners is set correctly.")
+
+    myTests().main()
+
+
+.. activecode:: assess_ac18_7_2c
+    :language: python
+    :practice: T
+    :topics: Sorting/Optionalkeyparameter
+
+    Write code to switch the order of the ``winners`` list so that it is now A to Z by *last name*. Assign this list to the variable ``z_winners``.
+    ~~~~
+    winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def test_output(self):
+        self.assertEqual(z_winners, ['Kazuo Ishiguro', 'Alice Munro', 'Alvin E. Roth', 'Youyou Tu', 'Rainer Weiss', 'Malala Yousafzai'], "Testing that z_winners is set correctly.")
+
+    myTests().main()
+
 
 .. activecode:: ac18_7_3
    :language: python
