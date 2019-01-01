@@ -77,14 +77,9 @@ Project - OMDB and TasteDive
     class myTests(TestCaseGui):
 
       def test_extract_movie_titles(self):
-        print('Running test checking for results from\n   extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))')
-        results = ['The Startup Kids', Charlie Chaplin', 'Venus In Fur', 'Loving', 'The African Queen']
-        self.assertEqual(extract_movie_titles(get_movies_from_tastedive("Tony Bennett")), results, "Testing that correct results are returned for 'Tony Bennett'.")
-        print('Running test checking for results from\n   extract_movie_titles(get_movies_from_tastedive("Black Panther"))')
-        sample_from_cache = extract_movie_titles(get_movies_from_tastedive("Black Panther"))
-        self.assertEqual(type(sample_from_cache), type([]), "Testing that correct results are returned for 'Black Panther'." )
-        
-        
+        results = ['The Startup Kids', 'Charlie Chaplin', 'Venus In Fur', 'Loving', 'The African Queen']
+        self.assertEqual(extract_movie_titles(get_movies_from_tastedive("Tony Bennett")), results, 'Testing that correct results are returned for extract_movie_titles(get_movies_from_tastedive("Tony Bennett").')
+
 
     myTests().main()
 
