@@ -34,6 +34,9 @@ Project - OMDB and TasteDive
 
     ~~~~
 
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # get_movies_from_tastedive("Bridesmaids")
+    # get_movies_from_tastedive("Black Panther")
 
     =====
 
@@ -69,7 +72,9 @@ Project - OMDB and TasteDive
     Please copy the completed function from above into this active code window. Next, you will need to write a function that extracts just the list of movie titles from a dictionary returned by ``get_movies_from_tastedive``. Call it ``extract_movie_titles``.
     ~~~~
 
-
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
+    # extract_movie_titles(get_movies_from_tastedive("Black Panther"))
     =====
 
     from unittest.gui import TestCaseGui
@@ -94,6 +99,9 @@ Project - OMDB and TasteDive
     Please copy the completed functions from the two code windows above into this active code window. Next, you'll write a function, called ``get_related_titles``. It takes *a list of movie titles* as input. It gets five related movies for each from TasteDive, extracts the titles for all of them, and combines them all into a single list. Don't include the same movie twice.
     ~~~~
 
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # get_related_titles(["Black Panther", "Captain Marvel"])
+    # get_related_titles([])
 
     =====
 
@@ -124,6 +132,9 @@ Project - OMDB and TasteDive
 
     ~~~~
 
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # get_movie_data("Venom")
+    # get_movie_data("Baby Mama")
 
     =====
 
@@ -147,6 +158,8 @@ Project - OMDB and TasteDive
     Please copy the completed function from above into this active code window. Now write a function called ``get_movie_rating``. It takes an OMDB dictionary result for one movie and extracts the Rotten Tomatoes rating as an integer. For example, if given the OMDB dictionary for "Black Panther", it would return 97. If there is no Rotten Tomatoes rating, return 0.
     ~~~~
 
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # get_movie_rating(get_movie_data("Deadpool 2"))
 
     =====
 
@@ -171,6 +184,8 @@ Project - OMDB and TasteDive
     Now, you'll put it all together. Don't forget to copy all of the functions that you have previously defined into this code window. Define a function ``get_sorted_recommendations``. It takes a list of movie titles as an input. It returns a sorted list of related movie titles as output, up to five related movies for each input movie title. The movies should be sorted in descending order by their Rotten Tomatoes rating, as returned by the ``get_movie_rating`` function.
     ~~~~
 
+    # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+    # get_sorted_recommendations(["Bridesmaids", "Sherlock Holmes"])
 
     =====
 
