@@ -38,6 +38,7 @@
 {% macro navBar() %}
 
 <!-- Begin navbar -->
+
 <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
   <div class="container">
@@ -51,7 +52,11 @@
       </button>
 
       <div>
+        {% if lockdown -%}
+        <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        {%- else -%}
         <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;' href="/{{appname}}/default/user/login">&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        {%- endif -%}
         <a class="navbar-brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
       </div>
     </div>
@@ -62,9 +67,11 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
         <!-- social media dropdown -->
+       {% if lockdown != 'True' -%}
+
         <li class="dropdown">
+
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
             <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social"></span></i>
           </a>
@@ -93,8 +100,11 @@
 
                 </div>
               </li>
+
           </ul>
+
         </li>
+          {%- endif -%}
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
@@ -143,19 +153,27 @@
             <li class="divider"></li>
             <li><a href='{{course_url}}/{{appname}}/assignments/practice'>Practice</a></li>
             <li class="divider"></li>
+               {% if lockdown != 'True' -%}
             <li><a href='/{{appname}}/default/courses'>Change Course</a></li>
-            <li class="divider"></li>
-            <li><a href='{{course_url}}/{{appname}}/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
-            <li><a href='{{course_url}}/{{appname}}/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
-            <li><a href='{{course_url}}/{{appname}}/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
-            <li><a href='{{course_url}}/{{appname}}/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+               {%- endif -%}
+            {% if lockdown != 'True' -%}
+                <li class="divider"></li>
+                <li><a href='{{course_url}}/{{appname}}/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+                <li><a href='{{course_url}}/{{appname}}/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+                <li><a href='{{course_url}}/{{appname}}/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+                <li><a href='{{course_url}}/{{appname}}/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+              {%- endif -%}
 			<li class="divider"></li>
-            <li><a href='{{course_url}}/{{appname}}/admin/index'>Instructor's Page</a></li>
+              {% if lockdown != 'True' -%}
+                <li><a href='{{course_url}}/{{appname}}/admin/index'>Instructor's Page</a></li>
+              {%- endif -%}
             <li><a href='{{ course_url }}/{{ appname }}/assignments/index'>Progress Page</a></li>
             <li class="divider"></li>
-            <li><a href="{{course_url}}/{{appname}}/default/user/profile" id="profilelink">Edit Profile</a></li>
-            <li><a href="{{course_url}}/{{appname}}/default/user/change_password" id="passwordlink">Change Password</a></li>
-            <li><a href="{{course_url}}/{{appname}}/default/user/register" id="registerlink">Register</a></li>
+              {% if lockdown != 'True' -%}
+                <li><a href="{{course_url}}/{{appname}}/default/user/profile" id="profilelink">Edit Profile</a></li>
+                <li><a href="{{course_url}}/{{appname}}/default/user/change_password" id="passwordlink">Change Password</a></li>
+                <li><a href="{{course_url}}/{{appname}}/default/user/register" id="registerlink">Register</a></li>
+              {%- endif -%}
             <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
           </ul>
         </li>
@@ -171,6 +189,8 @@
 
         <li class="divider-vertical"></li>
 
+
+       {% if lockdown != 'True' -%}
         <!-- help menu dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -187,7 +207,7 @@
         <!-- end help menu dropdown -->
 
         <li class="divider-vertical"></li>
-
+       {%- endif -%}
       </ul>
 
       <ul class="nav navbar-nav">
@@ -244,7 +264,7 @@
   eBookConfig.downloadsEnabled = {{downloads_enabled}};
   eBookConfig.enable_chatcodes = {{enable_chatcodes}} ? {{ enable_chatcodes }} : false;
 </script>
-
+{% if lockdown != 'True' -%}
 <div id="fb-root"></div>
 <script>
   (function(d, s, id) {
@@ -255,6 +275,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 </script>
+{% endif %}
 
 {% endblock %}
 
@@ -283,8 +304,11 @@
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
+      {% if lockdown != 'True' -%}
+        <span id='numuserspan'></span> readers online now |
+      {%- endif -%}
       {% if use_services == 'true' %}
-      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      <span class='loggedinuser'></span>
       {% endif %}
       | <a href="#">Back to top</a>
       {% if theme_source_link_position == "footer" %}
@@ -314,7 +338,7 @@
 {% if appname == "runestone" %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_setAccount', '{{ google_ga_account }}']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -323,7 +347,10 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+
+{% if lockdown != 'True' -%}
 <script async src="https://hypothes.is/embed.js"></script>
+{% endif %}
 
 {% endif %}
 
