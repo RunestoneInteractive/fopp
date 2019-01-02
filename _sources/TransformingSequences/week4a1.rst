@@ -79,7 +79,7 @@ Chapter Assessment - List Methods
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to add 'horseback riding' to the third position (english third) in the list ``sports``.
+    Write code to add 'horseback riding' to the third position (i.e., right before volleyball) in the list ``sports``.
     ~~~~
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
@@ -91,7 +91,7 @@ Chapter Assessment - List Methods
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(sports, ['cricket', 'football', 'horseback riding', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey'], "Testing that sports is set correctly (Don't worry about actual and expected values).")
+        self.assertEqual(sports, ['cricket', 'football', 'horseback riding', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey'], "Testing that sports is set correctly.")
 
     myTests().main()
 
@@ -112,7 +112,7 @@ Chapter Assessment - List Methods
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(trav_dest, ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne'], "Testing that trav_dest is set correctly (Don't worry about actual and expected values).")
+        self.assertEqual(trav_dest, ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne'], "Testing that trav_dest is set correctly.")
 
     myTests().main()
 
@@ -133,53 +133,12 @@ Chapter Assessment - List Methods
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(trav_dest, ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne', 'Guadalajara'], "Testing that trav_dest is set correctly (Don't worry about actual and expected values).")
-        self.assertNotIn('+', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-        self.assertIn('.', self.getEditorText(), "Testing that a method was used in your code (Don't worry about actual and expected values).")
+        self.assertEqual(trav_dest, ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne', 'Guadalajara'], "Testing that trav_dest is set correctly.")
+        self.assertNotIn('+', self.getEditorText(), "Testing that you are not using concatenation (+).")
+        self.assertIn('.', self.getEditorText(), "Testing that a method invocation was used in your code.")
 
     myTests().main()
 
-.. activecode:: assess_ac4_1_1_7
-    :language: python
-    :practice: T
-    :topics: TransformingSequences/MutatingMethods
-
-    Write code to rearrage the strings in the list ``winners`` so that they are in alphabetical order from A to Z.
-    ~~~~
-    winners = ['Kazuo Ishiguro', 'Rainer Weiss', 'Youyou Tu', 'Malala Yousafzai', 'Alice Munro', 'Alvin E. Roth']
-
-
-    =====
-
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-      def test_output(self):
-        self.assertEqual(winners, ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu'], "Testing that winners is set correctly (Don't worry about actual and expected values).") 
-
-    myTests().main()      
-
-.. activecode:: assess_ac4_1_1_8
-    :language: python
-    :practice: T
-    :topics: TransformingSequences/MutatingMethods
-
-    Write code to switch the order of the ``winners`` list so that it is now Z to A. Assign this list to the variable ``z_winners``. 
-    ~~~~
-    winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
-
-
-    =====
-
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-      def test_output(self):
-        self.assertEqual(z_winners, ['Youyou Tu','Rainer Weiss', 'Malala Yousafzai','Kazuo Ishiguro', 'Alvin E. Roth', 'Alice Munro'], "Testing that z_winners is set correctly (Don't worry about actual and expected values).")
-
-    myTests().main()
 
 Chapter Assessment - Aliases and References
 ===========================================
@@ -208,8 +167,8 @@ Chapter Assessment - Aliases and References
 .. mchoice:: assess_question3_3_1_2
    :answer_a: yes
    :answer_b: no
-   :feedback_a: Yes, the intent by the programmer was not executed properly if they wanted to print the list ['q', 'u'] because of aliasing.
-   :feedback_b: If the intent was to print the list ['q', 'u'] then aliasing would cause a problem because z also replaces the 'u' with an 'i'.
+   :feedback_a: Yes, b and z reference the same list and changes are made using both aliases.
+   :feedback_b: Can you figure out what the value of b is only by looking at the lines that mention b?
    :correct: a
    :practice: T
    :topics: TransformingSequences/Aliasing
@@ -223,27 +182,6 @@ Chapter Assessment - Aliases and References
     b[1] = 'i'
     z.remove('i')
     print(z)
-
-.. mchoice:: assess_question3_3_1_3
-   :answer_a: yes
-   :answer_b: no
-   :feedback_a: Though both lists have changed, it is not as likely to cause confusion.
-   :feedback_b: These operations on the lists are not likely to cause confusion.
-   :correct: b
-   :practice: T
-   :topics: TransformingSequences/Aliasing
-
-   Could aliasing cause potential confusion in this problem?
-
-   .. sourcecode:: python
-  
-    b = ['q', 'u', 'i']
-    z = b
-    b[1] = 'i'
-    for elem in b:
-        print(elem)
-    for item in z:
-        print(item)
 
 .. mchoice:: assess_question3_3_1_4
    :answer_a: yes
@@ -368,7 +306,7 @@ Chapter Assessment - Split and Join
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(pos, 1, "Testing that pos is set correctly (Don't worry about actual and expected values).")
+        self.assertEqual(pos, 1, "Testing that pos is set correctly.")
 
     myTests().main()
 
@@ -432,7 +370,7 @@ Chapter Assessment - For Loop Mechanics
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   Which of these is the iterator variable?
+   Which of these is the iterator (loop) variable?
    
    .. sourcecode:: python
 
@@ -445,7 +383,7 @@ Chapter Assessment - For Loop Mechanics
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   What is the iterator variable in the following?
+   What is the iterator (loop) variable in the following?
 
    .. sourcecode:: python
 
@@ -479,7 +417,7 @@ Chapter Assessment - For Loop Mechanics
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(chars, ['I', ' ', 'l', 'o', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'o', 'n'], "Testing that chars is assigned to correct values.")
+         self.assertEqual(chars, ['I', ' ', 'l', 'o', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'o', 'n'], "Testing that chars is assigned the correct value.")
 
    myTests().main()
 
@@ -534,7 +472,7 @@ Chapter Assessment - Accumulator Pattern
    :answer_a: 1.
    :answer_b: 2.
    :answer_c: 3.
-   :answer_d: .
+   :answer_d: 4.
    :answer_e: none of the above would be appropriate for the problem. 
    :correct: d
    :feedback_a: How does this solution know that the element of lst is a string and that s should be updated?
@@ -619,7 +557,7 @@ Chapter Assessment - Accumulator Pattern
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Which of these are good names for an iterator variable? Select as many as apply.
+   Which of these are good names for an iterator (loop) variable? Select as many as apply.
 
 .. mchoice:: assess_question5_2_1_5
    :multiple_answers:
@@ -674,7 +612,7 @@ Chapter Assessment - Accumulator Pattern
 
       def testOne(self):
          self.assertEqual(app, ['p','y','t','h','o','n', "!"], "Testing that app has the correct elements." )
-         self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('append', self.getEditorText(), "Testing that your code uses append.")
 
    myTests().main()
 
@@ -707,7 +645,7 @@ Chapter Assessment - Accumulator Pattern
     Write code to create a **list of word lengths** for the words in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_words_list``. (You should use the ``len`` function).
 
     ~~~~
-    original_str = "The quick brown rhino jumped over the extremely lazy fox."
+    original_str = "The quick brown rhino jumped over the extremely lazy fox"
 
 
     =====
@@ -718,7 +656,7 @@ Chapter Assessment - Accumulator Pattern
 
         def testOne(self):
            self.assertEqual(num_words_list, map(len, original_str.split()), "Testing whether num_words_list has the correct value")
-           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code. (Don't worry about Actual and Expected Values.)")
+           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code.")
 
     myTests().main()
 
@@ -740,7 +678,7 @@ Chapter Assessment - Accumulator Pattern
 
       def testOne(self):
          self.assertEqual(lett, "bbbbbbb", "Testing that lett has the correct value." )
-         self.assertNotIn("bbbbbbb", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn("bbbbbbb", self.getEditorText(), "Testing that you didn't hardcode the answer.")
 
    myTests().main()
 
@@ -765,8 +703,8 @@ Chapter Assessment - Problem Solving
 
       def testOne(self):
          self.assertEqual(a_scores, 10, "Testing that you got the right count.")
-         self.assertIn('for', self.getEditorText(), "Testing that you used a for loop (Don't worry about actual and expected values.)")
-         self.assertIn('if', self.getEditorText(), "Testing that you used a conditional (Don't worry about actual and expected values.)")
+         self.assertIn('for', self.getEditorText(), "Testing that you used a for loop.")
+         self.assertIn('if', self.getEditorText(), "Testing that you used a conditional.")
 
    myTests().main()
 
@@ -790,7 +728,7 @@ Chapter Assessment - Problem Solving
       def testOne(self):
          self.assertEqual(acro, 'OHSE', 'Checking that acro has been set correctly.')
          self.assertTrue(type(acro) == type("string"), "Checking that acro is a string.")
-         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('for', self.getEditorText(), "Testing that you used a for loop.")
 
    myTests().main()
 
@@ -800,10 +738,10 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a captial letter, and each element of the acronym should be separated by a ". ". Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO". 
+   Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a capital letter, and each element of the acronym should be separated by a ". ". Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO".
    ~~~~
-   stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and']
-   sent = "The water, earth, and air are vital."
+   stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
+   sent = "The water earth and air are vital"
 
    =====
 
@@ -814,7 +752,7 @@ Chapter Assessment - Problem Solving
       def testOne(self):
          self.assertEqual(acro, 'WA. EA. AI. AR. VI', 'Checking that acro has been set correctly.')
          self.assertTrue(type(acro) == type("string"), "Checking that acro is a string.")
-         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertIn('for', self.getEditorText(), "Testing that you used a for loop.")
 
    myTests().main()
 
@@ -861,8 +799,8 @@ Chapter Assessment - Problem Solving
    class myTests(TestCaseGui):
 
       def testOne(self):
-          self.assertIn('for', self.getEditorText(), "Testing whether your code includes a for loop (Don't worry about actual and expected values).")
-          self.assertIn('.format(', self.getEditorText(), "Testing whether your code invokes the .format method (Don't worry about actual and expected values).")
+          self.assertIn('for', self.getEditorText(), "Testing whether your code includes a for loop.")
+          self.assertIn('.format(', self.getEditorText(), "Testing whether your code invokes the .format method.")
           self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your output.")
 
          

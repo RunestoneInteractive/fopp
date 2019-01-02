@@ -117,7 +117,7 @@ that is expecting a list, its the same as passing the list of keys.
       
   # now loop through the sorted keys
   for k in sorted(d, key=lambda k: d[k], reverse=True):
-        print("{} appears {} times".format(x, d[x]))
+        print("{} appears {} times".format(k, d[k]))
 
 Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come 
 across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter 

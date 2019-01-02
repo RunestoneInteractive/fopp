@@ -22,7 +22,7 @@ taken care of before you begin writing it out.
 To make sure that your code covers all of the conditions that you intend for it to cover, you 
 should add comments for each clause that explains what that clause is meant to do. Then, you 
 should add tests for each possible path that the program could go though. What leads 
-to certain conditional statements being executed? Is that was you intended?
+to certain conditional statements being executed? Is that what you intended?
 
 Choosing your type of Conditional
 ---------------------------------
