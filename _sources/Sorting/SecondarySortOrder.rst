@@ -96,7 +96,7 @@ We can use this for any numerical value that we want to sort, however this will 
 .. mchoice:: question18_5_2
       :answer_a: first city name (reverse alphabetically), then temperature (lowest to highest)
       :answer_b: first temperature (highest to lowest), then city name (alphabetically)
-      :answer_c: first city name (reverse alphabetically), then temperature (lowest to highest)
+      :answer_c: first city name (reverse alphabetically), then temperature (highest to lowest)
       :answer_d: first temperature (lowest to highest), then city name (alphabetically)
       :answer_e: first city name (alphabetically), then temperature (lowest to highest)
       :feedback_a: Correct! In this case, the reverse parameter will cause the country name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.

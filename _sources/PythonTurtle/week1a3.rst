@@ -64,29 +64,19 @@ Chapter Assessment - Turtle and Object Mechanics
 
    What does each instance of the Turtle class represent?
 
-.. mchoice:: assess_question1_3_1_1_4
-   :answer_a: True
-   :answer_b: False
-   :correct: a
-   :feedback_a: Just like the variables you've learned about so far, you can assign values to an attribute and look up the values that are assigned to the attribute.
-   :feedback_b: The only difference is the structure that is used to refer to it.
-   :practice: T
-   :topics: PythonTurtle/ObjectInstances
-
-   True or False, attributes/instance variables are just like other variables in Python.
 
 .. mchoice:: assess_question1_3_1_1_5
    :multiple_answers:
    :answer_a: Change the value of an attribute.
    :answer_b: Return values.
-   :answer_c: Create new attributes and set their value.
-   :answer_d: Delete instances of a class.
+   :answer_c: Create new attributes of an instance and set their values.
+   :answer_d: Delete object instances.
    :answer_e: None of the above.
    :correct: a,b,c
    :feedback_a: Methods can change the value that is associated with an attribute. 
    :feedback_b: Methods can return values.
-   :feedback_c: Methods can create new attributes and then set that attribute's value.
-   :feedback_d: Methods cannot delete instances of a class.
+   :feedback_c: Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.
+   :feedback_d: You do not explicitly delete object instances; when there are no variables or other references to them, so that they can't be accessed, they are automatically deleted.
    :feedback_e: Methods can do at least one of the above. Take another look.
    :practice: T
    :topics: PythonTurtle/ObjectInstances
@@ -101,21 +91,21 @@ Chapter Assessment - Turtle and Object Mechanics
    :answer_d: student(title)
    :answer_e: student.title
    :correct: e
-   :feedback_a: This is not the structure used to refer to an attribute.
-   :feedback_b: This is not the structure or order used to refer to an attribute.
-   :feedback_c: This is not the order used to refer to an attribute.  
+   :feedback_a: This accesses the attribute but then tries to invoke it as a method, which will fail if title is not a method.
+   :feedback_b: student is the object, so it goes before the period; the attribute goes after.
+   :feedback_c: student is the object, so it goes before the period; the attribute goes after.
    :feedback_d: This would be the syntax for a function named student being called on a variable named title.
-   :feedback_e: Yes, this is the correct structure to use.
+   :feedback_e: Yes, this is the correct syntax to use.
    :practice: T 
    :topics: PythonTurtle/ObjectInstances
 
-   For an instance of a class that is assigned to the variable ``student``, what is the propper way to refer to the ``title`` attribute/instance variable?
+   For an instance of a class that is assigned to the variable ``student``, what is the proper way to refer to the ``title`` attribute/instance variable?
 
 .. fillintheblank:: assess_question1_3_1_1_7
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   What is the name of the attribute in the following code?
+   What is the name of jane's attribute (not method) that is referred to in the following code?
 
    .. sourcecode:: python
 
@@ -129,7 +119,7 @@ Chapter Assessment - Turtle and Object Mechanics
 
    -  :x: Good work!
       :jane: jane is an instance, not an attribute.
-      :forward: forward is a method, not an attribute.
+      :forward: forward is a method.
       :turtle: turtle is the class, not an attribute.
       :Turtle: Turtle is a method, not an attribute
       :.*: Incorrect, try again.
@@ -138,7 +128,7 @@ Chapter Assessment - Turtle and Object Mechanics
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   What is the name of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them.
+   What are the names of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them.
 
    .. sourcecode:: python
 
@@ -170,7 +160,15 @@ Chapter Assessment - Turtle and Object Mechanics
 Chapter Assessment - Drawing with Turtle
 ----------------------------------------
 
-**Check your understanding**
+.. activecode:: assess_ps_01_09a
+    :language: python
+
+    Write code to draw a regular pentagon (a five-sided figure with all sides the same length).
+
+    ~~~~
+    import turtle
+
+
 
 .. activecode:: assess_ps_01_09
     :language: python

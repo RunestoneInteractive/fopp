@@ -13,11 +13,11 @@
 👩‍💻 Keeping Track of Your Iterator Variable and Your Iterable
 ===============================================================
 
-When students first begin using for loops, they sometimes have difficulty understanding the difference between the iterator variable and the iterable. 
+When students first begin using for loops, they sometimes have difficulty understanding the difference between the iterator variable (the loop variable) and the iterable.
 
 The iterable is the object that you will parsing through in a for loop. Generally, this object does not change while the for loop is being executed.
 
-The iterator variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.  
+The iterator (loop) variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.
 
 .. mchoice:: question6_100_1
    :answer_a: string
