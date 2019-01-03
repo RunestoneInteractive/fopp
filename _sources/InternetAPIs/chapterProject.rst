@@ -178,7 +178,8 @@ Project - OMDB and TasteDive
     :language: python
     :practice: T
 
-    Now, you'll put it all together. Don't forget to copy all of the functions that you have previously defined into this code window. Define a function ``get_sorted_recommendations``. It takes a list of movie titles as an input. It returns a sorted list of related movie titles as output, up to five related movies for each input movie title. The movies should be sorted in descending order by their Rotten Tomatoes rating, as returned by the ``get_movie_rating`` function.
+    Now, you'll put it all together. Don't forget to copy all of the functions that you have previously defined into this code window. Define a function ``get_sorted_recommendations``. It takes a list of movie titles as an input. It returns a sorted list of related movie titles as output, up to five related movies for each input movie title. The movies should be sorted in descending order by their Rotten Tomatoes rating, as returned by the ``get_movie_rating`` function. Break ties in reverse alphabetic order, so that 'Yahşi Batı' comes before 'Eyyvah Eyvah'.
+
     ~~~~
 
     # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
@@ -192,7 +193,7 @@ Project - OMDB and TasteDive
 
       def test_output(self):
         sample_actual_recommendations = get_sorted_recommendations(["Bridesmaids", "Sherlock Holmes"])
-        sample_expected_recommendations = ['Date Night', 'Baby Mama', 'The Five-Year Engagement', 'Sherlock Holmes: A Game Of Shadows', 'Bachelorette', 'The A-Team', 'Bad Teacher', 'Angels & Demons', 'Prince Of Persia: The Sands Of Time', 'Pirates Of The Caribbean: On Stranger Tides']
+        sample_expected_recommendations = ['Date Night', 'The Heat', 'Baby Mama', 'The Five-Year Engagement', 'Sherlock Holmes: A Game Of Shadows', 'Bachelorette', 'Prince Of Persia: The Sands Of Time', 'Pirates Of The Caribbean: On Stranger Tides', 'Yahşi Batı', 'Eyyvah Eyvah']
         self.assertEqual(sample_actual_recommendations, sample_expected_recommendations, "Testing that actual value returned is the expected value returned.")
         self.assertEqual(type(sample_actual_recommendations), type([]), "Testing that the correct python type is returned.")
 
