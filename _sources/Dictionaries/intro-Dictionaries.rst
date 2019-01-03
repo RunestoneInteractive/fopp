@@ -20,16 +20,16 @@ Introduction: Dictionaries
 
 Here is a video to help introduce you to the important concepts in creating and using Python dictionaries.
 
-.. youtube:: OlW_7XL9muI
-    :divid: vid_keyvalpairs
+.. youtube:: eDQ19ahXsSk
+    :divid: goog_keyvalpairs
     :height: 315
     :width: 560
     :align: left
 
-Let us look at an example of using a dictionary for a simple problem. We will create a dictionary to translate English words into Spanish. 
+Let us look at an example of using a dictionary for a simple problem. We will create a dictionary to translate English words into Spanish.
 For this dictionary, the keys are strings and the values will also be strings.
 
-One way to create a dictionary is to start with the empty dictionary and add **key-value pairs**. The empty dictionary 
+One way to create a dictionary is to start with the empty dictionary and add **key-value pairs**. The empty dictionary
 is denoted ``{}``.
 
 .. codelens:: clens10_1_1
@@ -41,25 +41,25 @@ is denoted ``{}``.
     eng2sp['three'] = 'tres'
     print(eng2sp)
 
-The first assignment creates an empty dictionary named ``eng2sp``. The other assignments add new key-value pairs to 
-the dictionary. The left hand side gives the dictionary and the key being associated. The right hand side gives the 
-value being associated with that key. We can print the current value of the dictionary in the usual way. The key-value 
+The first assignment creates an empty dictionary named ``eng2sp``. The other assignments add new key-value pairs to
+the dictionary. The left hand side gives the dictionary and the key being associated. The right hand side gives the
+value being associated with that key. We can print the current value of the dictionary in the usual way. The key-value
 pairs of the dictionary are separated by commas. Each pair contains a key and a value separated by a colon.
 
-The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to 
-determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as 
+The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to
+determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as
 unpredictable.
 
-Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous 
+Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous
 output.
 
 .. codelens:: clens10_1_2
     :python: py3
-    
+
     eng2sp = {'three': 'tres', 'one': 'uno', 'two': 'dos'}
     print(eng2sp)
 
-It doesn't matter what order we write the pairs. The values in a dictionary are accessed with keys, not with indices, 
+It doesn't matter what order we write the pairs. The values in a dictionary are accessed with keys, not with indices,
 so there is no need to care about ordering.
 
 Here is how we use a key to look up the corresponding value.
@@ -77,7 +77,7 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
 
 **Check your understanding**
 
-.. mchoice:: question10_1_1 
+.. mchoice:: question10_1_1
    :answer_a: False
    :answer_b: True
    :correct: b
@@ -99,7 +99,7 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. sourcecode:: python
 
      mydict = {"cat":12, "dog":6, "elephant":23}
@@ -139,6 +139,6 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(sorted(olympics.items()), sorted([('gold', 7), ('silver', 8), ('bronze', 6)]), "Testing that olympics was created correctly.")     
+         self.assertEqual(sorted(olympics.items()), sorted([('gold', 7), ('silver', 8), ('bronze', 6)]), "Testing that olympics was created correctly.")
 
    myTests().main()

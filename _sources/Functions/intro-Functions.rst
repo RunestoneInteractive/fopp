@@ -14,8 +14,8 @@
 Introduction to Functions
 =========================
 
-.. youtube:: KJfuq5KqVkU
-    :divid: new_function_intro
+.. youtube:: 85WYZKKnaPQ
+    :divid: goog_function_intro
     :height: 315
     :width: 560
     :align: left
@@ -29,7 +29,7 @@ This breaking down of a task or problem is crucial to the successful implementat
 * display your friends' stories
 * display the ad at the bottom of the screen recommending you use the app
 
-And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to: 
+And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to:
 
 * display a single post which in turn calls functions to:
 * display the photo and name of the person posting the story
