@@ -110,7 +110,6 @@ The following activecode editor contains 10 different image processing functions
         #get the height and width of the image
         width=img.getWidth()
         height=img.getHeight()
-        # make a new window twice as tall
         newimg = image.EmptyImage(width,height)
         for row in range(height):
             for col in range(width):
@@ -178,7 +177,6 @@ The following activecode editor contains 10 different image processing functions
         #get the height and width of the image
         width=img.getWidth()
         height=img.getHeight()
-        # make a new window twice as tall
         newimg = image.EmptyImage(width,height)
         for row in range(height):
             for col in range(width):
@@ -214,7 +212,6 @@ The following activecode editor contains 10 different image processing functions
         #get the height and width of the image
         width=img.getWidth()
         height=img.getHeight()
-        # make a new window twice as tall
         newimg = image.EmptyImage(width,height)
         for row in range(height):
             for col in range(width):
@@ -242,7 +239,6 @@ The following activecode editor contains 10 different image processing functions
         #get the height and width of the image
         width=img.getWidth()
         height=img.getHeight()
-        # make a new window twice as tall
         newimg = image.EmptyImage(width,height)
         for row in range(height):
             for col in range(width):
@@ -270,7 +266,6 @@ The following activecode editor contains 10 different image processing functions
         #get the height and width of the image
         width=img.getWidth()
         height=img.getHeight()
-        # make a new window twice as tall
         newimg = image.EmptyImage(width,height)
         for row in range(height):
             for col in range(width):
