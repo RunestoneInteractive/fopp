@@ -13,6 +13,8 @@ Image Processing Functions
 The following activecode editor contains 10 different image processing functions (process1, process2, ... process10) Each of these functions accepts an image as a parameter and returns a transformed image. A few of the functions take a second parameter that tells the function how to do its job.
 
 .. activecode:: act_0_imageproc
+    :hidecode:
+    :nocodelens:
 
     import image
     import math
@@ -321,6 +323,7 @@ The following code box gives you a framework for trying each process.
 
 .. activecode:: act_0_learnfuncs
     :include: act_0_imageproc
+    :nocodelens:
 
     # Here is seed text that can go in the activecode window for them to modify
     original = image.Image('yawning_squirrel.jpg')
@@ -345,6 +348,7 @@ Now it is your turn to combine these various effects together.  The output from 
 
 .. activecode:: act_0_experiment
     :include: act_0_imageproc
+    :nocodelens:
 
     # Here is seed text that can go in the activecode window for them to modify
     original = image.Image('yawning_squirrel.jpg')
