@@ -29,10 +29,10 @@ selecting a character:
     print(singers[17:21])
     
 
-The ``slice`` operator ``[n:m]`` returns the part of the string from the n'th character
-to the m'th character, *including the first* but *excluding the last*. 
-In other words, start with the character at index n and
-go up to but *do not include* the character at index m.
+The ``slice`` operator ``[n:m]`` returns the part of the string starting
+with the character at index n and
+go up to but *not including* the character at index m. 
+Or with normal counting from 1, this is the (n+1)st character up to and including the mth character.
 
 If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
