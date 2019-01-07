@@ -44,12 +44,6 @@
 Table of Contents
 :::::::::::::::::
 
-.. raw:: html
-
-   <ul>
-   <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
-   </ul>
-
 .. toctree::
     :maxdepth: 1
     
@@ -81,7 +75,8 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
+   AdvancedAccumulation/toctree.rst
+   InternetAPIs/toctree.rst
    
 
 Appendices

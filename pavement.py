@@ -9,14 +9,7 @@ import pkg_resources
 
 sys.path.append(os.getcwd())
 
-home_dir = os.getcwd()
-hostname = socket.gethostname()
-if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
-    master_url = 'https://runestone.academy'
-elif hostname == 'fopp.learningpython.today':
-    master_url = 'https://fopp.learningpython.today'
-else:
-    master_url = 'http://127.0.0.1:8000'
+master_url = ''
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
@@ -45,7 +38,8 @@ options(
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
                        'downloads_enabled': 'false',
-                       'enable_chatcodes': 'false'
+                       'enable_chatcodes': 'false',
+                       'lockdown': "True"
                         }
     )
 )
