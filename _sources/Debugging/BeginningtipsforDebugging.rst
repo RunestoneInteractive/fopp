@@ -18,7 +18,7 @@ Debugging a program is a different way of thinking than writing a program.  The 
 
 #. Everyone is a suspect (Except Python)!  It's common for beginner programmers to blame Python, but that should be your last resort.  Remember that Python has been used to solve CS1 level problems millions of times by millions of other programmers.  So, Python is probably not the problem.
 
-#. Check your assumptions.  At this point in your career you are still developing your mental model of how Python does its work.  Its natural to think that your code is correct, but with debugging you need to make your code the primary suspect.  Even ifyou think it is right, you should verify that it really is by liberally using print statements to verify that the values of variables really are what you think they should be.  You'll be surprised how often they are not.
+#. Check your assumptions.  At this point in your career you are still developing your mental model of how Python does its work.  Its natural to think that your code is correct, but with debugging you need to make your code the primary suspect.  Even if you think it is right, you should verify that it really is by liberally using print statements to verify that the values of variables really are what you think they should be.  You'll be surprised how often they are not.
 
 #. Find clues.  This is the biggest job of the detective and right now there are two important kinds of clues for you to understand.
 
