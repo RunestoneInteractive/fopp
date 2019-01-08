@@ -10,6 +10,55 @@ For many of you reading this or taking a first course in computer science that t
 Image Processing Functions
 --------------------------
 
+Here is an example of a Python program that converts a color image to be black and white.  You may or may not be able to look at the code and figure out what it does at this point, but this is definitely an example of something you will be able to do on your own by the end of the course.
+
+.. activecode:: act_0_anim
+
+    import image
+
+    def process11(img):
+        #get the height and width of the image
+        width=img.getWidth()
+        height=img.getHeight()
+        for row in range(height):
+            for col in range(width):
+                p = img.getPixel(col, row)
+                #What are the red, blue and green values for p?
+                red_value = p.getRed()
+                green_value = p.getGreen()
+                blue_value = p.getBlue()
+                if (red_value + green_value + blue_value)/3 >= 255/2:
+                    newred = 255
+                    newgreen = 255
+                    newblue = 255
+                else:
+                    newred = 0
+                    newgreen = 0
+                    newblue = 0
+
+                #set new pixel to new color values.
+                newpixel = image.Pixel(newred, newgreen, newblue)
+
+                img.setPixel(col, row, newpixel)
+        # then draw the new images
+
+    img = image.Image("LutherBellPic.jpg")
+    img.setDelay(1,15)
+    newwin=image.ImageWin(img.getWidth(),img.getHeight())
+    img.draw(newwin)
+    process11(img)
+
+The window above contains the source code for a procedure that converts an image to black and white.  This procedure is often called a function, because it is a reusable bit of code that you might use in many different situations.  As a programmer you will work with source code a lot.  If we were to describe the process above in english this is how we might describe what is going on:
+
+1. Get the height and width of the image.
+2. Process every pixel in the image (located at a particular row and column) as follows:
+
+   a. Get the red, green, and blue values of the pixel
+   b. If the average value of red, green and blue is more than 127 then make a new all white pixel.  Otherwise make a new all black pixel.
+   c. Replace the old color pixel with either the white or black pixel as deteremined in step b.
+
+
+
 The following activecode editor contains 10 different image processing functions (process1, process2, ... process10) Each of these functions accepts an image as a parameter and returns a transformed image. A few of the functions take a second parameter that tells the function how to do its job.
 
 .. activecode:: act_0_imageproc
