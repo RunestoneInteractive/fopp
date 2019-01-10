@@ -18,8 +18,6 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-sys.path.insert(0, os.path.abspath('./_filter'))
-
 from runestone import runestone_static_dirs, runestone_extensions
 
 # -- General configuration -----------------------------------------------------
@@ -233,11 +231,9 @@ html_show_sourcelink = False
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
-
-
-# For custom jinja2 filter
+# for cusotm jinja2 filter
 import jinja2
-from custom_jinja2_filter import extractText, extractTextII
+from runestone.utility import extractText, extractTextII
 
 jinja2.filters.FILTERS['extractText'] = extractText
 jinja2.filters.FILTERS['extractTextII'] = extractTextII
