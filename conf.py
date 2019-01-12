@@ -187,6 +187,7 @@ html_short_title ='Runestone Interactive Overview'
 
 html_static_path = ['_static', '_sources/_static']  + runestone_static_dirs()
 
+
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
 #html_last_updated_fmt = '%b %d, %Y'
@@ -230,10 +231,3 @@ html_show_sourcelink = False
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
-
-# for cusotm jinja2 filter
-import jinja2
-from runestone.utility import extractText, extractTextII
-
-jinja2.filters.FILTERS['extractText'] = extractText
-jinja2.filters.FILTERS['extractTextII'] = extractTextII
