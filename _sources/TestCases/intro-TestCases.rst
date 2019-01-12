@@ -16,10 +16,7 @@
 Introduction: Test Cases
 ========================
 
-When we write functions that return values, we intend to use them over and over again. However, we want to be 
-certain that they return the correct result. To be more certain these functions work correctly we write test cases.
-
-A **test case** expresses requirements for a program, in a way that can be checked automatically. Specifically, a test 
+A **test case** expresses requirements for a program, in a way that can be checked automatically. Specifically, a test
 asserts something about the state of the program at a particular point in its execution.
 
 We have previously suggested that it's a good idea to first write down comments about what your code is supposed to do, 
@@ -27,11 +24,13 @@ before actually writing the code. It is an even better idea to write down some t
 example, before writing a function, write a few test cases that check that it returns an object of the right type and 
 that it returns the correct values when invoked on particular inputs.
 
-You've actually been using test cases throughout this book in some of the activecode windows and almost all of the 
-exercises. The code for them has been hidden, so as not to confuse you and also to avoid giving away the answers. Now 
-it's time to learn how to write code for test cases.
+There are several reasons why it's a good habit to write test cases.
 
-To write a **unit test**, we must know the correct result when calling the function with a specific input. 
+* Before we write code, we have in mind what it *should* do, but those thoughts may be a little vague. Writing down test cases forces us to be more concrete about what should happen.
+* As we write the code, the test cases can provide automated feedback. You've actually been the beneficiary of such automated feedback via test cases throughout this book in some of the activecode windows and almost all of the exercises. We wrote the code for those test cases but kept it hidden, so as not to confuse you and also to avoid giving away the answers. You can get some of the same benefit from writing your own test cases.
+* In larger software projects, the set of test cases, called unit tests, can be run every time a change is made to the code base. This can help to identify situations where a change in code in one place breaks the correct operation of some other code. We won't see that advantage of tests cases in this textbook, but keep in mind that this introduction to test cases is setting the stage for an essential software engineering practice if you are participating in a larger software development project.
+
+Now it's time to learn how to write code for test cases, or **unit tests**. To write one, we must know what we *expect* some value to be at a particular point in the program's execution. For example, we need to specify what the correct result would be when calling the function with a specific input.
 
 .. activecode:: ac19_1_1
 
@@ -44,7 +43,7 @@ To write a **unit test**, we must know the correct result when calling the funct
     test.testEqual(square(10), 100)
 
 
-``testEqual`` (from the ``test`` module) is a function that allows us to perform a unit test. It takes two parameters. The first is a call to the function we want to test (``square`` in this example) with a particular input (10 in this example). The second parameter is the correct result that should be produced (100 in this example). ``test.testEqual`` compares what the function returns with the correct result and displays whether the unit test passes or fails.
+``testEqual`` (from the ``test`` module) is a function that allows us to perform a unit test. It takes two parameters. In the example above, the first is a call to the function we want to test (``square`` in this example) with a particular input (10 in this example). The second is the correct result that should be produced (100 in this example). ``test.testEqual`` compares the two values and displays a message about whether the unit test passes or fails: pass if the two values are equal, fail if not.
 
 .. admonition:: Extend the program ...
 
@@ -88,7 +87,7 @@ To write a **unit test**, we must know the correct result when calling the funct
     :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
     :practice: T
 
-    Which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
+    For the hangman game blanked function, which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
 
     .. code-block:: python
 

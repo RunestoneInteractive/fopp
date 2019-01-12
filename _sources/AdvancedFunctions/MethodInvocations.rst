@@ -22,11 +22,11 @@ There is one other special type of function called a **method**, which is invoke
 object types have methods defined for them. You have already seen some methods that operate on strings (e.g., 
 ``find``, ``index``, ``split``, ``join``) and on lists (e.g., ``append``, ``pop``). 
 
-We will not learn about how define methods until later in the course, when we cover Classes. But it's worth getting a 
+We will not learn about how to define methods until later in the course, when we cover Classes. But it's worth getting a
 basic understanding now of how methods are invoked. To invoke a method, the syntax is 
 ``<expr>.<methodname>(<additional parameter values>)``.
 
-The expression to the left of the dot should evaluate to an object of the right type, an object for which <methodname> 
+The expression to the left of the dot should evaluate to an object of the correct type, an object for which <methodname>
 is defined. The method will be applied to that object (that object will be a parameter value passed to the 
 function/method.) If the method takes additional parameters (some do, some don't), additional expressions that evaluate 
 to values are included inside the parentheses.

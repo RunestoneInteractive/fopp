@@ -108,7 +108,7 @@ casting it as a list but it is best for you to try and get into the habit of cas
        sec_accum = sec_accum + w
    print(sec_accum)
 
-Because the the range function is exclusive of the ending number, we have to use 11 as the function input. 
+Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
 
 We can use the accumulation pattern is count the number of something or to sum up a total. The 
 above examples only covered how to get the sum for a list, but we can also count how many items are 
@@ -122,7 +122,7 @@ in the list if we wanted to.
        count = count + 1
    print(count)
 
-In this example we don't make use of ``w`` even though the iterator variable is a necessary part of 
+In this example we don't make use of ``w`` even though the iterator variable (loop variable) is a necessary part of
 constructing a for loop. Instead of adding the value of ``w`` to ``count`` we add a 1 to it, 
 because we're incrementing the value of count when we iterate each time through the loop. Though in 
 this scenario we could have used the ``len`` function, there are other cases later on where len 

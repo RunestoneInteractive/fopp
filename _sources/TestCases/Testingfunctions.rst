@@ -11,14 +11,10 @@
    :prefix: test-2-
    :start: 1
 
-👩‍💻 Writing Test Cases
-========================
+Writing Test Cases for Functions
+================================
 
-It is a good idea to write one or more test cases for each function or method that you define. 
-We will start with functions.
-
-Testing functions
------------------
+It is a good idea to write one or more test cases for each function that you define.
 
 A function defines an operation that can be performed. If the function takes one or more parameters, it is supposed to 
 work properly on a variety of possible inputs. Each test case will check whether the function works properly on 
@@ -50,6 +46,14 @@ called **edge cases**. For example, if you are defining the "square" function, t
 like 3. Additional extreme or unusual inputs around which you create test cases might be a negative number, 0, and a 
 floating point number.
 
+One way to think about how to generate edge cases is to think in terms of **equivalence classes** of the different kinds of inputs the function might get. For example, the input to the ``square`` function could be either positive or negative. We then choose an input from each of these classes.
+**It is important to have at least one test for each equivalence class of inputs.**
+
+Semantic errors are often caused by improperly handling the boundaries between equivalence classes. The boundary for this
+problem is zero. **It is important to have a test at each boundary.**
+
+Another way to think about edge cases is to imagine things that could go wrong in the implementation. For example, in the square function we might mistakenly use addition instead of multiplication. Thus, we shouldn't rely on a test that uses 2 as input, but we might be fooled into thinking it was working when it produced an output of 4, when it was really doubling rather than squaring.
+
 Try adding one or two more test cases for the square function in the code below, based on the suggestions for edge cases.
 
 .. activecode:: ac19_2_1
@@ -80,20 +84,20 @@ answers ourselves.
 
 .. activecode:: ac19_2_2
 
-    def update_counts(letters, counts_dict):
+    def update_counts(letters, counts_d):
         for c in letters:
-            counts_dict[c] = 1
-            if c in counts_dict:
-                counts_dict[c] = counts_dict[c] + 1
+            counts_d[c] = 1
+            if c in counts_d:
+                counts_d[c] = counts_d[c] + 1
 
     import test
 
-    counts_dict = {'a': 3, 'b': 2}
-    update_counts("aaab", counts_dict)
+    counts = {'a': 3, 'b': 2}
+    update_counts("aaab", counts)
     # 3 more occurrences of a, so 6 in all
-    test.testEqual(counts_dict['a'], 6)
+    test.testEqual(counts['a'], 6)
     # 1 more occurrence of b, so 3 in all
-    test.testEqual(counts_dict['b'], 3)
+    test.testEqual(counts['b'], 3)
 
 
 Testing Conditionals and Loops

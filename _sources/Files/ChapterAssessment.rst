@@ -27,6 +27,9 @@ Chapter Assessment
    :hide:
 
 .. activecode:: ac9_10_1
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: travel_plans.txt
 
    The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
@@ -44,6 +47,9 @@ Chapter Assessment
    myTests().main()
 
 .. activecode:: ac9_10_2
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: emotion_words.txt
    
    We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
@@ -62,6 +68,9 @@ Chapter Assessment
 
 
 .. activecode:: ac9_10_3
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: school_prompt.txt
 
    Assign to the variable ``num_lines`` the number of lines in the file ``school_prompt.txt``.
@@ -80,6 +89,9 @@ Chapter Assessment
 
 
 .. activecode:: ac9_10_4
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: school_prompt.txt
 
    Assign the first 30 characters of ``school_prompt.txt`` as a string to the variable ``beginning_chars``.
@@ -99,6 +111,9 @@ Chapter Assessment
 
 
 .. activecode:: ac9_10_5
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: school_prompt.txt
 
    **Challenge:** Using the file ``school_prompt.txt``, assign the third word of every line to a list called ``three``.
@@ -117,6 +132,9 @@ Chapter Assessment
  
 
 .. activecode:: ac9_10_6
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: emotion_words.txt
 
    **Challenge:** Create a list called ``emotions`` that contains the first word of every line in ``emotion_words.txt``.
@@ -135,6 +153,9 @@ Chapter Assessment
 
 
 .. activecode:: ac9_10_7
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: travel_plans.txt
 
    Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
@@ -153,6 +174,9 @@ Chapter Assessment
 
 
 .. activecode:: ac9_10_8
+   :language: python
+   :autograde: unittest
+   :practice: T
    :available_files: school_prompt.txt
 
    **Challenge:** Using the file ``school_prompt.txt``, if the character 'p' is in a word, then add the word to a list called ``p_words``.

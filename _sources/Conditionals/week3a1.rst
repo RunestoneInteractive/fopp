@@ -85,7 +85,7 @@ Chapter Assessment
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertIn(' in ', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            self.assertIn(' in ', self.getEditorText(), "Testing that you are using the in operator.")
             self.assertEqual(acc_num, 4, "Testing that acc_num has been set to the number of strings that have 'w' in them.")
 
     myTests().main()
@@ -114,7 +114,7 @@ Chapter Assessment
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertIn(' in ', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            self.assertIn(' in ', self.getEditorText(), "Testing that you are using the in operator.")
             self.assertEqual(num_a_or_e, 14, "Testing that num_a_or_e has been set to the correct number.")
 
     myTests().main()
@@ -142,7 +142,7 @@ Chapter Assessment
            self.assertEqual(num_vowels, 32, "testing whether num_vowels is set correctly")
 
         def testOneA(self):
-           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop.")
 
     myTests().main()
 
@@ -163,8 +163,8 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(wrd, "Friend is here!", "Testing the value of wrd")
-         self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
-         self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+         self.assertIn("else", self.getEditorText(), "Checking that you used an else clause.")
+         self.assertIn("elif", self.getEditorText(), "Checking that you used an elif clause.")
 
    myTests().main()
 
@@ -173,7 +173,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   We have written conditionals for you to use. Create the variable x and assign it to some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
+   We have written conditionals for you to use. Create the variable x and assign it some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
    ~~~~
    if x >= 10:
        output = "working"
@@ -195,7 +195,7 @@ Chapter Assessment
       def testOne(self):
          self.assertEqual(output, "Consistently working", "Testing the value of output")
       def testTwo(self):
-         self.assertEqual(x in [7,8,9,10,11,12], True, "Testing that x was assigned a correct number" )
+         self.assertIn(x, [7,8,9,10,11,12], "Testing that x was assigned a correct number" )
 
    myTests().main()
 
@@ -216,7 +216,7 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(resp, "You could be in Information Science!", "Testing the value of resp given the schedule list provided.")
-         self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+         self.assertIn("if", self.getEditorText(), "Testing that you used an if clause.")
 
    myTests().main()
 
@@ -238,7 +238,7 @@ Chapter Assessment
       def testOne(self):
          self.assertEqual(x, 810, "Testing the value of x")
       def testTwo(self):
-         self.assertEqual(z, 30, "Testing that z has correctly been defined.")
+         self.assertEqual(z, 30, "Testing the value of z.")
 
    myTests().main()   
 
