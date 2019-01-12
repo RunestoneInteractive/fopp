@@ -86,8 +86,8 @@ Chapter Assessment
    :practice: T
    :topics: SimplePythonData/StatementsandExpressions
 
-   The code below initializes two variables, ``z`` and ``y``. We want assign the total number of characters in ``z`` and in ``y`` to the variable ``a``. Which of the following solutions, if any, would be considered hard coding?
-   
+   The code below initializes two variables, ``z`` and ``y``. We want to assign the total number of characters in ``z`` and in ``y`` to the variable ``a``. Which of the following solutions, if any, would be considered hard coding?
+
    .. sourcecode:: python
 
     z = "hello world"
@@ -104,4 +104,3 @@ Chapter Assessment
 
     def square(num):
         return num**2
-
