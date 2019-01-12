@@ -44,7 +44,7 @@
             localStorage.setItem("book", JSON.stringify(book));
         } else {
             var book = JSON.parse(localStorage.getItem("book"));
-            var hasFound = false;      
+            var hasFound = false;
             for (var i = 0; i < book.chapterSectionPaths.length; i++) {
                 var chapter = book.chapterSectionPaths[i];
                 var chapterIndex = chapter.indexOf(curPath);
@@ -72,12 +72,12 @@
 
 
     <div >
-        <p id="locationText" style="margin-bottom:0px; margin-top:7px; float:left; width:65%">Chapter</p>   
-        <div >
-            <p >Chapter: </p>
+        <p id="locationText" style="margin-bottom:0px; margin-top:7px; float:left; width:65%">Chapter</p>
+        <div>
+            <p>Chapter: </p>
             <div id="chapterProgress" style="margin-left:5px; margin-top:12px; float:left; width:25%; border:1px solid grey;">
                 <div id="progressBar" style="margin-left:0px; margin-top:1px; width:1%; height:9px; background-color:limegreen;"></div>
             </div>
-            <p id="bookProgress" style="padding-top:0px; margin:0px; float:left;">Book: 0%</p>          
-        </div>     
+            <p id="bookProgress" style="padding-top:0px; margin:0px; float:left;">Book: 0%</p>
+        </div>
     </div>
