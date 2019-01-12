@@ -17,8 +17,8 @@
    runtime error; string item assignment
    string; immutable
 
-Mutatability
-============
+Mutability
+==========
 
 Some Python collection types - strings and lists so far - are able to change and some are not. If 
 a type is able to change, then it is said to be mutable. If the type is not able to change then it
