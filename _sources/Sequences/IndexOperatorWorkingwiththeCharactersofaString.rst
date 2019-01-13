@@ -66,6 +66,8 @@ the index. Remember that the indices start at 0. Any integer expression can be u
 as an index and as with strings, negative index values will locate items from the right instead
 of from the left.
 
+When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean!
+
 Try to predict what will be printed out by the following code, and then run it to check your
 prediction. (Actually, it's a good idea to always do that with the code examples. You 
 will learn much more if you force yourself to make a prediction before you see the output.)
