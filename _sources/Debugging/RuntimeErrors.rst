@@ -40,7 +40,7 @@ chapters, so it might be a while before you encounter one.
 
 .. mchoice:: question4_5_2
    :answer_a: The programmer.
-   :answer_b: The compiler / interpreter.
+   :answer_b: The interpreter.
    :answer_c: The computer.
    :answer_d: The teacher / instructor.
    :correct: b
