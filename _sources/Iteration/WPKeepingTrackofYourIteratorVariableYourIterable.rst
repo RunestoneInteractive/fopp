@@ -115,11 +115,12 @@ The iterator (loop) variable is the variable which stores a portion of the itera
    :answer_b: list
    :answer_c: tuple
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object. 
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
-   :feedback_d: 
+   :answer_e: error, unable to iterate over the object.
+   :feedback_a: Correct! The iterable is a string.
+   :feedback_b: Incorrect, there is no list in the code.
+   :feedback_c: Incorrect, the iterable is not a tuple.
+   :feedback_d: Incorrect, that is not the best answer for this problem.
+   :feedback_e: Incorrect, Python can iterate over this type.
    :correct: a
    :practice: T
 
