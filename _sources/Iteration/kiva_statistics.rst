@@ -265,7 +265,7 @@ Don't let the fancy math get you down the variance is just the sum of the square
     class MyTests(TestCaseGui):
 
         def testOne(self):            
-            self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_total variable")
+            self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_stdev variable")
             self.assertAlmostEqual(loan_var, 250456.0, 1, "")
             self.assertAlmostEqual(loan_stdev, 500.456, 3,  "Hint: x ** 0.5  is the same as the square root")
 
