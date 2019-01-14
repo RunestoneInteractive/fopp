@@ -146,7 +146,7 @@ Level 1 Questions
 .. activecode:: act_kiva_7
     :include: act_kiva_1
 
-    For each unique country name, print a line that shows the name of the country and then the number of loans made in that country
+    For each unique country name, print a line that shows the name of the country and then the number of loans made in that country, like this: "Guatemala 1"
     ~~~~
     unique_countries = ['Guatemala', 'Paraguay', 'Tajikistan', 'Kenya', 'Azerbaijan', 'El Salvador', 'Bolivia', 'Ecuador', 'Georgia', 'Philippines', 'Uganda', 'Madagascar', 'Nicaragua', 'Jordan'] 
     
@@ -265,7 +265,7 @@ Don't let the fancy math get you down the variance is just the sum of the square
     class MyTests(TestCaseGui):
 
         def testOne(self):            
-            self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_total variable")
+            self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_stdev variable")
             self.assertAlmostEqual(loan_var, 250456.0, 1, "")
             self.assertAlmostEqual(loan_stdev, 500.456, 3,  "Hint: x ** 0.5  is the same as the square root")
 
