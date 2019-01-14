@@ -146,7 +146,7 @@ Level 1 Questions
 .. activecode:: act_kiva_7
     :include: act_kiva_1
 
-    For each unique country name, print a line that shows the name of the country and then the number of loans made in that country
+    For each unique country name, print a line that shows the name of the country and then the number of loans made in that country, like this: "Guatemala 1"
     ~~~~
     unique_countries = ['Guatemala', 'Paraguay', 'Tajikistan', 'Kenya', 'Azerbaijan', 'El Salvador', 'Bolivia', 'Ecuador', 'Georgia', 'Philippines', 'Uganda', 'Madagascar', 'Nicaragua', 'Jordan'] 
     
