@@ -42,7 +42,7 @@ The ``not in`` operator returns the logical opposite result of ``in``.
 
 We can also use the ``in`` and ``not in`` operators on lists!
 
-..activecode:: ac4_4_4
+.. activecode:: ac4_4_4
 
    print("a" in ["a", "b", "c", "d"])
    print(9 in [3, 2, 9, 10, 9.0])
