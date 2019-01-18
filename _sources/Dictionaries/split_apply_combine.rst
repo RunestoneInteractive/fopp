@@ -94,7 +94,7 @@ Counting the languages is one thing, but how do we get the 10 most popular?  We 
 .. activecode:: act_sac_2
 
     What are the ten most popular programming languages in the survey?
-    Remember only print out the top 10.    
+    Remember only to print out the top 10.
     ~~~~
 
 Now we are going to make things a little more complicated.  Let us compute the average salary for all male programmers versus all female programmers.  Is the computer industry show signs of gender equity with respect to salary?
@@ -122,11 +122,11 @@ In order to calculate the average for each group we are going to have to accumul
 
 **Filtering plus split-apply-combine**
 
-We asked the question what is the most popular programming language for programmers that exercise 3-4 times per week.  To specifically answer this question you will need to include only the rows of the file that match the criteria of '3 - 4 times per week'.  
+We asked the question what is the most popular programming language for programmers that exercise 3-4 times per week.  To specifically answer this question you will need to include only the rows of the file that match the criteria of '3 - 4 times per week'.
 
 .. activecode:: act_sac_5
 
-    What is the most popular programming language for people that exercise 3-4 times per week.
+    What is the most popular programming language for people that exercise 3-4 times per week?
     ~~~~
 
 Once we have the list of all programming languages for this particular group, we can use our counting and sorting knowledge from the previous questions to come up with the top programming language.
@@ -149,7 +149,7 @@ Using a dictionary we can map the text response to the ordinal value of the resp
 
 .. activecode:: act_sac_6
 
-    What is the most popular programming language for people that exercise 3-4 times per week.
+    Are people who majored in computer science more or less satisfied with their jobs than humanities majors?
     ~~~~
 
 
@@ -167,7 +167,7 @@ The best way to count the programming languages for each group AS WE PROCESS the
 
 .. activecode:: act_sac_7
 
-    What is the most popular programming language for people that exercise 3-4 times per week.
+    What are the most popular programming language(s) for each group of people in different exercise level?
     ~~~~
 
 
