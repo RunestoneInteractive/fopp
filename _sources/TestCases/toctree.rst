@@ -9,5 +9,6 @@ Test Cases
    Testingfunctions.rst
    WPProgramDevelopment.rst
    Glossary.rst
+   ChapterAssessment.rst
    
    
