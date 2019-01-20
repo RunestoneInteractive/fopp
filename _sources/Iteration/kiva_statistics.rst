@@ -251,12 +251,12 @@ For our final few exercises we are interested in exploring the distribution of t
 
     stdev = \sqrt{variance}
 
-Don't let the fancy math get you down the variance is just the sum of the squared values of each value minus the average for that value divided by the number of values.  This is a little more complicated that what you have done before but you can definitely do this.
+Don't let the fancy math get you down. The variance is just the sum of the squared values of each value minus the average for that value divided by the number of values.  This is a little more complicated that what you have done before but you can definitely do this.
 
 .. activecode:: act_kiva_11
     :include: act_kiva_1
 
-    Calculate the standard deviation of the loan_amount variable and store the variance in loan_var and the standard deviation in ``loan_stdev``.
+    Calculate the standard deviation of the ``loan_amount`` variable and store the variance in ``loan_var`` and the standard deviation in ``loan_stdev``.
     ~~~~
     # Your code here
     ====
@@ -276,7 +276,7 @@ In data science we are often most interested in two variables that seem to influ
 
 **Covariance** measures the larger values of one variable correspond to the larger values of a second variable as well as the extent to which the smaller values of one variable correspond to the smaller values of a second variable.  If the covariance is positive it  means the two variables grow together (positive correlation).  If the magnitude is negative it means one variable grows while the other shrinks.  The magnitude is hard to interpret because it depends on the values of the variables.  So Most often the covariance is normalized so that the values are between minus 1 and positive 1, this is the **pearson correlation coefficient**  A -1 indicates a strong negative correlation, a value of 0 indicates that the variables are not correlated at all, and a +1 indicates a strong positive correlation.
 
-Historically the pearson correlation coefficient has been used in recommender systems to find groups of like minded shoppers that can recommend products to each other.  It was the basis of Amazon.com's recommender system from 1997 to 2000.  I know this because I was part of the team that wrote that software :-)
+Historically, the pearson correlation coefficient has been used in recommender systems to find groups of like minded shoppers that can recommend products to each other.  It was the basis of Amazon.com's recommender system from 1997 to 2000.  I know this because I was part of the team that wrote that software :-)
 
 
 .. math::
