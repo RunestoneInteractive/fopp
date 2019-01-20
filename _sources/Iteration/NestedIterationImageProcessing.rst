@@ -168,7 +168,7 @@ intensities.
     print(p.getRed(), p.getGreen(), p.getBlue())
 
 
-When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
+When you run the program you can see that the image has a width of 400 pixels and a height of 243 pixels.  Also, the
 pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
 
 **Check your understanding**
