@@ -18,7 +18,7 @@ It is also possible to perform **list traversal** using iteration by item. A lis
 
 .. activecode:: ac6_5_1
 
-    fruits = ["apple","orange","banana","cherry"]
+    fruits = ["apple", "orange", "banana", "cherry"]
 
     for afruit in fruits:     # by item
         print(afruit)
