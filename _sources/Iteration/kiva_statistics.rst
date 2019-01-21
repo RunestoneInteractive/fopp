@@ -292,7 +292,7 @@ Historically the pearson correlation coefficient has been used in recommender sy
 .. activecode:: act_kiva_12
     :include: act_kiva_1
 
-    Calculate the pearson correlation between the loan_amount and the num_lenders_total or between time_to_raise and the loan_amout or between num_lenders_total and time_to_raise.  If you divide up the class you can compare values to see which pair has the strongest correlation.
+    Calculate the pearson correlation between the loan_amount and the num_lenders_total or between time_to_raise and the loan_amount or between num_lenders_total and time_to_raise.  If you divide up the class you can compare values to see which pair has the strongest correlation.
     ~~~~
     loan_amount_num_lenders = 0
     loan_amount_ttr = 0
