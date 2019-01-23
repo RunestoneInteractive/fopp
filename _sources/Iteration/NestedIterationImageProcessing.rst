@@ -18,13 +18,13 @@ Two dimensional tables have both rows and columns. You have probably seen many t
 spreadsheet program. Another object that is organized in rows and columns is a digital image. In this section we will
 explore how iteration allows us to manipulate these images.
 
-A **digital image** is a finite collection of small, discrete picture elements called **pixels**. These pixels are 
-organized in a two-dimensional grid. Each pixel represents the smallest amount of picture information that is 
+A **digital image** is a finite collection of small, discrete picture elements called **pixels**. These pixels are
+organized in a two-dimensional grid. Each pixel represents the smallest amount of picture information that is
 available. Sometimes these pixels appear as small "dots".
 
-Each image (grid of pixels) has its own width and its own height. The width is the number of columns and the height is 
-the number of rows. We can name the pixels in the grid by using the column number and row number. However, it is very 
-important to remember that computer scientists like to start counting with 0! This means that if there are 20 rows, they 
+Each image (grid of pixels) has its own width and its own height. The width is the number of columns and the height is
+the number of rows. We can name the pixels in the grid by using the column number and row number. However, it is very
+important to remember that computer scientists like to start counting with 0! This means that if there are 20 rows, they
 will be named 0,1,2, and so on through 19. This will be very useful later when we iterate using range.
 
 
@@ -40,12 +40,12 @@ of three basic colors: red, green, and blue.  This technique for creating color 
 The amount of each color, sometimes called the **intensity** of the color, allows us to have very fine control over the
 resulting color.
 
-The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the 
-pixel. The maximum intensity is 255. This means that there are actually 256 different amounts of intensity for each basic 
-color. Since there are three basic colors, that means that you can create 256\ :sup:`3` distinct colors using the RGB 
+The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the
+pixel. The maximum intensity is 255. This means that there are actually 256 different amounts of intensity for each basic
+color. Since there are three basic colors, that means that you can create 256\ :sup:`3` distinct colors using the RGB
 Color Model.
 
-Here are the red, green and blue intensities for some common colors. Note that "Black" is represented by a pixel having 
+Here are the red, green and blue intensities for some common colors. Note that "Black" is represented by a pixel having
 no basic color. On the other hand, "White" has maximum values for all three basic color components.
 
  	 =======  =======  =======  =======
@@ -60,13 +60,13 @@ no basic color. On the other hand, "White" has maximum values for all three basi
 	 Magenta  255      0        255
 	 =======  =======  =======  =======
 
-In order to manipulate an image, we need to be able to access individual pixels. This capability is provided by a module 
+In order to manipulate an image, we need to be able to access individual pixels. This capability is provided by a module
 called **image**, provided in ActiveCode [1]_.  The image module defines two classes: ``Image`` and ``Pixel``.
 
 .. [1] If you want to explore image processing on your own outside of the browser you can install the cImage module from http://pypi.org.
 
-Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity. A pixel provides 
-three methods that allow us to ask for the intensity values. They are called ``getRed``, ``getGreen``, and ``getBlue``.  
+Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity. A pixel provides
+three methods that allow us to ask for the intensity values. They are called ``getRed``, ``getGreen``, and ``getBlue``.
 In addition, we can ask a pixel to change an intensity value using its ``setRed``, ``setGreen``, and ``setBlue`` methods.
 
 
@@ -82,8 +82,8 @@ In addition, we can ask a pixel to change an intensity value using its ``setRed`
     setBlue()     p.setBlue(156)              Set the blue component intensity to 156.
     ============  ================            ===============================================
 
-In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue. 
-We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be 
+In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
+We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
 the same as the current amount of green.
 
 .. activecode::  ac14_7_1
@@ -116,15 +116,15 @@ the same as the current amount of green.
 Image Objects
 ^^^^^^^^^^^^^
 
-To access the pixels in a real image, we need to first create an ``Image`` object. Image objects can be created in two 
-ways. First, an Image object can be made from the files that store digital images. The image object has an attribute 
+To access the pixels in a real image, we need to first create an ``Image`` object. Image objects can be created in two
+ways. First, an Image object can be made from the files that store digital images. The image object has an attribute
 corresponding to the width, the height, and the collection of pixels in the image.
 
 It is also possible to create an Image object that is "empty". An ``EmptyImage`` has a width and a height. However, the
 pixel collection consists of only "White" pixels.
 
-We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods. We can also get a pixel 
-from a particular location in the image using ``getPixel`` and change the pixel at a particular location using 
+We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods. We can also get a pixel
+from a particular location in the image using ``getPixel`` and change the pixel at a particular location using
 ``setPixel``.
 
 
@@ -142,16 +142,16 @@ different depending on whether you are using an image file or creating an empty 
    setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
    =================== =============================== ==================================================
 
-Consider the image shown below. Assume that the image is stored in a file called "luther.jpg". Line 2 opens the file and 
-uses the contents to create an image object that is referred to by ``img``. Once we have an image object, we can use the 
-methods described above to access information about the image or to get a specific pixel and check on its basic color 
+Consider the image shown below. Assume that the image is stored in a file called "luther.jpg". Line 2 opens the file and
+uses the contents to create an image object that is referred to by ``img``. Once we have an image object, we can use the
+methods described above to access information about the image or to get a specific pixel and check on its basic color
 intensities.
 
 
 
 .. raw:: html
 
-    <img src="../_static/LutherBellPic.jpg" id="luther.jpg">
+    <img src="../_static/LutherBellPic.jpg" id="luther.jpg" alt="image of Luther College bell picture">
 
 
 
@@ -202,7 +202,7 @@ iterations the **outer iteration** and the **inner iteration**. To see how this 
     for i in range(5):
         print(i)
 
-We have seen this enough times to know that the value of ``i`` will be 0, then 1, then 2, and so on up to 4. The 
+We have seen this enough times to know that the value of ``i`` will be 0, then 1, then 2, and so on up to 4. The
 ``print`` will be performed once for each pass. However, the body of the loop can contain any statements including another iteration (another ``for`` statement). For example,
 
 .. sourcecode:: python
@@ -215,7 +215,7 @@ The ``for i`` iteration is the `outer iteration` and the ``for j`` iteration is 
 the outer iteration will result in the complete processing of the inner iteration from beginning to end. This means that
 the output from this nested iteration will show that for each value of ``i``, all values of ``j`` will occur.
 
-Here is the same example in activecode. Try it. Note that the value of ``i`` stays the same while the value of ``j`` 
+Here is the same example in activecode. Try it. Note that the value of ``i`` stays the same while the value of ``j``
 changes. The inner iteration, in effect, is moving faster than the outer iteration.
 
 .. activecode:: ac14_7_3
@@ -233,9 +233,9 @@ flow of control as it occurs with the nested iteration. Again, for every value o
         for j in range(3):
             print(i, j)
 
-Our goal with image processing is to visit each pixel. We will use an iteration to process each `row`. Within that 
+Our goal with image processing is to visit each pixel. We will use an iteration to process each `row`. Within that
 iteration, we will use a nested iteration to process each `column`. The result is a nested iteration, similar to the one
-seen above, where the outer ``for`` loop processes the rows, from 0 up to but not including the height of the image. 
+seen above, where the outer ``for`` loop processes the rows, from 0 up to but not including the height of the image.
 The inner ``for`` loop will process each column of a row, again from 0 up to but not including the width of the image.
 
 The resulting code will look like the following. We are now free to do anything we wish to each pixel in the image.
@@ -246,32 +246,32 @@ The resulting code will look like the following. We are now free to do anything 
 	    for col in range(img.getWidth()):
 	        # do something with the pixel at position (col,row)
 
-One of the easiest image processing algorithms will create what is known as a **negative** image. A negative image simply 
+One of the easiest image processing algorithms will create what is known as a **negative** image. A negative image simply
 means that each pixel will be the `opposite` of what it was originally. But what does opposite mean?
 
 In the RGB color model, we can consider the opposite of the red component as the difference between the original red
-and 255. For example, if the original red component was 50, then the opposite, or negative red value would be ``255-50`` 
-or 205. In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have 
+and 255. For example, if the original red component was 50, then the opposite, or negative red value would be ``255-50``
+or 205. In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have
 negatives with a lot. We do the same for the blue and green as well.
 
-The program below implements this algorithm using the previous image (luther.jpg). Run it to see the resulting negative 
-image. Note that there is a lot of processing taking place and this may take a few seconds to complete. In addition, here 
+The program below implements this algorithm using the previous image (luther.jpg). Run it to see the resulting negative
+image. Note that there is a lot of processing taking place and this may take a few seconds to complete. In addition, here
 are two other images that you can use (cy.png and goldygopher.png).
 
 
 .. raw:: html
 
-    <img src="../_static/cy.png" id="cy.png">
+    <img src="../_static/cy.png" id="cy.png"  alt="image of Cy the Cardinal, mascot of the Iowa State University">
     <h4 style="text-align: center;">cy.png</h4>
 
 .. raw:: html
 
-    <img src="../_static/goldygopher.png" id="goldygopher.png">
+    <img src="../_static/goldygopher.png" id="goldygopher.png" alt="image of Goldy Gopher, mascot of the University of Minnesota-Twin Cities">
     <h4 style="text-align: center;">goldygopher.png</h4>
 
 
-Change the name of the file in the ``image.Image()`` call to see how these images look as negatives. Also, note that 
-there is an ``exitonclick`` method call at the very end which will close the window when you click on it. This will allow 
+Change the name of the file in the ``image.Image()`` call to see how these images look as negatives. Also, note that
+there is an ``exitonclick`` method call at the very end which will close the window when you click on it. This will allow
 you to "clear the screen" before drawing the next negative.
 
 
@@ -300,20 +300,20 @@ you to "clear the screen" before drawing the next negative.
     img.draw(win)
     win.exitonclick()
 
-Let's take a closer look at the code. After importing the image module, we create an image object called ``img`` that 
-represents a typical digital photo. We will update each pixel in this image from top to bottom, left to right, which you 
+Let's take a closer look at the code. After importing the image module, we create an image object called ``img`` that
+represents a typical digital photo. We will update each pixel in this image from top to bottom, left to right, which you
 should be able to observe. You can change the values in ``setDelay`` to make the program progress faster or slower.
-  
+
 Lines 8 and 9 create the nested iteration that we discussed earlier. This allows us to process each pixel in the image.
 Line 10 gets an individual pixel.
 
 Lines 12-14 create the negative intensity values by extracting the original intensity from the pixel and subtracting it
 from 255. Once we have the ``newred``, ``newgreen``, and ``newblue`` values, we can create a new pixel (Line 15).
 
-Finally, we need to replace the old pixel with the new pixel in our image. It is important to put the new pixel into the 
+Finally, we need to replace the old pixel with the new pixel in our image. It is important to put the new pixel into the
 same location as the original pixel that it came from in the digital photo.
 
-Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the 
+Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the
 rows. We still create a negative image, but you can see that the pixels update in a very different order.
 
 .. admonition:: Other pixel manipulation
