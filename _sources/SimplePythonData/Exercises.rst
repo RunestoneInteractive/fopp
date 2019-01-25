@@ -329,3 +329,35 @@ Exercises
       teaspoons = user_tablespoons * 3
       =====
       print("Number of teaspoons: " + str(teaspoons))
+
+.. question:: spd_ex_18
+
+    .. activecode:: ac_2_18_teaser
+        :language: python
+        :autograde: unittest
+
+        You have two variables (`a` and `b`) containing some values of type int.
+        Rewrite 3 lines below to "swap" the values between `a` and `b` without using a new variable `c`
+		and without hardcoding any numerical value (e.g., `2`, `-5` etc) in your solution which should work for
+		any pair of integers.
+        ~~~~
+        a = 2
+        b = -5
+
+        # Replace following 3 statements/lines
+        c = a
+        a = b
+        b = c
+        =====
+
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                new_vars = sorted(set(globals()).difference(['a', 'b', 'TestCaseGui',  'myTests', '__file__', '__name__']))
+                self.assertEqual(new_vars, [], "New variables defined: %s" % ", ".join(new_vars))
+                self.assertEqual(a, -5, "Testing that a got original value of b which was -5")
+                self.assertEqual(b, 2, "Testing that b got original value of a which was 2")
+
+        myTests().main()
