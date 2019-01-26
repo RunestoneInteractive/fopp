@@ -73,7 +73,7 @@ Exercises
 
            .. actex:: ac8_11_3
 
-              Starting with the list of the previous exercise, write Python statements to do the following:
+              Starting with the list myList = [76, 92.3, 'hello', True, 4, 76], write Python statements to do the following:
    
               a. Append "apple" and 76 to the list.
               #. Insert the value "cat" at position 3.
@@ -83,6 +83,8 @@ Exercises
               #. Remove the first occurrence of 76 from the list.
               #. Remove True from the list using ``pop`` and ``index``.
               ~~~~
+              myList = [76, 92.3, 'hello', True, 4, 76]
+
               # Your code here
 
         .. tab:: Answer
