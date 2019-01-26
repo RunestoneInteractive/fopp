@@ -98,7 +98,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. actex:: ac14_10_5
+.. activecode:: ac14_10_5
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
