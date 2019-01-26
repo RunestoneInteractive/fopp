@@ -19,7 +19,6 @@ Chapter Assessment
 
    The function `mySum` is supposed to return the sum of a list of numbers (and 0 if that list is empty), but it has one or more errors in it. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.
    ~~~~
-
    import test
 
 
@@ -49,22 +48,21 @@ Chapter Assessment
    :include: ac_19_4_3
 
    The class Student is supposed to accept two arguments in its constructor:
-   1. A name string
-   2. An optional integer representing the number of years the student has been at Michigan (default:1)
+     1. A name string
+     2. An optional integer representing the number of years the student has been at Michigan (default:1)
 
    Every student has three instance variables:
-   1. `self.name` (set to the name provided)
-   2. `self.years_UM` (set to the number of years the student has been at Michigan)
-   3. `self.knowledge` (initialized to 0)
+     1. `self.name` (set to the name provided)
+     2. `self.years_UM` (set to the number of years the student has been at Michigan)
+     3. `self.knowledge` (initialized to 0)
 
    There are three methods:
-   - `.study()` should increase self.knowledge by 1 and return None
-   - `.getKnowledge()` should return the value of self.knowledge
-   - `.year_at_umich()` should return the value of self.years_UM
+     - `.study()` should increase self.knowledge by 1 and return None
+     - `.getKnowledge()` should return the value of self.knowledge
+     - `.year_at_umich()` should return the value of self.years_UM
 
    There are one or more errors in the class. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.
    ~~~~
-
    import test
 
 
@@ -87,7 +85,7 @@ Chapter Assessment
 .. mchoice:: mc_19_4_4
    :answer_a: Yes
    :answer_b: No
-   :feedback_a: Correct! There is an issue with the getKnowledge method because it returns None, not the value of self.knowledge.
+   :feedback_a: Correct! There is an issue with the getKnowledge method because it returns None when self.knowledge is 0, even though it returns the correct value when self.knowledge is non-zero.
    :feedback_b: Incorrect, there are more cases that fail. Try finding those other cases!
    :correct: a
 
