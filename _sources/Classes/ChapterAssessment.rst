@@ -69,7 +69,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/AddingOtherMethodstoourClass.rst, Classes/ImprovingourConstructor.rst, Classes/ConvertinganObjecttoaString.rst
 
-   Define a class called ``Bank`` that accepts the name you want associated with your bank account in a string, and a float that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``Bank``, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with ``"Bob"`` as the name and ``100.0`` as the amount. Save this to the variable ``t1``.
+   Define a class called ``BankAccount`` that accepts the name you want associated with your bank account in a string, and a float that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``BankAccount``, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with ``"Bob"`` as the name and ``100.0`` as the amount. Save this to the variable ``t1``.
    ~~~~
 
    
