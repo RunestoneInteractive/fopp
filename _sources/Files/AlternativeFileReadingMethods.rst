@@ -16,7 +16,7 @@ Alternative File Reading Methods
 
 Once you have a file "object", the thing returned by the open function, Python provides three methods to read data
 from that object. The ``read()`` method returns the entire contents of the file as a single string (or just some 
-characters if you provide a number as an input parameter. The ``readlines`` method returns the entire contents of
+characters if you provide a number as an input parameter). The ``readlines`` method returns the entire contents of
 the entire file as a list of strings, where each item in the list is one line of the file. The ``readline`` 
 method reads one line from the file and returns it as a string. The strings returned by ``readlines`` or 
 ``readline`` will contain the newline character at the end.  :ref:`Table 2 <filemethods2a>` summarizes these 
