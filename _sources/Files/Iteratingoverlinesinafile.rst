@@ -40,7 +40,7 @@ construct a simple sentence.
 
 .. activecode:: ac9_5_1
 
-    olypmicsfile = open("olypmics.txt","r")
+    olypmicsfile = open("olypmics.txt", "r")
 
     for aline in olypmicsfile.readlines():
         values = aline.split(",")
@@ -55,7 +55,7 @@ to read it. And when you start dealing with big files, you may notice the effici
 
 .. activecode:: ac9_5_2
 
-    olypmicsfile = open("olypmics.txt","r")
+    olypmicsfile = open("olypmics.txt", "r")
 
     for aline in olypmicsfile:
         values = aline.split(",")
