@@ -36,6 +36,12 @@ Glossary
         becoming a mature programmer is to learn and establish the
         patterns and algorithms that form your toolkit.   
 
+    antipattern
+	    A an ineffective or suboptimal pattern, which while being not
+		incorrect provides suboptimal implementation which is either
+		slower, less expressive, or over-complicated than the better solution
+		could potentially be.
+
     index
         A variable or value used to select a member of an ordered collection, such as
         a character from a string, or an element from a list.
