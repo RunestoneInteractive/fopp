@@ -5,7 +5,7 @@ A lot of scientific work can be done with simulations.  Most drugs today are not
 
 In this project we are going to investigate the Monte-Carlo simulation, named after the famous gambling city in `Monaco <https://www.google.com/maps/place/Monte+Carlo,+Monaco-Ville,+Monaco/@43.7261188,7.2865825,11z/data=!4m5!3m4!1s0x12cdc287dedfadcd:0xee15296ed95b686c!8m2!3d43.7400718!4d7.4266436>`_.  
 
-We will do three simulations in this project.  The first to help us calculate the value of pi. The second to predict the price of a stock, and the third to explore the "Monty Hall Paradox"
+We will do three simulations in this project.  The first to help us calculate the value of :math:`\pi`. The second to predict the price of a stock, and the third to explore the "Monty Hall Paradox".
 
 Approximating Pi
 ----------------
@@ -24,11 +24,11 @@ Let me describe our simulation a little more precisely.
 
 1.  Our dartboard is a 'unit circle' that is a circle centered at 0,0 with a radius of 1.0.
 2.  Our dartboard is in the middle of a square that is 2 x 2 and there is a "magical force field" that ensures that all the darts either land on the dartboard or on the 2x2 square.
-3.  We can simulate the throwing of the darts (and our force field) by using our random number generator to chose a random x coordinate between -1 and +1 and a random y coordinate between -2 and +2.  This will tell us exactly where the dart lands.
-4.  We know that a dart lands on the board if its distance to 0,0 is less than or equal to 1.0.  :math:`d = \sqrt{x^2 + y^2}`  We know this because the radius of our dart board is 1.0.
-5. Since the area of the circle is :math:`\pi r^2` the area of a unit circle is just :math:`\pi` the area of the 2x2 square that contains our dart board is 4. So, the ratio of the number of darts that hit the dart board to the total number of darts we throw is :math:`\frac{\pi}{4}`.  If we calculate the ratio and multiply by 4 we get :math:`\pi`!!
+3.  We can simulate the throwing of the darts (and our force field) by using our random number generator to chose a random x coordinate between -1 and +1 and a random y coordinate between -1 and +1.  This will tell us exactly where the dart lands.
+4.  We know that a dart lands on the circle dartboard if its distance to 0,0 is less than or equal to 1.0.  :math:`d = \sqrt{x^2 + y^2}`  We know this because the radius of our dartboard is 1.0.
+5. Since the area of the circle is :math:`\pi r^2` the area of a unit circle is just :math:`\pi`, and the area of the 2x2 square that contains our dartboard is 4. So, the ratio of the number of darts that hit the dartboard to the total number of darts we throw is :math:`\frac{\pi}{4}`.  If we calculate the ratio and multiply by 4 we get :math:`\pi`!!
 
-What is even more fun is to use our turtle graphics package to simulate animate this simulation.  Every time we throw a dart we make a dot on the screen where it lands.  If you color the darts that hit the dart board blue and the darts that miss red you will definitely see a circle emerge as the simulation progresses.
+What is even more fun is to use our turtle graphics package to simulate animate this simulation.  Every time we throw a dart we make a dot on the screen where it lands.  If you color the darts that hit the dartboard blue and the darts that miss red you will definitely see a circle emerge as the simulation progresses.
 
 Lets start with the animation part before we do too much math.  You should also review the ``win.setworldcoordinates`` function so that we can plot our darts using real numbers between -1 and 1.  Then before you plot a point check to see if the distance to 0,0 is less than or equal to 1 and set the color accordingly.
 Try to simulate about 1000 dart throws and see what you get.
