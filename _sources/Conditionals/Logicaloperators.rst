@@ -13,7 +13,7 @@
 
 .. index::logical operator
    operator; logical
-   single: and 
+   single: and
    single: or
    single: not
 
@@ -45,13 +45,13 @@ is true if ``x > y`` is false, that is, if ``x`` is less than or equal to
 .. admonition:: Common Mistake!
 
    There is a very common mistake that occurs when programmers try to write boolean expressions.
-   For example, what if we have a variable ``number`` and we want to check to see if its value is 5, 6, or 7? 
-   In words we might say: "number equal to 5 or 6 or 7".  However, if we translate this into Python, ``number == 5 or 6 or 7``, it will not be correct.  
-   The ``or`` operator must join the results of three equality checks.  The correct way to write this is ``number == 5 or number == 6 or number == 7``.  
-   
+   For example, what if we have a variable ``number`` and we want to check to see if its value is 5, 6, or 7?
+   In words we might say: "number equal to 5 or 6 or 7".  However, if we translate this into Python, ``number == 5 or 6 or 7``, it will not be correct.
+   The ``or`` operator must join the results of three equality checks.  The correct way to write this is ``number == 5 or number == 6 or number == 7``.
+
    This may seem like a lot of typing but it is absolutely necessary.  You cannot take a shortcut.
 
-   Well, actually, you can take a shortcut but not that way. Later in this chapter you'll learn about 
+   Well, actually, you can take a shortcut but not that way. Later in this chapter you'll learn about
    the ``in`` operator for strings and sequences: you could write ``number in [5, 6, 7]``.
 
 **Check your understanding**
@@ -63,7 +63,7 @@ is true if ``x > y`` is false, that is, if ``x`` is less than or equal to
    :answer_d: x &gt; 0 and x &lt; 5
    :correct: d
    :feedback_a: Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.
-   :feedback_b: This is tricky.  Although most other programming languages do not allow this syntax, in Python, this syntax is allowed.  However, you should not use it.  Instead, make multiple comparisons by using and or or.
+   :feedback_b: This is tricky. Although most other programming languages do not allow this syntax, in Python, this syntax is allowed. Writing Python expression like regular math makes it concise. However, it is more common to make multiple comparisons by using and or or. This makes expression easier to read and comprehend, especially if an expression is complex.
    :feedback_c: Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be True.
    :feedback_d: Yes, with an ``and`` keyword both expressions must be true so the number must be greater than 0 an less than 5 for this expression to be true.
    :practice: T
