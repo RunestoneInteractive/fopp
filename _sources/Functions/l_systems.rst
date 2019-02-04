@@ -366,8 +366,7 @@ so you get an idea of what the kind of drawing the L-System can really make.
     drawLsystem(t, inst, 30, 2)
 
 
-Rather than use the ``inst`` string supplied here, use the code from the string
-chapter, and write your own applyRules function to implement this L-system.
+Rather than use the ``inst`` string supplied here, use the code from the string examples above (eg. ActiveCode: 3 (act_lsys_1)), and write your own applyRules function to implement this L-system.
 This example only uses 6 expansions.  Try it out with a larger number of
 expansions.  You may also want to try this example with different values for
 the angle and distance parameters.
@@ -398,7 +397,7 @@ the angle and distance parameters.
 
         F
         F --> F[-F]F[+F]F
-    ~~~~   
+    ~~~~
 
 
 **Post Project Questions**
