@@ -22,7 +22,7 @@ If you are not familiar with the rules let me tell you.
 1.  Repeating a numeral up to three times represents the addition of the number.  For example the common III is 1+1+1 = 3
 2.  Only I, X, C, and M can be repeated.  V, L, and D should not be as there is no reason to do so.  VV would simply be X and LL would be written as C
 3. Writing numerals that decrease in values from left to right represents addition. For example MC represents 1000 + 100  = 1100 and XVI represents 10 + 5 + 1 or 16.
-4. To write a number that would otherwise take repeating of a numeral 4 or more times there is a negation rule.  Writing a smaller numeral to the left of a larger numeral causes the sign of then number on the left to be negative. for example IV is -1 + 5 = 4.  Or MCMXIV is 1000 - 100 + 1000 + 10 - 1 + 5 or 1914.
+4. To write a number that would otherwise take repeating of a numeral 4 or more times there is a negation rule.  Writing a smaller numeral to the left of a larger numeral causes the sign of then number on the left to be negative. For example, IV is -1 + 5 = 4 and MCMXIV is 1000 - 100 + 1000 + 10 - 1 + 5 or 1914.
 
 Knowing all of that you can now re-write 1904 in a proper way.
 

@@ -44,7 +44,7 @@ Altair assumes that you have data that you can organize into a table of rows and
 * Nominal  -- nominal data is typically used to name things
 * Temporal -- temporal data is data about time.
 
-When you tell Altair what data you want to use for the x or y axes you will often want to give it a hint as to what type the data is.  It can often infer that for itself but not always. When you do give it a hint you just append a short string to the column name consisting of a colon and the first letter of the data type.  for example to tell it that the column category is nominal you should specify the column ``x="category:N"``
+When you tell Altair what data you want to use for the x or y axes you will often want to give it a hint as to what type the data is.  It can often infer that for itself but not always. When you do give it a hint you just append a short string to the column name consisting of a colon and the first letter of the data type.  For example, to tell it that the column category is nominal you should specify the column ``x="category:N"``
 
 The easiest way to learn Altair is through some examples.  So let us look at a few.
 
@@ -71,7 +71,7 @@ Clair     7      strawberry
     data = altair.Data(customer=['Alice', 'Bob', 'Claire'], cakes=[5,9,7], flavor=['chocolate', 'vanilla', 'strawberry'])
     chart = altair.Chart(data)
     mark = chart.mark_bar()
-    enc = mark.encode(x='customer:N',y='cakes',color='flavor:N')
+    enc = mark.encode(x='customer:N', y='cakes', color='flavor:N')
     enc.display()
 
 
@@ -129,7 +129,7 @@ Can you explain why the graph looks like it does? Just to be sure we are seeing 
         flavor=['chocolate', 'vanilla', 'strawberry','chocolate','vanilla','strawberry','chocolate','strawberry'])
     chart = altair.Chart(data)
     mark = chart.mark_bar()
-    enc = mark.encode(x='customer:N',y='cakes',color='flavor:N')
+    enc = mark.encode(x='customer:N', y='cakes', color='flavor:N')
     enc.display()
 
 Notice that it adds together all of the the rows for the x channel.  This is just what you would want to if you wanted to show a total for a particular category.  Such as Graph the total amount of money lent in each country.  It also further shows the distribution -- by color -- of another variable within that category.  Sometimes this is called a stacked bar chart.  Just think of the work you would need to do to replicate this if you had to compute it all yourself and then draw it with a turtle.
@@ -152,7 +152,7 @@ Lets make a line graph, this is the kind of graph that you would typically see i
     data = altair.Data(X=x_vals, Y=y_vals)
     chart = altair.Chart(data)
     mark = chart.mark_line()
-    enc = mark.encode(x='X',y='Y')
+    enc = mark.encode(x='X', y='Y')
     enc.display()
 
 What we are doing here is calculating the square of the integers from -10 to +10 and storing them in y_vals.  You can even print y_vals to see that its just an ordinary list if you want.
@@ -205,7 +205,7 @@ Here are 100 IMDB movie ratings.  Lets figure out the distribution of these rati
     mark = chart.mark_bar()
     X = altair.Axis('ratings:Q', bin=True)
     Y = altair.Axis('count()')
-    enc = mark.encode(x=X,y=Y)
+    enc = mark.encode(x=X, y=Y)
     enc.display()
 
 
