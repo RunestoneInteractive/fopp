@@ -56,7 +56,7 @@ To do this we will follow these steps:
 
 Let's develop some intuition for this whole thing by writing a function and trying to minimize the error.
 
-You will write three functions ``compute_y(x, m, b)``, ``compute_all_y(list_of_x)`` This shoudl use ``compute_y`` and ``compute_mse(list_of_known, list_of_predictions)``  
+You will write three functions ``compute_y(x, m, b)``, ``compute_all_y(list_of_x)`` This should use ``compute_y`` and ``compute_mse(list_of_known, list_of_predictions)``
 
 .. activecode:: act_pizza_4
 
