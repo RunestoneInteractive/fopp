@@ -125,7 +125,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(func_sort, sorted(ex_lst, key = second_let), "Testing that func_sort has the correct value.")
+         self.assertEqual(func_sort, ['dance', 'zebra', 'hi', 'how are you', 'apple', 'bye'], "Testing that func_sort has the correct value.")
          self.assertNotIn("lambda", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()
