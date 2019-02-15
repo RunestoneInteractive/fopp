@@ -125,6 +125,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
 
       def testOne(self):
          self.assertEqual(func_sort, sorted(ex_lst, key = second_let), "Testing that func_sort has the correct value.")
+         self.assertEqual(second_let('0123456789'), 'b', "Testing that the second_let function returns the second letter in a string.")
          self.assertNotIn("lambda", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()
