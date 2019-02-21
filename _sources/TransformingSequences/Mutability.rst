@@ -121,7 +121,7 @@ values, it could become difficult to keep track of them all.
     phrase = "many moons"
     phrase_expanded = phrase + " and many stars"
     phrase_larger = phrase_expanded + " litter"
-    phrase_complete = "M" + phrase_larger[1:] + "the night sky."
+    phrase_complete = "M" + phrase_larger[1:] + " the night sky."
     excited_phrase_complete = phrase_complete[:-1] + "!"
 
 The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.
