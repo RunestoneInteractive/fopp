@@ -27,7 +27,7 @@ Before you decide to define a new class, there are a few things to keep in mind,
 
 * **What should the printed version of an instance look like?** (This question will help you determine how to write the ``__str__`` method.) Maybe, "Each song printed out will show the song title and the artist's name." or "Each Tweet printed out will show the username of the person who posted it and the message content of the tweet."
 
-After considering those questions and making decisions about how you're going to get start with a class definition, you can begin to define your class.
+After considering those questions and making decisions about how you're going to get started with a class definition, you can begin to define your class.
 
 Remember that a class definition, like a function definition, is a general description of what *every instance of the class should have*. (Every Point has an ``x`` and a ``y``.) The class instances are specific: e.g. the Point with *a specific x and y >.* You might have a Point with an ``x`` value of 3 and a ``y`` value of 2, so for that particular *instance* of the *class* ``Point``, you'd pass in ``3`` and ``2`` to the constructor, the ``__init__`` method, like so: ``new_point = Point(3,2)``, as you saw in the last sections.
 

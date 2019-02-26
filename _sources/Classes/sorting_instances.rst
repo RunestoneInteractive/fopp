@@ -56,11 +56,11 @@ Sometimes you will find it convenient to define a method for the class that does
            return self.price
            
    L = [Fruit("Cherry", 10), Fruit("Apple", 5), Fruit("Blueberry", 20)]
-   print "-----sorted by price, referencing a class method-----"
+   print("-----sorted by price, referencing a class method-----")
    for f in sorted(L, key=Fruit.sort_priority):
        print(f.name)
        
-   print "---- one more way to do the same thing-----"
+   print("---- one more way to do the same thing-----")
    for f in sorted(L, key=lambda x: x.sort_priority()):
        print(f.name)
 

@@ -60,11 +60,11 @@ To be able to reason about class variables and instance variables, it is helpful
 When the interpreter sees an expression of the form <obj>.<varname>, it:
     1. Checks if the object has an instance variable set. If so, it uses that value.
     2. If it doesn't find an instance variable, it checks whether the class has a class variable. If so it uses that value.
-    3. If it doesn't find an instance or a class variable, it creates a runtime error (actually, it does one other check first, which you will learn about in the next chapter.)
+    3. If it doesn't find an instance or a class variable, it creates a runtime error (actually, it does one other check first, which you will learn about in the next chapter).
 
 When the interpreter sees an assignment statement of the form <obj>.<varname> = <expr>, it:
     1. Evaluates the expression on the right-hand side to yield some python object;
-    2. Sets the instance variable <varname> of <obj> to be bound to that python object. Note that an assignment statement of this form never sets the class variable, it only sets the instance variable.
+    2. Sets the instance variable <varname> of <obj> to be bound to that python object. Note that an assignment statement of this form never sets the class variable; it only sets the instance variable.
 
 In order to set the class variable, you use an assignment statement of the form <varname> = <expr> at the top-level in a class definition, like on line 4 in the code above to set the class variable printed_rep.
 
