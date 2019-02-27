@@ -15,7 +15,7 @@ Chapter Assessment
    :topics: Classes/ImprovingourConstructor.rst
    :tags: Classes/ImprovingourConstructor.rst
 
-   Define a class called Bike that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, ``color`` and ``price``. Assign to the variable ``testOne`` an instance of ``Bike`` whose color is **blue** and whose price is **89.99**. Assign to the variable ``testTwo`` an instance of Bike whose color is **purple** and whose price is **25.0**. 
+   Define a class called ``Bike`` that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, ``color`` and ``price``. Assign to the variable ``testOne`` an instance of ``Bike`` whose color is **blue** and whose price is **89.99**. Assign to the variable ``testTwo`` an instance of Bike whose color is **purple** and whose price is **25.0**. 
    ~~~~
 
 
@@ -40,7 +40,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst
 
-   Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string reprsenting a color, and a number representing a quantity of apples. The constructor should initialize 2 instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by 1 each time it is invoked. You should also write a string method for this class that returns a string of the format: **A basket of QUANTITY# COLOR apples.** e.g. *A basket of 4 red apples.* or *A basket of 50 blue apples.* (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
+   Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize 2 instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by 1 each time it is invoked. You should also write a string method for this class that returns a string of the format: **A basket of QUANTITY# COLOR apples.** e.g. *A basket of 4 red apples.* or *A basket of 50 blue apples.* (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
    ~~~~
 
    =====

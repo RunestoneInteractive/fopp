@@ -15,7 +15,7 @@ Classes can "inherit" methods and class variables from other classes. We'll see 
 
 Consider our Tamagotchi game. Suppose we wanted to make some different kinds of pets that have the same structure as other pets, but have some different attributes or behave a little differently. For example, suppose that dog pets should show their emotional state a little differently than cats or act differently when they are hungry or when they are asked to fetch something.
 
-You could implement this by making instance variable for the pet type and dispatching on that instance variable in various methods.
+You could implement this by making an instance variable for the pet type and dispatching on that instance variable in various methods.
 
 .. code:: python
 

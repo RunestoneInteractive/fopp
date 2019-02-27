@@ -161,8 +161,6 @@ To get a clearer understanding of what happens when instantiating a new instance
 
     print(p is q)
     
-At Step 6 in the CodeLens execution, you can see that Point has been bound to an object representing the point class, but there are not yet any instances. The execution of line 9, ``p = Point()``, occurs at steps 7-9. First, at step 7, you can see that a blank instance of the class has been created, and is passed as the first (and only parameter) to the ``__init__`` method. That method's code is executed, with the variable self bound to that instance. At steps 8 and 9, two instance variables are filled in: x and y are both set to 0. Nothing is returned from the ``__init__`` method, but the point object itself is returned from the call to ``Point()``. Thus, at step 10,  p is bound to the new point that was created and initialized.
+At Step 2 in the CodeLens execution, you can see that ``Point`` has been bound to an object representing the ``Point`` class, but there are not yet any instances. The execution of line 9, ``p = Point()``, occurs at steps 3-5. First, at step 3, you can see that a blank instance of the class has been created, and is passed as the first (and only parameter) to the ``__init__`` method. That method's code is executed, with the variable ``self`` bound to that instance. At steps 4 and 5, two instance variables are filled in: ``x`` and ``y`` are both set to ``0``. Nothing is returned from the ``__init__`` method, but the point object itself is returned from the call to ``Point()``. Thus, at step 7, ``p`` is bound to the new point that was created and initialized.
 
-Skipping ahead, by the time we get to Step 16, p and q are each bound to different points. Even though both have x and y instance variables set to 0, they are *different objects*. Thus ``p is q`` evaluates to False.
-
-
+Skipping ahead, by the time we get to Step 14, ``p`` and ``q`` are each bound to different ``Point`` instances. Even though both have ``x`` and ``y`` instance variables set to ``0``, they are *different objects*. Thus ``p is q`` evaluates to ``False``.

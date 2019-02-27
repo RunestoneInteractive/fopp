@@ -177,7 +177,7 @@ we compute and return the result.
 When you start out, you might add only a line or two of code at a time. As you gain more experience, you might find 
 yourself writing and debugging bigger conceptual chunks. As you improve your programming skills you should find yourself
 managing bigger and bigger chunks: this is very similar to the way we learned to read letters, syllables, words, phrases, 
-sentences, paragraphs, etc., or the way we learn to chunk music --- from indvidual notes to chords, bars, phrases, and so on.  
+sentences, paragraphs, etc., or the way we learn to chunk music --- from individual notes to chords, bars, phrases, and so on.  
 
 The key aspects of the process are:
 
