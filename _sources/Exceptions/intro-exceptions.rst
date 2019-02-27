@@ -91,7 +91,7 @@ The code below causes an error of type ZeroDivisionError, or less specifically A
    x = 5
    y = x/0
 
-Let's see what happens if we wrap some of this problematic code in a try/except statement. Note that ``this won't print`` doesn't print: when the error is encountered, the rest of the try block is skipped and the exception block is executed. When the except block is done, it continues on with the nex line of code that's outdented to the same level as the try: ``continuing`` is printed.
+Let's see what happens if we wrap some of this problematic code in a try/except statement. Note that ``this won't print`` doesn't print: when the error is encountered, the rest of the try block is skipped and the exception block is executed. When the except block is done, it continues on with the next line of code that's outdented to the same level as the try: ``continuing`` is printed.
 
 .. activecode:: exceptions_3
    :nocanvas:
