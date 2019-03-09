@@ -173,7 +173,7 @@ Chapter Assessment
 .. activecode:: ee_inheritance_05
    :tags: Inheritance/inheritVarsAndMethods.rst
 
-   Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses called ``opponent`` return which type of pokemon the current type is weak and strong against as a tuple.
+   Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses. Call it ``opponent``. It should return which type of pokemon the current type is weak and strong against, as a tuple.
 
    - **Grass** is weak against *Fire* and strong against *Water*
    - **Ghost** is weak against *Dark* and strong against *Psychic*
