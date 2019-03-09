@@ -40,7 +40,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst
 
-   Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize 2 instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by 1 each time it is invoked. You should also write a string method for this class that returns a string of the format: **A basket of QUANTITY# COLOR apples.** e.g. *A basket of 4 red apples.* or *A basket of 50 blue apples.* (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
+   Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize two instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by ``1`` each time it is invoked. You should also write a ``__str__`` method for this class that returns a string of the format: ``"A basket of [quantity goes here] [color goes here] apples."`` e.g. ``"A basket of 4 red apples."`` or ``"A basket of 50 blue apples."`` (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
    ~~~~
 
    =====
@@ -69,7 +69,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/AddingOtherMethodstoourClass.rst, Classes/ImprovingourConstructor.rst, Classes/ConvertinganObjecttoaString.rst
 
-   Define a class called ``BankAccount`` that accepts the name you want associated with your bank account in a string, and a float that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``BankAccount``, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with ``"Bob"`` as the name and ``100.0`` as the amount. Save this to the variable ``t1``.
+   Define a class called ``BankAccount`` that accepts the name you want associated with your bank account in a string, and an integer that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``BankAccount``, you see ``"Your account, [name goes here], has [start_amt goes here] dollars."`` Create an instance of this class with ``"Bob"`` as the name and ``100`` as the amount. Save this to the variable ``t1``.
    ~~~~
 
    
@@ -81,6 +81,6 @@ Chapter Assessment
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(t1.__str__(), "Your account, Bob, has 100.0 dollars.", "Testing that t1 is assigned to correct value")
+         self.assertEqual(t1.__str__(), "Your account, Bob, has 100 dollars.", "Testing that t1 is assigned to correct value")
 
    myTests().main()
