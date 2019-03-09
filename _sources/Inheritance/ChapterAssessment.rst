@@ -15,17 +15,20 @@ Chapter Assessment
    :practice: T
    :topics: Inheritance/inheritVarsAndMethods
 
-   The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create. ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different. For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string "[name of pokemon] knows a lot of different moves!". Create an instance of this class with the ``name`` as ``"Belle"``. Assign this instance to the variable ``p1``.
+   The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create.
+   
+   ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different.
+   
+   For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string ``"[name of pokemon] knows a lot of different moves!"``. Create an instance of this class with the ``name`` as ``"Belle"``. Assign this instance to the variable ``p1``.
    ~~~~
-
    class Pokemon(object):
        attack = 12
        defense = 10
        health = 15
+       p_type = "Normal"
     
        def __init__(self, name, level = 5):
            self.name = name
-           self.p_type = "Normal"
            self.level = level
        
        def train(self):
@@ -92,17 +95,18 @@ Chapter Assessment
    :practice: T
    :topics: Inheritance/OverrideMethods
 
-   The attack strength for ``Grass_Pokemon`` instances does not change until they reach level 10. At level 10 and up, their attack strength increases by the ``attack_boost`` amount when they level. Modify the ``Grass_Pokemon`` subclass of ``Pokemon`` to reflect this change. To test, create an instance of the class with the name as ``"Bulby"``. Assign the instance to the variable ``p2``. Create another instance of the ``Grass_Pokemon`` class with the name set to ``"Pika"`` and assign that instance to the variable ``p3``. Then, use ``Grass_Pokemon`` methods to train the ``p3`` ``Grass_Pokemon`` instance until it reaches at least level 10.
+   Modify the ``Grass_Pokemon`` subclass so that the attack strength for ``Grass_Pokemon`` instances does not change until they reach level 10. At level 10 and up, their attack strength should increase by the ``attack_boost`` amount when they are trained.
+   
+   To test, create an instance of the class with the name as ``"Bulby"``. Assign the instance to the variable ``p2``. Create another instance of the ``Grass_Pokemon`` class with the name set to ``"Pika"`` and assign that instance to the variable ``p3``. Then, use ``Grass_Pokemon`` methods to train the ``p3`` ``Grass_Pokemon`` instance until it reaches at least level 10.
    ~~~~
-
    class Pokemon(object):
        attack = 12
        defense = 10
        health = 15
+       p_type = "Normal"
     
        def __init__(self, name, level = 5):
            self.name = name
-           self.p_type = "Normal"
            self.level = level
        
        def train(self):
@@ -141,13 +145,13 @@ Chapter Assessment
        attack = 15
        defense = 14
        health = 12
+       p_type = "Grass"
     
        def update(self):
            self.health_boost = 6
            self.attack_boost = 2
            self.defense_boost = 3
            self.evolve = 12
-           self.p_type = "Grass"
         
        def moves(self):
            self.p_moves = ["razor leaf", "synthesis", "petal dance"]
@@ -169,17 +173,23 @@ Chapter Assessment
 .. activecode:: ee_inheritance_05
    :tags: Inheritance/inheritVarsAndMethods.rst
 
-   Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses called ``opponent`` that will show which type of pokemon the current type is weak against and strong against. For instance, if the ``p_type`` of the subclass is grass, fire will be assigned to the variable ``weak`` and water will be assigned to the variable ``strong``. Grass is weak against fire, but strong against water. Ghost is weak against dark but strong against psychic. Fire is weak against water but strong against grass. Finally, flying is weak against electric but strong against fighting.
-   ~~~~
+   Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses. Call it ``opponent``. It should return which type of pokemon the current type is weak and strong against, as a tuple.
 
+   - **Grass** is weak against *Fire* and strong against *Water*
+   - **Ghost** is weak against *Dark* and strong against *Psychic*
+   - **Fire** is weak against *Water* and strong against *Grass*
+   - **Flying** is weak against *Electric* and strong against *Fighting*
+   
+   For example, if the ``p_type`` of the subclass is ``'Grass'``, ``.opponent()`` should return the tuple ``('Fire', 'Water')``
+   ~~~~
    class Pokemon():
        attack = 12
        defense = 10
        health = 15
+       p_type = "Normal"
     
        def __init__(self, name,level = 5):
            self.name = name
-           self.p_type = "Normal"
            self.level = level
            self.weak = "Normal"
            self.strong = "Normal"
@@ -217,38 +227,31 @@ Chapter Assessment
            self.update()
            return "Pokemon name: {}, Type: {}, Level: {}".format(self.name, self.p_type, self.level)
 
-       
-    
    class Grass_Pokemon(Pokemon):
        attack = 15
        defense = 14
        health = 12
+       p_type = "Grass"
     
        def update(self):
            self.health_boost = 6
            self.attack_boost = 2
            self.defense_boost = 3
            self.evolve = 12
-           self.p_type = "Grass"
     
    class Ghost_Pokemon(Pokemon):
+       p_type = "Ghost"
         
        def update(self):
            self.health_boost = 3
            self.attack_boost = 4
            self.defense_boost = 3
-           self.p_type = "Ghost"
         
    class Fire_Pokemon(Pokemon):
-        
-       def update(self):
-           Pokemon.update(self)
-           self.p_type = "Fire"
+       p_type = "Fire"
 
    class Flying_Pokemon(Pokemon):
-       def update(self):
-           Pokemon.update(self)
-           self.p_type = "Flying"
+       p_type = "Flying"
   
    =====
 
@@ -257,13 +260,13 @@ Chapter Assessment
    class myTests(TestCaseGui):
 
       def testOneA(self):
-         self.assertEqual(Grass_Pokemon("Buggy").opponent(), ("fire", "water"), "Testing that Grass weak and strong are assigned to correct values.")
+         self.assertEqual(Grass_Pokemon("Buggy").opponent(), ("Fire", "Water"), "Testing that Grass weak and strong are assigned to correct values.")
       def testOneB(self):
-         self.assertEqual(Fire_Pokemon("Buggy").opponent(), ("water", "grass"), "Testing that Fire weak and strong are assigned to correct values.")
+         self.assertEqual(Fire_Pokemon("Buggy").opponent(), ("Water", "Grass"), "Testing that Fire weak and strong are assigned to correct values.")
       def testOneC(self):
-         self.assertEqual(Ghost_Pokemon("Buggy").opponent(), ("dark", "psychic"), "Testing that Ghost weak and strong are assigned to correct values.")
+         self.assertEqual(Ghost_Pokemon("Buggy").opponent(), ("Dark", "Psychic"), "Testing that Ghost weak and strong are assigned to correct values.")
       def testOneD(self):
-         self.assertEqual(Flying_Pokemon("Buggy").opponent(), ("electric", "fighting"), "Testing that Flying weak and strong are assigned to correct values.")
+         self.assertEqual(Flying_Pokemon("Buggy").opponent(), ("Electric", "Fighting"), "Testing that Flying weak and strong are assigned to correct values.")
 
    myTests().main()
 
