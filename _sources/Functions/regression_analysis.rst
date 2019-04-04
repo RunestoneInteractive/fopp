@@ -1,3 +1,5 @@
+.. _linearRegression:
+
 🤔 Predicting Pizza Prices - Linear Regression
 ================================================
 
@@ -21,14 +23,14 @@ Your first task is to make a scatter plot of the data with Altair using diameter
     :nocodelens:
 
 
-What you can see pretty easily from this graph is that as the diameter of the pizza goes up, so does the price.  
+What you can see pretty easily from this graph is that as the diameter of the pizza goes up, so does the price.
 
 If you were to draw a straight line through the points that came as close as possible to all of them, it would look like this:
 
 .. image:: Figures/pizza_best_fit.png
 
 
-The orange line called the trend-line or the regression line is our best guess at a line that describes the data.  This is important because we can come up with an equation for the line that will allow us to predict the y value (price) for any given x value (diameter).  Linear regression is all about finding the best equation for the line.  
+The orange line called the trend-line or the regression line is our best guess at a line that describes the data.  This is important because we can come up with an equation for the line that will allow us to predict the y value (price) for any given x value (diameter).  Linear regression is all about finding the best equation for the line.
 
 How do we do that?  There are actually several different ways we can come up with the equation for the line.  We will look at two different solutions, one is a closed form equation that will work for any problem like this in just two dimensions.  The second is a solution that will allow us to generalize the idea of a best fit line to many dimensions!
 
@@ -56,7 +58,7 @@ To do this we will follow these steps:
 
 Let's develop some intuition for this whole thing by writing a function and trying to minimize the error.
 
-You will write three functions ``compute_y(x, m, b)``, ``compute_all_y(list_of_x)`` This shoudl use ``compute_y`` and ``compute_mse(list_of_known, list_of_predictions)``  
+You will write three functions ``compute_y(x, m, b)``, ``compute_all_y(list_of_x)`` This shoudl use ``compute_y`` and ``compute_mse(list_of_known, list_of_predictions)``
 
 .. activecode:: act_pizza_4
 
@@ -72,6 +74,39 @@ At this point your algorithms ability to 'learn' is limited by how much you chan
 For two dimensional data there is even a closed form solution to this problem that one could derive using a bit of calculus.  It is worthwhile to have the students do this to see that their solution is very very close to the solution you get from a simple formula that slope = covariance / variance and intercept = avg(y) - slope * avg(x).  Write a function that will calculate the slope and intercept using this method and compare the slope and intercept with your previous error.
 
 .. activecode:: act_pizza_6
+
+Try it out on Other Data
+------------------------
+
+Now that you have the regression algorithm working on this toy data set, try it out on another data set.  Something larger would be good.  But here is one suggestion for a next step.  It is said that there is a correlation between the number of times a cricket chirps and the temperature.
+
+.. datafile:: crickets_train.csv
+
+    chirps/min,temp
+    19.79999924,93.30000305
+    18.39999962,84.30000305
+    17.10000038,80.59999847
+    15.5,75.19999695
+    14.69999981,69.69999695
+    17.10000038,82
+    15.39999962,69.40000153
+    16.20000076,83.30000305
+    17.20000076,82.59999847
+    16,80.59999847
+    17,83.5
+    14.39999962,76.30000305
+
+
+.. datafile:: crickets_test.csv
+
+     chirps/min,temp
+     20,88.59999847
+     16,71.59999847
+     15,79.59999847
+
+Find the best slope and intercept using the crickets_train.csv file.  Then use the slope and intercept to make predictions using the number of chirps in the crickets_test.csv file.  You can see how well you did with this data because you also have a known temperature to compare it to.
+
+You might try this on a dataset with 100 or more rows of data just to see how long it takes to find a good slope and intercept.
 
 
 **Post Project Questions**

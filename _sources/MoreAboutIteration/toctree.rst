@@ -13,4 +13,4 @@ More About Iteration
    WPInfiniteLoops.rst
    Exercises.rst
    ChapterAssessment.rst
-   
+   better_pizza_predictions.rst
