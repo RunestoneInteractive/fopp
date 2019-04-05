@@ -64,6 +64,8 @@ Now that we have our dot product we can go back to the structure of our initial 
 
 Now using the data above calculate the vector of coefficients for the bias, diameter and number of toppings.  Your function should return a list corresponding to :math:`\vec{c}`
 
+You can improve upon the solution from  :ref:`linearRegression` because you can now use a ``while loop``.   You can have your program continue until your values for :math:`\vec{c}` stop changing.  You may not want to do this immediately, but you should definitely give it a try before you move on.
+
 .. activecode:: multreg_learn
 
     import sys
@@ -87,6 +89,13 @@ Now using the data above calculate the vector of coefficients for the bias, diam
            self.assertAlmostEqual(res[2], 0.3958, 2)
 
     myTests().main()
+
+
+Graphing the Error
+------------------
+
+Now that you have written this algorithm it may be hard for you to visualize this as "learning."  It seems like random updates more than intelligence.  Yet, at each iteration the error gets a bit smaller.  You can see this for yourself if you make a list of the error calculated each time through the loop and graph it over time using altair.
+
 
 
 .. poll:: LearningZone_14a

@@ -12,4 +12,4 @@ Advanced Functions
    MethodInvocations.rst
    Exercises.rst
    ChapterAssessment.rst
-   
+   clustering.rst
