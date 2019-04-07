@@ -91,7 +91,7 @@ Here's a version of that using a named function.
     
     # now loop through the keys
     for k in y:
-        print("{} appears {} times".format(x, d[x]))
+        print("{} appears {} times".format(k, d[k]))
 
 .. note::
 
