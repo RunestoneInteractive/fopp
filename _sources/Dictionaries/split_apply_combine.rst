@@ -200,7 +200,7 @@ Can you load the file into a list of dictionaries?
     Read the file so_survey.csv into a list of dictionaries.
     ~~~~
 
-With the file in this format you can pass the list of dictionaries to altair and make a histogram of salaries to see the distribution.  You can add this on to the previous activecode.
+With the file in this format you can pass the list of dictionaries to Altair and make a histogram of salaries to see the distribution.  You can add this on to the previous activecode.  If you want to load a list of dictionaries into an Altair Data object you can do it using the data parameter like this: ``Data(data=[{dictionary 1}, {dictionary 2}, ...])``.
 
 
 
