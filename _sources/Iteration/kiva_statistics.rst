@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -53,7 +56,7 @@ Level 1 Questions
             self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
             self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
             self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
-    
+
     MyTests().main()
 
 
@@ -73,7 +76,7 @@ Level 1 Questions
             self.assertTrue('loan_average' in self.getEditorText(), "you need a loan_total variable")
             self.assertEqual(loan_average, sum(loan_amount)/len(loan_amount), "Use the accumulator pattern to add up all the loans")
             self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
-    
+
     MyTests().main()
 
 
@@ -95,10 +98,10 @@ Level 1 Questions
             self.assertEqual(max_country, country_name[loan_amount.index(max(loan_amount))], "dont be afraid to use the hint")
             self.assertTrue("index" in self.getEditorText())
             self.assertTrue("min(" in self.getEditorText(), "use the min function")
-            self.assertTrue("max(" in self.getEditorText(), "use the max function")                        
+            self.assertTrue("max(" in self.getEditorText(), "use the max function")
 
 
-    
+
     MyTests().main()
 
 
@@ -118,7 +121,7 @@ Level 1 Questions
             self.assertTrue('average_lenders' in self.getEditorText(), "you need a average_lenders variable")
             self.assertEqual(average_lenders, sum(num_lenders_total) / len(num_lenders_total), "This is very similar to an earlier problem")
             self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
-    
+
     MyTests().main()
 
 
@@ -139,7 +142,7 @@ Level 1 Questions
             self.assertEqual(philippines_count, country_name.count('Philippines'), "")
             self.assertTrue('country_name.count' in self.getEditorText(), "you should use a list method to count")
 
-    
+
     MyTests().main()
 
 
@@ -148,8 +151,8 @@ Level 1 Questions
 
     For each unique country name, print a line that shows the name of the country and then the number of loans made in that country, like this: "Guatemala 1"
     ~~~~
-    unique_countries = ['Guatemala', 'Paraguay', 'Tajikistan', 'Kenya', 'Azerbaijan', 'El Salvador', 'Bolivia', 'Ecuador', 'Georgia', 'Philippines', 'Uganda', 'Madagascar', 'Nicaragua', 'Jordan'] 
-    
+    unique_countries = ['Guatemala', 'Paraguay', 'Tajikistan', 'Kenya', 'Azerbaijan', 'El Salvador', 'Bolivia', 'Ecuador', 'Georgia', 'Philippines', 'Uganda', 'Madagascar', 'Nicaragua', 'Jordan']
+
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -160,7 +163,7 @@ Level 1 Questions
             res = '''Guatemala 1\nParaguay 2\nTajikistan 1\nKenya 3\nAzerbaijan 1\nEl Salvador 2\nBolivia 2\nEcuador 1\nGeorgia 1\nPhilippines 7\nUganda 1\nMadagascar 1\nNicaragua 1\nJordan 1\n'''
             self.assertEqual(self.getOutput(), res, "Use the accumulator pattern to add up all the loans")
 
-    
+
     MyTests().main()
 
 
@@ -196,7 +199,7 @@ Level 2 Questions
             res = tot / 7
             self.assertEqual(p_average, res, "Use the accumulator pattern to add up the loans just for the Philippines")
 
-    
+
     MyTests().main()
 
 
@@ -215,7 +218,7 @@ Level 2 Questions
         def testOne(self):
             self.assertTrue('longest_to_fund' in self.getEditorText(), "you need a loan_total variable")
             self.assertEqual(longest_to_fund, country_name[time_to_raise.index(max(time_to_raise))], "Hint: max and index are your friends")
-    
+
     MyTests().main()
 
 
@@ -236,12 +239,12 @@ Level 2 Questions
             self.assertAlmostEqual(a_mean, 1974.424, places=3, feedback="Use the accumulator pattern to add up all the loans")
             self.assertFalse('sum(' in self.getEditorText(), "you should not use sum")
 
-    
+
     MyTests().main()
 
 For our final few exercises we are interested in exploring the distribution of the data as well as the relationships between two of our variables.  To do this we need to introduce a few more statistical concepts including variance, standard deviation, covariance and correlation.
 
-**Variance** looks at a single variable and measures how far the set of numbers are spread out from their average value.  However its a bit hard to interpret because the units are squared so its not on the same scale as our original numbers.  This is why most of the time we use the **standard devation**, which is just the square root of the variance.  A large standard deviation tells us that our data is quite spread out while a small standard deviation tells us that most of our data is pretty close to the mean. 
+**Variance** looks at a single variable and measures how far the set of numbers are spread out from their average value.  However its a bit hard to interpret because the units are squared so its not on the same scale as our original numbers.  This is why most of the time we use the **standard devation**, which is just the square root of the variance.  A large standard deviation tells us that our data is quite spread out while a small standard deviation tells us that most of our data is pretty close to the mean.
 
 .. math::
 
@@ -264,12 +267,12 @@ Don't let the fancy math get you down the variance is just the sum of the square
 
     class MyTests(TestCaseGui):
 
-        def testOne(self):            
+        def testOne(self):
             self.assertTrue('loan_stdev' in self.getEditorText(), "you need a loan_stdev variable")
             self.assertAlmostEqual(loan_var, 250456.0, 1, "")
             self.assertAlmostEqual(loan_stdev, 500.456, 3,  "Hint: x ** 0.5  is the same as the square root")
 
-    
+
     MyTests().main()
 
 In data science we are often most interested in two variables that seem to influence one another.  That is, we can observe that as one variable grows a second grows with it, or as one variable grows another variable shrinks at a similar rate.  We will look at two ways to explore the relationships between these variables.

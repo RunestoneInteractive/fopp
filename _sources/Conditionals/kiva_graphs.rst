@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -26,7 +29,7 @@ You can re-use the the ``unique_country`` list from the last project or if you h
 
 To draw the bars you can cheat a litte bit and just make your turtle really fat by using a width of about 20.  If you want to be really nice and precise you can draw a filled rectangle with the turtle too.
 
-You should get the basics of the bar chart working first.  Your very first try is likely to be kind of short and generally not very good looking.  You'll want to experiment with a scale factor to make your Y values lengthen themselves a bit.  Later come back and draw the axes and scale and the labels for each country.  
+You should get the basics of the bar chart working first.  Your very first try is likely to be kind of short and generally not very good looking.  You'll want to experiment with a scale factor to make your Y values lengthen themselves a bit.  Later come back and draw the axes and scale and the labels for each country.
 
 The data for this project is from the same original data set as the previous project, but we have provided a larger sample this time around.
 
@@ -44,7 +47,7 @@ The data for this project is from the same original data set as the previous pro
     num_lenders_total = [1, 144, 10, 23, 22, 16, 22, 35, 11, 32, 28, 53, 8, 39, 19, 49, 30, 85, 9, 16, 4, 31, 12, 6, 9, 21, 6, 10, 11, 7, 34, 8, 23, 38, 11, 15, 12, 46, 14, 50, 16, 12, 62, 18, 35, 7, 18, 10, 19, 12, 9, 10, 13, 3, 13, 8, 9, 9, 11, 18, 14, 52, 48, 40, 2, 11, 42, 1, 9, 106, 17, 6, 18, 11, 5, 21, 10, 88, 6, 9, 7, 23, 61, 6, 9, 9, 14, 6, 7, 15, 15, 1, 22, 20, 12, 7, 10, 6, 20, 2]
 
     unique_countries = ['India', 'Costa Rica', 'Cambodia', 'Tanzania', 'Peru', 'Palestine', 'Nigeria', 'Bolivia', 'Ecuador', 'Benin', 'Ghana', 'El Salvador', 'Togo', 'Guatemala', 'Zimbabwe', 'Jordan', 'Sierra Leone', 'Kyrgyzstan', 'Uganda', 'Philippines', 'Vietnam', 'Mongolia', 'Samoa', 'Honduras', 'Kosovo', 'Nicaragua', 'Lebanon', 'Colombia', 'Paraguay', 'Kenya', 'Tajikistan']
-    
+
 
 
 
@@ -125,7 +128,7 @@ The interesting thing about this data is that if you calculate the standard devi
     I,9.0,3.31,10.99,7.50,2.03,4.12
     II,9.0,3.31,10.99,7.50,2.03,4.12
     III,9.0,3.31,10.99,7.50,2.03,4.12
-    IV,9.0,3.31,10.99,7.50,2.03,4.12            
+    IV,9.0,3.31,10.99,7.50,2.03,4.12
 
 
 In addition the correlation between the X and Y variables is 0.816 for all four groups.
@@ -163,7 +166,7 @@ Histogram
 In one of our previous labs we calculated the variance and the standard deviation of a list of numbers.  Either number gives us an indication of how much the data is spread out.  But a histogram tells a much richer story.  For example here is a histogram that shows the distribution of heights in women and men.
 
 .. figure:: http://www.usablestats.com/images/men_women_height_histogram.jpg
-    
+
 `Image from Usable Stats <http://www.usablestats.com/lessons/normal>`_
 
 Here is a histogram of our kiva data and the amount of money loaned.
@@ -203,12 +206,12 @@ Calculating the buckets is the hard part of this project, the rest of the code y
             self.assertEqual(bucket_list[3], 0, 'bucket 3')
             self.assertEqual(bucket_list[4], 0, 'bucket 4')
             self.assertEqual(bucket_list[5], 0, 'bucket 5')
-            self.assertEqual(bucket_list[6], 0, 'bucket 6')            
+            self.assertEqual(bucket_list[6], 0, 'bucket 6')
             self.assertEqual(bucket_list[7], 4, 'bucket 7')
             self.assertEqual(bucket_list[8], 2, 'bucket 8')
             self.assertEqual(bucket_list[9], 4, 'bucket 9')
             self.assertTrue('for' in self.getEditorText(), "for loop check")
-    
+
     MyTests().main()
 
 
@@ -243,7 +246,7 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 .. activecode:: act_kiva_graph_6
     :include: act_kiva_graph_data
 
-    Finally now put it all together and draw a histogram of the ``loan_amount`` data with 10 buckets.  
+    Finally now put it all together and draw a histogram of the ``loan_amount`` data with 10 buckets.
     ~~~~
     # Your code here
 

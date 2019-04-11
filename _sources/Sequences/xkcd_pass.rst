@@ -1,3 +1,7 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
 🤔 Generating a Password XKCD Style
 =====================================
 
@@ -29,7 +33,7 @@ Next you follow the XKCD model of selecting four random words and concatenating 
 
 
 
-Of course that does not make the IT department of most colleges and businesses happy.  They still want you to have at least one capital letter and a number in your password.  We'll learn more about this in a couple of chapters but it is easy to replace parts of a string with a different string using the replace method.  For example ``"pool".replace('o', 'e')`` gives us ``peel``  Once you have your final password you can replace some letters with number substitutions.  For example its common to replace the letter l with the number 1 or the letter e with the number 3 or the o with a 0.  You can get creative.  You can also easily capitalize a word using ``"myword".capitalize()`` Once you feel confident that you understand the code below you can use this activecode to make your password comply with standard procedures to include special characters.   
+Of course that does not make the IT department of most colleges and businesses happy.  They still want you to have at least one capital letter and a number in your password.  We'll learn more about this in a couple of chapters but it is easy to replace parts of a string with a different string using the replace method.  For example ``"pool".replace('o', 'e')`` gives us ``peel``  Once you have your final password you can replace some letters with number substitutions.  For example its common to replace the letter l with the number 1 or the letter e with the number 3 or the o with a 0.  You can get creative.  You can also easily capitalize a word using ``"myword".capitalize()`` Once you feel confident that you understand the code below you can use this activecode to make your password comply with standard procedures to include special characters.
 
 .. activecode:: act_xkcd_3
 

@@ -1,3 +1,7 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
 🤔 Sentiment Analysis of Climate Change Tweets
 ================================================
 
@@ -102,7 +106,7 @@ OK since b1score is higher we would predict that we were picking cookies out of 
 **Check your Understanding**
 
 
-.. fillintheblank:: act_fb_cookies
+.. fillintheblank:: act_fb_cookies1
 
     Modify the spreadsheet so that the number of chips ahoy in Bowl1 is 40, and the number of oreos is Bowl2 is 30.  What are the new scores for Bowl1 |blank| and Bowl2 |Blank| ?
 
@@ -113,9 +117,15 @@ OK since b1score is higher we would predict that we were picking cookies out of 
       :x: Is incorrect
 
 
-.. fillintheblank:: act_fb_cookies
+.. fillintheblank:: act_fb_cookies2
 
     Now lets add a third kind of cookie to both bowls.  Suppose we had a bunch of Fig Newtons. 20 of them in Bow1 and 30 of them in Bowl2 and we have the following series of draws:  Oreo, Fig Newton, Fig Newton, Chips Ahoy, Oreo.  What are the new scores for Bowl1 |blank| and Bowl2 |Blank| ?
+
+    - :1: Is Correct
+      :x: Incorrect
+
+    - :1: Is Correct
+      :x: Is incorrect
 
 Going from Cookies to Tweets
 ----------------------------
@@ -123,4 +133,6 @@ Going from Cookies to Tweets
 This all gets much more interesting when we look at a more real world problem.  In fact this kind of Bayesian Classification became extremely popular 20 years ago as the first spam filter for email that worked well.  More recently it has become a good technique for doing sentiment analysis.
 
 The transition is not too bad if you think of it like this.  Instead of bowls of cookies we have bags of words.  One bag has all the words we have collected from millions of emails that users have marked as spam.  The other bag contains all the words we have collected from emails that were not spam.  We can build a table just like we did for our Oreo and Chips Ahoy example.  Of course this will have a lot more rows as we have a much greater variety.  Nevertheless we can count how many times each word occurs in our spam bag and how many times it occurs in the non-spam bag.  And compute our probabilities from there.
+
+To start with, we have a bunch of tweets that have been categorized as either climate change is real, and tweets that are of the climate change is fake variety.  We will use those to build our two bags of words.  There are also a bunch of tweets that have categorized as neutral, but we will leave them for a challenge exercise and focus on the two extremes.
 

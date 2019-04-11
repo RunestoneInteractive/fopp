@@ -1,11 +1,15 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
 :skipreading:`True`
 
 🤔 Exploring Common Words and SETI
 ====================================
 
-Many projects require the use of a list of words.  In this project we will answer a few interesting questions about words in the english language making use of a list of the 5000 most common words. This particular list list of words is based on analyzing over 450 million words from magazines, newspapers, works of fiction and academic writing. It is highly representative of the english language.  the list we will be using is kindly made available from the `Word Frequency data <https://www.wordfrequency.info>`_ project.  
+Many projects require the use of a list of words.  In this project we will answer a few interesting questions about words in the english language making use of a list of the 5000 most common words. This particular list list of words is based on analyzing over 450 million words from magazines, newspapers, works of fiction and academic writing. It is highly representative of the english language.  the list we will be using is kindly made available from the `Word Frequency data <https://www.wordfrequency.info>`_ project.
 
-Now you may be wondering about the rest of the title for this section.  What do common words and the `search for extra terrestrial intelligence <https://www.seti.org/animal-communications-information-theory-and-search-extraterrestrial-intelligence-seti>`_ have to do with one another?  A linguistic relationship called Zipf's Law appears to be one of the conditions for complex communications.  A simple way to describe Zipf's law is to say that words are not evenly distributed across texts; but rather a few words are very common and a lot of words are very rare.  There is a nice straight line plotted on a log-log scale that links the common and the rare words.  The slope of this line is approximately -1.  
+Now you may be wondering about the rest of the title for this section.  What do common words and the `search for extra terrestrial intelligence <https://www.seti.org/animal-communications-information-theory-and-search-extraterrestrial-intelligence-seti>`_ have to do with one another?  A linguistic relationship called Zipf's Law appears to be one of the conditions for complex communications.  A simple way to describe Zipf's law is to say that words are not evenly distributed across texts; but rather a few words are very common and a lot of words are very rare.  There is a nice straight line plotted on a log-log scale that links the common and the rare words.  The slope of this line is approximately -1.
 
 In fact if you study the signal systems for a different samples you will see that human communication follows this law as does the communication for Bottlenose Dolphins, Humpback Whales, and adult Squirrel Monkeys.  The darn Chipmunks that torment me in the summer time are close but not quite in the range.
 
@@ -33,12 +37,12 @@ Each word also has a part of speech which will be one of
 * 'a' - article
 * 'v' - verb
 * 'c' - conjunction
-* 'i' - preposition 
+* 'i' - preposition
 * 't' - infinitive (to)
 * 'p' - pronoun
-* 'd' - pronoun 
+* 'd' - pronoun
 * 'x' - not or n't
-* 'r' - adverb 
+* 'r' - adverb
 * 'm' - number
 * 'n' - noun
 * 'e' - there

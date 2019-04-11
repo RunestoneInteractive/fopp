@@ -1,9 +1,13 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
 🤔 Monte Carlo Simulations
 ============================
 
 A lot of scientific work can be done with simulations.  Most drugs today are not tested on animals, or even manufactured in meatspace without significant testing via simulation in cyberspace. Investment strategies are simulated Millions of times to predict the most likely outcome, bridge designs, new computers, new cars, man many other things are designed and simulated in the computer before anything physical is created.  `Steve Jobs <https://en.wikipedia.org/wiki/Steve_Jobs>`_ is said to have told his idol `Seymour Cray <https://en.wikipedia.org/wiki/Seymour_Cray>`_ that he used a Cray supercomputer to help design and model the latest Mac, to which Cray is reported to have replied 'that's great I just bought a Mac to help me design the next Cray.'
 
-In this project we are going to investigate the Monte-Carlo simulation, named after the famous gambling city in `Monaco <https://www.google.com/maps/place/Monte+Carlo,+Monaco-Ville,+Monaco/@43.7261188,7.2865825,11z/data=!4m5!3m4!1s0x12cdc287dedfadcd:0xee15296ed95b686c!8m2!3d43.7400718!4d7.4266436>`_.  
+In this project we are going to investigate the Monte-Carlo simulation, named after the famous gambling city in `Monaco <https://www.google.com/maps/place/Monte+Carlo,+Monaco-Ville,+Monaco/@43.7261188,7.2865825,11z/data=!4m5!3m4!1s0x12cdc287dedfadcd:0xee15296ed95b686c!8m2!3d43.7400718!4d7.4266436>`_.
 
 We will do three simulations in this project.  The first to help us calculate the value of :math:`\pi`. The second to predict the price of a stock, and the third to explore the "Monty Hall Paradox".
 
@@ -54,7 +58,7 @@ Probably your first try with 1000 or 2000 repetitions will get you to around 3.1
     When doing a long running simulation like the pi calculation you may run up against the time limit we have set for your program.  25 seconds.  to increase the time you can do the following in your program:
 
     .. code-block:: python
-        
+
         import sys
         sys.setExecutionLimit(60000)
 
@@ -83,7 +87,7 @@ First, lets use Altair to graph the closing price of the stock over 1000 days.
 .. activecode:: act_monte_4
     :nocodelens:
 
-Once you have your initial graph lets look at how much the stock changes from day to day.  To do this we will make a new list of numbers where we take the price from day N and subtract the price from day N-1.   Next we'll use Altair to graph these changes to see if we can detect any pattern in how the stock changes from day to day.  In fact it should look quite random.  
+Once you have your initial graph lets look at how much the stock changes from day to day.  To do this we will make a new list of numbers where we take the price from day N and subtract the price from day N-1.   Next we'll use Altair to graph these changes to see if we can detect any pattern in how the stock changes from day to day.  In fact it should look quite random.
 
 .. activecode:: act_monte_5
     :nocodelens:
@@ -168,4 +172,4 @@ The math behind this is pretty complicated, but now that you are an experienced 
     :option_3: Out of reach no matter how hard I try
 
     For me to master the things taught in this project feels...
-    
+

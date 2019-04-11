@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -21,7 +24,7 @@ This lesson is also a good example of a common computational pattern called inpu
 
     Note:  More advanced students could probably skip this and go straight to the trees problem (below).  The majority will benefit from this slower walkthrough.
 
-    * After you have worked through the XKCD example, then work through a sample problem as a class by asking a simple question like How many minutes until fall/spring break?  You should talk with them about some questions that may arise.  How accurate do we want to be?  What will we use as the input ?  
+    * After you have worked through the XKCD example, then work through a sample problem as a class by asking a simple question like How many minutes until fall/spring break?  You should talk with them about some questions that may arise.  How accurate do we want to be?  What will we use as the input ?
 
         * Let us agree that for this first problem, we will use as the input a number of weeks.  No fractions, just a simple number of weeks until the first break.
 
@@ -63,7 +66,7 @@ This lesson is also a good example of a common computational pattern called inpu
     Also note that the convention for variables -- things that might change -- is to use all lower case characters and separate words by _  Other programming languages use a capitalization convention where you capitalize each new word in the variable.  This is called CamelCase.  Pythonistas don't do CamelCase.
 
     So, after all this what would the next step be?  Let's agree that the next two steps will be:
-    
+
     * We could go from days to hours
     * Then from hours to minutes
 

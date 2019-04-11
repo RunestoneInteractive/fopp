@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -23,7 +26,7 @@ The enigma machine was used by the Germans during World War II to encrypt orders
     - :pythonrocks: Is the correct answer
       :x: Try again, here is a hint:  a == o
 
-The enigma encrypted messages using a much more sophisticated code than the previous question.  The secret message I gave you uses a simple substitution cipher.  I have given you one hint but if you still don't have it This matching question will reveal a few more hints that should help you solve it.  
+The enigma encrypted messages using a much more sophisticated code than the previous question.  The secret message I gave you uses a simple substitution cipher.  I have given you one hint but if you still don't have it This matching question will reveal a few more hints that should help you solve it.
 
 The letters on the left correspond to the letters in the ciphertext and the letters on the right correspond to the plaintext.  Drag the letters on the left to their corresponding letters on the right.
 
@@ -56,7 +59,7 @@ A cipher is a secret or disguised way of writing, and a caesar cipher is one of 
         def testOne(self):
             self.assertTrue('ciphertext' in self.getEditorText(), "you need a ciphertext variable")
             self.assertEqual(ciphertext, 'gurdhvpxoebjasbkwhzcfbiregurynmlqbt')
-    
+
     MyTests().main()
 
 
@@ -88,7 +91,7 @@ Scrambled Key
     abcdefghijklmnopqrstuvwxyz
     nopqrstuvwxyzabcdefghijklm
 
-Now to encrypt our message we just need to find the letter in the top row and replace it by the letter on the bottom row.  This strategy will work for any possible arrangement of the alphabet.  Another benefit of this strategy is that we could also include spaces or even punctuation.  As long as our 'alphabet' and our key are the same length.  
+Now to encrypt our message we just need to find the letter in the top row and replace it by the letter on the bottom row.  This strategy will work for any possible arrangement of the alphabet.  Another benefit of this strategy is that we could also include spaces or even punctuation.  As long as our 'alphabet' and our key are the same length.
 
 .. activecode:: act_scramble_ac_3
 
@@ -104,7 +107,7 @@ Now to encrypt our message we just need to find the letter in the top row and re
 
         def testOne(self):
             self.assertEqual(ciphertext, 'sbqfzs fqmcpqfzxofqmcpqf mlxcdqumeqsbqgmwwmd fqmcpqyxcdf')
-    
+
     MyTests().main()
 
 
@@ -122,7 +125,7 @@ Now to encrypt our message we just need to find the letter in the top row and re
 
         def testOne(self):
             self.assertEqual(plaintext, 'the sun was shining on the sea shining with all his might')
-    
+
     MyTests().main()
 
 Now test yourself a bit further.
@@ -156,7 +159,7 @@ Finally, only a few truly amazing people are going to remember a random ording o
 
         def testOne(self):
             self.assertEqual(key, 'paswordefghijklmnqtuvxyzbc')
-    
+
     MyTests().main()
 
 

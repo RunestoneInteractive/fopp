@@ -1,3 +1,7 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
 🤔 Image Processing Revisited
 ===============================
 
@@ -24,7 +28,7 @@ Then use the functions together to take an image, rotate it by 90 degrees, enlar
 
 Next design and write functions that will allow you to do:
 
-* smoothing 
+* smoothing
 * edge detection
 
 Do the smoothing here using our old friend the noisyman.

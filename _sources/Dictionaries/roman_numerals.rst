@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -64,7 +67,7 @@ Hint:  You will want to start by using a dictionary to map each single character
 Converting Arabic To Roman
 --------------------------
 
-Can you write a program to go the opposite direction?  Given an Arabic number can you convert it to a roman numeral?  This program uses a special kind of dictionary that preserves the order so that if you iterate over the keys you know you are going to get them in the same order you created them.  (This is the default behavior for dictionaries in Python 3.6 and later, but not for our browser Python) 
+Can you write a program to go the opposite direction?  Given an Arabic number can you convert it to a roman numeral?  This program uses a special kind of dictionary that preserves the order so that if you iterate over the keys you know you are going to get them in the same order you created them.  (This is the default behavior for dictionaries in Python 3.6 and later, but not for our browser Python)
 
 .. activecode:: act_rom_c1
 

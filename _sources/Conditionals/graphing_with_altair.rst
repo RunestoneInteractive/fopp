@@ -1,5 +1,5 @@
-..  Copyright (C)  Brad Miller
-    Creative Commons Attribution-ShareAlike 4.0 International License
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
 :skipreading:`True`
 
@@ -15,7 +15,7 @@ Although making graphs with the turtle is a good way to learn about a few basics
 * Bokeh
 * Altair
 
-Altair was designed to work in a browser and makes use of a very powerful concept that we won't go into here called a grammar of graphics. Its pretty easy to use once you understand a few of the basics.  The two key ideas to understand are "marks" and "encodings"  
+Altair was designed to work in a browser and makes use of a very powerful concept that we won't go into here called a grammar of graphics. Its pretty easy to use once you understand a few of the basics.  The two key ideas to understand are "marks" and "encodings"
 
 A **mark** essentially specifies the kind of chart we are going create such as a bar chart or a line graph or a scatter graph.  In our version of Altair we support three different kinds of marks:
 
@@ -95,7 +95,7 @@ On line 4 of the program we make a Chart.  The chart is the holder of the data t
 
 On line 5 we tell the chart that it is going to be a bar chart by calling the method ``mark_bar()``
 
-On line 6 we tell the mark the encodings to use.  We tell it that the values for the x axis should come from the customer column and to treat them as nominal data.  That is great for a bar chart as the columns often do correspond to names.  The values for the y axis will come from the cakes column. In a bar chart its natural to think of the values being proportional to the height of the bar.  Which is exactly what Altair does for a bar chart.  We are also going to color the bars (this is optional) using the value from flavor column.  
+On line 6 we tell the mark the encodings to use.  We tell it that the values for the x axis should come from the customer column and to treat them as nominal data.  That is great for a bar chart as the columns often do correspond to names.  The values for the y axis will come from the cakes column. In a bar chart its natural to think of the values being proportional to the height of the bar.  Which is exactly what Altair does for a bar chart.  We are also going to color the bars (this is optional) using the value from flavor column.
 
 On line 7 we tell Altair to display the chart.
 
@@ -124,8 +124,8 @@ Can you explain why the graph looks like it does? Just to be sure we are seeing 
 
     import altair
 
-    data = altair.Data(customer=['Alice', 'Bob', 'Claire', 'Drake', 'Emma','Alice', 'Emma', 'Ginger'], 
-        cakes=[5,9,7,10,82,70,42,64], 
+    data = altair.Data(customer=['Alice', 'Bob', 'Claire', 'Drake', 'Emma','Alice', 'Emma', 'Ginger'],
+        cakes=[5,9,7,10,82,70,42,64],
         flavor=['chocolate', 'vanilla', 'strawberry','chocolate','vanilla','strawberry','chocolate','strawberry'])
     chart = altair.Chart(data)
     mark = chart.mark_bar()
@@ -169,7 +169,7 @@ One line 11 we tell the chart to use the column named X as the x values and Y as
 2. Change the mark to be a ``mark_bar`` -- Cool right, its like 3 graphs for the price of one!
 3. Change the data so that instead of calling the columns X and Y you call one ``num`` and the other ``square_num``
 4. Add a color parameter to the encoding use either X or Y to specify the color value.  Don't give it a type and see how it looks.  then specify that you want it to treat the column as nominal ':N' and you will see how the color scheme changes.  This gives you a lot of flexibility in how your chart gets colored.
-5. Choose a different function sine, log, 
+5. Choose a different function sine, log,
 6. plot $x(t) = 2 \cos(t) + \sin(t) \cos(60t), y(t) = \sin(2t) + \sin(60t)$ over a range of t values.
 7. The equation for the "Butterfly curve" is `Here <https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)>`_ can you generate the data and use Altair to plot it?
 
@@ -211,7 +211,7 @@ Here are 100 IMDB movie ratings.  Lets figure out the distribution of these rati
 
 A few words of explanation for the bar chart may make it clearer what is going on here.
 
-Hopefully everything up to line 8 will look pretty similar to you.  but on 8 we are have to get a bit more fancy with our encoding.  We are telling Altair that our X axis is going to use the ratings data and we are adding the ':Q' to be sure it knows that it is quantitative.  You can remove the :Q and it will still work fine.  The key to making the histogram is to tell Altair that we are going to put the X data into bins.  Just like you did in the last project, but you don't have to calculate it this time, Altair will do the work.  
+Hopefully everything up to line 8 will look pretty similar to you.  but on 8 we are have to get a bit more fancy with our encoding.  We are telling Altair that our X axis is going to use the ratings data and we are adding the ':Q' to be sure it knows that it is quantitative.  You can remove the :Q and it will still work fine.  The key to making the histogram is to tell Altair that we are going to put the X data into bins.  Just like you did in the last project, but you don't have to calculate it this time, Altair will do the work.
 
 On line 9 we tell Altair that the y values will be the ``count()`` of the things that are in the bins.  If you specify a function like count you are telling it how to aggregate the values on the other axis.
 

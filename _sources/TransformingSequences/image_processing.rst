@@ -1,3 +1,6 @@
+..  Copyright (C)  Google LLC, Runestone Interactive LLC
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
 
 :skipreading:`True`
 
@@ -198,7 +201,7 @@ Here is a "friend" of mine in a photo taken long ago.  Its been in a box in the 
 
 Your job is to digitally restore my friend and make him look like new.  How are you going to do that? Well, what do we have to work with?  If you look at the image, most of the speckles are just one pixel that is out of whack caused by dust on the picture, or a small scratch.  Clearly that pixel value is incorrect **with respect to the pixels surrounding it.**  So we need to fix that.
 
-Your first inclination would be to find the bad pixels and fix only those, but there is an even easier solution for us.  We can simply pretend that all pixels need to be fixed.  There are two strategies we can use:  
+Your first inclination would be to find the bad pixels and fix only those, but there is an even easier solution for us.  We can simply pretend that all pixels need to be fixed.  There are two strategies we can use:
 
 1.  Replace every pixel with the average of the 8 pixels around it.
 2.  Replace every pixel with the median pixel value of the 8 pixels around it.
@@ -236,7 +239,7 @@ This exercises is really a remix of the last problem and a return to our image e
 Edge detection
 ~~~~~~~~~~~~~~
 
-the Sobel kernel has two parts to it one to calculate the gradient, that is how the darkness of the image is changing from left to right and another to measure how the darkness of the image is changing from top to bottom.  
+the Sobel kernel has two parts to it one to calculate the gradient, that is how the darkness of the image is changing from left to right and another to measure how the darkness of the image is changing from top to bottom.
 
 .. math::
 
