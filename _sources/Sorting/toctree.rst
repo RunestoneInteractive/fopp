@@ -14,4 +14,3 @@ Sorting
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
-   

@@ -13,3 +13,5 @@ Advanced Functions
    Exercises.rst
    ChapterAssessment.rst
    clustering.rst
+   sentiment_analysis.rst
+
