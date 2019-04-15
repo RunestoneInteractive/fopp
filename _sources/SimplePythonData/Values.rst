@@ -22,7 +22,7 @@ marks.
 
 We can specify values directly in the programs we write. For example we can specify a number as a **literal** just by (literally) typing it directly into the program (e.g., ``5`` or ``4.32``). In a program, we specify a word, or more generally a string of characters, by enclosing the characters inside quotation marks (e.g., ``"Hello, World!"``).
 
-During execution of a program, the Python interpreter creates an internal representation of literals that are specified in a program. It can then manipulate them, for examply by multiplying two numbers. We call the internal representations **objects** or just **values**.
+During execution of a program, the Python interpreter creates an internal representation of literals that are specified in a program. It can then manipulate them, for example by multiplying two numbers. We call the internal representations **objects** or just **values**.
 
 You can't directly see the internal representations of values. You can, however, use the ``print`` function to see a printed representation in the output window.
 
