@@ -136,3 +136,66 @@ The transition is not too bad if you think of it like this.  Instead of bowls of
 
 To start with, we have a bunch of tweets that have been categorized as either climate change is real, and tweets that are of the climate change is fake variety.  We will use those to build our two bags of words.  There are also a bunch of tweets that have categorized as neutral, but we will leave them for a challenge exercise and focus on the two extremes.
 
+.. datafile:: climate_tweets.csv
+    :fromfile: ../_static/climate_small.csv
+    :rows: 40
+
+Step 1 Cleaning the Data
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Remove punctuation  (Challenge: except for URLs)
+2. Convert all to lower case
+3. Write to file for the next step.
+
+.. activecode:: act_tweets_clean
+
+
+Step 2 Building the Model
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Make a Dictionary for climate change existence and a Dictionary for climate change denial.
+1. For each tweet split the string into a list of words and add those words to the appropriate counter, based on the existence column.  **Challenge** Do not include so called stop-words that is words that are popular and used in all tweets, such as a, an, the, etc.
+1. Make a combined dictionary that includes all of the words from both counters where a word appears in both counters this dictionary should containe the total count.
+1. Write out a CSV file like the following:
+
+.. csv-table::
+
+    word, Y_counts, N_counts, Total_count
+    global, 2271, 2167, 4438
+
+.. activecode:: act_tweets_build
+
+
+Step 3 Classifying new Tweets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The datafile ``climate_test.csv`` contains a bunch of uncategorized tweets.  Your job is to classify each tweet using the Naive Bayes algorithm we described above as either a Y tweet or an N tweet.
+
+1. For every tweet, split the tweet into a list of words
+2. initialize two variables yscore, nscore to 1.0
+3. For each word in the tweet:
+   a. compute P(word|Y)
+   b. update yscore
+   c. compute P(word|N)
+   d. update nscore
+4. classify this tweet as either Y or N depending on which of yscore and nscore is greater.
+5. Write the index number along with the classification to a file.
+
+.. activecode:: act_tweets_classify
+
+.. datafile:: climate_test.csv
+    :fromfile: ../_static/climate_test.csv
+
+
+Step 4 Scoring the Model
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The data file ``climate_test_answers.csv`` contains the tweet number and the correct classification for that tweet.  Compute the number of tweets you have correctly classified in the previous step by comparing your answers to the answers in this data file.
+
+.. activecode:: act_tweets_score
+
+
+.. datafile:: climate_test_answers.csv
+    :fromfile: ../_static/climate_test_answers.csv
+    :hide:
+
