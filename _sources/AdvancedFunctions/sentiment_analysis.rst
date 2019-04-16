@@ -166,6 +166,64 @@ Step 2 Building the Model
 .. activecode:: act_tweets_build
 
 
+.. raw:: html
+
+    <div style="width: 600px; margin-right: auto; margin-left: auto;">
+    <div id="climate_words"></div>
+    </div>
+
+    <script>
+        var data = [
+            ['Word','Y','N','Total',,],
+            ['climate',1981,350,2331,,],
+            ['change',1831,303,2134,,],
+            ['global',1546,898,2444,,],
+            ['Warming',1398,868,2266,,],
+            ['rt',514,228,742,,],
+            ['link',499,32,531,,],
+            ['new',169,39,208,,],
+            ['news',149,21,170,,],
+            ['green',129,14,143,,],
+            ['report',112,21,133,,],
+            ['snow',84,124,208,,],
+            ['tcot',69,121,190,,],
+            ['al',15,88,103,,],
+            ['gore',14,83,97,,],
+            ['dc',79,76,155,,],
+            [,8589,3266,11855,,],
+            [,,,,,]
+        ];
+        $('#climate_words').jexcel({
+        data:data,
+        colWidths: [ 200, 80, 100, 100 ]
+        });
+
+    </script>
+
+The table above shows you an example (the numbers will not match yours exactly) of what you should produce.  Now using this table lets review what we leared from the cookie example above my making a couple of calculations.
+
+.. fillintheblank:: act_cc_oneword
+
+   What is the probability that if a tweet contains the word 'green' that it is from a Y tweet? |blank|  What is the probablility that it is from an N tweet?
+
+   - :[0].015.*: Is the correct answer
+     :x: Word is the same as Cookie, Y is the same as Bowl1 and N is the same as Bowl2
+
+   - :[0].004.*: Is the correct answer
+     :x: Word is the same as Cookie, Y is the same as Bowl1 and N is the same as Bowl2
+
+.. fillintheblank:: act_cc_multwords
+
+   What are the scores for Y and N given that a tweet has the words green, snow and gore?  Y: |blank| N: |blank|
+
+   - :0.000000173.*: Is the correct answer
+     :0.000000239.*: Don't forget to multiply by the probability of the class
+     :x: Look at the example we worked in Activecode 1
+
+   - :0.00000113.*: Is the correct answer
+     :0.00000413.*: Don't forget to multiply by the probability of the class
+     :x: Look at the example we worked in Activecode 1
+
 Step 3 Classifying new Tweets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
