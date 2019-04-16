@@ -110,10 +110,10 @@ OK since b1score is higher we would predict that we were picking cookies out of 
 
     Modify the spreadsheet so that the number of chips ahoy in Bowl1 is 40, and the number of oreos is Bowl2 is 30.  What are the new scores for Bowl1 |blank| and Bowl2 |Blank| ?
 
-    - :1: Is Correct
+    - :[0].02.*: Is Correct
       :x: Incorrect
 
-    - :1: Is Correct
+    - :[0].03.*: Is Correct
       :x: Is incorrect
 
 
@@ -223,6 +223,8 @@ The table above shows you an example (the numbers will not match yours exactly) 
    - :0.00000113.*: Is the correct answer
      :0.00000413.*: Don't forget to multiply by the probability of the class
      :x: Look at the example we worked in Activecode 1
+
+You will notice that the numbers get pretty small since we are multiplying a lot of small numbers together.  Remember this is just a score and is not really a probability any more.
 
 Step 3 Classifying new Tweets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
