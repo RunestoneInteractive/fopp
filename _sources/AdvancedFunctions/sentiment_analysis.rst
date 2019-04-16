@@ -36,7 +36,11 @@ Similarly if we want to know the probability that we chose a cookie out of bowl 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.2/js/jquery.jexcel.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.2/css/jquery.jexcel.min.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
+    <script src="https://bossanova.uk/components/jexcel/dist/js/formulas.js"></script>
     <div style="width: 600px; margin-right: auto; margin-left: auto;">
     <div id="my"></div>
     </div>
@@ -71,6 +75,13 @@ Similarly if we want to know the probability that we chose a cookie out of bowl 
         colWidths: [ 200, 80, 100, 100 ]
         });
 
+        function AVG(v)
+        {
+            var sum = v.reduce(function(a, b) { return a + b; });
+            var avg = sum / v.length;
+
+            return avg;
+        }
     </script>
 
 focusing on the problem of deciding if we chose from Bowl1 or Bowl2 for a moment.  If we pick out an Oreo that means there is a 60% chance it came from Bowl1 and a 40% chance that it came from Bowl2.  That doesn't give us a ton of confidence that we have the right bowl.  But what if we gather more data?  What if we put the cookie back, *carefully* stir the cookies around and then pick another one.  If this one comes out as an Oreo how can we use that information to improve our guess about which bowl we chose from?
@@ -234,10 +245,12 @@ The datafile ``climate_test.csv`` contains a bunch of uncategorized tweets.  You
 1. For every tweet, split the tweet into a list of words
 2. initialize two variables yscore, nscore to 1.0
 3. For each word in the tweet:
+
    a. compute P(word|Y)
    b. update yscore
    c. compute P(word|N)
    d. update nscore
+
 4. classify this tweet as either Y or N depending on which of yscore and nscore is greater.
 5. Write the index number along with the classification to a file.
 
