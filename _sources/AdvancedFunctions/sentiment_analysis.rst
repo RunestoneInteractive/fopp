@@ -1,6 +1,13 @@
 ..  Copyright (C)  Google LLC, Runestone Interactive LLC
     This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
+:skipreading:`True`
+
+.. qnum::
+   :prefix: SA-
+   :start: 1
+
+
 
 🤔 Sentiment Analysis of Climate Change Tweets
 ================================================
