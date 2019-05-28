@@ -52,7 +52,15 @@
 
       <div>
         <a class="brand-logo" style='background: transparent url("{{pathto('_static/img/logo_small.png', 1)}}") no-repeat 0px 0px;' href="/{{appname}}/default/user/login">&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
-        <a class="navbar-brand" href="{{ pathto(master_doc) }}">{% if course_title -%}{{ course_title|e }}{%- else -%}{{ course_id|e }}{%- endif -%}</a>
+        <a class="navbar-brand" href="{{ pathto(master_doc) }}">
+          {% if dynamic_pages %}
+            {% raw %}
+            {{ =course_name }}
+            {% endraw %}
+          {% else %}
+          {% if course_title -%}{{ course_title|e }}{%- else -%}{{ course_id|e }}{%- endif -%}
+          {% endif %}
+        </a>
       </div>
     </div>
 
@@ -132,7 +140,7 @@
 
         <li class="divider-vertical"></li>
 
-        {% if use_services == 'true' %}
+        {% if use_services %}
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -221,25 +229,36 @@
 
 <script type="text/javascript">
   eBookConfig = {};
-  eBookConfig.host = '{{course_url}}' ? '{{course_url}}' : '';
-  eBookConfig.app = eBookConfig.host+'/{{appname}}';
-  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = '{{course_id}}';
-  eBookConfig.logLevel = {{loglevel}};
-  eBookConfig.loginRequired = {{login_required}};
-  eBookConfig.build_info = "{{build_info}}";
-  eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = {{ use_services }};
-  eBookConfig.python3 = {{ python3 }};
-  eBookConfig.basecourse = '{{ basecourse }}';
-  eBookConfig.acDefaultLanguage = '{{ default_ac_lang }}' ? '{{ default_ac_lang }}' : 'python'
-  eBookConfig.runestone_version = '{{ runestone_version }}';
-  eBookConfig.jobehost = '{{jobe_server}}';
-  eBookConfig.proxyuri_runs = '{{proxy_uri_runs}}';
-  eBookConfig.proxyuri_files = '{{proxy_uri_files}}';
-  eBookConfig.downloadsEnabled = {{downloads_enabled}};
-  eBookConfig.enable_chatcodes = {{enable_chatcodes}} ? {{ enable_chatcodes }} : false;
-  eBookConfig.allow_pairs = {{allow_pairs}} ? {{allow_pairs}} : false;
+  {% if dynamic_pages %}
+    {% raw %}
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = '{{= "{}://{}".format(request.env.wsgi_url_scheme,
+                                             request.env.http_host) }}';
+    eBookConfig.app = eBookConfig.host + '/' + '{{= request.application }}';
+    eBookConfig.course = '{{= course_name }}';
+    eBookConfig.basecourse = '{{= base_course }}';
+    {% endraw %}
+  {% else %}
+    eBookConfig.useRunestoneServices = {% if use_services -%}true{%- else -%}false{%- endif -%};
+    eBookConfig.host = '{{course_url}}' ? '{{course_url}}' : 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/{{appname}}';
+    eBookConfig.course = '{{course_id}}';
+    eBookConfig.basecourse = '{{ basecourse }}';
+  {% endif %}
+eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+eBookConfig.logLevel = {{loglevel}};
+eBookConfig.loginRequired = {{login_required}};
+eBookConfig.build_info = "{{build_info}}";
+eBookConfig.isLoggedIn = false;
+eBookConfig.python3 = {{ python3 }};
+eBookConfig.acDefaultLanguage = '{{ default_ac_lang }}' ? '{{ default_ac_lang }}' : 'python'
+eBookConfig.runestone_version = '{{ runestone_version }}';
+eBookConfig.jobehost = '{{jobe_server}}';
+eBookConfig.proxyuri_runs = '{{proxy_uri_runs}}';
+eBookConfig.proxyuri_files = '{{proxy_uri_files}}';
+eBookConfig.downloadsEnabled = {{downloads_enabled}};
+eBookConfig.enable_chatcodes = {{enable_chatcodes}} ? {{ enable_chatcodes }} : false;
+eBookConfig.allow_pairs = {{allow_pairs}} ? {{allow_pairs}} : false;
 
 </script>
 
@@ -281,7 +300,7 @@
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
-      {% if use_services == 'true' %}
+      {% if use_services %}
       <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
       {% endif %}
       | <a href="#">Back to top</a>

@@ -16,11 +16,13 @@ if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
 elif hostname == 'fopp.learningpython.today':
     master_url = 'https://fopp.learningpython.today'
 else:
-    master_url = 'http://127.0.0.1:8000'
+    master_url = 'http://localhost'
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dest = "../../static"
+dest = "./published"
+use_services = True
+project_name ='fopp'
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -34,11 +36,12 @@ options(
         project_name = "fopp",
         template_args={'course_id': 'fopp',
                        'login_required':'false',
-                       'course_title': 'Found.\\ of\\ Python\\ Prog',
+                       'course_title': project_name,
                        'appname':master_app,
+                       'dynamic_pages': True,
                        'loglevel': 10,
                        'course_url':master_url,
-                       'use_services': 'true',
+                       'use_services': use_services,
                        'python3': 'true',
                        'dburl': 'postgresql://user:password@localhost/runestone',
                        'default_ac_lang': 'python',
