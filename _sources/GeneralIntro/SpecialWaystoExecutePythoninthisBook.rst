@@ -43,7 +43,7 @@ and then you lose all modifications.
 
 If you are logged in, when a page first loads, each activecode window will have a *Load History* button, to the
 right of the *Save & Run* button.
-If you clock on it, or if you run any code, that button turns into a slider.
+If you click on it, or if you run any code, that button turns into a slider.
 If you click on the slider location box, you can use your left and right arrow 
 buttons to switch to other versions you ran. 
 Alternately you can drag the box on the slider. 
