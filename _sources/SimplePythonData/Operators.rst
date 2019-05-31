@@ -51,7 +51,7 @@ Remember that if we want to see the results of the computation, the program need
     (5 + 9) * (15 - 7)
     print(7 + 5)
 
-In Python 3, which we will be using, the division operator ``/`` produces a floating point result if the result is not an integer (e.g., ``1/2``). If you want truncated division, you can use the ``//`` operator.
+In Python 3, which we will be using, the division operator ``/`` produces a floating point result (even if the result is an integer; ``4/2`` is ``2.0``). If you want truncated division, which ignores the remainder, you can use the ``//`` operator (for example, ``5//2`` is ``2``).
 
 .. activecode:: ac2_3_2
     :nocanvas:
@@ -62,7 +62,7 @@ In Python 3, which we will be using, the division operator ``/`` produces a floa
 
 Pay particular attention to the examples above. Note that ``9//5`` truncates rather than rounding, so it produces the value 1 rather 2.
 
-The integer division operator, ``//``, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus ``7.0 // 3.0`` is ``2.0``.
+The truncated division operator, ``//``, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus ``7.0 // 3.0`` is ``2.0``.
 
 .. activecode:: ac2_3_3
    :nocanvas:
