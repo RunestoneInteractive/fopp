@@ -4,6 +4,7 @@
 
 :skipreading:`True`
 
+.. _kiva_statistics:
 
 🤔 Computing Statistics with Kiva Data
 ========================================

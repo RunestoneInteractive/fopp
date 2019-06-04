@@ -3,6 +3,7 @@
 
 :skipreading:`True`
 
+.. _clustering:
 
 🤔 Into the Unknown, clustering
 =================================

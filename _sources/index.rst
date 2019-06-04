@@ -54,26 +54,96 @@ These projects are not meant to *test* your knowledge they are here to give you 
       - Skills Required
       - Learning Goal
     * - 1
-      - `A Preview of the End Goal </runestone/books/published/fopp/GeneralIntro/scaffolded_code.html>`_
+      - :ref:`A Preview of the End Goal <scaffolded_code>`
       - An Open Mind
       - What is programming?
     * - 2
-      - `Driving the Turtle <http://localhost/runestone/books/published/fopp/GeneralIntro/turtle_driving.html>`_
+      - :ref:`Driving the Turtle <turtle_driving>`
       - Turtle Graphics Basics
       - Your First Program
     * - 3
-      - `How Many Handshakes? <http://localhost/runestone/books/published/fopp/SimplePythonData/input_compute_output.html>`_
-      - `Statements and Expressions <http://localhost/runestone/books/published/fopp/SimplePythonData/toctree.html>`_
+      - :ref:`How Many Handshakes? <input_compute_output>`
+      - `Statements and Expressions </runestone/books/published/fopp/SimplePythonData/toctree.html>`_
       - Breaking down a problem
     * - 4
-      - `Drawing a Circle with a Turtle <http://localhost/runestone/books/published/fopp/PythonTurtle/drawing_a_circle.html>`_
-      - `🐢 <http://localhost/runestone/books/published/fopp/PythonTurtle/toctree.html>`_ | `↬ <http://localhost/runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
+      - :ref:`Drawing a Circle with a Turtle <drawing_a_circle>`
+      - `🐢 </runestone/books/published/fopp/PythonTurtle/toctree.html>`_ | `↬ </runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
       -
     * - 5
-      - `Generating a Password XKCD Style <http://localhost/runestone/books/published/fopp/Sequences/xkcd_pass.html>`_
-      - `Sequences <http://localhost/runestone/books/published/fopp/Sequences/toctree.html>`_ |
-        `Repetition <http://localhost/runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
+      - :ref:`Generating a Password XKCD Style <xkcd_pass>`
+      - `Sequences </runestone/books/published/fopp/Sequences/toctree.html>`_ |
+        `Repetition </runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
       - Working with Strings
+    * - 6
+      - :ref:`Computing statistics with Kiva <kiva_statistics>`
+      - `Iteration </runestone/books/published/fopp/Iteration/toctree.html>`_ |
+        `Functions Intro </runestone/books/published/fopp>`_
+      - Computing statistics on tabular data
+    * - 7
+      - :ref:`Graphing Kiva Data with a Turtle <kiva_graphs>`
+      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ | `Functions Intro <>`_
+      - Practice with Turtle Graphics, Graphing Basics
+    * - 8 
+      - :ref:`Graphing Kiva Data with Altair <graphing_with_altair>`
+      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ | `Functions Intro <>`_
+      - Transforming Data, Declarative Graphing
+    * - 9
+      - :ref:`Substitution Cipher <encryption>`
+      - `Transforming Sequences </Runestone/books/published/TransformingSequences/toctree.html>`_
+      - String manipulation
+    * - 10
+      - :ref:`Image Processing <image_processing>`
+      - `Nested Iteration </runestone/books/published/MoreAboutIteration/toctree.html>`_ | `Functions Intro <>`
+      - Nested Iteration, Function Practice
+    * - 11
+      - :ref:`Exploring Common Words and SETI <common_words>`
+      - `Files </runestone/books/published/fopp/Files/toctree.html>`_
+      -
+    * - 12 
+      - :ref:`Monte Carlo Simulation <monte_carlo_simulations>`
+      - `Files </runestone/books/published/fopp/Files/toctree.html>`_
+      - 
+    * - 13 
+      - :ref:`Converting Roman Numerals <roman_numerals>`
+      - `Dictionaries </runestone/books/published/fopp/Dictionaries/toctree.html>`_
+      - Practice with dictionary operations
+    * - 14
+      - :ref:`Stack Overflow Developer Survey <split_apply_combine>`
+      - `Dictionaries </runestone/books/published/fopp/Dictionaries/toctree.html>`_
+      - Learn the split-apply-combine pattern
+    * - 15
+      - :ref:`Image Processing Revisited <image_processing_revisited>`
+      - `Functions </runestone/books/published/fopp/Functions/toctree.html>`_
+      - Using Functions
+    * - 16
+      - :ref:`Turtles and Strings and L-Systems <l_systems>`
+      - `Functions </runestone/books/published/fopp/Functions/toctree.html>`_
+      - Using Functions
+    * - 17
+      - :ref:`Predicting Pizza Prices - Linear Regression <regression_analysis>`
+      - `Functions </runestone/books/published/fopp/Functions/toctree.html>`_
+      - Functions and Statistics
+    * - 18
+      - :ref:`Build your own Google <diy_google>`
+      - `Functions </runestone/books/published/fopp/Functions/toctree.html>`_
+      -  Functions, Dictionary, HTML, Web API's
+    * - 19
+      - :ref:`Better Pizza Predictions <better_pizza_predictions>`
+      - `More Iteration </runestone/books/published/fopp/MoreAboutIteration/toctree.html>`_
+      - Multiple Regression
+    * - 20
+      - :ref:`K-means clustering <clustering>`
+      - `Advanced Functions </runestone/books/published/fopp/AdvancedFunctions/toctree.html>`_
+      - Clustering, Data Science
+    * - 21
+      - :ref:`Sentiment Analysis of Climate Change Tweets <sentiment_analysis>`
+      - `Advanced Functions </runestone/books/published/fopp/AdvancedFunctions/toctree.html>`_
+      - Text Processing, Bayes, Functions
+    
+
+
+
+    
 
 
 Table of Contents
@@ -117,6 +187,11 @@ Table of Contents
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst
+
+.. toctree::
+    :hidden:
+
+    Projects/toctree.rst
 
 Appendices
 ::::::::::

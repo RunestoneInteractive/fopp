@@ -4,6 +4,7 @@
 
 :skipreading:`True`
 
+.. _image_processing:
 
 🤔 Image Processing
 =====================

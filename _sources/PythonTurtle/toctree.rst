@@ -16,5 +16,4 @@ Python Turtle
    WPCommonTurtleErrors.rst
    Exercises.rst
    week1a3.rst
-   drawing_a_circle.rst
    

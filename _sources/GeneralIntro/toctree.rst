@@ -17,5 +17,3 @@ General Introduction
    Comments.rst
    Glossary.rst
    Exercises.rst
-   scaffolded_code.rst
-   turtle_driving.rst

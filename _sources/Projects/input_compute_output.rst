@@ -4,6 +4,8 @@
 
 :skipreading:`True`
 
+.. _input_compute_output:
+
 🤔 Input Compute Output
 =========================
 

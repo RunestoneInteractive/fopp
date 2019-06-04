@@ -19,6 +19,4 @@ Conditionals
    Glossary.rst
    Exercises.rst
    week3a1.rst
-   kiva_graphs.rst
-   graphing_with_altair.rst
    

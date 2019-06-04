@@ -3,6 +3,7 @@
 
 :skipreading:`True`
 
+.. _diy_google:
 
 🤔 Build your own Google
 ==========================

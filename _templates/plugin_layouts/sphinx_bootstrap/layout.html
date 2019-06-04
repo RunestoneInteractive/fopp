@@ -237,6 +237,7 @@
     eBookConfig.app = eBookConfig.host + '/' + '{{= request.application }}';
     eBookConfig.course = '{{= course_name }}';
     eBookConfig.basecourse = '{{= base_course }}';
+    eBookConfig.isInstructor = {{= is_instructor }}
     {% endraw %}
   {% else %}
     eBookConfig.useRunestoneServices = {% if use_services -%}true{%- else -%}false{%- endif -%};

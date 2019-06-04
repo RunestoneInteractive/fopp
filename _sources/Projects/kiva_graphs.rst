@@ -4,6 +4,8 @@
 
 :skipreading:`True`
 
+.. _kiva_graphs:
+
 🤔 Graphing Kiva Data with the Turtle
 =======================================
 

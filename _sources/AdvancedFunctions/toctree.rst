@@ -12,6 +12,3 @@ Advanced Functions
    MethodInvocations.rst
    Exercises.rst
    ChapterAssessment.rst
-   clustering.rst
-   sentiment_analysis.rst
-

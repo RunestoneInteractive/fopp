@@ -3,14 +3,14 @@
 
 :skipreading:`True`
 
-
+.. _better_pizza_predictions:
 
 🤔 Better Pizza Predictions with Multiple Regression
 =======================================================
 
 
 
-In :ref:`linearRegression` We developed a model for predicting pizza prices based on their diameter.  In this section lets try to improve that model by using more data.  In this case we will use both the diameter and the number of toppings.
+In :ref:`regression_analysis` We developed a model for predicting pizza prices based on their diameter.  In this section lets try to improve that model by using more data.  In this case we will use both the diameter and the number of toppings.
 
 .. csv-table::
 
@@ -71,7 +71,7 @@ Now that we have our dot product we can go back to the structure of our initial 
 
 Now using the data above calculate the vector of coefficients for the bias, diameter and number of toppings.  Your function should return a list corresponding to :math:`\vec{c}`
 
-You can improve upon the solution from  :ref:`linearRegression` because you can now use a ``while loop``.   You can have your program continue until your values for :math:`\vec{c}` stop changing.  You may not want to do this immediately, but you should definitely give it a try before you move on.
+You can improve upon the solution from  :ref:`regression_analysis` because you can now use a ``while loop``.   You can have your program continue until your values for :math:`\vec{c}` stop changing.  You may not want to do this immediately, but you should definitely give it a try before you move on.
 
 .. activecode:: multreg_learn
 

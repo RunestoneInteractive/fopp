@@ -4,6 +4,8 @@
 
 :skipreading:`True`
 
+.. _encryption:
+
 🤔 Substitution Cipher
 ========================
 

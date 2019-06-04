@@ -20,6 +20,4 @@ Files
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
-   common_words.rst
-   monte_carlo_simulations.rst
    

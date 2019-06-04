@@ -3,6 +3,7 @@
 
 :skipreading:`True`
 
+.. _graphing_with_altair:
 
 🤔 Graphing Kiva Data with Altair
 ===================================

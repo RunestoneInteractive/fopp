@@ -4,6 +4,8 @@
 
 :skipreading:`True`
 
+.. _split_apply_combine:
+
 🤔 Stack Overflow Developer Survey
 ====================================
 

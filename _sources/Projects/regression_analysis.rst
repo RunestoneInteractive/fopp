@@ -4,7 +4,7 @@
 :skipreading:`True`
 
 
-.. _linearRegression:
+.. _regression_analysis:
 
 🤔 Predicting Pizza Prices - Linear Regression
 ================================================

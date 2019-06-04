@@ -3,6 +3,7 @@
 
 :skipreading:`True`
 
+.. _drawing_a_circle:
 
 🤔 Drawing a Circle with the Turtle
 =====================================

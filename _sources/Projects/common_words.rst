@@ -4,6 +4,8 @@
 
 :skipreading:`True`
 
+.. _common_words:
+
 🤔 Exploring Common Words and SETI
 ====================================
 
