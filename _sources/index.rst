@@ -21,11 +21,11 @@
    </div>
 
 .. reveal:: about
-   :showtitle: About this Project
+   :showtitle: About this Course
    :modal:
-   :modalTitle: About this Project
+   :modalTitle: About this Course
 
-   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project. 
+   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project.
 
    * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers, the Interactive edition of `How to Think Like a Computer Scientist <https://runestone.academy/runstone/static/thinkcspy/index.html>`_ by Brad Miller, David Ranum and many more and `Programs Information and People <https://runestone.academy/runestone/static/pip2/index.html>`_ by Paul Resnick
    * Activecode based on `Skulpt <http://skulpt.org>`_
@@ -39,6 +39,41 @@
    We also `welcome your support <https://runestone.academy/runestone/default/donate/10>`_ to help keep Runestone growing.
 
 
+Project List
+============
+
+These projects are not meant to *test* your knowledge they are here to give you an opportunity to *challenge yourself* and your teammatest to learn new programming and problem solving skills.  Each project builds on the skills learned in the previous projects.
+
+.. list-table::
+    :header-rows: 1
+    :widths: 4,32,32,32
+    :stub-columns: 1
+
+    * -
+      - Project
+      - Skills Required
+      - Learning Goal
+    * - 1
+      - `A Preview of the End Goal </runestone/books/published/fopp/GeneralIntro/scaffolded_code.html>`_
+      - An Open Mind
+      - What is programming?
+    * - 2
+      - `Driving the Turtle <http://localhost/runestone/books/published/fopp/GeneralIntro/turtle_driving.html>`_
+      - Turtle Graphics Basics
+      - Your First Program
+    * - 3
+      - `How Many Handshakes? <http://localhost/runestone/books/published/fopp/SimplePythonData/input_compute_output.html>`_
+      - `Statements and Expressions <http://localhost/runestone/books/published/fopp/SimplePythonData/toctree.html>`_
+      - Breaking down a problem
+    * - 4
+      - `Drawing a Circle with a Turtle <http://localhost/runestone/books/published/fopp/PythonTurtle/drawing_a_circle.html>`_
+      - `🐢 <http://localhost/runestone/books/published/fopp/PythonTurtle/toctree.html>`_ | `↬ <http://localhost/runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
+      -
+    * - 5
+      - `Generating a Password XKCD Style <http://localhost/runestone/books/published/fopp/Sequences/xkcd_pass.html>`_
+      - `Sequences <http://localhost/runestone/books/published/fopp/Sequences/toctree.html>`_ |
+        `Repetition <http://localhost/runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
+      - Working with Strings
 
 
 Table of Contents
@@ -47,17 +82,17 @@ Table of Contents
 .. raw:: html
 
    <ul>
-   <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
+   <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
    </ul>
 
 .. toctree::
     :maxdepth: 1
-    
+
     FrontBackMatter/preface.rst
 
 .. toctree::
    :numbered:
-   :maxdepth: 4 
+   :maxdepth: 4
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
@@ -81,7 +116,7 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
+   AdvancedAccumulation/toctree.rst
 
 Appendices
 ::::::::::
