@@ -42,7 +42,7 @@
 Project List
 ============
 
-These projects are not meant to *test* your knowledge they are here to give you an opportunity to *challenge yourself* and your teammatest to learn new programming and problem solving skills.  Each project builds on the skills learned in the previous projects.
+This book is a "projects first" book, rather than teaching you language features we hope to give you a reason to learn the language in order to solve interesting problems.  These projects are not meant to *test* your knowledge they are here to give you an opportunity to *challenge yourself* and your teammates to learn new programming and problem solving skills.  Each project builds on the skills learned in the previous projects.  If you are brand new to programming you will want to start at the beginning, if you have some prior experience, you can dive in with any project that looks interesting to you.
 
 .. list-table::
     :header-rows: 1
