@@ -67,7 +67,7 @@ These projects are not meant to *test* your knowledge they are here to give you 
       - Breaking down a problem
     * - 4
       - :ref:`Drawing a Circle with a Turtle <drawing_a_circle>`
-      - `🐢 </runestone/books/published/fopp/PythonTurtle/toctree.html>`_ | `↬ </runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
+      - `🐢 Turtle Graphics </runestone/books/published/fopp/PythonTurtle/toctree.html>`_ | `Repetition </runestone/books/published/fopp/PythonTurtle/RepetitionwithaForLoop.html>`_
       -
     * - 5
       - :ref:`Generating a Password XKCD Style <xkcd_pass>`
@@ -77,33 +77,37 @@ These projects are not meant to *test* your knowledge they are here to give you 
     * - 6
       - :ref:`Computing statistics with Kiva <kiva_statistics>`
       - `Iteration </runestone/books/published/fopp/Iteration/toctree.html>`_ |
-        `Functions Intro </runestone/books/published/fopp>`_
+        `[Optional] Functions 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - Computing statistics on tabular data
     * - 7
       - :ref:`Graphing Kiva Data with a Turtle <kiva_graphs>`
-      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ | `Functions Intro <>`_
+      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ |
+        `[Optional] Functions 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - Practice with Turtle Graphics, Graphing Basics
-    * - 8 
+    * - 8
       - :ref:`Graphing Kiva Data with Altair <graphing_with_altair>`
-      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ | `Functions Intro <>`_
+      - `Conditionals </runestone/books/published/fopp/Conditionals/toctree.html>`_ |
+        `[Optional] Functions 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - Transforming Data, Declarative Graphing
     * - 9
       - :ref:`Substitution Cipher <encryption>`
-      - `Transforming Sequences </Runestone/books/published/TransformingSequences/toctree.html>`_
+      - `Transforming Sequences </Runestone/books/published/TransformingSequences/toctree.html>`_ |
+        `[Optional] Functions 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - String manipulation
     * - 10
       - :ref:`Image Processing <image_processing>`
-      - `Nested Iteration </runestone/books/published/MoreAboutIteration/toctree.html>`_ | `Functions Intro <>`
+      - `Nested Iteration </runestone/books/published/MoreAboutIteration/toctree.html>`_ |
+        `[Optional] 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - Nested Iteration, Function Practice
     * - 11
       - :ref:`Exploring Common Words and SETI <common_words>`
       - `Files </runestone/books/published/fopp/Files/toctree.html>`_
-      -
-    * - 12 
+      - Reading data from files
+    * - 12
       - :ref:`Monte Carlo Simulation <monte_carlo_simulations>`
       - `Files </runestone/books/published/fopp/Files/toctree.html>`_
-      - 
-    * - 13 
+      - Working with CSV files
+    * - 13
       - :ref:`Converting Roman Numerals <roman_numerals>`
       - `Dictionaries </runestone/books/published/fopp/Dictionaries/toctree.html>`_
       - Practice with dictionary operations
@@ -139,11 +143,11 @@ These projects are not meant to *test* your knowledge they are here to give you 
       - :ref:`Sentiment Analysis of Climate Change Tweets <sentiment_analysis>`
       - `Advanced Functions </runestone/books/published/fopp/AdvancedFunctions/toctree.html>`_
       - Text Processing, Bayes, Functions
-    
 
 
 
-    
+
+
 
 
 Table of Contents
