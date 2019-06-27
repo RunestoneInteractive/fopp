@@ -73,7 +73,7 @@ that the order of the inputs matters. The value before the comma is treated as t
 as the second input.
 
 Again, remember that when Python performs computations, the results are only shown in the output window if there's a 
-print statement that says to do that. In the activcode window above, ``square(5)`` produces the value 25 but we never 
+print statement that says to do that. In the activecode window above, ``square(5)`` produces the value 25 but we never 
 get to see that in the output window, because it is not printed.
 
 Function calls as part of complex expressions
