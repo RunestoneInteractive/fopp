@@ -20,14 +20,15 @@ In this chapter we explore strings in much more detail.
 
 Additionally, we explore lists, which are very much like strings but can hold different types.
 
-.. youtube:: mrwSbE5MDn0
-    :divid: listintro
-    :height: 315
-    :width: 560
-    :align: left
 
 Strings
 -------
+
+.. youtube:: T435lvYXE_w
+    :divid: stringintro
+    :height: 315
+    :width: 560
+    :align: left
 
 Strings can be defined as sequential collections of characters.  This means that the individual
 characters that make up a string are in a particular order from left to right.
@@ -38,6 +39,13 @@ or two double quotes with nothing in between).
 
 Lists
 -----
+
+.. youtube:: mrwSbE5MDn0
+    :divid: listintro
+    :height: 315
+    :width: 560
+    :align: left
+
 
 A **list** is a sequential collection of Python data values, where each value is identified by an
 index. The values that make up a list are called its **elements**. Lists are similar to strings, which
