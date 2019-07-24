@@ -204,6 +204,28 @@ The following activecode editor contains 10 different image processing functions
         newimg.draw(newwin)
         return newimg
 
+    def rotate_by_90(img):
+
+        width=img.getWidth()
+
+        height=img.getHeight()
+
+        newimg = image.EmptyImage(height,width) #fresh canvas for rotated image
+
+        for row in range(height):
+
+            for col in range(width):
+
+                p = img.getPixel(col, row)
+
+                newimg.setPixel( (height-1) - row,col,p)
+
+        newwin=image.ImageWin(width,height)
+
+        newimg.draw(newwin)
+
+        return newimg
+
     def process5(img, number):
         angle = int(number*90)
         if angle%90 != 0:
