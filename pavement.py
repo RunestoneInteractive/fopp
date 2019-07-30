@@ -2,27 +2,32 @@ import paver
 from paver.easy import *
 import paver.setuputils
 paver.setuputils.install_distutils_tasks()
-import os, sys, socket
+import os, sys
 from runestone.server import get_dburl
 from sphinxcontrib import paverutils
 import pkg_resources
+from runestone import get_master_url
 
 sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
-hostname = socket.gethostname()
-if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
-    master_url = 'https://runestone.academy'
-elif hostname == 'fopp.learningpython.today':
-    master_url = 'https://fopp.learningpython.today'
-else:
-    master_url = 'http://localhost'
+
+####################
+project_name ='fopp'
+####################
+
+master_url = None
+if not master_url:
+    master_url = get_master_url()
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dest = "./published"
-use_services = True
-project_name ='fopp'
+dynamic_pages = True
+if dynamic_pages:
+    dest = "./published"
+else:
+    dest = "../../static"
+
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -41,7 +46,7 @@ options(
                        'dynamic_pages': True,
                        'loglevel': 10,
                        'course_url':master_url,
-                       'use_services': use_services,
+                       'use_services': 'true',
                        'python3': 'true',
                        'dburl': 'postgresql://user:password@localhost/runestone',
                        'default_ac_lang': 'python',
