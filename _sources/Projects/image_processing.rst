@@ -34,7 +34,7 @@ The first thing to try is to create a grayscale version of a color image.  Grays
     img = image.Image("golden_gate.png")
     win = image.ImageWin(img.getWidth(), img.getHeight())
     img.draw(win)
-    img.setDelay(1,15)   # setDelay(0) turns off animation
+    img.setDelay(1,15)   # setDelay(1, 2000) will speed up a lot                      # img.setDelay(delay, number of pixels between delay)
 
     for row in range(img.getHeight()):
         for col in range(img.getWidth()):
