@@ -112,7 +112,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    :autograde: unittest
    :practice: T
 
-   **1.** You will be sorting the following list by each element's second letter a to z. Create a function to use when sorting, called ``second_let``. It will take a string as input and return the second letter of that string. Then sort the list,  create a variable called ``sorted_by_second_let`` and assign the sorted list to it. Do not use lambda.
+   **1.** You will be sorting the following list by each element's second letter, a to z. Create a function to use when sorting, called ``second_let``. It will take a string as input and return the second letter of that string. Then sort the list,  create a variable called ``sorted_by_second_let`` and assign the sorted list to it. Do not use lambda.
    ~~~~
 
    ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
@@ -124,7 +124,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(sorted_by_second_let, sorted(ex_lst, key = second_let), "Testing that func_sort has the correct value.")
+         self.assertEqual(sorted_by_second_let, sorted(ex_lst, key = second_let), "Testing that sorted_by_second_let has the correct value.")
          self.assertEqual(second_let('0123456789'), '1', "Testing that the second_let function returns the second letter in a string.")
          self.assertNotIn("lambda", self.getEditorText(), "Checking that you did *not* use a lambda (Don't worry about actual and expected values).")
 
