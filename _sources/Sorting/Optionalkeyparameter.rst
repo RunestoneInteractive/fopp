@@ -42,8 +42,7 @@ define our own, for reasons that will be explained in a minute.)
     for y in L1:
         print(absolute(y))
 
-
-Now, we can pass the absolute function to L1 in order to specify that we want the items
+Now, we can pass the absolute function to sorted in order to specify that we want the items
 sorted in order of their absolute value, rather than in order of their actual value.
 
 .. activecode:: ac18_3_2

@@ -127,7 +127,7 @@ You can even have a list of functions (!).
     def square(x):
         return x*x
         
-    L = [square, abs]
+    L = [square, abs, lambda x: x+1]
 
     print("****names****")        
     for f in L:
