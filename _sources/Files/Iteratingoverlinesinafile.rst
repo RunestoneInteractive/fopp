@@ -39,7 +39,7 @@ athlete. We can then take the values corresponding to name, team and event to
 construct a simple sentence.
 
 .. activecode:: ac9_5_1
-   :nocodelens:
+    :nocodelens:
 
     olypmicsfile = open("olypmics.txt","r")
 
@@ -55,7 +55,7 @@ little more comfortable with Python. But this idiom is preferred by Python progr
 to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.
 
 .. activecode:: ac9_5_2
-   :nocodelens:
+    :nocodelens:
 
     olypmicsfile = open("olypmics.txt","r")
 
