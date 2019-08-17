@@ -166,10 +166,10 @@ html_theme_options = {
 html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates/plugin_layouts')]
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Runestone Interactive Overview'
+html_title = "Foundations of Python Programming"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='Runestone Interactive Overview'
+html_short_title = "Foundations of Python Programming"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
