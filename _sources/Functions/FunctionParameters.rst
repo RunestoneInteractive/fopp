@@ -14,38 +14,44 @@
 Function Parameters
 -------------------
 
-Named functions are nice because, once they are defined and we understand what they do, we can refer to them by name 
-and not think too much about what they do. With parameters, functions are even more powerful, because they can do 
-pretty much the same thing on each invocation, but not exactly the same thing. The parameters can cause them to do 
-something a little different. 
+Named functions are nice because, once they are defined and we understand what they do, we can refer to them by name
+and not think too much about what they do. With parameters, functions are even more powerful, because they can do
+pretty much the same thing on each invocation, but not exactly the same thing. The parameters can cause them to do
+something a little different.
 
-The figure below shows this relationship. A function needs certain information to do its work. These values, often 
+.. youtube:: Ndw_EgFO_tw
+    :divid: goog_function_parms
+    :height: 315
+    :width: 560
+    :align: left
+
+The figure below shows this relationship. A function needs certain information to do its work. These values, often
 called **arguments** or **actual parameters** or **parameter values**, are passed to the function by the user.
 
 .. image:: Figures/blackboxproc.png
 
-This type of diagram is often called a **black-box diagram** because it only states the requirements from the 
-perspective of the user (well, the programmer, but the programmer who uses the function, who may be different than the 
-programmer who created the function). The user must know the name of the function and what arguments need to be 
+This type of diagram is often called a **black-box diagram** because it only states the requirements from the
+perspective of the user (well, the programmer, but the programmer who uses the function, who may be different than the
+programmer who created the function). The user must know the name of the function and what arguments need to be
 passed. The details of how the function works are hidden inside the "black-box".
 
-You have already been making function invocations with parameters. For example, when you write ``len("abc")`` or 
-``len([3, 9, "hello"])``, len is the name of a function, and the value that you put inside the parentheses, the string 
+You have already been making function invocations with parameters. For example, when you write ``len("abc")`` or
+``len([3, 9, "hello"])``, len is the name of a function, and the value that you put inside the parentheses, the string
 "abc" or the list [3, 9, "hello"], is a parameter value.
 
-When a function has one or more parameters, the names of the parameters appear in the function definition, and the 
-values to assign to those parameters appear inside the parentheses of the function invocation. Let's look at each of 
+When a function has one or more parameters, the names of the parameters appear in the function definition, and the
+values to assign to those parameters appear inside the parentheses of the function invocation. Let's look at each of
 those a little more carefully.
 
-In the definition, the parameter list is sometimes referred to as the **formal parameters** or **parameter names**. 
-These names can be any valid variable name. If there is more than one, they are separated by commas. 
+In the definition, the parameter list is sometimes referred to as the **formal parameters** or **parameter names**.
+These names can be any valid variable name. If there is more than one, they are separated by commas.
 
-In the function invocation, inside the parentheses one value should be provided for each of the parameter names. These 
-values are separated by commas. The values can be specified either directly, or by any python expression including a 
+In the function invocation, inside the parentheses one value should be provided for each of the parameter names. These
+values are separated by commas. The values can be specified either directly, or by any python expression including a
 reference to some other variable name.
 
-That can get kind of confusing, so let's start by looking at a function with just one parameter. The revised hello 
-function personalizes the greeting: the person to greet is specified by the parameter. 
+That can get kind of confusing, so let's start by looking at a function with just one parameter. The revised hello
+function personalizes the greeting: the person to greet is specified by the parameter.
 
 .. codelens:: clens11_3_1
    :python: py3
@@ -53,20 +59,20 @@ function personalizes the greeting: the person to greet is specified by the para
    def hello2(s):
       print("Hello " + s)
       print("Glad to meet you")
-         
+
    hello2("Iman")
    hello2("Jackie")
 
 First, notice that hello2 has one formal parameter, s. You can tell that because
 there is exactly one variable name inside the parentheses on line 1.
 
-Next, notice what happened during Step 2. Control was passed to the function, just like we saw before. But in 
+Next, notice what happened during Step 2. Control was passed to the function, just like we saw before. But in
 addition, the variable s was bound to a value, the string "Iman". When it got to Step 7, for the second invocation of
 the function, s was bound to "Jackie".
 
-Function invocations always work that way. The expression inside the parentheses on the line that invokes the function 
-is evaluated before control is passed to the function. The value is assigned to the corresponding formal parameter. 
-Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value, 
+Function invocations always work that way. The expression inside the parentheses on the line that invokes the function
+is evaluated before control is passed to the function. The value is assigned to the corresponding formal parameter.
+Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value,
 the value that was 'passed into' the function.
 
 .. showeval:: eval11_3_1
@@ -92,7 +98,7 @@ To get a feel for that, let's invoke hello2 using some more complicated expressi
    def hello2(s):
        print("Hello " + s)
        print("Glad to meet you")
-         
+
    hello2("Iman" + " and Jackie")
    hello2("Class " * 3)
 
@@ -105,7 +111,7 @@ a parameter that controls how many times the greeting will be printed.
    def hello3(s, n):
       greeting = "Hello {} ".format(s)
       print(greeting*n)
-         
+
    hello3("Wei", 4)
    hello3("", 1)
    hello3("Kitty", 11)
@@ -126,7 +132,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_c: greet(t, n):
    :answer_d: def greet(t, n)
    :correct: a
-   :feedback_a: A function may take zero or more parameters.  In this case it has one.  
+   :feedback_a: A function may take zero or more parameters.  In this case it has one.
    :feedback_b: A function needs to specify its parameters in its header. If there are no paramters, put () after the function name.
    :feedback_c: A function definition needs to include the keyword def.
    :feedback_d: A function definition header must end in a colon (:).
@@ -220,7 +226,7 @@ provided. The second parameter name is bound to the second value provided. And s
    :practice: T
 
    What output will the following code produce?
-   
+
    .. code-block:: python
 
       def cyu(s1, s2):
@@ -228,5 +234,5 @@ provided. The second parameter name is bound to the second value provided. And s
             print(s1)
          else:
             print(s2)
-            
+
       cyu("Hello", "Goodbye")

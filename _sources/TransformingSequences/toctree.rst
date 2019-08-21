@@ -21,4 +21,3 @@ Transforming Sequences
    Glossary.rst
    Exercises.rst
    week4a1.rst
-   

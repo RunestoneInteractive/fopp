@@ -16,12 +16,11 @@
 Statements and Expressions
 --------------------------
 
-.. video:: expression_vid
-    :controls:
-    :thumb: ../_static/expressions.png
-
-    http://media.interactivepython.org/thinkcsVideos/Expressions.mov
-    http://media.interactivepython.org/thinkcsVideos/Expressions.webm
+.. youtube:: 3WgmLIsXFkI
+    :divid: expression_vid
+    :height: 315
+    :width: 560
+    :align: left
 
 A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
 statement so far. Some other kinds of statementsthat you'll see in future chapters are ``while`` statements, 
@@ -104,7 +103,7 @@ It is important to start learning to read code that contains complex expressions
 
 In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after, then combines the two resulting values using the operator. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.
 
-If a function call expression is a sub-expression of some more complicated expression, as ``square(x)`` is in ``sub(square(y), square(x))``, then the return value from ``square(x)`` is passed as an input to the ``sub`` function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the ``square`` function is called (twice) before the ``sub`` function is called, even though the ``sub`` function comes first when reading the code from left to right.
+If a function call expression is a sub-expression of some more complicated expression, as ``square(x)`` is in ``sub(square(y), square(x))``, then the return value from ``square(x)`` is passed as an input to the ``sub`` function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the ``square`` function is called (twice) before the ``sub`` function is called, even though the ``sub`` function comes first when reading the code from left to right.  In the following example we will use the notation of -add- to indicate that Python has looked up the name `add` and determined that it is a function object.
 
 .. showeval:: eval2_10_1
     :trace_mode: true
@@ -113,14 +112,14 @@ If a function call expression is a sub-expression of some more complicated expre
     y = 7
     add(square(y), square(x))
     ~~~~
-    {{add}}{{add}}(square(y), square(x)) ## add is a function so eval its arguments
-    add({{square}}{{square}}(y), square(x)) ## square is a function so eval its arguments
-    add(square({{y}}{{7}}), square(x)) 
-    add({{square(7)}}{{49}}, square(x))
-    add(49, {{square}}{{square}}(x)) ## square is a function so eval its arguments
-    add(49, square({{x}}{{5}}))
-    add(49, {{square(5)}}{{25}})
-    {{add(49, 25)}}{{74}}
+    {{add}}{{-add-}}(square(y), square(x)) ## add is a function so eval its arguments
+    -add-({{square}}{{-square-}}(y), square(x)) ## square is a function so eval its arguments
+    -add-(-square-({{y}}{{7}}), square(x)) 
+    -add-({{-square-(7)}}{{49}}, square(x))
+    -add-(49, {{square}}{{-square-}}(x)) ## square is a function so eval its arguments
+    -add-(49, -square-({{x}}{{5}}))
+    -add-(49, {{-square-(5)}}{{25}})
+    {{-add-(49, 25)}}{{74}}
 
 To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that's something that will come later in the course.
 

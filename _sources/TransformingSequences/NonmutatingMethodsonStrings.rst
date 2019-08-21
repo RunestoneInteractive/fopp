@@ -14,7 +14,7 @@
 Non-mutating Methods on Strings
 ===============================
 
-There are a wide variety of methods for string objects.  
+There are a wide variety of methods for string objects.
 Try the following program.
 
 .. activecode:: ac8_8_1
@@ -26,16 +26,16 @@ Try the following program.
     print(tt)
     print(ss)
 
-In this example, ``upper`` is a method that can be invoked on any string object to create a new string 
-in which all the characters are in uppercase. ``lower`` works in a similar fashion changing all 
-characters in the string to lowercase. (The original string ``ss`` remains unchanged.  A new string 
+In this example, ``upper`` is a method that can be invoked on any string object to create a new string
+in which all the characters are in uppercase. ``lower`` works in a similar fashion changing all
+characters in the string to lowercase. (The original string ``ss`` remains unchanged.  A new string
 ``tt`` is created.)
 
 .. _string_methods:
 
-You've already seen a few methods, such as ``count`` and ``index``, that work with strings and are 
-non-mutating. In addition to those and ``upper`` and ``lower``, the following table provides a summary 
-of some other useful string methods. There are a few activecode examples that follow so that you can 
+You've already seen a few methods, such as ``count`` and ``index``, that work with strings and are
+non-mutating. In addition to those and ``upper`` and ``lower``, the following table provides a summary
+of some other useful string methods. There are a few activecode examples that follow so that you can
 try them out.
 
 
@@ -51,7 +51,7 @@ replace     old, new            Replaces all occurrences of old substring with n
 format      substitutions       Involved! See :ref:`Format-Strings`, below
 ==========  ==============      ==================================================================
 
-You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the 
+You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the
 `Python documentation for strings <http://docs.python.org/3/library/stdtypes.html#string-methods>`_.
 
 .. activecode:: ac8_8_2
@@ -87,9 +87,9 @@ You should experiment with these methods so that you understand what they do.  N
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
       s = "python rocks"
       print(s.count("o") + s.count("p"))
 
@@ -106,9 +106,9 @@ You should experiment with these methods so that you understand what they do.  N
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
       s = "python rocks"
       print(s[1]*s.index("n"))
 
@@ -117,9 +117,9 @@ You should experiment with these methods so that you understand what they do.  N
 String Format Method
 ~~~~~~~~~~~~~~~~~~~~~
 
-Until now, we have created strings with variable content using the + operator to concatenate 
-partial strings together. That works, but it's very hard for people to read or debug a code 
-line that includes variable names and strings and complex expressions. Consider the following: 
+Until now, we have created strings with variable content using the + operator to concatenate
+partial strings together. That works, but it's very hard for people to read or debug a code
+line that includes variable names and strings and complex expressions. Consider the following:
 
 .. activecode:: ac8_8_4
 
@@ -128,9 +128,9 @@ line that includes variable names and strings and complex expressions. Consider 
    print("Hello " + name + ". Your score is " + str(score))
 
 Or perhaps more realistically:
- 
+
 .. activecode:: ac8_8_5
- 
+
    scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
    for person in scores:
        name = person[0]
@@ -140,7 +140,7 @@ Or perhaps more realistically:
 In this section, you will learn to write that in a more readable way:
 
 .. activecode:: ac8_8_6
- 
+
    scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
    for person in scores:
        name = person[0]
@@ -152,15 +152,15 @@ In grade school quizzes a common convention is to use fill-in-the blanks. For in
     Hello _____!
 
 
-and you can fill in the name of the person greeted, and combine given text with a chosen 
-insertion. *We use this as an analogy:* Python has a similar construction, better called 
+and you can fill in the name of the person greeted, and combine given text with a chosen
+insertion. *We use this as an analogy:* Python has a similar construction, better called
 fill-in-the-braces. The string method ``format``, makes substitutions into places in a string
 enclosed in braces. Run this code:
 
 .. activecode:: ac8_8_7
 
     person = input('Your name: ')
-    greeting = 'Hello {}!'.format(person) 
+    greeting = 'Hello {}!'.format(person)
     print(greeting)
 
 
@@ -175,45 +175,45 @@ the syntax where the first (and only) location in the string with
 braces has a substitution made from the first (and only) parameter.
 
 In the code above, this new string is assigned to the identifier
-``greeting``, and then the string is printed. 
+``greeting``, and then the string is printed.
 
-The identifier ``greeting`` was introduced to break the operations into a clearer sequence of 
-steps. However, since the value of ``greeting`` is only referenced once, it can be eliminated 
+The identifier ``greeting`` was introduced to break the operations into a clearer sequence of
+steps. However, since the value of ``greeting`` is only referenced once, it can be eliminated
 with the more concise version:
 
 .. activecode:: ac8_8_8
 
-    person = input('Enter your name: ') 
-    print('Hello {}!'.format(person)) 
+    person = input('Enter your name: ')
+    print('Hello {}!'.format(person))
 
-There can be multiple substitutions, with data of any type.  
+There can be multiple substitutions, with data of any type.
 Next we use floats.  Try original price $2.50  with a 7% discount:
 
 .. activecode:: ac8_8_9
 
-    origPrice = float(input('Enter the original price: $')) 
-    discount = float(input('Enter discount percentage: ')) 
+    origPrice = float(input('Enter the original price: $'))
+    discount = float(input('Enter discount percentage: '))
     newPrice = (1 - discount/100)*origPrice
     calculation = '${} discounted by {}% is ${}.'.format(origPrice, discount, newPrice)
     print(calculation)
 
-It is important to pass arguments to the ``format`` method in the correct order, because they 
-are matched *positionally* into the ``{}`` places for interpolation where there is more than 
+It is important to pass arguments to the ``format`` method in the correct order, because they
+are matched *positionally* into the ``{}`` places for interpolation where there is more than
 one.
 
-If you used the data suggested, this result is not satisfying.  
+If you used the data suggested, this result is not satisfying.
 Prices should appear with exactly two places beyond the decimal point,
 but that is not the default way to display floats.
 
-Format strings can give further information inside the braces 
+Format strings can give further information inside the braces
 showing how to specially format data.
-In particular floats can be shown with a specific number of decimal places.  
+In particular floats can be shown with a specific number of decimal places.
 For two decimal places, put ``:.2f`` inside the braces for the monetary values:
 
 .. activecode:: ac8_8_10
 
-    origPrice = float(input('Enter the original price: $')) 
-    discount = float(input('Enter discount percentage: ')) 
+    origPrice = float(input('Enter the original price: $'))
+    discount = float(input('Enter discount percentage: '))
     newPrice = (1 - discount/100)*origPrice
     calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
     print(calculation)
@@ -230,27 +230,27 @@ It is also important that you give ``format`` the same amount of arguments as th
 For example,
 
 .. activecode:: ac8_8_11
- 
+
    name = "Sally"
    greeting = "Nice to meet you"
    s = "Hello, {}. {}."
 
    print(s.format(name,greeting)) # will print Hello, Sally. Nice to meet you.
 
-   print(s.format(greeting,name)) # will print Hello, Nice to meet you. Sally. 
+   print(s.format(greeting,name)) # will print Hello, Nice to meet you. Sally.
 
    print(s.format(name)) # 2 {}s, only one interpolation item! Not ideal.
 
 
-A technical point: Since braces have special meaning in a format string, there must be a 
-special rule if you want braces to actually be included in the final *formatted* string. The 
-rule is to double the braces: ``{{`` and ``}}``. For example mathematical set notation uses 
-braces. The initial and final doubled braces in the format string below generate literal 
+A technical point: Since braces have special meaning in a format string, there must be a
+special rule if you want braces to actually be included in the final *formatted* string. The
+rule is to double the braces: ``\{\{`` and ``\}\}``. For example mathematical set notation uses
+braces. The initial and final doubled braces in the format string below generate literal
 braces in the formatted string::
 
     a = 5
     b = 9
-    setStr = 'The set is {{{}, {}}}.'.format(a, b)
+    setStr = 'The set is \{\{\{}, {}}}.'.format(a, b)
     print(setStr)
 
 Unfortunately, at the time of this writing, the ActiveCode format implementation has a bug,
@@ -270,9 +270,9 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
 
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
        x = 2
        y = 6
        print('sum of {} and {} is {}; product: {}.'.format( x, y, x+y, x*y))
@@ -287,11 +287,11 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    :feedback_b: Close, but round to the number of digits and display the full number of digits specified.
    :feedback_c: Yes, correct number of digits with rounding!
    :practice: T
-   
+
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
        v = 2.34567
        print('{:.1f} {:.2f} {:.7f}'.format(v, v, v))

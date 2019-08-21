@@ -16,3 +16,4 @@ Sequences
    SplitandJoin.rst
    Exercises.rst
    week2a1.rst
+   

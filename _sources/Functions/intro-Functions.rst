@@ -14,12 +14,11 @@
 Introduction to Functions
 =========================
 
-.. video:: function_intro
-   :controls:
-   :thumb: ../_static/function_intro.png
-
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.mov
-   http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.webm
+.. youtube:: 85WYZKKnaPQ
+    :divid: goog_function_intro
+    :height: 315
+    :width: 560
+    :align: left
 
 In Python, a **function** is a chunk of code that performs some operation that is meaningful for a person to think about as a whole unit, for example calculating a student's GPA in a learning system or responding to the jump action in a video game. Once a function has been defined and you are satisfied that it does what it is supposed to do, you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of code that make it work.
 
@@ -30,7 +29,7 @@ This breaking down of a task or problem is crucial to the successful implementat
 * display your friends' stories
 * display the ad at the bottom of the screen recommending you use the app
 
-And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to: 
+And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to:
 
 * display a single post which in turn calls functions to:
 * display the photo and name of the person posting the story

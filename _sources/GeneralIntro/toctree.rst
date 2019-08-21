@@ -17,4 +17,3 @@ General Introduction
    Comments.rst
    Glossary.rst
    Exercises.rst
-   
