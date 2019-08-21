@@ -16,7 +16,7 @@
 Variables
 ---------
 
-.. youtube:: 1uQM-TVlaMo
+.. youtube:: wVD4CiqRMOY
     :divid: assignvid
     :height: 315
     :width: 560
@@ -89,7 +89,7 @@ To see this in even more detail, we can run the program using codelens.
     print(message)
     print(n)
     print(pi)
-    
+
 Now, as you step through the statements, you can see
 the variables and the values they reference as those references are
 created.
