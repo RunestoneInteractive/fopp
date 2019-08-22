@@ -78,7 +78,7 @@ Exercises
 
             .. actex:: ex_2_5
         
-               Optional. Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
+               Challenge: Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
                If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
                Write a Python program to solve the general version of the above problem.
                Ask the user for the time now (in hours), and then ask for the number of hours to wait for the alarm.
@@ -122,7 +122,7 @@ Exercises
 
         .. tab:: Question
 
-            Optional. Take the sentence: *All work and no play makes Jack a dull boy.*
+            Challenge: Take the sentence: *All work and no play makes Jack a dull boy.*
             Store each word in a separate variable, then print out the sentence on
             one line using ``print``.
 
@@ -167,7 +167,7 @@ Exercises
 
             .. actex:: ex_2_9
 
-                Optional. The formula for computing the final amount if one is earning
+                Challenge: The formula for computing the final amount if one is earning
                 compound interest is given on Wikipedia as
 
                 .. image:: Figures/compoundInterest.png
@@ -220,7 +220,7 @@ Exercises
 
             .. actex:: ex_2_11
 
-               Optional. Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
+               Challenge: Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
                Print a nice message with the answer.
                ~~~~
         
@@ -256,7 +256,7 @@ Exercises
 
             .. actex:: ex_2_13
 
-               Optional. Write a program that will convert degrees celsius to degrees fahrenheit.
+               Challenge: Write a program that will convert degrees celsius to degrees fahrenheit.
                ~~~~
         
         .. tab:: Answer
@@ -283,7 +283,7 @@ Exercises
 
    .. actex:: ex_2_14
 
-      Optional. Write a program that will convert degrees fahrenheit to degrees celsius.
+      Challenge: Write a program that will convert degrees Fahrenheit to degrees Celsius.
       ~~~~
 
 .. question:: spd_ex_15
