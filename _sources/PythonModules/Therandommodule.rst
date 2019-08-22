@@ -14,16 +14,6 @@
 The ``random`` module
 ---------------------
 
-
-.. video:: randmodvid
-    :controls:
-    :thumb: ../_static/mathrandommodule.png
-
-    http://media.interactivepython.org/thinkcsVideos/mathrandommodule.mov
-    http://media.interactivepython.org/thinkcsVideos/mathrandommodule.webm
-
-
-
 We often want to use **random numbers** in programs.  Here are a few typical uses:
 
 * To play a game of chance where the computer needs to throw some dice, pick a

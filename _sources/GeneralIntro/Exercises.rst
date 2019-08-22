@@ -47,6 +47,6 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertIn("Hello World", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+            self.assertIn("Hello World", self.getOutput(), "Your output should contain a phrase Hello World")
 
     myTests().main()

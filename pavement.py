@@ -2,25 +2,32 @@ import paver
 from paver.easy import *
 import paver.setuputils
 paver.setuputils.install_distutils_tasks()
-import os, sys, socket
+import os, sys
 from runestone.server import get_dburl
 from sphinxcontrib import paverutils
 import pkg_resources
+from runestone import get_master_url
 
 sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
-hostname = socket.gethostname()
-if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
-    master_url = 'https://runestone.academy'
-elif hostname == 'fopp.learningpython.today':
-    master_url = 'https://fopp.learningpython.today'
-else:
-    master_url = 'http://127.0.0.1:8000'
+
+####################
+project_name ='fopp'
+####################
+
+master_url = None
+if not master_url:
+    master_url = get_master_url()
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dest = "../../static"
+dynamic_pages = True
+if dynamic_pages:
+    dest = "./published"
+else:
+    dest = "../../static"
+
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -29,11 +36,14 @@ options(
         builddir="./build/fopp",
         sourcedir="_sources",
         outdir="./build/fopp",
+#        warnerror=True,
         confdir=".",
         project_name = "fopp",
         template_args={'course_id': 'fopp',
                        'login_required':'false',
+                       'course_title': project_name,
                        'appname':master_app,
+                       'dynamic_pages': True,
                        'loglevel': 10,
                        'course_url':master_url,
                        'use_services': 'true',
@@ -45,7 +55,8 @@ options(
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
                        'downloads_enabled': 'false',
-                       'enable_chatcodes': 'false'
+                       'enable_chatcodes': 'false',
+                       'allow_pairs': 'false'
                         }
     )
 )

@@ -55,15 +55,25 @@ Give it a try in the example above.
 .. end of the string. The expression ``fruit[-1]`` yields the last letter,
 .. ``fruit[-2]`` yields the second to last, and so on.  Try it!
 
-Typically, a Python programmer will access the last character by combining the
-two lines of code from above.
+Typically, a Python programmer would combine lines 2 and 3 from the above example into a single line:
 
 .. sourcecode:: python
     
     lastch = fruit[len(fruit)-1]
 
-As with strings, the function ``len`` returns the length of a list (the number
-of items in the list).  However, since lists can have items which are themselves sequences (e.g., strings), 
+Though, from what you just learned about using negative indices, using ``fruit[-1]`` would be 
+a more appropriate way to access the last index in a list. 
+
+You can still use the ``len`` function to access other predictable indices, like the middle character of a string.
+
+.. sourcecode:: python
+
+    fruit = "grape"
+    midchar = fruit[len(fruit)/2]
+    # the value of midchar is "a"
+
+As with strings, the function ``len`` returns the length of a list (the number of items in the list).  
+However, since lists can have items which are themselves sequences (e.g., strings), 
 it important to note that ``len`` only returns the top-most length.
 
 .. activecode:: ac5_5_4
