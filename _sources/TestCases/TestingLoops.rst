@@ -42,7 +42,7 @@ But what about when ``lst`` is an empty list? Maybe we want to assert that the v
    nums = []
 
    if len(nums) == 0:
-      accum == None
+      accum = None
    else:
       accum = 0
       for w in nums:

@@ -29,7 +29,11 @@ There are several reasons why it's a good habit to write test cases.
 
 Now it's time to learn how to write code for test cases.
 
-Python provides a statement called ``assert``. Following the word assert there will be a python expression. If that expression evaluates to the Boolean ``False``, then the interpreter will raise a runtime error. If the expression evaluates to ``True``, then nothing happens and the execution goes on to the next line of code.
+Python provides a statement called ``assert``.
+
+- Following the word assert there will be a python expression.
+- If that expression evaluates to the Boolean ``False``, then the interpreter will raise a runtime error.
+- If the expression evaluates to ``True``, then nothing happens and the execution goes on to the next line of code.
 
 Why would you ever want to write a line of code that can never compute anything useful for you, but sometimes causes a runtime error? For all the reasons we described above about the value of automated tests. You want a test that will alert that you that some condition you assumed was true is not in fact true. It's much better to be alerted to that fact right away than to have some unexpected result much later in your program execution, which you will have trouble tracing to the place where you had an error in your code.
 

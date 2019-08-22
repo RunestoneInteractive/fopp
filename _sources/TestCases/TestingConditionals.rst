@@ -24,10 +24,12 @@ If the code has conditional blocks (``if..elif..else``) then you'll want to have
             ## x must be equal to y
             z = 0
 
-When you start to have complex conditionals, it's helpful to add comments like that, and once you do you might as well add an assert statement. If the assert ever causes an error, you'll be grateful to know right away that something has gone wrong and you'll have a good start on where to look for debugging. In this case, you'll never get an error.
+When you start to have complex conditionals, it's helpful to add comments like that, and once you do you might as well add an assert statement. If the assert ever causes an error, you'll be grateful to know right away that something has gone wrong and you'll have a good start on where to look for debugging. In this case, you'll never get an error, no matter the values of x and y.
 
 .. activecode:: ac19_1c_1
 
+    x = 3
+    y = 4
     if x < y:
         z = x
     else:
