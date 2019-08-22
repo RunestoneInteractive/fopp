@@ -117,7 +117,7 @@ Lets work out the example we have outlined to get the scores given our Oreo, Ore
     b1score = .75 * .75 * .75 * .25 * .5
     b2score = .5 * .5 * .5 * .5 * .5
 
-    print('b1score = {} and b2score = {}'.format(b1score, b2score)
+    print('b1score = {} and b2score = {}'.format(b1score, b2score))
 
 OK since b1score is higher we would predict that we were picking cookies out of Bowl1.
 
