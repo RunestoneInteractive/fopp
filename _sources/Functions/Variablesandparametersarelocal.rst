@@ -18,8 +18,15 @@
 Variables and parameters are local
 ----------------------------------
 
-An assignment statement in a function creates a **local variable** for the variable on the left hand side of the 
-assignment operator. It is called local because this variable only exists inside the function and you cannot use it 
+.. youtube:: HdFujZpLFVg
+    :divid: goog_local_vars
+    :height: 315
+    :width: 560
+    :align: left
+
+
+An assignment statement in a function creates a **local variable** for the variable on the left hand side of the
+assignment operator. It is called local because this variable only exists inside the function and you cannot use it
 outside. For example, consider again the ``square`` function:
 
 .. activecode:: ac11_7_1
@@ -32,23 +39,23 @@ outside. For example, consider again the ``square`` function:
     print(y)
 
 
-Try running this in Codelens. When a function is invoked in Codelens, the local scope is separated from global scope by 
-a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global 
-frame. If you press the 'last >>' button you will see an error message. When we try to use ``y`` on line 6 (outside the 
-function) Python looks for a global variable named ``y`` but does not find one. This results in the error: 
+Try running this in Codelens. When a function is invoked in Codelens, the local scope is separated from global scope by
+a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global
+frame. If you press the 'last >>' button you will see an error message. When we try to use ``y`` on line 6 (outside the
+function) Python looks for a global variable named ``y`` but does not find one. This results in the error:
 ``Name Error: 'y' is not defined.``
 
-The variable ``y`` only exists while the function is being executed --- we call this its **lifetime**. When the 
-execution of the function terminates (returns), the local variables are destroyed. Codelens helps you visualize this 
-because the local variables disappear after the function returns. Go back and step through the statements paying 
-particular attention to the variables that are created when the function is called. Note when they are subsequently 
+The variable ``y`` only exists while the function is being executed --- we call this its **lifetime**. When the
+execution of the function terminates (returns), the local variables are destroyed. Codelens helps you visualize this
+because the local variables disappear after the function returns. Go back and step through the statements paying
+particular attention to the variables that are created when the function is called. Note when they are subsequently
 destroyed as the function returns.
 
-Formal parameters are also local and act like local variables. For example, the lifetime of ``x`` begins when 
+Formal parameters are also local and act like local variables. For example, the lifetime of ``x`` begins when
 ``square`` is called, and its lifetime ends when the function completes its execution.
 
-So it is not possible for a function to set some local variable to a value, complete its execution, and then when it 
-is called again next time, recover the local variable. Each call of the function creates new local variables, and 
+So it is not possible for a function to set some local variable to a value, complete its execution, and then when it
+is called again next time, recover the local variable. Each call of the function creates new local variables, and
 their lifetimes expire when the function returns to the caller.
 
 **Check Your Understanding**
@@ -110,7 +117,7 @@ their lifetimes expire when the function returns to the caller.
          return z
 
      def producing(x):
-         z = x * y 
+         z = x * y
          return z
 
      print(producing(adding(4)))

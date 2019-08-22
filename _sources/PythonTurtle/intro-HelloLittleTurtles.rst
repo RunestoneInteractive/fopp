@@ -24,12 +24,11 @@
 Hello Little Turtles!
 =====================
 
-.. video:: turtleintrovid
-    :controls:
-    :thumb: ../_static/turtleintro.png
-
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.mov
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.webm
+.. youtube:: Yxyx6KpKRzY
+    :divid: vid_turtleintro
+    :height: 315
+    :width: 560
+    :align: left
 
 There are many *modules* in Python that provide very powerful features that we can use in our own programs. 
 Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations.

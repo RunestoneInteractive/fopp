@@ -24,4 +24,3 @@ Variables, Statements, and Expressions
    Exercises.rst
    week1a2.rst
    
-   

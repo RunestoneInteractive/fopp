@@ -17,12 +17,11 @@
 Modules
 =======
 
-.. video:: inputvid
-    :controls:
-    :thumb: ../_static/modules.png
-
-    http://media.interactivepython.org/thinkcsVideos/modules.mov
-    http://media.interactivepython.org/thinkcsVideos/modules.webm
+.. youtube:: GCLHuPBtLdQ
+    :divid: vid_modules
+    :height: 315
+    :width: 560
+    :align: left
 
 A **module** is a file containing Python definitions and statements intended for
 use in other Python programs. There are many Python modules that come with

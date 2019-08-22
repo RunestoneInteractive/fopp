@@ -11,6 +11,8 @@
    :prefix: moreiter-7-
    :start: 1
 
+.. _image_proc:
+
 Nested Iteration: Image Processing
 ----------------------------------
 
