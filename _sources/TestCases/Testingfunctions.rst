@@ -1,5 +1,4 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
-    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
+..  Copyright (C)  Paul Resnick and Lauren Murphy.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
     License, Version 1.3 or any later version published by the Free Software
     Foundation; with Invariant Sections being Forward, Prefaces, and
@@ -32,8 +31,8 @@ Return Value Tests
 Testing whether a function returns the correct value is the easiest test case to define. You simply check whether the 
 result of invoking the function on a particular input produces the particular output that you expect. If ``f`` is your 
 function, and you think that it should transform inputs ``x`` and ``y`` into output ``z``, then you could write a test as 
-``test.testEqual(f(x, y), z)``. Or, to give a more concrete example, if you have a function ``square``, you could have 
-a test case ``test.testEqual(square(3), 9)``. Call this a **return value test**.
+``assert f(x, y) == z``. Or, to give a more concrete example, if you have a function ``square``, you could have
+a test case ``assert square(3) ==  9``. Call this a **return value test**.
 
 Because each test checks whether a function works properly on specific inputs, the test cases will never be complete: in 
 principle, a function might work properly on all the inputs that are tested in the test cases, but still not work 
@@ -61,9 +60,7 @@ Try adding one or two more test cases for the square function in the code below,
     def square(x):
         return x*x
 
-    import test
-
-    test.testEqual(square(3), 9)
+    assert square(3) == 9
 
 
 Side Effect Tests
@@ -90,44 +87,14 @@ answers ourselves.
             if c in counts_d:
                 counts_d[c] = counts_d[c] + 1
 
-    import test
 
     counts = {'a': 3, 'b': 2}
     update_counts("aaab", counts)
     # 3 more occurrences of a, so 6 in all
-    test.testEqual(counts['a'], 6)
+    assert counts['a'] == 6
     # 1 more occurrence of b, so 3 in all
-    test.testEqual(counts['b'], 3)
+    assert counts['b'] == 3
 
-
-Testing Conditionals and Loops
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If the code has a conditional execution, or a for loop, then you'll want to include test cases that exercise different 
-possible paths through the code. For example, if there is a for loop, edge cases would include iteration through an empty 
-sequence or a sequence with just one item. With a conditional, you would want different inputs that cause the if and else 
-clauses to execute.
-
-If you were writing tests on a function that takes any list as input and returns a value that is a computation on that 
-input list, you might test the function's return value when it is invoked on an empty list, a list with only one value, a 
-list with an element that is a list itself, a list that has many elements...
-
-Try adding those some of those tests in the code window above, for the update_counts function. What if you start with an 
-empty counts dictionary? What if the string passed to update_counts is empty? What if the string includes letters that 
-aren't in the dictionary yet?
-
-Testing Optional Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If a function takes an optional parameter, one of the edge cases to test for is when no parameter value is supplied 
-during execution. Below are some tests for the built-in sorted function.
-
-.. activecode:: ac19_2_3
-
-    import test
-
-    test.testEqual(sorted([1, 7, 4]), [1, 4, 7])
-    test.testEqual(sorted([1, 7, 4], reverse=True), [7, 4, 1])
 
 
 .. mchoice:: question19_2_1
@@ -138,3 +105,16 @@ during execution. Below are some tests for the built-in sorted function.
    :feedback_b: The tests should cover as many edge cases as you can think of, but there's always a possibility that the function does badly on some input that you didn't include as a test case.
 
    If you write a complete set of tests and a function passes all the tests, you can be sure that it's working correctly.
+
+.. mchoice:: question19_1_3
+    :answer_a: assert blanked('under', 'du', 'u_d__') == True
+    :answer_b: assert blanked('under', 'u_d__') == 'du'
+    :answer_c: assert blanked('under', 'du') == 'u_d__'
+    :correct: c
+    :feedback_a: blanked only takes two inputs; this provides three inputs to the blanked function
+    :feedback_b: The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word
+    :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
+    :practice: T
+
+    For the hangman game, the blanked function takes a word and some letters that have been guessed, and returns a version of the word with _ for all the letters that haven't been guessed. Which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
+

@@ -160,8 +160,6 @@ Exercises
             .. activecode:: answer11_14_4
                 :nocodelens:
 
-                from test import testEqual
-
                 def reverse(mystr):
                     reversed = ''
                     for char in mystr:
@@ -171,10 +169,10 @@ Exercises
                 def mirror(mystr):
                     return mystr + reverse(mystr)
 
-                testEqual(mirror('good'), 'gooddoog')
-                testEqual(mirror('Python'), 'PythonnohtyP')
-                testEqual(mirror(''), '')
-                testEqual(mirror('a'), 'aa')
+                assert mirror('good') == 'gooddoog'
+                assert mirror('Python') == 'PythonnohtyP'
+                assert mirror('') == ''
+                assert mirror('a') == 'aa'
 
         .. tab:: Discussion
 
