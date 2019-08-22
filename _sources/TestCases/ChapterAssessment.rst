@@ -19,7 +19,7 @@ Chapter Assessment
 
    The function `mySum` is supposed to return the sum of a list of numbers (and 0 if that list is empty), but it has one or more errors in it. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.
    ~~~~
-   import test
+
 
 
 
@@ -63,7 +63,6 @@ Chapter Assessment
 
    There are one or more errors in the class. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.
    ~~~~
-   import test
 
 
 .. mchoice:: mc_19_4_3
