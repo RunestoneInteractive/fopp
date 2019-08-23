@@ -51,7 +51,7 @@ Exercises
                
                if fl_sc < 60:
                    gr = "F"
-               elif fl_sc <70:
+               elif fl_sc < 70:
                    gr = "D"
                elif fl_sc < 80:
                    gr = "C"

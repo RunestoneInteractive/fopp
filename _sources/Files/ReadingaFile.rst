@@ -27,7 +27,7 @@ use ``fileref`` will result in an error.
     :available_files: olympics.txt
     :nocodelens:
 
-    fileref = open("olympics.txt","r")
+    fileref = open("olympics.txt", "r")
     ## other code here that refers to variable fileref
     fileref.close()
 
