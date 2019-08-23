@@ -88,5 +88,6 @@ The complete program is shown below.
 
     infile = open(filename, "r")
     print(infile.read()[:10])
+    infile.close()
 
 

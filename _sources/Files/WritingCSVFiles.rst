@@ -23,11 +23,11 @@ each. Here we a have a list of tuples, each representing one Olympian, a subset 
    :nocodelens:
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing"),
-               ("Minna Maarit Aalto", 30, "Sailing"),
-               ("Win Valdemar Aaltonen", 54, "Art Competitions"),
-               ("Wakako Abe", 18, "Cycling")]
+                ("Minna Maarit Aalto", 30, "Sailing"),
+                ("Win Valdemar Aaltonen", 54, "Art Competitions"),
+                ("Wakako Abe", 18, "Cycling")]
 
-   outfile = open("reduced_olympics.csv","w")
+   outfile = open("reduced_olympics.csv", "w")
    # output the header row
    outfile.write('Name,Age,Sport')
    outfile.write('\n')
@@ -56,11 +56,11 @@ that one can be used to delimit the string and the other can be a character in t
 .. activecode:: ac9_14_2
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
-               ("Minna Maarit Aalto", 30, "Sailing"),
-               ("Win Valdemar Aaltonen", 54, "Art Competitions"),
-               ("Wakako Abe", 18, "Cycling")]
+                ("Minna Maarit Aalto", 30, "Sailing"),
+                ("Win Valdemar Aaltonen", 54, "Art Competitions"),
+                ("Wakako Abe", 18, "Cycling")]
 
-   outfile = open("reduced_olympics2.csv","w")
+   outfile = open("reduced_olympics2.csv", "w")
    # output the header row
    outfile.write('"Name","Age","Sport"')
    outfile.write('\n')
