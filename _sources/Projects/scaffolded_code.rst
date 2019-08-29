@@ -78,7 +78,7 @@ The following activecode editor contains 10 different image processing functions
     def stacked(original, modified):
         # This function will give a stacked image,
         # showing the original and modified together.
-        # The sizes of the images needto be the same.
+        # The sizes of the images need to be the same.
 
         # Get the height and width of the image
         width=original.getWidth()
