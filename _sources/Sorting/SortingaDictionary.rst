@@ -31,7 +31,7 @@ For example, the following code counts the frequencies of different numbers in t
     for x in d.keys():
         print("{} appears {} times".format(x, d[x]))
 
-The dictionary's keys are not sorted in any particular order. In fact, you may get a different order of output than 
+The dictionary's keys are not sorted in any particular order. In fact, you may get a different order of output than
 someone else running the same code. We can force the results to be displayed in some fixed ordering, by sorting the keys.
 
 .. activecode:: ac18_4_2
@@ -49,7 +49,7 @@ someone else running the same code. We can force the results to be displayed in 
         print("{} appears {} times".format(k, d[k]))
 
 
-With a dictionary that's maintaining counts or some other kind of score, we might prefer to get the outputs sorted based 
+With a dictionary that's maintaining counts or some other kind of score, we might prefer to get the outputs sorted based
 on the count rather than based on the items. The standard way to do that in python is to sort based on a property of the key, in particular its value in the dictionary.
 
 Here things get a little confusing because we have two different meaning of the word "key". One meaning is a key in a dictionary. The other meaning is the parameter name for the function that you pass into the sorted function.
@@ -59,14 +59,14 @@ Remember that the key function always takes as input one item from the sequence 
 .. activecode:: ac18_4_5
 
     L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
-    
+
     d = {}
     for x in L:
         if x in d:
             d[x] = d[x] + 1
         else:
             d[x] = 1
-    
+
     y = sorted(d.keys(), key=lambda k: d[k], reverse=True)
     for k in y:
         print("{} appears {} times".format(k, d[k]))
@@ -83,12 +83,12 @@ Here's a version of that using a named function.
             d[x] = d[x] + 1
         else:
             d[x] = 1
-    
+
     def g(k):
         return d[k]
 
     y =(sorted(d.keys(), key=g, reverse=True))
-    
+
     # now loop through the keys
     for k in y:
         print("{} appears {} times".format(k, d[k]))
@@ -96,7 +96,7 @@ Here's a version of that using a named function.
 .. note::
 
    When we sort the keys, passing a function with ``key=lambda x: d[x]`` does not specify to sort the keys of a
-   dictionary. The lists of keys are passed as the first parameter value in the invocation of sort. The key parameter 
+   dictionary. The lists of keys are passed as the first parameter value in the invocation of sort. The key parameter
    provides a function that says *how* to sort them.
 
 
@@ -114,24 +114,24 @@ that is expecting a list, its the same as passing the list of keys.
           d[x] = d[x] + 1
       else:
           d[x] = 1
-      
+
   # now loop through the sorted keys
   for k in sorted(d, key=lambda k: d[k], reverse=True):
         print("{} appears {} times".format(k, d[k]))
 
-Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come 
-across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter 
-value is a dictionary, which really means the keys of the dictionary. The third parameter, the key function, decorates 
-the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to 
+Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come
+across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter
+value is a dictionary, which really means the keys of the dictionary. The second parameter, the key function, decorates 
+the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to
 sort in reverse order.
 
 There is another way to sort dictionaries, by calling .items() to extract a sequence of (key, value) tuples, and then sorting that sequence of tuples. But it's better to learn the pythonic way of doing it, sorting the dictionary keys using a key function that takes one key as input and looks up the value in the dictionary.
-   
+
 **Check Your Understanding**
 
 .. mchoice:: question18_4_1
    :multiple_answers:
-   :answer_a: sorted(ks, key=g) 
+   :answer_a: sorted(ks, key=g)
    :answer_b: sorted(ks, key=lambda x: g(x, d))
    :answer_c: sorted(ks, key=lambda x: d[x])
    :correct: b,c
@@ -141,21 +141,21 @@ There is another way to sort dictionaries, by calling .items() to extract a sequ
    :practice: T
 
    Which of the following will sort the keys of d in ascending order of their values (i.e., from lowest to highest)?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
         L = [4, 5, 1, 0, 3, 8, 8, 2, 1, 0, 3, 3, 4, 3]
-    
+
         d = {}
         for x in L:
             if x in d:
                 d[x] = d[x] + 1
             else:
                 d[x] = 1
-        
+
         def g(k, d):
             return d[k]
-            
+
         ks = d.keys()
 
 .. activecode:: ac18_4_8
@@ -198,7 +198,7 @@ There is another way to sort dictionaries, by calling .items() to extract a sequ
       def testOne(self):
          self.assertEqual(grocery_keys_sorted, ['apples', 'bananas', 'carrots', 'cereal', 'coffee', 'granola bars', 'onions', 'orange juice', 'pasta', 'peanut butter', 'popcorn', 'rice', 'salsa', 'spinach'], "Testing that grocery_keys_sorted was created correctly.")
 
-   myTests().main()  
+   myTests().main()
 
 .. activecode:: ac18_4_10
    :language: python
