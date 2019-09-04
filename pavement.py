@@ -22,7 +22,7 @@ if not master_url:
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dynamic_pages = True
+dynamic_pages = False
 if dynamic_pages:
     dest = "./published"
 else:
