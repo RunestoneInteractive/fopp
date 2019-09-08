@@ -200,7 +200,10 @@ Exercises
                 import re
                 class myTests(TestCaseGui):
                     def testOne(self):
-                    self.assertTrue(re.search(str(P * (1 + (r/n))**(n*t))[:5], self.getOutput()), 'Checking Answer.')
+                        self.assertTrue(re.search(str(P * (1 + (r/n))**(n*t))[:5],
+                            self.getOutput()),
+                            'Checking Answer.')
+
                 myTests().main()
 
         .. tab:: Answer
