@@ -283,7 +283,8 @@ Exercises
    .. actex:: ex_2_12
 
       Write a program that will compute MPG for a car. Prompt the user to enter the number of
-      miles driven and the number of gallons used. Print a nice message with the answer.
+      miles driven and store it in a variable called `miles` and the number of gallons used stored in a variable `gallons`.
+      Print a nice message with the answer.
       ~~~~
 
       ====
