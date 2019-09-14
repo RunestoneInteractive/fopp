@@ -16,7 +16,7 @@ Lists and ``for`` loops
 
 It is also possible to perform **list traversal** using iteration by item. A list is a sequence of items, so the ``for`` loop iterates over each item in the list automatically. 
 
-.. activecode:: ac_6_5_1
+.. activecode:: ac6_5_1
 
     fruits = ["apple", "orange", "banana", "cherry"]
 
@@ -34,7 +34,7 @@ Using the `range` Function to Generate a Sequence to Iterate Over
 We are now in a position to understand the inner workings we glossed over previously when we first introduced repeated execution with a for loop.
 Here was the example:
 
-.. activecode:: ac_6_5_2
+.. activecode:: ac_6_5_1a
 
    print("This will execute first")
 
@@ -63,7 +63,7 @@ sides of a square.  This next program does exactly the same thing but, with the 
 statement, uses just three lines (not including the setup code).  Remember that the for statement 
 will repeat the ``forward`` and ``left`` four times, one time for each value in the list.
 
-.. activecode:: ac6_5_3
+.. activecode:: ac6_5_2
    :nocodelens:
 
    import turtle            # set up alex
@@ -84,7 +84,7 @@ The values [0,1,2,3] were provided to make the loop body execute 4 times.
 We could have used any four values.  For example, consider the following program.
 
 
-.. activecode:: ac6_5_4
+.. activecode:: ac6_5_3
    :nocodelens:
 
    import turtle            # set up alex
@@ -102,7 +102,7 @@ Since there are four items in the list, the iteration will still occur four time
 take on each color in the list.  We can even take this one step further and use the value of 
 ``aColor`` as part of the computation.
 
-.. activecode:: ac6_5_5
+.. activecode:: ac6_5_4
     :nocodelens:
 
     import turtle            # set up alex

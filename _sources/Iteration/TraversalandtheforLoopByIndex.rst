@@ -32,7 +32,7 @@ In order to make the iteration more general, we can use the ``len`` function to 
 a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves 
 correctly when using ``len`` of the string as its parameter value.
 
-.. activecode:: ac14_6_5b
+.. activecode:: ac14_6_5
 
    fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
    for n in range(len(fruits)):
