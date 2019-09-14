@@ -139,6 +139,36 @@ More generally, if you have a list of tuples that each has more than two items, 
 loop pulling out information from the tuples, the code will be far more readable if you unpack them into separate
 variable names right after the word ``for``.
 
+
+The Pythonic Way to Enumerate Items in a Sequence
+-------------------------------------------------
+
+When we first introduced the for loop, we provided an example of how to iterate through the indexes of a sequence, and thus enumerate the items and their positions in the sequence.
+
+
+.. activecode:: ac12_4_8b
+
+   fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+   for n in range(len(fruits)):
+       print(n, fruits[n])
+
+We are now prepared to understand a more pythonic approach to enumerating items in a sequence. Python provides a built-in function ``enumerate``. It takes a sequence as input and returns a sequence of tuples. In each tuple, the first element is an integer and the second is an item from the original sequence. (It actually produces an "iterable" rather than a list, but we can use it in a for loop as the sequence to iterate over.)
+
+.. activecode:: ac12_4_8c
+
+   fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+   for item in enumerate(fruits):
+       print(item[0], item[1])
+
+The pythonic way to consume the results of enumerate, however, is to unpack the tuples while iterating through them, so that the code is easier to understand.
+
+.. activecode:: ac12_4_8d
+
+   fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+   for idx, fruit in enumerate(fruits):
+       print(idx, fruit)
+
+
 **Check your Understanding**
 
 .. mchoice:: question12_4_1
@@ -182,7 +212,7 @@ variable names right after the word ``for``.
    :practice: T
    :chatcodes:
 
-   **3.** With only one line of code, assign the variables water, fire, electric, and grass to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
+   With only one line of code, assign the variables ``water``, ``fire``, ``electric``, and ``grass`` to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
    ~~~~
 
    =====
@@ -205,7 +235,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **4.** With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
+   With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
    ~~~~
 
    =====
@@ -229,7 +259,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **1.** If you remember, the .items() dictionary method produces a sequence of tuples. Keeping this in mind, we have provided you a dictionary called ``pokemon``. For every key value pair, append the key to the list ``p_names``, and append the value to the list ``p_number``. Do not use the .keys() or .values() methods.
+   If you remember, the .items() dictionary method produces a sequence of tuples. Keeping this in mind, we have provided you a dictionary called ``pokemon``. For every key value pair, append the key to the list ``p_names``, and append the value to the list ``p_number``. Do not use the .keys() or .values() methods.
    ~~~~
 
    pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
@@ -256,7 +286,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **2.** The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary ``track_medal_counts`` and assign the list to the variable name ``track_events``. Do **NOT** use the .keys() method.
+   The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary ``track_medal_counts`` and assign the list to the variable name ``track_events``. Do **NOT** use the .keys() method.
    ~~~~
 
    track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}
