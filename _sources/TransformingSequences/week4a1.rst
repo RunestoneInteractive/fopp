@@ -92,6 +92,7 @@ Chapter Assessment - List Methods
 
       def test_output(self):
         self.assertEqual(sports, ['cricket', 'football', 'horseback riding', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey'], "Testing that sports is set correctly.")
+        self.assertIn('.insert(', self.getEditorText(), "Testing that insert was used in your code.")
 
     myTests().main()
 
@@ -113,6 +114,7 @@ Chapter Assessment - List Methods
 
       def test_output(self):
         self.assertEqual(trav_dest, ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne'], "Testing that trav_dest is set correctly.")
+        self.assertTrue('.remove(' in self.getEditorText() or '.pop(' in self.getEditorText(), "Testing that a method invocation was used in your code.")
 
     myTests().main()
 
@@ -294,7 +296,7 @@ Chapter Assessment - Split and Join
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to find the postion of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
+    Write code to find the position of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
     ~~~~
     awards = ['Emmy', 'Tony', 'Academy', 'Grammy']
 
@@ -307,6 +309,7 @@ Chapter Assessment - Split and Join
 
       def test_output(self):
         self.assertEqual(pos, 1, "Testing that pos is set correctly.")
+        self.assertIn('.index(', self.getEditorText(), "Testing that a method invocation was used in your code.")
 
     myTests().main()
 
@@ -633,6 +636,8 @@ Chapter Assessment - Accumulator Pattern
 
       def testOne(self):
          self.assertEqual(past_wrds, ["ended", 'worked', "played", "started", "walked", "looked", "opened", "rained", "learned", "cleaned"], "Testing that past_wrds has the correct value." )
+         self.assertIn('for ', self.getEditorText(), "Testing that your code uses a for loop.")
+
 
    myTests().main()
 

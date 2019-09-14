@@ -20,9 +20,16 @@
 Mutability
 ==========
 
-Some Python collection types - strings and lists so far - are able to change and some are not. If 
+Some Python collection types - strings and lists so far - are able to change and some are not. If
 a type is able to change, then it is said to be mutable. If the type is not able to change then it
 is said to be immutable. This will be expanded below.
+
+.. youtube:: fnSijYDKz3c
+    :divid: mutabilityvid
+    :height: 315
+    :width: 560
+    :align: left
+
 
 Lists are Mutable
 -----------------
@@ -86,13 +93,13 @@ Strings are Immutable
 ---------------------
 
 One final thing that makes strings different from some other Python collection types is that
-you are not allowed to modify the individual characters in the collection. It is tempting to use 
-the ``[]`` operator on the left side of an assignment, with the intention of changing a character 
-in a string. For example, in the following code, we would like to change the first letter of 
+you are not allowed to modify the individual characters in the collection. It is tempting to use
+the ``[]`` operator on the left side of an assignment, with the intention of changing a character
+in a string. For example, in the following code, we would like to change the first letter of
 ``greeting``.
 
 .. activecode:: ac8_1_1
-    
+
     greeting = "Hello, world!"
     greeting[0] = 'J'            # ERROR!
     print(greeting)
@@ -104,13 +111,13 @@ Strings are **immutable**, which means you cannot change an existing string. The
 best you can do is create a new string that is a variation on the original.
 
 .. activecode:: ac8_1_2
-    
+
     greeting = "Hello, world!"
     newGreeting = 'J' + greeting[1:]
     print(newGreeting)
     print(greeting)          # same as it was
 
-The solution here is to concatenate a new first letter onto a slice of ``greeting``. 
+The solution here is to concatenate a new first letter onto a slice of ``greeting``.
 This operation has no effect on the original string.
 
 While it's possible to make up new variable names each time we make changes to existing
@@ -151,7 +158,7 @@ As with strings, if we try to use item assignment to modify one of the elements 
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
 
      alist = [4,2,8,6,5]
@@ -169,7 +176,7 @@ As with strings, if we try to use item assignment to modify one of the elements 
    :practice: T
 
    What is printed by the following statements:
-   
+
    .. code-block:: python
 
       s = "Ball"
