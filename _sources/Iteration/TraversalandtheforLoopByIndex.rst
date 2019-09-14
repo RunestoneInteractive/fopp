@@ -47,7 +47,7 @@ In some other programming languages, that's the only way to iterate through a se
    for fruit in fruits:
        print(fruit)
 
-If we really want to print the indexes (positions) along with the fruit names, then iterating through the indexes as in the previous versions is available to us. Python also provides an ``enumerate`` function which provides a more "pythonic" way of enumerating the items in a list, but we will delay the explanation of that function until later in the book.
+If we really want to print the indexes (positions) along with the fruit names, then iterating through the indexes as in the previous versions is available to us. Python also provides an ``enumerate`` function which provides a more "pythonic" way of enumerating the items in a list, but we will delay the explanation of how to use ``enumerate`` until we cover the notions of :ref:`tuple packing and unpacking<pythonic_enumeration>`.
 
 
 

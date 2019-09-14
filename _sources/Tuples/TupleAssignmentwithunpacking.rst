@@ -15,7 +15,7 @@
     single: assignment; tuple 
     single: tuple; assignment 
 
-Tuple Assignment with unpacking
+Tuple Assignment with Unpacking
 -------------------------------
 
 Python has a very powerful **tuple assignment** feature that allows a tuple of variable names on the left of an 
@@ -28,10 +28,24 @@ is that the tuple of values is **unpacked** into the variable names.
 
     name, surname, birth_year, movie, movie_year, profession, birth_place = julia
 
-This does the equivalent of seven assignment statements, all on one easy line. One requirement is that the number of 
-variables on the left must match the number of elements in the tuple. 
+This does the equivalent of seven assignment statements, all on one easy line.
 
-Once in a while, it is useful to swap the values of two variables. With conventional assignment statements, we have to 
+Naturally, the number of variables on the left and the number of values on the right have to be the same.
+
+.. activecode:: ac12_4_4
+
+    (a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack
+
+
+
+.. note::
+
+    Unpacking into multiple variable names also works with lists, or any other sequence type, as long as there is exactly one value for each variable. For example, you can write ``x, y = [3, 4]``.
+
+Swapping Values between Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This feature is used to enable swapping the values of two variables. With conventional assignment statements, we have to
 use a temporary variable. For example, to swap ``a`` and ``b``:
 
 .. activecode:: ac12_4_2
@@ -56,95 +70,28 @@ The left side is a tuple of variables; the right side is a tuple of values. Each
 variable. All the expressions on the right side are evaluated before any of the assignments. This feature makes
 tuple assignment quite versatile.
 
-Naturally, the number of variables on the left and the number of values on the right have to be the same.
-
-.. activecode:: ac12_4_4
-
-    (a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack 
-
-Earlier we were demonstrating how to use tuples as return values when calculating the area and circumference of a 
-circle. Here we can unpack the return values after calling the function.
-
-.. activecode:: ac12_4_5
-    
-    def circleInfo(r):
-        """ Return (circumference, area) of a circle of radius r """
-        c = 2 * 3.14159 * r
-        a = 3.14159 * r * r
-        return c, a
-
-    print(circleInfo(10))
-    
-    circumference, area = circleInfo(10)
-    print(circumference)
-    print(area)
-
-    circumference_two, area_two = circleInfo(45)
-    print(circumference_two)
-    print(area_two)
-
-Python even provides a way to pass a single tuple to a function and have it be unpacked for assignment to the named 
-parameters. 
-
-.. activecode:: ac12_4_6
-
-    def add(x, y):
-        return x + y
-        
-    print(add(3, 4))
-    z = (5, 4)
-    print(add(*z)) # this line will cause the values to be unpacked
-    print(add(z)) # this line causes an error
-
-If you run this, you will be get an error caused by line 7, where it says that the function add is expecting two 
-parameters, but you're only passing one parameter (a tuple). In line 6 you'll see that the tuple is unpacked and 5 is 
-bound to x, 4 to y. 
-
-Don't worry about mastering this idea yet. But later in the course, if you come across some code that someone else has 
-written that uses the * notation inside a parameter list, come back and look at this again.
-
-.. note::
-
-    Unpacking into multiple variable names also works with lists, or any other sequence type, as long as there is exactly one value for each variable. For example, you can write ``x, y = [3, 4]``.
 
 Unpacking Into Iterator Variables
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Multiple assignment with unpacking is particularly useful when you iterate through a list of tuples or lists.
+Multiple assignment with unpacking is particularly useful when you iterate through a list of tuples. You can unpack each tuple into several loop variables. For example:
 
-For example, a dictionary consists of key-value pairs. When you call the items() method on a dictionary, you get back a sequence of
-key-value pairs. Each of those pairs is a two-item tuple. (More generally, we refer to any two-item tuple as a
-**pair**). You can iterate over the key-value pairs.
+.. activecode:: ac12_4_8a
 
-.. activecode:: ac12_4_7
+    authors = [('Paul', 'Resnick'), ('Brad', 'Miller'), ('Lauren', 'Murphy')]
+    for first_name, last_name in authors:
+        print("first name:", first_name, "last name:", last_name)
 
-    d = {"k1": 3, "k2": 7, "k3": "some other value"}
+On the first iteration the tuple ``('Paul', 'Resnick')`` is unpacked into the two variables ``first_name`` and ``last_name``. One the second iteration, the next tuple is unpacked into those same loop variables.
 
-    for p in d.items():
-        print("key: {}, value: {}".format(p[0], p[1]))
 
-Each time line 4 is executed, p will refer to one key-value pair from d. A pair is just a tuple, so p[0] refers to the
-key and p[1] refers to the value.
 
-That code is easier to read if we unpack the key-value pairs into two variable names.
-
-.. activecode:: ac12_4_8
-
-    d = {"k1": 3, "k2": 7, "k3": "some other value"}
-
-    for k, v in d.items():
-        print("key: {}, value: {}".format(k, v))
-
-More generally, if you have a list of tuples that each has more than two items, and you iterate through them with a for
-loop pulling out information from the tuples, the code will be far more readable if you unpack them into separate
-variable names right after the word ``for``.
-
+.. _pythonic_enumeration:
 
 The Pythonic Way to Enumerate Items in a Sequence
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When we first introduced the for loop, we provided an example of how to iterate through the indexes of a sequence, and thus enumerate the items and their positions in the sequence.
-
 
 .. activecode:: ac12_4_8b
 
@@ -171,22 +118,6 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
 
 **Check your Understanding**
 
-.. mchoice:: question12_4_1
-   :practice: T
-   :multiple_answers:
-   :answer_a: Make the last two lines of the function be "return x" and "return y"  
-   :answer_b: Include the statement "return [x, y]" 
-   :answer_c: Include the statement "return (x, y)"
-   :answer_d: Include the statement "return x, y"
-   :answer_e: It's not possible to return two values; make two functions that each compute one value.
-   :feedback_a: As soon as the first return statement is executed, the function exits, so the second one will never be executed; only x will be returned
-   :feedback_b: return [x,y] is not the preferred method because it returns x and y in a list and you would have to manually unpack the values. But it is workable.
-   :feedback_c: return (x, y) returns a tuple.
-   :feedback_d: return x, y causes the two values to be packed into a tuple.
-   :feedback_e: It is possible, and frequently useful, to have one function compute multiple values.
-   :correct: b,c,d
-
-   If you want a function to return two values, contained in variables x and y, which of the following methods will work?
 
 .. mchoice:: question12_4_2
    :practice: T
