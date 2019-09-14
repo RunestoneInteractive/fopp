@@ -281,11 +281,13 @@ Chapter Assessment
    =====
 
    from unittest.gui import TestCaseGui
-
+   import re
+   
    class myTests(TestCaseGui):
 
       def testOne(self):
          self.assertEqual(num_lst, 30, "Testing that num_lst has the correct length assigned.")
+         self.assertFalse(re.search(r'num_lst\s*=\s*30', self.getEditorText()), "hardcode check")
 
    myTests().main()
 
