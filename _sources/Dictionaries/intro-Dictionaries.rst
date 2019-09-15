@@ -15,8 +15,8 @@
    :prefix: dictionaries-1-
    :start: 1
 
-Introduction: Dictionaries
-==========================
+Getting Started with Dictionaries
+=================================
 
 Here is a video to help introduce you to the important concepts in creating and using Python dictionaries.
 
