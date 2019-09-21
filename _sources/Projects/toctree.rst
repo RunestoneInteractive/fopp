@@ -4,7 +4,7 @@ Projects
 .. toctree::
     :hidden:
 
-    introProjects.rst
+    IntroProjects.rst
     scaffolded_code.rst
     turtle_driving.rst    
     drawing_a_circle.rst
