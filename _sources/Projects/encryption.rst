@@ -19,7 +19,7 @@ Perhaps one of the earliest uses of computers was in the area of encrypting and 
     :height: 200
     :align: center
 
-The enigma machine was used by the Germans during World War II to encrypt orders for the movements of troops and german U-boats.  Alan Turing (one of the fathers of computer science) worked in England and built the Bombe one of the first computers that decrypted the messages encrypted by the Enigma.  The efforts of Turing and his co-workers helped bring the war to and end and saved many thousands of lives.
+The enigma machine was used by the Germans during World War II to encrypt orders for the movements of troops and german U-boats.  Alan Turing (one of the fathers of computer science) worked in England and built the Bombe, one of the first computers that decrypted the messages encrypted by the Enigma.  The efforts of Turing and his co-workers helped bring the war to an end and saved many thousands of lives.
 
 .. fillintheblank:: act_enc_fb
 
