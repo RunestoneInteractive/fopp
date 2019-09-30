@@ -69,7 +69,7 @@ You can still use the ``len`` function to access other predictable indices, like
 .. sourcecode:: python
 
     fruit = "grape"
-    midchar = fruit[len(fruit)/2]
+    midchar = fruit[len(fruit)//2]
     # the value of midchar is "a"
 
 As with strings, the function ``len`` returns the length of a list (the number of items in the list).  
