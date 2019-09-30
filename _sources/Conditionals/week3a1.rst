@@ -60,7 +60,7 @@ Chapter Assessment
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(same_letter_count, 2, "Checking that same_letter_count has the correct value")
-
+            self.assertIn('for ', self.getEditorText(), "Testing that your code has a for loop")
     myTests().main()
 
 .. activecode:: assess_ps3_1_1_3
@@ -259,5 +259,6 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(accum, 5, "Testing the value of accum")
+         self.assertIn('for ', self.getEditorText(), "Testing that your code has a for loop")
 
    myTests().main()

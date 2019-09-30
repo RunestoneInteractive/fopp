@@ -26,16 +26,42 @@ It is also possible to perform **list traversal** using iteration by item. A lis
 It almost reads like natural language: For (every) fruit in (the list of) fruits,
 print (the name of the) fruit.
 
-Remember the turtle drawings we made earlier? For loops and lists can be applied there as well!
+
+
+Using the `range` Function to Generate a Sequence to Iterate Over
+-----------------------------------------------------------------
+
+We are now in a position to understand the inner workings we glossed over previously when we first introduced repeated execution with a for loop.
+Here was the example:
+
+.. activecode:: ac_6_5_1a
+
+   print("This will execute first")
+
+   for _ in range(3):
+       print("This line will execute three times")
+       print("This line will also execute three times")
+
+   print("Now we are outside of the for loop!")
+
+The ``range`` function takes an integer n as input and returns a sequence of numbers, starting at 0 and going up to but not including n.
+Thus, instead of ``range(3)``, we could have written ``[0, 1, 2]``.
+
+The loop variable ``_`` is bound to 0 the first time lines 4 and 5 execute. The next time, ``_`` is bound to 1. Third time, it is bound to 2.
+``_`` is a strange name for a variable but  if you look carefully at the rules about variable names, it is a legal name. By convention, we use the ``_`` as our loop variable when we don't intend to ever refer to the loop variable. That is, we are just trying to repeat the code block some number of times (once for each item in a sequence), but we are not going to do anything with the particular items. ``_`` will be bound to a different item each time, but we won't ever refer to those particular items in the code.
+
+By contrast, notice that in the previous activecode window, the loop variable is ``afruit``. In that for loop, we *do* refer to each item, with ``print(afruit)``.
 
 Iteration Simplifies our Turtle Program
 ---------------------------------------
+
+Remember the turtle drawings we made earlier? Let's look again at how we can use for loops there!
 
 To draw a square we'd like to do the same thing four times --- move the turtle forward some 
 distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four 
 sides of a square.  This next program does exactly the same thing but, with the help of the for 
 statement, uses just three lines (not including the setup code).  Remember that the for statement 
-will repeat the `forward` and `left` four times, one time for each value in the list.
+will repeat the ``forward`` and ``left`` four times, one time for each value in the list.
 
 .. activecode:: ac6_5_2
    :nocodelens:
@@ -49,8 +75,6 @@ will repeat the `forward` and `left` four times, one time for each value in the 
        alex.left(90)
 
    wn.exitonclick()
-
-
 
 While "saving some lines of code" might be convenient, it is not the big
 deal here.  What is much more important is that we've found a "repeating

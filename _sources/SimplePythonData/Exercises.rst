@@ -194,6 +194,18 @@ Exercises
 
                 t = ??
 
+                ====
+
+                from unittest.gui import TestCaseGui
+                import re
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertTrue(re.search(str(P * (1 + (r/n))**(n*t))[:5],
+                            self.getOutput()),
+                            'Checking Answer.')
+
+                myTests().main()
+
         .. tab:: Answer
 
             .. activecode:: spd_q9_answer
@@ -274,6 +286,13 @@ Exercises
       miles driven and the number of gallons used. Print a nice message with the answer.
       ~~~~
 
+      ====
+      from unittest.gui import TestCaseGui
+      import re
+      class myTests(TestCaseGui):
+          def testOne(self):
+             self.assertTrue(re.search(str(miles/gallons)[:5], self.getOutput()), 'Checking answer.')
+      myTests().main()
 
 .. question:: spd_ex_13
 

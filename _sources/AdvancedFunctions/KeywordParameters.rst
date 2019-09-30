@@ -198,7 +198,7 @@ For example,
 
       initial = 7
       def f(x, y = 3, z = initial):
-          print "x, y, z are:", x, y, z
+          print ("x, y, z are:", x, y, z)
       initial = 0
       f(2)
 
@@ -218,7 +218,7 @@ For example,
    
    .. code-block:: python 
 
-      names = ["Alexey", "Catalina", "Mitsuki", "Pablo"]
+      names = ["Alexey", "Catalina", "Misuki", "Pablo"]
       print("'{first}!' she yelled. 'Come here, {first}! {f_one}, {f_two}, and {f_three} are here!'".format(first = names[1], f_one = names[0], f_two = names[2], f_three = names[3]))
 
 .. activecode:: ac15_2_3
