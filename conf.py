@@ -49,6 +49,8 @@ master_doc = 'index'
 project = 'Runestone Interactive Overview'
 copyright = '2017 bradleymiller'
 
+generate_component_labels = False
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.

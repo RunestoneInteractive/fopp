@@ -53,8 +53,6 @@ Learning Goals
 --------------
 
 * To understand the use of loops as a way of repeating actions
-* To understand flow control and iteration through the for loop
-* To understand the idea of sequence (or list) of numbers
 * To introduce the idea of looking for patterns when problem solving
 * To distinguish between instances, attributes, and methods
 
@@ -63,6 +61,5 @@ Objectives
 
 * Write a multi-line program (using the turtle framework)
 * Invoke methods & set attributes using dot notation
-* Use the range function to create the correct sequence of numbers
 * Use the for loop to draw common geometric shapes with the turtle
 

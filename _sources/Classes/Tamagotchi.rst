@@ -28,9 +28,9 @@ There is a ``clock_tick`` method which just increments the boredom and hunger in
 
 The ``__str__`` method produces a string representation of the pet's current state, notably whether it is bored or hungry or whether it is happy. It's bored if the boredom instance variable is larger than the threshold, which is set as a class variable.
 
-To relieve boredom, the pet owner can either teach the pet a new word, using the ``teach()`` method, or interact with the pet, using the ``hi()`` method. In response to teach(), the pet adds the new word to its list of words. In response to the hi() method, it prints out one of the words it knows, randomly picking one from its list of known words. Both hi() and teach() cause an invocation of the ``reduce_boredom()`` method. It decrements the boredom state by an amount that it reads from the class variable hunger_decrement. The boredom state can never go below 0.
+To relieve boredom, the pet owner can either teach the pet a new word, using the ``teach()`` method, or interact with the pet, using the ``hi()`` method. In response to ``teach()``, the pet adds the new word to its list of words. In response to the ``hi()`` method, it prints out one of the words it knows, randomly picking one from its list of known words. Both ``hi()`` and ``teach()`` cause an invocation of the ``reduce_boredom()`` method. It decrements the boredom state by an amount that it reads from the class variable ``boredom_decrement``. The boredom state can never go below ``0``.
 
-To relieve hunger, we call the feed() method.
+To relieve hunger, we call the ``feed()`` method.
 
 .. activecode:: tamagotchi_1
     :nocanvas:
@@ -84,7 +84,7 @@ To relieve hunger, we call the feed() method.
         def reduce_boredom(self):
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
-Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing p1 to see what the effects are. If you want to directly inspect the state, try printing p1.boredom or p1.hunger.
+Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing ``p1`` to see what the effects are. If you want to directly inspect the state, try printing ``p1.boredom`` or ``p1.hunger``.
 
 .. activecode:: tamagotchi_2_copy
     :nocanvas:
