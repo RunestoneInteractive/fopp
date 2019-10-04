@@ -25,7 +25,7 @@ A **mark** essentially specifies the kind of chart we are going create such as a
 * mark_line() -- draw this chart using lines
 
 
-An **encoding** allows you to declare links between data columns and "visual encoding channels."   You specify an encoding for a particular mark by passing named parameters to the ``encoding()`` method.  We will get into more detail on named parameters later in the book.  For now you can just enjoy the fact that they act link any other parameter but are in some ways easier to deal with because you don't have to worry about the order, you can just use them in any order by their name.
+An **encoding** allows you to declare links between data columns and "visual encoding channels."   You specify an encoding for a particular mark by passing named parameters to the ``encode()`` method.  We will get into more detail on named parameters later in the book.  For now you can just enjoy the fact that they act link any other parameter but are in some ways easier to deal with because you don't have to worry about the order, you can just use them in any order by their name.
 
 Some typical encoding channels include:
 

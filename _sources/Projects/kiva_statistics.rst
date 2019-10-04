@@ -42,6 +42,8 @@ Level 1 Questions
 #. What is the variance of the money loaned?
 #. What is the average number of days needed to fund a loan?
 
+The questions in the list above are the way you would probably think of them when brainstorming or having a discussion with a colleague.  Answering them in code often requires more precision in the way the questions are posed.  We will restate these questions below and make them more precise.
+
 .. activecode:: act_kiva_2
     :include: act_kiva_1
 
