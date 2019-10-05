@@ -118,3 +118,14 @@ Exercises
                 print(p)
                 p.move(5,10)
                 print(p)
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

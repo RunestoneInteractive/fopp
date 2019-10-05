@@ -1,8 +1,6 @@
 Exercises
 =========
 
-There may be exercises below contributed by professors using Runestone.
-
 
 Contributed Exercises
 ~~~~~~~~~~~~~~~~~~~~~

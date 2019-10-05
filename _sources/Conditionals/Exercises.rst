@@ -351,3 +351,14 @@ Exercises
           else:
               print("This is a pretty big number.")
 
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

@@ -148,3 +148,14 @@ Exercises
                   self.assertEqual(five_most_frequent("aaaaaabbbbbccccdefggghijkk"), ['a', 'b', 'c', 'g', 'k'], "Checking the value returned from using five_most_frequent.")
 
             myTests().main()
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}
