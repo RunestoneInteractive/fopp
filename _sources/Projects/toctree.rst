@@ -26,4 +26,3 @@ Projects
     better_pizza_predictions.rst
     clustering.rst
     sentiment_analysis.rst
-
