@@ -23,20 +23,20 @@ The enigma machine was used by the Germans during World War II to encrypt orders
 
 .. fillintheblank:: act_enc_fb
 
-    Here is a secret message ``bkfgamdazje`` we call this the ciphertext. Can you decode it using paper and pencil and enter the decrypted message which we call the plaintext in the following space:
+    Here is a secret message ``clgubaebpxf`` we call this the ciphertext. Can you decode it using paper and pencil and enter the decrypted message which we call the plaintext in the following space:
 
     - :pythonrocks: Is the correct answer
-      :x: Try again, here is a hint:  a == o
+      :x: Try again, here is a hint:  b == o
 
 The enigma encrypted messages using a much more sophisticated code than the previous question.  The secret message I gave you uses a simple substitution cipher.  I have given you one hint but if you still don't have it This matching question will reveal a few more hints that should help you solve it.
 
 The letters on the left correspond to the letters in the ciphertext and the letters on the right correspond to the plaintext.  Drag the letters on the left to their corresponding letters on the right.
 
 .. dragndrop:: act_enc_match1
-    :match_1: a|||o
-    :match_2: b|||p
-    :match_3: k|||y
-    :match_4: f|||t
+    :match_1: b|||o
+    :match_2: c|||p
+    :match_3: l|||y
+    :match_4: g|||t
 
 
 In this lab we will explore some simple encryption algorithms to both encrypt and decrypt messages.  This lab is fun to work with if you have a partner so that one of you can encrypt the message and the other can decrypt the message.  Both of you will have to get your program working in order to communicate effectively!
@@ -150,7 +150,7 @@ Finally, only a few truly amazing people are going to remember a random ording o
 
 .. activecode:: act_pw_ac_1
 
-    implement the algorithm outlined above assuming that the user entered 'python' for their password.  Store the key in a variable called 'key'.  For testing purposes we will assume that no spaces or punctuation are included in the alphabet or the password.
+    implement the algorithm outlined above assuming that the user entered 'password' for their password.  Store the key in a variable called 'key'.  For testing purposes we will assume that no spaces or punctuation are included in the alphabet or the password.
     ~~~~
     password = 'password'
     # your code here
