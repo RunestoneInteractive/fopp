@@ -237,6 +237,7 @@ Exercises
       from unittest.gui import TestCaseGui
       class myTests(TestCaseGui):
           def test_radius(self):
+              self.assertIn("radius", self.getEditorText(), 'radius variable')
               self.assertIn(str(3.14*radius**2)[:4], self.getOutput(), 'Checking answer.')
       myTests().main()
 
