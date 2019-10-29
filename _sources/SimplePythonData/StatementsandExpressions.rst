@@ -23,7 +23,7 @@ Statements and Expressions
     :align: left
 
 A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
-statement so far. Some other kinds of statementsthat you'll see in future chapters are ``while`` statements, 
+statement so far. Some other kinds of statements that you'll see in future chapters are ``while`` statements, 
 ``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds too!)
 
 An **expression** is a combination of literals, variable names, operators, and calls to functions. 

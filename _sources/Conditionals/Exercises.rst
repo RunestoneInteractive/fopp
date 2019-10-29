@@ -310,8 +310,7 @@ Exercises
 
             .. actex:: ac7_14_10
 
-               Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
-               some of your code from the last question. The == operator compares two values to see if they are the same)
+               Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: Start by reversing the input string, and then use the == operator to compare two values to see if they are the same)
                ~~~~
 
 #.
