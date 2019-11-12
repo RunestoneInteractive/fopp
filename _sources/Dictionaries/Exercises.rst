@@ -18,7 +18,7 @@ Exercises
 
 .. question:: ac10_8_1_q
     :number: 1
-    
+
     .. tabbed:: q1
 
         .. tab:: Question
@@ -45,7 +45,7 @@ Exercises
     :practice: T
     :topics: Dictionaries/DictionaryLookup
 
-    What would the following code print? 
+    What would the following code print?
 
     .. sourcecode:: python
 
@@ -55,7 +55,7 @@ Exercises
     -   :fall: Good work!
         :autumn: This is a value when the key is 'spring'.
         :spring: This ia a value when the key is 'fall'.
-        :.*: Incorrect, try again. 
+        :.*: Incorrect, try again.
 
 
 .. question:: ac10_8_2_q
@@ -66,12 +66,12 @@ Exercises
         .. tab:: Question
 
             .. actex:: ac10_8_2
-               :tie: pirateTranslator 
+               :tie: pirateTranslator
 
                Avast!  Try this one swabbies.  Here's a table of English to Pirate translations
 
                .. table::
-        
+
                   ==========  ==============
                   English     Pirate
                   ==========  ==============
@@ -103,18 +103,18 @@ Exercises
     :practice: T
     :topics: Dictionaries/DictionaryLookup
 
-    In order to get the last line to print "success", what should the value *x* (in the last line) be? 
+    In order to get the last line to print "success", what should the value *x* (in the last line) be?
 
     .. sourcecode:: python
 
         d = { 'work': 'success', 'success': 'failure', 'failure': 'money', 'time': 'work', 'industry': 'time'}
         print d[d[x]]
 
-    -   :time: Good Work!
+    -   :(^time$)|('time')|("time"): Good Work!  The word time with quotes around it is better as it indicates that you understand that we were referring to a literal string value.
         :industry: It prints "work".
         :work: It prints "failure".
         :success: It prints "money".
-        :.*: Incorrect, try again. 
+        :.*: Incorrect, try again.
 
 
 .. question:: ac10_8_3_1
@@ -154,22 +154,22 @@ Exercises
                       print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
 
 .. mchoice:: assess_question1_11_11_3
-    :multiple_answers: 
+    :multiple_answers:
     :answer_a: It creates a new copy of <code>d</code>.
     :answer_b: It creates a new dictionary which swaps the keys and values in <code>d</code>.
     :answer_c: It throws an error.
-    :answer_d: It creates a new dictionary which maps each of <code>d</code>'s keys to itself. 
-    :answer_e: It creates a new dictionary which maps each of <code>d</code>'s values to itself. 
+    :answer_d: It creates a new dictionary which maps each of <code>d</code>'s keys to itself.
+    :answer_e: It creates a new dictionary which maps each of <code>d</code>'s values to itself.
     :correct: b
-    :feedback_a: It is not exactly a copy. 
+    :feedback_a: It is not exactly a copy.
     :feedback_b: Yes, <code>d[c]</code> gets the value from dictionary <code>d</code>  with key <code>c</code>. In dictionary <code>e</code>, we are putting <code>d[c]</code> as a key and value as <code>c</code>.
-    :feedback_c: It is a valid code. 
+    :feedback_c: It is a valid code.
     :feedback_d: The key of dictionary <code>e</code> is different from that of <code>d</code>.
     :feedback_e: The value of dictionary <code>e</code> is different from that of <code>d</code>.
     :practice: T
     :topics: Dictionaries/DictionaryKeyValueAssignment
 
-    What does the following block of code do? 
+    What does the following block of code do?
 
     .. sourcecode:: python
 
@@ -179,7 +179,7 @@ Exercises
             e[d[c]] = c
         print e
 
-    
+
 .. question:: dict_ex_4
    :number: 4
 
@@ -193,8 +193,8 @@ Exercises
                Write a program that allows the user to enter a string.  It then prints a
                table of the letters of the alphabet in alphabetical order which occur in
                the string together with the number of times each letter occurs. Case should
-               be ignored. A sample run of the program might look this this::   
-               
+               be ignored. A sample run of the program might look this this::
+
                    Please enter a sentence: ThiS is String with Upper and lower case Letters.
                    a  2
                    c  1
@@ -214,7 +214,7 @@ Exercises
                    w  2
                    $
                ~~~~
-               
+
 
         .. tab:: Discussion
 
@@ -226,24 +226,24 @@ Exercises
     :practice: T
     :topics: Dictionaries/KeyValueLookupAssignment
 
-    Consider the following function: 
+    Consider the following function:
 
     .. sourcecode:: python
 
         alphabet = 'abcdefghijklmnopqrstuvwxyz'
         values = {}
         for i in range(len(alphabet)):
-            values[alphabet[i]] = i+1; 
+            values[alphabet[i]] = i+1;
         answer  = 0
-        for c in s: 
+        for c in s:
             answer += values[c]
         return answer
-    
+
     When the ``foo()`` is called with the input "baa", what value does it return? (Write "error" if you think it would raise an error instead.)
 
     -   :4: Good Work!
         :error: The code is valid.
-        :.*: Incorrect, try again. (*Hint:* Lookup value of each character of "baa" in ``values``.) 
+        :.*: Incorrect, try again. (*Hint:* Lookup value of each character of "baa" in ``values``.)
 
 
 
