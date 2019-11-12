@@ -79,14 +79,13 @@ the value that was 'passed into' the function.
    :trace_mode: true
 
    def hello2(s):
-       print("Hello " + s)
-       print("Glad to meet you")
+    &nbsp;&nbsp;&nbsp;print("Hello " + s)
+    &nbsp;&nbsp;&nbsp;print("Glad to meet you")
 
    hello2("Nick")
    ~~~~
-   {{hello2("Nick")}}{{def hello2(s):}}
-   def hello2({{s}}{{"Nick"}}):
-   {{def hello2("Nick"):}}{{print("Hello " + s)}}
+   {{hello2("Nick")}}{{lookup hello2 name and find it is a function}}
+   {{hello2("Nick")}}{{s = "Nick"}} # bind actual parameter to formal parameter
    print("Hello " + {{s}}{{"Nick"}})
    {{print("Hello " + "Nick")     #prints out "hello Nick"}}{{print("Glad to meet you")   #prints out "Glad to meet you"}}
    {{print("Glad to meet you")   #prints out "Glad to meet you"}}{{# the function is finished}}
