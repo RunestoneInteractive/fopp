@@ -8,7 +8,7 @@
 🤔 Monte Carlo Simulations
 ============================
 
-A lot of scientific work can be done with simulations.  Most drugs today are not tested on animals, or even manufactured in meatspace without significant testing via simulation in cyberspace. Investment strategies are simulated Millions of times to predict the most likely outcome, bridge designs, new computers, new cars, man many other things are designed and simulated in the computer before anything physical is created.  `Steve Jobs <https://en.wikipedia.org/wiki/Steve_Jobs>`_ is said to have told his idol `Seymour Cray <https://en.wikipedia.org/wiki/Seymour_Cray>`_ that he used a Cray supercomputer to help design and model the latest Mac, to which Cray is reported to have replied 'that's great I just bought a Mac to help me design the next Cray.'
+A lot of scientific work can be done with simulations.  Most drugs today are not tested on animals, or even manufactured at all in real life, without significant testing via simulation in cyberspace. Investment strategies are simulated Millions of times to predict the most likely outcome, bridge designs, new computers, new cars, man many other things are designed and simulated in the computer before anything physical is created.  `Steve Jobs <https://en.wikipedia.org/wiki/Steve_Jobs>`_ is said to have told his idol `Seymour Cray <https://en.wikipedia.org/wiki/Seymour_Cray>`_ that he used a Cray supercomputer to help design and model the latest Mac, to which Cray is reported to have replied 'that's great I just bought a Mac to help me design the next Cray.'
 
 In this project we are going to investigate the Monte-Carlo simulation, named after the famous gambling city in `Monaco <https://www.google.com/maps/place/Monte+Carlo,+Monaco-Ville,+Monaco/@43.7261188,7.2865825,11z/data=!4m5!3m4!1s0x12cdc287dedfadcd:0xee15296ed95b686c!8m2!3d43.7400718!4d7.4266436>`_.
 
@@ -37,7 +37,7 @@ Let me describe our simulation a little more precisely.
 
 What is even more fun is to use our turtle graphics package to simulate animate this simulation.  Every time we throw a dart we make a dot on the screen where it lands.  If you color the darts that hit the dartboard blue and the darts that miss red you will definitely see a circle emerge as the simulation progresses.
 
-Lets start with the animation part before we do too much math.  You should also review the ``win.setworldcoordinates`` function so that we can plot our darts using real numbers between -1 and 1.  Then before you plot a point check to see if the distance to 0,0 is less than or equal to 1 and set the color accordingly.
+Let's start with the animation part before we do too much math.  You should also review the ``win.setworldcoordinates`` function so that we can plot our darts using real numbers between -1 and 1.  Then before you plot a point check to see if the distance to 0,0 is less than or equal to 1 and set the color accordingly.
 Try to simulate about 1000 dart throws and see what you get.
 
 .. activecode:: act_monte_1
@@ -47,7 +47,7 @@ Try to simulate about 1000 dart throws and see what you get.
     # recommend myturtle.tracer(12,25) for faster animation
 
 
-Now that you have the animation working you can add in the counting and make a calculation of the value of pi.  You can speed up the animation considerably with the use of the tracer function.  Ordinarily the turtle draws the picture incrementally every time you perform a drawing operation.  For example a straight line of 100 might be drawn in 10 segments with a small pause between each segment.  The ``tracer(skips,pause)`` function allows you to say only perform every ``skips`` updates and to wait for only ``pause`` milliseconds.  One funny side effect of this is that in a few odd cases your picture might look incomplete so if you use this its a good idea to also call ``update`` at the end of all your drawing to be sure you have the full picture.
+Now that you have the animation working you can add in the counting and make a calculation of the value of pi.  You can speed up the animation considerably with the use of the tracer function.  Ordinarily the turtle draws the picture incrementally every time you perform a drawing operation.  For example a straight line of 100 might be drawn in 10 segments with a small pause between each segment.  The ``tracer(skips,pause)`` function allows you to say only perform every ``skips`` updates and to wait for only ``pause`` milliseconds.  One funny side effect of this is that in a few odd cases your picture might look incomplete so if you use this it's a good idea to also call ``update`` at the end of all your drawing to be sure you have the full picture.
 
 
 .. activecode:: act_monte_2
@@ -79,29 +79,29 @@ Next we want to turn our attention to doing a monte carlo simulation of a stock 
 
 The idea behind a stock simulation derives from Burton Malkiel's random walk theory.  In the random walk theory we flip a coin, if the coin is heads then the stock goes up a little bit, but if the coin is tails the stock goes down a little bit.  How much the stock goes up or down will be determined based on analyzing how much it typically changes from day to day in the past.
 
-Lets begin by first reading the stock data from a CSV file.  You can see the columns below for the data which is real historical data.  You could obtain this data from a number of different sources and use your own favorite stock if you would like.  You'll notice there are two columns for the closing price of the stock:  Close and Adj Close.  We are interested in the Adj Close column as that adjusts the stock price for future splits.  A split happens when a company decides to lower their price by increasing the number of shares.  A two for one split is common, so when a split happens, instead of 1 share at $60.00 per share you now have 2 shares at $30.00.  You can see how on a graph this would make it look like the price was cut in half.
+Let's begin by first reading the stock data from a CSV file.  You can see the columns below for the data which is real historical data.  You could obtain this data from a number of different sources and use your own favorite stock if you would like.  You'll notice there are two columns for the closing price of the stock:  Close and Adj Close.  We are interested in the Adj Close column as that adjusts the stock price for future splits.  A split happens when a company decides to lower their price by increasing the number of shares.  A two for one split is common, so when a split happens, instead of 1 share at $60.00 per share you now have 2 shares at $30.00.  You can see how on a graph this would make it look like the price was cut in half.
 
 .. datafile:: AAPL_train.csv
     :fromfile: AAPL_train.csv
 
 
-First, lets use Altair to graph the closing price of the stock over 1000 days.
+First, let's use Altair to graph the closing price of the stock over 1000 days.
 
 .. activecode:: act_monte_4
     :nocodelens:
 
-Once you have your initial graph lets look at how much the stock changes from day to day.  To do this we will make a new list of numbers where we take the price from day N and subtract the price from day N-1.   Next we'll use Altair to graph these changes to see if we can detect any pattern in how the stock changes from day to day.  In fact it should look quite random.
+Once you have your initial graph, let's look at how much the stock changes from day to day.  To do this we will make a new list of numbers where we take the price from day N and subtract the price from day N-1.   Next we'll use Altair to graph these changes to see if we can detect any pattern in how the stock changes from day to day.  In fact it should look quite random.
 
 .. activecode:: act_monte_5
     :nocodelens:
 
 
-Now that we have the deltas and have confirmed a random behavior from day to day let's make a histogram to see the distribution of the daily changes.  Hey its bell shaped!
+Now that we have the changes and have confirmed that they seem to change randomlyfrom day to day, let's make a histogram to see the distribution of the daily changes.  Hey, it's bell-shaped!
 
 .. activecode:: act_monte_6
     :nocodelens:
 
-Now we will compute some statistics -- the mean change from day to day as well as the standard deviation of the changes.  We want to know the standard deviation because we will use that to determine how much our stock might go up or down on any given day. You should get a mean of about 0.03 and a standard deviation of 0.548
+Now we will compute some statistics -- the mean change from day to day as well as the standard deviation of the changes.  We want to know the standard deviation because we will use that to determine how much our stock might go up or down on any given day. You should get a mean of about 0.03 and a standard deviation of 0.548.
 
 
 **Let's Predict**
