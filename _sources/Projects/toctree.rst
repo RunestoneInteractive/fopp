@@ -6,9 +6,9 @@ Projects
 
     IntroProjects.rst
     scaffolded_code.rst
-    turtle_driving.rst    
+    turtle_driving.rst 
+    input_compute_output.rst   
     drawing_a_circle.rst
-    input_compute_output.rst
     xkcd_pass.rst
     kiva_statistics.rst
     kiva_graphs.rst
