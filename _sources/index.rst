@@ -34,7 +34,8 @@
    * ACM-SIGCSE for the special projects grant that funded our student Isaac Dontje Lindell for the summer of 2013.
    * NSF
 
-   The Runestone Interactive tools are open source and we encourage you to contact us, or grab a copy from GitHub if you would like to use them to write your own resources.
+   The Runestone Interactive tools are open source and we encourage you to contact us, or grab a copy from GitHub <https://github.com/RunestoneInteractive> if you would like to use them to write your own resources.
+   
 
    We also `welcome your support <https://runestone.academy/runestone/default/donate/10>`_ to help keep Runestone growing.
 
