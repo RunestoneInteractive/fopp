@@ -160,7 +160,7 @@ So what is happening in the Python interpreter when you write programs with clas
 1. First, it checks for an instance variable or an instance method by the name it's looking for.
 2. If an instance variable or method by that name is not found, it checks for a class variable. (See the :ref:`previous chapter <class_and_instance_vars>` for an explanation of the difference between **instance variables** and **class variables**.)
 3. If no class variable is found, it looks for a class variable in the parent class.
-4. If no class variable is found _there_, the interpreter looks for a class variable in THAT class's parent, if it exists -- the "grandparent" class.
+4. If no class variable is found, the interpreter looks for a class variable in THAT class's parent (the "grandparent" class).
 5. This process goes on until the last ancestor is reached, at which point Python will signal an error.
 
 Let's look at this with respect to some code.
