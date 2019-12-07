@@ -20,7 +20,7 @@ Glossary
         A unique interpreter environment that allows Python to be executed from within a web browser.
 
     algorithm
-        A general step by step process for solving a problem.
+        A step by step list of instructions that if followed exactly will solve the problem under consideration.
 
     bug
         An error in a program.
