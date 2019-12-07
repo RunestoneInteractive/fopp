@@ -44,7 +44,7 @@ Glossary
 
     debugging
         The process of finding and removing any of the three kinds of
-        programming errors.
+        programming errors. See also: syntax error, semantic error, and 
 
     exception
         Another name for a runtime error.
@@ -97,10 +97,10 @@ Glossary
         A formal notation for representing solutions.
 
     Python shell
-        An interactive user interface to the Python interpreter. The user of a
+        An interactive user interface to the Python interpreter, and the user of a
         Python shell types commands at the prompt (>>>), and presses the return
         key to send these commands immediately to the interpreter for
-        processing.
+        processing. To initiate the Python Shell, the user should open theterminal and type "python". Once the user presses           enter, the Python Shell appears and the user can interact with it. 
 
     runtime error
         An error that does not occur until the program has started to execute
