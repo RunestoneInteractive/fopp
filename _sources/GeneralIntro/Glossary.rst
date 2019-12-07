@@ -118,7 +118,7 @@ Glossary
         prompt, and the results are shown immediately in the command terminal window. Shell mode is initiated by opening the           terminal of your operating system and typing "python". Press enter and the Python Shell will appear. This is in               contrast to **source code**. Also see the entry under **Python shell**.
 
     source code
-        A program, stored in a file, in a high-level language before being compiled or interpreted.
+        The instructions in a program, stored in a file, in a high-level language before being compiled or interpreted.
 
     syntax
         The structure of a program.
