@@ -94,7 +94,7 @@ Glossary
         computations to be performed.
 
     programming language
-        A formal notation for representing solutions.
+         A vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks.
 
     Python shell
         An interactive user interface to the Python interpreter, and the user of a
