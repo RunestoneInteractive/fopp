@@ -114,9 +114,8 @@ Glossary
         The meaning of a program.
 
     shell mode
-        A style of using Python where we type expressions at the command
-        prompt, and the results are shown immediately.  Contrast with
-        **source code**, and see the entry under **Python shell**.
+        A mode of using Python where expressions can be typed and executed in the command
+        prompt, and the results are shown immediately in the command terminal window. Shell mode is initiated by opening the           terminal of your operating system and typing "python". Press enter and the Python Shell will appear. This is in               contrast to **source code**. Also see the entry under **Python shell**.
 
     source code
         A program, stored in a file, in a high-level language before being compiled or interpreted.
