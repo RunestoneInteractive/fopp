@@ -44,7 +44,7 @@ Glossary
 
     debugging
         The process of finding and removing any of the three kinds of
-        programming errors. See also: syntax error, semantic error, and 
+        programming errors.  
 
     exception
         Another name for a runtime error.
