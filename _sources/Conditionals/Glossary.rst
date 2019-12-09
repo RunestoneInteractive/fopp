@@ -33,7 +33,7 @@ Glossary
         statements.
 
     comparison operator
-        One of the operators that compares two values: ``==``, ``!=``, ``>``,
+        An operator that compares two values: ``==``, ``!=``, ``>``,
         ``<``, ``>=``, and ``<=``.
 
     condition
