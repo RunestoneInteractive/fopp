@@ -34,6 +34,10 @@ Glossary
         A variable or value used to select a member of an ordered collection, such as
         a character from a string, or an element from a list.
         
+        
+     loop body
+        The loop body contains the statements of the program that will be iterate through upon each loop. The loop body is always indented. 
+        
 
     pattern
         A sequence of statements, or a style of coding something that has
