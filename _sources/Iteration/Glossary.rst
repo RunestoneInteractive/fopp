@@ -16,10 +16,15 @@ Glossary
 
 .. glossary::
 
-      accumulator pattern
-         A pattern where the program initializes an accumulator variable and then changes it
-         during each iteration, accumulating a final result.
-         
+     accumulator pattern
+        A pattern where the program initializes an accumulator variable and then changes it
+        during each iteration, accumulating a final result.
+    
+    
+    Control Flow
+        Also known as the **flow of execution**, the order in which a program executes. By default, the control flow is ***sequential***.
+    
+    
     for loop traversal (``for``)
         *Traversing* a string or a list means accessing each character in the string or item in the list, one at a time.  For example, the following for loop:
 
@@ -48,6 +53,10 @@ Glossary
     range
         A function that produces a list of numbers. For example, ``range(5)``, produces a list of five
         numbers, starting with 0, ``[0, 1, 2, 3, 4]``.
+        
+    
+    sequential flow
+        The execution of a program from top to bottom, one statement at a time
 
 
     terminating condition
