@@ -86,7 +86,7 @@ The questions in the list above are the way you would probably think of them whe
 .. activecode:: act_kiva_4
     :include: act_kiva_1
 
-    Store the amount of the minimum loan in  ``min_loan`` and the amount of the maximum loan in ``max_loan`` Then, store the name of the country that received the largest loan in ``max_country`` and the smallest loan in ``min_country``  Hint: ``max`` and ``min`` are builting Python functions that you can use to find the minimum value or maximum value in any sequence.
+    Store the amount of the minimum loan in  ``min_loan`` and the amount of the maximum loan in ``max_loan`` Then, store the name of the country that received the largest loan in ``max_country`` and the smallest loan in ``min_country``  Hint: ``max`` and ``min`` are built in Python functions that you can use to find the minimum value or maximum value in any sequence.
     ~~~~
     # Your code here
     ====
