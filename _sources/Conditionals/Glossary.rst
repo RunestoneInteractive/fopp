@@ -22,6 +22,9 @@ Glossary
     body
         The block of statements in a compound statement that follows the
         header.
+    
+    boolean values
+        A value that is either True or False. True and False must be capitalized to be considered Boolean.
 
     branch
         One of the possible paths of the flow of execution determined by
@@ -44,7 +47,13 @@ Glossary
         A statement that controls the flow of execution depending on some
         condition. In Python the keywords ``if``, ``elif``, and ``else`` are
         used for conditional statements.
-
+    
+    logical operators
+        "and", "or" and "not" are logical operators used to evaluate expressions. Their semantic meaning is similar to their English meaning. 
+    
     nesting
         One program structure within another, such as a conditional statement
         inside a branch of another conditional statement.
+
+    unary selection
+        A selection statement in which there is only an "if" statement and the "else" statement is omitted entirely. In an unary selection, the statements are only executed if the condition evaluates to true, otherwise the program continues to the body following the if statement. 
