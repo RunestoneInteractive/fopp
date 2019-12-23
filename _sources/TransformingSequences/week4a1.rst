@@ -77,6 +77,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_4
     :language: python
     :practice: T
+    :autograde: unittest
     :topics: TransformingSequences/MutatingMethods
 
     Write code to add 'horseback riding' to the third position (i.e., right before volleyball) in the list ``sports``.
