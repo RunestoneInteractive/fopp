@@ -99,6 +99,7 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_5
     :language: python
+    :autograde: unittest
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
@@ -121,6 +122,7 @@ Chapter Assessment - List Methods
 
 .. activecode:: assess_ac4_1_1_6
     :language: python
+    :autograde: unittest
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
