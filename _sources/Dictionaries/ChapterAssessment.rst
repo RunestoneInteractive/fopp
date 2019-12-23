@@ -264,8 +264,10 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_12
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary, ``freq_words``, that displays each word in string ``str1`` as the key and its frequency as the value.
+   Create a dictionary, ``freq_words``, that contains each word in string ``str1`` as the key and its frequency as the value.
    ~~~~
    str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
@@ -330,8 +332,10 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_15
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingtheBestKey
 
-   Do the same as above but now find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
+   Find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
    ~~~~
    sally = "sally sells sea shells by the sea shore and by the road"
 
