@@ -61,7 +61,7 @@ One solution is to add a negative sign in front of ``len(fruit_name)``, which wi
 .. activecode:: ac18_5_3
 
     fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
-    new_order = sorted(fruits, key=lambda fruit_name: (-len(fruit_name), fruit_name), reverse=True)
+    new_order = sorted(fruits, key=lambda fruit_name: (-len(fruit_name), fruit_name))
     for fruit in new_order:
         print(fruit)
    
@@ -88,8 +88,8 @@ We can use this for any numerical value that we want to sort, however this will 
          weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'}, 
                     'Buenos Aires': {'temp': 55, 'condition': 'cloudy'}, 
                     'Cairo': {'temp': 96, 'condition': 'sunny'}, 
-                    'Berlin': {'temp': 89 'condition': 'sunny'}, 
-                    'Caloocan': {'temp': 78 'condition': 'sunny'}}
+                    'Berlin': {'temp': 89, 'condition': 'sunny'}, 
+                    'Caloocan': {'temp': 78, 'condition': 'sunny'}}
 
          sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
 
@@ -99,7 +99,7 @@ We can use this for any numerical value that we want to sort, however this will 
       :answer_c: first city name (reverse alphabetically), then temperature (highest to lowest)
       :answer_d: first temperature (lowest to highest), then city name (alphabetically)
       :answer_e: first city name (alphabetically), then temperature (lowest to highest)
-      :feedback_a: Correct! In this case, the reverse parameter will cause the country name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.
+      :feedback_a: Correct! In this case, the reverse parameter will cause the city name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.
       :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort. Also, take note of the reverse parameter - what will it do in this instance?
       :feedback_c: Not quite - is the reverse parameter set to True? Has a negative sign been used in the key parameter? What happens when those are both used?
       :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort. 
@@ -114,7 +114,7 @@ We can use this for any numerical value that we want to sort, however this will 
          weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'}, 
                     'Buenos Aires': {'temp': 55, 'condition': 'cloudy'}, 
                     'Cairo': {'temp': 96, 'condition': 'sunny'}, 
-                    'Berlin': {'temp': 89 'condition': 'sunny'}, 
-                    'Caloocan': {'temp': 78 'condition': 'sunny'}}
+                    'Berlin': {'temp': 89, 'condition': 'sunny'}, 
+                    'Caloocan': {'temp': 78, 'condition': 'sunny'}}
 
          sorted_weather = sorted(weather, key=lambda w: (w, -weather[w]['temp']), reverse=True)

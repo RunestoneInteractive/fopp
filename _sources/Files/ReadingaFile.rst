@@ -25,8 +25,9 @@ use ``fileref`` will result in an error.
 
 .. activecode:: ac9_2_1
     :available_files: olympics.txt
+    :nocodelens:
 
-    fileref = open("olympics.txt","r")
+    fileref = open("olympics.txt", "r")
     ## other code here that refers to variable fileref
     fileref.close()
 

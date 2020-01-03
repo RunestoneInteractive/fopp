@@ -15,8 +15,8 @@
    :prefix: dictionaries-1-
    :start: 1
 
-Introduction: Dictionaries
-==========================
+Getting Started with Dictionaries
+=================================
 
 To provide an example of this new kind of datatype, we will create a dictionary to translate English words into Spanish. 
 For this dictionary, the keys are strings and the values will also be strings.

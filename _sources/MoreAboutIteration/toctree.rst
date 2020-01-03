@@ -13,4 +13,3 @@ More About Iteration
    WPInfiniteLoops.rst
    Exercises.rst
    ChapterAssessment.rst
-   

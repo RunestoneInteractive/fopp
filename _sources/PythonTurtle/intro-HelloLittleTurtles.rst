@@ -24,12 +24,11 @@
 Hello Little Turtles!
 =====================
 
-.. video:: turtleintrovid
-    :controls:
-    :thumb: ../_static/turtleintro.png
-
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.mov
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.webm
+.. youtube:: Yxyx6KpKRzY
+    :divid: vid_turtleintro
+    :height: 315
+    :width: 560
+    :align: left
 
 There are many *modules* in Python that provide very powerful features that we can use in our own programs. 
 Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations.
@@ -54,8 +53,6 @@ Learning Goals
 --------------
 
 * To understand the use of loops as a way of repeating actions
-* To understand flow control and iteration through the for loop
-* To understand the idea of sequence (or list) of numbers
 * To introduce the idea of looking for patterns when problem solving
 * To distinguish between instances, attributes, and methods
 
@@ -64,6 +61,5 @@ Objectives
 
 * Write a multi-line program (using the turtle framework)
 * Invoke methods & set attributes using dot notation
-* Use the range function to create the correct sequence of numbers
 * Use the for loop to draw common geometric shapes with the turtle
 

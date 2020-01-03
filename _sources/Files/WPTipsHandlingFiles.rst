@@ -22,4 +22,4 @@ suffixes are a convention. For some operating systems the suffixes have no speci
 used in a program. Other operating systems infer information from the suffixes - for example, ``.EXE`` is a suffix that 
 means a file is executable. 
 
-It's a good idea to follow the conventions. If a file contains CSV formatted data, name it with the extension ``.csv``, not ``.txt``. A python program will be able to read it either way, but if you follow the convention you will help other people guess what's in the file. And you will also help the computer's operating system to guess what application program it should open when you double-click on the file.
+It's a good idea to follow the conventions. If a file contains CSV formatted data, name it with the extension ``.csv``, not ``.txt``. A Python program will be able to read it either way, but if you follow the convention you will help other people guess what's in the file. And you will also help the computer's operating system to guess what application program it should open when you double-click on the file.

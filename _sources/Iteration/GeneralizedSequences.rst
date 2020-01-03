@@ -31,11 +31,10 @@ over strings and lists. A string is a sequence whose items are single characters
 any kind of Python object.
 
 Actually, the for loop is a little more general. It can iterate not just over strings and lists, but any kind of Python 
-object that acts like a sequence. So far, strings and lists are all we have seen. But a little later in the course we will 
-see tuples, which are another kind of sequence.
+object that acts like a sequence. So far, strings, lists, and tuples are all we have seen.
 
-We will also see some Python objects that act like sequences for the purposes of iteration with a for loop. These include 
-file objects, views, and iterators.
+We will also see later some Python objects that act like sequences for the purposes of iteration with a for loop. These include
+file objects and iterators.
 
 In fact, we have actually already seen one of these without noticing, because it hardly matters. Technically, the 
 ``range`` function doesn't actually return a list. That is, ``range(3)`` doesn't actually create the list ``[0, 1, 2]``. 
@@ -44,10 +43,10 @@ numbers 0, 1, and 2 are produced as they are needed rather than all created in a
 only three items. For ``range(10000000)`` it makes a little difference for how fast the program runs and how much memory 
 is used. That's why the items are produced as needed rather than all produced in advance.
 
-For the purposes of this book, however, the difference does not matter. You will be safe to think of the range function as 
+For the purposes of this book, however, the difference will rarely matter. You will be safe to think of the range function as
 if it returns a list object. Indeed, the Python interpreter that's built into the textbook cheats a little bit and makes 
 the range function actually produce a list. When you run a native Python interpreter on your computer it won't cheat in 
-that way. Still, when you run code of the form, ``for x in range(y)`` you will do just fine to think of range(y) returning 
+that way. Still, when you run code of the form, ``for x in range(y)`` you will usually do just fine to think of range(y) returning
 a list.
 
 Don't worry about understanding these details right now. The important point is that in the activecode window above, 

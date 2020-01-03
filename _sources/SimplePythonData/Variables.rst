@@ -16,12 +16,11 @@
 Variables
 ---------
 
-.. video:: assignvid
-    :controls:
-    :thumb: ../_static/assignment.png
-
-    http://media.interactivepython.org/thinkcsVideos/Variables.mov
-    http://media.interactivepython.org/thinkcsVideos/Variables.webm
+.. youtube:: TrrzfHUtyVw
+    :divid: assignvid
+    :height: 315
+    :width: 560
+    :align: left
 
 One of the most powerful features of a programming language is the ability to
 manipulate **variables**. A variable is a name that refers to a value.
@@ -90,7 +89,7 @@ To see this in even more detail, we can run the program using codelens.
     print(message)
     print(n)
     print(pi)
-    
+
 Now, as you step through the statements, you can see
 the variables and the values they reference as those references are
 created.

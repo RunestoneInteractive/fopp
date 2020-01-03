@@ -1,4 +1,4 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
+..  Copyright (C)  Paul Resnick, Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
     Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
     License, Version 1.3 or any later version published by the Free Software
@@ -49,7 +49,48 @@ Again, we can take advantage of packing to make the code look a little more read
 
     print(circleInfo(10))
 
+
+It's common to unpack the returned values into multiple variables.
+
+.. activecode:: ac12_4_5
+
+    def circleInfo(r):
+        """ Return (circumference, area) of a circle of radius r """
+        c = 2 * 3.14159 * r
+        a = 3.14159 * r * r
+        return c, a
+
+    print(circleInfo(10))
+
+    circumference, area = circleInfo(10)
+    print(circumference)
+    print(area)
+
+    circumference_two, area_two = circleInfo(45)
+    print(circumference_two)
+    print(area_two)
+
+
+
 **Check your Understanding**
+
+.. mchoice:: question12_4_1
+   :practice: T
+   :multiple_answers:
+   :answer_a: Make the last two lines of the function be "return x" and "return y"
+   :answer_b: Include the statement "return [x, y]"
+   :answer_c: Include the statement "return (x, y)"
+   :answer_d: Include the statement "return x, y"
+   :answer_e: It's not possible to return two values; make two functions that each compute one value.
+   :feedback_a: As soon as the first return statement is executed, the function exits, so the second one will never be executed; only x will be returned
+   :feedback_b: return [x,y] is not the preferred method because it returns x and y in a mutable list rather than a tuple which is more efficient. But it is workable.
+   :feedback_c: return (x, y) returns a tuple.
+   :feedback_d: return x, y causes the two values to be packed into a tuple.
+   :feedback_e: It is possible, and frequently useful, to have one function compute multiple values.
+   :correct: b,c,d
+
+   If you want a function to return two values, contained in variables x and y, which of the following methods will work?
+
 
 .. activecode:: ac12_3_3
    :language: python
@@ -57,7 +98,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :chatcodes:
    :practice: T
 
-   **1.** Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
+   Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
    ~~~~
 
    =====
@@ -77,7 +118,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :chatcodes:
    :practice: T
 
-   **2.** Define a function called ``info`` with the following required parameters: ``name``, ``age``, ``birth_year``, ``year_in_college``, and ``hometown``. The function should return a tuple that contains all the inputted information.
+   Define a function called ``info`` with the following required parameters: ``name``, ``age``, ``birth_year``, ``year_in_college``, and ``hometown``. The function should return a tuple that contains all the inputted information.
    ~~~~
 
    def info():

@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+:skipreading:`True`
+
 .. qnum::
    :prefix: data-18-
    :start: 1
@@ -40,7 +42,7 @@ Exercises
                ~~~~
 
                print(5**2)
-        
+
         .. tab:: Answer
 
             #. ``5 ** 2  = 25``
@@ -77,8 +79,8 @@ Exercises
         .. tab:: Question
 
             .. actex:: ex_2_5
-        
-               Optional. Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
+
+               Challenge: Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
                If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
                Write a Python program to solve the general version of the above problem.
                Ask the user for the time now (in hours), and then ask for the number of hours to wait for the alarm.
@@ -86,10 +88,10 @@ Exercises
                ~~~~
 
         .. tab:: Answer
-            
+
             .. activecode:: spd_q5_answer
                 :nocanvas:
-                
+
                 ## question 5 solution ##
 
                 current_time_string = input("What is the current time (in hours)? ")
@@ -109,9 +111,9 @@ Exercises
    .. actex:: ex_2_6
 
        It is possible to name the days 0 thru 6 where day 0 is Sunday and day 6 is Saturday.
-       If you go on a wonderful holiday leaving on day number 3 (a Wednesday) and you return 
-       home after 10 nights you would return home on a Saturday (day 6). Write a general 
-       version of the program which asks for the starting day number, and the length of your 
+       If you go on a wonderful holiday leaving on day number 3 (a Wednesday) and you return
+       home after 10 nights you would return home on a Saturday (day 6). Write a general
+       version of the program which asks for the starting day number, and the length of your
        stay, and it will tell you the number of day of the week you will return on.
        ~~~~
 
@@ -122,7 +124,7 @@ Exercises
 
         .. tab:: Question
 
-            Optional. Take the sentence: *All work and no play makes Jack a dull boy.*
+            Challenge: Take the sentence: *All work and no play makes Jack a dull boy.*
             Store each word in a separate variable, then print out the sentence on
             one line using ``print``.
 
@@ -130,7 +132,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: spd_q7_answer    
+            .. activecode:: spd_q7_answer
                 :nocanvas:
 
                 ## question 7 solution ##
@@ -152,13 +154,19 @@ Exercises
 .. question:: spd_ex_8
 
    .. actex:: ex_2_8
+      :autograde: unittest
 
       Add parentheses to the expression ``6 * 1 - 2`` to change its value from 4 to -6.
       ~~~~
-      
-      print(6 * 1 -2)
 
-  
+      print(6 * 1 -2)
+      ====
+      from unittest.gui import TestCaseGui
+      class myTests(TestCaseGui):
+          def testOne(self):
+              self.assertEqual('-6\n', self.getOutput(), 'Checking output.')
+      myTests().main()
+
 .. question:: spd_ex_9
 
     .. tabbed:: q9
@@ -167,7 +175,7 @@ Exercises
 
             .. actex:: ex_2_9
 
-                Optional. The formula for computing the final amount if one is earning
+                Challenge: The formula for computing the final amount if one is earning
                 compound interest is given on Wikipedia as
 
                 .. image:: Figures/compoundInterest.png
@@ -179,13 +187,25 @@ Exercises
                 ``t``, that the money will be compounded for.  Calculate and print the final
                 amount after ``t`` years.
                 ~~~~
-            
+
                 P = 10000
                 n = 12
                 r = 0.08
 
                 t = ??
-                
+
+                ====
+
+                from unittest.gui import TestCaseGui
+                import re
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertTrue(re.search(str(P * (1 + (r/n))**(n*t))[:5],
+                            self.getOutput()),
+                            'Checking Answer.')
+
+                myTests().main()
+
         .. tab:: Answer
 
             .. activecode:: spd_q9_answer
@@ -203,15 +223,23 @@ Exercises
 
                 print("The final amount after", t, "years is", final)
 
-    
+
 .. question:: spd_ex_10
 
    .. actex:: ex_2_10
+      :autograde: unittest
 
-      Write a program that will compute the area of a circle. Prompt the user to enter the radius and print a nice message back to the user with the answer.
+      Write a program that will compute the area of a circle. Prompt the user to enter the radius and save it to avariable called ``radius``. Print a nice message back to the user with the answer.
       ~~~~
+      pi = 3.14
 
-  
+      ====
+      from unittest.gui import TestCaseGui
+      class myTests(TestCaseGui):
+          def test_radius(self):
+              self.assertIn(str(3.14*radius**2)[:4], self.getOutput(), 'Checking answer.')
+      myTests().main()
+
 .. question:: spd_ex_11
 
     .. tabbed:: q11
@@ -219,15 +247,25 @@ Exercises
         .. tab:: Question
 
             .. actex:: ex_2_11
+               :autograde: unittest
 
-               Optional. Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
-               Print a nice message with the answer.
+               Challenge: Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle  and store the values in variables called ``width`` and
+               ``height``. Print a nice message with the answer..
                ~~~~
-        
+
+               ====
+               from unittest.gui import TestCaseGui
+               class myTests(TestCaseGui):
+                   def testOne(self):
+                       self.assertIn('width', self.getEditorText())
+                       self.assertIn('height', self.getEditorText())
+                       self.assertIn(str(width*height), self.getOutput(), 'Checking answer.')
+               myTests().main()
+
         .. tab:: Answer
 
             .. activecode:: spd_q11_answer
-                :nocanvas:        
+                :nocanvas:
 
                 ## question 11 solution
 
@@ -243,11 +281,18 @@ Exercises
 
    .. actex:: ex_2_12
 
-      Write a program that will compute MPG for a car. Prompt the user to enter the number of 
+      Write a program that will compute MPG for a car. Prompt the user to enter the number of
       miles driven and the number of gallons used. Print a nice message with the answer.
       ~~~~
 
-  
+      ====
+      from unittest.gui import TestCaseGui
+      import re
+      class myTests(TestCaseGui):
+          def testOne(self):
+             self.assertTrue(re.search(str(miles/gallons)[:5], self.getOutput()), 'Checking answer.')
+      myTests().main()
+
 .. question:: spd_ex_13
 
     .. tabbed:: q13
@@ -256,9 +301,9 @@ Exercises
 
             .. actex:: ex_2_13
 
-               Optional. Write a program that will convert degrees celsius to degrees fahrenheit.
+               Challenge: Write a program that will convert degrees celsius to degrees fahrenheit.
                ~~~~
-        
+
         .. tab:: Answer
 
             .. activecode:: spd_q13_answer
@@ -282,9 +327,21 @@ Exercises
 .. question:: spd_ex_14
 
    .. actex:: ex_2_14
+      :autograde: unittest
 
-      Optional. Write a program that will convert degrees fahrenheit to degrees celsius.
+      Ask the user for the temperature in Fahrenheit and store it in a variable call ``deg_f``. Calculate the equivalent temperature in degrees Celsius and store it in ``def_c``. Output a message to the user giving the temperature in Celsius.
       ~~~~
+
+      ====
+      from unittest.gui import TestCaseGui
+      class myTests(TestCaseGui):
+          def testOne(self):
+              self.assertIn('deg_f', self.getEditorText())
+              self.assertIn('deg_c', self.getEditorText())
+              ans = (deg_f - 32)*5/9
+              self.assertAlmostEqual(ans, deg_c)
+              self.assertIn(str(ans)[:min(len(str(ans)), 5)],    self.getOutput(), 'Checking answer.')
+      myTests().main()
 
 .. question:: spd_ex_15
 

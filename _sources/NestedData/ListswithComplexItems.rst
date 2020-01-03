@@ -97,7 +97,7 @@ the following
     nested1[1][0] = 100
     
 The complex items in a list do not have to be lists. They can be tuples or dictionaries. The items in a list do not all 
-have to be the same time, but you will drive yourself crazy if you have lists of objects of varying types. Save yourself
+have to be the same type, but you will drive yourself crazy if you have lists of objects of varying types. Save yourself
 some headaches and don't do that. Here's a list of dictionaries and some operations on them. Take a look at its visual 
 representation in codelens.
 
@@ -127,7 +127,7 @@ You can even have a list of functions (!).
     def square(x):
         return x*x
         
-    L = [square, abs]
+    L = [square, abs, lambda x: x+1]
 
     print("****names****")        
     for f in L:

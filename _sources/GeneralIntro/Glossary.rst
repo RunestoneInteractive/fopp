@@ -20,7 +20,7 @@ Glossary
         A unique interpreter environment that allows Python to be executed from within a web browser.
 
     algorithm
-        A general step by step process for solving a problem.
+        A step by step list of instructions that if followed exactly will solve the problem under consideration.
 
     bug
         An error in a program.
@@ -44,7 +44,7 @@ Glossary
 
     debugging
         The process of finding and removing any of the three kinds of
-        programming errors.
+        programming errors: ***syntax error***, ***semantic error***, and ***runtime error***. 
 
     exception
         Another name for a runtime error.
@@ -94,13 +94,13 @@ Glossary
         computations to be performed.
 
     programming language
-        A formal notation for representing solutions.
+         A vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks.
 
     Python shell
-        An interactive user interface to the Python interpreter. The user of a
+        An interactive user interface to the Python interpreter, and the user of a
         Python shell types commands at the prompt (>>>), and presses the return
         key to send these commands immediately to the interpreter for
-        processing.
+        processing. To initiate the Python Shell, the user should open theterminal and type "python". Once the user presses           enter, the Python Shell appears and the user can interact with it. 
 
     runtime error
         An error that does not occur until the program has started to execute
@@ -114,12 +114,11 @@ Glossary
         The meaning of a program.
 
     shell mode
-        A style of using Python where we type expressions at the command
-        prompt, and the results are shown immediately.  Contrast with
-        **source code**, and see the entry under **Python shell**.
+        A mode of using Python where expressions can be typed and executed in the command
+        prompt, and the results are shown immediately in the command terminal window. Shell mode is initiated by opening the           terminal of your operating system and typing "python". Press enter and the Python Shell will appear. This is in               contrast to **source code**. Also see the entry under **Python shell**.
 
     source code
-        A program, stored in a file, in a high-level language before being compiled or interpreted.
+        The instructions in a program, stored in a file, in a high-level language before being compiled or interpreted.
 
     syntax
         The structure of a program.

@@ -225,7 +225,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary, ``freq``, that displays each letter in string ``str1`` as the key and its frequency as the value.
+   Create a dictionary, ``freq``, that displays each character in string ``str1`` as the key and its frequency as the value.
    ~~~~
    str1 = "peter piper picked a peck of pickled peppers"
    =====
