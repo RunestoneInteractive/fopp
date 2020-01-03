@@ -187,11 +187,11 @@ counts for all letters, not just 's' and 't'.
 **Check your understanding**
 
 .. mchoice:: question10_5_1
-   :answer_a: print txt['e'] > txt['t']
-   :answer_b: print x['e'] > x['t']
-   :answer_c: print x[e] > x[t]
-   :answer_d: print x[c] > txt[c]
-   :answer_e: print e[x] > t[x]
+   :answer_a: print(txt['e'] > txt['t'])
+   :answer_b: print(x['e'] > x['t'])
+   :answer_c: print(x[e] > x[t])
+   :answer_d: print(x[c] > txt[c])
+   :answer_e: print(e[x] > t[x])
    :feedback_a: txt is the variable that has the original text, not the dictionary of counts.   
    :feedback_b: x is the dictionary of counts; you want to compare the values associated with 'e' and 't'.
    :feedback_c: x is the dictionary of counts, but you don't want to evaluate e and t as variables in order to determine which keys to look up in the dictionary. 
