@@ -140,7 +140,7 @@ There's one other useful feature. The exception code can access a variable that 
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
-   except Exception, e:
+   except Exception as e:
        print("got an error")
        print(e)
    
