@@ -140,7 +140,7 @@ See if you can figure out what caused them.
         syntax. So, in this case the next step should be to back up and look at the
         previous line. In this case if you look at line 2 carefully you will see that
         there is a missing right parenthesis at the end of the line. Remember that
-        parenthses must be balanced. Since Python allows statements to continue over
+        parentheses must be balanced. Since Python allows statements to continue over
         multiple lines inside parentheses python will continue to scan subsequent
         lines looking for the balancing right parenthesis. However in this case it
         finds the name ``current_time_int`` and it will want to interpret that as
