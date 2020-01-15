@@ -158,7 +158,7 @@ Glossary
 
     variable name
         A name given to a variable. Variable names in Python consist of a
-        sequence of letters (a..z, A..Z, and _) and digits (0..9) that begins
+        sequence of letters (a..z, A..Z, or _) and digits (0..9) that begins
         with a letter.  In best programming practice, variable names should be
         chosen so that they describe their use in the program, making the
         program *self documenting*.

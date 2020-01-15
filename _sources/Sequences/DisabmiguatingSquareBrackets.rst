@@ -11,13 +11,13 @@
    :prefix: sequences-4-
    :start: 1
 
-Disabmiguating []: creation vs indexing
+Disambiguating []: creation vs indexing
 =======================================
 
 Square brackets ``[]`` are used in quite a few ways in python. When you're first learning how to use them it may be 
 confusing, but with practice and repetition they'll be easy to incorporate!
 
-You have currently encountered two instances where we have used square brakets. The first is creating lists and the second 
+You have currently encountered two instances where we have used square brackets. The first is creating lists and the second 
 is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing 
 an already created list while simply creating a list does not.
 
@@ -50,7 +50,7 @@ Though it may be easier to distinguish in this above activecode, below may be a 
 
 Here, we see a list called ``lst`` being assigned to a list with one element, zero. Then, we see how ``n_lst`` is assigned 
 the value associated with the first element of lst. Dispite the variable names, only one of the above variables is 
-assigned to a list. Note that in this example, what sets creating appart from indexing is the reference to the list to let 
+assigned to a list. Note that in this example, what sets creating apart from indexing is the reference to the list to let 
 python know that you are extracting an element from another list.
 
 .. mchoice:: question5_4_1
