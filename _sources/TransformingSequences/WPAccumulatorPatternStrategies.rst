@@ -239,7 +239,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :correct: b
    :practice: T
 
-   WWhich of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
 .. mchoice:: question8_11_15
    :answer_a: Accumulator Variable: total_so_far        ; Iterator Variable: seat
