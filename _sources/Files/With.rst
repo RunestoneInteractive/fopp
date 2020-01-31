@@ -50,11 +50,9 @@ When the program exits the with block, the context manager handles the common st
            print(line)
    # continue on with other code          
 
-The first line of the `with` statement opens the file and assigns it to the variable ``md``. Then we can iterate over the file in any 
-of the usual ways. When we are done we simply stop indenting and let Python take care of closing the file and 
-cleaning up. The final line ``print(md)`` 
+The first line of the `with` statement opens the file and assigns it to the variable ``md``. Then we can iterate over the file in any of the usual ways. When we are done we simply stop indenting and let Python take care of closing the file and cleaning up. 
 
-This is equivalent to code that specifically closes the file at the end, but neatly marks the set of code that can make use of the open file as an indented block, and ensures that the programmer won't forget to include the .close() invocation.
+This is equivalent to code that specifically closes the file at the end, but neatly marks the set of code that can make use of the open file as an indented block, and ensures that the programmer won't forget to include the ``.close()`` invocation.
 
 .. activecode:: ac9_12_2
    :nocodelens:
