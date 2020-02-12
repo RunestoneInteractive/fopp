@@ -26,10 +26,9 @@ be sorted in reverse order.
     
 .. note::
 
-    This is a situation where it is convenient to use the keyword mechanism for providing optional parameters. It is 
-    possible to provide the value True for the reverse parameter without naming that parameter, but then we would have 
-    to provide a value for the second parameter as well, rather than allowing the default parameter value to be used. We 
-    would have had to write ``sorted(L2, None, True)``. That's a lot harder for humans to read and understand.
+    For most functions, it is possible to provide optional parameters without keywords, but the ``sorted`` function
+    prevents this, so you have to provide keywords for the ``reverse`` and ``key`` parameters. In this situation, it is
+    more convenient to use the keyword mechanism anyway.
 
 
 **Check Your Understanding**
