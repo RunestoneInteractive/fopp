@@ -70,7 +70,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    :answer_d: Error, you cannot concatenate inside an append.
    :correct: b
    :feedback_a: Don't forget the last item!
-   :feedback_b: Yes, the for loop processes each item in lst. 5 is added before lst[i] is appended to blist.
+   :feedback_b: Yes, the for loop processes each item in lst. 5 is added before lst[i] is appended to new_list.
    :feedback_c: 5 is added to each item before the append operation is performed.
    :feedback_d: It is OK to have a complex expression inside the call to the append method. The expression `lst[i]+5` is fully evaluated before the append operation is performed.
    :practice: T
