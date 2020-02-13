@@ -30,4 +30,4 @@ Helping
 
 If you want to do bug fixes and are looking for the version of this book that is deployed on Runestone.Academy, you can find that code by changing to the ``ac101`` branch after you have cloned this repository.
 
-We welcome PR to fix typos, unlcear wording, incorrect results, or anything else that needs fixing.  The book has been used by many many people, so if you think that an answer is incorrect, please make sure you double check your work before submitting an issue or making a PR.
+We welcome PR to fix typos, unclear wording, incorrect results, or anything else that needs fixing.  The book has been used by many many people, so if you think that an answer is incorrect, please make sure you double check your work before submitting an issue or making a PR.
