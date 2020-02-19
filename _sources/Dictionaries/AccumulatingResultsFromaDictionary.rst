@@ -26,6 +26,7 @@ counts dictionary. For each of those letters that has a letter value (no points 
 punctuation, capital letters, etc.), we add to the total score.
 
 .. activecode:: ac10_6_1
+   :nocodelens:
 
    f = open('scarlet2.txt', 'r')
    txt = f.read()
