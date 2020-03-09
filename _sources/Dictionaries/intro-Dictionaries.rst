@@ -46,16 +46,10 @@ the dictionary. The left hand side gives the dictionary and the key being associ
 value being associated with that key. We can print the current value of the dictionary in the usual way. The key-value
 pairs of the dictionary are separated by commas. Each pair contains a key and a value separated by a colon.
 
-<<<<<<< HEAD
 The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to
 determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as
-unpredictable.
-=======
-The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to 
-determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as 
 unpredictable [*]_ .
 
->>>>>>> master
 
 Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous
 output.
