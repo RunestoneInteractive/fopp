@@ -439,7 +439,7 @@ We can illustrate that with this particular program in two different ways.
    current_time_int = int(current_time_str)
 
    wait_time_str = input("How many hours do you want to wait")
-   wait_time_int = int(wait_time_int)
+   wait_time_int = int(wait_time_str)
 
    final_time_int = current_time_int + wait_time_int
    print(final_time_int)
