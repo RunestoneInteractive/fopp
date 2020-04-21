@@ -35,7 +35,7 @@
    * NSF
 
    The Runestone Interactive tools are open source and we encourage you to contact us, or grab a copy from GitHub <https://github.com/RunestoneInteractive> if you would like to use them to write your own resources.
-   
+
 
    We also `welcome your support <https://runestone.academy/runestone/default/donate/10>`_ to help keep Runestone growing.
 
@@ -92,12 +92,12 @@ This book is a "projects first" book, rather than teaching you language features
       - Transforming Data, Declarative Graphing
     * - 9
       - :ref:`Substitution Cipher <encryption>`
-      - `Transforming Sequences </Runestone/books/published/TransformingSequences/toctree.html>`_ |
+      - `Transforming Sequences </runestone/books/published/fopp/TransformingSequences/toctree.html>`_ |
         `[Optional] Functions 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - String manipulation
     * - 10
       - :ref:`Image Processing <image_processing>`
-      - `Nested Iteration </runestone/books/published/MoreAboutIteration/toctree.html>`_ |
+      - `Nested Iteration </runestone/books/published/fopp/MoreAboutIteration/toctree.html>`_ |
         `[Optional] 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
       - Nested Iteration, Function Practice
     * - 11
