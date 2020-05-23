@@ -21,7 +21,7 @@ If problem solving is a central part of computer science, then the solutions tha
 the problem solving process are also important.  In computer science, we refer to these solutions
 as **algorithms**.  An algorithm is a step by step list of instructions that if followed exactly will solve the problem under consideration.
 
-For example, an algorithm to sort a list of numbers in order from least to greatest might look like this:
+For example, an algorithm to compute the area of a circle given its radius might look like this:
 
 .. admonition:: Algorithm Example 1 (English)
 
@@ -63,7 +63,8 @@ the area of a circle:
 A **program** is an algorithm expressed in a programming language. We might also say
 that a program is an *implementation* of an algorithm. In this example, both the
 algorithm and the program have three steps. The first step gets some input from
-the user; the second step performs a calculation using the information obtained
+the user and the input into something the computer can do math with; 
+the second step performs a calculation using the information obtained
 in the first step; and the final step displays the result to the user. Even
 though we haven't covered any details of Python, hopefully you can see the
 correspondence between the steps of the algorithm, which could be followed by a
