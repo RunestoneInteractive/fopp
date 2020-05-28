@@ -1,3 +1,12 @@
+..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
+    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
+    and/or modify this document under the terms of the GNU Free Documentation
+    License, Version 1.3 or any later version published by the Free Software
+    Foundation; with Invariant Sections being Forward, Prefaces, and
+    Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
+    the license is included in the section entitled "GNU Free Documentation
+    License".
+
 .. qnum::
    :prefix: func-annotate
    :start: 1
@@ -28,12 +37,15 @@ function do if given an ``int`` or a ``float`` value?)
 Python allows you to indicate the intended type of the function parameters and the type of the function return value
 in a function definition using a special notation demonstrated in this example:
 
-.. sourcecode:: python
+.. activecode:: ac_annotate1
 
     def duplicate(msg: str) -> str:
         """Returns a string containing two copies of `msg`"""
 
         return msg + msg
+
+    result = duplicate('Hello')
+    print(result)
 
 This definition of ``duplicate`` makes use of type annotations that indicate the function's parameter type and return
 type. A **type annotation** is an optional notation that specifies the type of a parameter or function result. It
@@ -45,7 +57,7 @@ The annotation  ``-> str`` indicates that the function will produce a ``str`` re
 
 Here are some more examples of functions with type annotations:
 
-.. sourcecode:: python
+.. activecode:: ac_annotate2
 
     def add(x: int, y: int) -> int:
         """Returns the sum of `x` and `y`"""
@@ -76,3 +88,33 @@ documentation, and remember that they have no effect on the program's behavior.
 
 Type annotations are an optional aspect of documenting functions. Still, type annotations are an important tool to increase
 the readability of your code, and you should use them in your programs.
+
+.. note::
+
+    Although type annotations are ignored by the Python interpreter, there are tools such as 
+    `mypy <http://mypy-lang.org/>`_ that can analyze your code containing type annotations and flag potential problems.
+
+**Check your understanding**
+
+.. mchoice:: question_ta_1
+   :answer_a: The value 4.5 is displayed on the screen.
+   :answer_b: The value 2.52 is displayed on the screen.
+   :answer_c: A crash occurs because 2.5 is not a string
+   :answer_d: A crash occurs because the expression 'msg + 2' illegally attempts to concatenate a str and an int
+   :correct: a
+   :feedback_a: Correct! Python ignores the ': str' annotation and returns the sum of msg (the float 2.5) + 2.
+   :feedback_b: Incorrect. In this call, msg contains the float value 2.5; the ': str' annotation serves only as documentation.
+   :feedback_c: Incorrect. Python ignores the ': str' annotation and allows the float value 2.5 to be passed to msg.
+   :feedback_d: Incorrect. In this call, msg contains the float value 2.5, not a str, so the + operation is legal.
+   :practice: T
+
+   What happens when the following is executed?
+
+   .. sourcecode:: python
+
+        def display(msg: str):
+            """Displays `msg` on the screen"""
+            print(msg + 2)
+
+        display(2.5)
+        
