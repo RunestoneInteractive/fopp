@@ -116,4 +116,7 @@ Glossary
     stack frame
         A frame that keeps track of the values of local variables during a function execution,
         and where to return control when the function execution completes.
-   
+
+    type annotation
+        An optional notation that specifies the type of a function parameter or function result.
+
