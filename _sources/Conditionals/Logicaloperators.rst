@@ -44,7 +44,7 @@ Although you can use boolean operators with simple boolean literals or variables
 example, they are often combined with the comparison operators, as in this example. Again, before you
 run this, see if you can predict the outcome:
 
-.. activecode:: chp05_3
+.. activecode:: ac7_3_1
 
     x = 5
     print(x > 0 and x < 10)
