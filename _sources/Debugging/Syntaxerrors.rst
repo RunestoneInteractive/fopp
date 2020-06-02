@@ -22,19 +22,50 @@ to the structure of a program and the rules about that structure. For example,
 in English, a sentence must begin with a capital letter and end with a period.
 this sentence contains a **syntax error**. So does this one
 
-For most readers, a few syntax errors are not a significant problem, which is
-why we can read the poetry of e. e. cummings without problems.
-Python is not so forgiving. If there is a single syntax error anywhere in your
-program, Python will display an error message and quit.  You will not be able
-to complete the execution of your program. During the first few weeks of your programming career, you
-will probably spend a lot of time tracking down syntax errors. However, as you gain
-experience, you will make fewer errors and you will also be able to find your errors faster.
+In Python, rules of syntax include requirements like these: strings must be enclosed in quotes; statements must
+generally be written one per line; the print statement must enclose the value to be displayed in parenthesis;
+expressions must be correctly formed. The following lines contain syntax errors::
 
-Can you spot the syntax error in the code below?
+   print(Hello, world!)
+   print "Hello, world!"
+   print(5 + )
 
-.. activecode:: ac4_4_1
+For most readers of English, a few syntax errors are not a significant problem, which is why we can read the poetry of
+e. e. cummings without problems. Python is not so forgiving. When you run a Python program, the interpreter checks it
+for syntax errors before beginning to execute the first statement. If there is a single syntax error anywhere in your
+program, Python will display an error message and quit without executing *any* of the program. 
 
-   print("Hello World!"
+To see a syntax error in action, look at the following program. Can you spot the error?
+After locating the error, run the program to see the error message.
+
+.. activecode:: debug_syntaxerr
+
+    print("Hello, World!")
+    print(5 + )
+    print("All finished!")
+
+Notice the following:
+
+1. The error message clearly indicates that the problem is a ``SyntaxError``. This lets you know the problem
+   is not one of the other two types of errors we'll discuss shortly.
+
+2. The error is on line 2 of the program. However, even though there is nothing
+   wrong with line 1, the print statement does not execute --- **none** of the program successfully executes
+   because of the presence of just one syntax error.
+
+3. The error gives the line number where Python believes the error exists. In this case, the error message pinpoints the
+   location correctly. But in other cases, the line number can be inaccurate or entirely missing. 
+   
+   To see an example of the latter, try removing just the **right** parenthesis ``)`` from line 2 and
+   running the program again. Notice how the error message gives no line number at all. With syntax errors, you need to be
+   prepared to hunt around a bit in order to locate the trouble.
+
+One aspect of syntax you have to watch out for in Python involves indentation. Python requires you to begin all
+statements at the beginning of the line, unless you are using a flow control statement like a ``for`` or an ``if`` statement
+(we'll discuss these soon... stay tuned!). To see an example of this kind of problem, modify the program above by inserting a
+couple of spaces at the beginning of one of the lines.
+
+
 
 **Check your understanding**
 
