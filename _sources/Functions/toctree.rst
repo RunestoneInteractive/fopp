@@ -11,6 +11,7 @@ Functions
    FunctionParameters.rst
    Returningavaluefromafunction.rst
    DecodingaFunction.rst
+   TypeAnnotations.rst
    Afunctionthataccumulates.rst
    Variablesandparametersarelocal.rst
    GlobalVariables.rst
