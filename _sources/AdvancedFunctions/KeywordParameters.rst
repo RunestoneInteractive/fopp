@@ -187,7 +187,7 @@ For example,
    :answer_d: Runtime error since two different values are provided for initial.
    :correct: b
    :feedback_a: 2 is bound to x, no z
-   :feedback_b: the default value for z is determined at the time the function is defined; at that time initial has the value 0.
+   :feedback_b: the default value for z is determined at the time the function is defined; at that time initial has the value 7.
    :feedback_c: the default value for z is determined at the time the function is defined, not when it is invoked.
    :feedback_d: there's nothing wrong with reassigning the value of a variable at a later time.
    :practice: T
