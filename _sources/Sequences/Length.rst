@@ -24,28 +24,28 @@ Length
 The ``len`` function, when applied to a string, returns the number of characters in a string.
 
 .. activecode:: ac5_5_1
-    
+
     fruit = "Banana"
     print(len(fruit))
-    
+
 
 To get the last letter of a string, you might be tempted to try something like
 this:
 
 .. activecode:: ac5_5_2
-    
+
     fruit = "Banana"
     sz = len(fruit)
     last = fruit[sz]       # ERROR!
     print(last)
 
-That won't work. It causes the runtime error ``IndexError: string index out of range``. The reason is 
-that there is no letter at index position 6 in ``"Banana"``. Since we started counting at zero, the 
-six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length. 
+That won't work. It causes the runtime error ``IndexError: string index out of range``. The reason is
+that there is no letter at index position 6 in ``"Banana"``. Since we started counting at zero, the
+six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length.
 Give it a try in the example above.
 
 .. activecode:: ac5_5_3
-    
+
     fruit = "Banana"
     sz = len(fruit)
     lastch = fruit[sz-1]
@@ -58,8 +58,9 @@ Give it a try in the example above.
 Typically, a Python programmer would combine lines 2 and 3 from the above example into a single line:
 
 .. sourcecode:: python
-    
+
     lastch = fruit[len(fruit)-1]
+
 
 Though, from what you just learned about using negative indices, using ``fruit[-1]`` would be 
 a more appropriate way to access the last index in a list. 
@@ -82,7 +83,7 @@ it important to note that ``len`` only returns the top-most length.
     print(len(alist))
     print(len(alist[0]))
 
-Note that ``alist[0]`` is the string ``"hello"``, which has length 5. 
+Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
 
 **Check your understanding**
 
@@ -95,13 +96,13 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
       s = "python rocks"
       print(len(s))
 
-.. mchoice:: question5_5_2 
+.. mchoice:: question5_5_2
    :answer_a: 4
    :answer_b: 5
    :correct: b
@@ -110,30 +111,12 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
 
      alist = [3, 67, "cat", 3.14, False]
      print(len(alist))
-     
-.. mchoice:: question5_5_3 
-   :answer_a: 2
-   :answer_b: 3
-   :answer_c: 4
-   :answer_d: 5
-   :correct: b
-   :feedback_a: The list begins with the second item of L and includes everything up to but not including the last item.
-   :feedback_b: Yes, there are 3 items in this list.
-   :feedback_c: The list begins with the second item of L and includes everything up to but not including the last item.
-   :feedback_d: The list begins with the second item of L and includes everything up to but not including the last item.
-   :practice: T
 
-   What is printed by the following statements?
-   
-   .. code-block:: python
-
-     L = [0.34, '6', 'SI106', 'Python', -2]
-     print(len(L[1:-1]))   
 
 .. activecode:: ac5_5_5
    :language: python
@@ -143,7 +126,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    Assign the number of elements in ``lst`` to the variable ``output``.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
-   
+
    =====
 
    from unittest.gui import TestCaseGui

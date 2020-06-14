@@ -27,14 +27,15 @@
 
    This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project. 
 
-   * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers, the Interactive edition of `How to Think Like a Computer Scientist <https://runestone.academy/runstone/static/thinkcspy/index.html>`_ by Brad Miller, David Ranum and many more and `Programs Information and People <https://runestone.academy/runestone/static/pip2/index.html>`_ by Paul Resnick
+   * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers, the Interactive edition of `How to Think Like a Computer Scientist <https://runestone.academy/runestone/static/thinkcspy/index.html>`_ by Brad Miller, David Ranum and many more and `Programs Information and People <https://runestone.academy/runestone/static/pip2/index.html>`_ by Paul Resnick
    * Activecode based on `Skulpt <http://skulpt.org>`_
    * Codelens based on `Online Python Tutor <http://www.pythontutor.com>`_
    * Many contributions from the `CSLearning4U research group <http://home.cc.gatech.edu/csl/CSLearning4U>`_ at Georgia Tech.
    * ACM-SIGCSE for the special projects grant that funded our student Isaac Dontje Lindell for the summer of 2013.
    * NSF
 
-   The Runestone Interactive tools are open source and we encourage you to contact us, or grab a copy from GitHub if you would like to use them to write your own resources.
+   The Runestone Interactive tools are open source and we encourage you to contact us, or grab a copy from GitHub <https://github.com/RunestoneInteractive> if you would like to use them to write your own resources.
+   
 
    We also `welcome your support <https://runestone.academy/runestone/default/donate/10>`_ to help keep Runestone growing.
 

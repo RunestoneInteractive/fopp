@@ -251,7 +251,6 @@ Exercises
 
                Challenge: Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle  and store the values in variables called ``width`` and
                ``height``. Print a nice message with the answer..
-               Print a nice message with the answer.
                ~~~~
 
                ====
@@ -330,7 +329,7 @@ Exercises
    .. actex:: ex_2_14
       :autograde: unittest
 
-      Ask the user for the temperature in Fahrenheit and store it in a variable call ``deg_f``. Calculate the equivalent temperature in degrees Celsius and store it in ``def_c``. Output a message to the user giving the temperature in Celsius.
+      Ask the user for the temperature in Fahrenheit and store it in a variable call ``deg_f``. Calculate the equivalent temperature in degrees Celsius and store it in ``deg_c``. Output a message to the user giving the temperature in Celsius.
       ~~~~
 
       ====

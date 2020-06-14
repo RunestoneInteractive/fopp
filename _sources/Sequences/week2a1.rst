@@ -57,12 +57,13 @@ Chapter Assessment
     =====
 
     from unittest.gui import TestCaseGui
+    import re
 
     class myTests(TestCaseGui):
 
       def test_output(self):
-        self.assertEqual(last, ['curling', 'ping pong', 'hockey'], "Testing that the value of last is the last three items in sports.")
-        self.assertNotIn("[6:]", self.getEditorText(), "Testing that your code would work no matter how many items. (Don't worry about actual and expected values).")
+         self.assertEqual(last, ['curling', 'ping pong', 'hockey'], "Testing that the value of last is the last three items in sports.")
+         self.assertTrue(re.search(r'last\s*=\s*\S*3:', self.getEditorText()), "Hardcode check")
         
 
     myTests().main()
@@ -216,12 +217,14 @@ Chapter Assessment
     =====
 
     from unittest.gui import TestCaseGui
+    import re
 
     class myTests(TestCaseGui):
 
       def test_output(self):
         self.assertEqual(how_many, 3, "Testing that how_many is set correctly.")
-        self.assertNotIn('for', self.getEditorText(), "Testing that you didn't use a for loop (Don't worry about actual and expected values).")
+        self.assertNotIn('for', self.getEditorText(), "Testing that you didn't use a for loop.")
+        self.assertFalse(re.search(r'how_many\s*=\s*3', self.getEditorText()), "Hardcode check")
 
     myTests().main()
 
@@ -239,11 +242,13 @@ Chapter Assessment
     =====
 
     from unittest.gui import TestCaseGui
+    import re
 
     class myTests(TestCaseGui):
 
       def test_output(self):
         self.assertEqual(nums, [4, 2, 8, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4], "Testing that nums is set correctly.")
+        self.assertTrue(re.search(r'\s*:', self.getEditorText()), "Testing that you are using slices to remove the second 8 (Don't worry about actual and expected values)")
 
     myTests().main()
 
@@ -260,11 +265,13 @@ Chapter Assessment
    =====
 
    from unittest.gui import TestCaseGui
+   import re
 
    class myTests(TestCaseGui):
 
       def testOne(self):
          self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
+         self.assertFalse(re.search(r'end_elem\s*=\s*\S26trombones\S', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
 
    myTests().main()
 
@@ -287,7 +294,7 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(num_lst, 30, "Testing that num_lst has the correct length assigned.")
-         self.assertFalse(re.search(r'num_lst\s*=\s*30', self.getEditorText()), "hardcode check")
+         self.assertFalse(re.search(r'num_lst\s*=\s*30', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
 
    myTests().main()
 
@@ -304,10 +311,13 @@ Chapter Assessment
    =====
 
    from unittest.gui import TestCaseGui
+   import re
 
    class myTests(TestCaseGui):
 
       def testOne(self):
          self.assertEqual(wrds, sent.split(), "Testing that wrds has been correctly assigned.")
+         self.assertFalse(re.search(r'wrds\s*=\s*\S*The\S', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
+
 
    myTests().main()

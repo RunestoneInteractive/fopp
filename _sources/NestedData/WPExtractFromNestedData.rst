@@ -923,7 +923,7 @@ Extract. Let's print out the user's screen name and when their account was creat
       # print(res4.keys())
       print(res4['screen_name'], res4['created_at'])
 
-Now, we may want to go back have it extract for all the items rather than only the first item in res2.  
+Now, we may want to go back and have it extract for all the items rather than only the first item in res2.  
 
 .. activecode:: ac300_1_10
    :include: ac300_1_1
@@ -960,7 +960,7 @@ in a single expression. For example, we could have this shorter version.
        print(res3['user']['screen_name'], res3['user']['created_at'])
 
 Even with this compact code, we can still count off how many levels of nesting we have extracted from, in this case four. 
-res['statuses'] says we have descended one level (in a dictionary). for res3 in... says we are have descended another 
+res['statuses'] says we have descended one level (in a dictionary). for res3 in... says we have descended another 
 level (in a list). ['user'] is descending one more level, and ['screen_name'] is descending one more level. 
 
  
