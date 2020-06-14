@@ -17,9 +17,17 @@ Writing data to a CSV File
 
 The typical pattern for writing data to a CSV file will be to write a header row and loop
 through the items in a list, outputting one row for
-each. Here we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
+each.
 
-Here is a simple example.
+Here is a simple example where we first make a list of the multiples of 12 and then write a file that looks like this.
+
+::
+
+    1,12
+    2,24
+    3,36
+    ...
+    
 
 .. activecode:: ac9_14_1
    :nocodelens:
@@ -29,12 +37,12 @@ Here is a simple example.
        n[i-1] = i *12
    outfile = open("Multiples of 12", "w")
    for j in range(0, len(n)):
-       outfile.write(str(j+1) + ' * 12 = ' + str(n[j]))
-   # +1 to j since the array starts at 0 and we start counting at 1
+       outfile.write(str(j+1) + ',' + str(n[j]))
+       # +1 to j since the array starts at 0 and we start counting at 1
        outfile.write('\n')
    outfile.close()
 
-Here is a more complex example.
+Here is a more complex example, where we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
 
 .. activecode:: ac9_14_3
    :nocodelens:
