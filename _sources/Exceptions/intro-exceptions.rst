@@ -140,7 +140,7 @@ There's one other useful feature. The exception code can access a variable that 
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
-   except Exception, e:
+   except Exception as e:
        print("got an error")
        print(e)
    
@@ -200,7 +200,7 @@ There's one other useful feature. The exception code can access a variable that 
       try:
           for i in range(5):
               print(1.0 / (3-i))
-      except Exception, error_inst:
+      except Exception as error_inst:
           print("Got an error", error_inst)
 
 .. activecode:: ee_exceptions_012
