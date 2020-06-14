@@ -36,7 +36,7 @@ Here is a simple example.
 
 Here is a more complex example.
 
-.. activecode:: ac9_14_2
+.. activecode:: ac9_14_3
    :nocodelens:
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing"),
@@ -70,7 +70,7 @@ need to have the double quote character inside the string output. But it is doab
 reason Python allows strings to be delimited with either single quotes or double quotes is so
 that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.
 
-.. activecode:: ac9_14_3
+.. activecode:: ac9_14_2
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
                 ("Minna Maarit Aalto", 30, "Sailing"),
