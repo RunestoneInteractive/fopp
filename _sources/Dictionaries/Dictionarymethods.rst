@@ -192,33 +192,12 @@ a key, return 0 (instead of None).
             total = total + mydict[akey]
       print(total)
 
-.. activecode:: ac10_3_6
-   :language: python
-   :autograde: unittest
-   :practice: T
-
-   **5.** Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
-   ~~~~
-
-   places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(sorted(places.items()), sorted([("Australia", 2000), ("Greece", 2004), ("China", 2008), ("England", 2012), ("Brazil", 2016)]), "Testing that places has been updated correctly.")
-
-   myTests().main()
-
 .. activecode:: ac10_3_7
    :language: python
    :autograde: unittest
    :practice: T
 
-   **6.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Do not hard code this.
+   **5.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Do not hard code this.
    ~~~~
 
    medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
