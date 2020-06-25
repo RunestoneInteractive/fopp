@@ -16,13 +16,41 @@
 Runtime Errors
 --------------
 
-The second type of error is a runtime error, so called because the error does
-not appear until you run the program. These errors are also called
-**exceptions** because they usually indicate that something exceptional (and
-bad) has happened.
+The second type of error is a **runtime error**. A program with a runtime error
+is one that passed the interpreter's syntax checks, and started to execute.
+However, during the execution of one of the statements in the program, an error
+occurred that caused the interpreter to stop executing the program and display
+an error message. Runtime errors are also called **exceptions** because they usually 
+indicate that something exceptional (and bad) has happened.
 
-Runtime errors are rare in the simple programs you will see in the first few
-chapters, so it might be a while before you encounter one.
+Here are some examples of common runtime errors you are sure to encounter:
+
+* Misspelled or incorrectly capitalized variable and function names
+* Attempts to perform operations (such as math operations) on data of the wrong type (ex.
+  attempting to subtract two variables that hold string values)
+* Dividing by zero
+* Attempts to use a type conversion function such as ``int`` on a value that can't be converted to an int
+
+The following program contains various runtime errors. Can you spot any of them?
+After locating the error, run the program to see the error message.
+
+.. activecode:: debug_rterr
+
+    subtotal = input("Enter total before tax:")
+    tax = .08 * subTotal
+    print("tax on", subtotal, "is:", tax)
+
+Notice the following important differences between syntax errors and runtime errors that can help you as you try to diagnose
+and repair the problem:
+
+* If the error message mentions ``SyntaxError``, you know that the problem has to do with syntax: the structure of the code,
+  the punctuation, etc.
+
+* If the program runs partway and then crashes, you know the problem is a runtime error. Programs with syntax errors
+  don't execute even one line.
+
+Stay tuned for more details on the various types of runtime errors. We have a whole section of this
+chapter dedicated to that topic.
 
 **Check your understanding**
 

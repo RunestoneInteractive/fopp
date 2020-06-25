@@ -48,7 +48,8 @@ pairs of the dictionary are separated by commas. Each pair contains a key and a 
 
 The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to
 determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as
-unpredictable.
+unpredictable [*]_ .
+
 
 Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous
 output.
@@ -142,3 +143,5 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
          self.assertEqual(sorted(olympics.items()), sorted([('gold', 7), ('silver', 8), ('bronze', 6)]), "Testing that olympics was created correctly.")
 
    myTests().main()
+
+.. [*] Instructors note: Python version 3.7 and later `provide ordering guarantees <https://mail.python.org/pipermail/python-dev/2017-December/151283.html>`_. However, it is best practice to write code that does not rely on any particular key order so this book will treat key-value pairs as unordered.

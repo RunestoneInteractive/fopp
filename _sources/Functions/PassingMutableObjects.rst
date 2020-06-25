@@ -14,59 +14,108 @@
 Passing Mutable Objects
 -----------------------
 
-As you have seen, when a function (or method) is invoked and a parameter value is provided, a new stack frame is
-created, and the parameter name is bound to the parameter value. What happens when the value that is provided is a 
-mutable object, like a list or dictionary? Is the parameter name bound to a *copy* of the original object, or does it 
-become an alias for exactly that object? In python, the answer is that it becomes an alias for the original object. 
-This answer matters  when the code block inside the function definition causes some change to be made to the object 
-(e.g., adding a key-value pair to a dictionary or appending to a list). 
-
-This sheds a little different light on the idea of parameters being *local*. They *are* local in the sense that if you 
-have a parameter x inside a function and there is a global variable x, any reference to x inside the function gets you 
-the value of local variable x, not the global one. If you set ``x = 3``, it changes the value of the local variable x, 
-but when the function finishes executing, that local x disappears, and so does the value 3. 
-
-If, on the other hand, the local variable x points to a list ``[1, 3, 7]``, setting ``x[2] = 0`` makes x still point 
-to the same list, but changes the list's contents to ``[1, 3, 0]``. The local variable x is discarded when the function 
-completes execution, but the mutation to the list lives on if there is some other variable outside the function that 
-also is an alias for the same list.
-
-Consider the following example.
+Take a look at the following code example. Can you predict what will happen when you run it?
 
 .. activecode:: ac11_12_1
    
    def double(y):
        y = 2 * y
    
+   num = 5
+   double(num)
+   print(num)
+
+Use **Show CodeLens** to step through the code to see why the assignment to the formal parameter ``y``
+inside ``double`` did not affect the argument ``num``. An assignment to a formal parameter inside a function **never**
+affects the argument in the caller.
+
+On the other hand, if you are passing a mutable object, such as a list, to a function, and the function alters the
+object's state, that state change will be visible to the caller when the function returns. Take a look at the following
+example.
+
+.. activecode:: ac11_12_2
+     
    def changeit(lst):
        lst[0] = "Michigan"
        lst[1] = "Wolverines"
-
-   y = 5
-   double(y)
-   print(y)
       
    mylst = ['our', 'students', 'are', 'awesome']
    changeit(mylst)
    print(mylst)
 
-Try running it. Similar to examples we have seen before, running ``double`` does not change the global y. But running 
-``changeit`` does change ``mylst``. The explanation is above, about the sharing of mutable objects. Try stepping through it in codelens to see the difference.
+Try stepping through this in codelens to see what happens. The state of the list referenced by ``lst`` is altered
+by ``changeit``, and since ``mylst`` is an alias for ``lst``, ``mylst`` is affected by the actions taken by the function.
 
-.. codelens:: clens11_12_1
-   :python: py3
+Look closely at this line::
 
-   def double(n):
-       n = 2 * n
-   
-   def changeit(lst):
-       lst[0] = "Michigan"
-       lst[1] = "Wolverines"
+    lst[0] = "Michigan"
 
-   y = 5
-   double(y)
-   print(y)
-      
-   mylst = ['106', 'students', 'are', 'awesome']
-   changeit(mylst)
-   print(mylst)
+That statement modifies the state of ``lst`` by changing the value in slot 0. Although that line may appear to contradict the
+statement above that "an assignment to a formal parameter inside a function never affects the argument in the caller,"
+note that there is a difference between assigning to a *slot* of a list, and assigning to the list variable itself.
+To see that difference, try changing that line to the following::
+
+    lst = ["Michigan", "Wolverines"]
+
+Then, run again. This time, ``mylist`` is not altered. To understand why, use CodeLens to step carefully through the code
+and observe how the assignment to ``lst`` causes it to refer to a separate list.
+
+Take a moment to experiment some more with the ``changeit`` function. Change the body of the function to the following::
+
+    lst.append("Michigan Wolverines")
+
+Step through using CodeLens. You should see that ``mylst`` is affected by this change, since the state of the list is altered.
+
+Then, try again with this as the body::
+
+    lst = lst + ["Michigan Wolverines"]
+
+Step through using CodeLens. Here, we create a new list using the concatenation operator, and ``mylst`` is not affected by the change.
+
+Understanding the techniques that functions can and cannot use to alter the state of mutable parameters is important.
+You may want to take some time to study the information on this page more thoroughly and play with the examples until
+you feel confident about your grasp of the material.
+
+**Check Your Understanding**
+
+.. mchoice:: mutobj-q1
+
+    What is the output of the following code fragment?
+
+    .. sourcecode:: python
+
+        def myfun(lst):
+            lst = [1, 2, 3]
+
+        mylist = ['a', 'b']
+        myfun(mylist)
+        print(mylist)
+
+    - ['a', 'b']
+
+      + Correct! ``mylist`` is not changed by the assignment in ``myfun``.
+
+    - [1, 2, 3]
+
+      - Incorrect. ``mylist`` is not changed by the assignment in ``myfun``.
+
+.. mchoice:: mutobj-q2
+
+    What is the output of the following code fragment?
+
+    .. sourcecode:: python
+
+        def myfun(lst):
+            del lst[0]
+
+        mylist = ['a', 'b']
+        myfun(mylist)
+        print(mylist)
+
+    - ['a', 'b']
+
+      - Incorrect. ``myfun`` alters the state of the list object by removing the value at slot 0.
+
+    - ['b']
+
+      + Correct! ``myfun`` alters the state of the list object by removing the value at slot 0.

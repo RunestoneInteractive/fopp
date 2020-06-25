@@ -331,7 +331,7 @@ Exercises
    .. actex:: ex_2_14
       :autograde: unittest
 
-      Ask the user for the temperature in Fahrenheit and store it in a variable call ``deg_f``. Calculate the equivalent temperature in degrees Celsius and store it in ``def_c``. Output a message to the user giving the temperature in Celsius.
+      Ask the user for the temperature in Fahrenheit and store it in a variable call ``deg_f``. Calculate the equivalent temperature in degrees Celsius and store it in ``deg_c``. Output a message to the user giving the temperature in Celsius.
       ~~~~
 
       ====

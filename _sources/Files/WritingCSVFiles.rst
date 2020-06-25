@@ -40,7 +40,7 @@ each. Here we a have a list of tuples, each representing one Olympian, a subset 
 
 There are a few things worth noting in the code above.
 
-First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join(olympian[0], olympian[1], olympian[2])``.
+First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join([olympian[0], str(olympian[1]), olympian[2]])``.
 
 Second, unlike the print statement, remember that the .write() method on a file object does not automatically insert a newline. Instead, we have to explicitly add the character ``\n`` at the end of each line.
 
@@ -54,6 +54,7 @@ reason Python allows strings to be delimited with either single quotes or double
 that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.
 
 .. activecode:: ac9_14_2
+   :nocodelens:
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
                 ("Minna Maarit Aalto", 30, "Sailing"),

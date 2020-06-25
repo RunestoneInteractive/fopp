@@ -26,6 +26,7 @@ counts dictionary. For each of those letters that has a letter value (no points 
 punctuation, capital letters, etc.), we add to the total score.
 
 .. activecode:: ac10_6_1
+   :nocodelens:
 
    f = open('scarlet2.txt', 'r')
    txt = f.read()
@@ -39,7 +40,7 @@ punctuation, capital letters, etc.), we add to the total score.
        #whether we've seen it before or not, increment its counter
        x[c] = x[c] + 1
 
-   letter_values = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f':4, 'g': 2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':8, 'w':4, 'x':8, 'y':4, 'z':10}
+   letter_values = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f':4, 'g': 2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':4, 'w':4, 'x':8, 'y':4, 'z':10}
    
    tot = 0
    for y in x:

@@ -15,7 +15,7 @@ A Tamagotchi Game
 
 There are also a lot of interesting ways to put user-defined classes to use that don't involve data from the internet. Let's pull all these mechanics together in a slightly more interesting way than we got with the Point class. Remember `Tamagotchis <https://en.wikipedia.org/wiki/Tamagotchi>`_, the little electronic pets? As time passed, they would get hungry or bored. You had to clean up after them or they would get sick. And you did it all with a few buttons on the device.
 
-We are going to make a simplified, text-based version of that. In your problem set and in the chapter on `Inheritance <chap_inheritance>` we will extend this further.
+We are going to make a simplified, text-based version of that. In your problem set and in the chapter on :ref:`Inheritance <inheritance_chap>` we will extend this further.
 
 First, let's start with a class ``Pet``. Each instance of the class will be one electronic pet for the user to take care of. Each instance will have a current state, consisting of three instance variables:
     * hunger, an integer
@@ -106,7 +106,7 @@ Let's try making a pet and playing with it a little. Add some of your own comman
 
 That's all great if you want to interact with the pet by writing python code. Let's make a game that non-programmers can play.
 
-We will use the `Listener Loop <chap_listener>` pattern. At each iteration, we will display a text prompt reminding the user of what commands are available.
+We will use the :ref:`Listener Loop <listener_loop>` pattern. At each iteration, we will display a text prompt reminding the user of what commands are available.
 
 The user will have a list of pets, each with a name. The user can issue a command to adopt a new pet, which will create a new instance of Pet. Or the user can interact with an existing pet, with a Greet, Teach, or Feed command.
 
