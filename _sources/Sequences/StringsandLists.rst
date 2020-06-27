@@ -115,4 +115,4 @@ final comma, because without the final comma, Python treats the ``(5)`` below as
    :feedback_b: Lists are heterogeneous, meaning they can have different types of data.
    :practice: T
 
-   A list can contain only integer items.
+   A list can only contain integer items.

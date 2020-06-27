@@ -23,7 +23,7 @@ each following row in the file will contain data that corresponds to the appropr
 All file methods that we have mentioned - ``read``, ``readline``, and ``readlines``, and simply iterating over the file object itself - will work on CSV files. In our examples, we will iterate over the lines. Because the values on each line are separated with commas, we can use the ``.split()`` method to parse each line into a collection of separate value.
 
 .. activecode:: ac9_13_1
-   :nocodelens:
+    :nocodelens:
 
     fileconnection = open("olympics.txt", 'r')
     lines = fileconnection.readlines()

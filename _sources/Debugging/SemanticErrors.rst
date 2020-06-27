@@ -11,23 +11,87 @@
    :prefix: debug-6-
    :start: 1
 
-.. index:: semantic error, logic error, error; semantic, error; logic
+.. index:: semantic error, logic error, error; semantic, error; logic, test case
     single: Holmes, Sherlock
     single: Doyle, Arthur Conan
     single: Linux
 
 Semantic Errors
----------------
+===============
 
-The third type of error is the **semantic error**. If there is a semantic error
+The third type of error is the **semantic error**, also called a **logic error**. If there is a semantic error
 in your program, it will run successfully in the sense that the computer will
 not generate any error messages.  However, your program will not do the right thing. It will do
-something else. Specifically, it will do what you told it to do.
+something else. Specifically, it will do what you **told** it to do, not what you **wanted** it to do.
 
-The problem is that the program you wrote is not the program you wanted to
-write. The meaning of the program (its semantics) is wrong.  Identifying
-semantic errors can be tricky because it requires you to work backward by
-looking at the output of the program and trying to figure out what it is doing.
+The following program has a semantic error. Execute it to see what goes wrong:
+
+.. activecode:: logicerr_sum
+
+    num1 = input('Enter a number:')
+    num2 = input('Enter another number:')
+    sum = num1 + num2
+
+    print('The sum of', num1, 'and', num2, 'is', sum)
+
+This program runs and produces a result. However, the result is not what the programmer intended. It contains
+a semantic error. The error is that the program performs concatenation instead of addition, because the programmer
+failed to write the code necessary to convert the inputs to integers.
+
+With semantic errors, the problem is that the program you wrote is not the program you wanted to
+write. The meaning of the program (its semantics) is wrong. The computer is 
+faithfully carrying out the instructions you wrote, and its results
+are correct, given the instructions that you provided. However, because your instructions 
+have a flaw in their design, the program does not behave as desired. 
+
+Identifying semantic errors can be tricky because no error message appears to make it obvious that the results are
+incorrect. The only way you can detect semantic errors is if you *know in advance* what the program should do for a given set
+of input. Then, you run the program with that input data and compare the output of the program with what you expect. If
+there is a discrepancy between the actual output and the expected output, you can conclude that there is either 1) a
+semantic error or 2) an error in your expected results.
+
+Once you've determined that you have a semantic error, locating it can be tricky because you must work
+backward by looking at the output of the program and trying to figure out what it is doing.
+
+Test Cases
+----------
+
+To detect a semantic error in your program, you need the help of something called a test case. 
+
+.. admonition:: Test Case
+
+   A **test case** is a set of input values for the program, together with the output that you expect the program should produce when it is run with those particular
+   inputs. 
+
+Here is an example of a test case for the program above::
+
+   Test Case
+   ---------
+   Input: 2, 3
+   Expected Output: 5
+
+If you give this test case to someone and ask them to test the program, they can type in the inputs, observe the output,
+check it against the expected output, and determine whether a semantic error exists based on whether the actual output
+matches the expected output or not. The tester doesn't even have to know what the program is supposed to do. For this reason,
+software companies often have separate quality assurance departments whose responsibility is to check that the programs written
+by the programmers perform as expected. The testers don't have to be programmers; they just have to be able to operate the
+program and compare its results with the test cases they're given.
+
+In this case, the program is so simple that we don't need to write down a test case at all; we can compute the expected output
+in our heads with very little effort. More complicated programs require effort to create the test case (since you shouldn't use
+the program to compute the expected output; you have to do it with a calculator or by hand), but the effort pays off when 
+the test case helps you to identify a semantic error that you didn't know existed.
+
+Semantic errors are the most dangerous of the three types of errors, because in some cases they are not noticed by either
+the programmers or the users who use the program. Syntax errors cannot go undetected (the program won't run at all if
+they exist), and runtime errors are usually also obvious and typically detected by developers before a program is
+released for use (although it is possible for a runtime error to occur for some inputs and not for
+others, so these can sometimes remain undetected for a while). However, programs often go for years with undetected
+semantic errors; no one realizes that the program has been producing incorrect results. They just assume that because the
+results seem reasonable, they are correct. Sometimes, these errors are relatively harmless. But if they involve
+financial transactions or medical equipment, the results can be harmful or even deadly. For this reason, creating test
+cases is an important part of the work that programmers perform in order to help them produce programs that work
+correctly.
 
 **Check your understanding**
 

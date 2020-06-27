@@ -206,9 +206,6 @@ Chapter Assessment
       def testTwo(self): 
          self.assertEqual(endangered, ['black rhino', 'orangutan', 'sumatran elephant', 'blue whale', 'giant panda', 'green turtle'], "Testing that endangered was created correctly.")
       def testThree(self):
-         self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-         self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-         self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
    myTests().main()   

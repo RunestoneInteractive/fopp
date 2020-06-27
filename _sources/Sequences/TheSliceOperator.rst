@@ -22,16 +22,16 @@ A substring of a string is called a **slice**. Selecting a slice is similar to
 selecting a character:
 
 .. activecode:: ac5_6_1
-    
+
     singers = "Peter, Paul, and Mary"
     print(singers[0:5])
     print(singers[7:11])
     print(singers[17:21])
-    
+
 
 The ``slice`` operator ``[n:m]`` returns the part of the string starting
 with the character at index n and
-go up to but *not including* the character at index m. 
+go up to but *not including* the character at index m.
 Or with normal counting from 1, this is the (n+1)st character up to and including the mth character.
 
 If you omit the first index (before the colon), the slice starts at the
@@ -39,7 +39,7 @@ beginning of the string. If you omit the second index, the slice goes to the
 end of the string.
 
 .. activecode:: ac5_6_2
-    
+
     fruit = "banana"
     print(fruit[:3])
     print(fruit[3:])
@@ -55,7 +55,7 @@ beginning of the sequence. If you omit the second index, the slice goes to the
 end of the sequence.
 
 .. activecode:: ac5_6_3
-    
+
     a_list = ['a', 'b', 'c', 'd', 'e', 'f']
     print(a_list[1:3])
     print(a_list[:4])
@@ -66,9 +66,9 @@ end of the sequence.
 Tuple Slices
 ============
 
-We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information. 
-Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can 
-slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might 
+We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information.
+Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can
+slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might
 want to change her tuple. We can easily slice off the parts we want and concatenate them with the new tuple.
 
 .. activecode:: ac5_6_4
@@ -99,7 +99,7 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
 
       s = "python rocks"
@@ -116,11 +116,31 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[4:])
+
+.. mchoice:: question5_6_3
+   :answer_a: 2
+   :answer_b: 3
+   :answer_c: 4
+   :answer_d: 5
+   :correct: b
+   :feedback_a: The list begins with the second item of L and includes everything up to but not including the last item.
+   :feedback_b: Yes, there are 3 items in this list.
+   :feedback_c: The list begins with the second item of L and includes everything up to but not including the last item.
+   :feedback_d: The list begins with the second item of L and includes everything up to but not including the last item.
+   :practice: T
+
+   What is printed by the following statements?
+
+   .. code-block:: python
+
+     L = [0.34, '6', 'SI106', 'Python', -2]
+     print(len(L[1:-1]))
+
 
 .. activecode:: ac5_6_5
    :language: python

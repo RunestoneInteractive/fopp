@@ -11,15 +11,71 @@
    :prefix: intro-2-
    :start: 1
 
+.. index:: programming language, algorithm, pseudocode,
+           program
+
 Algorithms
 ----------
+           
+If problem solving is a central part of computer science, then the solutions that you create through
+the problem solving process are also important.  In computer science, we refer to these solutions
+as **algorithms**.  An algorithm is a step by step list of instructions that if followed exactly will solve the problem under consideration.
 
-An **algorithm** is a step by step list of instructions that if followed exactly will solve the problem under consideration.
+For example, an algorithm to compute the area of a circle given its radius might look like this:
 
-Our goal in programming is to take a problem and develop an algorithm that can 
-serve as a general solution. Once we have such a solution, we can express
-it as a program and use our computer to automate the execution. 
-These programs are written in **programming languages**.
+.. admonition:: Algorithm Example 1 (English)
+
+    1. Ask for radius 
+    2. Compute area by squaring radius and multiplying the result by pi
+    3. Display the computed area 
+
+Notice that this algorithm consists of a set of numbered steps. It is written in English, for ease of 
+understanding. Although simple algorithms are easily understood when written in English, more complicated
+algorithms need more precise notation. For improved precision, algorithms are often written in pseudocode. **Pseudocode** is
+a notation that is more precise than English but generally not as precise as a programming language.
+The same algorithm expressed in pseudocode might look something like this:
+
+.. admonition:: Algorithm Example 2 (Pseudocode)
+
+    1. Ask for radius 
+    2. let area = (radius\ :sup:`2`) × π
+    3. Display area 
+
+Note how the pseudocode example expresses step 2 more precisely, specifying the formula in mathematical
+terms.
+
+Our goal in computer science is to take a problem and develop an algorithm that can serve as a general solution.  
+Once we have such a solution, we can use our computer to automate its execution using programming. 
+Programming is a skill that allows a computer scientist to take an algorithm and represent it in
+a notation (a program) that can be followed by a computer.  A program is written in a **programming language**
+such as Python, the language you will learn in this book.
+
+To help you understand the difference between an algorithm and a program, consider this program to compute
+the area of a circle:
+
+.. activecode:: alg_impl
+   :nocodelens:
+
+   radius = int(input("Enter the radius:"))
+   area = (radius * radius) * 3.1415
+   print("The area of a circle with radius", radius, "is:", area)
+
+A **program** is an algorithm expressed in a programming language. We might also say
+that a program is an *implementation* of an algorithm. In this example, both the
+algorithm and the program have three steps. The first step gets some input from
+the user and the input into something the computer can do math with; 
+the second step performs a calculation using the information obtained
+in the first step; and the final step displays the result to the user. Even
+though we haven't covered any details of Python, hopefully you can see the
+correspondence between the steps of the algorithm, which could be followed by a
+human (but not executed by a computer), and the steps of the program, which can
+be executed by a computer (try executing this one using the Run button).
+
+Algorithms are important because the process of solving a problem through programming often begins
+by designing an algorithm. The programmer often expresses the algorithm in
+pseudocode, then converts the algorithm to a program for the computer to execute.
+In the next section, you will learn how to execute Python programs on a computer.
+
 
 **Check your understanding**
 

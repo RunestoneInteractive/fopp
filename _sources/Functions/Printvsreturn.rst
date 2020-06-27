@@ -132,4 +132,4 @@ between print and return. Keep working at it until it makes sense to you!
        def h(y):
            return square(y) + 3
            
-       print((g(h(2)))
+       print(g(h(2))

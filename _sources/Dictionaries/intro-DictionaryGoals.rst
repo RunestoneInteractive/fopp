@@ -39,8 +39,8 @@ Objectives
 
 To correctly use the following:
 
-* The index operator to add a key,value pair to a dicionary
-* The del operator to remove an antry
+* The index operator to add a key,value pair to a dictionary
+* The del operator to remove an entry
 * index operator - retrieval by key
 * search - contains in / not in
 * items

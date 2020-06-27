@@ -17,9 +17,34 @@ Writing data to a CSV File
 
 The typical pattern for writing data to a CSV file will be to write a header row and loop
 through the items in a list, outputting one row for
-each. Here we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
+each.
+
+Here is a simple example where we first make a list of the multiples of 12 and then write a file that looks like this.
+
+::
+
+    1,12
+    2,24
+    3,36
+    ...
+    
 
 .. activecode:: ac9_14_1
+   :nocodelens:
+
+   n = [0] * 12
+   for i in range(1,13):
+       n[i-1] = i *12
+   outfile = open("Multiples of 12", "w")
+   for j in range(0, len(n)):
+       outfile.write(str(j+1) + ',' + str(n[j]))
+       # +1 to j since the array starts at 0 and we start counting at 1
+       outfile.write('\n')
+   outfile.close()
+
+Here is a more complex example, where we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
+
+.. activecode:: ac9_14_3
    :nocodelens:
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing"),
@@ -40,7 +65,7 @@ each. Here we a have a list of tuples, each representing one Olympian, a subset 
 
 There are a few things worth noting in the code above.
 
-First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join(olympian[0], olympian[1], olympian[2])``.
+First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join([olympian[0], str(olympian[1]), olympian[2]])``.
 
 Second, unlike the print statement, remember that the .write() method on a file object does not automatically insert a newline. Instead, we have to explicitly add the character ``\n`` at the end of each line.
 
@@ -54,6 +79,7 @@ reason Python allows strings to be delimited with either single quotes or double
 that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.
 
 .. activecode:: ac9_14_2
+   :nocodelens:
 
    olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
                 ("Minna Maarit Aalto", 30, "Sailing"),
