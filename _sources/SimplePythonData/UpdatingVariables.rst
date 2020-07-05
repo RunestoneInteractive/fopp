@@ -178,4 +178,4 @@ easier way to do this kind of task.
    :practice: T
 
    Which of the following statements are equivalent?
- 
+
