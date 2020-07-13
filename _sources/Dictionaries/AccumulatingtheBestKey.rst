@@ -37,7 +37,7 @@ but you'll learn more if you try to write it yourself first.
       two keys have the same maximum value, it's OK to print out either one. Fill
       in the skeleton code
       
-      .. actex:: ac10_7_1
+      .. activecode:: ac10_7_1
 
          d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
          
@@ -53,6 +53,7 @@ but you'll learn more if you try to write it yourself first.
    .. tab:: Answer 
    
       .. activecode:: answer10_7_1
+         :optional:
       
          d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
          

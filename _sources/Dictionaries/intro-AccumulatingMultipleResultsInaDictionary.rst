@@ -29,7 +29,7 @@ within this chapter with the code ``open('scarlet.txt', 'r')``.
 .. raw:: html
    
    <div class="alert alert-info">
-   <p>As with other files that we access in this textbook environment, this one is actually pre-loaded in your browser, not retrieved from your computer's file system. That's why this chapter may be a little slower to load than others. You can view the text of "A Study in Scarlet" at the <a href="#scarlet.txt">bottom of the page.</a></p>
+   <p>As with other files that we access in this textbook environment, this one is actually pre-loaded in your browser, not retrieved from your computer's file system. That's why this chapter may be a little slower to load than others. You can view the text of "A Study in Scarlet" at the bottom of the page.</p>
    </div>
 
 If we want to find out how often the letter 't' occurs, we can accumulate the result
@@ -70,61 +70,62 @@ be a very long if..elif..elif statement. Using a dictionary, we can do a lot bet
 
 One dictionary can hold all of the accumulator variables. Each key in the dictionary
 will be one letter, and the corresponding value will be the count so far of how
-many times that letter has occurred.
+many times that letter has occurred. 
 
 .. activecode:: ac10_5_3
 
    f = open('scarlet.txt', 'r')
    txt = f.read()
    # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
-   x['t'] = 0  # initialize the t counter
-   x['s'] = 0  # initialize the s counter
+   letter_counts = {} # start with an empty dictionary
+   letter_counts['t'] = 0  # initialize the t counter
+   letter_counts['s'] = 0  # initialize the s counter
    for c in txt:
        if c == 't':
-           x['t'] = x['t'] + 1  # increment the t counter
+           letter_counts['t'] = letter_counts['t'] + 1  # increment the t counter
        elif c == 's':
-           x['s'] = x['s'] + 1  # increment the s counter
+           letter_counts['s'] = letter_counts['s'] + 1  # increment the s counter
 
-   print("t: " + str(x['t']) + " occurrences")
-   print("s: " + str(x['s']) + " occurrences")
+   print("t: " + str(letter_counts['t']) + " occurrences")
+   print("s: " + str(letter_counts['s']) + " occurrences")
 
-This hasn't really improved things yet, but look closely at lines 8-11 in the code above.
+In the example above, we've created a dictionary, ``letter_counts``, to hold the letters 't'
+and 'c', with their associated counts. This hasn't really improved things yet, but look closely at lines 8-11 in the code above.
 Whichever character we're seeing, t or s, we're incrementing the counter for that 
-character. So lines 9 and 11 could really be the same.
+character. So lines 9 and 11 could really be the same, if we make one small change:
 
 .. activecode:: ac10_5_4
 
    f = open('scarlet.txt', 'r')
    txt = f.read()
    # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
-   x['t'] = 0  # intiialize the t counter
-   x['s'] = 0  # initialize the s counter
+   letter_counts = {} # start with an empty dictionary
+   letter_counts['t'] = 0  # intiialize the t counter
+   letter_counts['s'] = 0  # initialize the s counter
    for c in txt:
        if c == 't':
-           x[c] = x[c] + 1   # increment the t counter
+           letter_counts[c] = letter_counts[c] + 1   # increment the t counter
        elif c == 's':
-           x[c] = x[c] + 1   # increment the s counter
+           letter_counts[c] = letter_counts[c] + 1   # increment the s counter
 
-   print("t: " + str(x['t']) + " occurrences")
-   print("s: " + str(x['s']) + " occurrences")
+   print("t: " + str(letter_counts['t']) + " occurrences")
+   print("s: " + str(letter_counts['s']) + " occurrences")
 
 Lines 9 and 11 above may seem a little confusing at first. Previously, our assignment 
-statements referred directly to keys, with ``x['s']`` and ``x['t']``. Here we 
+statements referred directly to keys, with ``letter_counts['s']`` and ``letter_counts['t']``. Here we 
 are just using a variable ``c`` whose value is 's' or 't', or some other character.
 
 If that made perfect sense to you, skip the next two paragraphs. Otherwise, read on. 
 Let's break down that line in a little more detail. 
 
 First, note that, as with all
-assignment statements, the right side is evaluated first. In this case ``x[c]`` has to be
+assignment statements, the right side is evaluated first. In this case ``letter_counts[c]`` has to be
 evaluated. As with all expressions, we first have to substitute values for variable names.
-``x`` is a variable bound to a dictionary. ``c`` is a variable bound to one letter from the
+``letter_counts`` is a variable bound to a dictionary. ``c`` is a variable bound to one letter from the
 string that ``txt`` is bound to (that's what the for statement says to do: 
 execute lines 8-11 once for each character in txt, with the variable c bound to the current character 
 on each iteration.) So, let's suppose that the current character is the letter ``s`` (we are on line 11). 
-Then ``x[c]`` looks up the value associated with the key 's' in the dictionary x. If all is working correctly, that value should be the number of times 's' has previously occurred. For the sake of argument, suppose it's 25. Then
+Then ``letter_counts[c]`` looks up the value associated with the key 's' in the dictionary ``letter_counts``. If all is working correctly, that value should be the number of times 's' has previously occurred. For the sake of argument, suppose it's 25. Then
 the right side evaluates to 25 + 1, 26. Watch this play out below.
 
 .. showeval:: eval10_5_4
@@ -133,22 +134,22 @@ the right side evaluates to 25 + 1, 26. Watch this play out below.
    f = open('scarlet.txt', 'r')
    txt = f.read()
    # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
-   x['t'] = 15  # intiialize the t counter
-   x['s'] = 25  # initialize the s counter
+   letter_counts = {} # start with an empty dictionary
+   letter_counts['t'] = 15  # initialize the t counter
+   letter_counts['s'] = 25  # initialize the s counter
    ~~~~
    for {{c}}{{'s'}} in txt: # we have reached the 26th s now
    {{for 's' in txt:}}{{if c == 't'}}
        if {{c}}{{'s'}} == 't':
        {{if 's' == 't':}}{{elif c == 's':}}
        elif {{c}}{{'s'}} == 's':
-       {{elif 's' == 's':}}{{x[c] = x[c] + 1   # increment the s counter}}
-           x[{{c] = x[c}}{{'s'] = x['s'}}] + 1   # increment the s counter
-           x['s'] = {{x['s']}}{{25}} + 1   # increment the s counter
-           x['s'] = {{25 + 1}}{{26}}   # increment the s counter
+       {{elif 's' == 's':}}{{letter_counts[c] = letter_counts[c] + 1   # increment the s counter}}
+           letter_counts[{{c] = letter_counts[c}}{{'s'] = letter_counts['s'}}] + 1   # increment the s counter
+           letter_counts['s'] = {{letter_counts['s']}}{{25}} + 1   # increment the s counter
+           letter_counts['s'] = {{25 + 1}}{{26}}   # increment the s counter
 
 
-Now we have assigned the value 26 to ``x[c]``. That is, in dictionary x, we set the value associated with the 
+Now we have assigned the value 26 to ``letter_counts[c]``. That is, in dictionary x, we set the value associated with the 
 key 's' (the current value of the variable c) to be 26. In other words, we have incremented the value associated with
 the key 's' from 25 to 26.
 
@@ -167,52 +168,6 @@ start keeping count of.
    f = open('scarlet.txt', 'r')
    txt = f.read()
    # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
-   for c in txt:
-       if c not in x:
-           # we have not seen this character before, so initialize a counter for it
-           x[c] = 0
-      
-       #whether we've seen it before or not, increment its counter
-       x[c] = x[c] + 1
-
-   print("t: " + str(x['t']) + " occurrences")
-   print("s: " + str(x['s']) + " occurrences")
-
-Notice that in the for loop, we no longer need to explicitly ask whether the current
-letter is an 's' or 't'. The increment step on line 11 works for the counter
-associated with whatever the current character is. Our code is now accumulating 
-counts for all letters, not just 's' and 't'.
-
-**Check your understanding**
-
-.. mchoice:: question10_5_1
-   :answer_a: print(txt['e'] > txt['t'])
-   :answer_b: print(x['e'] > x['t'])
-   :answer_c: print(x[e] > x[t])
-   :answer_d: print(x[c] > txt[c])
-   :answer_e: print(e[x] > t[x])
-   :feedback_a: txt is the variable that has the original text, not the dictionary of counts.   
-   :feedback_b: x is the dictionary of counts; you want to compare the values associated with 'e' and 't'.
-   :feedback_c: x is the dictionary of counts, but you don't want to evaluate e and t as variables in order to determine which keys to look up in the dictionary. 
-   :feedback_d: It seems like maybe you're guessing. Please review the material above and then try again.
-   :feedback_e: It seems like you've reversed things. The variable that refers to the dictionary goes outside the square brackets; the key you're looking up goes inside.
-   :correct: b
-
-   Which of the following will print out True if there are more occurrences of e than t in
-   the text of A Study in Scarlet, and False if t occurred more frequently (assumming that the previous code, from dict_accum_5, has
-   already run.)
-
-
-Note that the print statements at the end pick out the specific keys 't' and 's'. We
-can generalize that, too, to print out the occurrence counts for all of
-the characters, using a for loop to iterate through the keys in x.  
-
-.. activecode:: ac10_5_6
-
-   f = open('scarlet.txt', 'r')
-   txt = f.read()
-   # now txt is one long string containing all the characters
    letter_counts = {} # start with an empty dictionary
    for c in txt:
        if c not in letter_counts:
@@ -222,15 +177,97 @@ the characters, using a for loop to iterate through the keys in x.
        #whether we've seen it before or not, increment its counter
        letter_counts[c] = letter_counts[c] + 1
 
-   for c in letter_counts.keys():
-       print(c + ": " + str(letter_counts[c]) + " occurrences")
-   
-Note that only those letters that actually occur in the text are shown. Some
+   print("t: " + str(letter_counts['t']) + " occurrences")
+   print("s: " + str(letter_counts['s']) + " occurrences")
+
+Notice that in the for loop, we no longer need to explicitly ask whether the current
+letter is an 's' or 't'. The increment step on line 11 works for the counter
+associated with whatever the current character is. Our code is now accumulating 
+counts for all letters, not just 's' and 't'.
+
+As a final refinement, consider replacing lines 5-11 above with this for loop::
+
+   for c in txt:
+      letter_counts[c] = letter_counts.get(c, 0) + 1
+
+This loop uses the ``get`` method to retrieve the count for the letter in the
+variable ``c``. If no such key is present, ``get`` returns 0, and ``letter_counts[c]`` is
+set to ``1`` (0 + 1 = 1).  If the key is present, ``get`` retrieves its value, which is
+then incremented.
+
+**Check your understanding**
+
+.. mchoice:: question10_5_1
+   :answer_a: print(txt['e'] > txt['t'])
+   :answer_b: print(letter_counts['e'] > letter_counts['t'])
+   :answer_c: print(letter_counts[e] > letter_counts[t])
+   :answer_d: print(letter_counts[c] > txt[c])
+   :answer_e: print(e[letter_counts] > t[letter_counts])
+   :feedback_a: txt is the variable that has the original text, not the dictionary of counts.   
+   :feedback_b: letter_counts is the dictionary of counts; you want to compare the values associated with 'e' and 't'.
+   :feedback_c: letter_counts is the dictionary of counts, but you don't want to evaluate e and t as variables in order to determine which keys to look up in the dictionary. 
+   :feedback_d: It seems like maybe you're guessing. Please review the material above and then try again.
+   :feedback_e: It seems like you've reversed things. The variable that refers to the dictionary goes outside the square brackets; the key you're looking up goes inside.
+   :correct: b
+
+   Consider example ac10_5_5 above. After the program runs, which of the following will print out True if there are more
+   occurrences of *e* than *t* in the text of "A Study in Scarlet," and False if *t* occurred more frequently? 
+
+.. tabbed:: tabbed_ac10_5_6
+
+   .. tab:: Question
+
+      The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
+      to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
+      use the same format as the original program above.
+
+      .. activecode:: ac10_5_6
+         :language: python
+         :autograde: unittest
+         :practice: T         
+
+         f = open('scarlet.txt', 'r')
+         txt = f.read()
+         letter_counts = {} 
+         for c in txt:
+            if c not in letter_counts:
+               letter_counts[c] = 0
+            
+            letter_counts[c] = letter_counts[c] + 1
+
+         # Write a loop that prints the letters and their counts
+         =====
+
+         from unittest.gui import TestCaseGui
+
+         class myTests(TestCaseGui):
+
+            def testOne(self):
+               self.assertIn("w:4745", self.getOutput().replace(' ',''), "Testing that correct number of w's is output.")
+               self.assertIn("h:12892", self.getOutput().replace(' ',''), "Testing that correct number of h's is output.")
+               self.assertIn("G:235", self.getOutput().replace(' ',''), "Testing that correct number of G's is output.")
+               self.assertEqual(len(self.getOutput().split('\n')), 90, "Testing that correct number of lines are output.")
+
+         myTests().main()
+
+   .. tab:: Tip
+
+      Use a for loop to iterate through the keys in ``letter_counts``.
+
+   .. tab:: Solution
+
+      Here's a for loop that will do the job::
+
+         for c in letter_counts.keys():
+            print(c + ": " + str(letter_counts[c]) + " occurrences")
+
+
+In the solution to the problem above, note that only those letters that actually occur in the text are shown. Some
 punctuation marks that are possible in English, but were never used in the 
 text, are omitted completely. The blank line partway through the output may surprise you.
-That's actually saying that the newline character, ``\\n``, appears 5155 times in
+That's actually saying that the newline character, ``\n``, appears 5155 times in
 the text. In other words, there are 5155 lines of text in the file. Let's
-test that hypothesis. 
+test that hypothesis. Run the following example and check its output:
 
 
 .. activecode:: ac10_5_7
@@ -240,51 +277,86 @@ test that hypothesis.
    # now txt_lines is a list, where each item is one
    # line of text from the story
    print(len(txt_lines))
-   print(txt_lines[70:85])
 
 Now, here are some additional problems to try.
 
-.. activecode:: ac10_5_8
-   :language: python
-   :autograde: unittest
-   :practice: T
+.. tabbed:: tabbed_ac10_5_8
 
-   **2.** Provided is a string saved to the variable name ``sentence``. Split the string into a list of words, then create a dictionary that contains each word and the number of times it occurs. Save this dictionary to the variable name ``word_counts``.
-   ~~~~
-   sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+   .. tab:: Question
 
-   =====
+      **2.** Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
 
-   from unittest.gui import TestCaseGui
+      .. activecode:: ac10_5_8
+         :language: python
+         :autograde: unittest
+         :practice: T
 
-   class myTests(TestCaseGui):
+         sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
-      def testOne(self):
-         self.assertEqual(sorted(word_counts.items()), sorted([('The', 1), ('dog', 1), ('chased', 1), ('the', 3), ('rabbit', 2), ('into', 1), ('forest', 1), ('but', 1), ('was', 1), ('too', 1), ('quick.', 1)]), "Testing that word_counts was created correctly.")
+         =====
 
-   myTests().main()
+         from unittest.gui import TestCaseGui
 
-.. activecode:: ac10_5_9
-   :language: python
-   :autograde: unittest
-   :practice: T
+         class myTests(TestCaseGui):
 
-   **3.** Create a dictionary called ``char_d`` from the string ``stri``, so that the key is a character and the value is how many times it occurs.
-   ~~~~
-   stri = "what can I do"
+            def testOne(self):
+               self.assertEqual(sorted(word_counts.items()), sorted([('The', 1), ('dog', 1), ('chased', 1), ('the', 3), ('rabbit', 2), ('into', 1), ('forest', 1), ('but', 1), ('was', 1), ('too', 1), ('quick.', 1)]), "Testing that word_counts was created correctly.")
 
-   =====
+         myTests().main()
 
-   from unittest.gui import TestCaseGui
+   .. tab:: Tip
 
-   class myTests(TestCaseGui):
+      The ``split()`` method will help split ``sentence`` into a list of words.
 
-      def testOne(self):
-         self.assertEqual(sorted(char_d.items()), sorted([('w', 1), ('h', 1), ('a', 2), ('t', 1), (' ', 3), ('c', 1), ('n', 1), ('I', 1), ('d', 1), ('o', 1)]), "Testing that char_d has been created correctly.")
+   .. tab:: Answer
 
-   myTests().main()
+      Here's one possible solution that uses the ``get`` method.
 
+      .. sourcecode:: python
+
+         word_counts = {}
+
+         for word in sentence.split():
+            word_counts[word] = word_counts.get(word, 0) + 1
+
+.. tabbed:: tabbed_ac10_5_9
+
+   .. tab:: Question
+
+      **3.** Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
+
+      .. activecode:: ac10_5_9
+         :language: python
+         :autograde: unittest
+         :practice: T
+
+         stri = "what can I do"
+
+         =====
+
+         from unittest.gui import TestCaseGui
+
+         class myTests(TestCaseGui):
+
+            def testOne(self):
+               self.assertEqual(sorted(char_d.items()), sorted([('w', 1), ('h', 1), ('a', 2), ('t', 1), (' ', 3), ('c', 1), ('n', 1), ('I', 1), ('d', 1), ('o', 1)]), "Testing that char_d has been created correctly.")
+
+         myTests().main()
+
+   .. tab:: Tip
+
+      This problem is very similar to the letter-counting problem discussed in this section. Review the solution above
+      and see if you can apply it to this problem.
+
+   .. tab:: Answer
+
+      Here's a solution that uses the get method:
+
+      .. sourcecode:: python
+
+         char_d = {}
+         for c in stri:
+            char_d[c] = char_d.get(c, 0) + 1         
 
 .. datafile:: scarlet.txt
    :fromfile: scarlet.txt
-   :hide:
