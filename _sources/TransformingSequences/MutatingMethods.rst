@@ -18,9 +18,9 @@ You've seen some methods already, like the ``count`` and ``index`` methods. Meth
 mutating or non-mutating. Mutating methods are ones that change the object after the method has been 
 used. Non-mutating methods do not change the object after the method has been used.
 
-The ``count`` and ``index`` methods are both non-mutating. Count returns the number of occurances of 
+The ``count`` and ``index`` methods are both non-mutating. Count returns the number of occurrences of 
 the argument given but does not change the original string or list. Similarly, index returns the 
-leftmost occurance of the argument but does not change the original string or list. Below we'll talk 
+leftmost occurrence of the argument but does not change the original string or list. Below we'll talk 
 about list methods in general. Keep an eye out for methods that are mutating!
 
 List Methods
