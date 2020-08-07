@@ -144,4 +144,38 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
 
    myTests().main()
 
+.. tabbed:: tabbed_ac10_3_6
+
+    .. tab:: Question
+
+        **5.** Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
+
+        .. activecode:: ac10_3_6
+            :language: python
+            :autograde: unittest
+            :practice: T
+
+            places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
+
+            =====
+
+            from unittest.gui import TestCaseGui
+
+            class myTests(TestCaseGui):
+
+                  def testOne(self):
+                     self.assertEqual(sorted(places.items()), sorted([("Australia", 2000), ("Greece", 2004), ("China", 2008), ("England", 2012), ("Brazil", 2016)]), "Testing that places has been updated correctly.")
+
+            myTests().main()
+
+    .. tab:: Answer
+
+        Add the following line:
+
+        .. sourcecode:: python
+
+            places['Brazil'] = 2016
+
+
+
 .. [*] Instructors note: Python version 3.7 and later `provide ordering guarantees <https://mail.python.org/pipermail/python-dev/2017-December/151283.html>`_. However, it is best practice to write code that does not rely on any particular key order so this book will treat key-value pairs as unordered.

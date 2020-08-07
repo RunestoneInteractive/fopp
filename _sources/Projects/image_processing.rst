@@ -13,9 +13,11 @@ Whether you are into Facebook, Instagram, or Snapchat you are probably familiar 
 
 You can use the following image using the name "golden_gate.png" or you can use any image you choose by using the full URL to the image.  For example: ``http://reputablejournal.com/images/ComputerHistory/TeleType.png``  will use an automatically reduced size image of a picture the author took in the computer history museum.
 
-.. raw:: html
 
-    <img src="../_static/GoldenGateBridgeCC.png" id="golden_gate.png"></img>
+.. datafile:: golden_gate.png
+    :image:
+    :fromfile: ../../_static/GoldenGateBridgeCC.png
+
 
 Image used under `Creative Commons Attribution License <https://commons.wikimedia.org/wiki/File:GoldenGateBridge-001.jpg>`_.
 
