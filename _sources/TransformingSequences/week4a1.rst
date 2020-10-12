@@ -19,7 +19,7 @@ Chapter Assessment - List Methods
    :answer_b: II.
    :answer_c: Neither is the correct reference diagram.
    :feedback_a: Yes, when we are using the remove method, we are just editing the existing list, not making a new copy.
-   :feedback_b: When we use the remove method, we just edit the existing list. We do not make a new copy that does not include the removed object. 
+   :feedback_b: When we use the remove method, we just edit the existing list. We do not make a new copy that does not include the removed object.
    :feedback_c: One of the diagrams is correct - look again at what is happening to lst.
    :correct: a
    :practice: T
@@ -28,17 +28,17 @@ Chapter Assessment - List Methods
    Which of these is a correct reference diagram following the execution of the following code?
 
    .. sourcecode:: python
-   
+
     lst = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto']
     lst.remove('pluto')
     first_three = lst[:3]
 
-   I. 
+   I.
 
    .. image:: Figures/week3a1_1.png
       :alt: First Potential Solution
 
-   II. 
+   II.
 
    .. image:: Figures/week3a1_2.png
       :alt: Second Potential Solution
@@ -48,7 +48,7 @@ Chapter Assessment - List Methods
    :answer_b: .insert()
    :answer_c: .count()
    :answer_d: .index()
-   :feedback_a: pop removes and returns items (default is to remove and return the last item in the list) 
+   :feedback_a: pop removes and returns items (default is to remove and return the last item in the list)
    :feedback_b: insert will add an item at whatever position is specified.
    :feedback_c: count returns the number of times something occurs in a list
    :feedback_d: Yes, index will return the position of the first occurance of an item.
@@ -219,7 +219,7 @@ Chapter Assessment - Aliases and References
    :topics: TransformingSequences/ObjectsandReferences
 
    Which of these is a correct reference diagram following the execution of the following code?
-   
+
    .. sourcecode:: python
 
     x = ["dogs", "cats", "birds", "reptiles"]
@@ -231,17 +231,17 @@ Chapter Assessment - Aliases and References
 
    .. image:: Figures/week3a3_1.png
       :alt: First Potential Solution
-   
+
    II.
 
    .. image:: Figures/week3a3_2.png
       :alt: Second Potential Solution
-   
+
    III.
 
    .. image:: Figures/week3a3_3.png
       :alt: Third Potential Solution
-   
+
    IV.
 
    .. image:: Figures/week3a3_4.png
@@ -256,7 +256,7 @@ Chapter Assessment - Split and Join
    :answer_c: III.
    :answer_d: IV.
    :feedback_a: Yes, when we make our own diagrams we want to keep the old information because sometimes other variables depend on them. It can get cluttered though if there is a lot of information.
-   :feedback_b: Not quite, we want to keep track of old information because sometimes other variables depend on them. 
+   :feedback_b: Not quite, we want to keep track of old information because sometimes other variables depend on them.
    :feedback_c: Look again at what is happening when join is executed.
    :feedback_d: What happens to the spaces in a string when it is split by whitespace?
    :correct: a
@@ -276,17 +276,17 @@ Chapter Assessment - Split and Join
 
    .. image:: Figures/week3a2_1.png
       :alt: First Potential Solution
-   
+
    II.
 
    .. image:: Figures/week3a2_2.png
       :alt: Second Potential Solution
-   
+
    III.
 
    .. image:: Figures/week3a2_3.png
       :alt: Third Potential Solution
-   
+
    IV.
 
    .. image:: Figures/week3a2_4.png
@@ -335,7 +335,7 @@ Chapter Assessment - For Loop Mechanics
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
    Which of these is the accumulator variable?
-   
+
    .. sourcecode:: python
 
     byzo = 'hello world!'
@@ -357,7 +357,7 @@ Chapter Assessment - For Loop Mechanics
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    Which of these is the sequence?
-   
+
    .. sourcecode:: python
 
     cawdra = ['candy', 'daisy', 'pear', 'peach', 'gem', 'crown']
@@ -377,7 +377,7 @@ Chapter Assessment - For Loop Mechanics
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
    Which of these is the iterator (loop) variable?
-   
+
    .. sourcecode:: python
 
     lst = [5, 10, 3, 8, 94, 2, 4, 9]
@@ -415,7 +415,7 @@ Chapter Assessment - For Loop Mechanics
    ~~~~
    str1 = "I love python"
    # HINT: what's the accumulator? That should go here.
-      
+
    =====
 
    from unittest.gui import TestCaseGui
@@ -446,29 +446,29 @@ Chapter Assessment - Accumulator Pattern
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
    Given that we want to accumulate the total sum of a list of numbers, which of the following accumulator patterns would be appropriate?
-   
+
    I.
-   
+
    .. sourcecode:: python
-   
+
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
         s = s + 1
-   
+
    II.
-   
+
    .. sourcecode:: python
-   
+
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
         s = n + n
-   
+
    III.
-   
+
    .. sourcecode:: python
-   
+
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
@@ -479,7 +479,7 @@ Chapter Assessment - Accumulator Pattern
    :answer_b: 2.
    :answer_c: 3.
    :answer_d: 4.
-   :answer_e: none of the above would be appropriate for the problem. 
+   :answer_e: none of the above would be appropriate for the problem.
    :correct: d
    :feedback_a: How does this solution know that the element of lst is a string and that s should be updated?
    :feedback_b: What happens to s each time the for loop iterates?
@@ -492,43 +492,43 @@ Chapter Assessment - Accumulator Pattern
    Given that we want to accumulate the total number of strings in the list, which of the following accumulator patterns would be appropriate?
 
    1.
-   
+
    .. sourcecode:: python
-   
+
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
     for n in lst:
         s = s + n
-   
+
    2.
-   
+
    .. sourcecode:: python
-   
+
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     for item in lst:
         s = 0
         if type(item) == type("string"):
             s = s + 1
-   
+
    3.
 
    .. sourcecode:: python
-   
+
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = ""
     for n in lst:
         s = s + n
-   
+
    4.
-   
+
    .. sourcecode:: python
-   
+
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
     for item in lst:
         if type(item) == type("string"):
             s = s + 1
- 
+
 .. mchoice:: assess_question5_2_1_3
    :multiple_answers:
    :answer_a: sum
@@ -663,7 +663,7 @@ Chapter Assessment - Accumulator Pattern
     class myTests(TestCaseGui):
 
         def testOne(self):
-           self.assertEqual(num_words_list, map(len, original_str.split()), "Testing whether num_words_list has the correct value")
+           self.assertEqual(num_words_list, [len(x) for x in original_str.split()], "Testing whether num_words_list has the correct value")
            self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code.")
 
     myTests().main()
@@ -811,6 +811,6 @@ Chapter Assessment - Problem Solving
           self.assertIn('.format(', self.getEditorText(), "Testing whether your code invokes the .format method.")
           self.assertIn('The store has 12 shoes, each for 29.99 USD.\nThe store has 20 shirts, each for 9.99 USD.\nThe store has 25 sweatpants, each for 15.00 USD.\nThe store has 13 scarves, each for 7.75 USD.\n', self.getOutput(), "Testing your output.")
 
-         
+
 
    myTests().main()
