@@ -54,7 +54,8 @@ We'll come back in a minute and talk about how we will calculate :math:`\vec{c}`
            self.assertEqual(dot([1,2,3],[4,5,6]), 32, "testing [1,2,3] and [4,5,6]")
            self.assertEqual(dot([0,0,0],[4,5,6]), 0, "testing with one vector all 0's")
            self.assertEqual(dot([1,1,1],[1,1,1]), 3, "testing vectors of all 1's ")
-           self.assertEqual(dot([1,1,1],[-1,-1,-1]), 0, "testing vectors of all 1's and -1's ")
+           self.assertEqual(dot([1,1,1],[-1,-1,-1]), -3, "testing vectors of all 1's and -1's ")
+           self.assertEqual(dot([1,1,1,1],[-1,-1,1,1]), 0, "testing vectors of all 1's and -1's ")
 
     myTests().main()
 
