@@ -381,7 +381,7 @@ Exercises
    .. parsonsprob:: pp_2_17
       :noindent:
 
-      Write a program that will convert table spoons to teaspons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
+      Write a program that will convert tablespoons to teaspoons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
       -----
       user_tablespoons = float(input("How many tablespoons should be converted?: "))
       =====
