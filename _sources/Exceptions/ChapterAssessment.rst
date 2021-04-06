@@ -122,6 +122,7 @@ Chapter Assessment
 .. activecode:: ac_exceptions_03
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
+   :autograde: unittest
    :topics: Exceptions/intro-exceptions.rst
 
    Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list ``attempt`` the string "Error".
