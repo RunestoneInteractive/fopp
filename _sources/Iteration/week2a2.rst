@@ -189,6 +189,6 @@ Chapter Assessment
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(nums, range(68), "Testing that nums is a list that contains the correct elements.")
+         self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
 
    myTests().main()
