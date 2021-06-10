@@ -214,34 +214,65 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac7_14_8
+            .. actex:: ac7_14_8
 
-               Given the lengths of three sides of a triange, determine whether the triangle is right angled. If it is, the assign ``True`` to the variable ``is_rightangled``. If it's not, then assign ``False`` to the variable ``is_rightangled``.
+                Given the lengths of three sides of a triange, determine whether the triangle is right angled. If it is, the assign ``True`` to the variable ``is_rightangled``. If it's not, then assign ``False`` to the variable ``is_rightangled``.
 
-               Hint: floating point arithmetic is not always exactly accurate,
-               so it is not safe to test floating point numbers for equality.
-               If a good programmer wants to know whether
-               ``x`` is equal or close enough to ``y``, they would probably code it up as
-   
-               .. sourcecode:: python
-   
-                   if  abs(x - y) < 0.001:      # if x is approximately equal to y
-                       ...
+                Hint: floating point arithmetic is not always exactly accurate,
+                so it is not safe to test floating point numbers for equality.
+                If a good programmer wants to know whether
+                ``x`` is equal or close enough to ``y``, they would probably code it up as
+                
+                .. sourcecode:: python
+                
+                    if  abs(x - y) < 0.001:      # if x is approximately equal to y
+                        ...
+                
+                ~~~~
+                a = 5
+                b = 6
+                c = 8
 
-               ~~~~
-               a = 5
-               b = 6
-               c = 8
-
-
-               ====
-               from unittest.gui import TestCaseGui
-
-               class myTests(TestCaseGui):
-                   def testOne(self):
-                       self.assertEqual(is_rightangled, False, "Testing whether is_rightangled is set correctly")
-
-               myTests().main()
+                ====
+                from unittest.gui import TestCaseGui
+                import re
+                import math
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        output = self.getOutput().split('\n')
+                        editor = self.getEditorText().split('\n')
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                
+                        _is_rightangled = False
+                        if abs(a**2 + b**2 - c**2) < 1e-7:
+                            _is_rightangled = True
+                        elif abs(a**2 - b**2 + c**2) < 1e-7:
+                            _is_rightangled = True
+                        elif abs(-a**2 + b**2 + c**2) < 1e-7:
+                            _is_rightangled = True
+                
+                        self.assertEqual(is_rightangled, _is_rightangled, 'Checking answer')
+                
+                        # hardcode check
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                        print_float_re = r'print\( *'+float_re+' *\)'
+                        self.assertFalse(re.search(print_float_re, self.getEditorText()), 'Checking for hardcoding')
+                            # LOOK FOR IF STATEMENTS
+                        outer_ifs = re.findall(r'^(if[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elifs = re.findall(r'^(elif[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elses = re.findall(r'^(else *: *)$', self.getEditorText(), re.M)
+                        inner_ifs = re.findall(r'^( +if[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_ifs)>=1 and len(outer_elifs)>=0 and len(outer_elses)>=0 and
+                                        len(inner_ifs)>=0 and len(inner_elifs)>=0 and len(inner_elses)>=0, 
+                                'Checking if-statements')
+                        # LOOK FOR for STATEMENTS
+                        outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_loops)>=0 and len(inner_loops)>=0, 'Checking for-statements')
+                myTests().main()
+                
 #.
 
    .. tabbed:: q9
