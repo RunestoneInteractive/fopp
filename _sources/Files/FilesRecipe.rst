@@ -44,7 +44,7 @@ This option involves iterating over the file itself while still iterating over e
 
 ::
 
-   fnwith open(fname, 'r') as fileref:
+   with open(fname, 'r') as fileref:
     for lin in fileref:
         ## some code that uses line as the current line of the file
         ## some more code
