@@ -24,23 +24,65 @@ Exercises
 
             .. actex:: ac7_14_1
 
-               Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
-        
-               .. table::
-        
-                  =======   =====
-                  Score     Grade
-                  =======   =====
-                  >= 90     A
-                  [80-90)   B
-                  [70-80)   C
-                  [60-70)   D
-                  < 60      F
-                  =======   =====
-        
-               The square and round brackets denote closed and open intervals.
-               A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.
-               ~~~~
+                Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
+            
+                .. table::
+            
+                    =======   =====
+                    Score     Grade
+                    =======   =====
+                    >= 90     A
+                    [80-90)   B
+                    [70-80)   C
+                    [60-70)   D
+                    < 60      F
+                    =======   =====
+            
+                The square and round brackets denote closed and open intervals.
+                A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.
+                ~~~~
+                scores = [77.51, 92.86, 98.01, 69.71, 78.52, 59.69, 60.49, 85.04, 87.33, 91.04]
+
+                ====
+                from unittest.gui import TestCaseGui
+                import re
+                import math
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        output = self.getOutput().split('\n')
+                        editor = self.getEditorText().split('\n')
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                        _grades=[]
+                        for score in scores:
+                            _score = float(score)
+                            if _score >= 90:
+                                _grades.append('A')
+                            elif _score >= 80:
+                                _grades.append('B')
+                            elif _score >= 70:
+                                _grades.append('C')
+                            elif _score >= 60:
+                                _grades.append('D')
+                            else:
+                                _grades.append('F')
+                    
+                        self.assertEqual(grades, _grades)
+                        # hardcode check
+                        # LOOK FOR IF STATEMENTS
+                        outer_ifs = re.findall(r'^(if[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elifs = re.findall(r'^(elif[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elses = re.findall(r'^(else *: *)$', self.getEditorText(), re.M)
+                        inner_ifs = re.findall(r'^( +if[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_ifs)==0 and len(outer_elifs)==0 and len(outer_elses)==0 and
+                                        len(inner_ifs)==1 and len(inner_elifs)==3 and len(inner_elses)==1, 
+                                'Checking if-statements')
+                        # LOOK FOR for STATEMENTS
+                        outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_loops)==1 and len(inner_loops)==0, 'Checking for-statements')
+                myTests().main()
            
         .. tab:: Answer
 
@@ -71,24 +113,68 @@ Exercises
 
            .. actex:: ac7_14_2
 
-               A year is a **leap year** if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400 then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
+                A year is a **leap year** if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400 then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
+        
+                .. table::
+        
+                    =======  =====
+                    Year     Leap?
+                    =======  =====
+                    1944     True
+                    2011     False
+                    1986     False
+                    1800     False     
+                    1900     False
+                    2000     True
+                    2056     True
+                    =======  =====
+                    
+                Above are some examples of what the output should be for various inputs.
+                ~~~~
+
+                years = [1967, 1900, 1400, 1628, 1701, 1217, 1359, 1300, 2000, 1054,
+                1724, 1000, 1800, 1100, 2100, 1023, 1600, 1500, 1358, 1160,
+                1700, 1744, 2009, 1200]
     
-               .. table::
-    
-                  =======  =====
-                  Year     Leap?
-                  =======  =====
-                  1944     True
-                  2011     False
-                  1986     False
-                  1800     False     
-                  1900     False
-                  2000     True
-                  2056     True
-                  =======  =====
-                
-               Above are some examples of what the output should be for various inputs.
-               ~~~~
+                ====
+                from unittest.gui import TestCaseGui
+                import re
+                import math
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        output = self.getOutput().split('\n')
+                        editor = self.getEditorText().split('\n')
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                    
+                        _is_leap_year = []
+                        for _year in years:
+                            if _year % 4 == 0 :
+                                if _year % 100 == 0:
+                                    _is_leap_year.append( _year % 400 == 0)
+                                else:
+                                    _is_leap_year.append(True)
+                            else:
+                                _is_leap_year.append(False)
+                        
+                        self.assertEqual(is_leap_year, _is_leap_year, 'Checking answer')
+                        
+                        # hardcode check
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                        print_float_re = r'print\( *'+float_re+' *\)'
+                        self.assertFalse(re.search(print_float_re, self.getEditorText()), 'Checking for hardcoding')
+                        # LOOK FOR IF STATEMENTS
+                        outer_ifs = re.findall(r'^(if[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elifs = re.findall(r'^(elif[ (].*: *)$', self.getEditorText(), re.M)
+                        outer_elses = re.findall(r'^(else *: *)$', self.getEditorText(), re.M)
+                        inner_ifs = re.findall(r'^( +if[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
+                        inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_ifs)==0 and len(outer_elifs)==0 and len(outer_elses)==0 and len(inner_ifs)>=1 and len(inner_elifs)>=0 and len(inner_elses)>=0, 'Checking if-statements')
+                        # LOOK FOR for STATEMENTS
+                        outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                        self.assertTrue(len(outer_loops)==1 and len(inner_loops)==0, 'Checking for-statements')
+                myTests().main()
 
 
 
@@ -202,12 +288,22 @@ Exercises
 
                ====
                from unittest.gui import TestCaseGui
+               import re
 
                class myTests(TestCaseGui):
                    def testOne(self):
                        self.assertEqual(is_odd, [True, False, True, True, False],"Testing that is_odd is set correctly.")
 
-               myTests().main()
+                       # LOOK FOR IF STATEMENTS
+                       outer_ifs = re.findall(r'^(if[ (].*: *)$', self.getEditorText(), re.M)
+                       outer_elifs = re.findall(r'^(elif[ (].*: *)$', self.getEditorText(), re.M)
+                       outer_elses = re.findall(r'^(else *: *)$', self.getEditorText(), re.M)
+                       inner_ifs = re.findall(r'^( +if[ (].*: *)$', self.getEditorText(), re.M)
+                       inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
+                       inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
+                       self.assertTrue(len(outer_ifs)==0 and len(outer_elifs)==0 and len(outer_elses)==0 and len(inner_ifs)==1 and len(inner_elifs)==0 and len(inner_elses)==1, 'Checking if-statements')
+                       
+               myTests().main() 
 
 #.
    .. tabbed:: q8
