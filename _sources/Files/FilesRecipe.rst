@@ -44,8 +44,7 @@ This option involves iterating over the file itself while still iterating over e
 
 ::
 
-   fname = "yourfile.txt"
-   with open(fname, 'r') as fileref:         # step 1
-       for lin in fileref:                   # step 2
-           ## some code that reference the variable lin
-   #some other code not relying on fileref   # step 3
+   with open(fname, 'r') as fileref:
+    for lin in fileref:
+        ## some code that uses line as the current line of the file
+        ## some more code
