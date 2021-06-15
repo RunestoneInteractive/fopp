@@ -7,7 +7,7 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-    .. qnum::
+ .. qnum::
     :prefix: func-7-
     :start: 1
  
