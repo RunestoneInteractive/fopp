@@ -80,7 +80,6 @@ Exercises
                    def testOneA(self):
                        self.assertEqual(fifth, ['o', 'k', 'w', 't', 'n'], "Testing that fifth is assigned to correct values.")
 
-
                myTests().main()
 
 Contributed Exercises

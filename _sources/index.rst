@@ -97,8 +97,8 @@ This book is a "projects first" book, rather than teaching you language features
       - String manipulation
     * - 10
       - :ref:`Image Processing <image_processing>`
-      - `Nested Iteration </runestone/books/published/fopp/MoreAboutIteration/toctree.html>`_ |
-        `[Optional] 12.1-12.5 </runestone/books/published/fopp/Functions/toctree.html>`_
+      - `Nested Iteration </runestone/books/published/fopp/Iteration/NestedIterationImageProcessing.html>`_ |
+        `[Optional] 12.1-12.5 </runestone/books/published/fopp/index.html>`_
       - Nested Iteration, Function Practice
     * - 11
       - :ref:`Exploring Common Words and SETI <common_words>`

@@ -13,6 +13,7 @@ Chapter Assessment
 .. activecode:: ee_inheritance_01
    :tags: Inheritance/inheritVarsAndMethods.rst
    :practice: T
+   :autograde: unittest
    :topics: Inheritance/inheritVarsAndMethods
 
    The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create.
@@ -93,6 +94,7 @@ Chapter Assessment
 .. activecode:: ee_inheritance_02
    :tags: Inheritance/inheritVarsAndMethods.rst, Inheritance/OverrideMethods.rst
    :practice: T
+   :autograde: unittest
    :topics: Inheritance/OverrideMethods
 
    Modify the ``Grass_Pokemon`` subclass so that the attack strength for ``Grass_Pokemon`` instances does not change until they reach level 10. At level 10 and up, their attack strength should increase by the ``attack_boost`` amount when they are trained.
@@ -172,7 +174,8 @@ Chapter Assessment
 
 .. activecode:: ee_inheritance_05
    :tags: Inheritance/inheritVarsAndMethods.rst
-
+   :autograde: unittest
+   
    Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses. Call it ``opponent``. It should return which type of pokemon the current type is weak and strong against, as a tuple.
 
    - **Grass** is weak against *Fire* and strong against *Water*

@@ -206,6 +206,7 @@ There's one other useful feature. The exception code can access a variable that 
 .. activecode:: ee_exceptions_012
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
+   :autograde: unittest
 
    5. Below, we have provided a list of tuples that consist of student names, final exam scores, and whether or not they will pass the class. For some students, the tuple does not have a third element because it is unknown whether or not they will pass. Currently, the for loop does not work. Add a try/except clause so the code runs without an error - if there is no third element in the tuple, no changes should be made to the dictionary.
    ~~~~
@@ -233,6 +234,7 @@ There's one other useful feature. The exception code can access a variable that 
 .. activecode:: ee_exceptions_022
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
+   :autograde: unittest
 
    6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four. 
    ~~~~

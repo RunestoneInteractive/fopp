@@ -421,7 +421,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **12.** Write a function named ``intro`` that takes a string as input. Given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
+   **12.** Write a function named ``intro`` that takes a string as input. This string ist intended to be a person's name and the output is a standardized greeting. For example, given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
    ~~~~
 
    =====
