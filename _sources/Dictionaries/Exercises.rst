@@ -16,7 +16,9 @@
 Exercises
 =========
 
-#.
+.. question:: ac10_8_1_q
+    :number: 1
+
     .. tabbed:: q1
 
         .. tab:: Question
@@ -39,18 +41,37 @@ Exercises
                del d['apples']
                print('apples' in d)
 
-2. Avast, try this one, swabbies!
+.. fillintheblank:: assess_question1_11_11_1
+    :practice: T
+    :topics: Dictionaries/DictionaryLookup
+
+    What would the following code print?
+
+    .. sourcecode:: python
+
+        d = {'spring': 'autumn', 'autumn': 'fall', 'fall': 'spring'}
+        print d['autumn']
+
+    -   :fall: Good work!
+        :autumn: This is a value when the key is 'spring'.
+        :spring: This ia a value when the key is 'fall'.
+        :.*: Incorrect, try again.
+
+
+.. question:: ac10_8_2_q
+    :number: 2
 
     .. tabbed:: q5
 
         .. tab:: Question
 
             .. actex:: ac10_8_2
+               :tie: pirateTranslator
 
-               Here's a table of English to Pirate translations
+               Avast!  Try this one swabbies.  Here's a table of English to Pirate translations
 
                .. table::
-        
+
                   ==========  ==============
                   English     Pirate
                   ==========  ==============
@@ -77,31 +98,26 @@ Exercises
                Write a program that asks the user for a sentence in English and then translates that sentence to Pirate.
                ~~~~
 
-        .. tab:: Answer
 
-            .. activecode:: answer10_8_2
+.. fillintheblank:: assess_question1_11_11_2
+    :practice: T
+    :topics: Dictionaries/DictionaryLookup
 
-                pirate = {}
-                pirate['sir'] = 'matey'
-                pirate['hotel'] = 'fleabag inn'
-                pirate['student'] = 'swabbie'
-                pirate['boy'] = 'matey'
-                pirate['restaurant'] = 'galley'
-                #and so on
+    In order to get the last line to print "success", what should the value *x* (in the last line) be?
 
-                sentence = input("Please enter a sentence in English")
+    .. sourcecode:: python
 
-                psentence = []
-                words = sentence.split()
-                for aword in words:
-                    if aword in pirate:
-                        psentence.append(pirate[aword])
-                    else:
-                        psentence.append(aword)
+        d = { 'work': 'success', 'success': 'failure', 'failure': 'money', 'time': 'work', 'industry': 'time'}
+        print d[d[x]]
 
-                print(" ".join(psentence))
+    -   :(^time$)|('time')|("time"): Good Work!  The word time with quotes around it is better as it indicates that you understand that we were referring to a literal string value.
+        :industry: It prints "work".
+        :work: It prints "failure".
+        :success: It prints "money".
+        :.*: Incorrect, try again.
 
-#. (challenge exericse)
+
+.. question:: ac10_8_3_1
 
       .. tabbed:: q2
 
@@ -137,6 +153,33 @@ Exercises
 
                       print("The most used word is '"+most_used+"', which is used "+str(d[most_used])+" times")
 
+.. mchoice:: assess_question1_11_11_3
+    :multiple_answers:
+    :answer_a: It creates a new copy of <code>d</code>.
+    :answer_b: It creates a new dictionary which swaps the keys and values in <code>d</code>.
+    :answer_c: It throws an error.
+    :answer_d: It creates a new dictionary which maps each of <code>d</code>'s keys to itself.
+    :answer_e: It creates a new dictionary which maps each of <code>d</code>'s values to itself.
+    :correct: b
+    :feedback_a: It is not exactly a copy.
+    :feedback_b: Yes, <code>d[c]</code> gets the value from dictionary <code>d</code>  with key <code>c</code>. In dictionary <code>e</code>, we are putting <code>d[c]</code> as a key and value as <code>c</code>.
+    :feedback_c: It is a valid code.
+    :feedback_d: The key of dictionary <code>e</code> is different from that of <code>d</code>.
+    :feedback_e: The value of dictionary <code>e</code> is different from that of <code>d</code>.
+    :practice: T
+    :topics: Dictionaries/DictionaryKeyValueAssignment
+
+    What does the following block of code do?
+
+    .. sourcecode:: python
+
+        d =  {'a': 2, 'b': 3, 'c': 1}
+        e = {}
+        for c in d:
+            e[d[c]] = c
+        print e
+
+
 .. question:: dict_ex_4
    :number: 4
 
@@ -145,12 +188,13 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac10_8_4
+               :tie: findMostCommonCharacter
 
                Write a program that allows the user to enter a string.  It then prints a
                table of the letters of the alphabet in alphabetical order which occur in
                the string together with the number of times each letter occurs. Case should
-               be ignored. A sample run of the program might look this this::   
-               
+               be ignored. A sample run of the program might look this this::
+
                    Please enter a sentence: ThiS is String with Upper and lower case Letters.
                    a  2
                    c  1
@@ -170,28 +214,7 @@ Exercises
                    w  2
                    $
                ~~~~
-               
-        .. tab:: Answer
 
-            .. activecode:: answer10_8_4
-
-                x = input("Enter a sentence")
-
-                x = x.lower()   # convert to all lowercase
-
-                alphabet = 'abcdefghijklmnopqrstuvwxyz'
-
-                letter_count = {} # empty dictionary
-                for char in x:
-                    if char in alphabet: # ignore any punctuation, numbers, etc
-                        if char in letter_count:
-                            letter_count[char] = letter_count[char] + 1
-                        else:
-                            letter_count[char] = 1
-
-                keys = letter_count.keys()
-                for char in sorted(keys):
-                    print(char, letter_count[char])
 
         .. tab:: Discussion
 
@@ -199,7 +222,45 @@ Exercises
                 :shortname: interactivepython
                 :identifier: disqus_de4f21e35d3a41a4a3ac4ac888f78d1a
 
+.. fillintheblank:: assess_question1_11_11_4
+    :practice: T
+    :topics: Dictionaries/KeyValueLookupAssignment
+
+    Consider the following function:
+
+    .. sourcecode:: python
+
+        alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        values = {}
+        for i in range(len(alphabet)):
+            values[alphabet[i]] = i+1;
+        answer  = 0
+        for c in s:
+            answer += values[c]
+        return answer
+
+    When the ``foo()`` is called with the input "baa", what value does it return? (Write "error" if you think it would raise an error instead.)
+
+    -   :4: Good Work!
+        :error: The code is valid.
+        :.*: Incorrect, try again. (*Hint:* Lookup value of each character of "baa" in ``values``.)
+
+
+
+
 
 .. datafile:: scarlet3.txt
    :fromfile: scarlet.txt
    :hide:
+
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

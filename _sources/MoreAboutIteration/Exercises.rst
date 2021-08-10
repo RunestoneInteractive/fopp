@@ -224,3 +224,15 @@ Exercises
             self.assertEqual(three_nums, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33], "Testing that three_nums was created correctly.")
 
       myTests().main()
+
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

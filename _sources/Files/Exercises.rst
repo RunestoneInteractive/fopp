@@ -76,30 +76,52 @@ The file below is ``emotion_words.txt``.
         .. tab:: Question
 
             .. actex:: ac9_9_1
-               :nocodelens:
-               :available_files: studentdata.txt
+                :nocodelens:
+                :available_files: studentdata.txt
 
-               The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The 
-               students name is the first thing on each line, followed by some exam scores.  
-               The number of scores might be different for each student.
+                The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The 
+                students name is the first thing on each line, followed by some exam scores.  
+                The number of scores might be different for each student.
 
-               .. raw:: html
+                .. raw:: html
 
-                   <pre id="studentdata.txt">
-                   joe 10 15 20 30 40
-                   bill 23 16 19 22
-                   sue 8 22 17 14 32 17 24 21 2 9 11 17
-                   grace 12 28 21 45 26 10
-                   john 14 32 25 16 89
-                   </pre>
+                    <pre id="studentdata.txt">
+                    joe 10 15 20 30 40
+                    bill 23 16 19 22
+                    sue 8 22 17 14 32 17 24 21 2 9 11 17
+                    grace 12 28 21 45 26 10
+                    john 14 32 25 16 89
+                    </pre>
 
-               Using the text file ``studentdata.txt`` write a program that prints out the names of
-               students that have more than six quiz scores. 
-               ~~~~
+                Using the text file ``studentdata.txt`` write a program that prints out the names of
+                students that have more than six quiz scores. 
+                ~~~~
 
-               # Hint: first see if you can write a program that just prints out the number of scores on each line
-               # Then, make it print the number only if the number is at least six
-               # Then, switch it to printing the name instead of the number
+                # Hint: first see if you can write a program that just prints out the number of scores on each line
+                # Then, make it print the number only if the number is at least six
+                # Then, switch it to printing the name instead of the number
+
+                ====
+                from unittest.gui import TestCaseGui
+                import re
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        names = []
+                        with open('studentdata.txt', 'r') as fh:
+                            for line in fh:
+                                values = line.split()
+                                name = values[0]
+                                scores = values[1:]
+                                if len(scores) > 6:
+                                    names.append(name)
+                        self.assertEqual(self.getOutput().rstrip(), '\n'.join(names), 'Checking names')
+                        for name in names:
+                            self.assertFalse(re.search(name, self.getEditorText()), 'Checking for hardcoding')
+                        if re.search(r'[^#]+= *open', self.getEditorText(), re.M):
+                            self.assertTrue(re.search(r'[^#]+\.close\(', self.getEditorText(), re.M), 'Checking for matching open and close statements')
+                        else:
+                            self.assertTrue(re.search(r'with[ (] *open', self.getEditorText(), re.M), 'Checking open statement')
+                myTests().main()
         
 
         .. tab:: Answer
@@ -165,3 +187,15 @@ The file below is ``emotion_words.txt``.
                      self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
 
                myTests().main()
+
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

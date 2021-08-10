@@ -323,8 +323,32 @@ Exercises
 
            .. actex:: ac11_14_8
 
-              Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
-              ~~~~
+                Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
+                ~~~~
+                import random as r
+                lst = []
+
+                for i in range(100):
+                    num = r.randint(1, 1000)
+                    lst.append(num)
+
+                def largest(lst):
+                    #your code here
+
+                ====
+                from unittest.gui import TestCaseGui
+                import re
+                class myTests(TestCaseGui):
+                    def testOne(self):
+                        output = self.getOutput().split('\n')
+                        editor = self.getEditorText().split('\n')
+                        float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
+                    
+                        self.assertEqual(largest(lst), max(lst), 'Checking for the list'+ str(lst))
+                        
+                        # hardcode check
+                        self.assertFalse(re.search(r'max', self.getEditorText()), 'Checking for max')
+                myTests().main()
 
 
         .. tab:: Answer
@@ -633,3 +657,14 @@ Exercises
                        self.assertEqual(is_rightangled(0.5,0.4,0.64031),True,"Tested is_rightangled on inputs of 0.5, 0.4 and 0.64031")
 
                myTests().main()
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

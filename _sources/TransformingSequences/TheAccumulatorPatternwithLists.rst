@@ -13,7 +13,7 @@
 The Accumulator Pattern with Lists
 ----------------------------------
 
-We can accumulate values into a list rather than accumulating a single numeric value. Consider, for 
+We can accumulate values into a list rather than accumulating a single numeric value. Consider, for
 example, the following program which transforms a list into a new list by squaring each of the values.
 
 .. activecode:: ac8_9_1
@@ -29,12 +29,12 @@ Here, we **initialize** the accumulator variable to be an empty list, on line 2.
 
 We **iterate** through the sequence (line 3). On each iteration we transform the item by squaring it (line 4).
 
-The **update** step appends the new item to the list which is stored in the accumulator variable 
-(line 5). The update happens using the .append(), which mutates the list rather than using a 
-reassignment. Instead, we could have written ``accum = accum + [x]``, or ``accum += [x]``. In either 
+The **update** step appends the new item to the list which is stored in the accumulator variable
+(line 5). The update happens using the .append(), which mutates the list rather than using a
+reassignment. Instead, we could have written ``accum = accum + [x]``, or ``accum += [x]``. In either
 case, we'd need to concatenate a list containing x, not just x itself.
 
-At the end, we have accumulated a new list of the same length as the original, but with each item 
+At the end, we have accumulated a new list of the same length as the original, but with each item
 transformed into a new item. This is called a mapping operation, and we will revisit it in a later chapter.
 
 Note how this differs from mutating the original list, as you saw in a previous section.
@@ -130,7 +130,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    :autograde: unittest
    :practice: T
 
-   **Challenge** Now do the same as in the previous problem, but do not create a new list. Overwrite the list ``numbs`` so that each of the original numbers are increased by 5.
+   Given the list of numbers, ``numbs``, modifiy the list ``numbs`` so that each of the original numbers are increased by 5.  Note this is not an accumulator pattern problem, but its a good review.
    ~~~~
    numbs = [5, 10, 15, 20, 25]
 
@@ -142,6 +142,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
       def testFive(self):
          self.assertEqual(numbs, [10, 15, 20, 25, 30], "Testing that numbs is assigned to correct values.")
+         self.assertNotIn("append", self.getEditorText(), "Do not use append")
 
    myTests().main()
 

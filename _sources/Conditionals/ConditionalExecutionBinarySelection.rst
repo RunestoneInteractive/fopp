@@ -14,21 +14,20 @@
 .. index:: heading, body, selection, if, else, pass, compound statement, conditional statement
    statement; if
    statement; pass
-    
+
 Conditional Execution: Binary Selection
 ---------------------------------------
 
-.. video:: binaryselection
-   :controls:
-   :thumb: ../_static/binaryselection.png
-
-   http://media.interactivepython.org/thinkcsVideos/binaryselection.mov
-   http://media.interactivepython.org/thinkcsVideos/binaryselection.webm
+.. youtube:: OQ8uakCJ6yE
+    :divid: binaryselection
+    :height: 315
+    :width: 560
+    :align: left
 
 
 In order to write useful programs, we almost always need the ability to check
 conditions and change the behavior of the program accordingly. **Selection statements**, sometimes
-also referred to as **conditional statements**, give us this ability. The simplest form of selection is the **if statement**.  
+also referred to as **conditional statements**, give us this ability. The simplest form of selection is the **if statement**.
 This is sometimes referred to as **binary selection** since there are two possible paths of execution.
 
 .. activecode:: ac7_6_1
@@ -181,7 +180,7 @@ There is no limit on the number of statements that can appear under the two clau
    Create a variable, ``b``, and assign it the value of ``15``. Then, write code to see if the value ``b`` is greater than that of ``a``. If it is, ``a``'s value should be multiplied by 2. If the value of ``b`` is less than or equal to ``a``, nothing should happen. Finally, create variable ``c`` and assign it the value of the sum of ``a`` and ``b``.
    ~~~~
    a = 20
-      
+
    =====
 
    from unittest.gui import TestCaseGui

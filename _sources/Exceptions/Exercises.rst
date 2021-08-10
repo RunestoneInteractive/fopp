@@ -20,6 +20,7 @@ Exercises
 
             .. actex:: assess_ac23_5_1
                :practice: T
+               :autograde: unittest
                :topics: Exceptions/intro-exceptions
 
                Below, we have provided buggy code. Add a try/except clause so the code runs without errors. If a blog post didn't get any likes, a 'Likes' key should be added to that dictionary with a value of 0.
@@ -30,7 +31,7 @@ Exercises
 
                total_likes = 0
 
-               for post in blog_posts: 
+               for post in blog_posts:
                    total_likes = total_likes + post['Likes']
 
                =====
@@ -43,12 +44,12 @@ Exercises
                        self.assertEqual(total_likes, 86, "Testing that total_likes has the correct value.")
                    def testB(self):
                         accum = 0
-                        for d in blog_posts: 
+                        for d in blog_posts:
                             if 'Likes' in d:
                                 accum +=1
-                        self.assertEqual(accum, 6, "Testing that blog_post dictionaries all have a 'Likes' key.")   
+                        self.assertEqual(accum, 6, "Testing that blog_post dictionaries all have a 'Likes' key.")
 
-               myTests().main()  
+               myTests().main()
 
 #.
 
@@ -58,6 +59,7 @@ Exercises
 
             .. actex:: assess_ac23_5_2
                :practice: T
+               :autograde: unittest
                :topics: Exceptions/intro-exceptions
 
                The code below assigns the 5th letter of each word in ``food`` to the new list ``fifth``. However, the code currently produces errors. Insert a try/except clause that will allow the code to run and produce of list of the 5th letter in each word. If the word is not long enough, it should not print anything out. Note: The ``pass`` statement is a null operation; nothing will happen when it executes.
@@ -67,7 +69,6 @@ Exercises
                fifth = []
 
                for x in food:
-
                    fifth.append(x[4])
 
                =====
@@ -78,5 +79,20 @@ Exercises
 
                    def testOneA(self):
                        self.assertEqual(fifth, ['o', 'k', 'w', 't', 'n'], "Testing that fifth is assigned to correct values.")
+
+               myTests().main()
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}
+
+=======
      
                myTests().main()

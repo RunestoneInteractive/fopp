@@ -17,4 +17,3 @@ Dictionaries
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
-   

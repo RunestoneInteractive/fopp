@@ -46,3 +46,15 @@ Exercises
                Repeat the above exercise but this time print 10 random numbers between 25 and 35.
                ~~~~
 
+
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

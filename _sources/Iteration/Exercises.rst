@@ -34,6 +34,25 @@ Exercises
 
         for p in prefixes:
             print(p + suffix)
+        ====
+        from unittest.gui import TestCaseGui
+        import re
+        class myTests(TestCaseGui):
+            def testOne(self):
+                # check the answer
+                self.assertTrue(re.search('Jack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Kack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Lack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Mack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Nack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Ouack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Pack', self.getOutput()), 'Checking answer.')
+                self.assertTrue(re.search('Quack', self.getOutput()), 'Checking answer.')
+            
+                # hardcode check
+                prefixes = ['J','K','L','M','N','Ou','P','Qu']
+                self.assertFalse(re.search(r'('+'|'.join([p+suffix for p in prefixes])+r')', self.getEditorText()), 'Checking for hardcoding')
+        myTests().main()
 
 
 .. question:: q6_11_2
@@ -42,6 +61,15 @@ Exercises
 
         Get the user to enter some text and print it out in reverse order.
         ~~~~
+
+        ====
+        from unittest.gui import TestCaseGui
+        import re
+        class myTests(TestCaseGui):
+            def testOne(self):
+                self.assertTrue(re.search(user_input[::-1], self.getOutput()), 'Checking answer.')
+            
+        myTests().main()
 
 .. question:: iter_ex_3
 
@@ -79,11 +107,28 @@ Exercises
 
    .. actex:: ex_3_4
 
-      Assume you have a list of numbers ``12, 10, 32, 3, 66, 17, 42, 99, 20``
+        Assume you have a list of numbers ``12, 10, 32, 3, 66, 17, 42, 99, 20``
 
-      a. Write a loop that prints each of the numbers on a new line.
-      b. Write a loop that prints each number and its square on a new line.
-      ~~~~
+        a. Write a loop that prints each of the numbers on a new line.
+        b. Write a loop that prints each number and its square on a new line.
+        ~~~~
+
+        ====
+        from unittest.gui import TestCaseGui
+        import re
+        class myTests(TestCaseGui):
+            def testOne(self):
+                _seq = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+                _seq.extend(["{:d} +{:d}".format(number, number**2) for number in _seq])
+                _seq = [str(s) for s in _seq]
+    
+                output = self.getOutput().split('\n')
+                for expected, line in zip(_seq,output):
+                    self.assertTrue(re.search(expected, line), 'Checking line')
+                outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
+                self.assertTrue(len(outer_loops)==2 and len(inner_loops)>=0, 'Checking for-statements')
+        myTests().main()
 
 .. question:: iter_ex_6
 
@@ -173,3 +218,13 @@ Exercises
           print(str(num_students) + "student(s) have entered the classroom")
 
 
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

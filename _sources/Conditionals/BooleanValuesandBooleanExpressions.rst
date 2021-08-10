@@ -23,12 +23,12 @@
 Boolean Values and Boolean Expressions
 --------------------------------------
 
-.. video:: booleanexpressions
-   :controls:
-   :thumb: ../_static/booleanexpressions.png
+.. youtube:: Y6CwThhquQs
+    :divid: booleanexpressions
+    :height: 315
+    :width: 560
+    :align: left
 
-   http://media.interactivepython.org/thinkcsVideos/booleanexpressions.mov
-   http://media.interactivepython.org/thinkcsVideos/booleanexpressions.webm
 
 The Python type for storing true and false values is called ``bool``, named
 after the British mathematician, George Boole. George Boole created *Boolean

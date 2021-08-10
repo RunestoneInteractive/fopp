@@ -237,6 +237,7 @@ Exercises
       from unittest.gui import TestCaseGui
       class myTests(TestCaseGui):
           def test_radius(self):
+              self.assertIn("radius", self.getEditorText(), 'radius variable')
               self.assertIn(str(3.14*radius**2)[:4], self.getOutput(), 'Checking answer.')
       myTests().main()
 
@@ -282,7 +283,8 @@ Exercises
    .. actex:: ex_2_12
 
       Write a program that will compute MPG for a car. Prompt the user to enter the number of
-      miles driven and the number of gallons used. Print a nice message with the answer.
+      miles driven and store it in a variable called `miles` and the number of gallons used stored in a variable `gallons`.
+      Print a nice message with the answer.
       ~~~~
 
       ====
@@ -379,10 +381,22 @@ Exercises
    .. parsonsprob:: pp_2_17
       :noindent:
 
-      Write a program that will convert table spoons to teaspons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
+      Write a program that will convert tablespoons to teaspoons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
       -----
       user_tablespoons = float(input("How many tablespoons should be converted?: "))
       =====
       teaspoons = user_tablespoons * 3
       =====
       print("Number of teaspoons: " + str(teaspoons))
+
+
+Contributed Exercises
+~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+    {{for q in questions:}}
+        <div class='oneq full-width'>
+            {{=XML(q['htmlsrc'], sanitize=False)}}
+        </div>
+    {{pass}}

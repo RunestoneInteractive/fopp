@@ -12,3 +12,7 @@ pavement.pyc
 *.orig
 \#*\#
 published
+sphinx-enki-info.txt
+sphinx_settings.json
+.history
+.nova

@@ -26,6 +26,16 @@ Before computers became digital, debugging could mean looking for insects impedi
 
 Nowadays, debugging doesn't involve bug guts all over your computer but it can still be just as frustrating. To cope with this frustration, this chapter will present some strategies to help you understand why the program you wrote does not behave as intended. 
 
+Many people think debugging is some kind of punishment for not being smart enough to write code correctly the first time.  But nobody does that, failure in programming is part of the deal.  Here's a fun video to keep in mind as you learn to program.  
+
+.. youtube:: c0bsKc4tiuY
+    :height: 315
+    :width: 560
+    :align: left
+
+CC BY–NC–ND 4.0 International `Ted.com <ted.com>`_
+
+
 Learning Goals
 --------------
 
