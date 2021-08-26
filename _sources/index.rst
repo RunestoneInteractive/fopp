@@ -40,10 +40,61 @@
    We also `welcome your support <https://runestone.academy/runestone/default/donate/10>`_ to help keep Runestone growing.
 
 
+
+
+
+
+
+Table of Contents
+:::::::::::::::::
+
+.. toctree::
+   :numbered:
+   :maxdepth: 4
+
+   GeneralIntro/toctree.rst
+   SimplePythonData/toctree.rst
+   Debugging/toctree.rst
+   PythonModules/toctree.rst
+   PythonTurtle/toctree.rst
+   Sequences/toctree.rst
+   Iteration/toctree.rst
+   Conditionals/toctree.rst
+   TransformingSequences/toctree.rst
+   Files/toctree.rst
+   Dictionaries/toctree.rst
+   Functions/toctree.rst
+   Tuples/toctree.rst
+   MoreAboutIteration/toctree.rst
+   AdvancedFunctions/toctree.rst
+   Sorting/toctree.rst
+   NestedData/toctree.rst
+   TestCases/toctree.rst
+   Exceptions/toctree.rst
+   Classes/toctree.rst
+   BuildingPrograms/toctree.rst
+   Inheritance/toctree.rst
+   AdvancedAccumulation/toctree.rst
+
+.. toctree::
+    :hidden:
+
+    Projects/toctree.rst
+
+Appendices
+::::::::::
+
+.. ignore
+   :caption: Appendices
+   :maxdepth: 1
+
+   Appendices/errorsAndDebug.rst
+   Appendices/PrecedenceTable.rst
+
 Project List
 ============
 
-This book is a "projects first" book, rather than teaching you language features we hope to give you a reason to learn the language in order to solve interesting problems.  These projects are not meant to *test* your knowledge they are here to give you an opportunity to *challenge yourself* and your teammates to learn new programming and problem solving skills.  Each project builds on the skills learned in the previous projects.  If you are brand new to programming you will want to start at the beginning, if you have some prior experience, you can dive in with any project that looks interesting to you.
+This book includes many projects.  These projects are not meant to *test* your knowledge they are here to give you an opportunity to *challenge yourself* and your teammates to learn new programming and problem solving skills.  Each project builds on the skills learned in the previous projects.  If you are brand new to programming you will want to start at the beginning, if you have some prior experience, you can dive in with any project that looks interesting to you.
 
 .. list-table::
     :header-rows: 1
@@ -147,66 +198,6 @@ This book is a "projects first" book, rather than teaching you language features
 
 
 
-
-
-
-
-Table of Contents
-:::::::::::::::::
-
-.. raw:: html
-
-   <ul>
-   <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
-   </ul>
-
-.. toctree::
-    :maxdepth: 1
-
-    FrontBackMatter/preface.rst
-
-.. toctree::
-   :numbered:
-   :maxdepth: 4
-
-   GeneralIntro/toctree.rst
-   SimplePythonData/toctree.rst
-   Debugging/toctree.rst
-   PythonModules/toctree.rst
-   PythonTurtle/toctree.rst
-   Sequences/toctree.rst
-   Iteration/toctree.rst
-   Conditionals/toctree.rst
-   TransformingSequences/toctree.rst
-   Files/toctree.rst
-   Dictionaries/toctree.rst
-   Functions/toctree.rst
-   Tuples/toctree.rst
-   MoreAboutIteration/toctree.rst
-   AdvancedFunctions/toctree.rst
-   Sorting/toctree.rst
-   NestedData/toctree.rst
-   TestCases/toctree.rst
-   Exceptions/toctree.rst
-   Classes/toctree.rst
-   BuildingPrograms/toctree.rst
-   Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst
-
-.. toctree::
-    :hidden:
-
-    Projects/toctree.rst
-
-Appendices
-::::::::::
-
-.. ignore
-   :caption: Appendices
-   :maxdepth: 1
-
-   Appendices/errorsAndDebug.rst
-   Appendices/PrecedenceTable.rst
 
 Acknowledgements
 ::::::::::::::::
