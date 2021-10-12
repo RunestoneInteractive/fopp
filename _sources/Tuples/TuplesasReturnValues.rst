@@ -36,7 +36,7 @@ For example, we could write a function that returns both the area and the circum
 
     print(circleInfo(10))
 
-Again, we can take advantage of packing to make the code look a little more readable on line 4
+Again, we can take advantage of packing to make the code look a little more readable on line 5 
 
 .. activecode:: ac12_3_2
 
