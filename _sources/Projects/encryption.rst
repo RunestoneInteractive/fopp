@@ -52,6 +52,7 @@ A cipher is a secret or disguised way of writing, and a caesar cipher is one of 
 
     Write a program that will encrypt the string referenced by the variable plaintext using the caesar cipher with a shift of 13.  Store the result in ciphertext.
     ~~~~
+
     plaintext = 'thequickbrownfoxjumpsoverthelazydog'
     ====
     from unittest.gui import TestCaseGui
@@ -71,6 +72,7 @@ The problem with the caesar cipher is that there are only 25 possible rotations.
 
     Write a program that will figure out
     ~~~~
+
     ciphertext = 'dzeevjfkrlezkvuwffksrcctcls'
 
 
@@ -99,6 +101,7 @@ Now to encrypt our message we just need to find the letter in the top row and re
 
     Write a program that will encrypt the plaintext.  Store your encrypted message in the variable ciphertext.
     ~~~~
+
     alphabet = 'abcdefghijklmnopqrstuvwxyz '
     key = 'mwgp bdzxrylacsokjfhtnueivq'
     plaintext = 'of shoes and ships and sealing wax of cabbages and kings'
@@ -117,6 +120,7 @@ Now to encrypt our message we just need to find the letter in the top row and re
 
     Now write a program program that will decrypt the ciphertext.  Store your decrypted message in the variable plaintext.
     ~~~~
+
     alphabet = 'abcdefghijklmnopqrstuvwxyz '
     key = 'mwgp bdzxrylacsokjfhtnueivq'
     ciphertext = 'hz qftcqumfqfzxcxcdqscqhz qf mqfzxcxcdquxhzqmllqzxfqaxdzh'
@@ -136,6 +140,7 @@ Now test yourself a bit further.
 
     Write a program that asks the user to enter a key (scrambled alphabet) and a message to encrypt or decrypt.  If you work with a partner one can work on decrypting and the other can work on encrypting.  Your program should output either the encrypted or decrypted message.  If you are the encrypter then email the encrypted message to your partner for them to decrypt.  If you are working alone then store the decrypted message in a variable to decrypt.
     ~~~~
+
     # your code here
 
 Password to Key (challenge)
@@ -152,6 +157,7 @@ Finally, only a few truly amazing people are going to remember a random ording o
 
     implement the algorithm outlined above assuming that the user entered 'password' for their password.  Store the key in a variable called 'key'.  For testing purposes we will assume that no spaces or punctuation are included in the alphabet or the password.
     ~~~~
+
     password = 'password'
     # your code here
     ====

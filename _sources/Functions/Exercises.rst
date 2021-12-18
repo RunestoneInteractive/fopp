@@ -53,6 +53,7 @@ Exercises
 
               Write a function that will return the number of digits in an integer.
               ~~~~
+
               def numDigits(n):
                   # your code here
 
@@ -103,6 +104,7 @@ Exercises
       
               Write a function that reverses its string argument.
               ~~~~
+
               def reverse(astring):
                   # your code here
 
@@ -191,6 +193,7 @@ Exercises
 
               Write a function that removes all occurrences of a given letter from a string.
               ~~~~
+
               def remove_letter(theLetter, theString):
                   # your code here
 
@@ -300,6 +303,7 @@ Exercises
    
               *Hint*: use the ``split`` and ``join`` methods.
               ~~~~
+
               def replace(s, old, new):
                   # your code here
 
@@ -325,6 +329,7 @@ Exercises
 
                 Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
                 ~~~~
+
                 import random as r
                 lst = []
 
@@ -387,7 +392,8 @@ Exercises
               Write a function ``sum_of_squares(xs)`` that computes the sum
               of the squares of the numbers in the list ``xs``.  For example,
               ``sum_of_squares([2, 3, 4])`` should return 4+9+16 which is 29:
-              ~~~~   
+              ~~~~
+
               def sum_of_squares(xs):
                   # your code here
 
@@ -413,6 +419,7 @@ Exercises
 
               Write a function to count how many odd numbers are in a list.
               ~~~~
+
               def countOdd(lst):
                   # your code here
 
@@ -468,6 +475,7 @@ Exercises
 
               Sum up all the even numbers in a list.
               ~~~~
+
               def sumEven(lst):
                   # your code here
 
@@ -494,6 +502,7 @@ Exercises
 
               Sum up all the negative numbers in a list.
               ~~~~
+
               def sumNegatives(lst):
                   # your code here
 
@@ -575,6 +584,7 @@ Exercises
 
                Write a function called ``is_even(n)`` that takes an integer as an argument and returns ``True`` if the argument is an **even number** and ``False`` if it is **odd**.
                ~~~~
+
                def is_even(n):
                    #your code here
 
@@ -640,6 +650,7 @@ Exercises
                        ...
 
                ~~~~
+
                def is_rightangled(a, b, c):
                    # your code here
 
