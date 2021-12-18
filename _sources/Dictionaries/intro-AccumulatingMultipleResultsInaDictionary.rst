@@ -286,12 +286,13 @@ Now, here are some additional problems to try.
 
    .. tab:: Question
 
-      **2.** Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
-
       .. activecode:: ac10_5_8
          :language: python
          :autograde: unittest
          :practice: T
+
+         Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
+         ~~~~
 
          sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
