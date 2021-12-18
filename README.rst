@@ -1,6 +1,9 @@
 Foundations of Python Programming
 =================================
 
+**Note** the ac101 branch has been merged to master.
+
+
 Programming is not a "spectator sport".  It is something you do,
 something you participate in. It would make sense, then,
 that the book you use to learn programming should allow you to be active.
@@ -35,6 +38,4 @@ If you are looking for the version of the source used on the Runestone Academy s
 Helping
 =======
 
-If you want to do bug fixes and are looking for the version of this book that is deployed on Runestone.Academy, you can find that code by changing to the ``ac101`` branch after you have cloned this repository.
-
-We welcome PR to fix typos, unclear wording, incorrect results, or anything else that needs fixing.  The book has been used by many many people, so if you think that an answer is incorrect, please make sure you double check your work before submitting an issue or making a PR.
+We welcome PRs to fix typos, unclear wording, incorrect results, or anything else that needs fixing. We would especially welcome additional unit tests for existing programming exercises! The book has been used by many many people, so if you think that an answer is incorrect, please make sure you double check your work before submitting an issue or making a PR.
