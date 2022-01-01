@@ -231,8 +231,8 @@ Contributed Exercises
 
 .. raw:: html
 
-    {{for q in questions:}}
+    {% for q in questions: %}
         <div class='oneq full-width'>
-            {{=XML(q['htmlsrc'], sanitize=False)}}
+            {{ q['htmlsrc']|safe }}
         </div>
-    {{pass}}
+    {% endfor %}
