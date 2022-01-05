@@ -92,6 +92,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    2. For each word in the list ``verbs``, add an -ing ending. Save this new list in a new list, ``ing``.
    ~~~~
+
    verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
 
    =====
@@ -112,6 +113,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    Given the list of numbers, ``numbs``, create a new list of those same numbers increased by 5. Save this new list to the variable ``newlist``.
    ~~~~
+
    numbs = [5, 10, 15, 20, 25]
 
    =====
@@ -132,6 +134,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    Given the list of numbers, ``numbs``, modifiy the list ``numbs`` so that each of the original numbers are increased by 5.  Note this is not an accumulator pattern problem, but its a good review.
    ~~~~
+
    numbs = [5, 10, 15, 20, 25]
 
    =====
@@ -153,6 +156,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    For each number in ``lst_nums``, multiply that number by 2 and append it to a new list called ``larger_nums``.
    ~~~~
+
    lst_nums = [4, 29, 5.3, 10, 2, 1817, 1967, 9, 31.32]
 
    =====

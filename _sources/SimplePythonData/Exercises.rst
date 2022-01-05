@@ -70,6 +70,7 @@ Exercises
 
       What is the order of the arithmetic operations in the following expression.  Evaluate the expression by hand and then check your work.
       ~~~~
+
       2 + (3 - 1) * 10 / 5 * (2 + 3)
 
 .. question:: spd_ex_5
@@ -231,6 +232,7 @@ Exercises
 
       Write a program that will compute the area of a circle. Prompt the user to enter the radius and save it to avariable called ``radius``. Print a nice message back to the user with the answer.
       ~~~~
+
       pi = 3.14
 
       ====

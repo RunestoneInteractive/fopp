@@ -217,23 +217,25 @@ then incremented.
 
    .. tab:: Question
 
-      The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
-      to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
-      use the same format as the original program above.
-
       .. activecode:: ac10_5_6
          :language: python
          :autograde: unittest
          :practice: T         
 
+         The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
+         to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
+         use the same format as the original program above.
+
+         ~~~~
+
          f = open('scarlet.txt', 'r')
          txt = f.read()
          letter_counts = {} 
          for c in txt:
-            if c not in letter_counts:
-               letter_counts[c] = 0
+             if c not in letter_counts:
+                 letter_counts[c] = 0
             
-            letter_counts[c] = letter_counts[c] + 1
+             letter_counts[c] = letter_counts[c] + 1
 
          # Write a loop that prints the letters and their counts
          =====
@@ -259,7 +261,7 @@ then incremented.
       Here's a for loop that will do the job::
 
          for c in letter_counts.keys():
-            print(c + ": " + str(letter_counts[c]) + " occurrences")
+             print(c + ": " + str(letter_counts[c]) + " occurrences")
 
 
 In the solution to the problem above, note that only those letters that actually occur in the text are shown. Some
@@ -284,12 +286,13 @@ Now, here are some additional problems to try.
 
    .. tab:: Question
 
-      **2.** Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
-
       .. activecode:: ac10_5_8
          :language: python
          :autograde: unittest
          :practice: T
+
+         Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
+         ~~~~
 
          sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
