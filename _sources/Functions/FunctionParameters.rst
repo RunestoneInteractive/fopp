@@ -88,7 +88,7 @@ the value that was 'passed into' the function.
    {{hello2("Nick")}}{{s = "Nick"}} # bind actual parameter to formal parameter
    print("Hello " + {{s}}{{"Nick"}})
    {{print("Hello " + "Nick")     #prints out "hello Nick"}}{{print("Glad to meet you")   #prints out "Glad to meet you"}}
-   {{print("Glad to meet you")   #prints out "Glad to meet you"}}{{# the function is finished}}
+   {{print("Glad to meet you")   #prints out "Glad to meet you"}}{{ # the function is finished}}
 
 To get a feel for that, let's invoke hello2 using some more complicated expressions. Try some of your own, too.
 
