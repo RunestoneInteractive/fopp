@@ -173,7 +173,7 @@ won't be useful but we will still need to count.
    :autograde: unittest
    :practice: T
 
-   Write code to create a list of integers from 0 through 52 and assign that list to the variable ``numbers``. You should use a special Python function -- do not type out the whole list yourself. HINT: You can do this in one line of code!
+   Write code to create a list of integers from 0 through 52 and assign that list to the variable ``numbers``. You should use the Python range function and don't forget to covert the result to a list -- do not type out the whole list yourself.
    ~~~~
 
    =====
@@ -183,7 +183,7 @@ won't be useful but we will still need to count.
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(numbers, range(53), "Testing that numbers is a list that contains the correct elements.")
+         self.assertEqual(numbers, list(range(53)), "Testing that numbers is a list that contains the correct elements.")
 
    myTests().main()
 
