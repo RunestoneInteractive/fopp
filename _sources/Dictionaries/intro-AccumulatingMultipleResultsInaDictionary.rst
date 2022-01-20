@@ -326,12 +326,13 @@ Now, here are some additional problems to try.
 
    .. tab:: Question
 
-      **3.** Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
-
       .. activecode:: ac10_5_9
          :language: python
          :autograde: unittest
          :practice: T
+
+         Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
+         ~~~~
 
          stri = "what can I do"
 
