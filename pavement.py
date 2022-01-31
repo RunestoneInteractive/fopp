@@ -51,9 +51,6 @@ options(
                        'dburl': 'postgresql://user:password@localhost/runestone',
                        'default_ac_lang': 'python',
                        'basecourse': 'fopp',
-                       'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-                       'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-                       'proxy_uri_files': '/jobe/index.php/restapi/files/',
                        'downloads_enabled': 'false',
                        'enable_chatcodes': 'false',
                        'allow_pairs': 'false'
