@@ -209,10 +209,10 @@ The Python interpreter looks for an instance variable or method called ``chasing
    :feedback_d: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. That constructor method sets the instance variables name, hunger, boredom, and sounds.
    :correct: d
    
-   After you run the code, ``new_cat = Cheshire("Pumpkin")``, how many instance variables exist for the new_cat instance of Cheshire?
+   After you run the code, ``new_cat = Cheshire("Cat1")``, how many instance variables exist for the new_cat instance of Cheshire?
 
 .. mchoice:: question_inheritance_2
-   :answer_a: We are Siamese if you please. We are Siamese if you don’t please.
+   :answer_a: I am a purrrfect creature.
    :answer_b: Error
    :answer_c: Pumpkin
    :answer_d: Nothing. There’s no print statement.
@@ -226,18 +226,18 @@ The Python interpreter looks for an instance variable or method called ``chasing
 
    .. code-block:: python
 
-     new_cat = Cheshire("Pumpkin”)
+     new_cat = Cheshire("Cat1”)
      class Siamese(Cat):
        def song(self):
-         print("We are Siamese if you please. We are Siamese if you don’t please.")
-     another_cat = Siamese("Lady")
+         print("I am a purrrfect creature.")
+     another_cat = Siamese("Cat2")
      another_cat.song()
 
 
 .. mchoice:: question_inheritance_3
    :answer_a: We are Siamese if you please. We are Siamese if you don’t please.
    :answer_b: Error
-   :answer_c: Pumpkin
+   :answer_c: Cat1
    :answer_d: Nothing. There’s no print statement.
    :feedback_a: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
    :feedback_b: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
@@ -249,11 +249,11 @@ The Python interpreter looks for an instance variable or method called ``chasing
 
    .. code-block:: python
 
-     new_cat = Cheshire("Pumpkin”)
+     new_cat = Cheshire("Cat1”)
      class Siamese(Cat):
        def song(self):
-         print("We are Siamese if you please. We are Siamese if you don’t please.")
-     another_cat = Siamese("Lady")
+         print("I am a purrrfect creature.")
+     another_cat = Siamese("Cat2")
      new_cat.song()
 
 
