@@ -112,7 +112,7 @@ The user will have a list of pets, each with a name. The user can issue a comman
 
 No matter what the user does, with each command entered, the clock ticks for all their pets. Watch out, if you have too many pets, you won't be able to keep them all satisfied!
 
-.. activecode:: tamogotchi_3:
+.. activecode:: tamogotchi_3
     :nocanvas:
     :include: tamagotchi_1
 
