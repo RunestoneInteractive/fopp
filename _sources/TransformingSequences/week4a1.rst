@@ -663,7 +663,7 @@ Chapter Assessment - Accumulator Pattern
     class myTests(TestCaseGui):
 
         def testOne(self):
-           self.assertEqual(num_words_list, [len(x) for x in original_str.split()], "Testing whether num_words_list has the correct value")
+           self.assertEqual(num_words_list, list([len(x) for x in original_str.split()]), "Testing whether num_words_list has the correct value")
            self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code.")
 
     myTests().main()
