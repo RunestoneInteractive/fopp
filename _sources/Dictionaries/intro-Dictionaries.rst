@@ -148,12 +148,14 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
 
     .. tab:: Question
 
-        **5.** Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
-
         .. activecode:: ac10_3_6
             :language: python
             :autograde: unittest
             :practice: T
+
+            Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
+            ~~~~
+
 
             places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
 
