@@ -56,7 +56,7 @@ chapter dedicated to that topic.
 
 .. mchoice:: question4_5_1
    :answer_a: Attempting to divide by 0.
-   :answer_b: Forgetting a colon at the end of a statement where one is required.
+   :answer_b: Forgetting a right-parenthesis ) when invoking a function.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
    :correct: a
    :feedback_a: Python cannot reliably tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value—you cannot know what value the user will enter before you run the program).
