@@ -217,15 +217,15 @@ then incremented.
 
    .. tab:: Question
 
-      The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
-      to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
-      use the same format as the original program above.
-
       .. activecode:: ac10_5_6
          :language: python
          :autograde: unittest
          :practice: T         
 
+         The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
+         to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
+         use the same format as the original program above.
+         ~~~~
          f = open('scarlet.txt', 'r')
          txt = f.read()
          letter_counts = {} 
@@ -284,12 +284,13 @@ Now, here are some additional problems to try.
 
    .. tab:: Question
 
-      **2.** Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
-
       .. activecode:: ac10_5_8
          :language: python
          :autograde: unittest
          :practice: T
+
+         Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
+         ~~~~
 
          sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
@@ -323,12 +324,13 @@ Now, here are some additional problems to try.
 
    .. tab:: Question
 
-      **3.** Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
-
       .. activecode:: ac10_5_9
          :language: python
          :autograde: unittest
          :practice: T
+
+         Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
+         ~~~~
 
          stri = "what can I do"
 
