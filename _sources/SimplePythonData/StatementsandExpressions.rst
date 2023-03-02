@@ -112,16 +112,35 @@ If a function call expression is a sub-expression of some more complicated expre
     y = 7
     add(square(y), square(x))
     ~~~~
-    {{add}}{{-add-}}(square(y), square(x)) ## add is a function so eval its arguments
-    -add-({{square}}{{-square-}}(y), square(x)) ## square is a function so eval its arguments
-    -add-(-square-({{y}}{{7}}), square(x)) 
-    -add-({{-square-(7)}}{{49}}, square(x))
-    -add-(49, {{square}}{{-square-}}(x)) ## square is a function so eval its arguments
-    -add-(49, -square-({{x}}{{5}}))
-    -add-(49, {{-square-(5)}}{{25}})
-    {{-add-(49, 25)}}{{74}}
+    {{add}}{{-add-}}(square(y), square(x)) ## look up variable add
+    -add-({{square}}{{-square-}}(y), square(x)) ## add is a function so eval its arguments; start by looking up variable square
+    -add-(-square-({{y}}{{7}}), square(x)) ## square is a function so eval its arguments; look up variable y
+    -add-({{-square-(7)}}{{49}}, square(x)) ## run square function, passing in 7, getting back 49
+    -add-(49, {{square}}{{-square-}}(x)) ## look up variable square (again)
+    -add-(49, -square-({{x}}{{5}})) ## square is a function so eval its arguments; look up variable x
+    -add-(49, {{-square-(5)}}{{25}}) ## run square function, passing in 5, getting back 25
+    {{-add-(49, 25)}}{{74}} ## run add function
 
-To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that's something that will come later in the course.
+To start giving you some practice in reading and understanding complicated expressions, try doing the two Parsons problems below. Be careful not to indent any of the lines of code; that's something that will come later in the course.
+
+.. parsonsprob:: pp2_10_1a
+
+   Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing `square(sub(1+y, x))`.
+
+   -----
+   look up the variable square to get the function object
+   =====
+   look up the variable sub to get the function object
+   =====
+   look up the variable y to get 3
+   =====
+   add 1 and 3 to get 4
+   =====
+   look up the variable x to get 2
+   =====
+   run the sub function, passing inputs 4 and 2, returning the value 2
+   =====
+   run the square function on input 2, returning the value 4
 
 
 .. parsonsprob:: pp2_10_1
