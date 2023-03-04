@@ -49,7 +49,6 @@ The questions in the list above are the way you would probably think of them whe
 
     Compute the total amount of money loaned and store it in the variable ``loan_total``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -70,7 +69,6 @@ The questions in the list above are the way you would probably think of them whe
 
     Compute the average amount of money loaned and store it in the variable ``loan_average``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -90,7 +88,6 @@ The questions in the list above are the way you would probably think of them whe
 
     Store the amount of the minimum loan in  ``min_loan`` and the amount of the maximum loan in ``max_loan`` Then, store the name of the country that received the largest loan in ``max_country`` and the smallest loan in ``min_country``  Hint: ``max`` and ``min`` are built in Python functions that you can use to find the minimum value or maximum value in any sequence.
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -117,7 +114,6 @@ The questions in the list above are the way you would probably think of them whe
 
     Compute the average number of lenders per loan and store it in a variable ``average_lenders``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -138,7 +134,6 @@ The questions in the list above are the way you would probably think of them whe
 
     Compute the total number of loans made to the Philippines and store it in a variable ``philippines_count``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -159,7 +154,6 @@ The questions in the list above are the way you would probably think of them whe
 
     For each unique country name, print a line that shows the name of the country and then the number of loans made in that country, like this: "Guatemala 1"
     ~~~~
-
     unique_countries = ['Guatemala', 'Paraguay', 'Tajikistan', 'Kenya', 'Azerbaijan', 'El Salvador', 'Bolivia', 'Ecuador', 'Georgia', 'Philippines', 'Uganda', 'Madagascar', 'Nicaragua', 'Jordan']
 
     # Your code here
@@ -194,7 +188,6 @@ Level 2 Questions
 
     The index positions for the Phillipines are  ``[5, 6, 9, 11, 13, 14, 22]`` Use that information to compute the average loan amount for the Phillipines.  Store your result in the variable ``p_average``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -219,7 +212,6 @@ Level 2 Questions
 
     What is the name of the country with the loan that took the longest to raise?  Store your result in the variable ``longest_to_fund``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -239,7 +231,6 @@ Level 2 Questions
 
     What is the arithmetic mean of the time / dollar it takes to fund a loan?  The arithmetic mean is the average of the individual time/dollar calculations, not the average of the sum of time divided by the sum of dollar amounts. Store your result in the variable ``a_mean``
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -273,7 +264,6 @@ Don't let the fancy math get you down the variance is just the sum of the square
 
     Calculate the standard deviation of the loan_amount variable and store the variance in loan_var and the standard deviation in ``loan_stdev``.
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -310,7 +300,6 @@ Historically the pearson correlation coefficient has been used in recommender sy
 
     Calculate the pearson correlation between the loan_amount and the num_lenders_total or between time_to_raise and the loan_amount or between num_lenders_total and time_to_raise.  If you divide up the class you can compare values to see which pair has the strongest correlation.
     ~~~~
-
     loan_amount_num_lenders = 0
     loan_amount_ttr = 0
     num_lenders_ttr = 0

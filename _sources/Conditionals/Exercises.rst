@@ -131,7 +131,6 @@ Exercises
                     
                 Above are some examples of what the output should be for various inputs.
                 ~~~~
-
                 years = [1967, 1900, 1400, 1628, 1701, 1217, 1359, 1300, 2000, 1054,
                 1724, 1000, 1800, 1100, 2100, 1023, 1600, 1500, 1358, 1160,
                 1700, 1744, 2009, 1200]
@@ -232,7 +231,6 @@ Exercises
 
                 Provided are the lengths of two sides of a right-angled triangle. Assign the length of the hypotenuse the the variable ``hypo_len``.  (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
                 ~~~~
-
                 side1 = 3
                 side2 = 4
 

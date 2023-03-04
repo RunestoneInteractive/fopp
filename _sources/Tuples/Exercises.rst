@@ -24,7 +24,6 @@ Exercises
 
               Fill in the left side of line 7 so that the following code runs without error
               ~~~~
-
               def circleInfo(r):
                   """ Return (circumference, area) of a circle of radius r """
                   c = 2 * 3.14159 * r
@@ -45,7 +44,6 @@ Exercises
 
               Use a for loop to print out the last name, year of birth, and city for each of the people. (There are multiple ways you could do this. Try out some code and see what happens!)
               ~~~~
-
               julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
               claude = ("Claude", "Shannon", 1916, "A Mathematical Theory of Communication", 1948, "Mathematician", "Petoskey, Michigan")
               alan = ("Alan", "Turing", 1912, "Computing machinery and intelligence", 1950, "Mathematician", "London, England")

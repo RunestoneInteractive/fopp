@@ -193,7 +193,6 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 
     Given a list of numbers compute the counts for each bucket as represented by the bucket list. (get it!)  Assume that the numbers can be in the range from 0 -- 100. Do not cheat and count these manually.  Tell yourself that test_numbers has ten thousand numbers on it.
     ~~~~
-
     test_numbers = [0,1,1,9,10,20,25,29,99,99,99, 74, 75, 76, 80, 89, 70, 100]
     bucket_list = [0,0,0,0,0,0,0,0,0,0]
 
@@ -224,7 +223,6 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 
     Now repeat what you did before, but use the ``loan_amount`` list.  This time it is a little more complicated because you will need to create your own bucket list, and the numbers are spread out over a much larger range that does not start at 0.  You don't want to waste any bins so you need to evenly divide the spread of the numbers in the ``loan_amount`` list.  Note:  This is a good problem for learning about boundary conditions.
     ~~~~
-
     # Your code here
     ====
     from unittest.gui import TestCaseGui
@@ -252,7 +250,6 @@ Calculating the buckets is the hard part of this project, the rest of the code y
 
     Finally now put it all together and draw a histogram of the ``loan_amount`` data with 10 buckets.
     ~~~~
-
     # Your code here
 
 

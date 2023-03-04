@@ -40,7 +40,6 @@ Exercises
                #. ``6 % 6``
                #. ``0 % 7``
                ~~~~
-
                print(5**2)
 
         .. tab:: Answer
@@ -70,7 +69,6 @@ Exercises
 
       What is the order of the arithmetic operations in the following expression.  Evaluate the expression by hand and then check your work.
       ~~~~
-
       2 + (3 - 1) * 10 / 5 * (2 + 3)
 
 .. question:: spd_ex_5
@@ -159,7 +157,6 @@ Exercises
 
       Add parentheses to the expression ``6 * 1 - 2`` to change its value from 4 to -6.
       ~~~~
-
       print(6 * 1 -2)
       ====
       from unittest.gui import TestCaseGui
@@ -188,7 +185,6 @@ Exercises
                 ``t``, that the money will be compounded for.  Calculate and print the final
                 amount after ``t`` years.
                 ~~~~
-
                 P = 10000
                 n = 12
                 r = 0.08
@@ -232,7 +228,6 @@ Exercises
 
       Write a program that will compute the area of a circle. Prompt the user to enter the radius and save it to avariable called ``radius``. Print a nice message back to the user with the answer.
       ~~~~
-
       pi = 3.14
 
       ====

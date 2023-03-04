@@ -28,7 +28,6 @@ Exercises
         Of course, that's not quite right because Ouack and Quack are misspelled.
         Can you fix it?
         ~~~~
-
         prefixes = "JKLMNOPQ"
         suffix = "ack"
 

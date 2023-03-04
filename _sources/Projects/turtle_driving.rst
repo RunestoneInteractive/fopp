@@ -34,7 +34,6 @@ Don't worry about making mistakes, it is normal and happens to even the most exp
 
     Using the above example to get started create a turtle and draw an interesting picture.
     ~~~~
-
     import turtle
 
     # Your code here

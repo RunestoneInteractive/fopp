@@ -113,7 +113,6 @@ See if you can figure out what caused them.
 
            Find and fix the error in the following code.
            ~~~~
-
            current_time_str = input("What is the current time (in hours 0-23)?")
            wait_time_str = input("How many hours do you want to wait"
 
@@ -170,7 +169,6 @@ something. In this case a right parenthesis.
 
            Find and fix the error in the following code.
            ~~~~
-
            current_time_str = input("What is the "current time" (in hours 0-23)?")
            wait_time_str = input("How many hours do you want to wait")
 

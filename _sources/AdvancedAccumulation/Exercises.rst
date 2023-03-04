@@ -26,7 +26,6 @@ Exercises
 
               Write equivalent code using map instead of the manual accumulation below and assign it to the variable ``test``.
               ~~~~
-
               things = [3, 5, -4, 7]
    
               accum = []
@@ -56,7 +55,6 @@ Exercises
 
               Use manual accumulation to define the lengths function below.
               ~~~~
-
               def lengths(strings):
                   """lengths takes a list of strings as input and returns a list of numbers that are the lengths
                   of strings in the input list. Use manual accumulation!"""
@@ -85,7 +83,6 @@ Exercises
 
               Now define lengths using map instead.
               ~~~~
-
               def lengths(strings):
                   """lengths takes a list of strings as input and returns a list of numbers that are the lengths
                    of strings in the input list. Use map!"""

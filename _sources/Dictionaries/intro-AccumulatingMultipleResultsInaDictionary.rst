@@ -227,7 +227,6 @@ then incremented.
          use the same format as the original program above.
 
          ~~~~
-
          f = open('scarlet.txt', 'r')
          txt = f.read()
          letter_counts = {} 
@@ -293,7 +292,6 @@ Now, here are some additional problems to try.
 
          Split the string ``sentence`` into a list of words, then create a dictionary named ``word_counts`` that contains each word and the number of times it occurs.
          ~~~~
-
          sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
          =====
@@ -333,7 +331,6 @@ Now, here are some additional problems to try.
 
          Create a dictionary called ``char_d``. The keys of the dictionary should be each character in ``stri``, and the value for each key should be how many times the character occurs in the string.
          ~~~~
-
          stri = "what can I do"
 
          =====

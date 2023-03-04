@@ -28,7 +28,6 @@ Exercises
                Predict what will print out from the following code. If a line causes a run-time error, comment it out and see whether the rest of your predictions were correct.
 
                ~~~~
-
                d = {'apples': 15, 'grapes': 12, 'bananas': 35}
                print(d['banana'])
                d['oranges'] = 20
@@ -127,7 +126,6 @@ Exercises
 
                      Write a program that finds the most used 7 letter word in scarlet3.txt.
                      ~~~~
-
                      f = open('scarlet3.txt', 'r')
 
             .. tab:: Answer

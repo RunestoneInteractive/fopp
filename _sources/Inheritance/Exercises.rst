@@ -34,7 +34,6 @@ Here's *all* the code we just saw for our new and improved game, with a few addi
 
               #. Add your own new pets and modifications as you like -- remember, to use them in the game, you'll also have to alter the ``whichtype`` function so they can be used in game play. Otherwise, you'll have different classes that may work just fine, but you won't see the effects in the game, since the code that actually makes the game play is found in the second half of the provided code (look for the ``while`` loop!).
               ~~~~
-
               from random import randrange
 
               class Pet():

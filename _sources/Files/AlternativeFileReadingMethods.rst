@@ -89,7 +89,6 @@ until later in this course. We don't need them for handling data from files.
 
    1. Using the file ``school_prompt2.txt``, find the number of characters in the file and assign that value to the variable ``num_char``.
    ~~~~
-
    =====
 
    from unittest.gui import TestCaseGui
@@ -127,7 +126,6 @@ until later in this course. We don't need them for handling data from files.
 
    2. Find the number of lines in the file, ``travel_plans2.txt``, and assign it to the variable ``num_lines``.
    ~~~~
-
    =====
 
    from unittest.gui import TestCaseGui
