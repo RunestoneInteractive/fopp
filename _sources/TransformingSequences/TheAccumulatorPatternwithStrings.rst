@@ -88,6 +88,7 @@ reversing the whole string. Try it in codelens if you're having trouble envision
 
    1. Accumulate all the characters from the string in the variable ``str1`` into a list of characters called ``chars``.
    ~~~~
+
    str1 = "I love python"
    # HINT: what's the accumulator? That should go here.
       
