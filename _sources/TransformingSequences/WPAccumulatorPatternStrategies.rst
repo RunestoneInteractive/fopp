@@ -199,7 +199,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_a: Incorrect, there should not be an accumulator variable.
    :feedback_b: Incorrect, there should not be an accumulator variable.
    :feedback_c: Incorrect, there should not be an accumulator variable.
-   :feedback_d: Correct, because this prompt does not suggeset an accumulator pattern
+   :feedback_d: Correct, because this prompt does not suggest an accumulator pattern
    :correct: d
    :practice: T
 
