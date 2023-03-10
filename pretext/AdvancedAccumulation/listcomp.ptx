@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<section xml:id="advanced-accumulation_list-comprehensions">
+  <title>List Comprehensions</title>
+  <p>Python provides an alternative way to do <c>map</c> and <c>filter</c> operations, called a <term>list comprehension</term>.
+            Many programmers find them easier to understand and write. List comprehensions are concise ways to create lists from other
+            lists. The general syntax is:</p>
+  <pre>[&lt;transformer_expression&gt; for &lt;loop_var&gt; in &lt;sequence&gt; if &lt;filtration_expression&gt;]</pre>
+  <p>where the if clause is optional.  For example,</p>
+  <program xml:id="ac20_4_1" interactive="activecode" language="python">
+    <input>
+things = [2, 5, 9]
+
+yourlist = [value * 2 for value in things]
+
+print(yourlist)
+        </input>
+  </program>
+  <p>The transformer expression is <c>value * 2</c>. The item variable is <c>value</c> and the sequence is <c>things</c>. This is an alternative way
+            to perform a mapping operation. As with <c>map</c>, each item in the sequence is transformed into an item in the new list.
+            Instead of the iteration happening automatically, however, we have adopted the syntax of the for loop which may make it
+            easier to understand.</p>
+  <p>Just as in a regular for loop, the part of the statement <c>for value in things</c> says to execute some code once for each
+            item in things. Each time that code is executed, <c>value</c> is bound to one item from <c>things</c>. The code that is executed
+            each time is the transformer expression, <c>value * 2</c>, rather than a block of code indented underneath the for
+            statement. The other difference from a regular for loop is that each time the expression is evaluated, the resulting value
+            is appended to a list. That happens automatically, without the programmer explicitly initializing an empty list or
+            appending each item.</p>
+  <p>The <c>if</c> clause of a list comprehension can be used to do a filter operation. To perform a pure filter operation, the
+            expression can be simply the variable that is bound to each item. For example, the following list comprehension will keep
+            only the even numbers from the original list.</p>
+  <program xml:id="ac20_4_2" interactive="activecode" language="python">
+    <input>
+def keep_evens(nums):
+    new_list = [num for num in nums if num % 2 == 0]
+    return new_list
+
+print(keep_evens([3, 4, 6, 7, 0, 1]))
+        </input>
+  </program>
+  <p>You can also combine <c>map</c> and <c>filter</c> operations by chaining them together, or with a single list comprehension.</p>
+  <program xml:id="ac20_4_3" interactive="activecode" language="python">
+    <input>
+things = [3, 4, 6, 7, 0, 1]
+#chaining together filter and map:
+# first, filter to keep only the even numbers
+# double each of them
+print(map(lambda x: x*2, filter(lambda y: y % 2 == 0, things)))
+
+# equivalent version using list comprehension
+print([x*2 for x in things if x % 2 == 0])
+        </input>
+  </program>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question21_4_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+alist = [4,2,8,6,5]
+blist = [num*2 for num in alist if num%2==1]
+print(blist)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4,2,8,6,5]</p>
+        </statement>
+        <feedback>
+          <p>Items from alist are doubled before being placed in blist.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[8,4,16,12,10]</p>
+        </statement>
+        <feedback>
+          <p>Not all the items in alist are to be included in blist. Look at the if clause.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>The result needs to be a list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[10]</p>
+        </statement>
+        <feedback>
+          <p>Yes, 5 is the only odd number in alist. It is doubled before being placed in blist.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac21_4_4">
+    <statement>
+      <p><term>2.</term> The for loop below produces a list of numbers greater than 10. Below the given code, use list comprehension to accomplish the same thing. Assign it the the variable <c>lst2</c>. Only one line of code is needed.</p>
+    </statement>
+    <program xml:id="ac21_4_4_editor" interactive="activecode" language="python">
+      <input>
+
+L = [12, 34, 21, 4, 6, 9, 42]
+lst = []
+for x in L:
+    if x &gt; 10:
+        lst.append(x)
+print(lst)
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFourA(self):
+      self.assertEqual(lst2, [12, 34, 21, 42], "Testing that lst2 is assigned to correct values")
+      self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac21_4_5">
+    <statement>
+      <p><term>3.</term> Write code to assign to the variable <c>compri</c> all the values of the key <c>name</c> in any of the sub-dictionaries in the dictionary <c>tester</c>. Do this using a list comprehension.</p>
+    </statement>
+    <program xml:id="ac21_4_5_editor" interactive="activecode" language="python">
+      <input>
+
+tester = {'info': [{"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science"},{'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science'}, {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology'}, {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science'}, {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History'}, {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior'}]}
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(compri), sorted(['Lauren', 'Ayo', 'Kathryn', 'Nick', 'Gladys', 'Adam']), "Testing that compri has the correct values.")
+      self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

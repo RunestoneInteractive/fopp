@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_accumulating-the-best-key">
+  <title>Accumulating the Best Key</title>
+  <p>Now what if we want to find the <em>key</em> associated with the maximum value? It would be nice to just find
+            the maximum value as above, and then look up the key associated with it, but dictionaries don't work
+            that way. You can look up the value associated with a key, but not the key associated with a value. (The
+            reason for that is there may be more than one key that has the same value).</p>
+  <p>The trick is to have the accumulator keep track of the best key so far instead of the best value so far.
+            For simplicity, let's assume that there are at least two keys in the dictionary. Then, similar to our
+            first version of computing the max of a list, we can initialize the best-key-so-far to be the first key,
+            and loop through the keys, replacing the best-so-far whenever we find a better one.</p>
+  <p>In the exercise below, we have provided skeleton code. See if you can fill it in. An answer is provided,
+            but you'll learn more if you try to write it yourself first.</p>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+      <program xml:id="answer10_7_1" language="python">
+        <input>
+d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
+
+ks = d.keys()
+best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
+for k in ks:
+    if d[k] &gt; d[best_key_so_far]:
+        best_key_so_far = k
+
+print("key " + best_key_so_far + " has the highest value, " + str(d[best_key_so_far]))
+        </input>
+      </program>
+    </solution>
+  </exercise>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <exercise label="ac10_7_2">
+    <statement>
+      <p><term>1.</term> Create a dictionary called <c>d</c> that keeps track of all the characters in the string <c>placement</c> and notes how many times each character was seen. Then, find the key with the lowest value in this dictionary and assign that key to <c>min_value</c>.</p>
+    </statement>
+    <program xml:id="ac10_7_2_editor" interactive="activecode" language="python">
+      <input>
+placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(d.keys()), sorted(['B', 'e', 'a', 'c', 'h', 's', ' ', 'r', 'o', 'l', 'p', 't', 'v', 'i', 'n', 'g', 'w', 'M', 'k', 'd', '.', 'x']), "Testing the keys were created correctly")
+      self.assertEqual(sorted(d.values()), sorted([2, 17, 12, 8, 4, 10, 27, 7, 10, 8, 6, 8, 3, 13, 7, 2, 3, 3, 2, 2, 2, 1]), "Testing the values were created correctly")
+   def testTwo(self):
+      self.assertEqual(min_value, "x", "Testing that min_value has been correctly assigned")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac10_7_3">
+    <statement>
+      <p><term>5.</term> Create a dictionary called <c>lett_d</c> that keeps track of all of the characters in the string <c>product</c> and notes how many times each character was seen. Then, find the key with the highest value in this dictionary and assign that key to <c>max_value</c>.</p>
+    </statement>
+    <program xml:id="ac10_7_3_editor" interactive="activecode" language="python">
+      <input>
+product = "iphone and android phones"
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(lett_d.items()), sorted([('h', 2), ('a', 2), (' ', 3), ('n', 4), ('d', 3), ('o', 3), ('i', 2), ('p', 2), ('e', 2), ('r', 1), ('s', 1)]), "Testing that lett_d has been created correctly.")
+   def testTwo(self):
+      self.assertEqual(max_value, "n", "Testing that max_value has been correctly assigned")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ac12_8_1">
+    <statement>
+      <p>Create a tuple called <c>olympics</c> with four elements: <q>Beijing</q>, <q>London</q>, <q>Rio</q>, <q>Tokyo</q>.</p>
+    </statement>
+    <program xml:id="ac12_8_1_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(olympics, ('Beijing', 'London', 'Rio', 'Tokyo'), "Testing that olympics is assigned to correct values")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_8_2">
+    <statement>
+      <p>The list below, <c>tuples_lst</c>, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable <c>country</c>.</p>
+    </statement>
+    <program xml:id="ac12_8_2_editor" interactive="activecode" language="python">
+      <input>
+
+tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(country, ['China', 'England', 'Brazil', 'Japan'], "Testing that third is assigned to correct values")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_8_3">
+    <statement>
+      <p>With only one line of code, assign the variables <c>city</c>, <c>country</c>, and <c>year</c> to the values of the tuple <c>olymp</c>.</p>
+    </statement>
+    <program xml:id="ac12_8_3_editor" interactive="activecode" language="python">
+      <input>
+
+olymp = ('Rio', 'Brazil', 2016)
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(city, "Rio", "Testing that city is assigned to correct value.")
+      self.assertEqual(country, "Brazil", "Testing that country is assigned to correct value.")
+      self.assertEqual(year, 2016, "Testing that year is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_8_4">
+    <statement>
+      <p>Define a function called <c>info</c> with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order.</p>
+    </statement>
+    <program xml:id="ac12_8_4_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFour(self):
+      self.assertEqual(info("Sue", "Female", 20, "March", "Ann Arbor"), ("Sue", "Female", 20, "March", "Ann Arbor"), "Testing that info('Sue', 'Female', 20, 'March', 'Ann Arbor') returns('Sue', 'Female', 20, 'March', 'Ann Arbor')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_8_5">
+    <statement>
+      <p>Given is the dictionary, <c>gold</c>, which shows the country and the number of gold medals they have earned so far in the 2016 Olympics. Create a list, <c>num_medals</c>, that contains only the number of medals for each country. You must use the .items() method. Note: The .items() method provides a list of tuples. Do not use .keys() method.</p>
+    </statement>
+    <program xml:id="ac12_8_5_editor" interactive="activecode" language="python">
+      <input>
+
+gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFive(self):
+      self.assertEqual(sorted(num_medals), sorted([31, 19, 19, 13, 12, 10, 8, 8]), "Testing that num_medals is assigned to correct values.")
+      self.assertNotIn('.keys()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertIn('.items()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('in gold:', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

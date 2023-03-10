@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_disambiguating-creation-vs-indexing">
+  <title>Disambiguating []: creation vs indexing</title>
+  <p>Square brackets <c>[]</c> are used in quite a few ways in python. When you're first learning how to use them it may be
+            confusing, but with practice and repetition they'll be easy to incorporate!</p>
+  <p>You have currently encountered two instances where we have used square brackets. The first is creating lists and the second
+            is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing
+            an already created list while simply creating a list does not.</p>
+  <program xml:id="ac5_4_1" interactive="activecode" language="python">
+    <input>
+new_lst = []
+        </input>
+  </program>
+  <p>In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.</p>
+  <program xml:id="ac5_4_2" interactive="activecode" language="python">
+    <input>
+new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
+part_of_new_lst = new_lst[0]
+        </input>
+  </program>
+  <p>In the code above, you'll see how, now that we have elements inside of <c>new_lst</c>, we can index into it.
+            In order to extract an element of the list, we do use <c>[]</c>, but we first have to specify which list we are indexing.
+            Imagine if there was another list in the activecode.
+            How would python know which list we want to index into if we don't tell it?
+            Additionally, we have to specify what element we want to extract. This belongs inside of the brakets.</p>
+  <p>Though it may be easier to distinguish in this above activecode, below may be a bit more difficult.</p>
+  <program xml:id="ac5_4_3" interactive="activecode" language="python">
+    <input>
+lst = [0]
+n_lst = lst[0]
+
+print(lst)
+print(n_lst)
+        </input>
+  </program>
+  <p>Here, we see a list called <c>lst</c> being assigned to a list with one element, zero. Then, we see how <c>n_lst</c> is assigned
+            the value associated with the first element of lst. Dispite the variable names, only one of the above variables is
+            assigned to a list. Note that in this example, what sets creating apart from indexing is the reference to the list to let
+            python know that you are extracting an element from another list.</p>
+  <exercise label="question5_4_1">
+    <statement>
+      <p>Which of the following correctly uses indexing? Assume that <c>a</c> is a list or string. Select as many as apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>w = [a]</p>
+        </statement>
+        <feedback>
+          <p>No, due to the way the code was written it creates a list. This list would have one element which is the value assigned to the variable a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y = a[]</p>
+        </statement>
+        <feedback>
+          <p>Though this tries to use indexing, it does not specify what element should be taken from a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x = [8]</p>
+        </statement>
+        <feedback>
+          <p>No, this is an example of creating a list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>t = a[0]</p>
+        </statement>
+        <feedback>
+          <p>Yes, this will using indexing to get the value of the first element of a.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_non-mutating-methods-on-strings">
+  <title>Non-mutating Methods on Strings</title>
+  <p>There are a wide variety of methods for string objects.
+            Try the following program.</p>
+  <program xml:id="ac8_8_1" interactive="activecode" language="python">
+    <input>
+ss = "Hello, World"
+print(ss.upper())
+
+tt = ss.lower()
+print(tt)
+print(ss)
+        </input>
+  </program>
+  <p>In this example, <c>upper</c> is a method that can be invoked on any string object to create a new string
+            in which all the characters are in uppercase. <c>lower</c> works in a similar fashion changing all
+            characters in the string to lowercase. (The original string <c>ss</c> remains unchanged.  A new string
+            <c>tt</c> is created.)</p>
+  <p xml:id="transforming-sequences_string-methods" names="string_methods">You've already seen a few methods, such as <c>count</c> and <c>index</c>, that work with strings and are
+            non-mutating. In addition to those and <c>upper</c> and <c>lower</c>, the following table provides a summary
+            of some other useful string methods. There are a few activecode examples that follow so that you can
+            try them out.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Method
+                        </cell>
+        <cell>
+                            Parameters
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            upper
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string in all uppercase
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            lower
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string in all lowercase
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            count
+                        </cell>
+        <cell>
+                            item
+                        </cell>
+        <cell>
+                            Returns the number of occurrences of item
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            index
+                        </cell>
+        <cell>
+                            item
+                        </cell>
+        <cell>
+                            Returns the leftmost index where the substring item is found and causes                                                                 a runtime error if item is not found
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            strip
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string with the leading and trailing whitespace removed
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            replace
+                        </cell>
+        <cell>
+                            old, new
+                        </cell>
+        <cell>
+                            Replaces all occurrences of old substring with new
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            format
+                        </cell>
+        <cell>
+                            substitutions
+                        </cell>
+        <cell>
+                            Involved! See <xref ref="transforming-sequences_format-strings"/>, below
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the
+            <url href="http://docs.python.org/3/library/stdtypes.html#string-methods" visual="http://docs.python.org/3/library/stdtypes.html#string-methods">Python documentation for strings</url>.</p>
+  <program xml:id="ac8_8_2" interactive="activecode" language="python">
+    <input>
+ss = "    Hello, World    "
+
+els = ss.count("l")
+print(els)
+
+print("***"+ss.strip()+"***")
+
+news = ss.replace("o", "***")
+print(news)
+        </input>
+  </program>
+  <program xml:id="ac8_8_3" interactive="activecode" language="python">
+    <input>
+food = "banana bread"
+print(food.upper())
+        </input>
+  </program>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_8_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(s.count("o") + s.count("p"))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>There are definitely o and p characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>There are 2 o characters but what about p?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Yes, add the number of o characters and the number of p characters.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question8_8_2">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(s[1]*s.index("n"))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>yyyyy</p>
+        </statement>
+        <feedback>
+          <p>Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>55555</p>
+        </statement>
+        <feedback>
+          <p>Close.  5 is not repeated, it is the number of times to repeat.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>n</p>
+        </statement>
+        <feedback>
+          <p>This expression uses the index of n</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot combine all those things together.</p>
+        </statement>
+        <feedback>
+          <p>This is fine, the repetition operator used the result of indexing and the index method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <subsection xml:id="transforming-sequences_string-format-method">
+    <title>String Format Method</title>
+    <p>Until now, we have created strings with variable content using the + operator to concatenate
+                partial strings together. That works, but it's very hard for people to read or debug a code
+                line that includes variable names and strings and complex expressions. Consider the following:</p>
+    <program xml:id="ac8_8_4" interactive="activecode" language="python">
+      <input>
+name = "Rodney Dangerfield"
+score = -1  # No respect!
+print("Hello " + name + ". Your score is " + str(score))
+        </input>
+    </program>
+    <p>Or perhaps more realistically:</p>
+    <program xml:id="ac8_8_5" interactive="activecode" language="python">
+      <input>
+scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
+for person in scores:
+    name = person[0]
+    score = person[1]
+    print("Hello " + name + ". Your score is " + str(score))
+        </input>
+    </program>
+    <p>In this section, you will learn to write that in a more readable way:</p>
+    <program xml:id="ac8_8_6" interactive="activecode" language="python">
+      <input>
+scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
+for person in scores:
+    name = person[0]
+    score = person[1]
+    print("Hello {}. Your score is {}.".format(name, score))
+        </input>
+    </program>
+    <p>In grade school quizzes a common convention is to use fill-in-the blanks. For instance,</p>
+    <blockquote>
+      <p>Hello _____!</p>
+    </blockquote>
+    <p>and you can fill in the name of the person greeted, and combine given text with a chosen
+                insertion. <em>We use this as an analogy:</em> Python has a similar construction, better called
+                fill-in-the-braces. The string method <c>format</c>, makes substitutions into places in a string
+                enclosed in braces. Run this code:</p>
+    <program xml:id="ac8_8_7" interactive="activecode" language="python">
+      <input>
+person = input('Your name: ')
+greeting = 'Hello {}!'.format(person)
+print(greeting)
+        </input>
+    </program>
+    <p>There are several new ideas here!</p>
+    <p>The string for the <c>format</c> method has a special form, with braces embedded.
+                Such a string is called a <em>format string</em>.  Places where
+                braces are embedded are replaced by the value of an expression
+                taken from the parameter list for the <c>format</c> method. There are many
+                variations on the syntax between the braces. In this case we use
+                the syntax where the first (and only) location in the string with
+                braces has a substitution made from the first (and only) parameter.</p>
+    <p>In the code above, this new string is assigned to the identifier
+                <c>greeting</c>, and then the string is printed.</p>
+    <p>The identifier <c>greeting</c> was introduced to break the operations into a clearer sequence of
+                steps. However, since the value of <c>greeting</c> is only referenced once, it can be eliminated
+                with the more concise version:</p>
+    <program xml:id="ac8_8_8" interactive="activecode" language="python">
+      <input>
+person = input('Enter your name: ')
+print('Hello {}!'.format(person))
+        </input>
+    </program>
+    <p>There can be multiple substitutions, with data of any type.
+                Next we use floats.  Try original price $2.50  with a 7% discount:</p>
+    <program xml:id="ac8_8_9" interactive="activecode" language="python">
+      <input>
+origPrice = float(input('Enter the original price: $'))
+discount = float(input('Enter discount percentage: '))
+newPrice = (1 - discount/100)*origPrice
+calculation = '${} discounted by {}% is ${}.'.format(origPrice, discount, newPrice)
+print(calculation)
+        </input>
+    </program>
+    <p>It is important to pass arguments to the <c>format</c> method in the correct order, because they
+                are matched <em>positionally</em> into the <c>{}</c> places for interpolation where there is more than
+                one.</p>
+    <p>If you used the data suggested, this result is not satisfying.
+                Prices should appear with exactly two places beyond the decimal point,
+                but that is not the default way to display floats.</p>
+    <p>Format strings can give further information inside the braces
+                showing how to specially format data.
+                In particular floats can be shown with a specific number of decimal places.
+                For two decimal places, put <c>:.2f</c> inside the braces for the monetary values:</p>
+    <program xml:id="ac8_8_10" interactive="activecode" language="python">
+      <input>
+origPrice = float(input('Enter the original price: $'))
+discount = float(input('Enter discount percentage: '))
+newPrice = (1 - discount/100)*origPrice
+calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
+print(calculation)
+        </input>
+    </program>
+    <p>The 2 in the format modifier can be replaced by another integer to round to that
+                specified number of digits.</p>
+    <p>This kind of format string depends directly on the order of the
+                parameters to the format method. There are other approaches that we will
+                skip here, such as explicitly numbering substitutions.</p>
+    <p>It is also important that you give <c>format</c> the same amount of arguments as there are <c>{}</c> waiting for interpolation in the string. If you have a <c>{}</c> in a string that you do not pass arguments for, you may not get an error, but you will see a weird <c>undefined</c> value you probably did not intend suddenly inserted into your string. You can see an example below.</p>
+    <p>For example,</p>
+    <program xml:id="ac8_8_11" interactive="activecode" language="python">
+      <input>
+name = "Sally"
+greeting = "Nice to meet you"
+s = "Hello, {}. {}."
+
+print(s.format(name,greeting)) # will print Hello, Sally. Nice to meet you.
+
+print(s.format(greeting,name)) # will print Hello, Nice to meet you. Sally.
+
+print(s.format(name)) # 2 {}s, only one interpolation item! Not ideal.
+        </input>
+    </program>
+    <p>A technical point: Since braces have special meaning in a format string, there must be a
+                special rule if you want braces to actually be included in the final <em>formatted</em> string. The
+                rule is to double the braces: <c>{&#x200B;{</c> and <c>}&#x200B;}</c>. For example mathematical set notation uses
+                braces. The initial and final doubled braces in the format string below generate literal
+                braces in the formatted string:</p>
+    <pre>a = 5
+b = 9
+setStr = 'The set is {&#x200B;{&#x200B;{}, {}&#x200B;}&#x200B;}.'.format(a, b)
+print(setStr)</pre>
+    <p>Unfortunately, at the time of this writing, the ActiveCode format implementation has a bug,
+                printing doubled braces, but standard Python prints <c>{5, 9}</c>.</p>
+    <exercise label="question8_8_3">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+x = 2
+y = 6
+print('sum of {} and {} is {}; product: {}.'.format( x, y, x+y, x*y))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Nothing - it causes an error</p>
+          </statement>
+          <feedback>
+            <p>It is legal format syntax:  put the data in place of the braces.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>sum of {} and {} is {}; product: {}. 2 6 8 12</p>
+          </statement>
+          <feedback>
+            <p>Put the data into the format string; not after it.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>sum of 2 and 6 is 8; product: 12.</p>
+          </statement>
+          <feedback>
+            <p>Yes, correct substitutions!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>sum of {2} and {6} is {8}; product: {12}.</p>
+          </statement>
+          <feedback>
+            <p>Close:  REPLACE the braces.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_8_4">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+v = 2.34567
+print('{:.1f} {:.2f} {:.7f}'.format(v, v, v))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>2.34567 2.34567 2.34567</p>
+          </statement>
+          <feedback>
+            <p>The numbers before the f in the braces give the number of digits to display after the decimal point.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>2.3 2.34 2.34567</p>
+          </statement>
+          <feedback>
+            <p>Close, but round to the number of digits and display the full number of digits specified.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>2.3 2.35 2.3456700</p>
+          </statement>
+          <feedback>
+            <p>Yes, correct number of digits with rounding!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

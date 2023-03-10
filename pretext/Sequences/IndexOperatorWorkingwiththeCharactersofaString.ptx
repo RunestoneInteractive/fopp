@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_index-operator-working-with-the-characters-of-a-string206_index-0">
+  <title>Index Operator: Working with the Characters of a String</title>
+  <p>The <term>indexing operator</term> (Python uses square brackets to enclose the index)
+            selects a single character from a string.  The characters are accessed by their position or
+            index value.  For example, in the string shown below, the 14 characters are indexed left to right
+            from postion 0 to position 13.</p>
+  <image source="Sequences/Figures/indexvalues.png" width="50%" alt="index values"/>
+  <p>It is also the case that the positions are named from right to left using negative numbers where -1 is
+            the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.</p>
+  <program xml:id="ac5_3_1" interactive="activecode" language="python">
+    <input>
+school = "Luther College"
+m = school[2]
+print(m)
+
+lastchar = school[-1]
+print(lastchar)
+        </input>
+  </program>
+  <p>The expression <c>school[2]</c> selects the character at index 2 from <c>school</c>, and creates a new
+            string containing just this one character. The variable <c>m</c> refers to the result.</p>
+  <p>The letter at index zero of <c>"Luther College"</c> is <c>L</c>.  So at
+            position <c>[2]</c> we have the letter <c>t</c>.</p>
+  <p>If you want the zero-eth letter of a string, you just put 0, or any expression
+            with the value 0, in the brackets.  Give it a try.</p>
+  <p>The expression in brackets is called an <term>index</term>. An index specifies a member
+            of an ordered collection.  In this case the collection of characters in the string. The index
+            <em>indicates</em> which character you want. It can be any integer
+            expression so long as it evaluates to a valid index value.</p>
+  <p>Note that indexing returns a <em>string</em> &#x2014; Python has no special type for a single character.
+            It is just a string of length 1.</p>
+  <subsection xml:id="sequences_index-operator-accessing-elements-of-a-list-or-tuple">
+    <title>Index Operator: Accessing Elements of a List or Tuple</title>
+    <p>The syntax for accessing the elements of a list or tuple is the same as the syntax for
+                accessing the characters of a string.  We use the index operator ( <c>[]</c> &#x2013; not to
+                be confused with an empty list). The expression inside the brackets specifies
+                the index. Remember that the indices start at 0. Any integer expression can be used
+                as an index and as with strings, negative index values will locate items from the right instead
+                of from the left.</p>
+    <p>When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean!</p>
+    <p>Try to predict what will be printed out by the following code, and then run it to check your
+                prediction. (Actually, it's a good idea to always do that with the code examples. You
+                will learn much more if you force yourself to make a prediction before you see the output.)</p>
+    <program xml:id="ac5_3_2" interactive="activecode" language="python">
+      <input>
+numbers = [17, 123, 87, 34, 66, 8398, 44]
+print(numbers[2])
+print(numbers[9-8])
+print(numbers[-2])
+        </input>
+    </program>
+    <program xml:id="ac5_3_3" interactive="activecode" language="python">
+      <input>
+prices = (1.99, 2.00, 5.50, 20.95, 100.98)
+print(prices[0])
+print(prices[-1])
+print(prices[3-5])
+        </input>
+    </program>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question5_3_1">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+s = "python rocks"
+print(s[3])
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>t</p>
+          </statement>
+          <feedback>
+            <p>Index locations do not start with 1, they start with 0.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>h</p>
+          </statement>
+          <feedback>
+            <p>Yes, index locations start with 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>c</p>
+          </statement>
+          <feedback>
+            <p>s[-3] would return c, counting from right to left.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Error, you cannot use the [ ] operator with a string.</p>
+          </statement>
+          <feedback>
+            <p>[ ] is the index operator.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question5_3_2">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+s = "python rocks"
+print(s[2] + s[-4])
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>tr</p>
+          </statement>
+          <feedback>
+            <p>Almost, t is at postion 2, counting left to right starting from 0; but r is at -5, counting right to left starting from -1.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>to</p>
+          </statement>
+          <feedback>
+            <p>For -4 you count from right to left, starting with -1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>ps</p>
+          </statement>
+          <feedback>
+            <p>p is at location 0, not 2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>nn</p>
+          </statement>
+          <feedback>
+            <p>n is at location 5, not 2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Error, you cannot use the [ ] operator with the + operator.</p>
+          </statement>
+          <feedback>
+            <p>[ ] operator returns a string that can be concatenated with another string.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question5_3_3">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[5])
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[ ]</p>
+          </statement>
+          <feedback>
+            <p>The empty list is at index 4.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>3.14</p>
+          </statement>
+          <feedback>
+            <p>Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>False is at index 6.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>"dog"</p>
+          </statement>
+          <feedback>
+            <p>Look again, the element at index 3 is a list. This list only counts as one element.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="ac5_3_4">
+      <statement>
+        <p>Assign the value of the 34th element of <c>lst</c> to the variable <c>output</c>.</p>
+      </statement>
+      <program xml:id="ac5_3_4_editor" interactive="activecode" language="python">
+        <input>
+lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(output, "laptop", "Testing that output value is assigned to correct value.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac5_3_5">
+      <statement>
+        <p>Assign the value of the 23rd element of <c>l</c> to the variable <c>checking</c>.</p>
+      </statement>
+      <program xml:id="ac5_3_5_editor" interactive="activecode" language="python">
+        <input>
+l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(checking, "leaders and the best", "Testing that checking has the correct element assigned.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac5_3_6">
+      <statement>
+        <p>Assign the value of the last chacter of <c>lst</c> to the variable <c>output</c>. Do this so that the length of lst doesn't matter.</p>
+      </statement>
+      <program xml:id="ac5_3_6_editor" interactive="activecode" language="python">
+        <input>
+lst = "Every chess or checkers game begins from the same position and has a finite number of moves that can be played. While the number of possible scenarios and moves is quite large, it is still possible for computers to calculate that number and even be programmed to respond well against a human player..."
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(output, ".", "Testing that output value is assigned to correct value.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
+                    has a long history in computer science having to do with some low-level implementation details that we won't
+                    go into. For indexing from right to left, it might seem natural to do the analgous thing
+                    and start at -0. Unfortunately, -0 is the same as 0, so s[-0] can't be the last item. Remember we
+                    said that programming languages are formal languages where details matter and
+                    everything is taken literally?</p>
+    </note>
+  </subsection>
+</section>

@@ -1,0 +1,628 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_accumulator-pattern-strategies">
+  <title>&#x1F469;&#x200D;&#x1F4BB;  Accumulator Pattern Strategies</title>
+  <subsection xml:id="transforming-sequences_when-to-use-it">
+    <title>When to Use it</title>
+    <p>When children first encounter word problems in their math classes, they find it difficult to translate those words into arithmetic expressions involving addition, subtraction, multiplication, and division. Teachers offer heuristics. If the problem says <q>how many&#x2026;altogether</q>, that's an addition problem. If it says <q>how many are left</q>, that's going to be a subtraction problem.</p>
+    <p>Learning to use the accumulator pattern can be similarly confusing. The first step is to recognizing something in the problem statement that suggests an accumulation pattern. Here are a few. You might want to try adding some more of your own.</p>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+                                Phrase
+                            </cell>
+          <cell>
+                                Accumulation Pattern
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                how many
+                            </cell>
+          <cell>
+                                count accumulation
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                how frequently
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                total
+                            </cell>
+          <cell>
+                                sum accumulation
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                a list of
+                            </cell>
+          <cell>
+                                list accumulation
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                concatenate
+                            </cell>
+          <cell>
+                                string accumulation
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                join together
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                            </cell>
+          <cell>
+                            </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>For example, if the problem is to compute the total distance traveled in a series of small trips, you would want to accumulate a sum. If the problem is to make a list of the cubes of all the numbers from 1-25, you want a list accumulation, starting with an empty list and appending one more cube each time. If the problem is to make a comma separated list of all the people invited to a party, you should think of concatenating them; you could start with an empty string and concatenate one more person on each iteration through a list of name.</p>
+  </subsection>
+  <subsection xml:id="transforming-sequences_before-writing-it">
+    <title>Before Writing it</title>
+    <p>Before writing any code, we recommend that you first answer the following questions:</p>
+    <p>
+      <ul>
+        <li>
+          <p>What sequence will you iterate through as you accumulate a result? It could be a range of numbers, the letters in a string, or some existing list that you have just as a list of names.</p>
+        </li>
+        <li>
+          <p>What type of value will you accumulate? If your final result will be a number, your accumulator will start out with a number and always have a number even as it is updated each time. Similarly, if your final result will be a list, start with a list. If your final result will be a string, you'll probably want to start with a string; one other option is to accumulate a list of strings and then use the <title_reference>.join()</title_reference> method at the end to concatenate them all together.</p>
+        </li>
+      </ul>
+    </p>
+    <p>We recommend writing your answers to these questions in a comment. As you encounter bugs and have to look things up, it will help remind you of what you were trying to implement. Sometimes, just writing the comment can help you to realize a potential problem and avoid it before you ever write any code.</p>
+  </subsection>
+  <subsection xml:id="transforming-sequences_choosing-good-accumulator-and-iterator-variable-names">
+    <title>Choosing Good Accumulator and Iterator Variable Names</title>
+    <p>The final piece of advice regarding accumulation strategies is to be intentional when choosing variable names for the
+                accumulator and iterator variables. A good name can help remind you of what the value is assigned to the variable as
+                well as what you should have by the end of your code. While it might be tempting at first to use a short variable name,
+                such as <c>a</c> or <c>x</c>, if you run into any bugs or look at your code later, you may have trouble understanding what you
+                intended to do and what your code is actually doing.</p>
+    <p>For the accumulator variable, one thing that can help is to make the variable name end with <q>so_far</q>. The prefix can be something that helps remind you of what you're supposed to end up with. For example: <title_reference>count_so_far</title_reference>, <title_reference>total_so_far</title_reference>, or <title_reference>cubes_so_far</title_reference>.</p>
+    <p>As mentioned previously in a previous Way of the Programmer segment, <xref ref="iteration_wp-naming-variablesin-for-loops"/>, the iterator variable should be a singular noun. It should describe what one item in the original sequence, not what one item in the final result will be. For example, when accumulating the cubes of the numbers from 1-25, don't write <title_reference>for cube in range(25):</title_reference>. Instead, write <title_reference>for num in range(25):</title_reference>.  If you name the iterator variable <title_reference>cube</title_reference> you run the risk of getting confused that it has already been cubed, when that's an operation that you still have to write in your code.</p>
+    <p>
+      <term>Check Your Understanding</term>
+    </p>
+    <exercise label="question8_11_1">
+      <statement>
+        <p>Does the following prompt require an accumulation pattern? If so, what words indicate that? For each string in <c>wrds</c>, add &#x2018;ed' to the end of the word (to make the word past tense). Save these past tense words to a list called <c>past_wrds</c>.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>Yes; "save... to a list"</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Yes; "add 'ed' to the end of the word"</p>
+          </statement>
+          <feedback>
+            <p>Not quite - these words don't necessarily mean that we want to accumulate the new strings into a new variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>No</p>
+          </statement>
+          <feedback>
+            <p>In this case, an accumulation pattern would be good to use!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_2">
+      <statement>
+        <p>Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to sum up all of the numbers in the list <c>seat_counts</c>. Store that number in the variable <c>total_seat_counts</c>.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>Yes; "to sum up"</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Yes; "numbers in the list"</p>
+          </statement>
+          <feedback>
+            <p>Not quite - these words don't necessarily mean that we want to do sum accumulation.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>No</p>
+          </statement>
+          <feedback>
+            <p>In this case, an accumulation pattern would be good to use!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_3">
+      <statement>
+        <p>Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to print out each character of the string <c>my_str</c> on a separate line.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Yes; "print out each"</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, this prompt does not need to use the accumulation pattern.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Yes; "on a separate line"</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, this prompt does not need to use the accumulation pattern.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>No</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_4">
+      <statement>
+        <p>Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code that will count the number of vowels in the sentence <c>s</c> and assign the result to the variable <c>num_vowels</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Yes; "vowels in the sentence"</p>
+          </statement>
+          <feedback>
+            <p>Not quite - these words don't necessarily mean that we want to do sum accumulation.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Yes; "code that will count"</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>No</p>
+          </statement>
+          <feedback>
+            <p>In this case, an accumulation pattern would be good to use!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_5">
+      <statement>
+        <p>What type should be used for the accumulator variable in the following prompt? Write code that will count the number of vowels in the sentence <c>s</c> and assign the result to the variable <c>num_vowels</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>string</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>list</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>integer</p>
+          </statement>
+          <feedback>
+            <p>Yes, because we want to keep track of a number.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>none, there is no accumulator variable.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, we will need an accumulator variable.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_6">
+      <statement>
+        <p>What sequence will you iterate through as you accumulate a result in the following prompt? Write code that will count the number of vowels in the sentence <c>s</c> and assign the result to the variable <c>num_vowels</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>num_vowels</p>
+          </statement>
+          <feedback>
+            <p>No, that is the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>s</p>
+          </statement>
+          <feedback>
+            <p>Yes, that is the sequence you will iterate through!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the prompt does not say</p>
+          </statement>
+          <feedback>
+            <p>It is stated in the prompt.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_7">
+      <statement>
+        <p>What type should be used for the accumulator variable in the following prompt? For each string in <c>wrds</c>, add &#x2018;ed' to the end of the word (to make the word past tense). Save these past tense words to a list called <c>past_wrds</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>string</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>list</p>
+          </statement>
+          <feedback>
+            <p>Yes, because we want a new list at the end of the code.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>integer</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>none, there is no accumulator variable.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, we will need an accumulator variable.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_8">
+      <statement>
+        <p>What sequence will you iterate through as you accumulate a result in the following prompt? For each string in <c>wrds</c>, add &#x2018;ed' to the end of the word (to make the word past tense). Save these past tense words to a list called <c>past_wrds</c>.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>wrds</p>
+          </statement>
+          <feedback>
+            <p>Yes, that is the sequence you will iterate through!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>past_wrds</p>
+          </statement>
+          <feedback>
+            <p>No, that is the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the prompt does not say</p>
+          </statement>
+          <feedback>
+            <p>It is stated in the prompt.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_9">
+      <statement>
+        <p>What type should be used for the accumulator variable in the following prompt? Write code to sum up all of the numbers in the list <c>seat_counts</c>. Store that number in the variable <c>total_seat_counts</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>string</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>list</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, that is not the best type for the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>integer</p>
+          </statement>
+          <feedback>
+            <p>Yes, because we want to keep track of a number.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>none, there is no accumulator variable.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, we will need an accumulator variable.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_10">
+      <statement>
+        <blockquote>
+          <p>What sequence will you iterate through as you accumulate a result in the following prompt? Write code to sum up all of the numbers in the list <c>seat_counts</c>. Store that number in the variable <c>total_seat_counts</c>.</p>
+        </blockquote>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>seat_counts</p>
+          </statement>
+          <feedback>
+            <p>Yes, that is the sequence you will iterate through!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>total_seat_counts</p>
+          </statement>
+          <feedback>
+            <p>No, that is the accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the prompt does not say</p>
+          </statement>
+          <feedback>
+            <p>It is stated in the prompt.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_11">
+      <statement>
+        <p>What type should be used for the accumulator variable in the following prompt? Write code to print out each character of the string <c>my_str</c> on a separate line.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>string</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, there should not be an accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>list</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, there should not be an accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>integer</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, there should not be an accumulator variable.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>none, there is no accumulator variable.</p>
+          </statement>
+          <feedback>
+            <p>Correct, because this prompt does not require an accumulator pattern</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_12">
+      <statement>
+        <p>What sequence will you iterate through as you accumulate a result in the following prompt? Write code to print out each character of the string <c>my_str</c> on a separate line.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>my_str</p>
+          </statement>
+          <feedback>
+            <p>Yes, that is the sequence you will iterate through!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>my_str.split()</p>
+          </statement>
+          <feedback>
+            <p>Close, but read the prompt again - did it say to iterate through words?</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the prompt does not say</p>
+          </statement>
+          <feedback>
+            <p>It is stated in the prompt.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_13">
+      <statement>
+        <p>Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? For each string in <c>wrds</c>, add &#x2018;ed' to the end of the word (to make the word past tense). Save these past tense words to a list called <c>past_wrds</c>.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>Accumulator Variable: wrds_so_far     ; Iterator Variable: wrd</p>
+          </statement>
+          <feedback>
+            <p>Yes, this is the most clear combination of accumulator and iterator variables.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: wrds_so_far     ; Iterator Variable: x</p>
+          </statement>
+          <feedback>
+            <p>The iterator variable is not the clearest here, something else may be better.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: changed_wrds    ; Iterator Variable: ed</p>
+          </statement>
+          <feedback>
+            <p>The iterator variable is not the clearest here</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_14">
+      <statement>
+        <p>Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code that will count the number of vowels in the sentence <c>s</c> and assign the result to the variable <c>num_vowels</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: count_so_far  ; Iterator Variable: l</p>
+          </statement>
+          <feedback>
+            <p>Though the accumulator variable is good, the iterator variable is not very clear.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Accumulator Variable: total_so_far  ; Iterator Variable: letter</p>
+          </statement>
+          <feedback>
+            <p>Yes! Both the accumulator and iterator variable are clear.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: n_v           ; Iterator Variable: letter</p>
+          </statement>
+          <feedback>
+            <p>Though the iterator variable is good, the accumulator variable is not very clear.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_15">
+      <statement>
+        <p>Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to sum up all of the numbers in the list <c>seat_counts</c>. Store that number in the variable <c>total_seat_counts</c>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: total_so_far        ; Iterator Variable: seat</p>
+          </statement>
+          <feedback>
+            <p>Though the accumulator variable is good, the iterator variable is not clear enough.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Accumulator Variable: total_seats_so_far  ; Iterator Variable: seat_count</p>
+          </statement>
+          <feedback>
+            <p>Yes, this is the most clear combination.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: count               ; Iterator Variable: n</p>
+          </statement>
+          <feedback>
+            <p>Neither the accumulator nor iterator variable are clear enough. The accumulator variable is better, but could be more clear.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_11_16">
+      <statement>
+        <p>Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to print out each character of the string <c>my_str</c> on a separate line.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: character_so_far    ; Iterator Variable: char</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, there is no accumulator variable neccessary</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Accumulator Variable: no variable needed  ; Iterator Variable: c</p>
+          </statement>
+          <feedback>
+            <p>Though no accumulator variable is needed, the iterator variable is not clear enough</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Accumulator Variable: no variable needed  ; Iterator Variable: char</p>
+          </statement>
+          <feedback>
+            <p>Yes, there is no accumulator variable needed and the iterator variable is clear (char is a common short form of character)</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

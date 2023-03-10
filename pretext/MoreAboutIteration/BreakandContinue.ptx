@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<section xml:id="more-about-iteration_break-and-continue">
+  <title>Break and Continue</title>
+  <p>Python provides ways for us to control the flow of iteration with a two keywords: break and continue.</p>
+  <p><c>break</c> allows the program to immediately &#x2018;break out' of the loop, regardless of the loop's conditional structure.
+            This means that the program will then skip the rest of the iteration, without rechecking the condition, and just goes on
+            to the next outdented code that exists after the whole while loop.</p>
+  <image source="MoreAboutIteration/Figures/while_and_break.png" width="50%" alt="image showing a rectangle with &quot;code block&quot; written on it on top. Then, text that read &quot;while {condition}&quot;: followed by an indented block with &quot;...&quot; written on it. break is then written and another indented block is placed after the phrase break, which has &quot;... (skipped)&quot; written on it. Finally, an unindented block belonging to code outside the while loop is at the bottom. It says &quot;code block&quot;. An arrow points from the word break to the unindented block at the bottom and the phrase &quot;break out of the loop&quot; is written."/>
+  <program xml:id="ac14_5_1" interactive="activecode" language="python">
+    <input>
+while True:
+    print("this phrase will always print")
+    break
+    print("Does this phrase print?")
+
+print("We are done with the while loop.")
+        </input>
+  </program>
+  <p>We can see here how the print statement right after <c>break</c> is not executed. In fact, without using break, we have no
+            way to stop the while loop because the condition is always set to True!</p>
+  <p><c>continue</c> is the other keyword that can control the flow of iteration. Using <c>continue</c> allows the program to
+            immediately <q>continue</q> with the next iteration. The program will skip the rest of the iteration, recheck the condition,
+            and maybe does another iteration depending on the condition set for the while loop.</p>
+  <image source="MoreAboutIteration/Figures/while_and_continue.png" width="50%" alt="image showing a rectangle with &quot;code block&quot; written on it on top. Then, text that read &quot;while {condition}&quot;: followed by an indented block with &quot;...&quot; written on it. continue is then written and another indented block is placed after the phrase continue, which has &quot;... (skipped)&quot; written on it. Finally, an unindented block belonging to code outside the while loop is at the bottom. It says &quot;code block&quot;. An arrow points from the word continue to the while conditional statement at the top of the while loop. The phrase &quot;continue at the start of the loop&quot; is written."/>
+  <program xml:id="ac14_5_2" interactive="activecode" language="python">
+    <input>
+x = 0
+while x &lt; 10:
+    print("we are incrementing x")
+    if x % 2 == 0:
+        x += 3
+        continue
+    if x % 3 == 0:
+        x += 5
+    x += 1
+print("Done with our loop! X has the value: " + str(x))
+        </input>
+  </program>
+  <p>Try stepping through the above code in codelens to watch the order that the code is executed in. Notice in the first
+            iteration how the program doesn't move to evaluate the divisible by 3 statment or add 1 to x. Instead, it continues to
+            the next iteration.</p>
+</section>

@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_tuple-packing">
+  <title>Tuple Packing</title>
+  <p>Wherever python expects a single value, if multiple expressions are provided, separated
+            by commas, they are automatically <term>packed</term> into a tuple. For example, we can omit the parentheses when assigning a tuple of values to a single variable.</p>
+  <program xml:id="ac13-1-1" interactive="activecode" language="python">
+    <input>
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+# or equivalently
+julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+print(julia[4])
+        </input>
+  </program>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question12_2_1">
+    <statement>
+      <p>Which of the following statements will output Atlanta, Georgia</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print(julia['city'])</p>
+        </statement>
+        <feedback>
+          <p>julia is a tuple, not a dictionary; indexes must be integers.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(julia[-1])</p>
+        </statement>
+        <feedback>
+          <p>[-1] picks out the last item in the sequence.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(julia(-1))</p>
+        </statement>
+        <feedback>
+          <p>Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(julia(6))</p>
+        </statement>
+        <feedback>
+          <p>Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(julia[7])</p>
+        </statement>
+        <feedback>
+          <p>Indexing starts at 0. You want the seventh item, which is julia[6]</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac12_2_1">
+    <statement>
+      <p><term>2.</term> Create a tuple called <c>practice</c> that has four elements: &#x2018;y', &#x2018;h', &#x2018;z', and &#x2018;x'.</p>
+    </statement>
+    <program xml:id="ac12_2_1_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(practice, ('y','h','z','x'), "Testing that pratice value is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_2_2">
+    <statement>
+      <p><term>3.</term> Create a tuple named <c>tup1</c> that has three elements: &#x2018;a', &#x2018;b', and &#x2018;c'.</p>
+    </statement>
+    <program xml:id="ac12_2_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(tup1, ('a', 'b', 'c'), "Testing that tup1 was created correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_2_3">
+    <statement>
+      <p><term>4.</term> Provided is a list of tuples. Create another list called <c>t_check</c> that contains the third element of every tuple.</p>
+    </statement>
+    <program xml:id="ac12_2_3_editor" interactive="activecode" language="python">
+      <input>
+
+lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(t_check, ['Zaptos', 'Charizard', 'Diglett', 'Tauros', 'Lanturn', 'Wailord'], "Testing that pratice value is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_2_4">
+    <statement>
+      <p><term>5.</term> Below, we have provided a list of tuples. Write a for loop that saves the second element of each tuple into a list called <c>seconds</c>.</p>
+    </statement>
+    <program xml:id="ac12_2_4_editor" interactive="activecode" language="python">
+      <input>
+
+tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 'red'), (5.6, 9.99, 2.5, 8.2), ('squirrel', 'chipmunk')]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(seconds, ['b', 7, 'green', 9.99, 'chipmunk'], "Testing that seconds was created correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_getting-started-with-dictionaries74_index-0">
+  <title>Getting Started with Dictionaries</title>
+  <p>Here is a video to help introduce you to the important concepts in creating and using Python dictionaries.</p>
+  <video xml:id="goog_keyvalpairs" youtube="eDQ19ahXsSk" width="auto"/>
+  <p>Let us look at an example of using a dictionary for a simple problem. We will create a dictionary to translate English words into Spanish.
+            For this dictionary, the keys are strings and the values will also be strings.</p>
+  <p>One way to create a dictionary is to start with the empty dictionary and add <term>key-value pairs</term>. The empty dictionary
+            is denoted <c>{}</c>.</p>
+  <program xml:id="clens10_1_1" interactive="codelens" language="python">
+    <input>
+eng2sp = {}
+eng2sp['one'] = 'uno'
+eng2sp['two'] = 'dos'
+eng2sp['three'] = 'tres'
+print(eng2sp)
+    </input>
+  </program>
+  <p>The first assignment creates an empty dictionary named <c>eng2sp</c>. The other assignments add new key-value pairs to
+            the dictionary. The left hand side gives the dictionary and the key being associated. The right hand side gives the
+            value being associated with that key. We can print the current value of the dictionary in the usual way. The key-value
+            pairs of the dictionary are separated by commas. Each pair contains a key and a value separated by a colon.</p>
+  <p>The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to
+            determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as
+            unpredictable <footnote_reference auto="*" docname="Dictionaries/intro-Dictionaries" xml:id="dictionaries_id1" refid="id2">*</footnote_reference> .</p>
+  <p>Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous
+            output.</p>
+  <program xml:id="clens10_1_2" interactive="codelens" language="python">
+    <input>
+eng2sp = {'three': 'tres', 'one': 'uno', 'two': 'dos'}
+print(eng2sp)
+    </input>
+  </program>
+  <p>It doesn't matter what order we write the pairs. The values in a dictionary are accessed with keys, not with indices,
+            so there is no need to care about ordering.</p>
+  <p>Here is how we use a key to look up the corresponding value.</p>
+  <program xml:id="clens10_1_3" interactive="codelens" language="python">
+    <input>
+eng2sp = {'three': 'tres', 'one': 'uno', 'two': 'dos'}
+
+value = eng2sp['two']
+print(value)
+print(eng2sp['one'])
+    </input>
+  </program>
+  <p>The key <c>'two'</c> yields the value <c>'dos'</c>. The key <c>one</c> yields the value <c>uno</c>.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question10_1_1">
+    <statement>
+      <p>A dictionary is an unordered collection of key-value pairs.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Dictionaries associate keys with values but there is no assumed order for the entries.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Yes, dictionaries are associative collections meaning that they store key-value pairs.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_1_2">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+mydict = {"cat":12, "dog":6, "elephant":23}
+print(mydict["dog"])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>12 is associated with the key cat.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Yes, 6 is associated with the key dog.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>23</p>
+        </statement>
+        <feedback>
+          <p>23 is associated with the key elephant.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot use the index operator with a dictionary.</p>
+        </statement>
+        <feedback>
+          <p>The [ ] operator, when used with a dictionary, will look up a value based on its key.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac10_1_1">
+    <statement>
+      <p><term>3.</term> Create a dictionary that keeps track of the USA's Olympic medal count. Each key of the dictionary should be the type of medal (gold, silver, or bronze) and each key's value should be the number of that type of medal the USA's won. Currently, the USA has 33 gold medals, 17 silver, and 12 bronze. Create a dictionary saved in the variable <c>medals</c> that reflects this information.</p>
+    </statement>
+    <program xml:id="ac10_1_1_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(medals.items()), sorted([("gold", 33), ("silver", 17), ("bronze", 12)]), "Testing that medals is correct.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac10_1_2">
+    <statement>
+      <p><term>4.</term> You are keeping track of olympic medals for Italy in the 2016 Rio Summer Olympics! At the moment, Italy has 7 gold medals, 8 silver metals, and 6 bronze medals. Create a dictionary called <c>olympics</c> where the keys are the types of medals, and the values are the number of that type of medals that Italy has won so far.</p>
+    </statement>
+    <program xml:id="ac10_1_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(olympics.items()), sorted([('gold', 7), ('silver', 8), ('bronze', 6)]), "Testing that olympics was created correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+                Add the following line:
+                places['Brazil'] = 2016
+            
+                <p>Add the following line:</p>
+                <program language="python"><input>
+places['Brazil'] = 2016
+</input></program>
+            </solution>
+  </exercise>
+  <footnote auto="*" backrefs="id1" docname="Dictionaries/intro-Dictionaries" xml:id="dictionaries_id2">
+    <label>*</label>
+    <p>Instructors note: Python version 3.7 and later <url href="https://mail.python.org/pipermail/python-dev/2017-December/151283.html" visual="https://mail.python.org/pipermail/python-dev/2017-December/151283.html">provide ordering guarantees</url>. However, it is best practice to write code that does not rely on any particular key order so this book will treat key-value pairs as unordered.</p>
+  </footnote>
+</section>

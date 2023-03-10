@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_the-in-and-not-in-operators">
+  <title>The <c>in</c> and <c>not in</c> operators</title>
+  <p>The <c>in</c> operator tests if one string is a substring of another:</p>
+  <program xml:id="ac4_3_1" interactive="activecode" language="python">
+    <input>
+print('p' in 'apple')
+print('i' in 'apple')
+print('ap' in 'apple')
+print('pa' in 'apple')
+        </input>
+  </program>
+  <p>Note that a string is a substring of itself, and the empty string is a
+            substring of any other string. (Also note that computer scientists
+            like to think about these edge cases quite carefully!)</p>
+  <program xml:id="ac4_3_2" interactive="activecode" language="python">
+    <input>
+print('a' in 'a')
+print('apple' in 'apple')
+print('' in 'a')
+print('' in 'apple')
+        </input>
+  </program>
+  <p>The <c>not in</c> operator returns the logical opposite result of <c>in</c>.</p>
+  <program xml:id="ac4_3_3" interactive="activecode" language="python">
+    <input>
+print('x' not in 'apple')
+        </input>
+  </program>
+  <p>We can also use the <c>in</c> and <c>not in</c> operators on lists!</p>
+  <program xml:id="ac4_4_4" interactive="activecode" language="python">
+    <input>
+print("a" in ["a", "b", "c", "d"])
+print(9 in [3, 2, 9, 10, 9.0])
+print('wow' not in ['gee wiz', 'gosh golly', 'wow', 'amazing'])
+        </input>
+  </program>
+  <p>However, remember how you were able to check to see if an <q>a</q> was in <q>apple</q>?
+            Let's try that again to see if there's an <q>a</q> somewhere in the following list.</p>
+  <program xml:id="ac4_4_5" interactive="activecode" language="python">
+    <input>
+print("a" in ["apple", "absolutely", "application", "nope"])
+        </input>
+  </program>
+  <p>Clearly, we can tell that a is in the word apple, and absolutely, and application. For some reason
+            though, the Python interpreter returns False. Why is that? When we use the <c>in</c> and <c>not in</c>
+            operators on lists, Python checks to see if the item on the left side of the expression is equivalent
+            to an element in the item on the right side of the expression. In this case, Python is checking
+            whether or not an element of the list is the string <q>a</q> - nothing more or less than that.</p>
+</section>

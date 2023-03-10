@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<section xml:id="files_iterating-over-lines-in-a-file">
+  <title>Iterating over lines in a file</title>
+  <p>We will now use this file as input in a program that will do some data processing. In the program, we will
+            examine each line of the file and print it with some additional text. Because <c>readlines()</c> returns a list of
+            lines of text, we can use the <em>for</em> loop to iterate through each line of the file.</p>
+  <p>A <term>line</term> of a file is defined to be a sequence of characters up to and including a special character called
+            the <term>newline</term> character. If you evaluate a string that contains a newline character you will see the character
+            represented as <c>\n</c>. If you print a string that contains a newline you will not see the <c>\n</c>, you will just
+            see its effects (a carriage return).</p>
+  <p>As the <em>for</em> loop iterates through each line of the file the loop variable will contain the current line of the
+            file as a string of characters. The general pattern for processing each line of a text file is as follows:</p>
+  <pre>for line in myFile.readlines():
+    statement1
+    statement2
+    ...</pre>
+  <p>To process all of our olypmics data, we will use a <em>for</em> loop to iterate over the lines of the file. Using
+            the <c>split</c> method, we can break each line into a list containing all the fields of interest about the
+            athlete. We can then take the values corresponding to name, team and event to
+            construct a simple sentence.</p>
+  <program xml:id="ac9_5_1" interactive="activecode" language="python">
+    <input>
+olypmicsfile = open("olypmics.txt", "r")
+
+for aline in olypmicsfile.readlines():
+    values = aline.split(",")
+    print(values[0], "is from", values[3], "and is on the roster for", values[4])
+
+olypmicsfile.close()
+        </input>
+  </program>
+  <p>To make the code a little simpler, and to allow for more efficient processing, Python provides a built-in way to
+            iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a
+            little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared
+            to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.</p>
+  <program xml:id="ac9_5_2" interactive="activecode" language="python">
+    <input>
+olypmicsfile = open("olypmics.txt", "r")
+
+for aline in olypmicsfile:
+    values = aline.split(",")
+    print(values[0], "is from", values[3], "and is on the roster for", values[4])
+
+olypmicsfile.close()
+        </input>
+  </program>
+  <raw format="html" xml:space="preserve">&lt;pre hidden id="olypmics.txt"&gt;
+Name,Sex,Age,Team,Event,Medal
+A Dijiang,M,24,China,Basketball,NA
+A Lamusi,M,23,China,Judo,NA
+Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
+Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
+Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
+Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
+Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
+John Aalberg,M,31,United States,Cross Country Skiing,NA
+John Aalberg,M,33,United States,Cross Country Skiing,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
+"Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
+Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
+Jyri Tapani Aalto,M,31,Finland,Badminton,NA
+Minna Maarit Aalto,F,30,Finland,Sailing,NA
+Minna Maarit Aalto,F,34,Finland,Sailing,NA
+Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
+Timo Antero Aaltonen,M,31,Finland,Athletics,NA
+Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
+&lt;/pre&gt;</raw>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <raw format="html" xml:space="preserve">&lt;pre id="emotion_words.txt"&gt;
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+&lt;/pre&gt;</raw>
+  <exercise label="ac9_5_3">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Write code to find out how many lines are in the file <c>emotion_words.txt</c> as shown above. Save this value to the variable <c>num_lines</c>. Do not use the len method.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac9_5_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(num_lines, 7, "Testing that num_lines was assigned to the correct value.")
+      self.assertNotIn('len', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

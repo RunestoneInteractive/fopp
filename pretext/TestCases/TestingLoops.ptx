@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_testing-loops">
+  <title>Testing Loops</title>
+  <p>With a for loop, the edge cases might include iterating over an empty list or string, or iterating over a list with different kinds of contents.</p>
+  <p>For example, suppose we have a code snippet that is supposed to accumulate the sum of all the numbers in a list, <c>lst</c>, whose value was set sometime before this code snippet is run. If you've already learned how to define functions, you can imagine this code snippet inside a function definition.</p>
+  <p>When <c>lst</c> is <c>[1, 5, 8]</c>, the value at the end should be 14.</p>
+  <program xml:id="ac19_1d_1" interactive="activecode" language="python">
+    <input>
+nums = [1, 5, 8]
+
+accum = 0
+for w in nums:
+    accum = accum + w
+assert accum == 14
+        </input>
+  </program>
+  <p>But what about when <c>lst</c> is an empty list? Maybe we want to assert that the value should be 0, in which case our current accumulation works fine. But suppose we wanted it to be some other value, perhaps the special python value <c>None</c>. By writing an assert statement, we can be alerted that our code doesn't produce the answer we wanted&#x2026;</p>
+  <program xml:id="ac19_1d_2" interactive="activecode" language="python">
+    <input>
+nums = []
+
+accum = 0
+for w in nums:
+    accum = accum + w
+assert accum == None
+        </input>
+  </program>
+  <p>&#x2026;and then we can fix our accumulator code</p>
+  <program xml:id="ac19_1d_3" interactive="activecode" language="python">
+    <input>
+nums = []
+
+if len(nums) == 0:
+   accum = None
+else:
+   accum = 0
+   for w in nums:
+       accum = accum + w
+assert accum == None
+        </input>
+  </program>
+</section>

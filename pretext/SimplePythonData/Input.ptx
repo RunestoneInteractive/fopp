@@ -1,0 +1,107 @@
+<section xml:id="simple-python-data_input219_index-0">
+        <title>Input</title>
+        <!--video should go here, taken from steve's youtube video on print + input-->
+        <p>Our programs get more interesting if they don't do exactly the same thing every time they run.
+            One way to make them more interesting is to get <term>input</term> from the user.  Luckily, in Python
+            there is a built-in function to accomplish this task.  It is called <c>input</c>.</p>
+        <program language="python"><input>
+n = input("Please enter your name: ")
+</input></program>
+        <p>The input function allows the programmer to provide a <term>prompt string</term>. In the example above,
+            it is <q>Please enter your name: <q>.  When the function is evaluated, the prompt is
+            shown (in the browser, look for a popup window).
+            The user of the program can type some text and press <c>return</c>. When this
+            happens the text that has been entered is returned from the <c>input</c> function,
+            and in this case assigned to the variable <c>n</c>.  Run this example a few times and
+            try some different names in the input box that appears.</p>
+
+    <program xml:id="ac2_16_1" interactive="activecode" language="python">
+        <input>
+n = input("Please enter your name: ")
+print("Hello", n)
+        </input>
+    </program>
+        <p>It is very important to note that the <c>input</c> function returns a string value. Even if you
+            asked the user to enter their age, you would get back a string like
+            <c>"17"</c>.  It would be your job, as the programmer, to convert that string into
+            an int or a float, using the <c>int</c> or <c>float</c> converter functions we saw
+            earlier.</p>
+        <note>
+            <p>We often use the word <q>input</q> (or, synonymously, argument) to refer to the values that are passed to any function. Do not confuse that with the <c>input</c> function, which asks the user of a program to type in a value. Like any function, <c>input</c> itself takes an input argument and produces an output. The input is a character string that is displayed as a prompt to the user. The output is whatever character string the user types.</p>
+            <p>This is analogous to the potential confusion of function <q>outputs</q> with the contents of the output window. Every function produces an output, which is a Python value. Only the print function puts things in the output window. Most functions take inputs, which are Python values. Only the input function invites users to type something.</p>
+        </note>
+        <p>Here is a program that turns a number of seconds into more human readable counts of hours,
+            minutes, and seconds. A call to <c>input()</c> allows the user to enter the number of seconds.
+            Then we convert that string to an integer.  From there we use the division and modulus
+            operators to compute the results.</p>
+
+    <program xml:id="ac2_16_2" interactive="activecode" language="python">
+        <input>
+str_seconds = input("Please enter the number of seconds you wish to convert")
+total_secs = int(str_seconds)
+
+hours = total_secs // 3600
+secs_still_remaining = total_secs % 3600
+minutes =  secs_still_remaining // 60
+secs_finally_remaining = secs_still_remaining  % 60
+
+print("Hrs=", hours, "mins=", minutes, "secs=", secs_finally_remaining)
+        </input>
+    </program>
+        <p>The variable <c>str_seconds</c> will refer to the string that is entered by the user. As we said above, even though this string may be <c>7684</c>, it is still a string and not a number.  To convert it to an integer, we use the <c>int</c> function.
+            The result is referred to by <c>total_secs</c>.  Now, each time you run the program, you can enter a new value for the number of seconds to be converted.</p>
+        <p><term>Check your understanding</term></p>
+
+    <exercise label="question2_16_1">
+        <statement>
+
+        <p>What is printed when the following statements execute?</p>
+        <program language="python"><input>
+n = input("Please enter your age: ")
+# user types in 18
+print(type(n))
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>&lt;class 'str'&gt;</p>
+                </statement>
+                <feedback>
+                    <p>All input from users is read in as a string.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>&lt;class 'int'&gt;</p>
+                </statement>
+                <feedback>
+                    <p>Even though the user typed in an integer, it does not come into the program as an integer.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>&lt;class 18&gt;</p>
+                </statement>
+                <feedback>
+                    <p>18 is the value of what the user typed, not the type of the data.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>18</p>
+                </statement>
+                <feedback>
+                    <p>18 is the value of what the user typed, not the type of the data.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>
+

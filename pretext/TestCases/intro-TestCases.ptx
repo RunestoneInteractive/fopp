@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_introduction-test-cases">
+  <title>Introduction: Test Cases</title>
+  <p>A <term>test case</term> expresses requirements for a program, in a way that can be checked automatically. Specifically, a test
+            asserts something about the state of the program at a particular point in its execution.</p>
+  <p>We have previously suggested that it's a good idea to first write down comments about what your code is supposed to do,
+            before actually writing the code. It is an even better idea to write down some test cases before writing a program.</p>
+  <p>There are several reasons why it's a good habit to write test cases.</p>
+  <p>
+    <ul>
+      <li>
+        <p>Before we write code, we have in mind what it <em>should</em> do, but those thoughts may be a little vague. Writing down test cases forces us to be more concrete about what should happen.</p>
+      </li>
+      <li>
+        <p>As we write the code, the test cases can provide automated feedback. You've actually been the beneficiary of such automated feedback via test cases throughout this book in some of the activecode windows and almost all of the exercises. We wrote the code for those test cases but kept it hidden, so as not to confuse you and also to avoid giving away the answers. You can get some of the same benefit from writing your own test cases.</p>
+      </li>
+      <li>
+        <p>In larger software projects, the set of test cases can be run every time a change is made to the code base. <term>Unit tests</term> check that small bits of code are correctly implemented. <term>Functional tests</term> check that larger chunks of code work correctly. Running the tests can help to identify situations where a change in code in one place breaks the correct operation of some other code. We won't see that advantage of test cases in this textbook, but keep in mind that this introduction to test cases is setting the stage for an essential software engineering practice if you are participating in a larger software development project.</p>
+      </li>
+    </ul>
+  </p>
+  <p>Now it's time to learn how to write code for test cases.</p>
+  <p>Python provides a statement called <c>assert</c>.</p>
+  <p>
+    <ul>
+      <li>
+        <p>Following the word assert there will be a python expression.</p>
+      </li>
+      <li>
+        <p>If that expression evaluates to the Boolean <c>False</c>, then the interpreter will raise a runtime error.</p>
+      </li>
+      <li>
+        <p>If the expression evaluates to <c>True</c>, then nothing happens and the execution goes on to the next line of code.</p>
+      </li>
+    </ul>
+  </p>
+  <p>Why would you ever want to write a line of code that can never compute anything useful for you, but sometimes causes a runtime error? For all the reasons we described above about the value of automated tests. You want a test that will alert that you that some condition you assumed was true is not in fact true. It's much better to be alerted to that fact right away than to have some unexpected result much later in your program execution, which you will have trouble tracing to the place where you had an error in your code.</p>
+  <p>Why doesn't <c>assert</c> print out something saying that the test passed? The reason is that you don't want to clutter up your output window with the results of automated tests that pass. You just want to know when one of your tests fails. In larger projects, other testing harnesses are used instead of <c>assert</c>, such as the python <c>unittest</c> module. Those provide some output summarizing tests that have passed as well as those that failed. In this textbook, we will just use simple <c>assert</c> statements for automated tests.</p>
+  <p>To write a test, we must know what we <em>expect</em> some value to be at a particular point in the program's execution. In the rest of the chapter, we'll see some examples of <c>assert</c> statements and ideas for what kinds of assertions one might want to add in one's programs.</p>
+  <note>
+    <p>A note to instructors: this chapter is deliberately structured so that you can introduce testing early in the course if you want to. You will need to cover chapter 8, on Conditionals, before starting this chapter, because that chapter covers Booleans. The subchapters on testing types and testing conditionals can be covered right after that. The subchapter on testing functions can be delayed until after you have covered function definition.</p>
+  </note>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question19_1_1">
+    <statement>
+      <p>When <c>assert x==y</c> is executed and x and y have different values, what will happen?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>A runtime error will occur</p>
+        </statement>
+        <feedback>
+          <p>The expression ``x==y`` evaluates to ``False``, so a runtime error will occur</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A message is printed out saying that the test failed.</p>
+        </statement>
+        <feedback>
+          <p>If the assertion fails, a runtime error will occur</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x will get the value that y currently has</p>
+        </statement>
+        <feedback>
+          <p>``x==y`` is a Boolean expression, not an assignment statement</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing will happen</p>
+        </statement>
+        <feedback>
+          <p>The expression ``x==y`` evaluates to ``False``</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A message is printed out saying that the test passed.</p>
+        </statement>
+        <feedback>
+          <p>When an assertion test passes, no message is printed. In this case, the assertion test fails.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question19_1_1b">
+    <statement>
+      <p>When <c>assert x==y</c> is executed and x and y have the same values, what will happen?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A runtime error will occur</p>
+        </statement>
+        <feedback>
+          <p>The expression ``x==y`` evaluates to ``True``</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A message is printed out saying that the test failed.</p>
+        </statement>
+        <feedback>
+          <p>The expression ``x==y`` evaluates to ``True``</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x will get the value that y currently has</p>
+        </statement>
+        <feedback>
+          <p>``x==y`` is a Boolean expression, not an assignment statement</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing will happen</p>
+        </statement>
+        <feedback>
+          <p>The expression ``x==y`` evaluates to ``True``</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A message is printed out saying that the test passed.</p>
+        </statement>
+        <feedback>
+          <p>When an assertion test passes, no message is printed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question19_1_2">
+    <statement>
+      <p>Test cases are a waste of time, because the python interpreter will give an error
+            message when the program runs incorrectly, and that's all you need for debugging.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>You might not notice the error, if the code just produces a wrong output rather generating an error. And it may be difficult to figure out the original cause of an error when you do get one.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Test cases let you test some pieces of code as you write them, rather than waiting for problems to show themselves later.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

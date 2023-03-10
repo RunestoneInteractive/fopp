@@ -1,0 +1,333 @@
+<section xml:id="inheritance_inheriting-variables-and-methods">
+        <title>Inheriting Variables and Methods</title>
+        
+        
+        <subsection xml:id="inheritance_mechanics-of-defining-a-subclass134_index-0">
+            <title>Mechanics of Defining a Subclass</title>
+            <p>We said that inheritance provides us a more elegant way of, for example, creating  <c>Dog</c> and <c>Cat</c> types, rather than making a very complex <c>Pet</c> class. In the abstract, this is pretty intuitive: all pets have certain things, but dogs are different from cats, which are different from birds. Going a step further, a Collie dog is different from a Labrador dog, for example. Inheritance provides us with an easy and elegant way to represent these differences.</p>
+            <p>Basically, it works by defining a new class, and using a special syntax to show what the new sub-class <em>inherits from</em> a super-class. So if you wanted to define a <c>Dog</c> class as a special kind of <c>Pet</c>, you would say that the <c>Dog</c> type inherits from the <c>Pet</c> type. In the definition of the inherited class, you only need to specify the methods and instance variables that are different from the parent class (the <term>parent class</term>, or the <term>superclass</term>,  is what we may call the class that is <em>inherited from</em>. In the example we're discussing, <c>Pet</c> would be the superclass of <c>Dog</c> or <c>Cat</c>).</p>
+            <p>Here is an example. Say we want to define a class <c>Cat</c> that inherits from <c>Pet</c>. Assume we have the <c>Pet</c> class that we defined earlier.</p>
+            <p>We want the <c>Cat</c> type to be exactly the same as <c>Pet</c>, <em>except</em> we want the sound cats to start out knowing <q>meow</q> instead of <q>mrrp</q>, and we want the <c>Cat</c> class to have its own special method called <c>chasing_rats</c>, which only <c>Cat</c> s have.</p>
+            <p>For reference, here's the original Tamagotchi code</p>
+
+    <program xml:id="inheritance_cat_example" interactive="activecode" language="python">
+        <input>
+from random import randrange
+
+# Here's the original Pet class
+class Pet():
+    boredom_decrement = 4
+    hunger_decrement = 6
+    boredom_threshold = 5
+    hunger_threshold = 10
+    sounds = ['Mrrp']
+    def __init__(self, name = "Kitty"):
+        self.name = name
+        self.hunger = randrange(self.hunger_threshold)
+        self.boredom = randrange(self.boredom_threshold)
+        self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+    def clock_tick(self):
+        self.boredom += 1
+        self.hunger += 1
+
+    def mood(self):
+        if self.hunger &lt;= self.hunger_threshold and self.boredom &lt;= self.boredom_threshold:
+            return "happy"
+        elif self.hunger &gt; self.hunger_threshold:
+            return "hungry"
+        else:
+            return "bored"
+
+    def __str__(self):
+        state = "     I'm " + self.name + ". "
+        state += " I feel " + self.mood() + ". "
+        # state += "Hunger %d Boredom %d Words %s" % (self.hunger, self.boredom, self.sounds)
+        return state
+
+    def hi(self):
+        print(self.sounds[randrange(len(self.sounds))])
+        self.reduce_boredom()
+
+    def teach(self, word):
+        self.sounds.append(word)
+        self.reduce_boredom()
+
+    def feed(self):
+        self.reduce_hunger()
+
+    def reduce_hunger(self):
+        self.hunger = max(0, self.hunger - self.hunger_decrement)
+
+    def reduce_boredom(self):
+        self.boredom = max(0, self.boredom - self.boredom_decrement)
+
+# Here's the new definition of class Cat, a subclass of Pet.
+class Cat(Pet): # the class name that the new class inherits from goes in the parentheses, like so.
+    sounds = ['Meow']
+
+    def chasing_rats(self):
+        return "What are you doing, Pinky? Taking over the world?!"
+        </input>
+    </program>
+            <p>All we need is the few extra lines at the bottom of the ActiveCode window! The elegance of inheritance allows us to specify just the differences in the new, inherited class. In that extra code, we make sure the <c>Cat</c> class inherits from the <c>Pet</c> class. We do that by putting the word Pet in parentheses, <c>class Cat(Pet):</c>. In the definition of the class <c>Cat</c>, we only need to define the things that are different from the ones in the <c>Pet</c> class.</p>
+            <p>In this case, the only difference is that the class variable <c>sounds</c> starts out with the string <c>"Meow"</c> instead of the string <c>"mrrp"</c>, and there is a new method <c>chasing_rats</c>.</p>
+            <p>We can still use all the <c>Pet</c> methods in the <c>Cat</c> class, this way. You can call the <c>__str__</c> method on an instance of <c>Cat</c> to <c>print</c> an instance of <c>Cat</c>, the same way you could call it on an instance of <c>Pet</c>, and the same is true for the <c>hi</c> method &#8211; it's the same for instances of <c>Cat</c> and <c>Pet</c>. But the <c>chasing_rats</c> method is special: it's only usable on <c>Cat</c> instances, because <c>Cat</c> is a subclass of <c>Pet</c> which has that additional method.</p>
+            <p>In the original Tamagotchi game in the last chapter, you saw code that created instances of the <c>Pet</c> class. Now let's write a little bit of code that uses instances of the <c>Pet</c> class AND instances of the <c>Cat</c> class.</p>
+
+    <program xml:id="tamagotchi_2" interactive="activecode" language="python">
+        <input>
+p1 = Pet("Fido")
+print(p1) # we've seen this stuff before!
+
+p1.feed()
+p1.hi()
+print(p1)
+
+cat1 = Cat("Fluffy")
+print(cat1) # this uses the same __str__ method as the Pets do
+
+cat1.feed() # Totally fine, because the cat class inherits from the Pet class!
+cat1.hi()
+print(cat1)
+
+print(cat1.chasing_rats())
+
+#print(p1.chasing_rats()) # This line will give us an error. The Pet class doesn't have this method!
+        </input>
+    </program>
+            <p>And you can continue the inheritance tree. We inherited <c>Cat</c> from <c>Pet</c>. Now say we want a subclass of <c>Cat</c> called <c>Cheshire</c>. A Cheshire cat should inherit everything from <c>Cat</c>, which means it inherits everything that <c>Cat</c> inherits from <c>Pet</c>, too. But the <c>Cheshire</c> class has its own special method, <c>smile</c>.</p>
+
+    <program xml:id="inheritance_cheshire_example" interactive="activecode" language="python">
+        <input>
+class Cheshire(Cat): # this inherits from Cat, which inherits from Pet
+
+    def smile(self): # this method is specific to instances of Cheshire
+        print(":D :D :D")
+
+# Let's try it with instances.
+cat1 = Cat("Fluffy")
+cat1.feed() # Totally fine, because the cat class inherits from the Pet class!
+cat1.hi() # Uses the special Cat hello.
+print(cat1)
+
+print(cat1.chasing_rats())
+
+new_cat = Cheshire("Pumpkin") # create a Cheshire cat instance with name "Pumpkin"
+new_cat.hi() # same as Cat!
+new_cat.chasing_rats() # OK, because Cheshire inherits from Cat
+new_cat.smile() # Only for Cheshire instances (and any classes that you make inherit from Cheshire)
+
+# cat1.smile() # This line would give you an error, because the Cat class does not have this method!
+
+# None of the subclass methods can be used on the parent class, though.
+p1 = Pet("Teddy")
+p1.hi() # just the regular Pet hello
+#p1.chasing_rats() # This will give you an error -- this method doesn't exist on instances of the Pet class.
+#p1.smile() # This will give you an error, too. This method does not exist on instances of the Pet class.
+        </input>
+    </program>
+        </subsection>
+        <subsection xml:id="inheritance_how-the-interpreter-looks-up-attributes">
+            <title>How the interpreter looks up attributes</title>
+            <p>So what is happening in the Python interpreter when you write programs with classes, subclasses, and instances of both parent classes and subclasses?</p>
+            <p><term>This is how the interpreter looks up attributes:</term></p>
+            <p><ol label="1">
+                <li>
+                    <p>First, it checks for an instance variable or an instance method by the name it's looking for.</p>
+                </li>
+                <li>
+                    <p>If an instance variable or method by that name is not found, it checks for a class variable. (See the <xref ref="classes_class-variables-instance-variables"/> for an explanation of the difference between <term>instance variables</term> and <term>class variables</term>.)</p>
+                </li>
+                <li>
+                    <p>If no class variable is found, it looks for a class variable in the parent class.</p>
+                </li>
+                <li>
+                    <p>If no class variable is found, the interpreter looks for a class variable in THAT class's parent (the <q>grandparent</q> class).</p>
+                </li>
+                <li>
+                    <p>This process goes on until the last ancestor is reached, at which point Python will signal an error.</p>
+                </li>
+            </ol></p>
+            <p>Let's look at this with respect to some code.</p>
+            <p>Say you write the lines:</p>
+            <program language="python"><input>
+new_cat = Cheshire("Pumpkin")
+print(new_cat.name)
+</input></program>
+            <p>In the second line, after the instance is created, Python looks for the instance variable <c>name</c> in the <c>new_cat</c> instance.  In this case, it exists. The name on this instance of <c>Cheshire</c> is <c>Pumpkin</c>. There you go!</p>
+            <p>When the following lines of code are written and executed:</p>
+            <program language="python"><input>
+cat1 = Cat("Sepia")
+cat1.hi()
+</input></program>
+            <p>The Python interpreter looks for <c>hi</c> in the instance of <c>Cat</c>. It does not find it, because there's no statement of the form <c>cat1.hi = ...</c>. (Be careful here &#8211; if you <em>had</em> set an instance variable on Cat called <c>hi</c> it would be a bad idea, because you would not be able to use the <term>method</term> that it inherited anymore. We'll see more about this later.)</p>
+            <p>Then it looks for hi as a class variable (or method) in the class Cat, and still doesn't find it.</p>
+            <p>Next, it looks for a class variable <c>hi</c> on the parent class of <c>Cat</c>, <c>Pet</c>. It finds that &#8211; there's a <term>method</term> called <c>hi</c> on the class <c>Pet</c>. Because of the <c>()</c> after <c>hi</c>, the method is invoked. All is well.</p>
+            <p>However, for the following, it won't go so well</p>
+            <program language="python"><input>
+p1 = Pet("Teddy")
+p1.chasing_rats()
+</input></program>
+            <p>The Python interpreter looks for an instance variable or method called <c>chasing_rats</c> on the <c>Pet</c> class. It doesn't exist. <c>Pet</c> has no parent classes, so Python signals an error.</p>
+            <p><term>Check your understanding</term></p>
+
+    <exercise label="question_inheritance_1">
+        <statement>
+
+            <p>After you run the code, <c>new_cat = Cheshire("Cat1")</c>, how many instance variables exist for the new_cat instance of Cheshire?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p>Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>2</p>
+                </statement>
+                <feedback>
+                    <p>Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p>Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>4</p>
+                </statement>
+                <feedback>
+                    <p>Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. That constructor method sets the instance variables name, hunger, boredom, and sounds.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="question_inheritance_2">
+        <statement>
+
+            <p>What would print after running the following code:</p>
+            <program language="python"><input>
+new_cat = Cheshire("Cat1</q>)
+class Siamese(Cat):
+  def song(self):
+    print("I am a purrrfect creature.")
+another_cat = Siamese("Cat2")
+another_cat.song()
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>I am a purrrfect creature.</p>
+                </statement>
+                <feedback>
+                    <p>another_cat is an instance of Siamese, so its song() method is invoked.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Error</p>
+                </statement>
+                <feedback>
+                    <p>another_cat is an instance of Siamese, so its song() method is invoked.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Pumpkin</p>
+                </statement>
+                <feedback>
+                    <p>This would print if the statement was print new_cat.name.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Nothing. There's no print statement.</p>
+                </statement>
+                <feedback>
+                    <p>There is a print statement in the method definition.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="question_inheritance_3">
+        <statement>
+
+            <p>What would print after running the following code:</p>
+            <program language="python"><input>
+new_cat = Cheshire("Cat1</q>)
+class Siamese(Cat):
+  def song(self):
+    print("I am a purrrfect creature.")
+another_cat = Siamese("Cat2")
+new_cat.song()
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>We are Siamese if you please. We are Siamese if you don't please.</p>
+                </statement>
+                <feedback>
+                    <p>You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Error</p>
+                </statement>
+                <feedback>
+                    <p>You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Cat1</p>
+                </statement>
+                <feedback>
+                    <p>This would print if the statement was print new_cat.name.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Nothing. There's no print statement.</p>
+                </statement>
+                <feedback>
+                    <p>There is a print statement in the method definition for Siamese.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </subsection>
+    </section>
+

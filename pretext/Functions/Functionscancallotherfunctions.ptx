@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-can-call-other-functions-composition109_index-0">
+  <title>Functions can call other functions (Composition)</title>
+  <p>It is important to understand that each of the functions we write can be used and called from other functions we
+            write. This is one of the most important ways that computer programmers take a large problem and break it down into a
+            group of smaller problems. This process of breaking a problem into smaller subproblems is called <term>functional decomposition</term>.</p>
+  <p>Here's a simple example of functional decomposition using two functions. The first function called <c>square</c> simply
+            computes the square of a given number. The second function called <c>sum_of_squares</c> makes use of square to compute
+            the sum of three numbers that have been squared.</p>
+  <program xml:id="clens11_9_1" interactive="codelens" language="python">
+    <input>
+def square(x):
+    y = x * x
+    return y
+
+def sum_of_squares(x,y,z):
+    a = square(x)
+    b = square(y)
+    c = square(z)
+
+    return a+b+c
+
+a = -5
+b = 2
+c = 10
+result = sum_of_squares(a,b,c)
+print(result)
+    </input>
+  </program>
+  <p>Even though this is a pretty simple idea, in practice this example illustrates many very important Python concepts,
+            including local and global variables along with parameter passing. Note that the body of <c>square</c> is not executed
+            until it is called from inside the <c>sum_of_squares</c> function for the first time on line 6.</p>
+  <p>Also notice that when <c>square</c> is called (at Step 8, for example), there are two groups of local variables, one for
+            <c>square</c> and one for <c>sum_of_squares</c>.  Each group of local variables is called a <term>stack frame</term>. The variables
+            <c>x</c>, and <c>y</c> are local variables in both functions. These are completely different variables, even though they
+            have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice
+            that at step 9, y has the value 25 is one frame and 2 in the other.</p>
+  <p>What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the
+            <c>square</c> function. If it didn't find it there, it would go look in the global frame.</p>
+  <p>Let's use composition to build up a little more useful function. Recall from the dictionaries chapter that we had a two-step process for finding the letter that appears most frequently in a text string:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Accumulate a dictionary with letters as keys and counts as values. See <xref ref="dictionaries_intro--accumulating-multiple-results-ina-dictionary"/>.</p>
+      </li>
+      <li>
+        <p>Find the best key from that dictionary. See <xref ref="dictionaries_accumulatingthe-best-key"/>.</p>
+      </li>
+    </ol>
+  </p>
+  <p>We can make functions for each of those and then compose them into a single function that finds the most common letter.</p>
+  <program xml:id="ac_11_9_1" interactive="activecode" language="python">
+    <input>
+def most_common_letter(s):
+    frequencies = count_freqs(s)
+    return best_key(frequencies)
+
+def count_freqs(st):
+    d = {}
+    for c in st:
+        if c not in d:
+             d[c] = 0
+        d[c] = d[c] + 1
+    return d
+
+def best_key(dictionary):
+    ks = dictionary.keys()
+    best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
+    for k in ks:
+        if dictionary[k] &gt; dictionary[best_key_so_far]:
+            best_key_so_far = k
+    return best_key_so_far
+
+print(most_common_letter("abbbbbbbbbbbccccddddd"))
+        </input>
+  </program>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <exercise label="ac11_9_1">
+    <statement>
+      <p><term>1.</term> Write two functions, one called <c>addit</c> and one called <c>mult</c>. <c>addit</c> takes one number as an input and adds 5. <c>mult</c> takes one number as an input, and multiplies that input by whatever is returned by <c>addit</c>, and then returns the result.</p>
+    </statement>
+    <program xml:id="ac11_9_1_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(mult(1), 6,"Testing the function mult with input 1 (should be 6)")
+      self.assertEqual(mult(-2), -6, "Testing the function mult with input -2 (should be -6)")
+      self.assertEqual(mult(0), 0, "Testing the function mult with input 0 (should be 0)")
+
+   def testTwo(self):
+      self.assertEqual(addit(1), 6, "Testing the function addit with input 1 (should be 6)")
+      self.assertEqual(addit(-2), 3, "Testing the function addit with input -2 (should be 3)")
+      self.assertEqual(addit(0), 5, "Testing the function addit with input 0 (should be 5)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

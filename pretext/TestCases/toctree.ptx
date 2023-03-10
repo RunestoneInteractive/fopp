@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Test Cases</title>
+        <xi:include href='./intro-TestCases.ptx' />
+        <xi:include href='./TestingTypes.ptx' />
+        <xi:include href='./TestingConditionals.ptx' />
+        <xi:include href='./TestingLoops.ptx' />
+        <xi:include href='./Testingfunctions.ptx' />
+        <xi:include href='./TestingOptionalParameters.ptx' />
+        <xi:include href='./WPProgramDevelopment.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+        <xi:include href='./Exercises.ptx' />
+    </chapter>

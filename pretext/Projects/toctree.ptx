@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Projects</title>
+        <xi:include href='./IntroProjects.ptx' />
+        <xi:include href='./scaffolded_code.ptx' />
+        <xi:include href='./turtle_driving.ptx' />
+        <xi:include href='./input_compute_output.ptx' />
+        <xi:include href='./drawing_a_circle.ptx' />
+        <xi:include href='./xkcd_pass.ptx' />
+        <xi:include href='./kiva_statistics.ptx' />
+        <xi:include href='./kiva_graphs.ptx' />
+        <xi:include href='./graphing_with_altair.ptx' />
+        <xi:include href='./encryption.ptx' />
+        <xi:include href='./image_processing.ptx' />
+        <xi:include href='./common_words.ptx' />
+        <xi:include href='./monte_carlo_simulations.ptx' />
+        <xi:include href='./roman_numerals.ptx' />
+        <xi:include href='./split_apply_combine.ptx' />
+        <xi:include href='./image_processing_revisited.ptx' />
+        <xi:include href='./l_systems.ptx' />
+        <xi:include href='./regression_analysis.ptx' />
+        <xi:include href='./diy_google.ptx' />
+        <xi:include href='./better_pizza_predictions.ptx' />
+        <xi:include href='./clustering.ptx' />
+        <xi:include href='./sentiment_analysis.ptx' />
+        <xi:include href='./jupyterlite.ptx' />
+    </chapter>

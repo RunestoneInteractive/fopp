@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<section xml:id="advanced-accumulation_map">
+  <title>Map</title>
+  <p>You previously were introduced to accumulating a list by transforming each of the elements. Here we revisit that pattern.</p>
+  <p>The following function produces a new list with each item in the original list doubled. It is an example of a mapping,
+            from the original list to a new list of the same length, where each element is doubled.</p>
+  <program xml:id="ac21_2_1" interactive="activecode" language="python">
+    <input>
+def doubleStuff(a_list):
+    """ Return a new list in which contains doubles of the elements in a_list. """
+    new_list = []
+    for value in a_list:
+        new_elem = 2 * value
+        new_list.append(new_elem)
+    return new_list
+
+things = [2, 5, 9]
+print(things)
+things = doubleStuff(things)
+print(things)
+        </input>
+  </program>
+  <p>The doubleStuff function is an example of the accumulator pattern, in particular the mapping pattern. On line 3,
+            <c>new_list</c> is initialized. On line 5, the doubled value for the current item is produced and on line 6 it is appended to
+            the list we're accumulating. Line 7 executes after we've processed all the items in the original list: it returns the
+            <c>new_list</c>. Once again, codelens helps us to see the actual references and objects as they are passed and returned.</p>
+  <program xml:id="clens21_2_1" interactive="codelens" language="python">
+    <input>
+def doubleStuff(a_list):
+    """ Return a new list in which contains doubles of the elements in a_list. """
+    new_list = []
+    for value in a_list:
+        new_elem = 2 * value
+        new_list.append(new_elem)
+    return new_list
+
+things = [2, 5, 9]
+things = doubleStuff(things)
+    </input>
+  </program>
+  <p>This pattern of computation is so common that python offers a more general way to do mappings, the <c>map</c> function, that
+            makes it more clear what the overall structure of the computation is. <c>map</c> takes two arguments, a function and a
+            sequence. The function is the mapper that transforms items. It is automatically applied to each item in the sequence. You
+            don't have to initialize an accumulator or iterate with a for loop at all.</p>
+  <note>
+    <p>Technically, in a proper Python 3 interpreter, the <c>map</c> function produces an <q>iterator</q>, which is like a list but
+                produces the items as they are needed. Most places in Python where you can use a list (e.g., in a for loop) you can
+                use an <q>iterator</q> as if it was actually a list. So you probably won't ever notice the difference. If you ever really
+                need a list, you can explicitly turn the output of map into a list: <c>list(map(...))</c>. In the runestone environment, <c>map</c> actually returns a real list, but to make this code compatible with a full python environment, we always convert it to a list.</p>
+  </note>
+  <p>As we did when passing a function as a parameter to the <c>sorted</c> function, we can specify a function to pass to <c>map</c>
+            either by referring to a function by name, or by providing a lambda expression.</p>
+  <program xml:id="ac21_2_2" interactive="activecode" language="python">
+    <input>
+def triple(value):
+    return 3*value
+
+def tripleStuff(a_list):
+    new_seq = map(triple, a_list)
+    return list(new_seq)
+
+def quadrupleStuff(a_list):
+    new_seq = map(lambda value: 4*value, a_list)
+    return list(new_seq)
+
+things = [2, 5, 9]
+things3 = tripleStuff(things)
+print(things3)
+things4 = quadrupleStuff(things)
+print(things4)
+        </input>
+  </program>
+  <p>Of course, once we get used to using the <c>map</c> function, it's no longer necessary to define functions like
+            <c>tripleStuff</c> and <c>quadrupleStuff</c>.</p>
+  <program xml:id="ac21_2_3" interactive="activecode" language="python">
+    <input>
+things = [2, 5, 9]
+
+things4 = map((lambda value: 4*value), things)
+print(list(things4))
+
+# or all on one line
+print(list(map((lambda value: 5*value), [1, 2, 3])))
+        </input>
+  </program>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="ac21_2_4">
+    <statement>
+      <p><term>1.</term> Using map, create a list assigned to the variable <c>greeting_doubled</c> that doubles each element in the list <c>lst</c>.</p>
+    </statement>
+    <program xml:id="ac21_2_4_editor" interactive="activecode" language="python">
+      <input>
+
+lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOneA(self):
+      self.assertEqual(greeting_doubled, [['hi', 'bye', 'hi', 'bye'], 'hellohello', 'goodbyegoodbye', [9, 2, 9, 2], 8], "Testing that greeting_doubled is assigned to correct values")
+      self.assertIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac21_2_5">
+    <statement>
+      <p><term>2.</term> Below, we have provided a list of strings called <c>abbrevs</c>. Use map to produce a new list called <c>abbrevs_upper</c> that contains all the same strings in upper case.</p>
+    </statement>
+    <program xml:id="ac21_2_5_editor" interactive="activecode" language="python">
+      <input>
+
+abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(abbrevs_upper, ["USA", "ESP", "CHN", "JPN", "MEX", "CAN", "RUS", "RSA", "JAM"], "Testing that abbrevs_upper is correct.")
+      self.assertIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

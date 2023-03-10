@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<section xml:id="files_using-with-for-files">
+  <title>Using <c>with</c> for Files</title>
+  <note>
+    <p>This section is a bit of an advanced topic and can be easily skipped. But with statements are becoming very common and it doesn't hurt to know about them in case you run into one in the wild.</p>
+  </note>
+  <p>Now that you have seen and practiced a bit with opening and closing files, there is another mechanism that Python
+            provides for us that cleans up the often forgotten close. Forgetting to close a file does not necessarily cause a runtime
+            error in the kinds of programs you typically write in an introductory programing course. However if you are writing a
+            program that may run for days or weeks at a time that does a lot of file reading and writing you may run into trouble.</p>
+  <p>Python has the notion of a context manager that automates the process of doing
+            common operations at the start of some task, as well as automating certain operations at the end of some task. For reading and writing a file, the normal operation is to open the file and assign it to a variable. At the end
+            of working with a file the common operation is to make sure that file is closed.</p>
+  <p>The Python with statement makes using context managers easy. The general form of a with statement is:</p>
+  <pre>with &lt;create some object that understands context&gt; as &lt;some name&gt;:
+    do some stuff with the object
+    ...</pre>
+  <p>When the program exits the with block, the context manager handles the common stuff that normally happens at the end, in our case closing a file. A simple example will clear up all of this abstract discussion of contexts. Here are the contents of a file called <q>mydata.txt</q>.</p>
+  <DataFileNode line="39" runestone_options="{'subchapter': 'With', 'chapter': 'Files', 'basecourse': 'fopp', 'optional': '', 'optclass': '', 'divid': 'mydata.txt', 'qnumber': '', 'cols': 5, 'rows': 20, 'filecontent': '1 2 3\n4 5 6\n', 'hidden': '', 'edit': 'false', 'question_label': '10.6.1'}" source="/home/ccurtis/Documents/Runestone/fopp-pretext/_sources/Files/With.rst">
+        </DataFileNode>
+  <program xml:id="ac9_12_1" interactive="activecode" language="python">
+    <input>
+with open('mydata.txt', 'r') as md:
+    for line in md:
+        print(line)
+# continue on with other code
+        </input>
+  </program>
+  <p>The first line of the <title_reference>with</title_reference> statement opens the file and assigns it to the variable <c>md</c>. Then we can iterate over the file in any of the usual ways. When we are done we simply stop indenting and let Python take care of closing the file and cleaning up.</p>
+  <p>This is equivalent to code that specifically closes the file at the end, but neatly marks the set of code that can make use of the open file as an indented block, and ensures that the programmer won't forget to include the <c>.close()</c> invocation.</p>
+  <program xml:id="ac9_12_2" interactive="activecode" language="python">
+    <input>
+md = open('mydata.txt', 'r')
+for line in md:
+    print(line)
+md.close()
+# continue with other code
+        </input>
+  </program>
+</section>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_tuples-as-return-values269_index-0">
+  <title>Tuples as Return Values</title>
+  <p>Functions can return tuples as return values. This is very useful &#x2014; we often want to know some batsman's highest and
+            lowest score, or we want to find the mean and the standard deviation, or we want to know the year, the month, and the
+            day, or if we're doing some ecological modeling we may want to know the number of rabbits and the number of wolves on
+            an island at a given time.  In each case, a function (which can only return a single value), can create a single tuple holding multiple elements.</p>
+  <p>For example, we could write a function that returns both the area and the circumference of a circle of radius r.</p>
+  <program xml:id="ac12_3_1" interactive="activecode" language="python">
+    <input>
+def circleInfo(r):
+    """ Return (circumference, area) of a circle of radius r """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r * r
+    return (c, a)
+
+print(circleInfo(10))
+        </input>
+  </program>
+  <p>Again, we can take advantage of packing to make the code look a little more readable on line 4</p>
+  <program xml:id="ac12_3_2" interactive="activecode" language="python">
+    <input>
+def circleInfo(r):
+    """ Return (circumference, area) of a circle of radius r """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r * r
+    return c, a
+
+print(circleInfo(10))
+        </input>
+  </program>
+  <p>It's common to unpack the returned values into multiple variables.</p>
+  <program xml:id="ac12_4_5" interactive="activecode" language="python">
+    <input>
+def circleInfo(r):
+    """ Return (circumference, area) of a circle of radius r """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r * r
+    return c, a
+
+print(circleInfo(10))
+
+circumference, area = circleInfo(10)
+print(circumference)
+print(area)
+
+circumference_two, area_two = circleInfo(45)
+print(circumference_two)
+print(area_two)
+        </input>
+  </program>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <exercise label="question12_4_1">
+    <statement>
+      <p>If you want a function to return two values, contained in variables x and y, which of the following methods will work?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Make the last two lines of the function be "return x" and "return y"</p>
+        </statement>
+        <feedback>
+          <p>As soon as the first return statement is executed, the function exits, so the second one will never be executed; only x will be returned</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Include the statement "return [x, y]"</p>
+        </statement>
+        <feedback>
+          <p>return [x,y] is not the preferred method because it returns x and y in a mutable list rather than a tuple which is more efficient. But it is workable.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Include the statement "return (x, y)"</p>
+        </statement>
+        <feedback>
+          <p>return (x, y) returns a tuple.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Include the statement "return x, y"</p>
+        </statement>
+        <feedback>
+          <p>return x, y causes the two values to be packed into a tuple.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It's not possible to return two values; make two functions that each compute one value.</p>
+        </statement>
+        <feedback>
+          <p>It is possible, and frequently useful, to have one function compute multiple values.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac12_3_3">
+    <statement>
+      <p>Define a function called <c>information</c> that takes as input, the variables <c>name</c>, <c>birth_year</c>, <c>fav_color</c>, and <c>hometown</c>. It should return a tuple of these variables in this order.</p>
+    </statement>
+    <program xml:id="ac12_3_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(information("Sarah", 1996, "purple", "St. Louis"), ("Sarah", 1996, "purple", "St. Louis"), "Testing that information returns the correct tuple on input ('Sarah', 1996, 'purple', 'St. Louis')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac12_3_4">
+    <statement>
+      <p>Define a function called <c>info</c> with the following required parameters: <c>name</c>, <c>age</c>, <c>birth_year</c>, <c>year_in_college</c>, and <c>hometown</c>. The function should return a tuple that contains all the inputted information.</p>
+    </statement>
+    <program xml:id="ac12_3_4_editor" interactive="activecode" language="python">
+      <input>
+
+def info():
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(info(name='Tina', age=20, birth_year=1996, year_in_college='sophomore', hometown='Detroit'), ('Tina', 20, 1996, 'sophomore', 'Detroit'), "Testing the function info on input: name='Tina', age=20, birth_year=1996, year_in_college='sophomore', hometown='Detroit'.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

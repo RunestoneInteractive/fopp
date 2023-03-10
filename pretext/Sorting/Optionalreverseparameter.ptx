@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<section xml:id="sorting_optional-reverse-parameter">
+  <title>Optional reverse parameter</title>
+  <p>The sorted function takes some optional parameters (see the Optional Parameters page). The first optional parameter is
+            a key function, which will be described in the next section. The second optional parameter is a Boolean value which
+            determines whether to sort the items in reverse order. By default, it is False, but if you set it to True, the list will
+            be sorted in reverse order.</p>
+  <program xml:id="ac18_2_1" interactive="activecode" language="python">
+    <input>
+L2 = ["Cherry", "Apple", "Blueberry"]
+print(sorted(L2, reverse=True))
+        </input>
+  </program>
+  <note>
+    <p>For most functions, it is possible to provide optional parameters without keywords, but the <c>sorted</c> function
+                prevents this, so you have to provide keywords for the <c>reverse</c> and <c>key</c> parameters. In this situation, it is
+                more convenient to use the keyword mechanism anyway.</p>
+  </note>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="ac18_2_2">
+    <statement>
+      <p><term>1.</term> Sort the list, <c>lst</c> from largest to smallest. Save this new list to the variable <c>lst_sorted</c>.</p>
+    </statement>
+    <program xml:id="ac18_2_2_editor" interactive="activecode" language="python">
+      <input>
+
+lst = [3, 5, 1, 6, 7, 2, 9, -2, 5]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(lst_sorted, sorted(lst, reverse=True), "Testing that lst_sorted value is assigned to correct values.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

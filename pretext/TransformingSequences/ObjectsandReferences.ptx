@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_objects-and-references257_index-0">
+  <title>Objects and References</title>
+  <p>If we execute these assignment statements,</p>
+  <program language="python">
+    <input>
+a = "banana"
+b = "banana"
+</input>
+  </program>
+  <p>we know that <c>a</c> and <c>b</c> will refer to a string with the letters
+            <c>"banana"</c>. But we don't know yet whether they point to the <em>same</em> string.</p>
+  <p>There are two possible ways the Python interpreter could arrange its internal states:</p>
+  <image source="TransformingSequences/Figures/refdiag1.png" width="50%" alt="List illustration"/>
+  <p>or</p>
+  <image source="TransformingSequences/Figures/refdiag2.png" width="50%" alt="List illustration"/>
+  <p>In one case, <c>a</c> and <c>b</c> refer to two different string objects that have the same
+            value. In the second case, they refer to the same object. Remember that an object is something a variable can
+            refer to.</p>
+  <p>We can test whether two names refer to the same object using the <em>is</em>
+            operator.  The <em>is</em> operator will return true if the two references are to the same object.  In other words, the references are the same.  Try our example from above.</p>
+  <program xml:id="ac8_3_1" interactive="activecode" language="python">
+    <input>
+a = "banana"
+b = "banana"
+
+print(a is b)
+        </input>
+  </program>
+  <p>The answer is <c>True</c>. This tells us that both <c>a</c> and <c>b</c> refer to the same object, and that it is the second
+            of the two reference diagrams that describes the relationship. Python assigns every object a unique id and when we
+            ask <c>a is b</c> what python is really doing is checking to see if id(a) == id(b).</p>
+  <program xml:id="ac8_3_2" interactive="activecode" language="python">
+    <input>
+a = "banana"
+b = "banana"
+
+print(id(a))
+print(id(b))
+        </input>
+  </program>
+  <p>Since strings are <em>immutable</em>, the Python interpreter often optimizes resources by making two names that refer to the same string value
+            refer to the same object. You shouldn't count on this (that is, use <c>==</c> to compare strings, not <c>is</c>), but don't be surprised if you find that two variables,each bound to the string <q>banana</q>, have the same id..</p>
+  <p>This is not the case with lists, which never share an id just because they have the same contents. Consider the following example. Here, <c>a</c> and <c>b</c> refer to two different lists,
+            each of which happens to have the same element values. They need to have different ids so that mutations of list <c>a</c> do not affect list <c>b</c>.</p>
+  <program xml:id="ac8_3_3" interactive="activecode" language="python">
+    <input>
+a = [81,82,83]
+b = [81,82,83]
+
+print(a is b)
+
+print(a == b)
+
+print(id(a))
+print(id(b))
+        </input>
+  </program>
+  <p>The reference diagram for this example looks like this:</p>
+  <image source="TransformingSequences/Figures/refdiag3.png" width="50%" alt="Reference diagram for equal different lists"/>
+  <p><c>a</c> and <c>b</c> have equivalent values but do not refer to the same object. Because their contents are equivalent, <title_reference>a==b</title_reference> evaluates to True; because they are not the same object, <title_reference>a is b</title_reference> evaluates to False.</p>
+</section>

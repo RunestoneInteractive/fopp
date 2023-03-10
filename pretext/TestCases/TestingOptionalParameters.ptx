@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_testing-optional-parameters">
+  <title>Testing Optional Parameters</title>
+  <p>If a function takes an optional parameter, one of the edge cases to test for is when no parameter value is supplied
+            during execution. Below are some tests for the built-in sorted function.</p>
+  <program xml:id="ac19_2_3" interactive="activecode" language="python">
+    <input>
+assert sorted([1, 7, 4]) == [1, 4, 7]
+assert sorted([1, 7, 4], reverse=True) == [7, 4, 1]
+        </input>
+  </program>
+</section>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<section xml:id="building-programs_building-a-program-a-strategy">
+  <title>Building A Program: A Strategy</title>
+  <p>Building on lessons learned in the first debugging interlude, this chapter offers a strategy for writing a program to solve a problem such as those that appear in the exercises at the ends of the chapters in this book. (A similar approach is helpful for writing larger programs, but that will come later.)</p>
+  <note>
+    <title>Warning.</title>
+    <p>You may find it tempting to start an exercise by copying and pasting a snippet of code from somewhere in the textbook, and hoping that a small edit will lead to a solution to the current problem. Often this will lead to frustration and confusion; after trying a few code substitutions that feel vaguely familiar to you, you'll find the code looking kind of complicated and the outputs baffling.</p>
+    <p>Copying and editing snippets of code is actually a useful element of the strategy we outline below. But it comes a little later in the process, not as the first thing. And it requires a fair bit of work to make sure you understand the code snippet that you've copied. Only then will you be able to find the <em>right</em> small edits to the code snippet to make it do what you want.</p>
+  </note>
+  <p>There are three basic steps to the strategy we recommend: Outline; Code One Section at a Time; Clean Up.</p>
+  <subsection xml:id="building-programs_sketch-an-outline">
+    <title>Sketch an Outline</title>
+    <p>We are suggesting you first write down all the steps you want the program to do. You can do this in any manner you like. We are going to
+                show you how to outline using comments, but if you are more visual you might want to sketch on a piece of paper and if you are more
+                spatial try walking around the room. The big trick is to understand everything you want to do first in your own words, so then you are
+                translating them to the computer.</p>
+  </subsection>
+  <subsection xml:id="building-programs_code-one-section-at-a-time">
+    <title>Code One Section at a Time</title>
+    <p>After you outline your program, you should write code one section at a time, and carefully test that section before you go on. The idea here is to make sure your program is doing what you think it's doing at each stage.</p>
+    <p>Translating your English description of a step into code may be the most challenging step for you early in your learning about programming. Later it will come more naturally. Here is a checklist of questions that you may find useful in trying to find the right python code to express your idea, based on what you've learned so far:</p>
+    <p>
+      <ul>
+        <li>
+          <p>Is this operation pulling out an item from a list or string or dictionary? If so, use [] to pull out the item you want.</p>
+        </li>
+        <li>
+          <p>Is this operation transforming a string into another string? If so, look at the summary of string methods.</p>
+        </li>
+        <li>
+          <p>Is this operation modifying a list? If so, look at the material on lists.</p>
+        </li>
+        <li>
+          <p>Is the operation doing something multiple times? If so, you'll want a <c>for</c> loop. Start by making a skeleton version of a for loop, and then fill in the parts that are in &lt;brackets&gt;</p>
+        </li>
+      </ul>
+    </p>
+    <pre>for &lt;varname&gt; in &lt;seq&gt;:
+                &lt;code block line 1&gt;
+                &lt;code block line 2&gt;
+                ...</pre>
+    <p>
+      <ul>
+        <li>
+          <p>Is the operation something that should only occur in some circumstances and not in others? If so, you'll want an <c>if</c> statement. Start by making a skeleton version of an if/then/else code snippet, and then fill in the parts that are in &lt;brackets&gt;</p>
+        </li>
+      </ul>
+    </p>
+    <pre>if &lt;boolean exp&gt;:
+  &lt;if block here&gt;
+  ...
+else:
+  &lt;else block here&gt;
+  ...</pre>
+    <p>
+      <ul>
+        <li>
+          <p>Is this an accumulator pattern? If so, start by making a skeleton version of it, and then fill it in.</p>
+        </li>
+      </ul>
+    </p>
+    <pre>#initialize accumulator
+a = &lt;initial value&gt;
+
+for &lt;varname&gt; in &lt;seq&gt;:
+  &lt;some code in for block&gt;
+  a = &lt;new_value&gt;
+  &lt;other code in for block&gt;
+print(a)</pre>
+    <p>Finally, you may be reminded of a snippet of code somewhere in the textbook that did something similar to what you want to do. Now is the time to copy and edit that code. <term>But wait!</term> Before you start editing that code snippet, make sure you understand it. See the section below on understanding code.</p>
+  </subsection>
+  <subsection xml:id="building-programs_clean-up">
+    <title>Clean Up</title>
+    <p>When you are done with outlining and testing your program, delete any diagnostic print statements from your program. No one really needs to see the test statements you wrote, and leaving test statements in the program might confuse you if you add more to the program.</p>
+    <p>Extra comments do help other people read your code, but try to leave in only the bits that you think are useful. There is an art to writing good informative comments, and you can only learn this art by reading other people's programs and having your peers read your programs. As a rule of thumb for comments, when in doubt, keep it; it you're worried it won't make sense to you or someone else later, add more detail to it.</p>
+    <p>In the next few pages, we'll go through this process using a question similar to something that you may have already seen before.</p>
+  </subsection>
+</section>

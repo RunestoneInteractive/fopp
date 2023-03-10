@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <!-- <xi:include href="./bookinfo.ptx"/> -->
+
+    <book xml:id="thinkcspy" permid="tcs">
+    <title>How to Think Like a Computer Scientist</title>
+    <subtitle>The PreTeXt Interactive Edition</subtitle>
+    <frontmatter>
+    <titlepage>
+    </titlepage>
+    <xi:include href="./FrontBackMatter/preface.ptx"/>
+    </frontmatter>
+    <xi:include href="./GeneralIntro/toctree.ptx"/>
+</book> 
+</pretext>

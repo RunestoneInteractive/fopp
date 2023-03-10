@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_append-versus-concatenate">
+  <title>Append versus Concatenate</title>
+  <p>The <c>append</c> method adds a new item to the end of a list. It is also possible to add a new item to the end of a list
+            by using the concatenation operator. However, you need to be careful.</p>
+  <p>Consider the following example. The original list has 3 integers. We want to add the word <q>cat</q> to the end of the list.</p>
+  <program xml:id="clens8_7_1" interactive="activecode" language="python">
+    <input>
+origlist = [45,32,88]
+
+origlist.append("cat")
+        </input>
+  </program>
+  <p>Here we have used <c>append</c> which simply modifies the list. In order to use concatenation, we need to
+            write an assignment statement that uses the accumulator pattern:</p>
+  <pre>origlist = origlist + ["cat"]</pre>
+  <p>Note that the word <q>cat</q> needs to be placed in a list since the concatenation operator needs two lists
+            to do its work.</p>
+  <program xml:id="clens8_7_2" interactive="codelens" language="python">
+    <input>
+origlist = [45,32,88]
+
+origlist = origlist + ["cat"]
+    </input>
+  </program>
+  <p>It is also important to realize that with append, the original list is simply modified. On the other hand,
+            with concatenation, an entirely new list is created.  This can be seen in the following codelens example
+            where``newlist`` refers to a list which is a copy of the original list, <c>origlist</c>, with the new item
+            <q>cat</q> added to the end.  <c>origlist</c> still contains the three values it did before the concatenation.
+            This is why the assignment operation is necessary as part of the accumulator pattern.</p>
+  <program xml:id="clens8_7_3" interactive="codelens" language="python">
+    <input>
+origlist = [45,32,88]
+
+newlist = origlist + ["cat"]
+    </input>
+  </program>
+  <p>This might be difficult to understand since these two lists appear to be the same. In Python, every object
+            has a unique identification tag. Likewise, there is a built-in function that can be called on any object to return
+            its unique id. The function is appropriately called <c>id</c> and takes a single parameter, the object that you are
+            interested in knowing about. You can see in the example below that a real id is usually a very large integer value
+            (corresponding to an address in memory). In the textbook though the number will likely be smaller.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; alist = [4, 5, 6]
+&gt;&gt;&gt; id(alist)
+4300840544
+&gt;&gt;&gt;
+</input>
+  </program>
+  <program xml:id="ac8_7_1" interactive="activecode" language="python">
+    <input>
+origlist = [45,32,88]
+print("origlist:", origlist)
+print("the identifier:", id(origlist))             #id of the list before changes
+newlist = origlist + ['cat']
+print("newlist:", newlist)
+print("the identifier:", id(newlist))              #id of the list after concatentation
+origlist.append('cat')
+print("origlist:", origlist)
+print("the identifier:", id(origlist))             #id of the list after append is used
+        </input>
+  </program>
+  <p>Note how even though <c>newlist</c> and <c>origlist</c> appear the same, they have different identifiers.</p>
+  <p>We have previously described <title_reference>x += 1</title_reference> as a shorthand for <title_reference>x = x + 1</title_reference>. With lists, <title_reference>+=</title_reference> is actually a little different. In particular, <title_reference>origlist += [<q>cat</q>] appends <q>cat</q> to the end of the original list object. If there is another alias for `origlist</title_reference>, this can make a difference, as in the code below. See if you can follow (or, better yet, predict, changes in the reference diagram).</p>
+  <program xml:id="clens8_7_2a" interactive="codelens" language="python">
+    <input>
+origlist = [45,32,88]
+aliaslist = origlist
+origlist += ["cat"]
+origlist = origlist + ["cow"]
+    </input>
+  </program>
+  <p>We can use append or concatenate repeatedly to create new objects. If we had a string and wanted to make a new list, where each element in the list is a character in the string, where do you think you should start? In both cases, you'll need to first create a variable to store the new object.</p>
+  <program xml:id="ac8_72" interactive="activecode" language="python">
+    <input>
+st = "Warmth"
+a = []
+        </input>
+  </program>
+  <p>Then, character by character, you can add to the empty list. The process looks different if you concatentate as compared to using append.</p>
+  <program xml:id="ac8_7_3" interactive="activecode" language="python">
+    <input>
+st = "Warmth"
+a = []
+b = a + [st[0]]
+c = b + [st[1]]
+d = c + [st[2]]
+e = d + [st[3]]
+f = e + [st[4]]
+g = f + [st[5]]
+print(g)
+        </input>
+  </program>
+  <program xml:id="ac8_7_4" interactive="activecode" language="python">
+    <input>
+st = "Warmth"
+a = []
+a.append(st[0])
+a.append(st[1])
+a.append(st[2])
+a.append(st[3])
+a.append(st[4])
+a.append(st[5])
+print(a)
+        </input>
+  </program>
+  <p>This might become tedious though, and difficult if the length of the string is long.
+            Can you think of a better way to do this?</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_7_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+alist = [4,2,8,6,5]
+alist = alist + 999
+print(alist)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4,2,8,6,5,999]</p>
+        </statement>
+        <feedback>
+          <p>You cannot concatenate a list with an integer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Error, you cannot concatenate a list with an integer.</p>
+        </statement>
+        <feedback>
+          <p>Yes, in order to perform concatenation you would need to write alist+[999].  You must have two lists.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

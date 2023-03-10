@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<section xml:id="sorting_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>sort</title>
+      <p>A method that sorts a list in place, changing the contents of the list. It
+                            return None, not a new list.</p>
+    </gi>
+    <gi>
+      <title>sorted</title>
+      <p>A function that returns a sorted list, without changing the original.</p>
+    </gi>
+    <gi>
+      <title>reverse parameter</title>
+      <p>If True, the sorting is done in reverse order.</p>
+    </gi>
+    <gi>
+      <title>key parameter</title>
+      <p>If a value is specified, it must be a function object that takes one parameter.
+                            The function will be called once for each item in the list that's getting
+                            sorted. The return value will be used to decorate the item with a post-it
+                            note. Values on the post-it notes are used to determine the sort order of
+                            the items.</p>
+    </gi>
+  </glossary>
+</section>

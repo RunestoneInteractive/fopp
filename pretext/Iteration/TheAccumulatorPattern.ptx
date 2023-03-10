@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_the-accumulator-pattern">
+  <title>The Accumulator Pattern</title>
+  <p>One common programming <q>pattern</q> is to traverse a sequence, <term>accumulating</term> a value as we go,
+            such as the sum-so-far or the maximum-so-far. That way, at the end of the traversal we have
+            accumulated a single value, such as the sum total of all the items or the largest item.</p>
+  <dl>
+    <li>
+      <title>The anatomy of the accumulation pattern includes:</title>
+      <p>
+        <ul>
+          <li>
+            <p><term>initializing</term> an <q>accumulator</q> variable to an initial value (such as 0 if accumulating a sum)</p>
+          </li>
+          <li>
+            <p><term>iterating</term> (e.g., traversing the items in a sequence)</p>
+          </li>
+          <li>
+            <p><term>updating</term> the accumulator variable on each iteration (i.e., when processing each item in the sequence)</p>
+          </li>
+        </ul>
+      </p>
+    </li>
+  </dl>
+  <p>For example, consider the following code, which computes the sum of the numbers in a list.</p>
+  <program xml:id="ac6_6_1" interactive="activecode" language="python">
+    <input>
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+accum = 0
+for w in nums:
+    accum = accum + w
+print(accum)
+        </input>
+  </program>
+  <p>In the program above, notice that the variable <c>accum</c> starts out with a value of 0.
+            Next, the iteration is performed 10 times.  Inside the for loop, the update occurs.
+            <c>w</c> has the value of current item (1 the first time, then 2, then 3, etc.).
+            <c>accum</c> is reassigned a new value which is the old value plus the current value of <c>w</c>.</p>
+  <p>This pattern of iterating the updating of a variable is commonly referred to as the
+            <term>accumulator pattern</term>. We refer to the variable as the <term>accumulator</term>. This pattern will come up
+            over and over again. Remember that the key to making it work successfully is to be sure to
+            initialize the variable before you start the iteration. Once inside the iteration, it is required
+            that you update the accumulator.</p>
+  <p>Here is the same program in codelens.  Step through the function and watch the <q>running total</q>
+            accumulate the result.</p>
+  <program xml:id="clens6_6_1" interactive="codelens" language="python">
+    <input>
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+accum = 0
+for w in nums:
+   accum = accum + w
+print(accum)
+    </input>
+  </program>
+  <note>
+    <p>What would happen if we indented the print accum statement? Not sure? Make a prediction, then try it and find out.</p>
+  </note>
+  <p>We can utilize the range function in this situation as well. Previously, you've seen it used when we wanted to draw in
+            turtle. There we used it to iterate a certain number of times. We can do more than that though. The <c>range</c> function
+            takes at least one input - which should be an integer - and returns a list as long as your input. While you can provide
+            two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but
+            not include - the input. Here are the examples:</p>
+  <program xml:id="ac6_8_10" interactive="activecode" language="python">
+    <input>
+print("range(5): ")
+for i in range(5):
+    print(i)
+
+print("range(0,5): ")
+for i in range(0, 5):
+    print(i)
+
+# Notice the casting of `range` to the `list`
+print(list(range(5)))
+print(list(range(0,5)))
+
+# Note: `range` function is already casted as `list` in the textbook
+print(range(5))
+        </input>
+  </program>
+  <p>One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we
+            have to cast it as a list using <c>list()</c>. Inside the textbook you'll notice that <c>range</c> works with or without
+            casting it as a list but it is best for you to try and get into the habit of casting it as a list. Here's how you could use the range function in the previous problem.</p>
+  <program xml:id="ac6_6_2" interactive="activecode" language="python">
+    <input>
+accum = 0
+for w in range(11):
+    accum = accum + w
+print(accum)
+
+# or, if you use two inputs for the range function
+
+sec_accum = 0
+for w in range(1,11):
+    sec_accum = sec_accum + w
+print(sec_accum)
+        </input>
+  </program>
+  <p>Because the range function is exclusive of the ending number, we have to use 11 as the function input.</p>
+  <p>We can use the accumulation pattern is count the number of something or to sum up a total. The
+            above examples only covered how to get the sum for a list, but we can also count how many items are
+            in the list if we wanted to.</p>
+  <program xml:id="ac6_6_3" interactive="activecode" language="python">
+    <input>
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+count = 0
+for w in nums:
+    count = count + 1
+print(count)
+        </input>
+  </program>
+  <p>In this example we don't make use of <c>w</c> even though the iterator variable (loop variable) is a necessary part of
+            constructing a for loop. Instead of adding the value of <c>w</c> to <c>count</c> we add a 1 to it,
+            because we're incrementing the value of count when we iterate each time through the loop. Though in
+            this scenario we could have used the <c>len</c> function, there are other cases later on where len
+            won't be useful but we will still need to count.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question6_6_1">
+    <statement>
+      <p>Consider the following code:</p>
+      <program language="python">
+        <input>
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for w in nums:
+   accum = 0
+   accum = accum + w
+print(accum)
+</input>
+      </program>
+      <p>What happens if you put the initialization of accum inside the for loop as the first
+            instruction in the loop?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>It will print out 10 instead of 55</p>
+        </statement>
+        <feedback>
+          <p>The variable accum will be reset to 0 each time through the loop. Then it will add the current item. Only the last item will count.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will cause a run-time error</p>
+        </statement>
+        <feedback>
+          <p>Assignment statements are perfectly legal inside loops and will not cause an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will print out 0 instead of 55</p>
+        </statement>
+        <feedback>
+          <p>Good thought: the variable accum will be reset to 0 each time through the loop. But then it adds the current item.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pp6_6_1" indentation="show" language="python">
+    <statement>
+      <p>Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>n = int(input('How many odd numbers would you like to add together?'))</cline>
+        <cline>thesum = 0</cline>
+        <cline>oddnumber = 1</cline>
+      </block>
+      <block order="1">
+        <cline>for counter in range(n):</cline>
+      </block>
+      <block order="4">
+        <cline>   thesum = thesum + oddnumber</cline>
+        <cline>   oddnumber = oddnumber + 2</cline>
+      </block>
+      <block order="2">
+        <cline>print(thesum)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="ac6_6_4">
+    <statement>
+      <p>Write code to create a list of integers from 0 through 52 and assign that list to the variable <c>numbers</c>. You should use a special Python function &#x2013; do not type out the whole list yourself. HINT: You can do this in one line of code!</p>
+    </statement>
+    <program xml:id="ac6_6_4_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(numbers, range(53), "Testing that numbers is a list that contains the correct elements.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac6_6_10">
+    <statement>
+      <p>Count the number of characters in string <c>str1</c>. Do not use <c>len()</c>. Save the number in variable <c>numbs</c>.</p>
+    </statement>
+    <program xml:id="ac6_6_10_editor" interactive="activecode" language="python">
+      <input>
+str1 = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living."
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testEight(self):
+      self.assertEqual(numbs, 90, "Testing that numbs is assigned to correct values.")
+      self.assertNotIn("len(", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac6_8_9">
+    <statement>
+      <p>Create a list of numbers 0 through 40 and assign this list to the variable <c>numbers</c>. Then, accumulate the total of the list's values and assign that sum to the variable <c>sum1</c>.</p>
+    </statement>
+    <program xml:id="ac6_8_9_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testNineA(self):
+      self.assertEqual(numbers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], "Testing that numbers is assigned to correct values.")
+
+   def testNineB(self):
+      self.assertEqual(sum1, 820, "Testing that sum1 has the correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

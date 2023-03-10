@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<section xml:id="advanced-functions_anonymous-functions-with-lambda-expressions">
+  <title>Anonymous functions with lambda expressions</title>
+  <p>To further drive home the idea that we are passing a function object as a parameter to the sorted object,
+            let's see an alternative notation for creating a function, a <term>lambda expression</term>. The syntax of a lambda
+            expression is the word <q>lambda</q> followed by parameter names, separated by commas but not inside (parentheses),
+            followed by a colon and then an expression. <c>lambda arguments: expression</c> yields a function object. This
+            unnamed object behaves just like the function object constructed below.</p>
+  <program language="python">
+    <input>
+def fname(arguments):
+    return expression
+</input>
+  </program>
+  <image source="AdvancedFunctions/Figures/lambda.gif" width="50%" alt="image showing how elements of a lambda expression are like a function definition."/>
+  <p>Consider the following code</p>
+  <program xml:id="ac15_3_1" interactive="activecode" language="python">
+    <input>
+def f(x):
+    return x - 1
+
+print(f)
+print(type(f))
+print(f(3))
+
+print(lambda x: x-2)
+print(type(lambda x: x-2))
+print((lambda x: x-2)(6))
+        </input>
+  </program>
+  <p>Note the paralells between the two. At line 4, f is bound to a function object. Its printed representation
+            is <q>&lt;function f&gt;</q>. At line 8, the lambda expression produces a function object. Because it is unnamed (anonymous),
+            its printed representation doesn't include a name for it, <q>&lt;function &lt;lambda&gt;&gt;</q>. Both are of type &#x2018;function'.</p>
+  <p>A function, whether named or anonymous, can be called by placing parentheses () after it.
+            In this case, because there is one parameter, there is one value in parentheses. This
+            works the same way for the named function and the anonymous function produced by the lambda
+            expression. The lambda expression had to go in parentheses just for the purposes
+            of grouping all its contents together. Without the extra parentheses around it on line 10,
+            the interpreter would group things differently and make a function of x that returns x - 2(6).</p>
+  <p>Some students find it more natural to work with lambda expressions than to refer to a function
+            by name. Others find the syntax of lambda expressions confusing. It's up to you which version you want to
+            use though you will need to be able to read and understand lambda expressions that are written by others.
+            In all the examples below, both ways of doing it will be illustrated.</p>
+  <p>Say we want to create a function that takes a string and returns the last character in that string. What might this look
+            like with the functions you've used before?</p>
+  <program xml:id="ac15_3_2" interactive="activecode" language="python">
+    <input>
+def last_char(s):
+    return s[-1]
+        </input>
+  </program>
+  <p>To re-write this using lambda notation, we can do the following:</p>
+  <program xml:id="ac15_3_3" interactive="activecode" language="python">
+    <input>
+last_char = (lambda s: s[-1])
+        </input>
+  </program>
+  <p>Note that neither function is actually invoked. Look at the parallels between the two structures. The parameters are
+            defined in both functions with the variable <c>s</c>. In the typical function, we have to use the keyword <c>return</c> to send
+            back the value. In a lambda function, that is not necessary - whatever is placed after the colon is what will be returned.</p>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="question15_3_1">
+    <statement>
+      <p>If the input to this lambda function is a number, what is returned?</p>
+      <program language="python">
+        <input>
+(lambda x: -x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A string with a - in front of the number.</p>
+        </statement>
+        <feedback>
+          <p>The number would be assigned to the variable x and there is no type conversion used here, so the number would stay a number.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A number of the opposite sign (positive number becomes negative, negative becomes positive).</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing is returned because there is no return statement.</p>
+        </statement>
+        <feedback>
+          <p>Remember, lambda functions do not use return statements.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

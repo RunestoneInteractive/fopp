@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<section xml:id="debugging_runtime-errors61_index-0">
+  <title>Runtime Errors</title>
+  <p>The second type of error is a <term>runtime error</term>. A program with a runtime error
+            is one that passed the interpreter's syntax checks, and started to execute.
+            However, during the execution of one of the statements in the program, an error
+            occurred that caused the interpreter to stop executing the program and display
+            an error message. Runtime errors are also called <term>exceptions</term> because they usually
+            indicate that something exceptional (and bad) has happened.</p>
+  <p>Here are some examples of common runtime errors you are sure to encounter:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Misspelled or incorrectly capitalized variable and function names</p>
+      </li>
+      <li>
+        <p>Attempts to perform operations (such as math operations) on data of the wrong type (ex.
+                    attempting to subtract two variables that hold string values)</p>
+      </li>
+      <li>
+        <p>Dividing by zero</p>
+      </li>
+      <li>
+        <p>Attempts to use a type conversion function such as <c>int</c> on a value that can't be converted to an int</p>
+      </li>
+    </ul>
+  </p>
+  <p>The following program contains various runtime errors. Can you spot any of them?
+            After locating the error, run the program to see the error message.</p>
+  <program xml:id="debug_rterr" interactive="activecode" language="python">
+    <input>
+subtotal = input("Enter total before tax:")
+tax = .08 * subTotal
+print("tax on", subtotal, "is:", tax)
+        </input>
+  </program>
+  <p>Notice the following important differences between syntax errors and runtime errors that can help you as you try to diagnose
+            and repair the problem:</p>
+  <p>
+    <ul>
+      <li>
+        <p>If the error message mentions <c>SyntaxError</c>, you know that the problem has to do with syntax: the structure of the code,
+                    the punctuation, etc.</p>
+      </li>
+      <li>
+        <p>If the program runs partway and then crashes, you know the problem is a runtime error. Programs with syntax errors
+                    don't execute even one line.</p>
+      </li>
+    </ul>
+  </p>
+  <p>Stay tuned for more details on the various types of runtime errors. We have a whole section of this
+            chapter dedicated to that topic.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question4_5_1">
+    <statement>
+      <p>Which of the following is a run-time error?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Attempting to divide by 0.</p>
+        </statement>
+        <feedback>
+          <p>Python cannot reliably tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value&#x2014;you cannot know what value the user will enter before you run the program).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Forgetting a colon at the end of a statement where one is required.</p>
+        </statement>
+        <feedback>
+          <p>This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Forgetting to divide by 100 when printing a percentage amount.</p>
+        </statement>
+        <feedback>
+          <p>This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question4_5_2">
+    <statement>
+      <p>Who or what typically finds runtime errors?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The programmer.</p>
+        </statement>
+        <feedback>
+          <p>Programmers rarely find all the runtime errors, there is a computer program that will do it for us.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The interpreter.</p>
+        </statement>
+        <feedback>
+          <p>If an instruction is illegal to perform at that point in the execution, the interpreter will stop with a message describing the exception.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The computer.</p>
+        </statement>
+        <feedback>
+          <p>Well, sort of.  But it is a special thing in the computer that does it.  The stand alone computer without this additional piece can not do it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The teacher / instructor.</p>
+        </statement>
+        <feedback>
+          <p>Your teacher and instructor may be able to find most of your runtime errors, but only because they have experience looking at code and possibly writing code.  With experience runtime errors are easier to find.  But we also have an automated way of finding these types of errors.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

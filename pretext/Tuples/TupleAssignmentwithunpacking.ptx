@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_tuple-assignment-with-unpacking266_index-0">
+  <title>Tuple Assignment with Unpacking</title>
+  <p>Python has a very powerful <term>tuple assignment</term> feature that allows a tuple of variable names on the left of an
+            assignment statement to be assigned values from a tuple on the right of the assignment. Another way to think of this
+            is that the tuple of values is <term>unpacked</term> into the variable names.</p>
+  <program xml:id="ac12_4_1" interactive="activecode" language="python">
+    <input>
+julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+
+name, surname, birth_year, movie, movie_year, profession, birth_place = julia
+        </input>
+  </program>
+  <p>This does the equivalent of seven assignment statements, all on one easy line.</p>
+  <p>Naturally, the number of variables on the left and the number of values on the right have to be the same.</p>
+  <program xml:id="ac12_4_4" interactive="activecode" language="python">
+    <input>
+(a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack
+        </input>
+  </program>
+  <note>
+    <p>Unpacking into multiple variable names also works with lists, or any other sequence type, as long as there is exactly one value for each variable. For example, you can write <c>x, y = [3, 4]</c>.</p>
+  </note>
+  <subsection xml:id="tuples_swapping-values-between-variables">
+    <title>Swapping Values between Variables</title>
+    <p>This feature is used to enable swapping the values of two variables. With conventional assignment statements, we have to
+                use a temporary variable. For example, to swap <c>a</c> and <c>b</c>:</p>
+    <program xml:id="ac12_4_2" interactive="activecode" language="python">
+      <input>
+a = 1
+b = 2
+temp = a
+a = b
+b = temp
+print(a, b, temp)
+        </input>
+    </program>
+    <p>Tuple assignment solves this problem neatly:</p>
+    <program xml:id="ac12_4_3" interactive="activecode" language="python">
+      <input>
+a = 1
+b = 2
+(a, b) = (b, a)
+print(a, b)
+        </input>
+    </program>
+    <p>The left side is a tuple of variables; the right side is a tuple of values. Each value is assigned to its respective
+                variable. All the expressions on the right side are evaluated before any of the assignments. This feature makes
+                tuple assignment quite versatile.</p>
+  </subsection>
+  <subsection xml:id="tuples_unpacking-into-iterator-variables">
+    <title>Unpacking Into Iterator Variables</title>
+    <p>Multiple assignment with unpacking is particularly useful when you iterate through a list of tuples. You can unpack each tuple into several loop variables. For example:</p>
+    <program xml:id="ac12_4_8a" interactive="activecode" language="python">
+      <input>
+authors = [('Paul', 'Resnick'), ('Brad', 'Miller'), ('Lauren', 'Murphy')]
+for first_name, last_name in authors:
+    print("first name:", first_name, "last name:", last_name)
+        </input>
+    </program>
+    <p>On the first iteration the tuple <c>('Paul', 'Resnick')</c> is unpacked into the two variables <c>first_name</c> and <c>last_name</c>. One the second iteration, the next tuple is unpacked into those same loop variables.</p>
+  </subsection>
+  <subsection xml:id="tuples_the-pythonic-way-to-enumerate-items-in-a-sequence">
+    <title>The Pythonic Way to Enumerate Items in a Sequence</title>
+    <p>When we first introduced the for loop, we provided an example of how to iterate through the indexes of a sequence, and thus enumerate the items and their positions in the sequence.</p>
+    <program xml:id="ac12_4_8b" interactive="activecode" language="python">
+      <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for n in range(len(fruits)):
+    print(n, fruits[n])
+        </input>
+    </program>
+    <p>We are now prepared to understand a more pythonic approach to enumerating items in a sequence. Python provides a built-in function <c>enumerate</c>. It takes a sequence as input and returns a sequence of tuples. In each tuple, the first element is an integer and the second is an item from the original sequence. (It actually produces an <q>iterable</q> rather than a list, but we can use it in a for loop as the sequence to iterate over.)</p>
+    <program xml:id="ac12_4_8c" interactive="activecode" language="python">
+      <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for item in enumerate(fruits):
+    print(item[0], item[1])
+        </input>
+    </program>
+    <p>The pythonic way to consume the results of enumerate, however, is to unpack the tuples while iterating through them, so that the code is easier to understand.</p>
+    <program xml:id="ac12_4_8d" interactive="activecode" language="python">
+      <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for idx, fruit in enumerate(fruits):
+    print(idx, fruit)
+        </input>
+    </program>
+    <p>
+      <term>Check your Understanding</term>
+    </p>
+    <exercise label="question12_4_2">
+      <statement>
+        <p>Consider the following alternative way to swap the values of variables x and y. What's wrong with it?</p>
+        <program language="python">
+          <input>
+# assume x and y already have values assigned to them
+y = x
+x = y
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>You can't use different variable names on the left and right side of an assignment statement.</p>
+          </statement>
+          <feedback>
+            <p>Sure you can; you can use any variable on the right-hand side that already has a value.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>At the end, x still has it's original value instead of y's original value.</p>
+          </statement>
+          <feedback>
+            <p>Once you assign x's value to y, y's original value is gone.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Actually, it works just fine!</p>
+          </statement>
+          <feedback>
+            <p>Once you assign x's value to y, y's original value is gone.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="ac12_4_9">
+      <statement>
+        <p>With only one line of code, assign the variables <c>water</c>, <c>fire</c>, <c>electric</c>, and <c>grass</c> to the values <q>Squirtle</q>, <q>Charmander</q>, <q>Pikachu</q>, and <q>Bulbasaur</q></p>
+      </statement>
+      <program xml:id="ac12_4_9_editor" interactive="activecode" language="python">
+        <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(water, "Squirtle", "Testing that water is assigned to the correct value.")
+      self.assertEqual(fire, "Charmander", "Testing that fire is assigned to the correct value.")
+      self.assertEqual(electric, "Pikachu", "Testing that electric is assigned to the correct value.")
+      self.assertEqual(grass, "Bulbasaur", "Testing that grass is assigned to the correct value.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac12_4_10">
+      <statement>
+        <p>With only one line of code, assign four variables, <c>v1</c>, <c>v2</c>, <c>v3</c>, and <c>v4</c>, to the following four values: 1, 2, 3, 4.</p>
+      </statement>
+      <program xml:id="ac12_4_10_editor" interactive="activecode" language="python">
+        <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(v1, 1, "Testing that v1 was assigned correctly.")
+      self.assertEqual(v2, 2, "Testing that v2 was assigned correctly.")
+      self.assertEqual(v3, 3, "Testing that v3 was assigned correctly.")
+      self.assertEqual(v4, 4, "Testing that v4 was assigned correctly.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac12_4_11">
+      <statement>
+        <p>If you remember, the .items() dictionary method produces a sequence of tuples. Keeping this in mind, we have provided you a dictionary called <c>pokemon</c>. For every key value pair, append the key to the list <c>p_names</c>, and append the value to the list <c>p_number</c>. Do not use the .keys() or .values() methods.</p>
+      </statement>
+      <program xml:id="ac12_4_11_editor" interactive="activecode" language="python">
+        <input>
+
+pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(p_names), sorted(['Rattata', 'Machop', 'Seel', 'Volbeat', 'Solrock']), "Testing that p_name has the correct values")
+   def testTwo(self):
+      self.assertEqual(sorted(p_number), sorted([19,66,86,86,126]), "Testing that p_number hsa the correct values")
+      self.assertNotIn('.keys()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertIn('.items()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('.values()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac12_4_12">
+      <statement>
+        <p>The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary <c>track_medal_counts</c> and assign the list to the variable name <c>track_events</c>. Do <term>NOT</term> use the .keys() method.</p>
+      </statement>
+      <program xml:id="ac12_4_12_editor" interactive="activecode" language="python">
+        <input>
+
+track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sorted(track_events), sorted(['shot put', 'long jump', '100 meters', '400 meters', '100 meter hurdles', 'triple jump', 'steeplechase', '1500 meters', '5K', '10K', 'marathon', '200 meters', '400 meter hurdles', 'high jump']) , "Testing that track_events was created correctly.")
+      self.assertNotIn('.keys()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertIn('.items()', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('in track_medal_counts:', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+</section>

@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_keeping-track-of-your-iterator-variable-and-your-iterable">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Keeping Track of Your Iterator Variable and Your Iterable</title>
+  <p>When students first begin using for loops, they sometimes have difficulty understanding the difference between the iterator variable (the loop variable) and the iterable.</p>
+  <p>The iterable is the object that you will parsing through in a for loop. Generally, this object does not change while the for loop is being executed.</p>
+  <p>The iterator (loop) variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.</p>
+  <exercise label="question6_100_1">
+    <statement>
+      <p>What is the type of your iterable?</p>
+      <program language="python">
+        <input>
+n = ["word", "phrase", 8, ("beam")]
+for item in n:
+    print(item)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Yes, the iterable is n, and it is a list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iterable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate over the object.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, Python can iterate over this type.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_2">
+    <statement>
+      <p>What is the type of your iterable?</p>
+      <program language="python">
+        <input>
+t = "couch"
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Yes, the iterable in this example is a string</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iterable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate over the object.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, Python can iterate over this type.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_3">
+    <statement>
+      <p>What is the type of your iterable?</p>
+      <program language="python">
+        <input>
+y = 18
+for z in y:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there are no strings present in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there are no lists present in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there are no tuples in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iterable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there are no iterable objects in the code.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>error, unable to iterate over the object.</p>
+        </statement>
+        <feedback>
+          <p>Yes, Python is unable to iterate over integers and floats.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_4">
+    <statement>
+      <p>What is the type of your iterable?</p>
+      <program language="python">
+        <input>
+t = ("couch", "chair", "washer", "dryer", "table")
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the iterable is not a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no list in the code.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Yes, the iterable in this situation is a tuple.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iterable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the best answer for this problem.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate over the object.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, Python can iterate over this type.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_5">
+    <statement>
+      <p>What is the type of your iterable?</p>
+      <program language="python">
+        <input>
+t = "couch"
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Correct! The iterable is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no list in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the iterable is not a tuple.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iterable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the best answer for this problem.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate over the object.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, Python can iterate over this type.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_6">
+    <statement>
+      <p>What's the type of your iterator variable?</p>
+      <program language="python">
+        <input>
+t = ["couch", "chair", "washer", "dryer", "table"]
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Correct! Every item in the iterator variable will be a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterator variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterator variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is not the type of the iterator variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate and initialize the iterator variable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the for loop is iterating over an iterable object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_7">
+    <statement>
+      <p>What's the type of your iterator variable in the first iteration?</p>
+      <program language="python">
+        <input>
+t = [9, "setter", 3, "wing spiker", 10, "middle blocker"]
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, think about what the for loop will look at first.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is the type of the iterable, not the iterator variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no tuple in the code.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Yes, the first item in t is an integer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate and initialize the iterator variable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the for loop is iterating over an iterable object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_8">
+    <statement>
+      <p>What's the type of your iterator variable in the second iteration?</p>
+      <program language="python">
+        <input>
+t = [9, "setter", 3, "wing spiker", 10, "middle blocker"]
+for z in t:
+    print(z)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Yes, the second item in t is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, that is the type of the iterable, not the iterator variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no tuple in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, think about what the for loop will look at during the second iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate and initialize the iterator variable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the for loop is iterating over an iterable object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question6_100_9">
+    <statement>
+      <p>What's the type of your iterator variable in the final iteration?</p>
+      <program language="python">
+        <input>
+red = "colors"
+for blue in red:
+    print(blue)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Yes, the last value stored in the iterator variable is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no list in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tuple</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no tuple in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is no integer in the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error, unable to iterate and initialize the iterator variable</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the for loop is iterating over an iterable object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>As you go through the codelens window, you will be asked a set of questions.</p>
+  <program xml:id="clensQuestion6_100_10" interactive="codelens" language="python">
+    <input>
+item = ["M", "I", "S", "S", "O", "U", "R", "I"]
+for val in item:
+    val = val + "!"
+    </input>
+  </program>
+  <program xml:id="clensQuestion6_100_11" interactive="codelens" language="python">
+    <input>
+for n in range(5):
+    print(n)
+    </input>
+  </program>
+</section>

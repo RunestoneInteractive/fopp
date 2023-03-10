@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<section xml:id="functions_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ac11_15_1">
+    <statement>
+      <p>Write a function called <c>int_return</c> that takes an integer as input and returns the same integer.</p>
+    </statement>
+    <program xml:id="ac11_15_1_editor" interactive="activecode" language="python">
+      <input>
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_2">
+    <statement>
+      <p>Write a function called <c>add</c> that takes any number as its input and returns that sum with 2 added.</p>
+    </statement>
+    <program xml:id="ac11_15_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(add(-2), 0, "Testing that add(-2) returns 0")
+      self.assertEqual(add(6), 8, "Testing that add(6) returns 8")
+      self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_3">
+    <statement>
+      <p>Write a function called <c>change</c> that takes any string, adds <q>Nice to meet you!</q> to the end of the argument given, and returns that new string.</p>
+    </statement>
+    <program xml:id="ac11_15_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(change("I'm Bob. "), "I'm Bob. Nice to meet you!", "Tests that change('I'm Bob. '') returns 'I'm Bob. Nice to meet you!'")
+      self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_4">
+    <statement>
+      <p>Write a function, <c>accum</c>, that takes a list of integers as input and returns the sum of those integers.</p>
+    </statement>
+    <program xml:id="ac11_15_4_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFourA(self):
+      self.assertEqual(accum([5]), 5, "Tests that accum([5]) returns 5")
+      self.assertEqual(accum([]), 0, "Tests that accum([]) returns 0")
+      self.assertEqual(accum([2,4,6,8]), 20, "Tests that accum([2,4,6,8]) returns 20")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_5">
+    <statement>
+      <p>Write a function, <c>length</c>, that takes in a list as the input. If the length of the list is greater than or equal to 5, return <q>Longer than 5</q>. If the length is less than 5, return <q>Less than 5</q>.</p>
+    </statement>
+    <program xml:id="ac11_15_5_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFive(self):
+      self.assertEqual(length([]), "Less than 5", "Tests that length([]) returns 'Less than 5'")
+      self.assertEqual(length([2, 2]), "Less than 5", "Tests that length([2, 2]) returns 'Less than 5'")
+      self.assertEqual(length([4, 4, 4, 3, 5, 6, 7, 8, 9]), "Longer than 5", "Tests that length([4, 4, 4, 3, 5, 6, 7, 8, 9]) returns 'Longer than 5'")
+      self.assertEqual(length([1, 1, 1, 1, 1]), "Longer than 5", "Tests that length([1, 1, 1, 1, 1]) returns 'Longer than 5'")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_6">
+    <statement>
+      <p>You will need to write two functions for this problem. The first function, <c>divide</c> that takes in any number and returns that same number divided by 2. The second function called <c>sum</c> should take any number, divide it by 2, and add 6. It should return this new number. You should call the <c>divide</c> function within the <c>sum</c> function. Do not worry about decimals.</p>
+    </statement>
+    <program xml:id="ac11_15_6_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testSixA(self):
+      self.assertEqual(divide(4), 2, "Tests that divide(4) returns 2")
+   def testSixB(self):
+      self.assertEqual(sum(4), 8, "Tests that sum(4) returns 8")
+      self.assertEqual(sum(2), 7, "Tests that sum(2) returns 7")
+      self.assertEqual(sum(-6), 3, "Tests that sum(-6) returns 3")
+      self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

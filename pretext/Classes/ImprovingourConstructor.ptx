@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<section xml:id="classes_adding-parameters-to-the-constructor">
+  <title>Adding Parameters to the Constructor</title>
+  <p>Our constructor so far can only create points at location <c>(0,0)</c>.  To create a point at position (7, 6) requires that we
+            provide some additional capability for the user to pass information to the constructor.  Since constructors are simply specially named functions, we can use parameters (as we've seen before) to provide the specific information.</p>
+  <p>We can make our class constructor more generally usable by putting extra parameters into
+            the <c>__init__</c> method, as shown in this example.</p>
+  <program language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+
+        self.x = initX
+        self.y = initY
+
+p = Point(7,6)
+</input>
+  </program>
+  <p>Now when we create new points, we supply the x and y coordinates as parameters.  When the point is created, the values of <c>initX</c> and <c>initY</c> are assigned to the state of the object, in the <term>instance variables</term> x and y.</p>
+  <p>This is a common thing to do in the <c>__init__</c> method for a class: take in some parameters and save them as instance variables. Why is this useful? Keep in mind that the parameter variables will go away when the method is finished executing. The instance variables, however, will still be accessible anywhere that you have a handle on the object instance. This is a way of saving those initial values that are provided when the class constructor is invoked.</p>
+  <blockquote>
+    <p>Later on, you will see classes where the <c>__init__</c> method does more than just save parameters as instance variables. For example, it might parse the contents of those variables and do some computation on them, storing the results in instance variables. It might even make an Internet connection, download some content, and store that in instance variables.</p>
+  </blockquote>
+  <image source="Classes/Figures/objectpic5.png" width="50%" alt="Simple object has state and methods"/>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Create a class called <c>NumberSet</c> that accepts 2 integers as input, and defines two instance variables: <c>num1</c> and <c>num2</c>, which hold each of the input integers. Then, create an instance of  <c>NumberSet</c> where its num1 is 6 and its num2 is 10. Save this instance to a variable <c>t</c>.</p>
+      </li>
+    </ol>
+  </p>
+  <program xml:id="ee_ch13_011" interactive="activecode" language="python">
+    <input>
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOneA(self):
+      self.assertEqual(t.num1, 6, "Testing that t.num1 has correct number assigned.")
+   def testOneB(self):
+      self.assertEqual(t.num2, 10, "Testing that t.num2 has correct number assigned.")
+
+myTests().main()
+        </input>
+  </program>
+</section>

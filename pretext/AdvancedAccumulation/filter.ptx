@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<section xml:id="advanced-accumulation_filter">
+  <title>Filter</title>
+  <p>Now consider another common pattern: going through a list and keeping only those items that meet certain criteria.
+            This is called a filter.</p>
+  <program xml:id="ac21_3_1" interactive="activecode" language="python">
+    <input>
+def keep_evens(nums):
+    new_list = []
+    for num in nums:
+        if num % 2 == 0:
+            new_list.append(num)
+    return new_list
+
+print(keep_evens([3, 4, 6, 7, 0, 1]))
+        </input>
+  </program>
+  <p>Again, this pattern of computation is so common that Python offers a more compact and general way to do it, the <c>filter</c>
+            function. <c>filter</c> takes two arguments, a function and a sequence. The function takes one item and return True if the
+            item should. It is automatically called for each item in the sequence. You don't have to initialize an accumulator or
+            iterate with a for loop.</p>
+  <program xml:id="ac21_3_2" interactive="activecode" language="python">
+    <input>
+def keep_evens(nums):
+    new_seq = filter(lambda num: num % 2 == 0, nums)
+    return list(new_seq)
+
+print(keep_evens([3, 4, 6, 7, 0, 1]))
+        </input>
+  </program>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="ac21_3_3">
+    <statement>
+      <p><term>1.</term> Write code to assign to the variable <c>filter_testing</c> all the elements in lst_check that have a w in them using filter.</p>
+    </statement>
+    <program xml:id="ac21_3_3_editor" interactive="activecode" language="python">
+      <input>
+
+lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(filter_testing, ['watermelon', 'kiwi', 'strawberries'], "Testing that filter_testing has the correct values.")
+      self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac21_3_4">
+    <statement>
+      <p><term>2.</term> Using filter, filter <c>lst</c> so that it only contains words containing the letter <q>o</q>. Assign to variable <c>lst2</c>. Do not hardcode this.</p>
+    </statement>
+    <program xml:id="ac21_3_4_editor" interactive="activecode" language="python">
+      <input>
+
+lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(lst2, ['halloween', 'wagon', 'moon'], "Testing that lst is assigned to correct values.")
+      self.assertNotIn('map(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

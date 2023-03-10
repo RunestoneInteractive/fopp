@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<section xml:id="more-about-iteration_infinite-loops">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Infinite Loops</title>
+  <p>Although the textbook has a time limit which prevents an active code window from running
+            indefinitely, you'll still have to wait a little while if your program has an ininite loop. If
+            you accidentally make one outside of the textbook, you won't have that same protection.</p>
+  <p>So how can you recognize when you are in danger of making an infinite loop?</p>
+  <p>First off, if the variable that you are using to determine if the while loop should continue is
+            never reset inside the while loop, then your code will have an infinite loop. (Unless of course you use <c>break</c> to
+            break out of the loop.)</p>
+  <p>Additionally, if the while condition is <c>while True:</c> and there is no break, then that is another case of an infinite loop!</p>
+  <program language="python">
+    <input>
+while True:
+    print("Will this stop?")
+
+print("We have escaped.")
+</input>
+  </program>
+  <p>Another case where an infinite loop is likely to occur is when you have reassiged the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below (if it takes too long, try reloading the page and stepping through this example in codelens):</p>
+  <program xml:id="ac14_11_1" interactive="activecode" language="python">
+    <input>
+b = 15
+
+while b &lt; 60:
+    b = 5
+    print("Bugs")
+    b = b + 7
+        </input>
+  </program>
+  <p>Notice how in this case, b is initally set to 15 outside of the while loop, and then reassigned
+            the value of 5 inside, on line 4. By the time 7 has been added to b on line 6, we then have to
+            check if b is less than 60. Because it isn't we again run line 4, and set the value of b to 5
+            again. There is no way to break out of this loop.</p>
+  <p>Sometimes programs can take a while to run, so how can you determine if your code is just talking a while or if it is stuck inside an infinite loop? Print statements are for people, so take advantage of them! You can add print statements to keep track of how your variables are changing as the program processes the instructions given to them. Below is an example of an infinite loop. Try adding print statments to see where it's coming from. When you're done, check out the answer to see what our solution was.</p>
+  <p>
+    <ol label="1">
+      <li>
+        <exercise>
+          <statement/>
+          <program interactive="" language=""/>
+          <solution>
+            <program xml:id="ac14_11_3" language="python">
+              <input>
+d = {'x': []}
+print("starting the while loop")
+while len(d.keys()) &lt;= 2:
+    print("number of keys in d:", len(d.keys()))
+    print('Dictionaries')
+    d['x'].append('d')
+    print("number of keys in d after appending:", len(d.keys()))
+print("end of the while loop")
+        </input>
+            </program>
+          </solution>
+        </exercise>
+      </li>
+    </ol>
+  </p>
+</section>

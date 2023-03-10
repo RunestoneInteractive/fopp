@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<section xml:id="nested-data_introduction-nested-data-and-nested-iteration">
+  <title>Introduction: Nested Data and Nested Iteration</title>
+  <subsection xml:id="nested-data_lists-with-complex-items">
+    <title>Lists with Complex Items</title>
+    <p>The lists we have seen so far have had numbers or strings as items. We've snuck in a few more complex items, but without
+                ever explicitly discussing what it meant to have more complex items.</p>
+    <p>In fact, the items in a list can be any type of python object. For example, we can have a list of lists.</p>
+    <program xml:id="ac17_1_1" interactive="activecode" language="python">
+      <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+print(nested1[0])
+print(len(nested1))
+nested1.append(['i'])
+print("-------")
+for L in nested1:
+    print(L)
+        </input>
+    </program>
+    <p>Line 2 prints out the first item from the list that <c>nested1</c> is bound to. That item is itself a list, so it prints out
+                with square brackets. It has length 3, which prints out on line 3. Line 4 adds a new item to <c>nested1</c>. It is a list with
+                one element, &#x2018;i' (it a list with one element, it's not just the string &#x2018;i').</p>
+    <p>Codelens gives a you a reference diagram, a visual display of the contents of nested1.</p>
+    <program xml:id="clens_1_1" interactive="codelens" language="python">
+      <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+print(nested1[0])
+print(len(nested1))
+nested1.append(['i'])
+for L in nested1:
+    print(L)
+    </input>
+    </program>
+    <p>When you get to step 4 of the execution, take a look at the object that variable nested1 points to. It is a list of three
+                items, numbered 0, 1, and 2. The item in slot 1 is small enough that it is shown right there as a list containing items
+                <q>d</q> and <q>e</q>. The item in slot 0 didn't quite fit, so it is shown in the figure as a pointer to another separate list;
+                same thing for the item in slot 2, the list <c>['f', 'g', 'h']</c>.</p>
+    <p>There's no special meaning to whether the list is shown embedded or with a pointer to it: that's just CodeLens making the
+                best use of space that it can. In fact, if you go on to step 5, you'll see that, with the addition of a fourth item, the
+                list [&#x2018;i'], CodeLens has chosen to show all four lists embedded in the top-level list.</p>
+    <p>With a nested list, you can make complex expressions to get or set a value in a sub-list.</p>
+    <program xml:id="ac17_1_2" interactive="activecode" language="python">
+      <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+y = nested1[1]
+print(y)
+print(y[0])
+
+print([10, 20, 30][1])
+print(nested1[1][0])
+        </input>
+    </program>
+    <p>Lines 1-4 above probably look pretty natural to you. Line 5 illustrates the left to right processing of expressions. <c>nested1[1]</c> evaluates to the second inner list, so <c>nested1[1][1]</c> evaluates to its second element, <c>'e'</c>.
+                Line 6 is just a reminder that you index into a literal list, one that is written
+                out, the same way as you can index into a list referred to by a variable. <c>[10, 20, 30]</c> creates a list. <c>[1]</c> indexes into that list, pulling out the second item, 20.</p>
+    <p>Just as with a function call where the return value can be thought of as replacing the text of the function call in an
+                expression, you can evaluate an expression like that in line 7 from left to right. Because the value of <c>nested1[1]</c> is the
+                list <c>['d', 'e']</c>, <c>nested1[1][0]</c> is the same as <c>['d', 'e'][0]</c>. So line 7 is equivalent to lines 2 and 4; it is a simpler way
+                of pulling out the first item from the second list.</p>
+    <p>At first, expressions like that on line 7 may look foreign. They will soon feel more natural, and you will end up using
+                them a lot. Once you are comfortable with them, the only time you will write code like lines 2-4 is when you aren't quite
+                sure what your data's structure is, and so you need to incrementally write and debug your code. Often, you will
+                start by writing code like lines 2-4, then, once you're sure it's working, replace it with something like line 7.</p>
+    <p>You can change values in such lists in the usual ways. You can even use complex expressions to change values. Consider
+                the following</p>
+    <program xml:id="clens_1_2" interactive="codelens" language="python">
+      <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h'], ['i']]
+nested1[1] = [1, 2, 3]
+nested1[1][0] = 100
+    </input>
+    </program>
+    <p>The complex items in a list do not have to be lists. They can be tuples or dictionaries. The items in a list do not all
+                have to be the same type, but you will drive yourself crazy if you have lists of objects of varying types. Save yourself
+                some headaches and don't do that. Here's a list of dictionaries and some operations on them. Take a look at its visual
+                representation in codelens.</p>
+    <program xml:id="clens_1_3" interactive="codelens" language="python">
+      <input>
+nested2 = [{'a': 1, 'b': 3}, {'a': 5, 'c': 90, 5: 50}, {'b': 3, 'c': "yes"}]
+    </input>
+    </program>
+    <p>Try practicing some operations to get or set values in a list of dictionaries.</p>
+    <program xml:id="ac17_1_3" interactive="activecode" language="python">
+      <input>
+nested2 = [{'a': 1, 'b': 3}, {'a': 5, 'c': 90, 5: 50}, {'b': 3, 'c': "yes"}]
+
+#write code to print the value associated with key 'c' in the second dictionary (90)
+
+#write code to print the value associated with key 'b' in the third dictionary
+
+#add a fourth dictionary add the end of the list; print something to check your work.
+
+#change the value associated with 'c' in the third dictionary from "yes" to "no"; print something to check your work
+        </input>
+    </program>
+    <p>You can even have a list of functions (!).</p>
+    <program xml:id="ac17_1_4" interactive="activecode" language="python">
+      <input>
+def square(x):
+    return x*x
+
+L = [square, abs, lambda x: x+1]
+
+print("****names****")
+for f in L:
+    print(f)
+
+print("****call each of them****")
+for f in L:
+    print(f(-2))
+
+print("****just the first one in the list****")
+print(L[0])
+print(L[0](3))
+        </input>
+    </program>
+    <p>Here, L is a list with three items. All those items are functions. The first is the function square that is defined on
+                lines 1 and 2. The second is the built-in python function abs. The third is an anonymous function that returns one more
+                than its input.</p>
+    <p>In the first for loop, we do not call the functions, we just output their printed representations. The output
+                &lt;function square&gt; confirms that square truly is a function object. For some reason, in our online environment, it's not
+                able to produce a nice printed representation of the built-in function abs, so it just outputs &lt;unknown&gt;</p>
+    <p>In the second for loop, we call each of the functions, passing in the value -2 each time and printing whatever value the
+                function returns.</p>
+    <p>The last two lines just emphasize that there's nothing special about lists of functions. They follow all the same rules
+                for how python treats any other list. Because L[0] picks out the function square, L[0](3) calls the function square,
+                passing it the parameter 3.</p>
+    <p>Step through it in Codelens if that's not all clear to you yet.</p>
+    <program xml:id="clens_1_4" interactive="codelens" language="python">
+      <input>
+def square(x):
+    return x*x
+
+L = [square, abs]
+
+print("****names****")
+for f in L:
+    print(f)
+
+print("****call each of them****")
+for f in L:
+    print(f(-2))
+
+print("****just the first one in the list****")
+print(L[0])
+print(L[0](3))
+    </input>
+    </program>
+    <p>
+      <term>Check Your Understanding</term>
+    </p>
+    <exercise label="ac17_1_5">
+      <statement>
+        <p><term>1.</term> Below, we have provided a list of lists. Use indexing to assign the element &#x2018;horse' to the variable name <c>idx1</c>.</p>
+      </statement>
+      <program xml:id="ac17_1_5_editor" interactive="activecode" language="python">
+        <input>
+
+animals = [['cat', 'dog', 'mouse'], ['horse', 'cow', 'goat'], ['cheetah', 'giraffe', 'rhino']]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(idx1, 'horse', "Testing that idx1 was assigned correctly.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac17_1_6">
+      <statement>
+        <p><term>2.</term> Using indexing, retrieve the string &#x2018;willow' from the list and assign that to the variable <c>plant</c>.</p>
+      </statement>
+      <program xml:id="ac17_1_6_editor" interactive="activecode" language="python">
+        <input>
+
+data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []], [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(plant, 'willow', "Testing that plant has the correct value.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+</section>

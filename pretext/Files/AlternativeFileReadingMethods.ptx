@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<section xml:id="files_alternative-file-reading-methods">
+  <title>Alternative File Reading Methods</title>
+  <p>Once you have a file <q>object</q>, the thing returned by the open function, Python provides three methods to read data
+            from that object. The <c>read()</c> method returns the entire contents of the file as a single string (or just some
+            characters if you provide a number as an input parameter. The <c>readlines</c> method returns the entire contents of
+            the entire file as a list of strings, where each item in the list is one line of the file. The <c>readline</c>
+            method reads one line from the file and returns it as a string. The strings returned by <c>readlines</c> or
+            <c>readline</c> will contain the newline character at the end.  <xref ref="files_filemethods2a"/> summarizes these
+            methods and the following session shows them in action.</p>
+  <table xml:id="files_files_filemethods2a">
+    <tabular>
+      <row header="yes">
+        <cell>
+          <term>Method Name</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>write</c>
+        </cell>
+        <cell>
+          <c>filevar.write(astring)</c>
+        </cell>
+        <cell>
+                            Add a string to the end of the file.
+                                <c>filevar</c> must refer to a file that has
+                                been  opened for writing.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>read(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.read()</c>
+        </cell>
+        <cell>
+                            Read and return a string of <c>n</c>
+                                characters, or the entire file as a
+                                single string if  <c>n</c> is not provided.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>readline(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.readline()</c>
+        </cell>
+        <cell>
+                            Read and return the next line of the file with
+                                all text up to and including the
+                                newline character. If <c>n</c> is provided as
+                                a parameter, then only <c>n</c> characters
+                                will be returned if the line is longer
+                                than <c>n</c>. <term>Note</term> the parameter <c>n</c> is not supported in the browser version of Python, and in fact is rarely used in practice, you can safely ignore it.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>readlines(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.readlines()</c>
+        </cell>
+        <cell>
+                            Returns a list of strings, each
+                                representing a single line of the file.
+                                If <c>n</c> is not provided then all lines of
+                                the file are returned. If <c>n</c> is provided
+                                then <c>n</c> characters are read but <c>n</c> is
+                                rounded up so that an entire line is
+                                returned.  <term>Note</term> Like <c>readline</c> <c>readlines</c> ignores the parameter <c>n</c> in the browser.
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>In this course, we will generally either iterate through the lines returned by <c>readlines()</c> with a for loop,
+            or use <c>read()</c> to get all of the contents as a single string.</p>
+  <p>In other programming languages, where they don't have the convenient for loop method of going through the lines
+            of the file one by one, they use a different pattern which requires a different kind of loop, the <c>while</c> loop.
+            Fortunately, you don't need to learn this other pattern, and we will put off consideration of <c>while</c> loops
+            until later in this course. We don't need them for handling data from files.</p>
+  <note>
+    <p>A common error that novice programmers make is not realizing that all these ways of reading the file contents,
+                <term>use up the file</term>. After you call readlines(), if you call it again you'll get an empty list.</p>
+  </note>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <raw format="html" xml:space="preserve">&lt;pre id="school_prompt.txt"&gt;
+Writing essays for school can be difficult but
+many students find that by researching their topic that they
+have more to say and are better informed. Here are the university
+we require many undergraduate students to take a first year writing requirement
+so that they can
+have a solid foundation for their writing skills. This comes
+in handy for many students.
+Different schools have different requirements, but everyone uses
+writing at some point in their academic career, be it essays, research papers,
+technical write ups, or scripts.
+&lt;/pre&gt;</raw>
+  <exercise label="ac9_4_1">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Using the file <c>school_prompt2.txt</c>, find the number of characters in the file and assign that value to the variable <c>num_char</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac9_4_1_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(num_char, 537, "Testing that num_char has the correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <raw format="html" xml:space="preserve">&lt;pre id="travel_plans.txt"&gt;
+This summer I will be travelling.
+I will go to...
+Italy: Rome
+Greece: Athens
+England: London, Manchester
+France: Paris, Nice, Lyon
+Spain: Madrid, Barcelona, Granada
+Austria: Vienna
+I will probably not even want to come back!
+However, I wonder how I will get by with all the different languages.
+I only know English!
+&lt;/pre&gt;</raw>
+  <exercise label="ac9_4_2">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Find the number of lines in the file, <c>travel_plans2.txt</c>, and assign it to the variable <c>num_lines</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac9_4_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(num_lines, 11, "Testing that num_lines is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <raw format="html" xml:space="preserve">&lt;pre id="emotion_words.txt"&gt;
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+&lt;/pre&gt;</raw>
+  <exercise label="ac9_4_3">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>Create a string called <c>first_forty</c> that is comprised of the first 40 characters of <c>emotion_words2.txt</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac9_4_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(first_forty, 'Sad upset blue down melancholy somber bi', "Testing that first_forty was created correctly.")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <DataFileNode line="175" runestone_options="{'fromfile': 'travel_plans.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'Files', 'basecourse': 'fopp', 'optional': '', 'optclass': '', 'divid': 'travel_plans2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'This summer I will be travelling.\nI will go to...\nItaly: Rome\nGreece: Athens\nEngland: London, Manchester\nFrance: Paris, Nice, Lyon\nSpain: Madrid, Barcelona, Granada\nAustria: Vienna\nI will probably not even want to come back!\nHowever, I wonder how I will get by with all the different languages.\nI only know English!\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '10.3.4'}" source="/home/ccurtis/Documents/Runestone/fopp-pretext/_sources/Files/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+  <DataFileNode line="179" runestone_options="{'fromfile': 'school_prompt.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'Files', 'basecourse': 'fopp', 'optional': '', 'optclass': '', 'divid': 'school_prompt2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'Writing essays for school can be difficult but\nmany students find that by researching their topic that they\nhave more to say and are better informed. Here are the university\nwe require many undergraduate students to take a first year writing requirement\nso that they can\nhave a solid foundation for their writing skills. This comes\nin handy for many students.\nDifferent schools have different requirements, but everyone uses\nwriting at some point in their academic career, be it essays, research papers,\ntechnical write ups, or scripts.\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '10.3.5'}" source="/home/ccurtis/Documents/Runestone/fopp-pretext/_sources/Files/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+  <DataFileNode line="183" runestone_options="{'fromfile': 'emotion_words.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'Files', 'basecourse': 'fopp', 'optional': '', 'optclass': '', 'divid': 'emotion_words2.txt', 'qnumber': '', 'cols': 62, 'rows': 20, 'filecontent': 'Sad upset blue down melancholy somber bitter troubled\nAngry mad enraged irate irritable wrathful outraged infuriated\nHappy cheerful content elated joyous delighted lively glad\nConfused disoriented puzzled perplexed dazed befuddled\nExcited eager thrilled delighted\nScared afraid fearful panicked terrified petrified startled\nNervous anxious jittery jumpy tense uneasy apprehensive\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '10.3.6'}" source="/home/ccurtis/Documents/Runestone/fopp-pretext/_sources/Files/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+</section>

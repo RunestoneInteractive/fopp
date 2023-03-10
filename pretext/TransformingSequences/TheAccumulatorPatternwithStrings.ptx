@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_the-accumulator-pattern-with-strings">
+  <title>The Accumulator Pattern with Strings</title>
+  <p>We can also accumulate strings rather than accumulating numbers, as you've seen before. The following program isn't
+            particularly useful for data processing, but we will see more useful things later that accumulate strings.</p>
+  <program xml:id="ac8_10_1" interactive="activecode" language="python">
+    <input>
+s = input("Enter some text")
+ac = ""
+for c in s:
+    ac = ac + c + "-" + c + "-"
+
+print(ac)
+        </input>
+  </program>
+  <p>Look carefully at line 4 in the above program (<c>ac = ac + c + "-" + c + "-"</c>). In words, it says that the
+            new value of <c>ac</c> will be the old value of <c>ac</c> concatenated with the current character, a dash, then the
+            current character and a dash again. We are building the result string character by character.</p>
+  <p>Take a close look also at the initialization of <c>ac</c>.  We start with an empty string and then begin adding
+            new characters to the end. Also note that I have given it a different name this time, <c>ac</c> instead of
+            <c>accum</c>. There's nothing magical about these names. You could use any valid variable and it would work the
+            same (try substituting x for ac everywhere in the above code).</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_10_1">
+    <statement>
+      <p>What is printed by the following statements:</p>
+      <program language="python">
+        <input>
+s = "ball"
+r = ""
+for item in s:
+   r = item.upper() + r
+print(r)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Ball</p>
+        </statement>
+        <feedback>
+          <p>Each item is converted to upper case before concatenation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>BALL</p>
+        </statement>
+        <feedback>
+          <p>Each character is converted to upper case but the order is wrong.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>LLAB</p>
+        </statement>
+        <feedback>
+          <p>Yes, the order is reversed due to the order of the concatenation.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac8_10_2">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>For each character in the string already saved in the variable <c>str1</c>, add each character to a list called <c>chars</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac8_10_2_editor" interactive="activecode" language="python">
+      <input>
+str1 = "I love python"
+# HINT: what's the accumulator? That should go here.
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(chars, ['I', ' ', 'l', 'o', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'o', 'n'], "Testing that chars is assigned to correct values.")
+      self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac6_6_6">
+    <statement>
+      <p>Assign an empty string to the variable <c>output</c>. Using the <c>range</c> function, write code to make it so that the variable <c>output</c> has 35 <c>a</c> s inside it (like <c>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"</c>). Hint: use the accumulation pattern!</p>
+    </statement>
+    <program xml:id="ac6_6_6_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(output, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Testing that output has the correct value.")
+      self.assertNotIn("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

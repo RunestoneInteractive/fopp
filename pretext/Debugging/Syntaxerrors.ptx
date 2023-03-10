@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<section xml:id="debugging_syntax-errors63_index-0">
+  <title>Syntax errors</title>
+  <p>Python can only execute a program if the program is syntactically correct;
+            otherwise, the process fails and returns an error message.  <term>Syntax</term> refers
+            to the structure of a program and the rules about that structure. For example,
+            in English, a sentence must begin with a capital letter and end with a period.
+            this sentence contains a <term>syntax error</term>. So does this one</p>
+  <p>In Python, rules of syntax include requirements like these: strings must be enclosed in quotes; statements must
+            generally be written one per line; the print statement must enclose the value to be displayed in parenthesis;
+            expressions must be correctly formed. The following lines contain syntax errors:</p>
+  <pre>print(Hello, world!)
+print "Hello, world!"
+print(5 + )</pre>
+  <p>For most readers of English, a few syntax errors are not a significant problem, which is why we can read the poetry of
+            e. e. cummings without problems. Python is not so forgiving. When you run a Python program, the interpreter checks it
+            for syntax errors before beginning to execute the first statement. If there is a single syntax error anywhere in your
+            program, Python will display an error message and quit without executing <em>any</em> of the program.</p>
+  <p>To see a syntax error in action, look at the following program. Can you spot the error?
+            After locating the error, run the program to see the error message.</p>
+  <program xml:id="debug_syntaxerr" interactive="activecode" language="python">
+    <input>
+print("Hello, World!")
+print(5 + )
+print("All finished!")
+        </input>
+  </program>
+  <p>Notice the following:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>The error message clearly indicates that the problem is a <c>SyntaxError</c>. This lets you know the problem
+                    is not one of the other two types of errors we'll discuss shortly.</p>
+      </li>
+      <li>
+        <p>The error is on line 2 of the program. However, even though there is nothing
+                    wrong with line 1, the print statement does not execute &#x2014; <term>none</term> of the program successfully executes
+                    because of the presence of just one syntax error.</p>
+      </li>
+      <li>
+        <p>The error gives the line number where Python believes the error exists. In this case, the error message pinpoints the
+                    location correctly. But in other cases, the line number can be inaccurate or entirely missing.</p>
+        <p>To see an example of the latter, try removing just the <term>right</term> parenthesis <c>)</c> from line 2 and
+                    running the program again. Notice how the error message gives no line number at all. With syntax errors, you need to be
+                    prepared to hunt around a bit in order to locate the trouble.</p>
+      </li>
+    </ol>
+  </p>
+  <p>One aspect of syntax you have to watch out for in Python involves indentation. Python requires you to begin all
+            statements at the beginning of the line, unless you are using a flow control statement like a <c>for</c> or an <c>if</c> statement
+            (we'll discuss these soon&#x2026; stay tuned!). To see an example of this kind of problem, modify the program above by inserting a
+            couple of spaces at the beginning of one of the lines.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question4_4_1">
+    <statement>
+      <p>Which of the following is a syntax error?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Attempting to divide by 0.</p>
+        </statement>
+        <feedback>
+          <p>A syntax error is an error in the structure of the python code that can be detected before the program is executed. Python cannot usually tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value&#x2014;you cannot know what value the user will enter before you run the program).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Forgetting a colon at the end of a statement where one is required.</p>
+        </statement>
+        <feedback>
+          <p>This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Forgetting to divide by 100 when printing a percentage amount.</p>
+        </statement>
+        <feedback>
+          <p>This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question4_4_2">
+    <statement>
+      <p>Who or what typically finds syntax errors?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The programmer.</p>
+        </statement>
+        <feedback>
+          <p>Programmers rarely find all the syntax errors, there is a computer program that will do it for us.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The compiler / interpreter.</p>
+        </statement>
+        <feedback>
+          <p>The compiler and / or interpreter is a computer program that determines if your program is written in a way that can be translated into machine language for execution.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The computer.</p>
+        </statement>
+        <feedback>
+          <p>Well, sort of.  But it is a special thing in the computer that does it.  The stand alone computer without this additional piece can not do it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The teacher / instructor.</p>
+        </statement>
+        <feedback>
+          <p>Your teacher and instructor may be able to find most of your syntax errors, but only because they have experience looking at code and possibly writing code.  With experience syntax errors are easier to find.  But we also have an automated way of finding these types of errors.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

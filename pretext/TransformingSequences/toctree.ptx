@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Transforming Sequences</title>
+        <xi:include href='./intro-SequenceMutation.ptx' />
+        <xi:include href='./Mutability.ptx' />
+        <xi:include href='./ListDeletion.ptx' />
+        <xi:include href='./ObjectsandReferences.ptx' />
+        <xi:include href='./Aliasing.ptx' />
+        <xi:include href='./CloningLists.ptx' />
+        <xi:include href='./MutatingMethods.ptx' />
+        <xi:include href='./AppendversusConcatenate.ptx' />
+        <xi:include href='./NonmutatingMethodsonStrings.ptx' />
+        <xi:include href='./TheAccumulatorPatternwithLists.ptx' />
+        <xi:include href='./TheAccumulatorPatternwithStrings.ptx' />
+        <xi:include href='./WPAccumulatorPatternStrategies.ptx' />
+        <xi:include href='./WPDontMutateAListYouIterateThrough.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./week4a1.ptx' />
+    </chapter>

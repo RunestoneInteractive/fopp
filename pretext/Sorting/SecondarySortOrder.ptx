@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<section xml:id="sorting_breaking-ties-second-sorting">
+  <title>Breaking Ties: Second Sorting</title>
+  <p>What happens when two items are <q>tied</q> in the sort order? For example, suppose we sort a list of words by their lengths.
+            Which five letter word will appear first?</p>
+  <p>The answer is that the python interpreter will sort the tied items in the same order they were in before the sorting.</p>
+  <p>What if we wanted to sort them by some other property, say alphabetically, when the words were the same length? Python allows us to specify multiple conditions when we perform a sort by returning a tuple from a key function.</p>
+  <p>First, let's see how python sorts tuples. We've already seen that there's a built-in sort order, if we don't specify any key function. For numbers, it's lowest to highest. For strings, it's alphabetic order. For a sequence of tuples, the default sort order is based on the default sort order for the first elements of the tuples, with ties being broken by the second elements, and then third elements if necessary, etc. For example,</p>
+  <program xml:id="ac18_5_0" interactive="activecode" language="python">
+    <input>
+tups = [('A', 3, 2),
+        ('C', 1, 4),
+        ('B', 3, 1),
+        ('A', 2, 4),
+        ('C', 1, 2)]
+for tup in sorted(tups):
+    print(tup)
+        </input>
+  </program>
+  <p>In the code below, we are going to sort a list of fruit words first by their length, smallest to largest, and then alphabetically to break ties among words of the same length. To do that, we have the key function return a tuple whose first element is the length of the fruit's name, and second element is the fruit name itself.</p>
+  <program xml:id="ac18_5_1" interactive="activecode" language="python">
+    <input>
+fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+new_order = sorted(fruits, key=lambda fruit_name: (len(fruit_name), fruit_name))
+for fruit in new_order:
+    print(fruit)
+        </input>
+  </program>
+  <p>Here, each word is evaluated first on it's length, then by its alphabetical order. Note that we could continue to specify other conditions by including more elements in the tuple.</p>
+  <p>What would happen though if we wanted to sort it by largest to smallest, and then by alphabetical order?</p>
+  <program xml:id="ac18_5_2" interactive="activecode" language="python">
+    <input>
+fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+new_order = sorted(fruits, key=lambda fruit_name: (len(fruit_name), fruit_name), reverse=True)
+for fruit in new_order:
+    print(fruit)
+        </input>
+  </program>
+  <p>Do you see a problem here? Not only does it sort the words from largest to smallest, but also in reverse alphabetical order! Can you think of any ways you can solve this issue?</p>
+  <p>One solution is to add a negative sign in front of <c>len(fruit_name)</c>, which will convert all positive numbers to negative, and all negative numbers to positive. As a result, the longest elements would be first and the shortest elements would be last.</p>
+  <program xml:id="ac18_5_3" interactive="activecode" language="python">
+    <input>
+fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+new_order = sorted(fruits, key=lambda fruit_name: (-len(fruit_name), fruit_name))
+for fruit in new_order:
+    print(fruit)
+        </input>
+  </program>
+  <p>We can use this for any numerical value that we want to sort, however this will not work for strings.</p>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="question18_5_1">
+    <statement>
+      <p>What will the sorted function sort by?</p>
+      <program language="python">
+        <input>
+weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'},
+           'Buenos Aires': {'temp': 55, 'condition': 'cloudy'},
+           'Cairo': {'temp': 96, 'condition': 'sunny'},
+           'Berlin': {'temp': 89, 'condition': 'sunny'},
+           'Caloocan': {'temp': 78, 'condition': 'sunny'}}
+
+sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>first city name (alphabetically), then temperature (lowest to highest)</p>
+        </statement>
+        <feedback>
+          <p>Correct! First we sort alphabetically by city name, then by the temperature, from lowest to highest.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first temperature (highest to lowest), then city name (alphabetically)</p>
+        </statement>
+        <feedback>
+          <p>The order of the tuple matters. The first item in the tuple is the first condition used to sort.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first city name (alphabetically), then temperature (highest to lowest)</p>
+        </statement>
+        <feedback>
+          <p>Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first temperature (lowest to highest), then city name (alphabetically)</p>
+        </statement>
+        <feedback>
+          <p>The order of the tuple matters. The first item in the tuple is the first condition used to sort.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question18_5_2">
+    <statement>
+      <p>What how will the following data be sorted?</p>
+      <program language="python">
+        <input>
+weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'},
+           'Buenos Aires': {'temp': 55, 'condition': 'cloudy'},
+           'Cairo': {'temp': 96, 'condition': 'sunny'},
+           'Berlin': {'temp': 89, 'condition': 'sunny'},
+           'Caloocan': {'temp': 78, 'condition': 'sunny'}}
+
+sorted_weather = sorted(weather, key=lambda w: (w, -weather[w]['temp']), reverse=True)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>first city name (reverse alphabetically), then temperature (lowest to highest)</p>
+        </statement>
+        <feedback>
+          <p>Correct! In this case, the reverse parameter will cause the city name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first temperature (highest to lowest), then city name (alphabetically)</p>
+        </statement>
+        <feedback>
+          <p>The order of the tuple matters. The first item in the tuple is the first condition used to sort. Also, take note of the reverse parameter - what will it do in this instance?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first city name (reverse alphabetically), then temperature (highest to lowest)</p>
+        </statement>
+        <feedback>
+          <p>Not quite - is the reverse parameter set to True? Has a negative sign been used in the key parameter? What happens when those are both used?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first temperature (lowest to highest), then city name (alphabetically)</p>
+        </statement>
+        <feedback>
+          <p>The order of the tuple matters. The first item in the tuple is the first condition used to sort.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first city name (alphabetically), then temperature (lowest to highest)</p>
+        </statement>
+        <feedback>
+          <p>Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

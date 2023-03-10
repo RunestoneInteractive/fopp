@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_writing-test-cases-for-functions">
+  <title>Writing Test Cases for Functions</title>
+  <p>It is a good idea to write one or more test cases for each function that you define.</p>
+  <p>A function defines an operation that can be performed. If the function takes one or more parameters, it is supposed to
+            work properly on a variety of possible inputs. Each test case will check whether the function works properly on
+            <term>one set of possible inputs</term>.</p>
+  <p>A useful function will do some combination of three things, given its input parameters:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Return a value. For these, you will write <term>return value tests</term>.</p>
+      </li>
+      <li>
+        <p>Modify the contents of some mutable object, like a list or dictionary. For these you will write <term>side effect tests</term>.</p>
+      </li>
+      <li>
+        <p>Print something or write something to a file. Tests of whether a function generates the right printed output are beyond the scope of this testing framework; you won't write these tests.</p>
+      </li>
+    </ul>
+  </p>
+  <subsection xml:id="test-cases_return-value-tests">
+    <title>Return Value Tests</title>
+    <p>Testing whether a function returns the correct value is the easiest test case to define. You simply check whether the
+                result of invoking the function on a particular input produces the particular output that you expect. If <c>f</c> is your
+                function, and you think that it should transform inputs <c>x</c> and <c>y</c> into output <c>z</c>, then you could write a test as
+                <c>assert f(x, y) == z</c>. Or, to give a more concrete example, if you have a function <c>square</c>, you could have
+                a test case <c>assert square(3) ==  9</c>. Call this a <term>return value test</term>.</p>
+    <p>Because each test checks whether a function works properly on specific inputs, the test cases will never be complete: in
+                principle, a function might work properly on all the inputs that are tested in the test cases, but still not work
+                properly on some other inputs. That's where the art of defining test cases comes in: you try to find specific inputs that
+                are representative of all the important kinds of inputs that might ever be passed to the function.</p>
+    <p>The first test case that you define for a function should be an <q>easy</q> case, one that is prototypical of the kinds of
+                inputs the function is supposed to handle. Additional test cases should handle <q>extreme</q> or unusual inputs, sometimes
+                called <term>edge cases</term>. For example, if you are defining the <q>square</q> function, the first, easy case, might be an input
+                like 3. Additional extreme or unusual inputs around which you create test cases might be a negative number, 0, and a
+                floating point number.</p>
+    <p>One way to think about how to generate edge cases is to think in terms of <term>equivalence classes</term> of the different kinds of inputs the function might get. For example, the input to the <c>square</c> function could be either positive or negative. We then choose an input from each of these classes.
+                <term>It is important to have at least one test for each equivalence class of inputs.</term></p>
+    <p>Semantic errors are often caused by improperly handling the boundaries between equivalence classes. The boundary for this
+                problem is zero. <term>It is important to have a test at each boundary.</term></p>
+    <p>Another way to think about edge cases is to imagine things that could go wrong in the implementation. For example, in the square function we might mistakenly use addition instead of multiplication. Thus, we shouldn't rely on a test that uses 2 as input, but we might be fooled into thinking it was working when it produced an output of 4, when it was really doubling rather than squaring.</p>
+    <p>Try adding one or two more test cases for the square function in the code below, based on the suggestions for edge cases.</p>
+    <program xml:id="ac19_2_1" interactive="activecode" language="python">
+      <input>
+def square(x):
+    return x*x
+
+assert square(3) == 9
+        </input>
+    </program>
+  </subsection>
+  <subsection xml:id="test-cases_side-effect-tests">
+    <title>Side Effect Tests</title>
+    <p>To test whether a function makes correct changes to a mutable object, you will need more than one line of code. You will
+                first set the mutable object to some value, then run the function, then check whether the object has the expected value.
+                Call this a <term>side effect test</term> because you are checking to see whether the function invocation has had the correct side
+                effect on the mutable object.</p>
+    <p>An example follows, testing the <c>update_counts</c> function (which is deliberately implemented incorrectly&#x2026;). This
+                function takes a string called <c>letters</c> and updates the counts in <c>counts_diction</c> that are associated with each
+                character in the string. To do a side effect test, we first create a dictionary with initial counts for some letters.
+                Then we invoke the function. Then we test that the dictionary has the correct counts for some letters (those correct
+                counts are computed manually when we write the test. We have to know what the correct answer should be in order to write
+                a test). You can think of it like writing a small exam for your code &#x2013; we would not give you an exam without knowing the
+                answers ourselves.</p>
+    <program xml:id="ac19_2_2" interactive="activecode" language="python">
+      <input>
+def update_counts(letters, counts_d):
+    for c in letters:
+        counts_d[c] = 1
+        if c in counts_d:
+            counts_d[c] = counts_d[c] + 1
+
+
+counts = {'a': 3, 'b': 2}
+update_counts("aaab", counts)
+# 3 more occurrences of a, so 6 in all
+assert counts['a'] == 6
+# 1 more occurrence of b, so 3 in all
+assert counts['b'] == 3
+        </input>
+    </program>
+    <exercise label="question19_2_1">
+      <statement>
+        <p>If you write a complete set of tests and a function passes all the tests, you can be sure that it's working correctly.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>No matter how many tests you write, there may be some input that you didn't test, and the function could do the wrong thing on that input.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>The tests should cover as many edge cases as you can think of, but there's always a possibility that the function does badly on some input that you didn't include as a test case.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question19_1_3">
+      <statement>
+        <p>For the hangman game, the blanked function takes a word and some letters that have been guessed, and returns a version of the word with _ for all the letters that haven't been guessed. Which of the following is the correct way to write a test to check that &#x2018;under' will be blanked as <c>'u_d__'</c> when the user has guessed letters d and u so far?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>assert blanked('under', 'du', 'u_d__') == True</p>
+          </statement>
+          <feedback>
+            <p>blanked only takes two inputs; this provides three inputs to the blanked function</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>assert blanked('under', 'u_d__') == 'du'</p>
+          </statement>
+          <feedback>
+            <p>The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>assert blanked('under', 'du') == 'u_d__'</p>
+          </statement>
+          <feedback>
+            <p>This checks whether the value returned from the blanked function is 'u_d__'.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

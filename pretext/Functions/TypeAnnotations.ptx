@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<section xml:id="functions_type-annotations115_index-0">
+  <title>Type Annotations</title>
+  <p>In the previous section, we discussed the decoding work that is required when you look at a function and
+            are trying to determine the types of its parameters. In this section, we'll introduce a feature that can help
+            reduce the amount of sleuthing that is needed.</p>
+  <p>Consider the following function definition:</p>
+  <program language="python">
+    <input>
+def duplicate(msg):
+    """Returns a string containing two copies of `msg`"""
+
+    return msg + msg
+</input>
+  </program>
+  <p>This function is intended to duplicate a message; if called with the value &#x2018;Hello', it returns the value
+            &#x2018;HelloHello'. If called with other types of data, however, it will not work properly. (What will the
+            function do if given an <c>int</c> or a <c>float</c> value?)</p>
+  <p>Python allows you to indicate the intended type of the function parameters and the type of the function return value
+            in a function definition using a special notation demonstrated in this example:</p>
+  <program xml:id="ac_annotate1" interactive="activecode" language="python">
+    <input>
+def duplicate(msg: str) -&gt; str:
+    """Returns a string containing two copies of `msg`"""
+
+    return msg + msg
+
+result = duplicate('Hello')
+print(result)
+        </input>
+  </program>
+  <p>This definition of <c>duplicate</c> makes use of type annotations that indicate the function's parameter type and return
+            type. A <term>type annotation</term> is an optional notation that specifies the type of a parameter or function result. It
+            tells the programmer using the function what kind of data to pass to the function, and what kind of data to expect when
+            the function returns a value.</p>
+  <p>In the definition above, the annotation <c>: str</c> in <c>msg: str</c> indicates that the caller should pass a <c>str</c> value as an argument.
+            The annotation  <c>-&gt; str</c> indicates that the function will produce a <c>str</c> result.</p>
+  <p>Here are some more examples of functions with type annotations:</p>
+  <program xml:id="ac_annotate2" interactive="activecode" language="python">
+    <input>
+def add(x: int, y: int) -&gt; int:
+    """Returns the sum of `x` and `y`"""
+
+    return x + y
+
+def get_number(msg: str) -&gt; float:
+    """Prompts with `msg` for input; returns numeric response."""
+
+    return float(input(msg))
+
+def display_msg(msg: str):
+    """Displays `msg` with dashed line underneath"""
+
+    print(msg)
+    print('-------------------------------------')
+        </input>
+  </program>
+  <p>It's important to understand that adding type annotations to a function definition does not cause the Python interpreter
+            to check that the values passed to a function are the expected types, or cause the returned value to be converted to the
+            expected type. For example, if the function <c>add</c> in the example above is called like this:</p>
+  <pre>result = add('5', '15')</pre>
+  <p>the function will receive two string values, concatenate them, and return the resulting string &#x2018;515'. The <c>int</c>
+            annotations are completely ignored by the Python interpreter. Think of type annotations as a kind of function
+            documentation, and remember that they have no effect on the program's behavior.</p>
+  <p>Type annotations are an optional aspect of documenting functions. Still, type annotations are an important tool to increase
+            the readability of your code, and you should use them in your programs.</p>
+  <note>
+    <p>Although type annotations are ignored by the Python interpreter, there are tools such as
+                <url href="http://mypy-lang.org/" visual="http://mypy-lang.org/">mypy</url> that can analyze your code containing type annotations and flag potential problems.</p>
+  </note>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question_ta_1">
+    <statement>
+      <p>What happens when the following is executed?</p>
+      <program language="python">
+        <input>
+def display(msg: str):
+    """Displays `msg` on the screen"""
+    print(msg + 2)
+
+display(2.5)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>The value 4.5 is displayed on the screen.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Python ignores the ': str' annotation and returns the sum of msg (the float 2.5) + 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The value 2.52 is displayed on the screen.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. In this call, msg contains the float value 2.5; the ': str' annotation serves only as documentation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A crash occurs because 2.5 is not a string</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Python ignores the ': str' annotation and allows the float value 2.5 to be passed to msg.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A crash occurs because the expression 'msg + 2' illegally attempts to concatenate a str and an int</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. In this call, msg contains the float value 2.5, not a str, so the + operation is legal.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

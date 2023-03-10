@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="assess_ps_01_01">
+    <statement>
+      <p>There is a function we are providing in for you in this problem called <c>square</c>. It takes one integer and returns the square of that integer value. Write code to assign a variable called <c>xyz</c> the value <c>5*5</c> (five squared). Use the square function, rather than just multiplying with <c>*</c>.</p>
+    </statement>
+    <program xml:id="assess_ps_01_01_editor" interactive="activecode" language="python">
+      <input>
+xyz = ""
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(type(xyz), type(3), "Checking type of xyz")
+        self.assertEqual(xyz, 25, "Checking if xyz is 25")
+        self.assertIn('square', self.getEditorText(), "Testing that 'square' is in your code. (Don't worry about Actual and Expected Values.)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_ps_01_02">
+    <statement>
+      <p>Write code to assign the number of <em>characters</em> in the string <c>rv</c> to a variable <c>num_chars</c>.</p>
+    </statement>
+    <program xml:id="assess_ps_01_02_editor" interactive="activecode" language="python">
+      <input>
+rv = """Once upon a midnight dreary, while I pondered, weak and weary,
+    Over many a quaint and curious volume of forgotten lore,
+    While I nodded, nearly napping, suddenly there came a tapping,
+    As of some one gently rapping, rapping at my chamber door.
+    'Tis some visitor, I muttered, tapping at my chamber door;
+    Only this and nothing more."""
+
+# Write your code here!
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+       self.assertEqual(num_chars, len(rv), "Testing that num_chars has been set to the length of rv")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_question1_1_1_3">
+    <statement>
+      <p>The code below initializes two variables, <c>z</c> and <c>y</c>. We want to assign the total number of characters in <c>z</c> and in <c>y</c> to the variable <c>a</c>. Which of the following solutions, if any, would be considered hard coding?</p>
+      <program language="python">
+        <input>
+z = "hello world"
+y = "welcome!"
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>a = len("hello worldwelcome!")</p>
+        </statement>
+        <feedback>
+          <p>Though we are using the len function here, we are hardcoding what len should return the length of. We are not referencing z or y.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a = 11 + 8</p>
+        </statement>
+        <feedback>
+          <p>This is hardcoding, we are writing in the value without referencing z or y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a = len(z) + len(y)</p>
+        </statement>
+        <feedback>
+          <p>This is not considered hard coding. We are using the function len to determine the length of what is stored in z and y, which is a correct way to approach this problem.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a = len("hello world") + len("welcome!")</p>
+        </statement>
+        <feedback>
+          <p>Though we are using the len function here, we are hardcoding what len should return the length of each time we call len. We are not referencing z or y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>none of the above are hardcoding.</p>
+        </statement>
+        <feedback>
+          <p>At least one of these solutions is considered hardcoding. Take another look.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_addl_functions">
+    <statement>
+      <p>(This is not an assessment question) The code below defines functions used by one of the questions above. Do not modify the code, but feel free to take a look.</p>
+    </statement>
+    <program xml:id="assess_addl_functions_editor" interactive="activecode" language="python">
+      <input>
+
+def square(num):
+    return num**2
+        </input>
+    </program>
+  </exercise>
+</section>

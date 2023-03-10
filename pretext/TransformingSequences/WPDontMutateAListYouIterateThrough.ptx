@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_dont-mutate-a-list-that-you-are-iterating-through">
+  <title>&#x1F469;&#x200D;&#x1F4BB;  Don't Mutate A List That You Are Iterating Through</title>
+  <p>So far we've shown you how to iterate through a list:</p>
+  <program xml:id="ac8_12_1" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+
+for color in colors:
+    print(color)
+        </input>
+  </program>
+  <p>As well as accumulate a list by appending or deleting items!</p>
+  <program xml:id="ac8_12_2" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+initials = []
+
+for color in colors:
+    initials.append(color[0])
+
+print(initials)
+        </input>
+  </program>
+  <p>You may be tempted now to iterate through a list and accumulate some data into it or delete data from it, however that
+            often becomes very confusing. In the following code we will filter out all words that begin with P, B, or T.</p>
+  <program xml:id="ac8_12_3" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Purple", "Pink", "Brown", "Teal", "Turquois", "Peach", "Beige"]
+
+for position in range(len(colors)):
+    color = colors[position]
+    print(color)
+    if color[0] in ["P", "B", "T"]:
+        del colors[position]
+
+print(colors)
+        </input>
+  </program>
+  <p>In the code above, we iterated through <c>range(len(colors))</c> because it made it easier to locate the position of the
+            item in the list and delete it. However, we run into a problem because as we delete content from the list, the list
+            becomes shorter. Not only do we have an issue indexing on line 4 after a certain point, but we also skip over some strings because they've been moved around. To see this more easily, try walking through this code in codelens. Note that each time we iterate through the list python does not reevaluate the iterator variable.</p>
+  <p>We can also try to accumulate a list that we're iterating through as well. What do you think will happen here?</p>
+  <program xml:id="ac8_12_4" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+
+for color in colors:
+    if color[0] in ["A", "E", "I", "O", "U"]:
+        colors.append(color)
+
+print(colors)
+        </input>
+  </program>
+  <p>Though there is not an error, the behavior may not be expected. When we come across a color that begins with a vowel,
+            that color is added to the end of the list. Again, because Python does not reevaluate the iterator variable we are not
+            stuck adding colors that start with vowels for an infinite number of times. That's good in this case! Ultimately though,
+            it can be confusing to write code like this. We recommend not iterating over a list that you will be mutating
+            within the for loop.</p>
+</section>

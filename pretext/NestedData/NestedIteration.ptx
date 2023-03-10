@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<section xml:id="nested-data_nested-iteration">
+  <title>Nested Iteration</title>
+  <p>When you have nested data structures, especially lists and/or dictionaries, you will frequently need nested for loops
+            to traverse them.</p>
+  <program xml:id="ac17_4_1" interactive="activecode" language="python">
+    <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+for x in nested1:
+    print("level1: ")
+    for y in x:
+        print("     level2: " + y)
+        </input>
+  </program>
+  <p>Line 3 executes once for each top-level list, three times in all. With each sub-list,
+            line 5 executes once for each item in the sub-list. Try stepping through it in Codelens to make sure you understand what the nested iteration does.</p>
+  <program xml:id="clens17_4_1" interactive="codelens" language="python">
+    <input>
+nested1 = [['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+for x in nested1:
+    print("level1: ")
+    for y in x:
+        print("    level2: " + y)
+    </input>
+  </program>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="pp17_4_1" indentation="show" language="python">
+    <statement>
+      <p>Now try rearranging these code fragments to make a function that counts all the <em>leaf</em> items in a nested list like nested1 above, the items at the lowest level of nesting (8 of them in nested1).</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def count_leaves(n):</cline>
+      </block>
+      <block order="3">
+        <cline>    count = 0</cline>
+      </block>
+      <block order="4">
+        <cline>    for L in n:</cline>
+      </block>
+      <block order="5">
+        <cline>        for x in L:</cline>
+      </block>
+      <block order="1">
+        <cline>            count = count + 1</cline>
+      </block>
+      <block order="2">
+        <cline>    return count</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="ac17_4_2">
+    <statement>
+      <p><term>2.</term> Below, we have provided a list of lists that contain information about people. Write code to create a new list that contains every person's last name, and save that list as <c>last_names</c>.</p>
+    </statement>
+    <program xml:id="ac17_4_2_editor" interactive="activecode" language="python">
+      <input>
+
+info = [['Tina', 'Turner', 1939, 'singer'], ['Matt', 'Damon', 1970, 'actor'], ['Kristen', 'Wiig', 1973, 'comedian'], ['Michael', 'Phelps', 1985, 'swimmer'], ['Barack', 'Obama', 1961, 'president']]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(last_names, ['Turner', 'Damon', 'Wiig', 'Phelps', 'Obama'], "Testing that last_names was created correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac17_4_3">
+    <statement>
+      <p><term>3.</term> Below, we have provided a list of lists named <c>L</c>. Use nested iteration to save every string containing <q>b</q> into a new list named <c>b_strings</c>.</p>
+    </statement>
+    <program xml:id="ac17_4_3_editor" interactive="activecode" language="python">
+      <input>
+
+L = [['apples', 'bananas', 'oranges', 'blueberries', 'lemons'], ['carrots', 'peas', 'cucumbers', 'green beans'], ['root beer', 'smoothies', 'cranberry juice']]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(b_strings, ['bananas', 'blueberries', 'cucumbers', 'green beans', 'root beer', 'cranberry juice'], "Testing that b_strings was created correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>
