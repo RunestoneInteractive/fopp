@@ -102,7 +102,7 @@ Here's how you could use the range function in the previous problem.
 
 Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
 
-We can use the accumulation pattern is count the number of something or to sum up a total. The 
+We can use the accumulation pattern to count the number of things or to sum up a total. The
 above examples only covered how to get the sum for a list, but we can also count how many items are 
 in the list if we wanted to.
 

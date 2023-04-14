@@ -153,7 +153,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :autograde: unittest
    :practice: T
 
-   Assign the value of the 34th element of ``lst`` to the variable ``output``.
+   Assign the value of the 34th element of ``lst`` to the variable ``output``. Note that the `l` in `lst` is a letter, not a number; variable names can't start with a number.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
    

@@ -36,7 +36,7 @@ In the code above, you'll see how, now that we have elements inside of ``new_lst
 In order to extract an element of the list, we do use ``[]``, but we first have to specify which list we are indexing. 
 Imagine if there was another list in the activecode. 
 How would python know which list we want to index into if we don't tell it? 
-Additionally, we have to specify what element we want to extract. This belongs inside of the brakets. 
+Additionally, we have to specify what element we want to extract. This belongs inside of the brackets.
 
 Though it may be easier to distinguish in this above activecode, below may be a bit more difficult.
 

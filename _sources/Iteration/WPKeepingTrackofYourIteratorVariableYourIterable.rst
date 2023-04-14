@@ -110,27 +110,6 @@ The iterator (loop) variable is the variable which stores a portion of the itera
            print(z)
 
 
-.. mchoice:: question6_100_5
-   :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
-   :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Correct! The iterable is a string.
-   :feedback_b: Incorrect, there is no list in the code.
-   :feedback_c: Incorrect, the iterable is not a tuple.
-   :feedback_d: Incorrect, that is not the best answer for this problem.
-   :feedback_e: Incorrect, Python can iterate over this type.
-   :correct: a
-   :practice: T
-
-   What is the type of your iterable?
-
-   .. sourcecode:: python
-
-       t = "couch"
-       for z in t:
-           print(z)
 
 
 
@@ -208,7 +187,7 @@ The iterator (loop) variable is the variable which stores a portion of the itera
    :answer_c: tuple
    :answer_d: integer
    :answer_e: error, unable to iterate and initialize the iterator variable
-   :feedback_a: Yes, the last value stored in the iterator variable is a string.
+   :feedback_a: Yes, the last value stored in the iterator variable, blue, is the letter "s", which is a string (note that even a single character is a string in python).
    :feedback_b: Incorrect, there is no list in the code.
    :feedback_c: Incorrect, there is no tuple in the code.
    :feedback_d: Incorrect, there is no integer in the code.
