@@ -28,7 +28,7 @@ But in most cases, it's best not to do computation in your head or write complet
 hand. That's where **hard-coding** comes in. "Don't hard code" basically means, you should rely on your code, your logic, 
 your program, and you should *not* write things out by hand or do computation in your head -- even if you can do so easily.
 
-When you are writing code or working on the answer to a programming exericse, you should ask yourself: *Would my answer be 
+When you are writing code or working on the answer to a programming exercise, you should ask yourself: *Would my answer be
 correct even if the provided variables had different values?* If the answer to that question is no, you're probably hard-
 coding, which you should avoid -- and there's probably at least a slightly more concise way to construct your answer! 
 
