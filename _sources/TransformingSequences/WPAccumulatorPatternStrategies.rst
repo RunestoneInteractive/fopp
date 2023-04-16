@@ -75,7 +75,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :correct: a
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   Does the following prompt suggest an accumulation pattern? If so, what words indicate that? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
 
 .. mchoice:: question8_11_2
    :answer_a: Yes; "to sum up"
@@ -87,7 +87,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :correct: a
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
+   Does the following prompt suggest an accumulation pattern? If so, what words indicate that? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
 
 .. mchoice:: question8_11_3
    :answer_a: Yes; "print out each"
@@ -99,7 +99,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :correct: c
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to print out each character of the string ``my_str`` on a separate line.
+   Does the following prompt suggest an accumulation pattern? If so, what words indicate that? Write code to print out each character of the string ``my_str`` on a separate line.
 
 .. mchoice:: question8_11_4
    :answer_a: Yes; "vowels in the sentence"
@@ -111,7 +111,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :correct: b
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   Does the following prompt suggest an accumulation pattern? If so, what words indicate that? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
 
 .. mchoice:: question8_11_5
    :answer_a: string
@@ -199,7 +199,7 @@ As mentioned previously in a previous Way of the Programmer segment, :ref:`namin
    :feedback_a: Incorrect, there should not be an accumulator variable.
    :feedback_b: Incorrect, there should not be an accumulator variable.
    :feedback_c: Incorrect, there should not be an accumulator variable.
-   :feedback_d: Correct, because this prompt does not require an accumulator pattern
+   :feedback_d: Correct, because this prompt does not suggest an accumulator pattern
    :correct: d
    :practice: T
 

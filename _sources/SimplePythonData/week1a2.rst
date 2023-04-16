@@ -101,6 +101,5 @@ Chapter Assessment
     (This is not an assessment question) The code below defines functions used by one of the questions above. Do not modify the code, but feel free to take a look.
 
     ~~~~
-
     def square(num):
         return num**2

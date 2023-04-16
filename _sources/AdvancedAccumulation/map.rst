@@ -112,7 +112,6 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
 
    **1.** Using map, create a list assigned to the variable ``greeting_doubled`` that doubles each element in the list ``lst``.
    ~~~~
-
    lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
       
    =====
@@ -139,7 +138,6 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
 
    **2.** Below, we have provided a list of strings called ``abbrevs``. Use map to produce a new list called ``abbrevs_upper`` that contains all the same strings in upper case.
    ~~~~
-
    abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]
 
    =====

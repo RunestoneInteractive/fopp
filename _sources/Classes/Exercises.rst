@@ -24,7 +24,6 @@ Exercises
               Add a method ``reflect_x`` to Point which returns a new Point, one which is the reflection of the point about the x-axis. For example, ``Point(3, 5).reflect_x()`` is (3, -5)
 
               ~~~~
-
               class Point:
                   """ Point class for representing and manipulating x,y coordinates. """
 
@@ -61,7 +60,6 @@ Exercises
                 Add a method called ``move`` that will take two parameters, call them ``dx`` and ``dy``.  The method will cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the state of the point)
 
                 ~~~~
-
                 class Point:
                     """ Point class for representing and manipulating x,y coordinates. """
 

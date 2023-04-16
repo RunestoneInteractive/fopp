@@ -46,7 +46,6 @@ Exercises
 
             Now suppose the list wasn't sorted yet. How would get those same five elements from this list?
             ~~~~
-
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
             
     .. tab:: Answer

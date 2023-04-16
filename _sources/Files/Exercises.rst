@@ -96,7 +96,6 @@ The file below is ``emotion_words.txt``.
                 Using the text file ``studentdata.txt`` write a program that prints out the names of
                 students that have more than six quiz scores. 
                 ~~~~
-
                 # Hint: first see if you can write a program that just prints out the number of scores on each line
                 # Then, make it print the number only if the number is at least six
                 # Then, switch it to printing the name instead of the number

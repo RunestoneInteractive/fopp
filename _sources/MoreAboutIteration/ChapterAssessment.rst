@@ -82,7 +82,6 @@ Chapter Assessment
 
     Write a function called ``stop_at_z`` that iterates through a list of strings. Using a while loop, append each string to a new list until the string that appears is "z". The function should return the new list.
     ~~~~
-
     def stop_at_z():
 
     =====
@@ -104,7 +103,6 @@ Chapter Assessment
 
     Below is a for loop that works. Underneath the for loop, rewrite the problem so that it does the same thing, but using a while loop instead of a for loop. Assign the accumulated total in the while loop code to the variable ``sum2``. Once complete, sum2 should equal sum1.
     ~~~~
-
     sum1 = 0
 
     lst = [65, 78, 21, 33]

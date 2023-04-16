@@ -11,14 +11,14 @@
    :prefix: sequences-2-
    :start: 1
 
-Strings and Lists
-=================
+Strings, Lists, and Tuples
+==========================
 
 Throughout the first chapters of this book we have used strings to represent words or phrases that we
 wanted to print out. Our definition was simple: a string is simply some characters inside quotes.
 In this chapter we explore strings in much more detail.
 
-Additionally, we explore lists, which are very much like strings but can hold different types.
+Additionally, we explore lists and tuples, which are very much like strings but can hold different types.
 
 
 Strings
@@ -115,4 +115,4 @@ final comma, because without the final comma, Python treats the ``(5)`` below as
    :feedback_b: Lists are heterogeneous, meaning they can have different types of data.
    :practice: T
 
-   A list can only contain integer items.
+   A list is only allowed to contain integer items.

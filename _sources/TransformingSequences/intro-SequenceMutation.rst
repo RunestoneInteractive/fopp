@@ -24,7 +24,7 @@ Learning Goals
 --------------
 
 * To understand the concepts of mutable and immutable data types
-* To understand that methods on strings leave the origninal string alone but return a new string
+* To understand that methods on strings leave the original string alone but return a new string
 * To understand that lists are mutable data types and that mutating methods on lists return None
 
 Objectives

@@ -83,16 +83,8 @@ not include - the input. Here are the examples:
     print(list(range(5)))
     print(list(range(0,5)))
 
-    # Note: `range` function is already casted as `list` in the textbook
-    print(range(5))
 
-
-
-
-
-One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we 
-have to cast it as a list using ``list()``. Inside the textbook you'll notice that ``range`` works with or without 
-casting it as a list but it is best for you to try and get into the habit of casting it as a list. Here's how you could use the range function in the previous problem.
+Here's how you could use the range function in the previous problem.
 
 .. activecode:: ac6_6_2
 
@@ -110,7 +102,7 @@ casting it as a list but it is best for you to try and get into the habit of cas
 
 Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
 
-We can use the accumulation pattern is count the number of something or to sum up a total. The 
+We can use the accumulation pattern to count the number of things or to sum up a total. The
 above examples only covered how to get the sum for a list, but we can also count how many items are 
 in the list if we wanted to.
 

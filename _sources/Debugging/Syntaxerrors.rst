@@ -71,11 +71,11 @@ couple of spaces at the beginning of one of the lines.
 
 .. mchoice:: question4_4_1
    :answer_a: Attempting to divide by 0.
-   :answer_b: Forgetting a colon at the end of a statement where one is required.
+   :answer_b: Forgetting a right-parenthesis ) when invoking a function.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
    :correct: b
    :feedback_a: A syntax error is an error in the structure of the python code that can be detected before the program is executed. Python cannot usually tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value—you cannot know what value the user will enter before you run the program).
-   :feedback_b: This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.
+   :feedback_b: This is a problem with the formal structure of the program.  Python knows where parentheses are required and can detect when one is missing simply by analyzing the code without running it.
    :feedback_c: This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.
    :practice: T
 

@@ -134,7 +134,6 @@ Exercises
               Write a function that mirrors its string argument, 
               generating a string containing the original string and the string backwards.
               ~~~~
-
               def mirror(mystr):
                   # your code here
 
@@ -387,7 +386,7 @@ Exercises
               Write a function ``sum_of_squares(xs)`` that computes the sum
               of the squares of the numbers in the list ``xs``.  For example,
               ``sum_of_squares([2, 3, 4])`` should return 4+9+16 which is 29:
-              ~~~~   
+              ~~~~
               def sum_of_squares(xs):
                   # your code here
 
@@ -548,7 +547,6 @@ Exercises
 
                 Write a function ``findHypot``.  The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse. (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
                 ~~~~
-
                 def findHypot(a,b):
                     # your code here
 
@@ -601,7 +599,6 @@ Exercises
 
                Now write the function ``is_odd(n)`` that returns ``True`` when ``n`` is odd and ``False`` otherwise.
                ~~~~
-
                def is_odd(n):
                    # your code here
 

@@ -51,7 +51,6 @@ data types (numbers, strings, tuples).
    **1.** Extract the value associated with the key color and assign it to the variable ``color``. Do not hard code this.
 
    ~~~~
-
    info = {'personal_data': 
             {'name': 'Lauren',
              'age': 20,

@@ -56,5 +56,5 @@ and maybe does another iteration depending on the condition set for the while lo
     print("Done with our loop! X has the value: " + str(x))
 
 Try stepping through the above code in codelens to watch the order that the code is executed in. Notice in the first 
-iteration how the program doesn't move to evaluate the divisible by 3 statment or add 1 to x. Instead, it continues to 
+iteration how the program doesn't move to evaluate the divisible by 3 statement or add 1 to x. Instead, it continues to
 the next iteration.

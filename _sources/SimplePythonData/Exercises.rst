@@ -40,7 +40,6 @@ Exercises
                #. ``6 % 6``
                #. ``0 % 7``
                ~~~~
-
                print(5**2)
 
         .. tab:: Answer
@@ -158,7 +157,6 @@ Exercises
 
       Add parentheses to the expression ``6 * 1 - 2`` to change its value from 4 to -6.
       ~~~~
-
       print(6 * 1 -2)
       ====
       from unittest.gui import TestCaseGui
@@ -187,7 +185,6 @@ Exercises
                 ``t``, that the money will be compounded for.  Calculate and print the final
                 amount after ``t`` years.
                 ~~~~
-
                 P = 10000
                 n = 12
                 r = 0.08

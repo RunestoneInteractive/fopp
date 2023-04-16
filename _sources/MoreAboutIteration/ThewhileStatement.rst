@@ -196,7 +196,6 @@ the beginning of the iteration process how many times the block of code needs to
 
     Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
     ~~~~
-
     list1 = [8, 3, 4, 5, 6, 7, 9]
 
     tot = 0
@@ -221,7 +220,6 @@ the beginning of the iteration process how many times the block of code needs to
 
     Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
     ~~~~
-
     def stop_at_four():
 
 
