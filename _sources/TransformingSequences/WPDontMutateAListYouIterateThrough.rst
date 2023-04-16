@@ -65,8 +65,8 @@ We can also try to accumulate a list that we're iterating through as well. What 
 
     print(colors)
 
-Though there is not an error, the behavior may not be expected. When we come across a color that begins with a vowel, 
-that color is added to the end of the list. Again, because Python does not reevaluate the iterator variable we are not 
+The behavior may not be expected. When we come across a color that begins with a vowel, that color is added to the end of the list.
+Again, because Python does not reevaluate the iterator variable we are not
 stuck adding colors that start with vowels for an infinite number of times. That's good in this case! Ultimately though, 
 it can be confusing to write code like this. We recommend not iterating over a list that you will be mutating 
 within the for loop.
