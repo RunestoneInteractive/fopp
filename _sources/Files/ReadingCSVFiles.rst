@@ -46,7 +46,7 @@ Once we have parsed the lines into their separate values, we can use those value
 
 Note that the trick of splitting the text for each row based on the presence of commas only works because commas are not used in any of the field values. Suppose that some of our events were more specific, and used commas. For example, "Swimming, 100M Freestyle". How will a program processing a .csv file know when a comma is separating columns, and when it is just part of the text string giving a value within a column?
 
-The CSV format is actually a little more general than we have described and has a couple of solutions for that problem. One alternative format uses a different column separator, such as | or a tab (\t).  Sometimes, when a tab is used, the format is called tsv, for tab-separated values). If you get a file using a different separator, you can just call the ``.split('|')`` or ``.split('\\t')``.
+The CSV format is actually a little more general than we have described and has a couple of solutions for that problem. One alternative format uses a different column separator, such as | or a tab (\\t).  Sometimes, when a tab is used, the format is called tsv, for tab-separated values). If you get a file using a different separator, you can just call the ``.split('|')`` or ``.split('\t')``.
 
 The other advanced CSV format uses commas to separate but encloses all values in double quotes.
 
