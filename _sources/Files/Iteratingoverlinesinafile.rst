@@ -33,7 +33,7 @@ file as a string of characters. The general pattern for processing each line of 
             statement2
             ...
 
-To process all of our olypmics data, we will use a *for* loop to iterate over the lines of the file. Using
+To process all of our olympics data, we will use a *for* loop to iterate over the lines of the file. Using
 the ``split`` method, we can break each line into a list containing all the fields of interest about the
 athlete. We can then take the values corresponding to name, team and event to
 construct a simple sentence.
@@ -41,13 +41,13 @@ construct a simple sentence.
 .. activecode:: ac9_5_1
     :nocodelens:
 
-    olypmicsfile = open("olypmics.txt", "r")
+    olympicsfile = open("olympics.txt", "r")
 
-    for aline in olypmicsfile.readlines():
+    for aline in olympicsfile.readlines():
         values = aline.split(",")
         print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
-    olypmicsfile.close()
+    olympicsfile.close()
 
 To make the code a little simpler, and to allow for more efficient processing, Python provides a built-in way to
 iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a
@@ -57,17 +57,17 @@ to read it. And when you start dealing with big files, you may notice the effici
 .. activecode:: ac9_5_2
     :nocodelens:
 
-    olypmicsfile = open("olypmics.txt", "r")
+    olympicsfile = open("olympics.txt", "r")
 
-    for aline in olypmicsfile:
+    for aline in olympicsfile:
         values = aline.split(",")
         print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
-    olypmicsfile.close()
+    olympicsfile.close()
 
 .. raw:: html
 
-    <pre hidden id="olypmics.txt">
+    <pre hidden id="olympics.txt">
     Name,Sex,Age,Team,Event,Medal
     A Dijiang,M,24,China,Basketball,NA
     A Lamusi,M,23,China,Judo,NA
@@ -127,6 +127,6 @@ to read it. And when you start dealing with big files, you may notice the effici
 
       def testOne(self):
          self.assertEqual(num_lines, 7, "Testing that num_lines was assigned to the correct value.")
-         self.assertNotIn('len', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+         self.assertNotIn('len', self.getEditorText(), "Checking that you didn't use the len function.")
 
    myTests().main()
