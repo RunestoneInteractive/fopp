@@ -76,7 +76,7 @@ specify a value for z without specifying a value for y.
 
 .. note::
 
-   This is a second, related but slightly different use of = than we have seen previously. In a stand-alone assignment statement, not part of a function definition, ``x=3`` assigns 3 to the variable x. As part of specifying the parameters in a function definition, ``x=3`` says that 3 is the *default* value for x, used *only when* no value is provided during the function invocation.
+   This is a second, related but slightly different use of = than we have seen previously. In a stand-alone assignment statement, not part of a function definition, ``y=3`` assigns 3 to the variable y. As part of specifying the parameters in a function definition, ``y=3`` says that 3 is the *default* value for y, used *only when* no value is provided during the function invocation.
 
 There are two tricky things that can confuse you with default values. The first is that the default
 value is determined at the time that the function is defined, not at the time that it is invoked. So 
@@ -96,7 +96,7 @@ value 7 when f is invoked without specifying a value for z.
  
 The second tricky thing is that if the default value is set to a mutable object, such as a list or a dictionary, 
 that object will be shared in all invocations of the function. This can get very confusing, so I suggest that you 
-never set a default value that is a mutable object. For example, follow the exceution of this one carefully.
+never set a default value that is a mutable object. For example, follow the execution of this one carefully.
 
 .. codelens:: opt_params_4
     :python: py3
