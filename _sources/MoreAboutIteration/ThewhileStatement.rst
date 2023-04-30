@@ -215,25 +215,3 @@ the beginning of the iteration process how many times the block of code needs to
 
     myTests().main()
 
-.. activecode:: ac14_2_4
-    :practice: T
-
-    Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
-    ~~~~
-    def stop_at_four():
-
-
-
-    =====
-
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-       def testOne(self):
-          self.assertEqual(stop_at_four([0, 9, 4.5, 1, 7, 4, 8, 9, 3]), [0, 9, 4.5, 1, 7], "Testing the function stop_at_four on the input [0, 9, 4.5, 1, 7, 4, 8, 9, 3].")
-          self.assertEqual(stop_at_four([4, 1, 2, 8]), [], "Testing the function stop_at_four on the input [4, 1, 2, 8].")
-          self.assertEqual(stop_at_four([4]), [], "Testing the function stop_at_four on the input [4].")
-          self.assertEqual(stop_at_four([1, 6, 2, 3, 9]), [1, 6, 2, 3, 9], "Testing that stop_at_four([1, 6, 2, 3, 9]) returns ([1, 6, 2, 3, 9])")
-
-    myTests().main()
