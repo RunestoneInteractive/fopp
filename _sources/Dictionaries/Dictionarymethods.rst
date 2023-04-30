@@ -245,7 +245,7 @@ a key, ``get`` returns 0 (instead of None).
             :autograde: unittest
             :practice: T
 
-            **5.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Do not hard code this.
+            **5.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Use a dictionary method and cast to a list; do not hard code or accumulate a list via iteration.
 
             ~~~~
             medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
@@ -259,7 +259,7 @@ a key, ``get`` returns 0 (instead of None).
                 def testOne(self):
                     self.assertEqual(type(events), list, "Testing that events is a list")   
                     self.assertEqual(sorted(events), sorted(medal_events), "Testing that events was created correctly")
-                    self.assertNotIn('[', self.getEditorText(), "No hard coding")
+                    self.assertNotIn('[', self.getEditorText(), "Hard coding or accumulation detected; use a dictionary method instead")
 
             myTests().main()
 
