@@ -107,7 +107,7 @@ We can use this for any numerical value that we want to sort, however this will 
       :correct: a
       :practice: T
 
-      What how will the following data be sorted?
+      How will the following data be sorted?
 
       .. code-block:: python
 
