@@ -48,7 +48,7 @@ in a function definition using a special notation demonstrated in this example:
     print(result)
 
 This definition of ``duplicate`` makes use of type annotations that indicate the function's parameter type and return
-type. A **type annotation** is an optional notation that specifies the type of a parameter or function result. It
+type. A **type annotation**, sometimes called a type hint, is an optional notation that specifies the type of a parameter or function result. It
 tells the programmer using the function what kind of data to pass to the function, and what kind of data to expect when
 the function returns a value.
 
@@ -94,13 +94,51 @@ the readability of your code, and you should use them in your programs.
     Although type annotations are ignored by the Python interpreter, there are tools such as 
     `mypy <http://mypy-lang.org/>`_ that can analyze your code containing type annotations and flag potential problems.
 
+Type hints can be especially useful for container types, like lists and dictionaries. When type hinting was first introduced into python, in version 3.5, it was possible to specify them, but a little clunky. Later versions made it a little easier.
+
+For example, in the following code, which is valid in python version 3.10, the count_words function takes a string as input and returns a dictionary. That dictionary's keys should all be strings and the value associated with every key should be an integer.
+
+.. activecode:: ac_annotate3
+
+    def count_words(text: str) -> dict[str, int]:
+        words = text.split()
+        d = {}
+        for word in words:
+            if word not in d:
+                d[word] = 1
+            else:
+                d[word] += 1
+        return d
+
+
+
+In the code below, the function `add_em_up` takes an input that is expected to be a list of numbers. It returns the sum of all of them.
+
+.. activecode:: ac_annotate4
+
+    def add_em_up(nums: list[int]) -> int:
+            tot = 0
+            for num in nums:
+                tot += num
+            return tot
+
+Actually, this code should work just fine if the inputs are either integers or floats. If any are floats, then the return value will be a float. The more recent versions of type annotations in python allow the use the `|` symbol (pronounced "pipe") to specify a union, that either of two types is permitted. You may find that it's not permitted in the current runestone interpreter, though.
+
+.. activecode:: ac_annotate5
+
+    def add_em_up(nums: list[int | float]) -> int | float:
+        tot = 0
+        for num in nums:
+            tot += num
+        return tot
+
 **Check your understanding**
 
 .. mchoice:: question_ta_1
    :answer_a: The value 4.5 is displayed on the screen.
    :answer_b: The value 2.52 is displayed on the screen.
-   :answer_c: A crash occurs because 2.5 is not a string
-   :answer_d: A crash occurs because the expression 'msg + 2' illegally attempts to concatenate a str and an int
+   :answer_c: A runtime error occurs when the function is invoked because 2.5 is not a string.
+   :answer_d: A runtime error occurs because the expression 'msg + 2' illegally attempts to concatenate a str and an int.
    :correct: a
    :feedback_a: Correct! Python ignores the ': str' annotation and returns the sum of msg (the float 2.5) + 2.
    :feedback_b: Incorrect. In this call, msg contains the float value 2.5; the ': str' annotation serves only as documentation.
