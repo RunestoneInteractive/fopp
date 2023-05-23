@@ -11,8 +11,8 @@
    :prefix: progdev-1-
    :start: 1
 
-👩‍💻 Program Development
--------------------------
+👩‍💻 Test Driven Development
+=============================
 
 At this point, you should be able to look at complete functions and tell what
 they do. Also, if you have been doing the exercises, you have written some
@@ -96,9 +96,9 @@ For the second test the horizontal distance equals 3 and the vertical distance e
     def distance(x1, y1, x2, y2):
         return 0
 
-    assert distance(1, 2, 1, 2) == 0
+    assert distance(1,2, 1,2) == 0
     assert distance(1,2, 4,6) == 5
-    assert distance(0,0, 1,1) = 2**0.5
+    assert distance(0,0, 1,1) == 2**0.5
 
 
 The first test passes but the others fail since the distance function does not yet contain all the necessary steps.
@@ -144,9 +144,9 @@ we compute and return the result.
         result = dsquared**0.5
         return result
 
-    assert distance(1, 2, 1, 2) == 0
+    assert distance(1,2, 1,2) == 0
     assert distance(1,2, 4,6) == 5
-    assert distance(0,0, 1,1) = 2**0.5
+    assert distance(0,0, 1,1) == 2**0.5
 
 
 ..     test.testEqual(distance(0,0, 1,1), 1.41)

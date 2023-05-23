@@ -7,6 +7,7 @@ Test Cases
 
    intro-TestCases.rst
    TestingTypes.rst
+   CheckingOtherAssumptions.rst
    TestingConditionals.rst
    TestingLoops.rst
    Testingfunctions.rst

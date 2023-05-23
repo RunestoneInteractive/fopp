@@ -38,13 +38,3 @@ In the code below, ``lst`` is bound to a list object. In python, not all the ele
         assert type(item) == first_type
 
 
-Checking Other Assumptions
-==========================
-
-We can also check other assumptions about the values of variables, in addition to their types. For example, we could check that a list has fewer than 10 items.
-
-.. activecode:: ac19_1b_3
-
-    lst = ['a', 'b', 'c']
-
-    assert len(lst) < 10
