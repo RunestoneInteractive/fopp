@@ -11,6 +11,8 @@
    :start: 1
 
 
+.. _Format-Strings:
+
 String Format Method
 ====================
 
