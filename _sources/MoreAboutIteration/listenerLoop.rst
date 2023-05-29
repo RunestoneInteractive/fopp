@@ -149,8 +149,6 @@ When you run the following code, try typing something other than Y or N to see h
             answer = answer.upper() # convert to upper case
             if answer == 'Y' or answer == 'N':
                 valid_input = True
-            else:
-                print('Please enter Y for yes or N for no.')
         return answer
 
     response = get_yes_or_no('Do you like lima beans? Y)es or N)o: ')

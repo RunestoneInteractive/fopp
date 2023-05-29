@@ -29,7 +29,15 @@ call in on a string, ``int("100")``, the return value will be the integer 100.
 
 That's the most common way programmers want to convert strings to integers. Sometimes, however, they 
 are working with numbers in some other "base" rather than base 10. For example, in base 8, the rightmost 
-digit is ones, the next digit to the left is 8s, and the one to the left of that is the 64s place (8**2).
+digit says how many ones, the next digit to the left says how many 8s, and the one to the left of that says how many 64s (64 is 8 squared).
+
+.. note:: New Math
+
+    Some math educators believe that elementary school students will get a much deeper understanding
+    of the place-value system, and set a foundation for learning algebra later, if they learn to do
+    arithmetic not only in base-10 but also in base-8 and other bases. This was part of a movement
+    called `New Math <https://en.wikipedia.org/wiki/New_Math>`_, though it's not so new now. It was popular in the 1960s and 1970s in the USA. One of the authors of this textbook (Resnick) had some version of it in elementary school and credits it with ruining his mind, in a good way. Tom
+    Lehrer wrote a really funny song about it in 1965, and it's now set with visuals in several YouTube renditions. Try this very nice `lip-synched version <http://www.youtube.com/watch?v=DfCJgC2zezw>`_.
 
 The int function provides an optional parameter for the base. When it is not specified, the number is 
 converted to an integer assuming the original number was in base 10. We say that 10 is the default value. 
@@ -42,15 +50,7 @@ supplying a different value.
     print(int("100", 10))   # same thing, 10 is the default value for the base
     print(int("100", 8))     # now the base is 8, so the result is 1*64 = 64
 
-.. note:: Tom Lehrer's New Math
 
-    Some math educators believe that elementary school students will get a much deeper understanding 
-    of the place-value system, and set a foundation for learning algebra later, if they learn to do 
-    arithmetic not only in base-10 but also in base-8 and other bases. This was part of a movement 
-    called "The New Math", though it's not so new now (I had it when I was in elementary school!) Tom
-    Lehrer made a really funny song about it, and it's set with visuals in several YouTube renditions 
-    now. Try this very nice `lip-synched version <http://www.youtube.com/watch?v=DfCJgC2zezw>`_. 
-    
 When defining a function, you can specify a default value for a parameter. That parameter then becomes an 
 optional parameter when the function is called. The way to specify a default value is with an assignment 
 statement inside the parameter list. Consider the following code, for example.
@@ -76,7 +76,7 @@ specify a value for z without specifying a value for y.
 
 .. note::
 
-   This is a second, related but slightly different use of = than we have seen previously. In a stand-alone assignment statement, not part of a function definition, ``x=3`` assigns 3 to the variable x. As part of specifying the parameters in a function definition, ``x=3`` says that 3 is the *default* value for x, used *only when* no value is provided during the function invocation.
+   This is a second, related but slightly different use of = than we have seen previously. In a stand-alone assignment statement, not part of a function definition, ``y=3`` assigns 3 to the variable y. As part of specifying the parameters in a function definition, ``y=3`` says that 3 is the *default* value for y, used *only when* no value is provided during the function invocation.
 
 There are two tricky things that can confuse you with default values. The first is that the default
 value is determined at the time that the function is defined, not at the time that it is invoked. So 
@@ -96,7 +96,7 @@ value 7 when f is invoked without specifying a value for z.
  
 The second tricky thing is that if the default value is set to a mutable object, such as a list or a dictionary, 
 that object will be shared in all invocations of the function. This can get very confusing, so I suggest that you 
-never set a default value that is a mutable object. For example, follow the exceution of this one carefully.
+never set a default value that is a mutable object. For example, follow the execution of this one carefully.
 
 .. codelens:: opt_params_4
     :python: py3

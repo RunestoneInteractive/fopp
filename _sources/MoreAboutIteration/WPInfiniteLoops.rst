@@ -33,9 +33,9 @@ Additionally, if the while condition is ``while True:`` and there is no break, t
 
     print("We have escaped.")
 
-Another case where an infinite loop is likely to occur is when you have reassiged the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below (if it takes too long, try reloading the page and stepping through this example in codelens):
+Another case where an infinite loop is likely to occur is when you have reassigned the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below. We're showing it in codelens, which stops the execution after a certain number of steps.
 
-.. activecode:: ac14_11_1
+.. codelens:: ac14_11_1
 
     b = 15
 

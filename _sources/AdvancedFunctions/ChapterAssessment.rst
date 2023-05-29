@@ -136,27 +136,17 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   We have provided the function ``checkingIfIn`` such that if the first input parameter is in the third, dictionary, input parameter, then the function returns that value, and otherwise, it returns ``False``. Follow the instructions in the active code window for specific variable assignmemts.
+   We have provided a function below and the skeleton of three invocations of the function. Fill in the parameters of the invocations to produce the specified outputs
    ~~~~
-   def checkingIfIn(a, direction = True, d = {'apple': 2, 'pear': 1, 'fruit': 19, 'orange': 5, 'banana': 3, 'grapes': 2, 'watermelon': 7}):
-       if direction == True:
-           if a in d:
-               return d[a]
-           else:
-               return False
-       else:
-           if a not in d:
-               return True
-           else:
-               return d[a]
+   def f(x, y = 3, z = 7):
+      return ("{} {} {}".format(x, y, z))
 
-   # Call the function so that it returns False and assign that function call to the variable c_false
-
-   # Call the fucntion so that it returns True and assign it to the variable c_true
-
-   # Call the function so that the value of fruit is assigned to the variable fruit_ans
-
-   # Call the function using the first and third parameter so that the value 8 is assigned to the variable param_check
+   # fill in just one parameter value to make val1 have the value "Hi 3 7"
+   val1 = f()
+   # fill in two parameter values to make val2 have the value "Hi Hi 7"
+   val2 = f()
+   # fill in two parameters to make vale have the value "Hi 3 Hi"
+   val3 = f()
 
    =====
 
@@ -165,13 +155,12 @@ Chapter Assessment
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(c_false, False, "Testing that c_false has the correct value")
+         self.assertEqual(val1, "Hi 3 7", "Testing that val1 has the correct value")
       def testTwo(self):
-         self.assertEqual(c_true, True, "Testing that c_true has the correct value")
+         self.assertEqual(val2, "Hi Hi 7", "Testing that val2 has the correct value")
       def testThree(self):
-         self.assertEqual(fruit_ans, 19, "Testing that fruit_ans has the correct value")
-      def testFour(self):
-         self.assertEqual(param_check, 8, "Testing that param_check has the correct value")
-         
+         self.assertEqual(val3, "Hi 3 Hi", "Testing that val3 has the correct value")
+      ### would be good to define additional tests that check to make sure student is only suppplying minimum number of parameter values
+
 
    myTests().main()

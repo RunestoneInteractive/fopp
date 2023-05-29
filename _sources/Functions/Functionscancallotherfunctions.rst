@@ -58,7 +58,7 @@ Also notice that when ``square`` is called (at Step 8, for example), there are t
 ``square`` and one for ``sum_of_squares``.  Each group of local variables is called a **stack frame**. The variables 
 ``x``, and ``y`` are local variables in both functions. These are completely different variables, even though they
 have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice 
-that at step 9, y has the value 25 is one frame and 2 in the other.  
+that at step 11 of the execution, y has the value 25 in one frame and 2 in the other.
 
 What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the 
 ``square`` function. If it didn't find it there, it would go look in the global frame.  

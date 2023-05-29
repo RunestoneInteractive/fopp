@@ -72,7 +72,7 @@ Call this a **side effect test** because you are checking to see whether the fun
 effect on the mutable object.
 
 An example follows, testing the ``update_counts`` function (which is deliberately implemented incorrectly...). This 
-function takes a string called ``letters`` and updates the counts in ``counts_diction`` that are associated with each 
+function takes a string called ``letters`` and updates the counts in ``counts_d`` that are associated with each
 character in the string. To do a side effect test, we first create a dictionary with initial counts for some letters. 
 Then we invoke the function. Then we test that the dictionary has the correct counts for some letters (those correct 
 counts are computed manually when we write the test. We have to know what the correct answer should be in order to write 
