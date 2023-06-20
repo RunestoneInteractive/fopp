@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_non-mutating-methods-on-strings">
+  <title>Non-mutating Methods on Strings</title>
+  <p>There are a wide variety of methods for string objects.
+            Try the following program.</p>
+  <program xml:id="ac8_8_1" interactive="activecode" language="python">
+    <input>
+ss = "Hello, World"
+print(ss.upper())
+
+tt = ss.lower()
+print(tt)
+print(ss)
+        </input>
+  </program>
+  <p>In this example, <c>upper</c> is a method that can be invoked on any string object to create a new string
+            in which all the characters are in uppercase. <c>lower</c> works in a similar fashion changing all
+            characters in the string to lowercase. (The original string <c>ss</c> remains unchanged.  A new string
+            <c>tt</c> is created.)</p>
+  <p xml:id="transforming-sequences_string-methods" names="string_methods">You've already seen a few methods, such as <c>count</c> and <c>index</c>, that work with strings and are
+            non-mutating. In addition to those and <c>upper</c> and <c>lower</c>, the following table provides a summary
+            of some other useful string methods. There are a few activecode examples that follow so that you can
+            try them out.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Method
+                        </cell>
+        <cell>
+                            Parameters
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            upper
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string in all uppercase
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            lower
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string in all lowercase
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            count
+                        </cell>
+        <cell>
+                            item
+                        </cell>
+        <cell>
+                            Returns the number of occurrences of item
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            index
+                        </cell>
+        <cell>
+                            item
+                        </cell>
+        <cell>
+                            Returns the leftmost index where the substring item is found and causes                                                                 a runtime error if item is not found
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            strip
+                        </cell>
+        <cell>
+                            none
+                        </cell>
+        <cell>
+                            Returns a string with the leading and trailing whitespace removed
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            replace
+                        </cell>
+        <cell>
+                            old, new
+                        </cell>
+        <cell>
+                            Replaces all occurrences of old substring with new
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            format
+                        </cell>
+        <cell>
+                            substitutions
+                        </cell>
+        <cell>
+                            Involved! See <xref ref="transforming-sequences_string-formatting"/>, below
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the
+            <url href="http://docs.python.org/3/library/stdtypes.html#string-methods" visual="http://docs.python.org/3/library/stdtypes.html#string-methods">Python documentation for strings</url>.</p>
+  <program xml:id="ac8_8_2" interactive="activecode" language="python">
+    <input>
+ss = "    Hello, World    "
+
+els = ss.count("l")
+print(els)
+
+print("***"+ss.strip()+"***")
+
+news = ss.replace("o", "***")
+print(news)
+        </input>
+  </program>
+  <program xml:id="ac8_8_3" interactive="activecode" language="python">
+    <input>
+food = "banana bread"
+print(food.upper())
+        </input>
+  </program>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_8_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(s.count("o") + s.count("p"))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>There are definitely o and p characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>There are 2 o characters but what about p?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Yes, add the number of o characters and the number of p characters.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question8_8_2">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(s[1]*s.index("n"))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>yyyyy</p>
+        </statement>
+        <feedback>
+          <p>Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>55555</p>
+        </statement>
+        <feedback>
+          <p>Close.  5 is not repeated, it is the number of times to repeat.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>n</p>
+        </statement>
+        <feedback>
+          <p>This expression uses the index of n</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot combine all those things together.</p>
+        </statement>
+        <feedback>
+          <p>This is fine, the repetition operator used the result of indexing and the index method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

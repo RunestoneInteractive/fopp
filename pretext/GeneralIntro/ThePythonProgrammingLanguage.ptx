@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<section xml:id="general-intro_the-python-programming-language126_index-0">
+  <title>The Python Programming Language</title>
+  <p>The programming language you will be learning is Python. Python is an example
+            of a <term>high-level language</term>; other high-level languages you might have heard
+            of are C++, PHP, and Java.</p>
+  <p>As you might infer from the name high-level language, there are also
+            <term>low-level languages</term>, sometimes referred to as machine languages or assembly
+            languages. Loosely speaking, computers can only execute programs written in
+            low-level languages. Thus, programs written in a high-level language have to be
+            processed before they can run. This extra processing takes some time, which is
+            a small disadvantage of high-level languages.
+            However, the advantages to high-level languages are enormous.</p>
+  <p>First, it is much easier to program in a
+            high-level language. Programs written in a high-level language take less time
+            to write, they are shorter and easier to read, and they are more likely to be
+            correct. Second, high-level languages are <term>portable</term>, meaning that they can
+            run on different kinds of computers with few or no modifications. Low-level
+            programs can run on only one kind of computer and have to be rewritten to run
+            on another.</p>
+  <p>Due to these advantages, almost all programs are written in high-level
+            languages. Low-level languages are used only for a few specialized
+            applications.</p>
+  <p>Two kinds of programs process high-level languages into low-level languages:
+            <term>interpreters</term> and <term>compilers</term>. An interpreter reads a high-level program
+            and executes it, meaning that it does what the program says. It processes the
+            program a little at a time, alternately reading lines and performing
+            computations.</p>
+  <image source="GeneralIntro/Figures/interpret.png" width="50%" alt="Interpret illustration"/>
+  <p>A compiler reads the program and translates it completely before the program
+            starts running. In this case, the high-level program is called the <term>source
+                code</term>, and the translated program is called the <term>object code</term> or the
+            <term>executable</term>. Once a program is compiled, you can execute it repeatedly
+            without further translation.</p>
+  <image source="GeneralIntro/Figures/compile.png" width="50%" alt="Compile illustration"/>
+  <p>Many modern languages use both processes. They are first compiled into a lower
+            level language, called <term>byte code</term>, and then interpreted by a program called
+            a <term>virtual machine</term>. Python uses both processes, but because of the way
+            programmers interact with it, it is usually considered an interpreted language.</p>
+  <p>For the core material in this book, you will not need to install
+            or run python natively on your computer. Instead, you'll be writing simple
+            programs and executing them right in your browser.</p>
+  <p>At some point, you will find it useful to have a complete python environment, rather than the limited environment
+            available in this online textbook. To do that, you will either
+            install python on your computer so that it can run natively, or use a remote server that provides either a
+            command line shell or a jupyter notebook environment.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question1_3_1">
+    <statement>
+      <p>Source code is another name for:</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>the instructions in a program, written in a high-level language.</p>
+        </statement>
+        <feedback>
+          <p>If the instructions are strored in a file, it is called the source code file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the language that you are programming in (e.g., Python).</p>
+        </statement>
+        <feedback>
+          <p>This language is simply called the programming language, or simply the language. Programs are writte in this language.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the environment/tool in which you are programming.</p>
+        </statement>
+        <feedback>
+          <p>The environment may be called the IDE, or integrated development environment, though not always.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the number (or <q>code</q>) that you must input at the top of each program to tell the computer how to execute your program.</p>
+        </statement>
+        <feedback>
+          <p>There is no such number that you must type in at the start of your program.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question1_3_2">
+    <statement>
+      <p>What is the difference between a high-level programming language and a low-level programming language?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>It is high-level if you are standing and low-level if you are sitting.</p>
+        </statement>
+        <feedback>
+          <p>In this case high and low have nothing to do with altitude.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.</p>
+        </statement>
+        <feedback>
+          <p>High and low have nothing to do with the type of device you are programming for.  Instead, look at what it takes to run the program written in the language.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.</p>
+        </statement>
+        <feedback>
+          <p>Python is a high level language but must be interpreted into machine code (binary) before it can be executed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It is high-level if it easy to program in and is very short; it is low-level if it is really hard to program in and the programs are really long.</p>
+        </statement>
+        <feedback>
+          <p>While it is true that it is generally easier to program in a high-level language and programs written in a high-level language are usually shorter, this is not always the case.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question1_3_3">
+    <statement>
+      <p>Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 = a process, 2 = a function</p>
+        </statement>
+        <feedback>
+          <p>Compiling is a software process, and running the interpreter is invoking a function, but how is a process different than a function?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 = translating an entire book, 2 = translating a line at a time</p>
+        </statement>
+        <feedback>
+          <p>Compilers take the entire source code and produce object code or the executable and interpreters execute the code line by line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 = software, 2 = hardware</p>
+        </statement>
+        <feedback>
+          <p>Both compilers and interpreters are software.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 = object code, 2 = byte code</p>
+        </statement>
+        <feedback>
+          <p>Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

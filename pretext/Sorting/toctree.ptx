@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Sorting</title>
+        <xi:include href='./intro-SortingwithSortandSorted.ptx' />
+        <xi:include href='./Optionalreverseparameter.ptx' />
+        <xi:include href='./Optionalkeyparameter.ptx' />
+        <xi:include href='./SortingaDictionary.ptx' />
+        <xi:include href='./SecondarySortOrder.ptx' />
+        <xi:include href='./WPWhenToUseLambdaVsFunction.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

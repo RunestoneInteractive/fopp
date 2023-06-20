@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<section xml:id="nested-data_structuring-nested-data">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Structuring Nested Data</title>
+  <p>When constructing your own nested data, it is a good idea to keep the structure consistent across each level. For example,
+            if you have a list of dictionaries, then each dictionary should have the same structure, meaning the same keys and the same type of value associated with a particular key in all the dictionaries. The reason
+            for this is because any deviation in the structure that is used will require extra code to handle those special cases. The
+            more the structure deviates, the more you will have to use special cases.</p>
+  <p>For example, let's reconsider this nested iteration, but suppose not all the items in the outer list are lists.</p>
+  <program xml:id="ac17_50_1" interactive="activecode" language="python">
+    <input>
+nested1 = [1, 2, ['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+for x in nested1:
+    print("level1: ")
+    for y in x:
+        print("     level2: {}".format(y))
+        </input>
+  </program>
+  <p>Now the nested iteration fails.</p>
+  <p>We can solve this with special casing, a conditional that checks the type.</p>
+  <program xml:id="ac17_50_2" interactive="activecode" language="python">
+    <input>
+nested1 = [1, 2, ['a', 'b', 'c'],['d', 'e'],['f', 'g', 'h']]
+for x in nested1:
+    print("level1: ")
+    if type(x) is list:
+        for y in x:
+            print("     level2: {}".format(y))
+    else:
+        print(x)
+        </input>
+  </program>
+  <p>You can imagine how many special case if-thens we'd need, and how complicated the code would get, if we had many layers of nesting but not always a consistent structure.</p>
+</section>

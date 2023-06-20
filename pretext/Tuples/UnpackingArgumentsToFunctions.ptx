@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_unpacking-tuples-as-arguments-to-function-calls">
+  <title>Unpacking Tuples as Arguments to Function Calls</title>
+  <p>Python even provides a way to pass a single tuple to a function and have it be unpacked for assignment to the named
+            parameters.</p>
+  <program xml:id="ac12_4_6" interactive="activecode" language="python">
+    <input>
+def add(x, y):
+    return x + y
+
+print(add(3, 4))
+z = (5, 4)
+print(add(z)) # this line causes an error
+        </input>
+  </program>
+  <p>This won't quite work. It will cause an error, because the function add is expecting two parameters, but you're only passing one parameter (a tuple).
+            If only there was a way to tell python to unpack that tuple and use the first element to assign to x and the second to y.</p>
+  <p>Actually, there is a way.</p>
+  <program xml:id="ac12_4_6b" interactive="activecode" language="python">
+    <input>
+def add(x, y):
+    return x + y
+
+print(add(3, 4))
+z = (5, 4)
+print(add(*z)) # this line will cause the values to be unpacked
+        </input>
+  </program>
+  <p>Don't worry about mastering this idea yet. But later in the course, if you come across some code that someone else has
+            written that uses the * notation inside a parameter list, come back and look at this again.</p>
+</section>

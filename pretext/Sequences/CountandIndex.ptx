@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_count-and-index">
+  <title>Count and Index</title>
+  <p>As you create more complex programs, you will find that some tasks are commonly done. Python has some
+            built-in functions and methods to help you with these tasks. This page will cover two helpful methods
+            for both strings and lists: count and index.</p>
+  <p>You've learned about methods before when drawing with the turtle module. There, you used
+            <c>.forward(50)</c> and <c>.color("purple")</c> to complete actions. We refer to forward and color as methods
+            of the turtle class. Objects like strings and lists also have methods that we can use.</p>
+  <subsection xml:id="sequences_count">
+    <title>Count</title>
+    <p>The first method we'll talk about is called <c>count</c>. It requires that you provide one argument, which
+                is what you would like to count. The method then returns the number of times that the argument occured
+                in the string/list the method was used on. There are some differences between count for strings and
+                count for lists. When you use count on a string, the argument can only be a string. You can't count how
+                many times the integer 2 appears in a string, though you can count how many times the string <q>2</q> appears
+                in a string. For lists, the argument is not restricted to just strings.</p>
+    <program xml:id="ac5_8_1" interactive="activecode" language="python">
+      <input>
+a = "I have had an apple on my desk before!"
+print(a.count("e"))
+print(a.count("ha"))
+        </input>
+    </program>
+    <p>The activecode window above demonstrates the use of count on a string. Just like with the turtle module
+                when we had to specify which turtle was changing color or moving, we have to specify which string we are
+                using count on.</p>
+    <program xml:id="ac5_8_2" interactive="activecode" language="python">
+      <input>
+z = ['atoms', 4, 'neutron', 6, 'proton', 4, 'electron', 4, 'electron', 'atoms']
+print(z.count("4"))
+print(z.count(4))
+print(z.count("a"))
+print(z.count("electron"))
+        </input>
+    </program>
+    <p>When you run the activecode window above, you'll see how count with a list works. Notice how <q>4</q> has a
+                count of zero but 4 has a count of three? This is because the list <c>z</c> only contains the integer 4.
+                There are never any strings that are 4. Additionally, when we check the count of <q>a</q>, we see that the
+                program returns zero. Though some of the words in the list contain the letter <q>a</q>, the program is
+                looking for items in the list that are <em>just</em> the letter <q>a</q>.</p>
+  </subsection>
+  <subsection xml:id="sequences_index">
+    <title>Index</title>
+    <p>The other method that can be helpful for both strings and lists is the <c>index</c> method. The <c>index</c>
+                method requires one argument, and, like the <c>count</c> method, it takes only strings when index is used
+                on strings, and any type when it is used on lists. For both strings and lists, <c>index</c> returns the
+                leftmost index where the argument is found. If it is unable to find the argument in the string or list,
+                then an error will occur.</p>
+    <program xml:id="ac5_8_3" interactive="activecode" language="python">
+      <input>
+music = "Pull out your music and dancing can begin"
+bio = ["Metatarsal", "Metatarsal", "Fibula", [], "Tibia", "Tibia", 43, "Femur", "Occipital", "Metatarsal"]
+
+print(music.index("m"))
+print(music.index("your"))
+
+print(bio.index("Metatarsal"))
+print(bio.index([]))
+print(bio.index(43))
+        </input>
+    </program>
+    <p>All of the above examples work, but were you surprised by any of the return values? Remember that
+                <c>index</c> will return the left most index of the argument. Even though <q>Metatarsal</q> occurs many times
+                in <c>bio</c>, the method will only return the location of one of them.</p>
+    <p>Here's another example.</p>
+    <program xml:id="ac5_8_4" interactive="activecode" language="python">
+      <input>
+seasons = ["winter", "spring", "summer", "fall"]
+
+print(seasons.index("autumn"))  #Error!
+        </input>
+    </program>
+    <p>In the activecode window above, we're trying to see where <q>autumn</q> is in the list seasons. However,
+                there is no string called autumn (though there is string called <q>fall</q> which is likely what the program
+                is looking for). Remember that an error occurs if the argument is not in the string or list.</p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question5_8_1">
+      <statement>
+        <p>What will be stored in the variable ty below?</p>
+        <program language="python">
+          <input>
+qu = "wow, welcome week!"
+ty = qu.index("we")
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>5</p>
+          </statement>
+          <feedback>
+            <p>Yes, when we get the index of a string that is longer than one character, we get the index for the first character in the string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>6</p>
+          </statement>
+          <feedback>
+            <p>When we get the index of a string that is longer than one character, we get the index for the first character in the string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>13</p>
+          </statement>
+          <feedback>
+            <p>Remember that index returns the left most occurance of the argument.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>14</p>
+          </statement>
+          <feedback>
+            <p>Remember that index returns the left most occurance of the argument.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>There is an error.</p>
+          </statement>
+          <feedback>
+            <p>There is at least one 'we' in the string assigned to qu.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question5_8_2">
+      <statement>
+        <p>What will be stored in the variable ty below?</p>
+        <program language="python">
+          <input>
+qu = "wow, welcome week! Were you wanting to go?"
+ty = qu.count("we")
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>0</p>
+          </statement>
+          <feedback>
+            <p>No, there is at least one e in the string.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>2</p>
+          </statement>
+          <feedback>
+            <p>Yes, there is a difference between "we" and "We" which means there are only two in the string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>3</p>
+          </statement>
+          <feedback>
+            <p>there is a difference between "we" and "We".</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>There is an error.</p>
+          </statement>
+          <feedback>
+            <p>There is no error in the code.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question5_8_3">
+      <statement>
+        <p>What will be stored in the variable ht below?</p>
+        <program language="python">
+          <input>
+rooms = ['bathroom', 'kitchen', 'living room', 'bedroom', 'closet', "foyer"]
+ht = rooms.index("garden")
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>0</p>
+          </statement>
+          <feedback>
+            <p>No, the first element is 'bathroom', not 'garden'.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>-1</p>
+          </statement>
+          <feedback>
+            <p>Though there is no 'garden' in the list, we do not get back -1 when we use index. Instead, we get an error.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>There is an error.</p>
+          </statement>
+          <feedback>
+            <p>Yes, there is no 'garden' in the list, so we get back an error.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

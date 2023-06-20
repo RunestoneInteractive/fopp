@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_order-of-operations">
+    <title>Order of Operations</title>
+    <p>When more than one operator appears in an expression, the order of evaluation depends on the <b>rules
+        of precedence</b>. Python follows the same precedence rules for its mathematical operators
+        that mathematics does.</p>
+    <ol>
+        <li>
+            <p>
+                <i>Parentheses</i> have the highest precedence and can be used to force an
+                expression to evaluate in the order you want. Since expressions in parentheses are
+                evaluated first, <c>2 * (3-1)</c> is 4, and <c>(1+1)**(5-2)</c> is 8. You can also
+                use parentheses to make an expression easier to read, as in <c>(minute * 100) / 60</c>:
+                in this case, the parentheses don't change the result, but they reinforce that the
+                expression in parentheses will be evaluated first. </p>
+            <p>
+                <i>Exponentiation</i> has the next highest precedence, so <c>2**1+1</c> is 3 and not
+                4, and <c>3*1**3</c> is 3 and not 27. Can you explain why? </p>
+            <p>
+                <i>Multiplication and both division</i> operators have the same precedence, which is
+                higher than addition and subtraction, which also have the same precedence. So <c>
+                2*3-1</c> yields 5 rather than 4, and <c>5-2*2</c> is 1, not 6. </p>
+            <p>
+                <i>Operators</i> with the same precedence are evaluated from left-to-right. In
+                algebra we say they are <i>left-associative</i>. So in the expression <c>6-3+2</c>,
+                the subtraction happens first, yielding 3. We then add 2 to get the result 5. If the
+                operations had been evaluated from right to left, the result would have been <c>
+                6-(3+2)</c>, which is 1. </p>
+        </li>
+    </ol>
+    <note>
+        <title>Note</title>
+        <p> Due to some historical quirk, an exception to the left-to-right left-associative rule is
+            the exponentiation operator <c>**</c>. A useful hint is to always use parentheses to
+            force exactly the order you want when exponentiation is involved: </p>
+    </note>
+
+    <program xml:id="ac2_11_1" interactive="activecode" language="python">
+        <input>
+            print(2 ** 3 ** 2)      # the right-most ** operator gets done first!
+            print((2 ** 3) ** 2)    # use parentheses to force the order you want!
+        </input>
+    </program>
+
+    <note>
+        <title>Note</title>
+        <p> This is a second way that parentheses are used in Python. The first way you've already
+            seen is that () indicates a function call, with the inputs going inside the parentheses.
+            How can Python tell when parentheses specify to call a function, and when they are just
+            forcing the order of operations for ambiguous operator expressions?
+
+            The answer is that if there's a an expression to the left of the parentheses that
+            evaluates to a function object, then the parentheses indicate a function call, and
+            otherwise not. You will have to get used to making the same inference when you see
+            parentheses: is this a function call, or just specifying precedence? </p>
+    </note>
+      <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question2_11_1">
+    <statement>
+      <p>What is the value of the follwing expression?</p>
+      <program language="python">
+        <input>
+            16 - 2 * 5 // 3 + 1
+        </input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>14</p>
+        </statement>
+        <feedback>
+          <p>Using parentheses, the expression is evaluated as (2*5) first, then (10 // 3), then (16-3), and then (13+1).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>24</p>
+        </statement>
+        <feedback>
+          <p>Remember that * has precedence over -.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Remember that // has precedence over -.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>13.667</p>
+        </statement>
+        <feedback>
+          <p>Remember that // does integer division.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

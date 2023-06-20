@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Nested Data and Nested Iteration</title>
+        <xi:include href='./ListswithComplexItems.ptx' />
+        <xi:include href='./NestedDictionaries.ptx' />
+        <xi:include href='./jsonlib.ptx' />
+        <xi:include href='./NestedIteration.ptx' />
+        <xi:include href='./WPStructuringNestedData.ptx' />
+        <xi:include href='./DeepandShallowCopies.ptx' />
+        <xi:include href='./WPExtractFromNestedData.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

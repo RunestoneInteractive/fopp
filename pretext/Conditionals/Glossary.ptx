@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>block</title>
+      <p>A group of consecutive statements with the same indentation.</p>
+    </gi>
+    <gi>
+      <title>body</title>
+      <p>The block of statements in a compound statement that follows the
+                            header.</p>
+    </gi>
+    <gi>
+      <title>boolean values</title>
+      <p>A value that is either True or False. True and False must be capitalized to be considered Boolean.</p>
+    </gi>
+    <gi>
+      <title>branch</title>
+      <p>One of the possible paths of the flow of execution determined by
+                            conditional execution.</p>
+    </gi>
+    <gi>
+      <title>chained conditional</title>
+      <p>A conditional branch with more than two possible flows of execution. In
+                            Python chained conditionals are written with <c>if ... elif ... else</c>
+                            statements.</p>
+    </gi>
+    <gi>
+      <title>comparison operator</title>
+      <p>One of the operators that compares two values: <c>==</c>, <c>!=</c>, <c>&gt;</c>,
+                            <c>&lt;</c>, <c>&gt;=</c>, and <c>&lt;=</c>.</p>
+    </gi>
+    <gi>
+      <title>condition</title>
+      <p>The boolean expression in a conditional statement that determines which
+                            branch is executed.</p>
+    </gi>
+    <gi>
+      <title>conditional statement</title>
+      <p>A statement that controls the flow of execution depending on some
+                            condition. In Python the keywords <c>if</c>, <c>elif</c>, and <c>else</c> are
+                            used for conditional statements.</p>
+    </gi>
+    <gi>
+      <title>logical operators</title>
+      <p><q>and</q>, <q>or</q> and <q>not</q> are logical operators used to evaluate expressions. Their semantic meaning is similar to their English meaning.</p>
+    </gi>
+    <gi>
+      <title>nesting</title>
+      <p>One program structure within another, such as a conditional statement
+                            inside a branch of another conditional statement.</p>
+    </gi>
+    <gi>
+      <title>unary selection</title>
+      <p>A selection statement in which there is only an <q>if</q> statement and the <q>else</q> statement is omitted entirely. In an unary selection, the statements are only executed if the condition evaluates to true, otherwise the program continues to the body following the if statement.</p>
+    </gi>
+  </glossary>
+</section>

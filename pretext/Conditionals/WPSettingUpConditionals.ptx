@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_setting-up-conditionals">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Setting Up Conditionals</title>
+  <p>Before writing your conditionals, it can be helpful to make your own flowchart that will
+            plot out the flow of each condition. By writing out the flow, you can better determine how
+            complex the set of conditionals will be as well as check to see if any condition is not
+            taken care of before you begin writing it out.</p>
+  <p>To make sure that your code covers all of the conditions that you intend for it to cover, you
+            should add comments for each clause that explains what that clause is meant to do. Then, you
+            should add tests for each possible path that the program could go though. What leads
+            to certain conditional statements being executed? Is that what you intended?</p>
+  <subsection xml:id="conditionals_choosing-your-type-of-conditional">
+    <title>Choosing your type of Conditional</title>
+    <p>When adding conditionals to your program, you should also consider the kinds of conditionals
+                that are at your disposal and what would fit best.</p>
+    <image source="Conditionals/Figures/valid_conditionals.png" width="50%"/>
+    <p>Though you'll use them often, remember that conditional statements don't always need an else clause.
+                When deciding the flow, ask yourself what you want to have happen under a certain condition.
+                For example, if you wanted to find all of the words that have the letter &#x2018;n' in them. If there's nothing
+                that needs to happen when a word does not contain the letter &#x2018;n' then you won't need an else
+                clause. The program should just continue onward!</p>
+    <exercise label="question7_11_1">
+      <statement>
+        <p>What is the best set of conditonal statements provided based on the following prompt? You want to keep track of all the words that have the letter &#x2018;t' and in a separate variable you want to keep track of all the words that have the letter &#x2018;z' in them.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>If statement - Else statement</p>
+          </statement>
+          <feedback>
+            <p>Using if/else either uses an unnecessary else statement or would improperly keep track of one of the accumulator variables.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If statement - Elif statement</p>
+          </statement>
+          <feedback>
+            <p>Using if/elif means that words that have both a "t" and a "z" would not be propperly counted by the two variables.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>If statement - If statement</p>
+          </statement>
+          <feedback>
+            <p>Yes, two if statements will keep track of - and properly update - the two different accumulator variables.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If statement - Elif statemenet - Else statement</p>
+          </statement>
+          <feedback>
+            <p>Using if/elif/else here will provide an unnecessary else statement and improperly update one of the accumulator variables in the case where a word has both a "t" and a "z".</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question7_11_2">
+      <statement>
+        <p>Select the most appropriate set of conditonal statements for the situation described: You want to keep track of all the words that contain both <q>t</q> and <q>z</q>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>If statement - Elif statemenet - Else statement</p>
+          </statement>
+          <feedback>
+            <p>The elif and else statements are both unnecessary.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If statement - Else statement</p>
+          </statement>
+          <feedback>
+            <p>The else statement is unnecessary.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If statement - Nested If statement</p>
+          </statement>
+          <feedback>
+            <p>Though you could write a set of conditional statements like this and answer the prompt, there is a more concise way.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>If statement</p>
+          </statement>
+          <feedback>
+            <p>Yes, this is the most concise way of writing a conditional for that prompt.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If statement - Nested If statement - Else statement</p>
+          </statement>
+          <feedback>
+            <p>The else statement is unnecessary.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

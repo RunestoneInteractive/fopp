@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_naming-variables-in-for-loops">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Naming Variables in For Loops</title>
+  <p>We've mentioned before about carefully choosing your variable names. Though the
+            names you choose aren't meaningful to the program, they can be to you. When we
+            choose names for variables in for loops, the more understandable they are to us,
+            the easier it will be to use them. Here are some tips to make your for loops more
+            readable for yourself and anyone else who may read your programs:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Use singular nouns for the iterator variable, which is also called the loop variable (things like <q>song</q>, <q>book</q>, <q>post</q>, <q>letter</q>, <q>word</q>).</p>
+      </li>
+      <li>
+        <p>Use plural nouns for the sequence variable (things like <q>songs</q>, <q>books</q>, <q>posts</q>, <q>letters</q>, <q>words</q>).</p>
+      </li>
+    </ol>
+  </p>
+  <p>While these two tips won't always apply, they are general best practices when it
+            comes to choosing variable names. Below we have an example!</p>
+  <program xml:id="ac6_8_1" interactive="activecode" language="python">
+    <input>
+# x is a list defined elsewhere
+
+for y in x:
+    print(y)
+        </input>
+  </program>
+  <p>Since we can't see the contents of x right now - this might be the case if we have
+            a long program - then these names would make the program hard to understand. Let's
+            compare this to a program that does the same thing, but uses better names.</p>
+  <program xml:id="ac6_8_2" interactive="activecode" language="python">
+    <input>
+# genres is a list defined elsewhere
+
+for genre in genres:
+    print(genre)
+        </input>
+  </program>
+  <p>Here what we expect is much more clear, even if we didn't see how genres was initialized!</p>
+  <p>The code below was used to initialize x and genres so you're free to look at it but you
+            don't need to run it!</p>
+  <program xml:id="ac6_8_3" interactive="activecode" language="python">
+    <input>
+x = ["jazz", "pop", "rock", "country", "punk", "folk", "hip-hop", "rap", "alternative"]
+genres = ["jazz", "pop", "rock", "country", "punk", "folk", "hip-hop", "rap", "alternative"]
+        </input>
+  </program>
+</section>

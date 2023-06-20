@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Python Turtle</title>
+        <xi:include href='./intro-HelloLittleTurtles.ptx' />
+        <xi:include href='./OurFirstTurtleProgram.ptx' />
+        <xi:include href='./InstancesAHerdofTurtles.ptx' />
+        <xi:include href='./ObjectInstances.ptx' />
+        <xi:include href='./RepetitionwithaForLoop.ptx' />
+        <xi:include href='./AFewMoreturtleMethodsandObservations.ptx' />
+        <xi:include href='./SummaryOfTurtleMethods.ptx' />
+        <xi:include href='./WPIncrementalProgramming.ptx' />
+        <xi:include href='./WPCommonTurtleErrors.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./week1a3.ptx' />
+    </chapter>

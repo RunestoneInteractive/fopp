@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_chained-conditionals47_index-0">
+  <title>Chained conditionals</title>
+  <p>Python provides an alternative way to write nested selection such as the one shown in the previous section.
+            This is sometimes referred to as a <term>chained conditional</term>.</p>
+  <program language="python">
+    <input>
+if x &lt; y:
+    print("x is less than y")
+elif x &gt; y:
+    print("x is greater than y")
+else:
+    print("x and y must be equal")
+</input>
+  </program>
+  <p>The flow of control can be drawn in a different orientation but the resulting pattern is identical to the one shown above.</p>
+  <image source="Conditionals/Figures/flowchart_chained_conditional.png" width="50%"/>
+  <p><c>elif</c> is an abbreviation of <c>else if</c>. Again, exactly one branch will be
+            executed. There is no limit of the number of <c>elif</c> statements but only a
+            single (and optional) final <c>else</c> statement is allowed and it must be the last
+            branch in the statement.</p>
+  <image source="Conditionals/Figures/conditionals_overview.png" width="50%"/>
+  <p>Each condition is checked in order. If the first is false, the next is checked,
+            and so on. If one of them is true, the corresponding branch executes, and the
+            statement ends. Even if more than one condition is true, only the first true
+            branch executes.</p>
+  <p>Here is the same program using <c>elif</c>.</p>
+  <program xml:id="ac7_9_1" interactive="activecode" language="python">
+    <input>
+x = 10
+y = 10
+
+if x &lt; y:
+    print("x is less than y")
+elif x &gt; y:
+    print("x is greater than y")
+else:
+    print("x and y must be equal")
+        </input>
+  </program>
+  <p>The following image highlights different kinds of valid conditionals that can be used. Though there are other
+            versions of conditionals that Python can understand (imagine an if statement with twenty elif statements), those
+            other versions must follow the same order as seen below.</p>
+  <image source="Conditionals/Figures/valid_conditionals.png" width="50%" alt="shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif."/>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question7_9_1">
+    <statement>
+      <p>Which of I, II, and III below gives the same result as the following nested if?</p>
+      <program language="python">
+        <input>
+# nested if-else statement
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    if x &gt; 0:
+        print(x, " is a positive number")
+    else:
+        print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+I.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else (x &gt; 0):
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+II.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+elif (x &gt; 0):
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+III.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+if (x &gt; 0):
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+        <feedback>
+          <p>You can not use a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II only</p>
+        </statement>
+        <feedback>
+          <p>Yes, II will give the same result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+        <feedback>
+          <p>No, III will not give the same result.  The first if statement will be true, but the second will be false, so the else part will execute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II and III</p>
+        </statement>
+        <feedback>
+          <p>No, Although II is correct III will not give the same result.  Try it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I, II, and III</p>
+        </statement>
+        <feedback>
+          <p>No, in I you can not have a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question7_9_2">
+    <statement>
+      <p>What will the following code print if x = 3, y = 5, and z = 2?</p>
+      <program language="python">
+        <input>
+if x &lt; y and x &lt; z:
+    print("a")
+elif y &lt; x and y &lt; z:
+    print("b")
+else:
+    print("c")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a</p>
+        </statement>
+        <feedback>
+          <p>While the value in x is less than the value in y (3 is less than 5) it is not less than the value in z (3 is not less than 2).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>b</p>
+        </statement>
+        <feedback>
+          <p>The value in y is not less than the value in x (5 is not less than 3).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>c</p>
+        </statement>
+        <feedback>
+          <p>Since the first two Boolean expressions are false the else will be executed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac7_9_2">
+    <statement>
+      <p>Create one conditional to find whether <q>false</q> is in string <c>str1</c>. If so, assign variable <c>output</c> the string <q>False. You aren't you?</q>. Check to see if <q>true</q> is in string <c>str1</c> and if it is then assign <q>True! You are you!</q> to the variable <c>output</c>. If neither are in <c>str1</c>, assign <q>Neither true nor false!</q> to <c>output</c>.</p>
+    </statement>
+    <program xml:id="ac7_9_2_editor" interactive="activecode" language="python">
+      <input>
+str1 = "Today you are you! That is truer than true! There is no one alive who is you-er than you!"
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(output, "True! You are you!", "Testing that output has the correct value, given the str1 provided.")
+      self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+      self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac7_9_4">
+    <statement>
+      <p>Create an empty list called <c>resps</c>. Using the list <c>percent_rain</c>, for each percent, if it is above 90, add the string &#x2018;Bring an umbrella.' to <c>resps</c>, otherwise if it is above 80, add the string &#x2018;Good for the flowers?' to <c>resps</c>, otherwise if it is above 50, add the string &#x2018;Watch out for clouds!' to <c>resps</c>, otherwise, add the string &#x2018;Nice day!' to <c>resps</c>. Note: if you're sure you've got the problem right but it doesn't pass, then check that you've matched up the strings exactly.</p>
+    </statement>
+    <program xml:id="ac7_9_4_editor" interactive="activecode" language="python">
+      <input>
+percent_rain = [94.3, 45, 100, 78, 16, 5.3, 79, 86]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(resps, ['Bring an umbrella.','Nice day!','Bring an umbrella.','Watch out for clouds!',"Nice day!",'Nice day!','Watch out for clouds!',"Good for the flowers?"], "Testing the value of resps")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac7_9_5">
+    <statement>
+      <p>We have created conditionals for you to use. Do not change the provided conditional statements. Find an integer value for <c>x</c> that will cause <c>output</c> to hold the values <c>True</c> and <c>None</c>. (Drawing diagrams or flow charts for yourself may help!)</p>
+    </statement>
+    <program xml:id="ac7_9_5_editor" interactive="activecode" language="python">
+      <input>
+x =
+output = []
+
+if x &gt; 63:
+    output.append(True)
+elif x &gt; 55:
+    output.append(False)
+else:
+    output.append("Neither")
+
+if x &gt; 67:
+    output.append(True)
+else:
+    output.append(None)
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testSixA(self):
+      self.assertEqual(output, [True, None], "Testing that value of output is correct.")
+
+   def testSixB(self):
+      self.assertEqual(x in [64, 65, 66, 67], True, "Testing that value of x is reasonable for this problem")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

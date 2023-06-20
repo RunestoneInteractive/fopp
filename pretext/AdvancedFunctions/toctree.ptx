@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Advanced Functions</title>
+        <xi:include href='./OptionalParameters.ptx' />
+        <xi:include href='./KeywordParameters.ptx' />
+        <xi:include href='./Anonymousfunctionswithlambdaexpressions.ptx' />
+        <xi:include href='./ProgrammingWithStyle.ptx' />
+        <xi:include href='./MethodInvocations.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

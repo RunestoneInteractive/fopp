@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_intro-what-we-can-do-with-turtles-and-conditionals">
+  <title>Intro: What we can do with Turtles and Conditionals</title>
+  <p>So far, our programs have either been a series of statements which always execute sequentially or operations that are applied to each item in an iterable. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters that are not asleep. This is done with something called a <term>selection</term> or a <term>conditional statement</term>.</p>
+  <p>In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly</p>
+  <program xml:id="ac7_1_1" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+
+amy = turtle.Turtle()
+amy.pencolor("Pink")
+amy.forward(50)
+if amy.pencolor() == "Pink":
+    amy.right(60)
+    amy.forward(100)
+else:
+    amy.left(60)
+    amy.forward(100)
+
+kenji = turtle.Turtle()
+kenji.forward(60)
+if kenji.pencolor() == "Pink":
+    kenji.right(60)
+    kenji.forward(100)
+else:
+    kenji.left(60)
+    kenji.forward(100)
+        </input>
+  </program>
+  <p>In the above code, we first set amy's pen color to be <q>Pink</q> and then move her forward. Next we want one of
+            two actions to happen, either amy should move right and then forward, or left and then forward. The direction
+            that we want her to go in depends on her pen color. If her pen color is set to pink - which is determined by
+            writing <c>amy.pencolor() == "Pink"</c> which checks to see if the value returned by <c>amy.pencolor()</c> is the
+            equivalent to the string <q>Pink</q> - then we should have her move right and forward. Else (or otherwise) she
+            should move left and forward. Both things can't happen though. She can't move right, forward <em>and</em> left,
+            forward. We then do the same thing for kenji, though in this case, we didn't change kenji's pen color.</p>
+  <p>It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up amy
+            and kenji's colors, so why would we need a conditional? While it's true that this isn't the <em>best</em> place to
+            use a conditional, we can combine conditional statements with for loops to make something pretty cool!</p>
+  <program xml:id="ac7_1_2" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+
+amy = turtle.Turtle()
+amy.pencolor("Pink")
+amy.right(170)
+
+colors = ["Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Orange", "Pink", "Pink", "Orange", "Yellow", "Purple", "Orange", "Purple", "Yellow", "Orange", "Pink", "Orange", "Purple", "Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Yellow"]
+
+
+for color in colors:
+    if amy.pencolor() == "Purple":
+        amy.forward(50)
+        amy.right(59)
+    elif amy.pencolor() == "Yellow":
+        amy.forward(65)
+        amy.left(98)
+    elif amy.pencolor() == "Orange":
+        amy.forward(30)
+        amy.left(60)
+    elif amy.pencolor() == "Pink":
+        amy.forward(50)
+        amy.right(57)
+
+    amy.pencolor(color)
+        </input>
+  </program>
+  <p>The above example combines a for loop with a set of conditional statements. Here, we loop through a list of
+            colors and each iteration checks to see what amy's pen color is. Depending on the pen color, the turtle will
+            move in a certain direction, for a certain distance. Before the for loop iterates, amy's pen color is changed
+            to whatever <c>color</c> is in the for loop and it continues. Note how the color doesn't change until the end,
+            so that we can start using whatever color amy is set to initally. This means that the last color in the list
+            <c>colors</c> will not be used, though you can see how the icon changes to the appropriate color.</p>
+  <p>This chapter will further detail how to use conditional statements.</p>
+  <subsection xml:id="conditionals_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>To understand boolean expressions and logical operators</p>
+        </li>
+        <li>
+          <p>To understand conditional execution</p>
+        </li>
+        <li>
+          <p>To be able to write a boolean function</p>
+        </li>
+        <li>
+          <p>To know when to use binary, unary, chained and nested conditional statements</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="conditionals_objectives">
+    <title>Objectives</title>
+    <p>
+      <ul>
+        <li>
+          <p>To properly evaluate a (compound) boolean expression</p>
+        </li>
+        <li>
+          <p>To use parenthesis to properly demonstrate operator precedence</p>
+        </li>
+        <li>
+          <p>To use conditional statements to properly branch code</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

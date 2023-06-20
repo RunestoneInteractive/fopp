@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_the-accumulator-pattern-with-lists">
+  <title>The Accumulator Pattern with Lists</title>
+  <p>We can accumulate values into a list rather than accumulating a single numeric value. Consider, for
+            example, the following program which transforms a list into a new list by squaring each of the values.</p>
+  <program xml:id="ac8_9_1" interactive="activecode" language="python">
+    <input>
+nums = [3, 5, 8]
+accum = []
+for w in nums:
+    x = w**2
+    accum.append(x)
+print(accum)
+        </input>
+  </program>
+  <p>Here, we <term>initialize</term> the accumulator variable to be an empty list, on line 2.</p>
+  <p>We <term>iterate</term> through the sequence (line 3). On each iteration we transform the item by squaring it (line 4).</p>
+  <p>The <term>update</term> step appends the new item to the list which is stored in the accumulator variable
+            (line 5). The update happens using the .append(), which mutates the list rather than using a
+            reassignment. Instead, we could have written <c>accum = accum + [x]</c>, or <c>accum += [x]</c>. In either
+            case, we'd need to concatenate a list containing x, not just x itself.</p>
+  <p>At the end, we have accumulated a new list of the same length as the original, but with each item
+            transformed into a new item. This is called a mapping operation, and we will revisit it in a later chapter.</p>
+  <p>Note how this differs from mutating the original list, as you saw in a previous section.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_9_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+alist = [4,2,8,6,5]
+blist = [ ]
+for item in alist:
+   blist.append(item+5)
+print(blist)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4,2,8,6,5]</p>
+        </statement>
+        <feedback>
+          <p>5 is added to each item before the append is performed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4,2,8,6,5,5]</p>
+        </statement>
+        <feedback>
+          <p>There are too many items in this list. Only 5 append operations are performed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[9,7,13,11,10]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the for loop processes each item of the list. 5 is added before it is appended to blist.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot concatenate inside an append.</p>
+        </statement>
+        <feedback>
+          <p>5 is added to each item before the append operation is performed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question8_9_2">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+lst= [3,0,9,4,1,7]
+new_list=[]
+for i in range(len(lst)):
+   new_list.append(lst[i]+5)
+print(new_list)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[8,5,14,9,6]</p>
+        </statement>
+        <feedback>
+          <p>Don't forget the last item!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[8,5,14,9,6,12]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the for loop processes each item in lst. 5 is added before lst[i] is appended to new_list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3,0,9,4,1,7,5]</p>
+        </statement>
+        <feedback>
+          <p>5 is added to each item before the append operation is performed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot concatenate inside an append.</p>
+        </statement>
+        <feedback>
+          <p>It is OK to have a complex expression inside the call to the append method. The expression `lst[i]+5` is fully evaluated before the append operation is performed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac8_9_2">
+    <statement>
+      <p>
+        <ol label="1">
+          <li>
+            <p>For each word in the list <c>verbs</c>, add an -ing ending. Save this new list in a new list, <c>ing</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program xml:id="ac8_9_2_editor" interactive="activecode" language="python">
+      <input>
+verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testSix(self):
+      self.assertEqual(ing, ['kayaking', 'crying', 'walking', 'eating', 'drinking', 'flying'], "Testing that the variable ing has the correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac8_9_3">
+    <statement>
+      <p>Given the list of numbers, <c>numbs</c>, create a new list of those same numbers increased by 5. Save this new list to the variable <c>newlist</c>.</p>
+    </statement>
+    <program xml:id="ac8_9_3_editor" interactive="activecode" language="python">
+      <input>
+numbs = [5, 10, 15, 20, 25]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFour(self):
+      self.assertEqual(newlist, [10, 15, 20, 25, 30], "Testing that the newlist value contains the correct elements.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac8_9_4">
+    <statement>
+      <p>Given the list of numbers, <c>numbs</c>, modifiy the list <c>numbs</c> so that each of the original numbers are increased by 5.  Note this is not an accumulator pattern problem, but its a good review.</p>
+    </statement>
+    <program xml:id="ac8_9_4_editor" interactive="activecode" language="python">
+      <input>
+numbs = [5, 10, 15, 20, 25]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFive(self):
+      self.assertEqual(numbs, [10, 15, 20, 25, 30], "Testing that numbs is assigned to correct values.")
+      self.assertNotIn("append", self.getEditorText(), "Do not use append")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac8_9_5">
+    <statement>
+      <p>For each number in <c>lst_nums</c>, multiply that number by 2 and append it to a new list called <c>larger_nums</c>.</p>
+    </statement>
+    <program xml:id="ac8_9_5_editor" interactive="activecode" language="python">
+      <input>
+lst_nums = [4, 29, 5.3, 10, 2, 1817, 1967, 9, 31.32]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(larger_nums, [8, 58, 10.6, 20, 4, 3634, 3934, 18, 62.64], "Testing that larger_nums has been created correctly." )
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>
