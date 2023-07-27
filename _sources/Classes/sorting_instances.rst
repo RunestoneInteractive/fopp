@@ -76,6 +76,7 @@ Another approach to sorting lists of instances is to specify a "comparison opera
 To do this, we can define a method named ``__lt__`` which stands for "less than". Note that this method starts and ends with two underscores. This signifies that it is a special method, just like ``__init__`` and ``__str__``. Our method, ``__lt__``, takes two instances as arguments: ``self`` and an argument for another instance. It returns ``True`` if the ``self`` instance should come before the other instance, and ``False`` otherwise. Normally, ``__lt__`` is called when we try to use the less than operator (``<``) on class instances; Python translates the expression ``a < b`` into ``a.__lt__(b)``. However, we can also use ``__lt__`` to decide which of two instances should come first in a sorted list. For example, if we wanted to sort instances of ``Fruit`` by prices names by default, we could define ``__lt__`` as follows:
 
 .. activecode:: sort_instances_4
+
     class Fruit():
         def __init__(self, name, price):
             self.name = name
@@ -91,7 +92,7 @@ To do this, we can define a method named ``__lt__`` which stands for "less than"
 
     print("-----sorted using comparison operator (without key)-----")
     for f in sorted(L):
-        print(f)
+        print(f.name)
 
     print(blueberry < cherry) # Equivalent to blueberry.__lt__(cherry) ; False
 
@@ -100,6 +101,7 @@ When we call ``sorted(L)`` without specifying a value for the ``key`` parameter,
 If we wanted to sort by names, we could define ``__lt__`` differently. *Note that when we call ``<`` on strings, it does an alphabetical comparison; ``"Apple" < "Cherry"`` is ``True``. We can take advantage of this in our ``__lt__`` method*:
 
 .. activecode:: sort_instances_5
+
     class Fruit():
         def __init__(self, name, price):
             self.name = name
@@ -115,6 +117,8 @@ If we wanted to sort by names, we could define ``__lt__`` differently. *Note tha
 
     print("-----sorted using comparison operator (without key)-----")
     for f in sorted(L):
-        print(f)
+        print(f.name)
 
     print(blueberry < cherry) # Equivalent to blueberry.__lt__(cherry) ; True
+
+Finally, note that if we pass in a ``key`` to ``sorted()`` (approach 1), it will use that instead of calling the ``__lt__`` method.
