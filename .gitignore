@@ -16,3 +16,5 @@ sphinx-enki-info.txt
 sphinx_settings.json
 .history
 .nova
+cli.log
+_sources/.jupyterlite.doit.db
