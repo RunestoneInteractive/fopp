@@ -15,6 +15,7 @@ Defining your own Classes
    InstancesasReturnValues.rst
    sorting_instances.rst
    ClassVariablesInstanceVariables.rst
+   WPPrivateInstanceVariables.rst
    ThinkingAboutClasses.rst
    TestingClasses.rst
    Tamagotchi.rst
