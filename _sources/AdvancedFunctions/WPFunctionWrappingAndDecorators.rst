@@ -84,7 +84,10 @@ We can now easily "enable" or "disable" logging by commenting out the ``@addLogg
 
 To give another example, suppose we wanted to "password protect" access to calling a function. We could create a function ``passwordProtect`` that will wrap our function inside of code that ensures the user has the correct password.
 
+Try running the code below and entering the correct password (``password123``) when prompted. Then, try running the code again and entering an incorrect password. Notice that the ``printSecretMessage`` function is only called if the user enters the correct password.
+
 .. activecode:: ac15_6_4
+
     # This is a decorator function that takes another function as an argument.
     def passwordProtect(func):
 
@@ -114,4 +117,4 @@ To give another example, suppose we wanted to "password protect" access to calli
     # By adding the decorator, we prompt the user for a password before printing the secret message.
     printSecretMessage()
 
-Although this example is made up for illustration, this kind of function wrapping can be used in web applications protect access to sensitive pages. For example, code for a Web server might wrap code that transmits personal information with a decorator that checks if the user is logged in. Decorators give us a convenient syntax for modifying the behavior of functions we write.
+Although this example is made up for illustration, this kind of function wrapping can be used in web applications to protect access to sensitive pages. For example, code for a Web server might wrap code that transmits personal information with a decorator that checks if the user is logged in. Decorators give us a convenient syntax for modifying the behavior of functions we write.
