@@ -1,4 +1,4 @@
-..  Copyright (C)  Paul Resnick.  Permission is granted to copy, distribute
+..  Copyright (C)  Paul Resnick and Steve Oney.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
     License, Version 1.3 or any later version published by the Free Software
     Foundation; with Invariant Sections being Forward, Prefaces, and
@@ -101,13 +101,12 @@ Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want 
 
 .. activecode:: super_methods_1
     :nocanvas:
-    :include: inheritance_pet_class
+    :include: inheritance_pet_class_copy
 
     class Bird(Pet):
         sounds = ["chirp"]
         def __init__(self, name="Kitty", chirp_number=2):
             super().__init__(name) # call the parent class's constructor
-            # basically, call the SUPER -- the parent version -- of the constructor, with all the parameters that it needs.
             self.chirp_number = chirp_number # now, also assign the new instance variable
 
         def hi(self):
@@ -139,8 +138,8 @@ Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want 
 
 .. mchoice:: question_inheritance_5
    :answer_a: Error when invoked
-   :answer_b: The string would not print out but d1 would have its hunger reduced.
-   :answer_c: The string would print but d1 would not have its hunger reduced.
+   :answer_b: The string "Arf! Thanks!" would not print out but d1 would still have its hunger reduced.
+   :answer_c: The string "Arf! Thanks!" would still print out but d1 would not have its hunger reduced.
    :answer_d: Nothing would be different. It is the same as the current code.
    :feedback_a: Since we are no longer calling the parent method in the subclass method definition, the actions defined in the parent method feed will not happen, and only Arf! Thanks! will be printed.
    :feedback_b: Remember that the Python interpreter checks for the existence of feed in the Dog class and looks for feed in Pet only if it isn't found in Dog.
