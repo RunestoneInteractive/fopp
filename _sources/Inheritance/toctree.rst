@@ -9,8 +9,8 @@ Inheritance
    inheritVarsAndMethods.rst
    OverrideMethods.rst
    InvokingSuperMethods.rst
+   MultipleInheritance.rst
    TamagotchiRevisited.rst
-   WPMultipleInheritance.rst
    Exercises.rst
    ChapterAssessment.rst
    chapterProject.rst
