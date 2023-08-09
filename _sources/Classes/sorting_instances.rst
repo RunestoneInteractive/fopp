@@ -1,4 +1,4 @@
-..  Copyright (C)  Paul Resnick.  Permission is granted to copy, distribute
+..  Copyright (C)  Steve Oney.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
     License, Version 1.3 or any later version published by the Free Software
     Foundation; with Invariant Sections being Forward, Prefaces, and
@@ -18,22 +18,23 @@
 Sorting Lists of Instances
 ==========================
 
-You previously learned :ref:`how to sort lists <sort_chap>`. Sorting lists of instances of a class is not fundamentally different from sorting lists of objects of any other type. There are two main ways to sort lists of instances: (1) by providing a ``key`` function as a parameter to ``sorted()`` (or ``.sort()``) or by (2) defining a "comparison operator" that determines how two instances should be compared (specifically, given two instances, which one should come first). We will describe both ways here.
+You previously learned :ref:`how to sort lists <sort_chap>`. Sorting lists of instances of a class is fundamentally the same as sorting lists of objects of any other type. There are two main ways to sort lists of instances: (1) by providing a ``key`` function as a parameter to ``sorted()`` (or ``.sort()``) or by (2) defining a "comparison operator" that determines how two instances should be compared (specifically, given two instances, which one should come first). We will describe both ways here.
 
 Approach 1: Sorting Lists of Instances with ``key``
 ---------------------------------------------------
 
-Previously, you have seen how to provide such a function when sorting lists of other kinds of objects. For example, given a list of strings, you can sort them in ascending order of their lengths by passing a key parameter. Note that if you refer to a function by name, you give the name of the function without parentheses after it, because you want the function object itself. The sorted function will take care of calling the function, passing the current item in the list. Thus, in the example below, we write ``key=len`` and not ``key=len()``.
+Previously, you have seen how to provide such a function as input when sorting lists of other kinds of objects. For example, given a list of strings, you can sort them in ascending order of their lengths by passing ``len`` as the key parameter. Note that if you refer to a function by name, you give the name of the function without parentheses after it, because you want the function object itself. The sorted function will take care of calling the function, passing the current item in the list. Thus, in the example below, we write ``key=len`` and not ``key=len()``.
 
 .. activecode:: sort_instances_1
 
    L = ["Cherry", "Apple", "Blueberry"]
    
+   print(sorted(L))
    print(sorted(L, key=len))
    #alternative form using lambda, if you find that easier to understand
    print(sorted(L, key= lambda x: len(x)))   
 
-When each of the items in a list is an instance of a class, you need to provide a function that takes one instance as an input, and returns a number. The instances will be sorted by their numbers.
+When each of the items in a list is an instance of a class, the function you pass for the key parameter takes one instance as an input and returns a number. The instances will be sorted by their returned numbers.
 
 .. activecode:: sort_instances_2
 
@@ -85,8 +86,8 @@ To do this, we can define a method named ``__lt__`` which stands for "less than"
         def __lt__(self, other): # other is another instance of Fruit
             return self.price < other.price
            
-    cherry = Fruit("Cherry", 10)
-    apple = Fruit("Apple", 5)
+    apple = Fruit("Apple", 10)
+    cherry = Fruit("Cherry", 5)
     blueberry = Fruit("Blueberry", 20)
     L = [cherry, apple, blueberry]
 
@@ -94,9 +95,9 @@ To do this, we can define a method named ``__lt__`` which stands for "less than"
     for f in sorted(L):
         print(f.name)
 
-    print(blueberry < cherry) # Equivalent to blueberry.__lt__(cherry) ; False
+    print(f'apple < cherry: {apple < cherry}') # Equivalent to apple.__lt__(cherry) ; False
 
-When we call ``sorted(L)`` without specifying a value for the ``key`` parameter, it will sort the items in the list using the ``__lt__`` method we defined. ``sorted()`` will automatically call the ``__lt__`` method, passing in two instances from the list. Calling ``__lt__`` when ``self`` is ``Fruit("Cherry", 10)`` and ``other`` is ``Fruit("Apple", 5)`` returns ``False`` (because the ``price`` of the cherry is not less than the price of the apple) so this means ``Apple`` should come before ``Cherry`` in the sorted list.
+When we call ``sorted(L)`` without specifying a value for the ``key`` parameter, it will sort the items in the list using the ``__lt__`` method defined for the class of items. ``sorted()`` will automatically call the ``__lt__`` method, passing in two instances from the list. Calling ``__lt__`` when ``self`` is ``Fruit("Apple", 10)`` and ``other`` is ``Fruit("Cherry", 5)`` returns ``False`` (because the ``price`` of the apple is not less than the price of the cherry) so this means ``Cherry`` should come before ``Apple`` in the sorted list.
 
 If we wanted to sort by names, we could define ``__lt__`` differently. *Note that when we call ``<`` on strings, it does an alphabetical comparison; ``"Apple" < "Cherry"`` is ``True``. We can take advantage of this in our ``__lt__`` method*:
 
@@ -110,8 +111,8 @@ If we wanted to sort by names, we could define ``__lt__`` differently. *Note tha
         def __lt__(self, other): # other is another instance of Fruit
             return self.name < other.name # note we are comparing names
            
-    cherry = Fruit("Cherry", 10)
-    apple = Fruit("Apple", 5)
+    apple = Fruit("Apple", 10)
+    cherry = Fruit("Cherry", 5)
     blueberry = Fruit("Blueberry", 20)
     L = [cherry, apple, blueberry]
 
@@ -119,6 +120,7 @@ If we wanted to sort by names, we could define ``__lt__`` differently. *Note tha
     for f in sorted(L):
         print(f.name)
 
-    print(blueberry < cherry) # Equivalent to blueberry.__lt__(cherry) ; True
+    print(f'apple < cherry: {apple < cherry}') # Equivalent to apple.__lt__(cherry) ; False
 
-Finally, note that if we pass in a ``key`` to ``sorted()`` (approach 1), it will use that instead of calling the ``__lt__`` method.
+
+Finally, note that if we pass in a function for the ``key`` parameter when we call ``sorted()`` (approach 1), it will use that key function instead of calling the ``__lt__`` method. You can try putting a print statement inside the ``__lt__`` method to see this for yourself: __lt__ will not be called when you provide a key function but it will be called when you don't provide a key function.
