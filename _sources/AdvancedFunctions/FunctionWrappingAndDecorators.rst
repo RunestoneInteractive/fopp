@@ -1,8 +1,10 @@
 
 .. _decorators:
 
-👩‍💻 Function Wrapping and Decorators
-=========================================
+Function Wrapping and Decorators
+=======================================
+
+This section introduces an advanced python concept called *function wrapping* and a special syntax for it called *decorators*. It is not necessary to use decorators in your programming, but they are an elegant way to do function wrapping, and it will be helpful for you to understand what they do when you see them in other people's code.
 
 In Python, functions are "first class" objects, meaning they can be treated like any other object. Beyond calling functions, we can also reference them, pass them as arguments to other functions, or return them. Although we cannot directly manipulate the *behavior* of a function, we can wrap it in another function that does something before or after the original function is called or change the arguments that a function takes. This is called *function wrapping*.
 

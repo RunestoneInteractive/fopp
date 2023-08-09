@@ -1,4 +1,4 @@
-👩‍💻 Class Decorators
+Class Decorators
 ========================
 
 Recall that Python has a :ref:`"decorator" syntax"<decorators>` that allows us to modify the behavior of functions. We can use this same syntax to modify the behavior of classes. There are two ways we can use decorators with classes: (1) by decorating individual class methods or (2) by decorating the class itself.

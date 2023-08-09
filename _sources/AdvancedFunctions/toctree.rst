@@ -10,6 +10,6 @@ Advanced Functions
    Anonymousfunctionswithlambdaexpressions.rst
    ProgrammingWithStyle.rst
    MethodInvocations.rst
-   WPFunctionWrappingAndDecorators.rst
+   FunctionWrappingAndDecorators.rst
    Exercises.rst
    ChapterAssessment.rst
