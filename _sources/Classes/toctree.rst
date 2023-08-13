@@ -15,6 +15,7 @@ Defining your own Classes
    InstancesasReturnValues.rst
    sorting_instances.rst
    ClassVariablesInstanceVariables.rst
+   PrivateInstanceVariables.rst
    ThinkingAboutClasses.rst
    TestingClasses.rst
    Tamagotchi.rst
