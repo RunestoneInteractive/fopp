@@ -93,13 +93,13 @@ And now we can play the Tamagotchi game with some small changes, such that we ca
                 return "happy"
 
         def feed(self):
-            Pet.feed(self)
+            super().feed()
             print("Arf! Thanks!")
 
     class Bird(Pet):
         sounds = ["chirp"]
         def __init__(self, name="Kitty", chirp_number=2):
-            Pet.__init__(self, name) # call the parent class's constructor
+            super().__init__(name) # call the parent class's constructor
             # basically, call the SUPER -- the parent version -- of the constructor, with all the parameters that it needs.
             self.chirp_number = chirp_number # now, also assign the new instance variable
 
