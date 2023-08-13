@@ -60,7 +60,7 @@ Project - Wheel of Python
 
     The ``random`` module includes several useful methods for generating and using random numbers, including:
 
-    * ``random.randint(min, max)`` generates a random number between ``min`` and ``max`` (inclusive)
+    * ``random.randint(low, high)`` generates a random number between ``low`` and ``high`` (inclusive)
     * ``random.choice(L)`` selects a random item from the list ``L``
     ~~~~
     import random
@@ -103,25 +103,25 @@ Project - Wheel of Python
     ~~~~
     import json
 
-    # Repeatedly asks the user for a number between min & max (inclusive)
-    def getNumberBetween(prompt, min, max):
+    # Repeatedly asks the user for a number between low & high (inclusive)
+    def getNumberBetween(prompt, low, high):
         userinp = input(prompt) # ask the first time
 
         while True:
             try:
                 n = int(userinp) # try casting to an integer
-                if n < min:
-                    errmessage = 'Must be at least {}'.format(min)
-                elif n > max:
-                    errmessage = 'Must be at most {}'.format(max)
+                if n < low:
+                    errmessage = 'Must be at least {}'.format(low)
+                elif n > high:
+                    errmessage = 'Must be at most {}'.format(high)
                 else:
                     return n
             except ValueError: # The user didn't enter a number
-                errmessage = '{} is not a number.'
+                errmessage = f'{userinp} is not a number.'
             
             # If we haven't gotten a number yet, add the error message
             # and ask again
-            userinp = input('{}\n{}'.format(errmessage, prompt))
+            userinp = input(f'{errmessage}\n{prompt}')
 
     # Spins the wheel of fortune wheel to give a random prize
     # Examples:
@@ -413,25 +413,25 @@ Project - Wheel of Python
     VOWELS  = 'AEIOU'
     VOWEL_COST  = 250
 
-    # Repeatedly asks the user for a number between min & max (inclusive)
-    def getNumberBetween(prompt, min, max):
+    # Repeatedly asks the user for a number between low & high (inclusive)
+    def getNumberBetween(prompt, low, high):
         userinp = input(prompt) # ask the first time
 
         while True:
             try:
                 n = int(userinp) # try casting to an integer
-                if n < min:
-                    errmessage = 'Must be at least {}'.format(min)
-                elif n > max:
-                    errmessage = 'Must be at most {}'.format(max)
+                if n < low:
+                    errmessage = 'Must be at least {}'.format(low)
+                elif n > high:
+                    errmessage = 'Must be at most {}'.format(high)
                 else:
                     return n
             except ValueError: # The user didn't enter a number
-                errmessage = '{} is not a number.'
+                errmessage = f'{userinp} is not a number.'
             
             # If we haven't gotten a number yet, add the error message
             # and ask again
-            userinp = input('{}\n{}'.format(errmessage, prompt))
+            userinp = input(f'{errmessage}\n{prompt}')
 
     # Spins the wheel of fortune wheel to give a random prize
     # Examples:
