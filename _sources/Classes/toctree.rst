@@ -18,6 +18,7 @@ Defining your own Classes
    ThinkingAboutClasses.rst
    TestingClasses.rst
    Tamagotchi.rst
+   ClassDecorators.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
