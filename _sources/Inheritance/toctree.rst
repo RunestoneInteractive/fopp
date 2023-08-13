@@ -9,6 +9,7 @@ Inheritance
    inheritVarsAndMethods.rst
    OverrideMethods.rst
    InvokingSuperMethods.rst
+   MultipleInheritance.rst
    TamagotchiRevisited.rst
    Exercises.rst
    ChapterAssessment.rst
