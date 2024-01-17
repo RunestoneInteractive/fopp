@@ -12,7 +12,7 @@ Computer Programming can be one of the most rewarding experiences ever.  You get
 
 In this project the goal is to give you an idea of the kinds of things you will be able to do by the end of this course.  You are not going to understand the code that we give you in this project, but you will be able to use it to do some cool things.
 
-For many of you reading this or taking a first course in computer science that there are many unfamiliar aspects of writing code.  The text editor used to create code may seem primitive as it lacks any kind of formatting.  The Python interpreter itself may seem incredibly annoying to you at first, as programming languages only do what you tell them.  They have no intelligence, they don't do what you **mean** they do exactly what you **tell them**.  And if in the process of telling the computer what you want it to do, by writing code, you make a little typo, or forget a particular character the computer will just give you an error message and sit there stupidly waiting for you to fix it!  Don't let that discourage you, especially early on, dealing with errors is a normal part of the process and will get easier as time goes by.
+For many of you reading this or taking a first course in computer science that there are many unfamiliar aspects of writing code.  The text editor used to create code may seem primitive as it lacks any kind of formatting.  The Python interpreter itself may seem incredibly annoying to you at first, as programming languages only do what you tell them.  They have no intelligence, they don't do what you **mean**, they do exactly what you **tell them**.  And if in the process of telling the computer what you want it to do, by writing code, you make a little typo, or forget a particular character the computer will just give you an error message and sit there stupidly waiting for you to fix it!  Don't let that discourage you, especially early on, dealing with errors is a normal part of the process and will get easier as time goes by.
 
 Image Processing Functions
 --------------------------
@@ -75,7 +75,7 @@ The following activecode editor contains 10 different image processing functions
     import image
     import math
 
-    #Here are the functions that should be in the packground for them to explore
+    #Here are the functions that should be in the background for them to explore
 
     def stacked(original, modified):
         # This function will give a stacked image,
