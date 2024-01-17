@@ -75,7 +75,7 @@ The following activecode editor contains 10 different image processing functions
     import image
     import math
 
-    #Here are the functions that should be in the packground for them to explore
+    #Here are the functions that should be in the background for them to explore
 
     def stacked(original, modified):
         # This function will give a stacked image,
