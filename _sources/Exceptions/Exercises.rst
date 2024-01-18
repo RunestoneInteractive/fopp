@@ -90,7 +90,3 @@ Contributed Exercises
             {{ q['htmlsrc']|safe }}
         </div>
     {% endfor %}
-
-=======
-     
-               myTests().main()
