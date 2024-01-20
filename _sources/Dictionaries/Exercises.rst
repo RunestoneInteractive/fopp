@@ -228,14 +228,15 @@ Exercises
 
     .. sourcecode:: python
 
-        alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        values = {}
-        for i in range(len(alphabet)):
-            values[alphabet[i]] = i+1;
-        answer  = 0
-        for c in s:
-            answer += values[c]
-        return answer
+	def foo(s):
+		alphabet = 'abcdefghijklmnopqrstuvwxyz'
+		values = {}
+		for i in range(len(alphabet)):
+			values[alphabet[i]] = i+1;
+		answer  = 0
+		for c in s:
+			answer += values[c]
+		return answer
 
     When the ``foo()`` is called with the input "baa", what value does it return? (Write "error" if you think it would raise an error instead.)
 

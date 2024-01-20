@@ -78,7 +78,7 @@ Or, using ``map`` and not unpacking the tuple (our online environment has troubl
 
    L1 = [3, 4, 5]
    L2 = [1, 2, 3]
-   L3 = map(lambda x: x[0] + x[1], zip(L1, L2))
+   L3 = list(map(lambda x: x[0] + x[1], zip(L1, L2)))
    print(L3)
 
 Consider a function called possible, which determines whether a word is still possible to play in a game of hangman, given the guesses that have been made and the current state of the blanked word.
