@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Files</title>
+        <xi:include href='./intro-WorkingwithDataFiles.ptx' />
+        <xi:include href='./ReadingaFile.ptx' />
+        <xi:include href='./AlternativeFileReadingMethods.ptx' />
+        <xi:include href='./Iteratingoverlinesinafile.ptx' />
+        <xi:include href='./FindingaFileonyourDisk.ptx' />
+        <xi:include href='./With.ptx' />
+        <xi:include href='./FilesRecipe.ptx' />
+        <xi:include href='./WritingTextFiles.ptx' />
+        <xi:include href='./CSVFormat.ptx' />
+        <xi:include href='./ReadingCSVFiles.ptx' />
+        <xi:include href='./WritingCSVFiles.ptx' />
+        <xi:include href='./WPTipsHandlingFiles.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

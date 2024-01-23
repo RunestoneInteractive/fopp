@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_f-strings">
+  <title>f-Strings</title>
+  <p>There is another (more modern) approach for generating fill-in-the-blanks, <term>f-strings</term>. They were introduced in version 3.6 of python.
+            f-strings are a Python-specific way of formatting strings.</p>
+  <p>You should develop the skill of reading
+            code that uses both <c>.format()</c> and f-strings, because you may encounter both. You will probably find that it's easier to
+            write code using f-strings, and we encourage you to use them for your own code, except when you have a specific reason to use <c>.format()</c> instead.</p>
+  <p>Let's revisit the example we used before. Pay attention to how the same outcome can be obtained first with the <c>.format()</c> method and then with the f-string approach.</p>
+  <program xml:id="ac8_f_1" interactive="activecode" language="python">
+    <input>
+name = "Rodney Dangerfield"
+score = -1
+print("Hello {}. Your score is {}.".format(name, score))
+print(f"Hello {name}. Your score is {score}.")
+        </input>
+  </program>
+  <p>In the above example, using the <em>f-strings</em> approach, we fill each placeholder (i.e., each pair of braces) with a variable name whose value we want to display.</p>
+  <p>Note that to use an f-string, we must type the character <q>f</q> before the string content. We can then enter expressions within the string between curly braces ({}).
+            Whenever the python interpreter encounters curly braces inside an f-string, it will evaluate the expression and substitute the resulting value into the string.</p>
+  <p>We can use almost any expression inside the braces. It can be: a value; a variable that contains or references a value; an arithmetic expression; a string expression; a method call that returns a value such as a string or a number.
+            See the following examples illustrating these. Each <c>print()</c> statement produces the exact same output.</p>
+  <p>First, we can use values directly inside the braces.</p>
+  <program xml:id="ac8_f_2" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {'Peter Huang'}. Your score is {96.75}.")
+        </input>
+  </program>
+  <p>We can use expressions (i.e., string operations and arithmetic operations) directly inside the braces.</p>
+  <program xml:id="ac8_f_3" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {'Peter' + ' ' + 'Huang'}. Your score is {90 + 6.75}.")
+        </input>
+  </program>
+  <p>We can use expressions consisting of variables directly inside the braces.</p>
+  <program xml:id="ac8_f_4" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {first_name} {last_name}. Your score is {score}.")
+        </input>
+  </program>
+  <p>We can call a function or a method directly inside the braces.
+            Note that in this example, we use <c>max()</c>, a built-in function that will return the highest value among the values we provide.
+            Since the value <c>96.75</c> is assigned to the variable <c>score</c> and is greater than <c>60</c>, the value returned from <c>max(score, 60)</c> will be <c>96.75</c>.</p>
+  <program xml:id="ac8_f_5" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {first_name} {last_name}. Your score is {max(score, 60)}.")
+        </input>
+  </program>
+  <p>Similar to the <c>format()</c> approach, we can use format specifiers (e.g., <c>:.2f</c>) to further fine-tune the value being displayed.
+            For instance, if we want to display a floating-point number with one decimal place, we can use <c>:.1f</c> inside the braces and after the expression.
+            The example below shows how we can apply the format specifiers with both a variable and a method call inside the braces.</p>
+  <program xml:id="ac8_f_6" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {first_name} {last_name}. Your score is {score:.1f}.")
+print(f"Hello {first_name} {last_name}. Your score is {max(score, 60):.1f}.")
+        </input>
+  </program>
+  <p>At this point, we might ask, are <em>f-strings</em> the best approach to use for formatting strings?</p>
+  <p>Generally, yes, f-strings make for code that's easier to read, and thus, also easier to write and debug. But there a couple things to watch out for.</p>
+  <p>First, note that we need to pay attention to using quotes inside <em>f-strings</em>. If we use quotes, that means we are embedding quotes inside the quotes required by f-strings.
+            If we use the same type of quotes, such as double quotes, the Python interpreter will have trouble determining how these double-quotes are paired with one another, and it will have trouble understanding what we want a computer to do.
+            A solution is to use a different kind of quotes, such as single quotes, so that the Python interpreter knows how to pair those quotes (e.g., double with double, single with single) and properly execute our code.
+            Take a look at the following example, which produces an error, and see if we can fix the bug to have the correct output similar to the previous example (hint: replacing a pair of double quotes).</p>
+  <program xml:id="ac8_f_7" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print(f"Hello {first_name + " " + last_name}. Your score is {score}.")
+        </input>
+  </program>
+  <p>Note that, as the <c>.format()</c> approach does not require using expressions directly inside the <em>format string</em>, we don't have to worry about the quotes-inside-quotes problem when using the <c>.format()</c> approach. The following example uses double quotes throughout.</p>
+  <program xml:id="ac8_f_8" interactive="activecode" language="python">
+    <input>
+first_name = "Peter"
+last_name = "Huang"
+score = 96.75
+print("Hello {}. Your score is {}.".format(first_name + " " + last_name, score))
+        </input>
+  </program>
+  <p>Second, we need to pay attention when using braces inside <em>f-string</em>, as <em>f-strings</em> already require the use of braces as placeholders.
+            To display a pair of braces inside f-strings, we need to double the pair of braces.</p>
+  <p>This is also true with format strings used with <c>.format()</c>. However, since the <c>.format()</c> approach does not require using expressions directly inside the <em>format string</em>, we can avoid the braces-inside-braces problem by including the braces in the substitution values instead,
+            as we can see in the following example.</p>
+  <program xml:id="ac8_f_9" interactive="activecode" language="python">
+    <input>
+print("{} {}".format("{I need braces.}", "{I also need braces.}"))
+        </input>
+  </program>
+  <p>In summary, different string formatting methods have their own advantages and disadvantages in terms of readability and caveats. There are other considerations (e.g., speed), but we won't discuss them here.
+            One of the potential solutions to mitigate the issues raised above is to pre-calculate the values using different expressions and store them in variables.
+            We can then use mostly these variables with either <c>.format()</c> or <em>f-strings</em>, without using complex expressions directly. See the example inside the question below.</p>
+  <p>We have introduced various string methods in Python. Use the following question to check if you understand what has been discussed.</p>
+  <exercise label="question8_f_10">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "I saw the movie, Mary Poppins Returns, and I thought it was great."
+
+# all the expressions
+r_count = s.count("r")
+all_case_r_count = s.lower().count("r")
+r_precentage = all_case_r_count/len(s) * 100
+
+# use mostly variables inside f-strings or format()
+first_str = f"The number of r characters: {r_count}."
+second_str = "The percentage of r characters (upper or lower case): {:.2f}%.".format(r_precentage)
+
+# display
+print( first_str + " " + second_str)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The percentage of r characters (upper or lower case): 6.061%. The number of r: 4.</p>
+        </statement>
+        <feedback>
+          <p>Check how many decimal places, sentence order, and how many lower case &#x2018;r' characters there are.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The number of r: 4. The percentage of r characters (upper or lower case): 6.061%.</p>
+        </statement>
+        <feedback>
+          <p>Check how many decimal places and how many lower case &#x2018;r' characters there are.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The percentage of r characters (upper or lower case): 6.06%. The number of r: 3.</p>
+        </statement>
+        <feedback>
+          <p>Check the sentence order.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The number of r: 3. The percentage of r characters (upper or lower case): 6.06%.</p>
+        </statement>
+        <feedback>
+          <p>Yes, the numbers and the order of sentences are correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

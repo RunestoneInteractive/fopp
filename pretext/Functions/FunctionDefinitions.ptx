@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<section xml:id="functions_function-definition">
+  <title>Function Definition</title>
+  <p>The syntax for creating a named function, a <term>function definition</term>, is:</p>
+  <program language="python">
+    <input>
+def name( parameters ):
+    statements
+</input>
+  </program>
+  <p>You can make up any names you want for the functions you create, except that you can't use a name that is a Python
+            keyword, and the names must follow the rules for legal identifiers that were given previously. The parameters specify
+            what information, if any, you have to provide in order to use the new function. Another way to say this is that the
+            parameters specify what the function needs to do its work.</p>
+  <p>There can be any number of statements inside the function, but they have to be indented from the <c>def</c>. In the
+            examples in this book, we will use the standard indentation of four spaces. Function definitions are the third of
+            several <term>compound statements</term> we will see, all of which have the same pattern:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>A header line which begins with a keyword and ends with a colon.</p>
+      </li>
+      <li>
+        <p>A <term>body</term> consisting of one or more Python statements, each
+                    indented the same amount &#x2013; <em>4 spaces is the Python standard</em> &#x2013; from
+                    the header line.</p>
+      </li>
+    </ol>
+  </p>
+  <p>We've already seen the <c>for</c> statement which has the same structure, with an indented block of code, and the
+            <c>if</c>, <c>elif</c>, and <c>else</c> statements that do so as well.</p>
+  <p>In a function definition, the keyword in the header is <c>def</c>, which is followed by the name of the function and
+            some <em>parameter names</em> enclosed in parentheses. The parameter list may be empty, or it may contain any number of
+            parameters separated from one another by commas. In either case, the parentheses are required.</p>
+  <p>We will come back to the parameters in a little while, but first let's see what happens when a function is executed,
+            using a function without any parameters to illustrate.</p>
+  <p>Here's the definition of a simple function, hello.</p>
+  <program xml:id="ac11_1_1" interactive="activecode" language="python">
+    <input>
+def hello():
+    """This function says hello and greets you"""
+    print("Hello")
+    print("Glad to meet you")
+        </input>
+  </program>
+  <note>
+    <title>docstrings</title>
+    <p>If the first thing after the function header is a string (some tools insist that
+                it must be a triple-quoted string), it is called a <term>docstring</term>
+                and gets special treatment in Python and in some of the programming tools.</p>
+    <p>Another way to retrieve this information is to use the interactive
+                interpreter, and enter the expression <c>&lt;function_name&gt;.__doc__</c>, which will retrieve the
+                docstring for the function.  So the string you write as documentation at the start of a function is
+                retrievable by python tools <em>at runtime</em>.  This is different from comments in your code,
+                which are completely eliminated when the program is parsed.</p>
+    <p>By convention, Python programmers use docstrings for the key documentation of
+                their functions.</p>
+  </note>
+  <p>We can apply functions to the turtle drawings we've done in the past as well.</p>
+  <program xml:id="ac11_1_2" interactive="activecode" language="python">
+    <input>
+import turtle
+
+def drawSquare(t, sz):
+    """Make turtle t draw a square of with side sz."""
+
+    for i in range(4):
+        t.forward(sz)
+        t.left(90)
+
+
+wn = turtle.Screen()      # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()    # create alex
+drawSquare(alex, 50)      # Call the function to draw the square passing the actual turtle and the actual side size
+
+wn.exitonclick()
+        </input>
+  </program>
+  <p>This function is named <c>drawSquare</c>. It has two parameters &#x2014; one to tell the function which turtle to move around
+            and the other to tell it the size of the square we want drawn. In the function definition they are called <c>t</c> and
+            <c>sz</c> respectively. Make sure you know where the body of the function ends &#x2014; it depends on the indentation and the
+            blank lines don't count for this purpose!</p>
+</section>

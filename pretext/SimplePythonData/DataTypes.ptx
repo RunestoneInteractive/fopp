@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_data-types214_index-0">
+  <title>Data Types</title>
+  <p>If you are not sure what class (data type) a value falls into, Python has a function called
+            <term>type</term> which can tell you.</p>
+  <program xml:id="ac2_5_1" interactive="activecode" language="python">
+    <input>
+print(type("Hello, World!"))
+print(type(17))
+print("Hello, World")
+print(type(3.2))
+        </input>
+  </program>
+  <p>What about values like <c>"17"</c> and <c>"3.2"</c>? They look like numbers, but they
+            are in quotation marks like strings.</p>
+  <program xml:id="ac2_5_2" interactive="activecode" language="python">
+    <input>
+print(type("17"))
+print(type("3.2"))
+        </input>
+  </program>
+  <p>They're strings!</p>
+  <p>Strings in Python can be enclosed in either single quotes (<c>'</c>) or double
+            quotes (<c>"</c>), or three of each (<c>'''</c> or <c>"""</c>)</p>
+  <program xml:id="ac2_5_3" interactive="activecode" language="python">
+    <input>
+print(type('This is a string.'))
+print(type("And so is this."))
+print(type("""and this."""))
+print(type('''and even this...'''))
+        </input>
+  </program>
+  <p>Double quoted strings can contain single quotes inside them, as in <c>"Bruce's
+beard"</c>, and single quoted strings can have double quotes inside them, as in
+            <c>'The knights who say "Ni!"'</c>.
+            Strings enclosed with three occurrences of either quote symbol are called
+            triple quoted strings.  They can contain either single or double quotes:</p>
+  <program xml:id="ac2_5_4" interactive="activecode" language="python">
+    <input>
+print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
+        </input>
+  </program>
+  <p>Triple quoted strings can even span multiple lines:</p>
+  <program xml:id="ac2_5_5" interactive="activecode" language="python">
+    <input>
+print("""This message will span
+several lines
+of the text.""")
+        </input>
+  </program>
+  <p>Python doesn't care whether you use single or double quotes or the
+            three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
+            your program or command, the way it stores the value is identical in all cases,
+            and the surrounding quotes are not part of the value.</p>
+  <program xml:id="ac2_5_6" interactive="activecode" language="python">
+    <input>
+print('This is a string.')
+print("""And so is this.""")
+        </input>
+  </program>
+  <p>So the Python language designers usually chose to surround their strings by
+            single quotes.  What do you think would happen if the string already contained
+            single quotes?</p>
+  <p>When you type a large integer, you might be tempted to use commas between
+            groups of three digits, as in <c>42,000</c>. This is not a legal integer in
+            Python, but it does mean something else, which is legal:</p>
+  <program xml:id="ac2_5_7" interactive="activecode" language="python">
+    <input>
+print(42500)
+print(42,500)
+        </input>
+  </program>
+  <p>Well, that's not what we expected at all! Because of the comma, Python chose to
+            treat this as a <em>pair</em> of values. In fact, a print statement can print any number of values as long
+            as you separate them by commas. Notice that the values are separated by spaces when they are displayed.</p>
+  <program xml:id="ac2_5_8" interactive="activecode" language="python">
+    <input>
+print(42, 17, 56, 34, 11, 4.35, 32)
+print(3.4, "hello", 45)
+        </input>
+  </program>
+  <p>Remember not to put commas or spaces in your integers, no
+            matter how big they are. Also revisit what we said in the previous chapter:
+            formal languages are strict, the notation is concise, and even the smallest
+            change might mean something quite different from what you intended.</p>
+  <note>
+    <p>The examples in this online text describe how print works in Python 3. If you install Python 2.7 on your machine, it will work slightly differently. One difference is that print is not called as a function, so there are no parentheses around the values to be printed.</p>
+  </note>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question2_5_1">
+    <statement>
+      <p>How can you determine the type of a variable?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Print out the value and determine the data type based on the value printed.</p>
+        </statement>
+        <feedback>
+          <p>You may be able to determine the data type based on the printed value, but it may also be  deceptive, like when a string prints, there are no quotes around it.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Use the type function.</p>
+        </statement>
+        <feedback>
+          <p>The type function will tell you the class the value belongs to.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Use it in a known equation and print the result.</p>
+        </statement>
+        <feedback>
+          <p>Only numeric values can be used in equations.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Look at the declaration of the variable.</p>
+        </statement>
+        <feedback>
+          <p>In Python variables are not declared. Values, not variables, have types in Python. A variable can even take on values with different types during a program's execution.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question2_5_2">
+    <statement>
+      <p>What is the data type of &#x2018;this is what kind of data'?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Character</p>
+        </statement>
+        <feedback>
+          <p>It is not a single character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Integer</p>
+        </statement>
+        <feedback>
+          <p>The data is not numeric.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Float</p>
+        </statement>
+        <feedback>
+          <p>The value is not numeric with a decimal point.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>String</p>
+        </statement>
+        <feedback>
+          <p>Strings can be enclosed in single quotes.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

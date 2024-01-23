@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Dictionaries</title>
+        <xi:include href='./intro-DictionaryGoals.ptx' />
+        <xi:include href='./intro-Dictionaries.ptx' />
+        <xi:include href='./Dictionaryoperations.ptx' />
+        <xi:include href='./Dictionarymethods.ptx' />
+        <xi:include href='./Aliasingandcopying.ptx' />
+        <xi:include href='./intro-AccumulatingMultipleResultsInaDictionary.ptx' />
+        <xi:include href='./AccumulatingResultsFromaDictionary.ptx' />
+        <xi:include href='./AccumulatingtheBestKey.ptx' />
+        <xi:include href='./WPChoosingDictionaries.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

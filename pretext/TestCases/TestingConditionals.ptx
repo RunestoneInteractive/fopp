@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_testing-conditionals">
+  <title>Testing Conditionals</title>
+  <p>Ideally, you want tests that will cover both the typical execution of your program and tests for unusual things that might happen, which are called <term>edge cases</term>.</p>
+  <p>If the code has conditional blocks (<c>if..elif..else</c>) then you'll want to have tests that check that the right block executes when you expect it to. For example, in the code below, z is set to the smaller of x and y, but if they are equal then we set z to 0. Our code even includes a comment to help us keep track of when we think the final code block should execute.</p>
+  <program language="python">
+    <input>
+if x &lt; y:
+    z = x
+else:
+    if x &gt; y:
+        z = y
+    else:
+        ## x must be equal to y
+        z = 0
+</input>
+  </program>
+  <p>When you start to have complex conditionals, it's helpful to add comments like that, and once you do you might as well add an assert statement. If the assert ever causes an error, you'll be grateful to know right away that something has gone wrong and you'll have a good start on where to look for debugging. In this case, you'll never get an error, no matter the values of x and y.</p>
+  <program xml:id="ac19_1c_1" interactive="activecode" language="python">
+    <input>
+x = 3
+y = 4
+if x &lt; y:
+    z = x
+else:
+    if x &gt; y:
+        z = y
+    else:
+        ## x must be equal to y
+        assert x==y
+        z = 0
+        </input>
+  </program>
+</section>

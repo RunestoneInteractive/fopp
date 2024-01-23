@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Projects</title>
+	<introduction>
+	  This book includes many projects. These projects are not meant to test your knowledge they are here to give you an opportunity to challenge yourself and your teammates to learn new programming and problem solving skills. Each project builds on the skills learned in the previous projects. If you are brand new to programming you will want to start at the beginning, if you have some prior experience, you can dive in with any project that looks interesting to you.
+	</introduction>
+
+	<!-- <xi:include href='./IntroProjects.ptx' /> -->
+        <xi:include href='./scaffolded_code.ptx' />
+        <xi:include href='./turtle_driving.ptx' />
+        <xi:include href='./input_compute_output.ptx' />
+        <xi:include href='./drawing_a_circle.ptx' />
+        <xi:include href='./xkcd_pass.ptx' />
+        <xi:include href='./kiva_statistics.ptx' />
+        <xi:include href='./kiva_graphs.ptx' />
+        <xi:include href='./graphing_with_altair.ptx' />
+        <xi:include href='./encryption.ptx' />
+        <xi:include href='./image_processing.ptx' />
+        <xi:include href='./common_words.ptx' />
+        <xi:include href='./monte_carlo_simulations.ptx' />
+        <xi:include href='./roman_numerals.ptx' />
+        <xi:include href='./split_apply_combine.ptx' />
+        <xi:include href='./image_processing_revisited.ptx' />
+        <xi:include href='./l_systems.ptx' />
+        <xi:include href='./regression_analysis.ptx' />
+        <xi:include href='./diy_google.ptx' />
+        <xi:include href='./better_pizza_predictions.ptx' />
+        <xi:include href='./clustering.ptx' />
+        <xi:include href='./sentiment_analysis.ptx' />
+        <xi:include href='./jupyterlite.ptx' />
+    </chapter>

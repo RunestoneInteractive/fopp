@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<section xml:id="projects_jupyterlite">
+  <title>JupyterLite</title>
+  <p>Here is a scratch Jupyter Notebook you can use right in the browser!</p>
+  <JupyterLiteIframe content="" height="700px" lite_options="{}" notebook="True" prefix="../lite" prompt="Try Jupyter Lab in Runestone" prompt_color="#00aa42" width="90%">
+        </JupyterLiteIframe>
+  <p>Matplotlib, numpy, pandas and many others are pre-installed , if you want to use Altair   you will need to execute a cell like this:</p>
+  <pre>import piplite
+await piplist.install('altair')</pre>
+  <p>I don't know how many packages are supported by piplite but its worth trying to see if your favorite is not available.</p>
+  <p>Changes to the notebook are saved to localstorage, they are not saved on the Runestone servers (yet).  There is no integration with the Runestone grading system (yet).</p>
+</section>

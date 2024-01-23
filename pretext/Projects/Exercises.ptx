@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<exercises xml:id="projects_exercises">
+  <title>Exercises</title>
+  <p>There may be exercises below contributed by professors using Runestone.</p>
+  <subsection xml:id="projects_contributed-exercises">
+    <title>Contributed Exercises</title>
+    <raw format="html" xml:space="preserve">{% for q in questions: %}
+    &lt;div class='oneq full-width'&gt;
+        {{ q['htmlsrc']|safe }}
+    &lt;/div&gt;
+{% endfor %}</raw>
+  </subsection>
+</exercises>

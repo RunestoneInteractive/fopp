@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<section xml:id="general-intro_special-ways-to-execute-python-in-this-book">
+  <title>Special Ways to Execute Python in this Book</title>
+  <p>This book provides two additional ways to execute Python programs.  Both techniques are designed to assist you as you
+            learn the Python programming language.  They will help you increase your understanding of how Python programs work.</p>
+  <p>First, you can write, modify, and execute programs using a unique <term>activecode</term> interpreter that allows you to execute Python code right
+            in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
+            environment for learning a programming language like Python since you can experiment with the language as you are reading.</p>
+  <p>Take a look at the activecode interpreter in action. Try pressing the <em>Save &amp; Run</em> button below. (If you are not logged
+            in, it will just say <em>Run</em>.)</p>
+  <program xml:id="ac1_4_1" interactive="activecode" language="python">
+    <input>
+print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+        </input>
+  </program>
+  <p>Now try modifying the program shown above.  First, modify the string in the
+            first print statement by changing the word <em>adds</em> to the word <em>multiplies</em>.  Now press
+            <em>Save &amp; Run</em> again.  You can see that the result of the program has changed.  However, it still prints
+            <q>5</q> as the answer.  Modify the second print statement by changing the addition symbol, the
+            <c>+</c>, to the multiplication symbol, <c>*</c>.  Press <em>Save &amp; Run</em> again to see the new results.</p>
+  <p>As the name suggests, <em>Save &amp; Run</em> also <em>saves</em> your latest version of the code,
+            and you can recover it even in later sessions when <em>logged in</em>. If <em>not</em> logged in,
+            <em>Run</em> saves versions <em>only until your browser leaves the current web page</em>,
+            and then you lose all modifications.</p>
+  <p>If you are logged in, when a page first loads, each activecode window will have a <em>Load History</em> button, to the
+            right of the <em>Save &amp; Run</em> button.
+            If you click on it, or if you run any code, that button turns into a slider.
+            If you click on the slider location box, you can use your left and right arrow
+            buttons to switch to other versions you ran.
+            Alternately you can drag the box on the slider.
+            Now move the slider to see a previously saved version of your code. You can edit or run any version.</p>
+  <p>In addition to activecode, you can also execute Python code with the assistance of a unique
+            visualization tool. This tool, known as <term>codelens</term>, allows you to control the step by
+            step execution of a program. It also lets you see the values of all variables as they are
+            created and modified. In activecode, the source code executes from beginning to end and you
+            can see the final result. In codelens you can see and control the step by step progress.
+            Note that the red arrow always points to the next line of code that is going to be executed.
+            The light green arrow points to the line that was just executed. Click on the <q>Show in
+            Codelens</q> button to make the codelens window show up, and then click on the Forward button
+            a few times to step through the execution.</p>
+  <p>Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.
+            When we do, think of it as an encouragement to use the codelens features to step through the
+            execution of the program.</p>
+  <program xml:id="clens1_4_1" interactive="codelens" language="python">
+    <input>
+print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+    </input>
+  </program>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question1_4_1">
+    <statement>
+      <p>The activecode interpreter allows you to (select all that apply):</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>save programs and reload saved programs.</p>
+        </statement>
+        <feedback>
+          <p>You can (and should) save the contents of the activecode window.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>type in Python source code.</p>
+        </statement>
+        <feedback>
+          <p>You are not limited to running the examples that are already there.  Try adding to them and creating your own.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>execute Python code right in the text itself within the web browser.</p>
+        </statement>
+        <feedback>
+          <p>The activecode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>receive a yes/no answer about whether your code is correct or not.</p>
+        </statement>
+        <feedback>
+          <p>Although you can (and should) verify that your code is correct by examining its output, activecode will not directly tell you whether you have correctly implemented your program.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question1_4_2">
+    <statement>
+      <p>Codelens allows you to (select all that apply):</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>measure the speed of a program's execution.</p>
+        </statement>
+        <feedback>
+          <p>In fact, codelens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>control the step by step execution of a program.</p>
+        </statement>
+        <feedback>
+          <p>By using codelens, you can control the execution of a program step by step. You can even go backwards!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>write and execute your own Python code.</p>
+        </statement>
+        <feedback>
+          <p>Codelens works only for the pre-programmed examples.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>execute the Python code that is in codelens.</p>
+        </statement>
+        <feedback>
+          <p>By stepping forward through the Python code in codelens, you are executing the Python program.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

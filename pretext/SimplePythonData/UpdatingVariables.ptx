@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_updating-variables">
+  <title>Updating Variables</title>
+  <video xml:id="updatevid" youtube="Px1c-3GP-5o" width="auto"/>
+  <p>One of the most common forms of reassignment is an <term>update</term> where the new
+            value of the variable depends on the old.  For example,</p>
+  <program language="python">
+    <input>
+x = x + 1
+</input>
+  </program>
+  <p>This means get the current value of x, add one, and then update x with the new
+            value.  The new value of x is the old value of x plus 1.  Although this assignment statement may
+            look a bit strange, remember that executing assignment is a two-step process.  First, evaluate the
+            right-hand side expression.  Second, let the variable name on the left-hand side refer to this new
+            resulting object.  The fact that <c>x</c> appears on both sides does not matter.  The semantics of the assignment
+            statement makes sure that there is no confusion as to the result. The visualizer makes this very clear.</p>
+  <exercise runestone="se_ac2_14_1"/>
+  <program xml:id="ac2_14_1" interactive="activecode" language="python">
+    <input>
+x = 6        # initialize x
+print(x)
+x = x + 1    # update x
+print(x)
+        </input>
+  </program>
+  <p>If you try to update a variable that doesn't exist, you get an error because
+            Python evaluates the expression on the right side of the assignment operator
+            before it assigns the resulting value to the name on the left.
+            Before you can update a variable, you have to <term>initialize</term> it, usually with a
+            simple assignment.  In the above example, <c>x</c> was initialized to 6.</p>
+  <p>Updating a variable by adding something to it is called an <term>increment</term>; subtracting is
+            called a <term>decrement</term>.  Sometimes programmers talk about incrementing or decrementing without specifying by how much; when they do they usually mean by 1. Sometimes programmers also talk about <term>bumping</term> a variable, which means the same as incrementing it by 1.</p>
+  <p>Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python <c>+=</c> is used for incrementing, and <c>-=</c> for decrementing. In some other languages, there is even a special syntax <c>++</c> and <c>--</c> for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 you have to write <c>x += 1</c> or <c>x = x + 1</c>.</p>
+  <program xml:id="ac2_14_2" interactive="activecode" language="python">
+    <input>
+x = 6        # initialize x
+print(x)
+x += 3       # increment x by 3; same as x = x + 3
+print(x)
+x -= 1       # decrement x by 1
+print(x)
+        </input>
+  </program>
+  <p>Imagine that we wanted to not increment by one each time but instead add together the
+            numbers one through ten, but only one at a time.</p>
+  <program xml:id="ac2_14_3" interactive="activecode" language="python">
+    <input>
+s = 1
+print(s)
+s = s + 2
+print(s)
+s = s + 3
+print(s)
+s = s + 4
+print(s)
+s = s + 5
+print(s)
+s = s + 6
+print(s)
+s = s + 7
+print(s)
+s = s + 8
+print(s)
+s = s + 9
+print(s)
+s = s + 10
+print(s)
+        </input>
+  </program>
+  <p>After the initial statement, where we assign <c>s</c> to 1, we can add the current value of
+            <c>s</c> and the next number that we want to add (2 all the way up to 10) and then finally
+            reassign that that value to <c>s</c> so that the variable is updated after each line in the
+            code.</p>
+  <p>This will be tedious when we have many things to add together. Later you'll read about an
+            easier way to do this kind of task.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question2_14_1">
+    <statement>
+      <p>What is printed when the following statements execute?</p>
+      <program language="python">
+        <input>
+x = 12
+x = x - 1
+print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>The value of x changes in the second statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-1</p>
+        </statement>
+        <feedback>
+          <p>In the second statement, substitute the current value of x before subtracting 1.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>11</p>
+        </statement>
+        <feedback>
+          <p>Yes, this statement sets the value of x equal to the current value minus 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing.  An error occurs because x can never be equal to x - 1.</p>
+        </statement>
+        <feedback>
+          <p>Remember that variables in Python are different from variables in math in that they (temporarily) hold values, but can be reassigned.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question2_14_2">
+    <statement>
+      <p>What is printed when the following statements execute?</p>
+      <program language="python">
+        <input>
+x = 12
+x = x - 3
+x = x + 5
+x = x + 1
+print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>The value of x changes in the second statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Each statement changes the value of x, so 9 is not the final result.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>15</p>
+        </statement>
+        <feedback>
+          <p>Yes, starting with 12, subtract 3, than add 5, and finally add 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing.  An error occurs because x cannot be used that many times in assignment statements.</p>
+        </statement>
+        <feedback>
+          <p>Remember that variables in Python are different from variables in math in that they (temporarily) hold values, but can be reassigned.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pp2_14_1" indentation="show" language="python">
+    <statement>
+      <p>Construct the code that will result in the value 134 being printed.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>mybankbalance = 100</cline>
+        <cline>mybankbalance = mybankbalance + 34</cline>
+        <cline>print(mybankbalance)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="question2_14_3">
+    <statement>
+      <p>Which of the following statements are equivalent?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>x = x + y</p>
+        </statement>
+        <feedback>
+          <p>x is updated to be the old value of x plus the value of y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y += x</p>
+        </statement>
+        <feedback>
+          <p>y is updated to be the old value of y plus the value of x.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x += x + y</p>
+        </statement>
+        <feedback>
+          <p>This updates x to be its old value (because of the +=) plus its old value again (because of the x on the right side) plus the value of y, so it's equivalent to x = x + x + y</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x += y</p>
+        </statement>
+        <feedback>
+          <p>x is updated to be the old value of x plus the value of y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x++ y</p>
+        </statement>
+        <feedback>
+          <p>++ is not a syntax that means anything in Python.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_traversal-and-the-for-loop-by-index">
+  <title>Traversal and the <c>for</c> Loop: By Index</title>
+  <p>With a for loop, the loop variable is bound, on each iteration, to the next item in a sequence. Sometimes, it is natural to think about iterating through the <em>positions</em>, or <em>indexes</em> of a sequence, rather than through the items themselves.</p>
+  <p>For example, consider the list <c>['apple', 'pear', 'apricot', 'cherry', 'peach']</c>. &#x2018;apple' is at position 0, &#x2018;pear' at position 1, and &#x2018;peach' at position 4.</p>
+  <p>Thus, we can iterate through the indexes by generating a sequence of them, using the <c>range</c> function.</p>
+  <program xml:id="ac14_6_5a" interactive="activecode" language="python">
+    <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for n in range(5):
+    print(n, fruits[n])
+        </input>
+  </program>
+  <p>In order to make the iteration more general, we can use the <c>len</c> function to provide the bound for <c>range</c>. This is
+            a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves
+            correctly when using <c>len</c> of the string as its parameter value.</p>
+  <program xml:id="ac14_6_5" interactive="activecode" language="python">
+    <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for n in range(len(fruits)):
+    print(n, fruits[n])
+        </input>
+  </program>
+  <p>In some other programming languages, that's the only way to iterate through a sequence, by iterating through the positions and extracting the items at each of the positions. Python code is often easier to read because we don't have to do iteration that way. Compare the iteration above with the more <q>pythonic</q> approach below.</p>
+  <program xml:id="ac14_6_5c" interactive="activecode" language="python">
+    <input>
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+for fruit in fruits:
+    print(fruit)
+        </input>
+  </program>
+  <p>If we really want to print the indexes (positions) along with the fruit names, then iterating through the indexes as in the previous versions is available to us. Python also provides an <c>enumerate</c> function which provides a more <q>pythonic</q> way of enumerating the items in a list, but we will delay the explanation of how to use <c>enumerate</c> until we cover the notions of <xref ref="tuples_tuple-assignmentwithunpacking"/>.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question14_6_1">
+    <statement>
+      <p>How many times is the letter p printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python"
+for idx in range(len(s)):
+   print(s[idx % 2])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>idx % 2 is 0 whenever idx is even</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>idx % 2 is 0 whenever idx is even</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>idx % 2 is 0 whenever idx is even</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>idx % 2 is 0 whenever idx is even</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>idx % 2 is 0 whenever idx is even</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_introduction-dictionaries75_index-0">
+  <title>Introduction: Dictionaries</title>
+  <p>The compound data types we have studied in detail so far &#x2014; strings and lists &#x2014; are sequential collections. This means that the items in the collection are ordered from left to right and they use integers as indices to access the values they contain. This also means that looking for a particular value requires scanning the many items in the  list until you find the desired value.</p>
+  <p>Data can sometimes be organized more usefully by associating a key with the value we are looking for. For example, if you are asked for the page number for the start of chapter 5 in a large textbook, you might flip around the book looking for the chapter 5 heading. If the chapter number appears in the header or footer of each page, you might be able to find the page number fairly quickly but it's generally easier and faster to go to the index page and see that chapter 5 starts on page 78.</p>
+  <p>This sort of direct look up of a value in Python is done with an object called a Dictionary. Dictionaries are a different kind of collection. They are Python's built-in <term>mapping</term> type. A map is an unordered, associative collection. The association, or mapping, is from a <term>key</term>, which can be of any immutable type (e.g., the chapter name and number in the analogy above), to a <term>value</term> (the starting page number), which can be any Python data object. You'll learn how to use these collections in the following chapter.</p>
+  <subsection xml:id="dictionaries_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>To introduce the idea of Key, Value pairs</p>
+        </li>
+        <li>
+          <p>To introduce the idea of an unordered sequence</p>
+        </li>
+        <li>
+          <p>To understand the use of parallel construction in lists</p>
+        </li>
+        <li>
+          <p>To understand the performance benefit and simplicity of a dictionary over parallel lists</p>
+        </li>
+        <li>
+          <p>To understand that dictionary iteration iterates over keys</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="dictionaries_objectives">
+    <title>Objectives</title>
+    <p>To correctly use the following:</p>
+    <p>
+      <ul>
+        <li>
+          <p>The index operator to add a key,value pair to a dictionary</p>
+        </li>
+        <li>
+          <p>The del operator to remove an entry</p>
+        </li>
+        <li>
+          <p>index operator - retrieval by key</p>
+        </li>
+        <li>
+          <p>search - contains in / not in</p>
+        </li>
+        <li>
+          <p>items</p>
+        </li>
+        <li>
+          <p>keys</p>
+        </li>
+        <li>
+          <p>values</p>
+        </li>
+        <li>
+          <p>get - with a default value</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

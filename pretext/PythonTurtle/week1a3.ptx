@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<section xml:id="python-turtle_chapter-assessment-turtle-and-object-mechanics">
+  <title>Chapter Assessment - Turtle and Object Mechanics</title>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="assess_question1_3_1_1_1">
+    <statement>
+      <p>What are correct ways to tell a turtle named Tex to move forward 20 pixels? Select as many as apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Tex.forward(20)</p>
+        </statement>
+        <feedback>
+          <p>This is a correct way to move a turtle forward.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>forward() + 20</p>
+        </statement>
+        <feedback>
+          <p>This does not use the turtle method necessary to move a turtle forward. Additionally, how would the program know what turtle should be moving?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>forward(20)</p>
+        </statement>
+        <feedback>
+          <p>This does not use the turtle method necessary to move a turtle forward. Additionally, how would the program know what turtle should be moving?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>forward(20).Tex</p>
+        </statement>
+        <feedback>
+          <p>This is not the correct structure to execute the task.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Tex.forward(10 + 10)</p>
+        </statement>
+        <feedback>
+          <p>You are allowed to write expressions inside of methods, so this is correctly written.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_2">
+    <statement>
+      <p>Which is the correct way to make a new instance of the Turtle class?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>turtle(Turtle)</p>
+        </statement>
+        <feedback>
+          <p>When making a new instace of the turtle class, you need to use dot notation.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>turtle.Turtle()</p>
+        </statement>
+        <feedback>
+          <p>Yes, this is the correct way.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Turtle.turtle()</p>
+        </statement>
+        <feedback>
+          <p>turtle represents the class and should be first.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Turtle(turtle)</p>
+        </statement>
+        <feedback>
+          <p>When making a new instace of the turtle class, you need to use dot notation.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_3">
+    <statement>
+      <p>What does each instance of the Turtle class represent?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The turtle class.</p>
+        </statement>
+        <feedback>
+          <p>Though each instance does use the turtle class, this is not the best answer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The same turtle that is used in each drawing your programs make.</p>
+        </statement>
+        <feedback>
+          <p>Each instance that is made using the turtle class is unique. Remember how you can have multiple 'turtles' in a single drawing? Each of those are different turtles but they are all instances of the turtle class.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A unique 'turtle' that you can use to draw.</p>
+        </statement>
+        <feedback>
+          <p>Yes, an instance of the turtle class represents a unique turtle. The turtle class is like a stencil or mold that can be used to make as many turtles as you would like.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_5">
+    <statement>
+      <p>Select all of the following things that methods can do:</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Change the value of an attribute.</p>
+        </statement>
+        <feedback>
+          <p>Methods can change the value that is associated with an attribute.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Return values.</p>
+        </statement>
+        <feedback>
+          <p>Methods can return values.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Create new attributes of an instance and set their values.</p>
+        </statement>
+        <feedback>
+          <p>Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Delete object instances.</p>
+        </statement>
+        <feedback>
+          <p>You do not explicitly delete object instances; when there are no variables or other references to them, so that they can't be accessed, they are automatically deleted.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Methods can do at least one of the above. Take another look.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_6">
+    <statement>
+      <p>For an instance of a class that is assigned to the variable <c>student</c>, what is the proper way to refer to the <c>title</c> attribute/instance variable?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>student.title()</p>
+        </statement>
+        <feedback>
+          <p>This accesses the attribute but then tries to invoke it as a method, which will fail if title is not a method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>title.student()</p>
+        </statement>
+        <feedback>
+          <p>student is the object, so it goes before the period; the attribute goes after.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>title.student</p>
+        </statement>
+        <feedback>
+          <p>student is the object, so it goes before the period; the attribute goes after.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>student(title)</p>
+        </statement>
+        <feedback>
+          <p>This would be the syntax for a function named student being called on a variable named title.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>student.title</p>
+        </statement>
+        <feedback>
+          <p>Yes, this is the correct syntax to use.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_7">
+    <statement>
+      <p>What is the name of jane's attribute (not method) that is referred to in the following code? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <program language="python">
+          <input>
+import turtle
+
+jane = turtle.Turtle()
+jane.forward(20)
+print(jane.x)
+</input>
+        </program>
+        <p>The attribute is</p>
+        <condition string="^\s*x\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*jane\s*$">
+          <feedback>
+            <p>jane is an instance, not an attribute.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*forward\s*$">
+          <feedback>
+            <p>forward is a method.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*turtle\s*$">
+          <feedback>
+            <p>turtle is the class, not an attribute.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="assess_question1_3_1_1_8">
+    <statement>
+      <p>What are the names of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them. <var/>  <var/>  <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <program language="python">
+          <input>
+import turtle
+wn = turtle.Screen()
+
+jazz = turtle.Turtle()
+jazz.forward(50)
+jazz.right(90)
+pop = turtle.Turtle()
+pop.left(180)
+pop.forward(76)
+</input>
+        </program>
+        <condition string="^\s*wn\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*jazz\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*pop\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+      </var>
+      <var>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*jazz\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*wn\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*pop\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+      </var>
+      <var>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*pop\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*wn\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*jazz\s*$">
+          <feedback>
+            <p>Try a different location</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

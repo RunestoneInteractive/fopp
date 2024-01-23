@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>More About Iteration</title>
+        <xi:include href='./intro-indefiniteiteration.ptx' />
+        <xi:include href='./ThewhileStatement.ptx' />
+        <xi:include href='./listenerLoop.ptx' />
+        <xi:include href='./RandomlyWalkingTurtles.ptx' />
+        <xi:include href='./BreakandContinue.ptx' />
+        <xi:include href='./WPInfiniteLoops.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

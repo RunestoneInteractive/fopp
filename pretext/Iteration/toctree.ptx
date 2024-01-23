@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Iteration</title>
+        <xi:include href='./intro-Iteration.ptx' />
+        <xi:include href='./TheforLoop.ptx' />
+        <xi:include href='./FlowofExecutionoftheforLoop.ptx' />
+        <xi:include href='./Stringsandforloops.ptx' />
+        <xi:include href='./Listsandforloops.ptx' />
+        <xi:include href='./TheAccumulatorPattern.ptx' />
+        <xi:include href='./TraversalandtheforLoopByIndex.ptx' />
+        <xi:include href='./NestedIterationImageProcessing.ptx' />
+        <xi:include href='./WPPrintingIntermediateResults.ptx' />
+        <xi:include href='./WPNamingVariablesinForLoops.ptx' />
+        <xi:include href='./GeneralizedSequences.ptx' />
+        <xi:include href='./WPKeepingTrackofYourIteratorVariableYourIterable.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./week2a2.ptx' />
+    </chapter>

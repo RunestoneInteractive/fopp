@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<section xml:id="classes_a-tamagotchi-game40_index-0">
+  <title>A Tamagotchi Game</title>
+  <p>There are also a lot of interesting ways to put user-defined classes to use that don't involve data from the internet. Let's pull all these mechanics together in a slightly more interesting way than we got with the Point class. Remember <url href="https://en.wikipedia.org/wiki/Tamagotchi" visual="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchis</url>, the little electronic pets? As time passed, they would get hungry or bored. You had to clean up after them or they would get sick. And you did it all with a few buttons on the device.</p>
+  <p>We are going to make a simplified, text-based version of that. In your problem set and in the chapter on <xref ref="inheritance_intro"/> we will extend this further.</p>
+  <dl>
+    <li>
+      <title>First, let's start with a class <c>Pet</c>. Each instance of the class will be one electronic pet for the user to take care of. Each instance will have a current state, consisting of three instance variables:</title>
+      <p>
+        <ul>
+          <li>
+            <p>hunger, an integer</p>
+          </li>
+          <li>
+            <p>boredom, an integer</p>
+          </li>
+          <li>
+            <p>sounds, a list of strings, each a word that the pet has been taught to say</p>
+          </li>
+        </ul>
+      </p>
+    </li>
+  </dl>
+  <p>In the <c>__init__</c> method, hunger and boredom are initialized to random values between 0 and the threshold for being hungry or bored. The <c>sounds</c> instance variable is initialized to be a copy of the class variable with the same name. The reason we make a copy of the list is that we will perform destructive operations (appending new sounds to the list). If we didn't make a copy, then those destructive operations would affect the list that the class variable points to, and thus teaching a sound to any of the pets would teach it to all instances of the class!</p>
+  <p>There is a <c>clock_tick</c> method which just increments the boredom and hunger instance variables, simulating the idea that as time passes, the pet gets more bored and hungry.</p>
+  <p>The <c>__str__</c> method produces a string representation of the pet's current state, notably whether it is bored or hungry or whether it is happy. It's bored if the boredom instance variable is larger than the threshold, which is set as a class variable.</p>
+  <p>To relieve boredom, the pet owner can either teach the pet a new word, using the <c>teach()</c> method, or interact with the pet, using the <c>hi()</c> method. In response to <c>teach()</c>, the pet adds the new word to its list of words. In response to the <c>hi()</c> method, it prints out one of the words it knows, randomly picking one from its list of known words. Both <c>hi()</c> and <c>teach()</c> cause an invocation of the <c>reduce_boredom()</c> method. It decrements the boredom state by an amount that it reads from the class variable <c>boredom_decrement</c>. The boredom state can never go below <c>0</c>.</p>
+  <p>To relieve hunger, we call the <c>feed()</c> method.</p>
+  <program xml:id="tamagotchi_1" interactive="activecode" language="python">
+    <input>
+from random import randrange
+
+class Pet():
+    boredom_decrement = 4
+    hunger_decrement = 6
+    boredom_threshold = 5
+    hunger_threshold = 10
+    sounds = ['Mrrp']
+    def __init__(self, name = "Kitty"):
+        self.name = name
+        self.hunger = randrange(self.hunger_threshold)
+        self.boredom = randrange(self.boredom_threshold)
+        self.sounds = self.sounds[:]  # copy the class attribute, so that when we make changes to it, we won't affect the other Pets in the class
+
+    def clock_tick(self):
+        self.boredom += 1
+        self.hunger += 1
+
+    def mood(self):
+        if self.hunger &lt;= self.hunger_threshold and self.boredom &lt;= self.boredom_threshold:
+            return "happy"
+        elif self.hunger &gt; self.hunger_threshold:
+            return "hungry"
+        else:
+            return "bored"
+
+    def __str__(self):
+        state = "     I'm " + self.name + ". "
+        state += " I feel " + self.mood() + ". "
+        # state += "Hunger {} Boredom {} Words {}".format(self.hunger, self.boredom, self.sounds)
+        return state
+
+    def hi(self):
+        print(self.sounds[randrange(len(self.sounds))])
+        self.reduce_boredom()
+
+    def teach(self, word):
+        self.sounds.append(word)
+        self.reduce_boredom()
+
+    def feed(self):
+        self.reduce_hunger()
+
+    def reduce_hunger(self):
+        self.hunger = max(0, self.hunger - self.hunger_decrement)
+
+    def reduce_boredom(self):
+        self.boredom = max(0, self.boredom - self.boredom_decrement)
+        </input>
+  </program>
+  <p>Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing <c>p1</c> to see what the effects are. If you want to directly inspect the state, try printing <c>p1.boredom</c> or <c>p1.hunger</c>.</p>
+  <program xml:id="tamagotchi_2_copy" interactive="activecode" language="python">
+    <input>
+p1 = Pet("Fido")
+print(p1)
+for i in range(10):
+    p1.clock_tick()
+    print(p1)
+p1.feed()
+p1.hi()
+p1.teach("Boo")
+for i in range(10):
+    p1.hi()
+print(p1)
+        </input>
+  </program>
+  <p>That's all great if you want to interact with the pet by writing python code. Let's make a game that non-programmers can play.</p>
+  <p>We will use the <xref ref="more-about-iteration_listener-loop"/> pattern. At each iteration, we will display a text prompt reminding the user of what commands are available.</p>
+  <p>The user will have a list of pets, each with a name. The user can issue a command to adopt a new pet, which will create a new instance of Pet. Or the user can interact with an existing pet, with a Greet, Teach, or Feed command.</p>
+  <p>No matter what the user does, with each command entered, the clock ticks for all their pets. Watch out, if you have too many pets, you won't be able to keep them all satisfied!</p>
+  <program xml:id="tamogotchi_3" interactive="activecode" language="python">
+    <input>
+import sys
+sys.setExecutionLimit(60000)
+
+def whichone(petlist, name):
+    for pet in petlist:
+        if pet.name == name:
+            return pet
+    return None # no pet matched
+
+def play():
+    animals = []
+
+    option = ""
+    base_prompt = """
+        Quit
+        Adopt &lt;petname_with_no_spaces_please&gt;
+        Greet &lt;petname&gt;
+        Teach &lt;petname&gt; &lt;word&gt;
+        Feed &lt;petname&gt;
+
+        Choice: """
+    feedback = ""
+    while True:
+        action = input(feedback + "\n" + base_prompt)
+        feedback = ""
+        words = action.split()
+        if len(words) &gt; 0:
+            command = words[0]
+        else:
+            command = None
+        if command == "Quit":
+            print("Exiting...")
+            return
+        elif command == "Adopt" and len(words) &gt; 1:
+            if whichone(animals, words[1]):
+                feedback += "You already have a pet with that name\n"
+            else:
+                animals.append(Pet(words[1]))
+        elif command == "Greet" and len(words) &gt; 1:
+            pet = whichone(animals, words[1])
+            if not pet:
+                feedback += "I didn't recognize that pet name. Please try again.\n"
+                print()
+            else:
+                pet.hi()
+        elif command == "Teach" and len(words) &gt; 2:
+            pet = whichone(animals, words[1])
+            if not pet:
+                feedback += "I didn't recognize that pet name. Please try again."
+            else:
+                pet.teach(words[2])
+        elif command == "Feed" and len(words) &gt; 1:
+            pet = whichone(animals, words[1])
+            if not pet:
+                feedback += "I didn't recognize that pet name. Please try again."
+            else:
+                pet.feed()
+        else:
+            feedback+= "I didn't understand that. Please try again."
+
+        for pet in animals:
+            pet.clock_tick()
+            feedback += "\n" + pet.__str__()
+
+
+
+play()
+        </input>
+  </program>
+</section>

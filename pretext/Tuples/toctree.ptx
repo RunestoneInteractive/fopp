@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Tuple Packing and Unpacking</title>
+        <xi:include href='./TuplePacking-Intro.ptx' />
+        <xi:include href='./TuplePacking.ptx' />
+        <xi:include href='./TupleAssignmentwithunpacking.ptx' />
+        <xi:include href='./TuplesasReturnValues.ptx' />
+        <xi:include href='./UnpackingArgumentsToFunctions.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

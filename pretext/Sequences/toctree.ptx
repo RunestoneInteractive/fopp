@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Sequences</title>
+        <xi:include href='./intro-Sequences.ptx' />
+        <xi:include href='./StringsandLists.ptx' />
+        <xi:include href='./IndexOperatorWorkingwiththeCharactersofaString.ptx' />
+        <xi:include href='./DisabmiguatingSquareBrackets.ptx' />
+        <xi:include href='./Length.ptx' />
+        <xi:include href='./TheSliceOperator.ptx' />
+        <xi:include href='./ConcatenationandRepetition.ptx' />
+        <xi:include href='./CountandIndex.ptx' />
+        <xi:include href='./SplitandJoin.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./week2a1.ptx' />
+    </chapter>

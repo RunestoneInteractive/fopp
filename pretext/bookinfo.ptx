@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docinfo>
+    <document-id edition="2">fopp</document-id>
+    <author-biographies length="short" />
+
+    <blurb shelf="Intro to Computer Science Textbooks">
+    A project based course for CS1, A huge rewrite of How to Think like a Computer Scientist by Paul Resnick and Brad Miller. The projects in this book lean in the direction of data science, but we are actively seeking projects relevant to any area of study.
+    </blurb>
+</docinfo>

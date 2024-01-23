@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_checking-other-assumptions">
+  <title>Checking Other Assumptions</title>
+  <p>We can also check other assumptions about the values of variables, in addition to their types. For example, we could check that a list has fewer than 10 items.</p>
+  <program xml:id="ac19_1b_3" interactive="activecode" language="python">
+    <input>
+lst = ['a', 'b', 'c']
+
+assert len(lst) &lt; 10
+        </input>
+  </program>
+</section>

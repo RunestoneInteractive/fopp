@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_introduction">
+  <title>Introduction</title>
+  <p>You have previously seen tuples, a sequence type that works just like lists except that they are immutable.</p>
+  <p>When working with multiple values or multiple variable names, the Python interpreter does some automatic packing and unpacking to and from tuples, which allows some simplifications in the code you write.</p>
+  <subsection xml:id="tuples_learning-objectives">
+    <title>Learning Objectives</title>
+    <p>At the end of this chapter, you will be able to:</p>
+    <p>
+      <ul>
+        <li>
+          <p>Recognize when code is using implicit tuple packing</p>
+        </li>
+        <li>
+          <p>Use implicit tuple packing to return multiple values from a function</p>
+        </li>
+        <li>
+          <p>Read and write code that unpacks a tuple into multiple variables</p>
+        </li>
+        <li>
+          <p>Learn a common pattern that unpacks the results of calling <title_reference>enumerate</title_reference> on a sequence</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

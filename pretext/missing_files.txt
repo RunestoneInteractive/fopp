@@ -1,0 +1,16 @@
+PythonModules/ChapterAssessment.ptx
+PythonTurtle/OurFirstTurtleProgram.ptx
+Iteration/TheforLoop.ptx
+Iteration/GeneralizedSequences.ptx
+Iteration/week2a2.ptx
+Conditionals/Exercises.ptx
+Conditionals/week3a1.ptx
+TransformingSequences/week4a1.ptx
+Dictionaries/Exercises.ptx
+Dictionaries/ChapterAssessment.ptx
+Functions/PassingMutableObjects.ptx
+NestedData/WPExtractFromNestedData.ptx
+TestCases/WPProgramDevelopment.ptx
+Inheritance/Exercises.ptx
+Inheritance/chapterProject.ptx
+Projects/monte_carlo_simulations.ptx

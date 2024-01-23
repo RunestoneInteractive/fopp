@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<section xml:id="functions_a-function-that-accumulates">
+  <title>A function that accumulates</title>
+  <p>We have used the <c>len</c> function a lot already. If it weren't part of python, our lives as programmers would have been
+            a lot harder.</p>
+  <p>Well, actually, not that much harder. Now that we know how to define functions, we could define <c>len</c> ourselves if it
+            did not exist. Previously, we have used the accumlator pattern to count the number of lines in a file. Let's use that
+            same idea and just wrap it in a function definition. We'll call it <c>mylen</c> to distinguish it from the real <c>len</c>
+            which already exists. We actually <em>could</em> call it len, but that wouldn't be a very good idea, because it would replace
+            the original len function, and our implementation may not be a very good one.</p>
+  <program xml:id="ac11_5_1" interactive="activecode" language="python">
+    <input>
+def mylen(seq):
+    c = 0 # initialize count variable to 0
+    for _ in seq:
+        c = c + 1   # increment the counter for each item in seq
+    return c
+
+print(mylen("hello"))
+print(mylen([1, 2, 7]))
+        </input>
+  </program>
+  <exercise label="pp11_5_1" indentation="show" language="python">
+    <statement>
+      <p>Rearrange the code statements to match the activecode window above. (This is an exercise in noticing where the indenting and outdenting happens, and where the return statement goes.)</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def mylen(x):</cline>
+      </block>
+      <block order="5">
+        <cline>    c = 0 # initialize count variable to 0</cline>
+      </block>
+      <block order="2">
+        <cline>    for y in x:</cline>
+      </block>
+      <block order="6">
+        <cline>        c = c + 1   # increment the counter for each item in x</cline>
+      </block>
+      <block order="1">
+        <cline>    return c</cline>
+      </block>
+      <block order="4">
+        <cline>print(mylen("hello"))</cline>
+        <cline>print(mylen([1, 2, 7]))</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <exercise label="ac11_5_2">
+    <statement>
+      <p><term>1.</term> Write a function named <c>total</c> that takes a list of integers as input, and returns the total value of all those integers added together.</p>
+    </statement>
+    <program xml:id="ac11_5_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(total([1, 2, 3, 4, 5]), 15, "Testing the total function on input [1, 2, 3, 4, 5].")
+      self.assertEqual(total([0, 0, 0, 0]), 0, "Testing the total function on input [0, 0, 0, 0].")
+      self.assertEqual(total([]), 0, "Testing the total function on input [].")
+      self.assertEqual(total([2]), 2, "Testing the total function on input [2].")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac11_5_3">
+    <statement>
+      <p><term>2.</term> Write a function called <c>count</c> that takes a list of numbers as input and returns a count of the number of elements in the list.</p>
+    </statement>
+    <program xml:id="ac11_5_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(count([]), 0, "Testing the function count with input []")
+      self.assertEqual(count([1, 5, 9, -2, 9, 23]), 6, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

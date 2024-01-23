@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<section xml:id="python-modules_modules190_index-0">
+  <title>Modules</title>
+  <video xml:id="vid_modules" youtube="GCLHuPBtLdQ" width="auto"/>
+  <p>A <term>module</term> is a file containing Python definitions and statements intended for
+            use in other Python programs. There are many Python modules that come with
+            Python as part of the <term>standard library</term>. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.</p>
+  <p>Functions imported as part of a module live in their own <term>namespace</term>.  A namespace is simply a space within which all names are distinct from each other. The same name can be reused in different namespaces but two objects can't have the same name within a single namespace. One example of a namespace is the set of street names within a single city. Many cities have a street called <q>Main Street</q>, but it's very confusing if two streets in the same city have that name! Another example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the  folder it's in; each folder has its own namespace for files. Note that human names are not part of a namespace that enforces uniqueness; that's why governments have invented unique identifiers to assign to people, like passport numbers.</p>
+  <p>The  <url href="https://docs.python.org/3.6/" visual="https://docs.python.org/3.6/">Python Documentation</url> site for Python version
+            3.6 is an extremely useful reference for all aspects of Python. The site
+            contains a listing of all the standard modules that are available with Python
+            (see <url href="https://docs.python.org/3.6/py-modindex.html" visual="https://docs.python.org/3.6/py-modindex.html">Global Module Index</url>). You
+            will also see that there is a
+            <url href="https://docs.python.org/3.6/library/index.html" visual="https://docs.python.org/3.6/library/index.html">Standard Library Reference</url>
+            and a
+            <url href="https://docs.python.org/3.6/tutorial/index.html" visual="https://docs.python.org/3.6/tutorial/index.html">Tutorial</url> as well as
+            installation instructions, how-tos, and frequently asked questions.  We
+            encourage you to become familiar with this site and to use it often.</p>
+  <p>If you have not done so already, take a look at the Global Module Index.  Here
+            you will see an alphabetical listing of all the modules that are available as
+            part of the standard library.  Find the turtle module.</p>
+  <subsection xml:id="python-modules_importing-modules">
+    <title>Importing Modules</title>
+    <p>In order to use Python modules, you have to <term>import</term> them into a Python program. That happens with an import
+                statement: the word <c>import</c>, and then the <em>name</em> of the module. The name is case-sensitive. Roughly translated to
+                English, an import statement says <q>there's some code in another file; please make its functions and variables
+                available in this file.</q> More technically, an import statement causes all the code in another file to be executed. Any
+                variables that are bound during that execution (including functions that are defined) may then be referred in some way
+                (to be discussed) in the current file.</p>
+    <p>By convention, all <c>import</c> commands are put at the very top of your file. They can be put elsewhere, but that can
+                lead to some confusions, so it's best to follow the convention.</p>
+    <p>Where do these other files that you can import come from? It could be a code file that you wrote yourself, or it could
+                be code that someone else wrote and you copied on to your computer.</p>
+    <p>For example, if you have a file <c>myprog.py</c> in directory <c>~/Desktop/mycode/</c>, and myprog.py contains a line of
+                code <c>import morecode</c>, then the python interpreter will look for a file called <c>morecode.py</c>, excecute its code,
+                and make its object bindings available for reference in the rest of the code in myprog.py.</p>
+    <p>Note that it is <c>import morecode</c>, not <c>import morecode.py</c>, but the other file has to be called <c>morecode.py</c>.</p>
+    <p>The tests you see in your problem sets are also using a Python module that's in the standard library, called
+                <c>unittest</c>. Right now, you can't see the code that causes those tests to run, because we have hidden it from you,
+                but later in the course, you will learn how to write your own Unit Tests for code, and to do so, you will need to
+                write an import statement at the beginning of your programs. Even before you learn how to write your own tests, you
+                will see code for Unit Tests in your problem set files.</p>
+    <note>
+      <title>Don't overwrite standard library modules!</title>
+      <p>Given the order of search for external Python modules that is described in the list above, it is possible to
+                    overwrite a standard library. For example, if you create a file <c>random.py</c> in the same directory where
+                    <c>myprog.py</c> lives, and then myprog.py invokes <c>import random</c>, it will import <em>your</em> file rather than the
+                    standard library module. That's not usually what you want, so be careful about how you name your python files!</p>
+    </note>
+  </subsection>
+  <subsection xml:id="python-modules_syntax-for-importing-modules-and-functionality">
+    <title>Syntax for Importing Modules and Functionality</title>
+    <p>When you see imported modules in a Python program, there are a few variations that have slightly different consequences.</p>
+    <p>
+      <ol label="1">
+        <li>
+          <p>The most common is <c>import morecode</c>. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write <c>morecode.f1()</c>. Note that you have to explicitly mention morecode again, to specify that you want the f1 function from the morecode namespace. If you just write <c>f1()</c>, python will look for an f1 that was defined in the current file, rather than in morecode.py.</p>
+        </li>
+        <li>
+          <p>You can also give the imported module an alias (a different name, just for when you use it in your program). For example, after executing <c>import morecode as mc</c>, you would invoke <c>f1</c> as <c>mc.f1()</c>. You have now given the <c>morecode</c> module the alias <c>mc</c>. Programmers often do this to make code easier to type.</p>
+        </li>
+        <li>
+          <p>A third possibility for importing occurs when you only want to import SOME of the functionality from a module, and you want to make those objects be part of the current module's namespace. For example, you could write <c>from morecode import f1</c>. Then you could invoke f1 without referencing morecode again: <c>f1()</c>.</p>
+        </li>
+      </ol>
+    </p>
+    <note>
+      <title>Note: Python modules and limitations with activecode</title>
+      <p>Throughout the chapters of this book, activecode windows allow you to practice the Python that you are learning.
+                    We mentioned in the first chapter that programming is normally done using some type of development
+                    environment and that the
+                    activecode used here was strictly to help us learn.  It is not the way we write production programs.</p>
+      <p>To that end, it is necessary to mention that many of the  modules available in standard Python
+                    will <term>not</term> work in the activecode environment.  In fact, only <c>turtle</c>, <c>math</c>, <c>random</c>, and a couple others have been
+                    ported at this point.  If you wish to explore any
+                    additional modules, you will need to run from the native python interpreter on your computer.</p>
+    </note>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question13_1_1">
+      <statement>
+        <p>In Python a module is:</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>A file containing Python definitions and statements intended for use in other Python programs.</p>
+          </statement>
+          <feedback>
+            <p>A module can be reused in different programs.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>A separate block of code within a program.</p>
+          </statement>
+          <feedback>
+            <p>While a module is separate block of code, it is separate from a program.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>One line of code in a program.</p>
+          </statement>
+          <feedback>
+            <p>The call to a feature within a module may be one line of code, but modules are usually multiple lines of code separate from the program.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>A file that contains documentation about functions in Python.</p>
+          </statement>
+          <feedback>
+            <p>Each module has its own documentation, but the module itself is more than just documentation.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question13_1_2">
+      <statement>
+        <p>To find out information on the standard modules available with Python you should:</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>Go to the Python Documentation site.</p>
+          </statement>
+          <feedback>
+            <p>The site contains a listing of all the standard modules that are available with Python.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Look at the import statements of the program you are working with or writing.</p>
+          </statement>
+          <feedback>
+            <p>The import statements only tell you what modules are currently being used in the program, not how to use them or what they contain.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Ask the professor.</p>
+          </statement>
+          <feedback>
+            <p>While the professor knows a subset of the modules available in Python, chances are the professor will have to look up the available modules just like you would.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Look in this textbook.</p>
+          </statement>
+          <feedback>
+            <p>This book only explains a portion of the modules available.  For a full listing you should look elsewhere.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question13_1_3">
+      <statement>
+        <p>True / False:  All standard Python modules will work in activecode.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>Only a few modules have been ported to work in activecode at this time.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>Only a few modules have been ported to work in activecode at this time.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

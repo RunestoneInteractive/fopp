@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_introduction-iteration">
+  <title>Introduction: Iteration</title>
+  <p>A basic building block of all programs is to be able to repeat some code
+            over and over again.  Whether it is updating the bank balances of millions of customers each night, or sending email messages to thousands of people programming involves instructing the computer to do many repetitive actions. In computing, we refer to this repetitive execution as <term>iteration</term>.  In this section, we will explore some mechanisms for basic iteration.</p>
+  <p>With collections (lists and strings), a lot of computations involve processing one item at a time. For strings, this means that we would like to process one character at a time. Often we start at the beginning, select each character in turn, do something to it, and continue until the end. For example, we could take each character and substitute for the character 13 characters away in the alphabet to create a coded message.</p>
+  <p>This pattern of processing is called a traversal, or iteration over the characters. Similarly, we can process each of the items in a list, one at a time, iterating over the items in the list. This has applications in every piece of software you can imagine:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Displaying a list of friends on SnapChat</p>
+      </li>
+      <li>
+        <p>Updating the position of every character on the screen of a video game</p>
+      </li>
+      <li>
+        <p>Displaying the locations that Doctors Without Borders operates in</p>
+      </li>
+    </ul>
+  </p>
+  <!--Iteration Simplifies our Turtle Program-->
+  <!--Add <q>here's what we can do with turtle now, if we use iteration</q>; borrow from thinkcspy-->
+  <!--To draw a square we'd like to do the same thing four times &#8212; move the turtle forward some distance and turn 90 degrees. We previously used 8 lines of Python code to have alex draw the four sides of a square. This next program does exactly the same thing but, with the help of the for statement, uses just three lines (not including the setup code). Remember that the for statement will repeat the forward and left four times, one time for each value in the list.-->
+</section>

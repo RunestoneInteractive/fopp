@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<section xml:id="python-turtle_common-turtle-errors">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Common <c>turtle</c> Errors</title>
+  <p>Below we'll describe common errors that beginning programmers encounter when writing turtle code.
+            Some of these errors can be applied to other instances as well!</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Forgetting a Parenthesis</p>
+      </li>
+    </ol>
+  </p>
+  <program xml:id="ac3_9_1" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+alex.forward(50
+alex.right(90)
+        </input>
+  </program>
+  <p>When you run the example above you'll see how an error occurs. This is because we accidentally left off the <q>)</q> when we
+            tell alex to move forward. This is a common error for programmers of any skill level - it's easy to miss one and not
+            notice! If you get a syntax error like this or - expecially in this textbook - one that says there was bad syntax on a
+            line that isn't visible to you then likely you're missing a parenthesis, quotation, or bracket.</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Issues with Variable Names</p>
+      </li>
+    </ol>
+  </p>
+  <p>Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or swiching
+            letters around. Other times we accidentally refer to the wrong variable name. Checkout the code below for some examples.</p>
+  <program xml:id="ac3_9_2" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+alex = Turtle.turtle()      #switched turtle and Turtle
+
+alex.forward(50)
+alex.right(90)
+        </input>
+  </program>
+  <program xml:id="ac3_9_3" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+june = turtle.Turtle()
+
+june.forward(50)
+right.june(90)             #switched the variable for jane with the direction to turn in
+        </input>
+  </program>
+  <program xml:id="ac3_9_4" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+june = turtle.Turtle()
+
+june.forward(50)
+June.right(90)            #capitalized the variable June even though all others were lowercase
+        </input>
+  </program>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Incorrect Arguments</p>
+      </li>
+    </ol>
+  </p>
+  <p>We can also incorrectly provide arguments to a method or function. When that happens, you'll see an error message like the
+            one below.</p>
+  <program xml:id="ac3_9_5" interactive="activecode" language="python">
+    <input>
+import turtle
+wn = turtle.Screen()
+june = turtle.Turtle()
+
+for _ in range():
+    june.color("green", "yellow")
+    june.forward("50")
+    june.right(90)
+        </input>
+  </program>
+  <p>We wanted to iterate and draw a square, but we forgot to specify how many times we should iterate over the for loop. As a
+            result, we ran into an error because the range function requires at least one argument. Try fixing this so that the code
+            builds a square. Do you think you'll run into other problems? Predict what will happen and then try it out!</p>
+</section>

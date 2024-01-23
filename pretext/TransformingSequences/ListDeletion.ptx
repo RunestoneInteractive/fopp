@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_list-element-deletion">
+  <title>List Element Deletion</title>
+  <p>Using slices to delete list elements can be awkward and therefore error-prone.
+            Python provides an alternative that is more readable.
+            The <c>del</c> statement removes an element from a list by using its position.</p>
+  <program xml:id="ac8_2_1" interactive="activecode" language="python">
+    <input>
+a = ['one', 'two', 'three']
+del a[1]
+print(a)
+
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+del alist[1:5]
+print(alist)
+        </input>
+  </program>
+  <p>As you might expect, <c>del</c> handles negative indices and causes a runtime
+            error if the index is out of range. In addition, you can use a slice as an index for <c>del</c>.
+            As usual, slices select all the elements up to, but not including, the second index.</p>
+</section>

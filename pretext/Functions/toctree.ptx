@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Functions</title>
+        <xi:include href='./intro-Functions.ptx' />
+        <xi:include href='./FunctionDefinitions.ptx' />
+        <xi:include href='./FunctionInvocation.ptx' />
+        <xi:include href='./FunctionParameters.ptx' />
+        <xi:include href='./Returningavaluefromafunction.ptx' />
+        <xi:include href='./DecodingaFunction.ptx' />
+        <xi:include href='./TypeAnnotations.ptx' />
+        <xi:include href='./Afunctionthataccumulates.ptx' />
+        <xi:include href='./Variablesandparametersarelocal.ptx' />
+        <xi:include href='./GlobalVariables.ptx' />
+        <xi:include href='./Functionscancallotherfunctions.ptx' />
+        <xi:include href='./FlowofExecutionSummary.ptx' />
+        <xi:include href='./Printvsreturn.ptx' />
+        <xi:include href='./PassingMutableObjects.ptx' />
+        <xi:include href='./SideEffects.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

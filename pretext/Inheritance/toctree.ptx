@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Inheritance</title>
+        <xi:include href='./intro.ptx' />
+        <xi:include href='./inheritVarsAndMethods.ptx' />
+        <xi:include href='./OverrideMethods.ptx' />
+        <xi:include href='./InvokingSuperMethods.ptx' />
+        <xi:include href='./TamagotchiRevisited.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+        <xi:include href='./chapterProject.ptx' />
+    </chapter>

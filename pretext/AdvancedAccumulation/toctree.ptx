@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>More on Accumulation: Map, Filter, List Comprehension, and Zip</title>
+        <xi:include href='./intro.ptx' />
+        <xi:include href='./map.ptx' />
+        <xi:include href='./filter.ptx' />
+        <xi:include href='./listcomp.ptx' />
+        <xi:include href='./zip.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

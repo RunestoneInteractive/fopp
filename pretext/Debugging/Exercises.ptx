@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<exercises xml:id="debugging_exercises">
+  <title>Exercises</title>
+  <subsection xml:id="debugging_contributed-exercises">
+    <title>Contributed Exercises</title>
+    <raw format="html" xml:space="preserve">{% for q in questions: %}
+    &lt;div class='oneq full-width'&gt;
+        {{ q['htmlsrc']|safe }}
+    &lt;/div&gt;
+{% endfor %}</raw>
+  </subsection>
+</exercises>

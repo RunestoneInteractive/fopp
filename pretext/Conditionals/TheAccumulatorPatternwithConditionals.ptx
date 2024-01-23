@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_the-accumulator-pattern-with-conditionals">
+  <title>The Accumulator Pattern with Conditionals</title>
+  <p>Sometimes when we're accumulating, we don't want to add to our accumulator every time we iterate.
+            Consider, for example, the following program which counts the number of letters in a phrase.</p>
+  <program xml:id="ac7_10_1" interactive="activecode" language="python">
+    <input>
+phrase = "What a wonderful day to program"
+tot = 0
+for char in phrase:
+    if char != " ":
+        tot = tot + 1
+print(tot)
+        </input>
+  </program>
+  <p>Here, we <term>initialize</term> the accumulator variable to be zero on line two.</p>
+  <p>We <term>iterate</term> through the sequence (line 3).</p>
+  <p>The <term>update</term> step happens in two parts. First, we check to see if the value of <c>char</c> is not a space. If
+            it is not a space, then we update the value of our accumulator variable <c>tot</c> (on line 6) by adding one to
+            it. If that conditional proves to be False, which means that char <em>is</em> a space, then we don't update <c>tot</c>
+            and continue the for loop. We could have written <c>tot = tot + 1</c> or <c>tot += 1</c>, either is fine.</p>
+  <p>At the end, we have accumulated a the total number of letters in the phrase. Without using the conditional,
+            we would have only been able to count how many characters there are in the string and not been able to
+            differentiate between spaces and non-spaces.</p>
+  <p>We can use conditionals to also count if particular items are in a string or list. The following code finds all occurrences of vowels in the following string.</p>
+  <program xml:id="ac7_10_2" interactive="activecode" language="python">
+    <input>
+s = "what if we went to the zoo"
+x = 0
+for i in s:
+    if i in ['a', 'e', 'i', 'o', 'u']:
+        x += 1
+print(x)
+        </input>
+  </program>
+  <p>We can also use <c>==</c> to execute a similar operation. Here, we'll check to see if the character we are iterating over is
+            an <q>o</q>. If it is an <q>o</q> then we will update our counter.</p>
+  <image source="Conditionals/Figures/accum_o.gif" width="50%" alt="a gif that shows code to check that &quot;o&quot; is in the phrase &quot;onomatopoeia&quot;."/>
+  <subsection xml:id="conditionals_accumulating-the-max-value">
+    <title>Accumulating the Max Value</title>
+    <p>We can also use the accumulation pattern with conditionals to find the maximum or minimum value. Instead of
+                continuing to build up the accumulator value like we have when counting or finding a sum, we can reassign the
+                accumulator variable to a different value.</p>
+    <p>The following example shows how we can get the maximum value from a list of integers.</p>
+    <program xml:id="ac7_10_3" interactive="activecode" language="python">
+      <input>
+nums = [9, 3, 8, 11, 5, 29, 2]
+best_num = 0
+for n in nums:
+    if n &gt; best_num:
+        best_num = n
+print(best_num)
+        </input>
+    </program>
+    <p>Here, we initialize best_num to zero, assuming that there are no negative numbers in the list.</p>
+    <p>In the for loop, we check to see if the current value of n is greater than the current value of <c>best_num</c>.
+                If it is, then we want to <term>update</term> <c>best_num</c> so that it now is assigned the higher number. Otherwise, we
+                do nothing and continue the for loop.</p>
+    <p>You may notice that the current structure could be a problem. If the numbers were all negative what would
+                happen to our code? What if we were looking for the smallest number but we initialized <c>best_num</c> with
+                zero? To get around this issue, we can initialize the accumulator variable using one of the numbers in the
+                list.</p>
+    <program xml:id="ac7_10_4" interactive="activecode" language="python">
+      <input>
+nums = [9, 3, 8, 11, 5, 29, 2]
+best_num = nums[0]
+for n in nums:
+    if n &gt; best_num:
+        best_num = n
+print(best_num)
+        </input>
+    </program>
+    <p>The only thing we changed was the value of <c>best_num</c> on line 2 so that the value of <c>best_num</c> is the
+                first element in <c>nums</c>, but the result is still the same!</p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question7_10_1">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+s = "We are learning!"
+x = 0
+for i in s:
+    if i in ['a', 'b', 'c', 'd', 'e']:
+        x += 1
+print(x)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>2</p>
+          </statement>
+          <feedback>
+            <p>Though only two of the letters in the list are found, we count them each time they appear.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>5</p>
+          </statement>
+          <feedback>
+            <p>Yes, we add to x each time we come across a letter in the list.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>0</p>
+          </statement>
+          <feedback>
+            <p>Check again what the conditional is evaluating. The value of i will be a character in the string s, so what will happen in the if statement?</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>There is an error in the code so it cannot run.</p>
+          </statement>
+          <feedback>
+            <p>There are no errors in this code.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question7_10_2">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+list= [5, 2, 1, 4, 9, 10]
+min_value = 0
+for item in list:
+   if item &lt; min_value:
+       min_value = item
+print(min_value)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>10</p>
+          </statement>
+          <feedback>
+            <p>Not quite. What is the conditional checking?</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>1</p>
+          </statement>
+          <feedback>
+            <p>min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>0</p>
+          </statement>
+          <feedback>
+            <p>Yes, min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>There is an error in the code so it cannot run.</p>
+          </statement>
+          <feedback>
+            <p>The code does not have an error that would prevent it from running.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="ac7_10_5">
+      <statement>
+        <p>For each string in the list <c>words</c>, find the number of characters in the string. If the number of characters in the string is greater than 3, add 1 to the variable <c>num_words</c> so that <c>num_words</c> should end up with the total number of words with more than 3 characters.</p>
+      </statement>
+      <program xml:id="ac7_10_5_editor" interactive="activecode" language="python">
+        <input>
+words = ["water", "chair", "pen", "basket", "hi", "car"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFive(self):
+      self.assertEqual(num_words, 3, "Testing that num_words has the correct value.")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="ac7_10_7">
+      <statement>
+        <p><term>Challenge</term> For each word in <c>words</c>, add &#x2018;d' to the end of the word if the word ends in <q>e</q> to make it past tense. Otherwise, add &#x2018;ed' to make it past tense. Save these past tense words to a list called <c>past_tense</c>.</p>
+      </statement>
+      <program xml:id="ac7_10_7_editor" interactive="activecode" language="python">
+        <input>
+words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "wish"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testNine(self):
+      self.assertEqual(past_tense, ['adopted', 'baked', 'beamed', 'confided', 'grilled', 'planted', 'timed', 'waved', 'wished'], "Testing that the past_tense list is correct.")
+      self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+      self.assertIn("for", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+</section>

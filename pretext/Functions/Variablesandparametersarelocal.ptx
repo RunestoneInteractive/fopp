@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<section xml:id="functions_variables-and-parameters-are-local116_index-0">
+  <title>Variables and parameters are local</title>
+  <video xml:id="goog_local_vars" youtube="HdFujZpLFVg" width="auto"/>
+  <p>An assignment statement in a function creates a <term>local variable</term> for the variable on the left hand side of the
+            assignment operator. It is called local because this variable only exists inside the function and you cannot use it
+            outside. For example, consider again the <c>square</c> function:</p>
+  <program xml:id="ac11_7_1" interactive="activecode" language="python">
+    <input>
+def square(x):
+    y = x * x
+    return y
+
+z = square(10)
+print(y)
+        </input>
+  </program>
+  <p>Try running this in Codelens. When a function is invoked in Codelens, the local scope is separated from global scope by
+            a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global
+            frame. If you press the &#x2018;last &gt;&gt;' button you will see an error message. When we try to use <c>y</c> on line 6 (outside the
+            function) Python looks for a global variable named <c>y</c> but does not find one. This results in the error:
+            <c>Name Error: 'y' is not defined.</c></p>
+  <p>The variable <c>y</c> only exists while the function is being executed &#x2014; we call this its <term>lifetime</term>. When the
+            execution of the function terminates (returns), the local variables are destroyed. Codelens helps you visualize this
+            because the local variables disappear after the function returns. Go back and step through the statements paying
+            particular attention to the variables that are created when the function is called. Note when they are subsequently
+            destroyed as the function returns.</p>
+  <p>Formal parameters are also local and act like local variables. For example, the lifetime of <c>x</c> begins when
+            <c>square</c> is called, and its lifetime ends when the function completes its execution.</p>
+  <p>So it is not possible for a function to set some local variable to a value, complete its execution, and then when it
+            is called again next time, recover the local variable. Each call of the function creates new local variables, and
+            their lifetimes expire when the function returns to the caller.</p>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="question11_7_1">
+    <statement>
+      <p>True or False: Local variables can be referenced outside of the function they were defined in.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Local variables cannot be referenced outside of the function they were defined in.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Local variables cannot be referenced outside of the function they were defined in.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question11_7_2">
+    <statement>
+      <p>Which of the following are local variables? Please, write them in order of what line they are on in the code. <var/>  <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <program language="python">
+          <input>
+numbers = [1, 12, 13, 4]
+def foo(bar):
+    aug = str(bar) + "street"
+    return aug
+
+addresses = []
+for item in numbers:
+    addresses.append(foo(item))
+</input>
+        </program>
+        <p>The local variables are</p>
+        <condition string="^\s*bar\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*aug\s*$">
+          <feedback>
+            <p>While aug is a local variable, it is not the first one in the code.</p>
+          </feedback>
+        </condition>
+      </var>
+      <var>
+        <condition string="^\s*item\s*$">
+          <feedback>
+            <p>item is not a local variable.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*aug\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*bar\s*$">
+          <feedback>
+            <p>While bar is a local variable, it is not the first one in the code.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="question11_7_3">
+    <statement>
+      <p>What would be the result of running the following code?</p>
+      <program language="python">
+        <input>
+x = 3 * 2
+y = 1
+
+def subtract(z):
+    y = 10
+    return y - z
+
+print(subtract(x))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Correct, the output is right because the subtract function takes in x as the global variable for the z parameter and puts it into the function. The subtract function uses the local variable y for its return.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, look again at what is being produced in the subtract function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, look again at what is being produced in the subtract function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Code will give an error because x and z do not match.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there shouldn't be any error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question11_7_4">
+    <statement>
+      <p>What would be the result of running the following code?</p>
+      <program language="python">
+        <input>
+def adding(x):
+    y = 3
+    z = y + x + x
+    return z
+
+def producing(x):
+    z = x * y
+    return z
+
+print(producing(adding(4)))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>33</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, look again at what is happening in producing.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, look again at what is happening in producing.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>There is an error in the code.</p>
+        </statement>
+        <feedback>
+          <p>Yes! There is an error because we reference y in the producing function, but it was defined in adding. Because y is a local variable, we can't use it in both functions without initializing it in both. If we initialized y as 3 in both though, the answer would be 33.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question11_7_5">
+    <statement>
+      <p>What would be the result of running the following code?</p>
+      <program language="python">
+        <input>
+x = 9
+
+def adding():
+    x+=1
+    print(x)
+
+adding()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, pay attention to the local scope in the function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, pay attention to the local scope in the function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, pay attention to the local scope in the function.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Error, local variable 'x' is referenced before assignment.</p>
+        </statement>
+        <feedback>
+          <p>This code gives an error because the local variable 'x' was referenced in the local scope before it was assigned a value.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <program language="python">
+    <input>
+    v1 += 1
+Traceback (most recent call last):
+    File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'v1' is not defined
+    def foo():
+        v1 += 1
+    foo()
+Traceback (most recent call last):
+    File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+    File "&lt;stdin&gt;", line 2, in foo
+UnboundLocalError: local variable 'v1' referenced before assignment
+</input>
+  </program>
+  <p>In the code above, notice and understand the different error messages.
+            The local variables are created at the same time the local namespace
+            is created. That is <term>any</term> variable that is assigned to anywhere
+            in the function gets added to the local namespace immediately but
+            it will remain <term>unbound</term> until the assignment statement is executed.</p>
+</section>

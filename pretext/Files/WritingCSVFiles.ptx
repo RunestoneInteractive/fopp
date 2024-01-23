@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<section xml:id="files_writing-data-to-a-csv-file">
+  <title>Writing data to a CSV File</title>
+  <p>The typical pattern for writing data to a CSV file will be to write a header row and loop
+            through the items in a list, outputting one row for
+            each.</p>
+  <p>Here is a simple example where we first make a list of the multiples of 12 and then write a file that looks like this.</p>
+  <pre>1,12
+2,24
+3,36
+...</pre>
+  <program xml:id="ac9_14_1" interactive="activecode" language="python">
+    <input>
+n = [0] * 12
+for i in range(1,13):
+    n[i-1] = i *12
+outfile = open("Multiples of 12", "w")
+for j in range(0, len(n)):
+    outfile.write(str(j+1) + ',' + str(n[j]))
+    # +1 to j since the array starts at 0 and we start counting at 1
+    outfile.write('\n')
+outfile.close()
+        </input>
+  </program>
+  <p>Here is a more complex example, where we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.</p>
+  <program xml:id="ac9_14_3" interactive="activecode" language="python">
+    <input>
+olympians = [("John Aalberg", 31, "Cross Country Skiing"),
+             ("Minna Maarit Aalto", 30, "Sailing"),
+             ("Win Valdemar Aaltonen", 54, "Art Competitions"),
+             ("Wakako Abe", 18, "Cycling")]
+
+outfile = open("reduced_olympics.csv", "w")
+# output the header row
+outfile.write('Name,Age,Sport')
+outfile.write('\n')
+# output each of the rows:
+for olympian in olympians:
+    row_string = '{},{},{}'.format(olympian[0], olympian[1], olympian[2])
+    outfile.write(row_string)
+    outfile.write('\n')
+outfile.close()
+        </input>
+  </program>
+  <p>There are a few things worth noting in the code above.</p>
+  <p>First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: <c>row_string = ','.join([olympian[0], str(olympian[1]), olympian[2]])</c>.</p>
+  <p>Second, unlike the print statement, remember that the .write() method on a file object does not automatically insert a newline. Instead, we have to explicitly add the character <c>\n</c> at the end of each line.</p>
+  <p>Third, we have to explicitly refer to each of the elements of olympian when building the string to write. Note that just putting <c>.format(olympian)</c> wouldn't work because the interpreter would see only one value (a tuple) when it was expecting three values to try to substitute into the string template. Later in the book we will see that python provides an advanced technique for automatically unpacking the three values from the tuple, with <c>.format(*olympian)</c>.</p>
+  <p>As described previously, if one or more columns contain text, and that text could contain commas, we need to do something
+            to distinguish a comma in the text from a comma that is separating different values (cells in the
+            table). If we want to enclose each value in double quotes, it can start to get a little tricky, because we will
+            need to have the double quote character inside the string output. But it is doable. Indeed, one
+            reason Python allows strings to be delimited with either single quotes or double quotes is so
+            that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.</p>
+  <program xml:id="ac9_14_2" interactive="activecode" language="python">
+    <input>
+olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
+             ("Minna Maarit Aalto", 30, "Sailing"),
+             ("Win Valdemar Aaltonen", 54, "Art Competitions"),
+             ("Wakako Abe", 18, "Cycling")]
+
+outfile = open("reduced_olympics2.csv", "w")
+# output the header row
+outfile.write('"Name","Age","Sport"')
+outfile.write('\n')
+# output each of the rows:
+for olympian in olympians:
+    row_string = '"{}", "{}", "{}"'.format(olympian[0], olympian[1], olympian[2])
+    outfile.write(row_string)
+    outfile.write('\n')
+outfile.close()
+        </input>
+  </program>
+</section>

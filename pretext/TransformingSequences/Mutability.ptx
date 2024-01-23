@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_index-0">
+  <title>Mutability</title>
+  <p>Some Python collection types - strings and lists so far - are able to change and some are not. If
+            a type is able to change, then it is said to be mutable. If the type is not able to change then it
+            is said to be immutable. This will be expanded below.</p>
+  <video xml:id="mutabilityvid" youtube="fnSijYDKz3c" width="auto"/>
+  <subsection xml:id="transforming-sequences_lists-are-mutable">
+    <title>Lists are Mutable</title>
+    <p>Unlike strings, lists are <term>mutable</term>. This means we can change an item in a list by accessing
+                it directly as part of the assignment statement. Using the indexing operator (square brackets) on
+                the left side of an assignment, we can update one of the list items.</p>
+    <program xml:id="ac8_1_4" interactive="activecode" language="python">
+      <input>
+fruit = ["banana", "apple", "cherry"]
+print(fruit)
+
+fruit[0] = "pear"
+fruit[-1] = "orange"
+print(fruit)
+        </input>
+    </program>
+    <p>An assignment to an element of a list is called <term>item assignment</term>. Item assignment does not work
+                for strings. Recall that strings are immutable.</p>
+    <p>Here is the same example in codelens so that you can step through the statements and see the
+                changes to the list elements.</p>
+    <program xml:id="clens8_1_1" interactive="codelens" language="python">
+      <input>
+fruit = ["banana", "apple", "cherry"]
+
+fruit[0] = "pear"
+fruit[-1] = "orange"
+    </input>
+    </program>
+    <p>By combining assignment with the slice operator we can update several elements at once.</p>
+    <program xml:id="ac8_1_5" interactive="activecode" language="python">
+      <input>
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+alist[1:3] = ['x', 'y']
+print(alist)
+        </input>
+    </program>
+    <p>We can also remove elements from a list by assigning the empty list to them.</p>
+    <program xml:id="ac8_1_6" interactive="activecode" language="python">
+      <input>
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+alist[1:3] = []
+print(alist)
+        </input>
+    </program>
+    <p>We can even insert elements into a list by squeezing them into an empty slice at the
+                desired location.</p>
+    <program xml:id="ac8_1_7" interactive="activecode" language="python">
+      <input>
+alist = ['a', 'd', 'f']
+alist[1:1] = ['b', 'c']
+print(alist)
+alist[4:4] = ['e']
+print(alist)
+        </input>
+    </program>
+  </subsection>
+  <subsection xml:id="transforming-sequences_strings-are-immutable">
+    <title>Strings are Immutable</title>
+    <p>One final thing that makes strings different from some other Python collection types is that
+                you are not allowed to modify the individual characters in the collection. It is tempting to use
+                the <c>[]</c> operator on the left side of an assignment, with the intention of changing a character
+                in a string. For example, in the following code, we would like to change the first letter of
+                <c>greeting</c>.</p>
+    <program xml:id="ac8_1_1" interactive="activecode" language="python">
+      <input>
+greeting = "Hello, world!"
+greeting[0] = 'J'            # ERROR!
+print(greeting)
+        </input>
+    </program>
+    <p>Instead of producing the output <c>Jello, world!</c>, this code produces the
+                runtime error <c>TypeError: 'str' object does not support item assignment</c>.</p>
+    <p>Strings are <term>immutable</term>, which means you cannot change an existing string. The
+                best you can do is create a new string that is a variation on the original.</p>
+    <program xml:id="ac8_1_2" interactive="activecode" language="python">
+      <input>
+greeting = "Hello, world!"
+newGreeting = 'J' + greeting[1:]
+print(newGreeting)
+print(greeting)          # same as it was
+        </input>
+    </program>
+    <p>The solution here is to concatenate a new first letter onto a slice of <c>greeting</c>.
+                This operation has no effect on the original string.</p>
+    <p>While it's possible to make up new variable names each time we make changes to existing
+                values, it could become difficult to keep track of them all.</p>
+    <program xml:id="ac8_1_3" interactive="activecode" language="python">
+      <input>
+phrase = "many moons"
+phrase_expanded = phrase + " and many stars"
+phrase_larger = phrase_expanded + " litter"
+phrase_complete = "M" + phrase_larger[1:] + " the night sky."
+excited_phrase_complete = phrase_complete[:-1] + "!"
+        </input>
+    </program>
+    <p>The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.</p>
+  </subsection>
+  <subsection xml:id="transforming-sequences_tuples-are-immutable">
+    <title>Tuples are Immutable</title>
+    <p>As with strings, if we try to use item assignment to modify one of the elements of a tuple, we get an error. In fact, that's the key difference between lists and tuples: tuples are like immutable lists. None of the operations on lists that mutate them are available for tuples. Once a tuple is created, it can't be changed.</p>
+    <program language="python">
+      <input>
+julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
+</input>
+    </program>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question8_1_1">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+alist = [4,2,8,6,5]
+alist[2] = True
+print(alist)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[4,2,True,8,6,5]</p>
+          </statement>
+          <feedback>
+            <p>Item assignment does not insert the new item into the list.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[4,2,True,6,5]</p>
+          </statement>
+          <feedback>
+            <p>Yes, the value True is placed in the list at index 2. It replaces 8.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Error, it is illegal to assign</p>
+          </statement>
+          <feedback>
+            <p>Item assignment is allowed with lists. Lists are mutable.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question8_1_2">
+      <statement>
+        <p>What is printed by the following statements:</p>
+        <program language="python">
+          <input>
+s = "Ball"
+s[0] = "C"
+print(s)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Ball</p>
+          </statement>
+          <feedback>
+            <p>Assignment is not allowed with strings.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Call</p>
+          </statement>
+          <feedback>
+            <p>Assignment is not allowed with strings.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Error</p>
+          </statement>
+          <feedback>
+            <p>Yes, strings are immutable.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

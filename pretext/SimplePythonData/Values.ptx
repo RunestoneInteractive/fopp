@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_values-and-data-types">
+  <title>Values and Data Types</title>
+  <p>A <term>value</term> is one of the fundamental things &#x2014; like a word or a number &#x2014; that a program manipulates.
+            Some values are <c>5</c> (the result when we add <c>2 + 3</c>), and <c>"Hello, World!"</c>. These objects are classified into
+            different classes, or data types: 4 is an integer, and <q>Hello, World!</q> is a string, so-called because it contains a
+            string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation
+            marks.</p>
+  <p>We can specify values directly in the programs we write. For example we can specify a number as a <term>literal</term> just by (literally) typing it directly into the program (e.g., <c>5</c> or <c>4.32</c>). In a program, we specify a word, or more generally a string of characters, by enclosing the characters inside quotation marks (e.g., <c>"Hello, World!"</c>).</p>
+  <p>During execution of a program, the Python interpreter creates an internal representation of literals that are specified in a program. It can then manipulate them, for example by multiplying two numbers. We call the internal representations <term>objects</term> or just <term>values</term>.</p>
+  <p>You can't directly see the internal representations of values. You can, however, use the <c>print</c> function to see a printed representation in the output window.</p>
+  <p>The printed representation of a number uses the familiar decimal representation (reading <url href="http://en.wikipedia.org/wiki/Roman_numerals" visual="http://en.wikipedia.org/wiki/Roman_numerals">Roman Numerals</url> is a fun challenge in museums, but thank goodness the Python interpreter doesn't present the number 2014 as MMXIV in the output window). Thus, the printed representation of a number shown in the output window is the same as the literal that you specify in a program.</p>
+  <p>The printed representation of a character string, however, is not exactly the same as the literal used to specify the string in a program. For the literal in a program, you enclose the string in quotation marks. The printed representation, in the output window, omits the quotation marks.</p>
+  <program xml:id="ac2_2_1" interactive="activecode" language="python">
+    <input>
+print(3.2)
+print("Hello, World!")
+        </input>
+  </program>
+  <note>
+    <p><term>Literals</term> appear in programs. The Python interpreter turns literals into <term>values</term>, which have internal representations that people never get to see directly.  <term>Outputs</term> are external representations of values that appear in the output window. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external representations as values.</p>
+  </note>
+  <p>Numbers with a decimal point belong to a class
+            called <term>float</term>, because these numbers are represented in a format called
+            <em>floating-point</em>.  At this stage, you can treat the words <em>class</em> and <em>type</em>
+            interchangeably.  We'll come back to a deeper understanding of what a class
+            is in later chapters.</p>
+  <p>You will soon encounter other types of objects as well, such as lists and dictionaries. Each of these has its own special representation for specifying an object as a literal in a program, and for displaying an object when you print it. For example, list contents are enclosed in square brackets <c>[ ]</c>. You will also encounter some more complicated objects that do not have very nice printed representations: printing those won't be very useful.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question2_2_1">
+    <statement>
+      <p>What appears in the output window when the following statement executes?</p>
+      <program language="python">
+        <input>
+print("Hello World!")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing is printed. It generates a runtime error.</p>
+        </statement>
+        <feedback>
+          <p>"Hello World!" has a printed representation, so there will not be an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"Hello World!"</p>
+        </statement>
+        <feedback>
+          <p>The literal in the program includes the quote marks, but the printed representation omits them.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Hello World!</p>
+        </statement>
+        <feedback>
+          <p>The printed representation omits the quote marks that are included in the string literal.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

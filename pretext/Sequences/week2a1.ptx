@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="assess_question2_1_1_1">
+    <statement>
+      <p>What will the output be for the following code?</p>
+      <program language="python">
+        <input>
+let = "z"
+let_two = "p"
+c = let_two + let
+m = c*5
+print(m)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>zpzpzpzpzp</p>
+        </statement>
+        <feedback>
+          <p>The order of concatenation matters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>zzzzzppppp</p>
+        </statement>
+        <feedback>
+          <p>Think about the order that the program is executed in, what occurs first?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>pzpzpzpzpz</p>
+        </statement>
+        <feedback>
+          <p>Yes, because let_two was put before let, c has "pz" and then that is repeated five times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>pppppzzzzz</p>
+        </statement>
+        <feedback>
+          <p>Think about the order that the program is executed in, what occurs first?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above, an error will occur.</p>
+        </statement>
+        <feedback>
+          <p>This is correct syntax and no errors will occur.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_ac_2_1_1_2">
+    <statement>
+      <p>Write a program that extracts the last three items in the list <c>sports</c> and assigns it to the variable <c>last</c>. Make sure to write your code so that it works no matter how many items are in the list.</p>
+    </statement>
+    <program xml:id="assess_ac_2_1_1_2_editor" interactive="activecode" language="python">
+      <input>
+sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
+
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+     self.assertEqual(last, ['curling', 'ping pong', 'hockey'], "Testing that the value of last is the last three items in sports.")
+     self.assertTrue(re.search(r'last\s*=\s*\S*3:', self.getEditorText()), "Hardcode check")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_ac_2_1_1_3">
+    <statement>
+      <p>Write code that combines the following variables so that the sentence <q>You are doing a great job, keep it up!</q> is assigned to the variable <c>message</c>. Do not edit the values assigned to <c>by</c>, <c>az</c>, <c>io</c>, or <c>qy</c>.</p>
+    </statement>
+    <program xml:id="assess_ac_2_1_1_3_editor" interactive="activecode" language="python">
+      <input>
+by = "You are"
+az = "doing a great "
+io = "job"
+qy = "keep it up!"
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+    self.assertEqual(by, 'You are', "Testing original variables.")
+    self.assertEqual(az, 'doing a great ', "Testing original variables.")
+    self.assertEqual(io, 'job', "Testing original variables.")
+    self.assertEqual(qy, 'keep it up!', "Testing original variables.")
+    self.assertEqual(message, 'You are doing a great job, keep it up!', "Testing that the value of message is what was expected.")
+    self.assertNotIn("You are doing a great job, keep it up!", self.getEditorText(), "Testing for hardcoding (Don't worry about actual and expected values).")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_question2_1_1_4">
+    <statement>
+      <p>What will the output be for the following code?</p>
+      <program language="python">
+        <input>
+ls = ['run', 'world', 'travel', 'lights', 'moon', 'baseball', 'sea']
+new = ls[2:4]
+print(new)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['travel', 'lights', 'moon']</p>
+        </statement>
+        <feedback>
+          <p>When we take a slice of something, it includes the item at the first index and excludes the item at the second index.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['world', 'travel', 'lights']</p>
+        </statement>
+        <feedback>
+          <p>When we take a slice of something, it includes the item at the first index and excludes the item at the second index. Additionally, Python is a zero-index based language.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>['travel', 'lights']</p>
+        </statement>
+        <feedback>
+          <p>Yes, python is a zero-index based language and slices are inclusive of the first index and exclusive of the second.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['world', 'travel']</p>
+        </statement>
+        <feedback>
+          <p>Python is a zero-index based language.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question2_1_1_5">
+    <statement>
+      <p>What is the type of <c>m</c>?</p>
+      <program language="python">
+        <input>
+l = ['w', '7', 0, 9]
+m = l[1:2]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Not quite, is it slicing or accessing an element?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>What is happening in the assignment statement for m?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>What is happening in the assignment statement for m?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Yes, a slice returns a list no matter how large the slice.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question2_1_1_6">
+    <statement>
+      <p>What is the type of <c>m</c>?</p>
+      <program language="python">
+        <input>
+l = ['w', '7', 0, 9]
+m = l[1]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Yes, the quotes around the number mean that this is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what is being extracted.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what is being extracted.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Not quite, is it slicing or accessing an element?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question2_1_1_7">
+    <statement>
+      <p>What is the type of <c>x</c>?</p>
+      <program language="python">
+        <input>
+b = "My, what a lovely day"
+x = b.split(',')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Not quite; .split() returns a list, each of whose elements is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what types are present and what the result of .split() is.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what types are present and what the result of .split() is.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Yes, the .split() method returns a list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_question2_1_1_8">
+    <statement>
+      <p>What is the type of <c>a</c>?</p>
+      <program language="python">
+        <input>
+b = "My, what a lovely day"
+x = b.split(',')
+z = "".join(x)
+y = z.split()
+a = "".join(y)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Yes, the string is split into a list, then joined back into a string, then split again, and finally joined back into a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what types are present and what the result of .split() is.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>Not quite, look again at what types are present and what the result of .split() is.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>list</p>
+        </statement>
+        <feedback>
+          <p>Not quite, think about what .split() and .join() return.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_ac2_1_1_9">
+    <statement>
+      <p>Write code to determine how many 9's are in the list <c>nums</c> and assign that value to the variable <c>how_many</c>. Do not use a for loop to do this.</p>
+    </statement>
+    <program xml:id="assess_ac2_1_1_9_editor" interactive="activecode" language="python">
+      <input>
+nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
+
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+    self.assertEqual(how_many, 3, "Testing that how_many is set correctly.")
+    self.assertNotIn('for', self.getEditorText(), "Testing that you didn't use a for loop.")
+    self.assertFalse(re.search(r'how_many\s*=\s*3', self.getEditorText()), "Hardcode check")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_ac2_1_1_10">
+    <statement>
+      <p>Write code that uses slicing to get rid of the the second 8 so that here are only two 8's in the list bound to the variable <title_reference>nums</title_reference>.</p>
+    </statement>
+    <program xml:id="assess_ac2_1_1_10_editor" interactive="activecode" language="python">
+      <input>
+nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
+
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+    self.assertEqual(nums, [4, 2, 8, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4], "Testing that nums is set correctly.")
+    self.assertTrue(re.search(r'\s*:', self.getEditorText()), "Testing that you are using slices to remove the second 8 (Don't worry about actual and expected values)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="access_ac_2_1_1_11">
+    <statement>
+      <p>Assign the last element of <c>lst</c> to the variable <c>end_elem</c>. Do this so that it works no matter how long lst is.</p>
+    </statement>
+    <program xml:id="access_ac_2_1_1_11_editor" interactive="activecode" language="python">
+      <input>
+lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(end_elem, lst[-1], "Testing that end_elem has the correct element assigned.")
+      self.assertFalse(re.search(r'end_elem\s*=\s*\S26trombones\S', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="access_ac_2_1_1_12">
+    <statement>
+      <p>Assign the number of elements in <c>lst</c> to the variable <c>num_lst</c>.</p>
+    </statement>
+    <program xml:id="access_ac_2_1_1_12_editor" interactive="activecode" language="python">
+      <input>
+lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(num_lst, 30, "Testing that num_lst has the correct length assigned.")
+      self.assertFalse(re.search(r'num_lst\s*=\s*30', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="assess_ac_2_1_1_13">
+    <statement>
+      <p>Create a variable called <c>wrds</c> and assign to it a list whose elements are the words in the string <c>sent</c>. Do not worry about punctuation.</p>
+    </statement>
+    <program xml:id="assess_ac_2_1_1_13_editor" interactive="activecode" language="python">
+      <input>
+sent = "The bicentennial for our university was in 2017"
+
+=====
+
+from unittest.gui import TestCaseGui
+import re
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(wrds, sent.split(), "Testing that wrds has been correctly assigned.")
+      self.assertFalse(re.search(r'wrds\s*=\s*\S*The\S', self.getEditorText()), "Hardcoding Check (Don't worry about actual and expected values)")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

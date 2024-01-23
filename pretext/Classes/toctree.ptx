@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Defining your own Classes</title>
+        <xi:include href='./intro-ClassesandObjectstheBasics.ptx' />
+        <xi:include href='./ObjectsRevisited.ptx' />
+        <xi:include href='./UserDefinedClasses.ptx' />
+        <xi:include href='./ImprovingourConstructor.ptx' />
+        <xi:include href='./AddingOtherMethodstoourClass.ptx' />
+        <xi:include href='./ObjectsasArgumentsandParameters.ptx' />
+        <xi:include href='./ConvertinganObjecttoaString.ptx' />
+        <xi:include href='./InstancesasReturnValues.ptx' />
+        <xi:include href='./sorting_instances.ptx' />
+        <xi:include href='./ClassVariablesInstanceVariables.ptx' />
+        <xi:include href='./ThinkingAboutClasses.ptx' />
+        <xi:include href='./TestingClasses.ptx' />
+        <xi:include href='./Tamagotchi.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_omitting-the-else-clause-unary-selection52_index-0">
+  <title>Omitting the <c>else</c> Clause: Unary Selection</title>
+  <video xml:id="unaryselection" youtube="Fd4a8ktQURc" width="auto"/>
+  <sidebar>
+    <title>Flowchart of an <term>if</term> with no <term>else</term></title>
+    <image source="Conditionals/Figures/flowchart_if_only.png" width="50%"/>
+  </sidebar>
+  <p>Another form of the <c>if</c> statement is one in which the <c>else</c> clause is omitted entirely. This creates what
+            is sometimes called <term>unary selection</term>. In this case, when the condition evaluates to <c>True</c>, the statements
+            are executed. Otherwise the flow of execution continues to the statement after the body of the <c>if</c>.</p>
+  <program xml:id="ac7_7_1" interactive="activecode" language="python">
+    <input>
+x = 10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+print("This is always printed")
+        </input>
+  </program>
+  <p>What would be printed if the value of <c>x</c> is negative?  Try it.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question7_7_1">
+    <statement>
+      <p>What does the following code print?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+print("This is always printed")
+</input>
+      </program>
+      <pre>a.
+This is always printed
+
+b.
+The negative number -10 is not valid here
+This is always printed
+
+c.
+The negative number -10 is not valid here</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Output a</p>
+        </statement>
+        <feedback>
+          <p>Because -10 is less than 0, Python will execute the body of the if-statement here.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Output b</p>
+        </statement>
+        <feedback>
+          <p>Python executes the body of the if-block as well as the statement that follows the if-block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output c</p>
+        </statement>
+        <feedback>
+          <p>Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will cause an error because every if must have an else clause.</p>
+        </statement>
+        <feedback>
+          <p>It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question7_7_2">
+    <statement>
+      <p>Will the following code cause an error?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    print(x, " is a positive number")
+else:
+    print("This is always printed")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Every else-block must have exactly one corresponding if-block.  If you want to chain if-else statements together, you must use the else if construct, described in the chained conditionals section.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>This will cause an error because the second else-block is not attached to a corresponding if-block.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

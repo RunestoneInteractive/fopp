@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<section xml:id="general-intro_a-typical-first-program118_index-0">
+  <title>A Typical First Program</title>
+  <p>Traditionally, the first program written in a new language is called <em>Hello,
+                World!</em> because all it does is display the words, Hello, World!  In Python, the source code
+            looks like this.</p>
+  <program language="python">
+    <input>
+print("Hello, World!")
+</input>
+  </program>
+  <p>This is an example of using the <term>print function</term>, which doesn't actually
+            print anything on paper. It displays a value on the screen. In this case, the result is the phrase:</p>
+  <pre>Hello, World!</pre>
+  <p>Here is the example in an activecode window, where you can run it and modify it.</p>
+  <program xml:id="ac1_7_1" interactive="activecode" language="python">
+    <input>
+print("Hello, World!")
+        </input>
+  </program>
+  <p>The quotation marks in the program mark the beginning and end of the value.
+            They don't appear in the result. You'll learn more about why in the next chapter.</p>
+  <p>Some people judge the quality of a programming language by the simplicity of
+            the Hello, World! program. By this standard, Python does about as well as
+            possible.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question1_7_1">
+    <statement>
+      <p>The print function:</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>sends information to the printer to be printed on paper.</p>
+        </statement>
+        <feedback>
+          <p>Within the Python programming language, the print statement has nothing to do with the printer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>displays a value on the screen.</p>
+        </statement>
+        <feedback>
+          <p>Yes, the print statement is used to display the value of the thing being printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tells the computer to put the information in print, rather than cursive, format.</p>
+        </statement>
+        <feedback>
+          <p>The format of the information is called its font and has nothing to do with the print statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tells the computer to speak the information.</p>
+        </statement>
+        <feedback>
+          <p>That would be nice! But no...</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

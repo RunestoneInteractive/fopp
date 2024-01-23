@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Debugging</title>
+        <xi:include href='./intro-DebuggingGeneral.ptx' />
+        <xi:include href='./intro-HowtobeaSuccessfulProgrammer.ptx' />
+        <xi:include href='./BeginningtipsforDebugging.ptx' />
+        <xi:include href='./Syntaxerrors.ptx' />
+        <xi:include href='./RuntimeErrors.ptx' />
+        <xi:include href='./SemanticErrors.ptx' />
+        <xi:include href='./KnowyourerrorMessages.ptx' />
+        <xi:include href='./Exercises.ptx' />
+    </chapter>

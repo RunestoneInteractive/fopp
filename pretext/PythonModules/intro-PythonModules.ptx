@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<section xml:id="python-modules_introduction-to-python-modules">
+  <title>Introduction to Python Modules</title>
+  <p>One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to some of the amazing packages that allow you to solve real world problems without starting from scratch.</p>
+  <image source="https://imgs.xkcd.com/comics/python.png" width="50%"/>
+  <p>As you may have gathered, Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules you still need to know the python basics in order to glue everything together.  We will start by looking at a module used to generate random numbers to learn how to make use of other modules in your programs.</p>
+  <subsection xml:id="python-modules_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>Understand that Python is extensible through modules</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="python-modules_objectives">
+    <title>Objectives</title>
+    <p>
+      <ul>
+        <li>
+          <p>To import an entire module</p>
+        </li>
+        <li>
+          <p>To import a single function from a module</p>
+        </li>
+        <li>
+          <p>To import a module giving it an alias</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

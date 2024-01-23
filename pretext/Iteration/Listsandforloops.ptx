@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_lists-and-for-loops">
+  <title>Lists and <c>for</c> loops</title>
+  <p>It is also possible to perform <term>list traversal</term> using iteration by item. A list is a sequence of items, so the <c>for</c> loop iterates over each item in the list automatically.</p>
+  <program xml:id="ac6_5_1" interactive="activecode" language="python">
+    <input>
+fruits = ["apple", "orange", "banana", "cherry"]
+
+for afruit in fruits:     # by item
+    print(afruit)
+        </input>
+  </program>
+  <p>It almost reads like natural language: For (every) fruit in (the list of) fruits,
+            print (the name of the) fruit.</p>
+  <subsection xml:id="iteration_using-the-range-function-to-generate-a-sequence-to-iterate-over">
+    <title>Using the <title_reference>range</title_reference> Function to Generate a Sequence to Iterate Over</title>
+    <p>We are now in a position to understand the inner workings we glossed over previously when we first introduced repeated execution with a for loop.
+                Here was the example:</p>
+    <program xml:id="ac_6_5_1a" interactive="activecode" language="python">
+      <input>
+print("This will execute first")
+
+for _ in range(3):
+    print("This line will execute three times")
+    print("This line will also execute three times")
+
+print("Now we are outside of the for loop!")
+        </input>
+    </program>
+    <p>The <c>range</c> function takes an integer n as input and returns a sequence of numbers, starting at 0 and going up to but not including n.
+                Thus, instead of <c>range(3)</c>, we could have written <c>[0, 1, 2]</c>.</p>
+    <p>The loop variable <c>_</c> is bound to 0 the first time lines 4 and 5 execute. The next time, <c>_</c> is bound to 1. Third time, it is bound to 2.
+                <c>_</c> is a strange name for a variable but  if you look carefully at the rules about variable names, it is a legal name. By convention, we use the <c>_</c> as our loop variable when we don't intend to ever refer to the loop variable. That is, we are just trying to repeat the code block some number of times (once for each item in a sequence), but we are not going to do anything with the particular items. <c>_</c> will be bound to a different item each time, but we won't ever refer to those particular items in the code.</p>
+    <p>By contrast, notice that in the previous activecode window, the loop variable is <c>afruit</c>. In that for loop, we <em>do</em> refer to each item, with <c>print(afruit)</c>.</p>
+  </subsection>
+  <subsection xml:id="iteration_iteration-simplifies-our-turtle-program">
+    <title>Iteration Simplifies our Turtle Program</title>
+    <p>Remember the turtle drawings we made earlier? Let's look again at how we can use for loops there!</p>
+    <p>To draw a square we'd like to do the same thing four times &#x2014; move the turtle forward some
+                distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four
+                sides of a square.  This next program does exactly the same thing but, with the help of the for
+                statement, uses just three lines (not including the setup code).  Remember that the for statement
+                will repeat the <c>forward</c> and <c>left</c> four times, one time for each value in the list.</p>
+    <program xml:id="ac6_5_2" interactive="activecode" language="python">
+      <input>
+import turtle            # set up alex
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+for i in [0, 1, 2, 3]:      # repeat four times
+    alex.forward(50)
+    alex.left(90)
+
+wn.exitonclick()
+        </input>
+    </program>
+    <p>While <q>saving some lines of code</q> might be convenient, it is not the big
+                deal here.  What is much more important is that we've found a <q>repeating
+                pattern</q> of statements, and we reorganized our program to repeat the pattern.</p>
+    <p>The values [0,1,2,3] were provided to make the loop body execute 4 times.
+                We could have used any four values.  For example, consider the following program.</p>
+    <program xml:id="ac6_5_3" interactive="activecode" language="python">
+      <input>
+import turtle            # set up alex
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+for aColor in ["yellow", "red", "purple", "blue"]:      # repeat four times
+    alex.forward(50)
+    alex.left(90)
+
+wn.exitonclick()
+        </input>
+    </program>
+    <p>In the previous example, there were four integers in the list.  This time there are four strings.
+                Since there are four items in the list, the iteration will still occur four times.  <c>aColor</c> will
+                take on each color in the list.  We can even take this one step further and use the value of
+                <c>aColor</c> as part of the computation.</p>
+    <program xml:id="ac6_5_4" interactive="activecode" language="python">
+      <input>
+import turtle            # set up alex
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+for aColor in ["yellow", "red", "purple", "blue"]:
+    alex.color(aColor)
+    alex.forward(50)
+    alex.left(90)
+
+wn.exitonclick()
+        </input>
+    </program>
+    <p>In this case, the value of <c>aColor</c> is used to change the color attribute of <c>alex</c>. Each
+                iteration causes <c>aColor</c> to change to the next value in the list.</p>
+    <p>The for-loop is our first example of a <term>compound statement</term>. Syntactically a compound statement
+                is a statement. The level of indentation of a (whole) compound statement is the indentation of its
+                heading. In the example above there are five statements with the same indentation, executed
+                sequentially: the import, 2 assignments, the <em>whole</em> for-loop, and <c>wn.exitonclick()</c>. The
+                for-loop compound statement is executed completely before going on to the next sequential
+                statement, <c>wn.exitonclick()</c>.</p>
+    <p>
+      <term>Check your Understanding</term>
+    </p>
+    <exercise label="question6_5_1">
+      <statement>
+        <p>How many times will the for loop iterate in the following statements?</p>
+        <program language="python">
+          <input>
+p = [3, 4, "Me", 3, [], "Why", 0, "Tell", 9.3]
+for ch in p:
+   print(ch)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>8</p>
+          </statement>
+          <feedback>
+            <p>Iteration by item will process once for each item in the sequence, even the empty list.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>9</p>
+          </statement>
+          <feedback>
+            <p>Yes, there are nine elements in the list so the for loop will iterate nine times.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>15</p>
+          </statement>
+          <feedback>
+            <p>Iteration by item will process once for each item in the sequence. Each string is viewed as a single item, even if you are able to iterate over a string itself.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Error, the for statement needs to use the range function.</p>
+          </statement>
+          <feedback>
+            <p>The for statement can iterate over a sequence item by item.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question6_5_2">
+      <statement>
+        <p>How does python know what statements are contained in the loop body?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>They are indented to the same degree from the loop header.</p>
+          </statement>
+          <feedback>
+            <p>The loop body can have any number of lines, all indented from the loop header.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>There is always exactly one line in the loop body.</p>
+          </statement>
+          <feedback>
+            <p>The loop body may have more than one line.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>The loop body ends with a semi-colon (;) which is not shown in the code above.</p>
+          </statement>
+          <feedback>
+            <p>Python does not need semi-colons in its syntax, but relies mainly on indentation.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question6_5_3">
+      <statement>
+        <p>Consider the following code:</p>
+        <program language="python">
+          <input>
+for aColor in ["yellow", "red", "green", "blue"]:
+   alex.forward(50)
+   alex.left(90)
+</input>
+        </program>
+        <p>What does each iteration through the loop do?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Draw a square using the same color for each side.</p>
+          </statement>
+          <feedback>
+            <p>The question is not asking you to describe the outcome of the entire loop, the question is asking you about the outcome of a **single iteration** of the loop.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Draw a square using a different color for each side.</p>
+          </statement>
+          <feedback>
+            <p>Notice that aColor is never actually used inside the loop.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Draw one side of a square.</p>
+          </statement>
+          <feedback>
+            <p>The body of the loop only draws one side of the square.  It will be repeated once for each item in the list.  However, the color of the turtle never changes.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

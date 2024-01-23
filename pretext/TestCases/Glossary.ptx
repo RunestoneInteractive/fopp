@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>return value test</title>
+      <p>A return value test invokes a function on a particular set of inputs and checks whether the return value is the correct one for those inputs.</p>
+    </gi>
+    <gi>
+      <title>side effect test</title>
+      <p>A side effect test invokes a function or method and then checks whether some object's contents were suitably transformed by the end of the execution of the function or method.</p>
+    </gi>
+    <gi>
+      <title>test case</title>
+      <p>An assertion about the state of the program at particular point in its
+                            execution, such as the type of a variable or of a value returned by a function.</p>
+    </gi>
+  </glossary>
+</section>

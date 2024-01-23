@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Variables, Statements, and Expressions</title>
+        <xi:include href='./intro-VariablesExpressionsandStatements.ptx' />
+        <xi:include href='./Values.ptx' />
+        <xi:include href='./Operators.ptx' />
+        <xi:include href='./FunctionCalls.ptx' />
+        <xi:include href='./DataTypes.ptx' />
+        <xi:include href='./ConvertTypeFunctions.ptx' />
+        <xi:include href='./Variables.ptx' />
+        <xi:include href='./VariableNamesandKeywords.ptx' />
+        <xi:include href='./WPChoosingtheRightVariableName.ptx' />
+        <xi:include href='./StatementsandExpressions.ptx' />
+        <xi:include href='./OrderofOperations.ptx' />
+        <xi:include href='./Reassignment.ptx' />
+        <xi:include href='./UpdatingVariables.ptx' />
+        <xi:include href='./HardCoding.ptx' />
+        <xi:include href='./Input.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./week1a2.ptx' />
+    </chapter>

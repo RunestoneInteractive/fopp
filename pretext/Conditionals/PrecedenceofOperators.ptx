@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<section xml:id="conditionals_precedence-of-operators53_index-0">
+  <title>Precedence of Operators</title>
+  <p>Arithmetic operators take precedence over logical operators. Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <c>x*5 &gt;= 10 and y-6 &lt;= 20</c> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <c>and</c> will be done last.  Many programmers might place parentheses around the two relational expressions, <c>(x*5 &gt;= 10) and (y-6 &lt;= 20)</c>. It is not necessary to do so, but causes no harm and may make it easier for people to read and understand the code.</p>
+  <p>The following table summarizes the operator precedence from highest to lowest.  A complete table for the entire language can be found in the <url href="http://docs.python.org/py3k/reference/expressions.html#expression-lists" visual="http://docs.python.org/py3k/reference/expressions.html#expression-lists">Python Documentation</url>.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Level
+                        </cell>
+        <cell>
+                            Category
+                        </cell>
+        <cell>
+                            Operators
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            7(high)
+                        </cell>
+        <cell>
+                            exponent
+                        </cell>
+        <cell>
+                            **
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            6
+                        </cell>
+        <cell>
+                            multiplication
+                        </cell>
+        <cell>
+                            *,/,//,%
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            5
+                        </cell>
+        <cell>
+                            addition
+                        </cell>
+        <cell>
+                            +,-
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            4
+                        </cell>
+        <cell>
+                            relational
+                        </cell>
+        <cell>
+                            ==,!=,&lt;=,&gt;=,&gt;,&lt;
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            3
+                        </cell>
+        <cell>
+                            logical
+                        </cell>
+        <cell>
+                            not
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            2
+                        </cell>
+        <cell>
+                            logical
+                        </cell>
+        <cell>
+                            and
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            1(low)
+                        </cell>
+        <cell>
+                            logical
+                        </cell>
+        <cell>
+                            or
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <note>
+    <p>This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.</p>
+    <program xml:id="ac7_5_1" interactive="activecode" language="python">
+      <input>
+
+
+        </input>
+    </program>
+  </note>
+  <note>
+    <title>Common Mistake!</title>
+    <p>Students often incorrectly combine the in and or operators. For example, if they want to check
+                that the letter x is inside of either of two variables then they tend to write it the following
+                way: <c>'x' in y or z</c></p>
+    <p>Written this way, the code would not always do what the programmer intended. This is because the
+                <c>in</c> operator is only on the left side of the or statement. It doesn't get implemented on both
+                sides of the or statement. In order to properly check that x is inside of either variable, the in
+                operator must be used on both sides which looks like this:</p>
+    <program language="python">
+      <input>
+'x' in y or 'x' in z
+</input>
+    </program>
+  </note>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question7_5_1">
+    <statement>
+      <p>Which of the following properly expresses the  precedence of operators (using parentheses) in the following expression: 5*3 &gt; 10 and 4+6==11</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>((5*3) &gt; 10) and ((4+6) == 11)</p>
+        </statement>
+        <feedback>
+          <p>Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword "and"</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(5*(3 &gt; 10)) and (4 + (6 == 11))</p>
+        </statement>
+        <feedback>
+          <p>Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>((((5*3) &gt; 10) and 4)+6) == 11</p>
+        </statement>
+        <feedback>
+          <p>This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>((5*3) &gt; (10 and (4+6))) == 11</p>
+        </statement>
+        <feedback>
+          <p>This grouping assumes that "and" has a higher precedence than ==, which is not true.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Here is an animation for the above expression:</p>
+  <exercise runestone="se_ac7_5_1"/>
+</section>

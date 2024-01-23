@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<section xml:id="classes_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ac_ch13_01">
+    <statement>
+      <p>Define a class called <c>Bike</c> that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, <c>color</c> and <c>price</c>. Assign to the variable <c>testOne</c> an instance of <c>Bike</c> whose color is <term>blue</term> and whose price is <term>89.99</term>. Assign to the variable <c>testTwo</c> an instance of Bike whose color is <term>purple</term> and whose price is <term>25.0</term>.</p>
+    </statement>
+    <program xml:id="ac_ch13_01_editor" interactive="activecode" language="python">
+      <input>
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(testOne.color, "blue", "Testing that testOne has the correct color assigned.")
+      self.assertEqual(testOne.price, 89.99, "Testing that testOne has the correct price assigned.")
+
+   def testTwo(self):
+      self.assertEqual(testTwo.color, "purple", "Testing that testTwo has the correct color assigned.")
+      self.assertEqual(testTwo.price, 25.0, "Testing that testTwo has the correct color assigned.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac_ch13_021">
+    <statement>
+      <p>Create a class called <c>AppleBasket</c> whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize two instance variables: <c>apple_color</c> and <c>apple_quantity</c>.  Write a class method called <c>increase</c> that increases the quantity by <c>1</c> each time it is invoked. You should also write a <c>__str__</c> method for this class that returns a string of the format: <c>"A basket of [quantity goes here] [color goes here] apples."</c> e.g. <c>"A basket of 4 red apples."</c> or <c>"A basket of 50 blue apples."</c> (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)</p>
+    </statement>
+    <program xml:id="ac_ch13_021_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      tester = AppleBasket("red",4)
+      self.assertEqual(tester.apple_quantity, 4, "Testing the initialization of the apple_quantity inst var.")
+   def testTwo(self):
+      tester = AppleBasket("red",4)
+      tester.increase()
+      self.assertEqual(tester.apple_quantity, 5, "Testing the increase method")
+   def testThree(self):
+      tester = AppleBasket("green",17)
+      self.assertEqual(tester.__str__(),"A basket of 17 green apples.")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac_ch13_03">
+    <statement>
+      <p>Define a class called <c>BankAccount</c> that accepts the name you want associated with your bank account in a string, and an integer that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: <c>name</c> and <c>amt</c>. Add a string method so that when you print an instance of <c>BankAccount</c>, you see <c>"Your account, [name goes here], has [start_amt goes here] dollars."</c> Create an instance of this class with <c>"Bob"</c> as the name and <c>100</c> as the amount. Save this to the variable <c>t1</c>.</p>
+    </statement>
+    <program xml:id="ac_ch13_03_editor" interactive="activecode" language="python">
+      <input>
+
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(t1.__str__(), "Your account, Bob, has 100 dollars.", "Testing that t1 is assigned to correct value")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

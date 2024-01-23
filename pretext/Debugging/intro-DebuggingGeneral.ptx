@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<section xml:id="debugging_introduction-to-debugging">
+  <title>Introduction to Debugging</title>
+  <p classes="blockquote"><q>The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.</q> &#x200A;&#x2014;&#x200A;Andrew Singer</p>
+  <p>This chapter will spend some time talking about what happens when errors occur as well as how to fix
+            the errors that you will inevitably come across.</p>
+  <p>Before computers became digital, debugging could mean looking for insects impeding the functioning of physical relays as in this somewhat <url href="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html" visual="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html">apocryphal tale</url> about <url href="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper" visual="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper">Admiral Grace Hopper</url>, a pioneer of computer programming.</p>
+  <p>Nowadays, debugging doesn't involve bug guts all over your computer but it can still be just as frustrating. To cope with this frustration, this chapter will present some strategies to help you understand why the program you wrote does not behave as intended.</p>
+  <p>Many people think debugging is some kind of punishment for not being smart enough to write code correctly the first time.  But nobody does that, failure in programming is part of the deal.  Here's a fun video to keep in mind as you learn to program.</p>
+  <video xml:id="c0bsKc4tiuY" youtube="c0bsKc4tiuY" width="auto"/>
+  <p>CC BY&#x2013;NC&#x2013;ND 4.0 International <url href="ted.com" visual="ted.com">Ted.com</url></p>
+  <subsection xml:id="debugging_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>To understand good programming strategies to avoid errors</p>
+        </li>
+        <li>
+          <p>To understand common kinds of exceptions and their likely causes</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="debugging_objectives">
+    <title>Objectives</title>
+    <p>
+      <ul>
+        <li>
+          <p>Given a piece of code identify the Syntax errors based on error messages</p>
+        </li>
+        <li>
+          <p>Given a piece of code find the (ValueError, TypeError, SyntaxError, ParseError, NameError)</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

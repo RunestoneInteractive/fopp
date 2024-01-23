@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_splitting-and-joining-strings">
+  <title>Splitting and Joining Strings</title>
+  <p>Two of the most useful methods on strings involve lists of strings. The <c>split</c> method breaks a string into a list
+            of words. By default, any number of whitespace characters is considered a word boundary.</p>
+  <image source="Sequences/Figures/split_default.gif" width="50%" alt="shows the phrase &quot;leaders and best&quot; being split on spaces"/>
+  <program xml:id="ac5_9_1" interactive="activecode" language="python">
+    <input>
+song = "The rain in Spain..."
+wds = song.split()
+print(wds)
+        </input>
+  </program>
+  <p>An optional argument called a <term>delimiter</term> can be used to specify which characters to use as word boundaries.</p>
+  <image source="Sequences/Figures/split_on_e.jpeg" width="50%" alt="shows example of splitting &quot;leaders and best&quot; on &quot;e&quot;"/>
+  <p>The following example uses the string <c>ai</c> as the delimiter:</p>
+  <program xml:id="ac5_9_2" interactive="activecode" language="python">
+    <input>
+song = "The rain in Spain..."
+wds = song.split('ai')
+print(wds)
+        </input>
+  </program>
+  <p>Notice that the delimiter doesn't appear in the result.</p>
+  <p>The inverse of the <c>split</c> method is <c>join</c>.  You choose a
+            desired <term>separator</term> string, (often called the <em>glue</em>)
+            and join the list with the glue between each of the elements.</p>
+  <image source="Sequences/Figures/join.gif" width="50%" alt="shows process of a &quot;/&quot; separating the words &quot;leaders&quot;, &quot;and&quot;, &quot;best&quot;"/>
+  <program xml:id="ac5_9_3" interactive="activecode" language="python">
+    <input>
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds)
+print(s)
+print(wds)
+
+print("***".join(wds))
+print("".join(wds))
+        </input>
+  </program>
+  <p>The list that you glue together (<c>wds</c> in this example) is not modified.  Also,
+            you can use empty glue or multi-character strings as glue.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="ac5_9_4">
+    <statement>
+      <p>Create a new list of the 6th through 13th elements of <c>lst</c> (eight items in all) and assign it to the variable <c>output</c>.</p>
+    </statement>
+    <program xml:id="ac5_9_4_editor" interactive="activecode" language="python">
+      <input>
+lst = ["swimming", 2, "water bottle", 44, "lollipop", "shine", "marsh", "winter", "donkey", "rain", ["Rio", "Beijing", "London"], [1,2,3], "gold", "bronze", "silver", "mathematician", "scientist", "actor", "actress", "win", "cell phone", "leg", "running", "horse", "socket", "plug", ["Phelps", "le Clos", "Lochte"], "drink", 22, "happyfeet", "penguins"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFour(self):
+      self.assertEqual(output, lst[5:13], "Testing that output value is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ac5_9_5">
+    <statement>
+      <p>Create a variable <c>output</c> and assign to it a list whose elements are the words in the string <c>str1</c>.</p>
+    </statement>
+    <program xml:id="ac5_9_5_editor" interactive="activecode" language="python">
+      <input>
+str1 = "OH THE PLACES YOU'LL GO"
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testSix(self):
+      self.assertEqual(output, ["OH", "THE", "PLACES", "YOU'LL", "GO"], "Testing that output value is assigned to correct value.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>
