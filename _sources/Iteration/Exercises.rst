@@ -47,7 +47,7 @@ Exercises
                 self.assertTrue(re.search('Ouack', self.getOutput()), 'Checking answer.')
                 self.assertTrue(re.search('Pack', self.getOutput()), 'Checking answer.')
                 self.assertTrue(re.search('Quack', self.getOutput()), 'Checking answer.')
-            
+
                 # hardcode check
                 prefixes = ['J','K','L','M','N','Ou','P','Qu']
                 self.assertFalse(re.search(r'('+'|'.join([p+suffix for p in prefixes])+r')', self.getEditorText()), 'Checking for hardcoding')
@@ -58,7 +58,7 @@ Exercises
 
     .. actex:: ex6_11_2
 
-        Get the user to enter some text and print it out in reverse order.
+        Get the user to enter some text and store it in a variable called ``user_input`` then print it out in reverse order.
         ~~~~
 
         ====
@@ -67,7 +67,7 @@ Exercises
         class myTests(TestCaseGui):
             def testOne(self):
                 self.assertTrue(re.search(user_input[::-1], self.getOutput()), 'Checking answer.')
-            
+
         myTests().main()
 
 .. question:: iter_ex_3
@@ -120,7 +120,7 @@ Exercises
                 _seq = [12, 10, 32, 3, 66, 17, 42, 99, 20]
                 _seq.extend(["{:d} +{:d}".format(number, number**2) for number in _seq])
                 _seq = [str(s) for s in _seq]
-    
+
                 output = self.getOutput().split('\n')
                 for expected, line in zip(_seq,output):
                     self.assertTrue(re.search(expected, line), 'Checking line')

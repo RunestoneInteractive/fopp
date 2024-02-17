@@ -22,10 +22,11 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_1
+              :autograde: unittest
 
               Write a function named ``num_test`` that takes a number as input. If the number is greater than 10, the function should return "Greater than 10." If the number is less than 10, the function should return "Less than 10." If the number is equal to 10, the function should return "Equal to 10."
               ~~~~
-              
+
 
               ====
 
@@ -50,6 +51,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_2
+              :autograde: unittest
 
               Write a function that will return the number of digits in an integer.
               ~~~~
@@ -97,10 +99,11 @@ Exercises
 
     .. tabbed:: q3
 
-        .. tab:: Question 
+        .. tab:: Question
 
            .. actex:: ac11_14_3
-      
+              :autograde: unittest
+
               Write a function that reverses its string argument.
               ~~~~
               def reverse(astring):
@@ -130,8 +133,9 @@ Exercises
 
            .. actex:: ac11_14_4
               :nocodelens:
+              :autograde: unittest
 
-              Write a function that mirrors its string argument, 
+              Write a function that mirrors its string argument,
               generating a string containing the original string and the string backwards.
               ~~~~
               def mirror(mystr):
@@ -183,10 +187,11 @@ Exercises
 
     .. tabbed:: q5
 
-        .. tab:: Question 
+        .. tab:: Question
 
            .. actex:: ac11_14_5
               :nocodelens:
+              :autograde: unittest
 
               Write a function that removes all occurrences of a given letter from a string.
               ~~~~
@@ -219,13 +224,13 @@ Exercises
            .. actex:: ac11_14_6
 
               Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Implement a Python function that works like the following:
-   
+
               a. count
               #. in
               #. reverse
               #. index
               #. insert
-              ~~~~ 
+              ~~~~
 
         .. tab:: Answer
 
@@ -281,22 +286,23 @@ Exercises
 
     .. tabbed:: q7
 
-        .. tab:: Question 
+        .. tab:: Question
 
            .. actex:: ac11_14_7
+              :autograde: unittest
 
               Write a function ``replace(s, old, new)`` that replaces all occurences of
               ``old`` with ``new`` in a string ``s``::
-   
+
                  test(replace('Mississippi', 'i', 'I'), 'MIssIssIppI')
-   
+
                  s = 'I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!'
-                 test(replace(s, 'om', 'am'), 
+                 test(replace(s, 'om', 'am'),
                         'I love spam!  Spam is my favorite food.  Spam, spam, spam, yum!')
-   
-                 test(replace(s, 'o', 'a'), 
+
+                 test(replace(s, 'o', 'a'),
                         'I lave spam!  Spam is my favarite faad.  Spam, spam, spam, yum!')
-   
+
               *Hint*: use the ``split`` and ``join`` methods.
               ~~~~
               def replace(s, old, new):
@@ -321,6 +327,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_8
+                :autograde: unittest
 
                 Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
                 ~~~~
@@ -342,9 +349,9 @@ Exercises
                         output = self.getOutput().split('\n')
                         editor = self.getEditorText().split('\n')
                         float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
-                    
+
                         self.assertEqual(largest(lst), max(lst), 'Checking for the list'+ str(lst))
-                        
+
                         # hardcode check
                         self.assertFalse(re.search(r'max', self.getEditorText()), 'Checking for max')
                 myTests().main()
@@ -382,6 +389,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_9
+              :autograde: unittest
 
               Write a function ``sum_of_squares(xs)`` that computes the sum
               of the squares of the numbers in the list ``xs``.  For example,
@@ -409,6 +417,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_10
+              :autograde: unittest
 
               Write a function to count how many odd numbers are in a list.
               ~~~~
@@ -464,6 +473,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_11
+              :autograde: unittest
 
               Sum up all the even numbers in a list.
               ~~~~
@@ -490,6 +500,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_12
+              :autograde: unittest
 
               Sum up all the negative numbers in a list.
               ~~~~
@@ -544,6 +555,7 @@ Exercises
 
             .. actex:: ac11_14_13
                 :nocodelens:
+                :autograde: unittest
 
                 Write a function ``findHypot``.  The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse. (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
                 ~~~~
@@ -570,6 +582,7 @@ Exercises
 
            .. actex:: ac11_14_14
                :nocodelens:
+               :autograde: unittest
 
                Write a function called ``is_even(n)`` that takes an integer as an argument and returns ``True`` if the argument is an **even number** and ``False`` if it is **odd**.
                ~~~~
@@ -596,6 +609,7 @@ Exercises
 
            .. actex:: ac11_14_15
                :nocodelens:
+               :autograde: unittest
 
                Now write the function ``is_odd(n)`` that returns ``True`` when ``n`` is odd and ``False`` otherwise.
                ~~~~
@@ -623,6 +637,7 @@ Exercises
         .. tab:: Question
 
            .. actex:: ac11_14_16
+               :autograde: unittest
 
                Write a function ``is_rightangled`` which, given the length of three sides of a triangle, will determine whether the triangle is right-angled. Assume that the third argument to the function is always the longest side. It will return ``True`` if the triangle is right-angled, or ``False`` otherwise.
 
@@ -630,9 +645,9 @@ Exercises
                so it is not safe to test floating point numbers for equality.
                If a good programmer wants to know whether
                ``x`` is equal or close enough to ``y``, they would probably code it up as
-   
+
                .. sourcecode:: python
-   
+
                    if  abs(x - y) < 0.001:      # if x is approximately equal to y
                        ...
 
