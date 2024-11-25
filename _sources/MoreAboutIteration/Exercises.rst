@@ -30,7 +30,7 @@ Exercises
               ~~~~
 
 
-              =====
+              ====
 
               from unittest.gui import TestCaseGui
 
@@ -55,12 +55,12 @@ Exercises
       Using a while loop, create a list called ``L`` that contains the numbers 0 to 10. (i.e.: Your while loop should initialize a counter variable to 0. On each iteration, the loop should append the current value of the counter variable to ``L`` and then increase the counter by 1. The while loop should stop once the counter variable is greater than 10.)
       ~~~~
 
-      =====
+      ====
 
       from unittest.gui import TestCaseGui
- 
+
       class myTests(TestCaseGui):
- 
+
          def testOne(self):
             self.assertEqual(L, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Testing that L was created correctly.")
 
@@ -195,7 +195,7 @@ Exercises
       Create a while loop that initializes a counter at 0 and will run until the counter reaches 50. If the value of the counter is divisible by 10, append the value to the list, ``tens``.
       ~~~~
 
-      =====
+      ====
 
       from unittest.gui import TestCaseGui
 
@@ -214,7 +214,7 @@ Exercises
       Use a while loop to iterate through the numbers 0 through 35. If a number is divisible by 3, it should be appended to a list called ``three_nums``.
       ~~~~
 
-      =====
+      ====
 
       from unittest.gui import TestCaseGui
 

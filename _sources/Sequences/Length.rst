@@ -62,8 +62,8 @@ Typically, a Python programmer would combine lines 2 and 3 from the above exampl
     lastch = fruit[len(fruit)-1]
 
 
-Though, from what you just learned about using negative indices, using ``fruit[-1]`` would be 
-a more appropriate way to access the last index in a list. 
+Though, from what you just learned about using negative indices, using ``fruit[-1]`` would be
+a more appropriate way to access the last index in a list.
 
 You can still use the ``len`` function to access other predictable indices, like the middle character of a string.
 
@@ -73,8 +73,8 @@ You can still use the ``len`` function to access other predictable indices, like
     midchar = fruit[len(fruit)//2]
     # the value of midchar is "a"
 
-As with strings, the function ``len`` returns the length of a list (the number of items in the list).  
-However, since lists can have items which are themselves sequences (e.g., strings), 
+As with strings, the function ``len`` returns the length of a list (the number of items in the list).
+However, since lists can have items which are themselves sequences (e.g., strings),
 it important to note that ``len`` only returns the top-most length.
 
 .. activecode:: ac5_5_4
@@ -127,7 +127,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

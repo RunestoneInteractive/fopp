@@ -44,16 +44,16 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    Now try rearranging these code fragments to make a function that counts all the *leaf* items in a nested list like nested1 above, the items at the lowest level of nesting (8 of them in nested1).
    -----
    def count_leaves(n):
-   =====
+   ====
        count = 0
-   =====
+   ====
        for L in n:
-   =====
+   ====
            for x in L:
-   =====
+   ====
                count = count + 1
-   =====
-       return count   
+   ====
+       return count
 
 .. activecode:: ac17_4_2
    :language: python
@@ -65,7 +65,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    ~~~~
    info = [['Tina', 'Turner', 1939, 'singer'], ['Matt', 'Damon', 1970, 'actor'], ['Kristen', 'Wiig', 1973, 'comedian'], ['Michael', 'Phelps', 1985, 'swimmer'], ['Barack', 'Obama', 1961, 'president']]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -74,7 +74,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
       def testOne(self):
          self.assertEqual(last_names, ['Turner', 'Damon', 'Wiig', 'Phelps', 'Obama'], "Testing that last_names was created correctly.")
 
-   myTests().main() 
+   myTests().main()
 
 .. activecode:: ac17_4_3
    :language: python
@@ -86,7 +86,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    ~~~~
    L = [['apples', 'bananas', 'oranges', 'blueberries', 'lemons'], ['carrots', 'peas', 'cucumbers', 'green beans'], ['root beer', 'smoothies', 'cranberry juice']]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -95,4 +95,4 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
       def testOne(self):
          self.assertEqual(b_strings, ['bananas', 'blueberries', 'cucumbers', 'green beans', 'root beer', 'cranberry juice'], "Testing that b_strings was created correctly.")
 
-   myTests().main() 
+   myTests().main()

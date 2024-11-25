@@ -33,7 +33,7 @@ Exercises
                for post in blog_posts:
                    total_likes = total_likes + post['Likes']
 
-               =====
+               ====
 
                from unittest.gui import TestCaseGui
 
@@ -69,7 +69,7 @@ Exercises
                for x in food:
                    fifth.append(x[4])
 
-               =====
+               ====
 
                from unittest.gui import TestCaseGui
 

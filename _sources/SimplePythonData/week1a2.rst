@@ -28,7 +28,7 @@ Chapter Assessment
     ~~~~
     xyz = ""
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -58,7 +58,7 @@ Chapter Assessment
 
     # Write your code here!
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 

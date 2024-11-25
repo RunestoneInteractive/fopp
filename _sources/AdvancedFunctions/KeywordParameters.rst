@@ -17,24 +17,24 @@
 Keyword Parameters
 ==================
 
-In the previous section, on :ref:`Optional Parameters <optional_params_chap>` you learned how to define default values 
+In the previous section, on :ref:`Optional Parameters <optional_params_chap>` you learned how to define default values
 for formal parameters, which made it optional to provide values for those parameters when invoking the functions.
 
-In this chapter, you'll see one more way to invoke functions with optional parameters, with keyword-based parameter 
-passing. This is particularly convenient when there are several optional parameters and you want to provide a value for 
+In this chapter, you'll see one more way to invoke functions with optional parameters, with keyword-based parameter
+passing. This is particularly convenient when there are several optional parameters and you want to provide a value for
 one of the later parameters while not providing a value for the earlier ones.
 
-The online official python documentation includes a tutorial on optional 
-parameters which covers the topic quite well. Please read the content 
+The online official python documentation includes a tutorial on optional
+parameters which covers the topic quite well. Please read the content
 there: `Keyword arguments <http://docs.python.org/3/tutorial/controlflow.html#keyword-arguments>`_
 
-Don't worry about the ``def cheeseshop(kind, *arguments, **keywords):`` example. You should be able to get by without 
+Don't worry about the ``def cheeseshop(kind, *arguments, **keywords):`` example. You should be able to get by without
 understanding ``*parameters`` and ``**parameters`` in this course. But do make sure you understand the stuff above that.
 
-The basic idea of passing arguments by keyword is very simple. When invoking a function, inside the parentheses there 
-are always 0 or more values, separated by commas. With keyword arguments, some of the values can be of the form 
-``paramname = <expr>`` instead of just ``<expr>``. Note that when you have ``paramname = <expr>`` in a function 
-definition, it is defining the default value for a parameter when no value is provided in the invocation; when you have 
+The basic idea of passing arguments by keyword is very simple. When invoking a function, inside the parentheses there
+are always 0 or more values, separated by commas. With keyword arguments, some of the values can be of the form
+``paramname = <expr>`` instead of just ``<expr>``. Note that when you have ``paramname = <expr>`` in a function
+definition, it is defining the default value for a parameter when no value is provided in the invocation; when you have
 ``paramname = <expr>`` in the invocation, it is supplying a value, overriding the default for that paramname.
 
 To make it easier to follow the details of the examples in the official python tutorial, you can step through them in CodeLens.
@@ -47,54 +47,54 @@ To make it easier to follow the details of the examples in the official python t
        print("if you put" + str(voltage) + "volts through it.")
        print("-- Lovely plumage, the" +  type)
        print("-- It's " + state + "!")
-       
+
    parrot(1000)                                          # 1 positional argument
    parrot(voltage=1000)                                  # 1 keyword argument
    parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
    parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
    parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
    parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
-   
-As you step through it, each time the function is invoked, make a prediction about what each of the four parameter 
-values will be during execution of lines 2-5. Then, look at the stack frame to see what they actually are during the 
+
+As you step through it, each time the function is invoked, make a prediction about what each of the four parameter
+values will be during execution of lines 2-5. Then, look at the stack frame to see what they actually are during the
 execution.
 
 .. note::
 
-   Note that we have yet another, slightly different use of the = sign here. As a stand-alone, top-level statement, 
-   ``x=3``, the variable x is set to 3. Inside the parentheses that invoke a function, ``x=3`` says that 3 should be 
-   bound to the local variable x in the stack frame for the function invocation. Inside the parentheses of a function 
-   definition, ``x=3`` says that 3 should be the value for x in every invocation of the function where no value is 
+   Note that we have yet another, slightly different use of the = sign here. As a stand-alone, top-level statement,
+   ``x=3``, the variable x is set to 3. Inside the parentheses that invoke a function, ``x=3`` says that 3 should be
+   bound to the local variable x in the stack frame for the function invocation. Inside the parentheses of a function
+   definition, ``x=3`` says that 3 should be the value for x in every invocation of the function where no value is
    explicitly provided for x.
 
 
 Keyword Parameters with .format
 -------------------------------
 
-Earlier you learned how to use the ``format`` method for strings, which allows you to structure strings like 
-fill-in-the-blank sentences. Now that you've learned about optional and keyword parameters, we can introduce a new way to 
+Earlier you learned how to use the ``format`` method for strings, which allows you to structure strings like
+fill-in-the-blank sentences. Now that you've learned about optional and keyword parameters, we can introduce a new way to
 use the ``format`` method.
 
 This other option is to specifically refer to keywords for interpolation values, like below.
 
 .. activecode:: ac15_2_1
- 
+
    names_scores = [("Jack",[67,89,91]),("Emily",[72,95,42]),("Taylor",[83,92,86])]
    for name, scores in names_scores:
        print("The scores {nm} got were: {s1},{s2},{s3}.".format(nm=name,s1=scores[0],s2=scores[1],s3=scores[2]))
 
 
-Sometimes, you may want to use the ``.format`` method to insert the same value into a string 
-multiple times. You can do this by simply passing the same string into the format method, 
-assuming you have included ``{}`` s in the string everywhere you want to interpolate them. But 
-you can also use positional passing references to do this! The order in which you pass 
-arguments into the ``format`` method matters: the first one is argument ``0``, the second is 
+Sometimes, you may want to use the ``.format`` method to insert the same value into a string
+multiple times. You can do this by simply passing the same string into the format method,
+assuming you have included ``{}`` s in the string everywhere you want to interpolate them. But
+you can also use positional passing references to do this! The order in which you pass
+arguments into the ``format`` method matters: the first one is argument ``0``, the second is
 argument ``1``, and so on.
 
 For example,
 
 .. activecode:: ac15_2_2
- 
+
    # this works
    names = ["Jack","Jill","Mary"]
    for n in names:
@@ -123,15 +123,15 @@ For example,
    :practice: T
 
    What value will be printed for z?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
       initial = 7
       def f(x, y = 3, z = initial):
           print("x, y, z are:", x, y, z)
-      
-      f(2, 5) 
-         
+
+      f(2, 5)
+
 .. mchoice:: question15_2_2
    :answer_a: 2
    :answer_b: 3
@@ -140,22 +140,22 @@ For example,
    :answer_e: Runtime error since no value is provided for y, which comes before z
    :correct: b
    :feedback_a: 2 is bound to x, not y
-   :feedback_b: 3 is the default value for y, and no value is specified for y, 
+   :feedback_b: 3 is the default value for y, and no value is specified for y,
    :feedback_c: say what?
    :feedback_d: 10 is the second value passed, but it is bound to z, not y.
    :feedback_e: That's the beauty of passing parameters with keywords; you can skip some parameters and they get their default values.
    :practice: T
 
    What value will be printed for y?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
       initial = 7
       def f(x, y = 3, z = initial):
           print("x, y, z are:", x, y, z)
-      
+
       f(2, z = 10)
-           
+
 .. mchoice:: question15_2_3
    :answer_a: 2
    :answer_b: 3
@@ -164,22 +164,22 @@ For example,
    :answer_e: Runtime error since two different values are provided for x
    :correct: e
    :feedback_a: 2 is bound to x since it's the first value, but so is 5, based on keyword.
-   :feedback_b: 
+   :feedback_b:
    :feedback_c: 5 is bound to x by keyword, but 2 is also bound to it by virtue of being the value and not having a keyword. In the online environment, it actually allows this, but not in a proper python interpreter.
-   :feedback_d: 
+   :feedback_d:
    :feedback_e: 2 is bound to x since it's the first value, but so is 5, based on keyword.
    :practice: T
 
    What value will be printed for x?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
       initial = 7
       def f(x, y = 3, z = initial):
           print("x, y, z are:", x, y, z)
-      
-      f(2, x=5) 
-   
+
+      f(2, x=5)
+
 .. mchoice:: question15_2_4
    :answer_a: 2
    :answer_b: 7
@@ -193,8 +193,8 @@ For example,
    :practice: T
 
    What value will be printed for z?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
       initial = 7
       def f(x, y = 3, z = initial):
@@ -215,8 +215,8 @@ For example,
    :practice: T
 
    What value will be printed below?
-   
-   .. code-block:: python 
+
+   .. code-block:: python
 
       names = ["Alexey", "Catalina", "Misuki", "Pablo"]
       print("'{first}!' she yelled. 'Come here, {first}! {f_one}, {f_two}, and {f_three} are here!'".format(first = names[1], f_one = names[0], f_two = names[2], f_three = names[3]))
@@ -230,7 +230,7 @@ For example,
    ~~~~
    def multiply():
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -253,7 +253,7 @@ For example,
        final_string = var + " " + marble + " " + mar
        return final_string
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

@@ -34,7 +34,7 @@ Chapter Assessment
    :topics: Sequences/ConcatenationandRepetition
 
    What will the output be for the following code?
-  
+
    .. sourcecode:: python
 
     let = "z"
@@ -54,7 +54,7 @@ Chapter Assessment
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
     import re
@@ -64,7 +64,7 @@ Chapter Assessment
       def test_output(self):
          self.assertEqual(last, ['curling', 'ping pong', 'hockey'], "Testing that the value of last is the last three items in sports.")
          self.assertTrue(re.search(r'last\s*=\s*\S*3:', self.getEditorText()), "Hardcode check")
-        
+
 
     myTests().main()
 
@@ -82,7 +82,7 @@ Chapter Assessment
     qy = "keep it up!"
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -95,7 +95,7 @@ Chapter Assessment
         self.assertEqual(qy, 'keep it up!', "Testing original variables.")
         self.assertEqual(message, 'You are doing a great job, keep it up!', "Testing that the value of message is what was expected.")
         self.assertNotIn("You are doing a great job, keep it up!", self.getEditorText(), "Testing for hardcoding (Don't worry about actual and expected values).")
-        
+
 
     myTests().main()
 
@@ -104,7 +104,7 @@ Chapter Assessment
    :answer_b: ['world', 'travel', 'lights']
    :answer_c: ['travel', 'lights']
    :answer_d: ['world', 'travel']
-   :correct: c 
+   :correct: c
    :feedback_a: When we take a slice of something, it includes the item at the first index and excludes the item at the second index.
    :feedback_b: When we take a slice of something, it includes the item at the first index and excludes the item at the second index. Additionally, Python is a zero-index based language.
    :feedback_c: Yes, python is a zero-index based language and slices are inclusive of the first index and exclusive of the second.
@@ -113,9 +113,9 @@ Chapter Assessment
    :topics: Sequences/TheSliceOperator
 
    What will the output be for the following code?
-   
+
    .. sourcecode:: python
-   
+
     ls = ['run', 'world', 'travel', 'lights', 'moon', 'baseball', 'sea']
     new = ls[2:4]
     print(new)
@@ -134,7 +134,7 @@ Chapter Assessment
    :topics: Sequences/TheSliceOperator
 
    What is the type of ``m``?
-   
+
    .. sourcecode:: python
 
     l = ['w', '7', 0, 9]
@@ -154,7 +154,7 @@ Chapter Assessment
    :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
 
    What is the type of ``m``?
-   
+
    .. sourcecode:: python
 
     l = ['w', '7', 0, 9]
@@ -174,7 +174,7 @@ Chapter Assessment
    :topics: Sequences/SplitandJoin
 
    What is the type of ``x``?
-   
+
    .. sourcecode:: python
 
     b = "My, what a lovely day"
@@ -194,7 +194,7 @@ Chapter Assessment
    :topics: Sequences/SplitandJoin
 
    What is the type of ``a``?
-   
+
    .. sourcecode:: python
 
     b = "My, what a lovely day"
@@ -214,7 +214,7 @@ Chapter Assessment
     nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
     import re
@@ -239,7 +239,7 @@ Chapter Assessment
     nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
     import re
@@ -257,12 +257,12 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
    :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
-   
+
    Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
    ~~~~
    lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
    import re
@@ -280,16 +280,16 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
    :topics: Sequences/Length
-   
+
    Assign the number of elements in ``lst`` to the variable ``num_lst``.
    ~~~~
    lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
    import re
-   
+
    class myTests(TestCaseGui):
 
       def testOne(self):
@@ -308,7 +308,7 @@ Chapter Assessment
    ~~~~
    sent = "The bicentennial for our university was in 2017"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
    import re

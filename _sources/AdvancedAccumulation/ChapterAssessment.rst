@@ -25,7 +25,7 @@ Chapter Assessment
    ~~~~
    lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -52,7 +52,7 @@ Chapter Assessment
    ~~~~
    countries = ['Canada', 'Mexico', 'Brazil', 'Chile', 'Denmark', 'Botswana', 'Spain', 'Britain', 'Portugal', 'Russia', 'Thailand', 'Bangladesh', 'Nigeria', 'Argentina', 'Belarus', 'Laos', 'Australia', 'Panama', 'Egypt', 'Morocco', 'Switzerland', 'Belgium']
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -79,7 +79,7 @@ Chapter Assessment
    ~~~~
    people = [('Snow', 'Jon'), ('Lannister', 'Cersei'), ('Stark', 'Arya'), ('Stark', 'Robb'), ('Lannister', 'Jamie'), ('Targaryen', 'Daenerys'), ('Stark', 'Sansa'), ('Tyrell', 'Margaery'), ('Stark', 'Eddard'), ('Lannister', 'Tyrion'), ('Baratheon', 'Joffrey'), ('Bolton', 'Ramsey'), ('Baelish', 'Peter')]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -92,7 +92,7 @@ Chapter Assessment
          self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
-   myTests().main() 
+   myTests().main()
 
 
 .. activecode:: ac21_7_4
@@ -106,7 +106,7 @@ Chapter Assessment
    ~~~~
    lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -118,7 +118,7 @@ Chapter Assessment
          self.assertNotIn('filter(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-      
+
    myTests().main()
 
 .. activecode:: ac21_7_5
@@ -132,7 +132,7 @@ Chapter Assessment
    ~~~~
    students = [('Tommy', 95), ('Linda', 63), ('Carl', 70), ('Bob', 100), ('Raymond', 50), ('Sue', 75)]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -145,7 +145,7 @@ Chapter Assessment
          self.assertNotIn('sum(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertNotIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
-   myTests().main() 
+   myTests().main()
 
 .. activecode:: ac21_7_6
    :language: python
@@ -156,11 +156,11 @@ Chapter Assessment
 
    Write code using zip and filter so that these lists (l1 and l2) are combined into one big list and assigned to the variable ``opposites`` if they are both longer than 3 characters each.
    ~~~~
-   
+
    l1 = ['left', 'up', 'front']
    l2 = ['right', 'down', 'back']
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -189,7 +189,7 @@ Chapter Assessment
 
    population = [10000, 90000, 1000, 2000000, 500000, 500, 1200, 8000, 12000, 2300, 7500, 100, 1800, 9500, 125000]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -197,9 +197,9 @@ Chapter Assessment
 
       def testOne(self):
          self.assertEqual(pop_info, [('golden retriever', 10000), ('white tailed deer', 90000), ('black rhino', 1000), ('brown squirrel', 2000000), ('field mouse', 500000), ('orangutan', 500), ('sumatran elephant', 1200), ('rainbow trout', 8000), ('black bear', 12000), ('blue whale', 2300), ('water moccasin', 7500), ('giant panda', 100), ('green turtle', 1800), ('blue jay', 9500), ('japanese beetle', 125000)], "Testing that pop_info was created correctly.")
-      def testTwo(self): 
+      def testTwo(self):
          self.assertEqual(endangered, ['black rhino', 'orangutan', 'sumatran elephant', 'blue whale', 'giant panda', 'green turtle'], "Testing that endangered was created correctly.")
       def testThree(self):
          self.assertIn('zip(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
-   myTests().main()   
+   myTests().main()

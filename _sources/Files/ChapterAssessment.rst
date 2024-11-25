@@ -36,7 +36,7 @@ Chapter Assessment
    The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -57,7 +57,7 @@ Chapter Assessment
    We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -79,7 +79,7 @@ Chapter Assessment
    Assign to the variable ``num_lines`` the number of lines in the file ``school_prompt.txt``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -101,7 +101,7 @@ Chapter Assessment
    Assign the first 30 characters of ``school_prompt.txt`` as a string to the variable ``beginning_chars``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -111,7 +111,7 @@ Chapter Assessment
          self.assertEqual(len(beginning_chars), 30, "Testing that beginning_chars has the correct length.")
          self.assertEqual(beginning_chars, "Writing essays for school can ", "Testing that beginning_chars has the correct string.")
 
-   myTests().main()   
+   myTests().main()
 
 
 .. activecode:: ac9_10_5
@@ -124,7 +124,7 @@ Chapter Assessment
    **Challenge:** Using the file ``school_prompt.txt``, assign the third word of every line to a list called ``three``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -134,7 +134,7 @@ Chapter Assessment
          self.assertEqual(three, ['for', 'find', 'to', 'many', 'they', 'solid', 'for', 'have', 'some', 'ups,'], "Testing that three has the correct value.")
 
    myTests().main()
- 
+
 
 .. activecode:: ac9_10_6
    :language: python
@@ -146,7 +146,7 @@ Chapter Assessment
    **Challenge:** Create a list called ``emotions`` that contains the first word of every line in ``emotion_words.txt``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -155,7 +155,7 @@ Chapter Assessment
       def testOne(self):
          self.assertEqual(emotions, ['Sad', 'Angry', 'Happy', 'Confused', 'Excited', 'Scared', 'Nervous'], "Testing that emotions was created correctly.")
 
-   myTests().main() 
+   myTests().main()
 
 
 .. activecode:: ac9_10_7
@@ -168,7 +168,7 @@ Chapter Assessment
    Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -190,7 +190,7 @@ Chapter Assessment
    **Challenge:** Using the file ``school_prompt.txt``, if the character 'p' is in a word, then add the word to a list called ``p_words``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -214,7 +214,7 @@ Chapter Assessment
 
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

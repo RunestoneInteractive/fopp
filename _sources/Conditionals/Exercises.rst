@@ -6,7 +6,7 @@
     Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
     the license is included in the section entitled "GNU Free Documentation
     License".
-    
+
 :skipreading:`True`
 
 .. qnum::
@@ -25,9 +25,9 @@ Exercises
             .. actex:: ac7_14_1
 
                 Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
-            
+
                 .. table::
-            
+
                     =======   =====
                     Score     Grade
                     =======   =====
@@ -37,7 +37,7 @@ Exercises
                     [60-70)   D
                     < 60      F
                     =======   =====
-            
+
                 The square and round brackets denote closed and open intervals.
                 A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.
                 ~~~~
@@ -65,7 +65,7 @@ Exercises
                                 _grades.append('D')
                             else:
                                 _grades.append('F')
-                    
+
                         self.assertEqual(grades, _grades)
                         # hardcode check
                         # LOOK FOR IF STATEMENTS
@@ -76,21 +76,21 @@ Exercises
                         inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
                         inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
                         self.assertTrue(len(outer_ifs)==0 and len(outer_elifs)==0 and len(outer_elses)==0 and
-                                        len(inner_ifs)==1 and len(inner_elifs)==3 and len(inner_elses)==1, 
+                                        len(inner_ifs)==1 and len(inner_elifs)==3 and len(inner_elses)==1,
                                 'Checking if-statements')
                         # LOOK FOR for STATEMENTS
                         outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
                         inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
                         self.assertTrue(len(outer_loops)==1 and len(inner_loops)==0, 'Checking for-statements')
                 myTests().main()
-           
+
         .. tab:: Answer
 
             .. activecode:: ans7_14_1
-            
+
                sc = input("Enter a score from 0 to 100 (decimal points are allowed)")
                fl_sc = float(sc)
-               
+
                if fl_sc < 60:
                    gr = "F"
                elif fl_sc < 70:
@@ -101,9 +101,9 @@ Exercises
                    gr = "B"
                else:
                    gr = "A"
-               
+
                print("Score", fl_sc, "gets a grade of", gr)
-                 
+
 
 #.
 
@@ -114,27 +114,27 @@ Exercises
            .. actex:: ac7_14_2
 
                 A year is a **leap year** if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400 then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
-        
+
                 .. table::
-        
+
                     =======  =====
                     Year     Leap?
                     =======  =====
                     1944     True
                     2011     False
                     1986     False
-                    1800     False     
+                    1800     False
                     1900     False
                     2000     True
                     2056     True
                     =======  =====
-                    
+
                 Above are some examples of what the output should be for various inputs.
                 ~~~~
                 years = [1967, 1900, 1400, 1628, 1701, 1217, 1359, 1300, 2000, 1054,
                 1724, 1000, 1800, 1100, 2100, 1023, 1600, 1500, 1358, 1160,
                 1700, 1744, 2009, 1200]
-    
+
                 ====
                 from unittest.gui import TestCaseGui
                 import re
@@ -144,7 +144,7 @@ Exercises
                         output = self.getOutput().split('\n')
                         editor = self.getEditorText().split('\n')
                         float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
-                    
+
                         _is_leap_year = []
                         for _year in years:
                             if _year % 4 == 0 :
@@ -154,9 +154,9 @@ Exercises
                                     _is_leap_year.append(True)
                             else:
                                 _is_leap_year.append(False)
-                        
+
                         self.assertEqual(is_leap_year, _is_leap_year, 'Checking answer')
-                        
+
                         # hardcode check
                         float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
                         print_float_re = r'print\( *'+float_re+' *\)'
@@ -186,16 +186,16 @@ Exercises
             .. actex:: ac7_14_3
 
                 What do these expressions evaluate to?
-            
+
                 #.  ``3 == 3``
                 #.  ``3 != 3``
                 #.  ``3 >= 4``
                 #.  ``not (3 < 4)``
-                ~~~~        
-        
+                ~~~~
+
 
         .. tab:: Answer
-            
+
             #. True
             #. False
             #. False
@@ -210,8 +210,8 @@ Exercises
 
             .. actex:: ac7_14_4
 
-                Give the **logical opposites** of these conditions, meaning an expression that would 
-                produce False whenever this expression produces True, and vice versa.  You are not 
+                Give the **logical opposites** of these conditions, meaning an expression that would
+                produce False whenever this expression produces True, and vice versa.  You are not
                 allowed to use the ``not`` operator.
 
                 #.  ``a > b``
@@ -300,8 +300,8 @@ Exercises
                        inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
                        inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
                        self.assertTrue(len(outer_ifs)==0 and len(outer_elifs)==0 and len(outer_elses)==0 and len(inner_ifs)==1 and len(inner_elifs)==0 and len(inner_elses)==1, 'Checking if-statements')
-                       
-               myTests().main() 
+
+               myTests().main()
 
 #.
    .. tabbed:: q8
@@ -316,12 +316,12 @@ Exercises
                 so it is not safe to test floating point numbers for equality.
                 If a good programmer wants to know whether
                 ``x`` is equal or close enough to ``y``, they would probably code it up as
-                
+
                 .. sourcecode:: python
-                
+
                     if  abs(x - y) < 0.001:      # if x is approximately equal to y
                         ...
-                
+
                 ~~~~
                 a = 5
                 b = 6
@@ -336,7 +336,7 @@ Exercises
                         output = self.getOutput().split('\n')
                         editor = self.getEditorText().split('\n')
                         float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
-                
+
                         _is_rightangled = False
                         if abs(a**2 + b**2 - c**2) < 1e-7:
                             _is_rightangled = True
@@ -344,9 +344,9 @@ Exercises
                             _is_rightangled = True
                         elif abs(-a**2 + b**2 + c**2) < 1e-7:
                             _is_rightangled = True
-                
+
                         self.assertEqual(is_rightangled, _is_rightangled, 'Checking answer')
-                
+
                         # hardcode check
                         float_re = r'[-+]?(\d+(\.\d*)?|\.\d+)([eE][-+]?\d+)?'
                         print_float_re = r'print\( *'+float_re+' *\)'
@@ -359,14 +359,14 @@ Exercises
                         inner_elifs = re.findall(r'^( +elif[ (].*: *)$', self.getEditorText(), re.M)
                         inner_elses = re.findall(r'^( +else *: *)$', self.getEditorText(), re.M)
                         self.assertTrue(len(outer_ifs)>=1 and len(outer_elifs)>=0 and len(outer_elses)>=0 and
-                                        len(inner_ifs)>=0 and len(inner_elifs)>=0 and len(inner_elses)>=0, 
+                                        len(inner_ifs)>=0 and len(inner_elifs)>=0 and len(inner_elses)>=0,
                                 'Checking if-statements')
                         # LOOK FOR for STATEMENTS
                         outer_loops = re.findall(r'^(for[ (].* in.*: *)$', self.getEditorText(), re.M)
                         inner_loops = re.findall(r'^( +for[ (].* in.*: *)$', self.getEditorText(), re.M)
                         self.assertTrue(len(outer_loops)>=0 and len(inner_loops)>=0, 'Checking for-statements')
                 myTests().main()
-                
+
 #.
 
    .. tabbed:: q9
@@ -376,25 +376,25 @@ Exercises
             .. actex:: ac7_14_9
 
                Implement the calculator for the date of Easter.
-   
+
                The following algorithm computes the date for Easter Sunday for any year between 1900 to 2099.
-   
+
                Ask the user to enter a year.
                Compute the following:
-   
-   
-   
+
+
+
                    1. a = year % 19
                    #. b = year % 4
                    #. c = year % 7
                    #. d = (19 * a + 24) % 30
                    #. e = (2 * b + 4 * c + 6 * d + 5) % 7
                    #. dateofeaster = 22 + d + e
-   
-   
+
+
                Special note: The algorithm can give a date in April.  You will know that the date is in April if the calculation gives you an answer greater than 31.  (You'll need to adjust)  Also, if the year is one of four special
                years (1954, 1981, 2049, or 2076) then subtract 7 from the date.
-   
+
                Your program should print an error message if the user provides a date that is out of range.
                ~~~~
 
@@ -445,17 +445,17 @@ Exercises
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
       -----
       students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
-      =====
+      ====
       num_students = 0
-      =====
+      ====
       for student in students:
-      =====
+      ====
           print("Welcome to class, " + student)
           num_students += 1
-      =====
+      ====
           if num_students == 1:
               print("The first student has entered!")
-      =====
+      ====
           elif num_students > 1:
               print("There are " + str(num_students) + " students in the classroom!")
 
@@ -466,12 +466,12 @@ Exercises
       Piece together a program so that it can successfully print out one print statement, given the value of x.
       -----
       x = 16
-      =====
+      ====
       if x > 10:
-      =====
+      ====
           if x > 20:
               print("This is a large number!")
-      =====
+      ====
           else:
               print("This is a pretty big number.")
 

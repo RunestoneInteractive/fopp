@@ -81,8 +81,8 @@ The code below causes an error of type IndexError, by trying to access the third
 
    items = ['a', 'b']
    third = items[2]
-   
-   
+
+
 The code below causes an error of type ZeroDivisionError, or less specifically ArithmeticError.
 
 .. activecode:: exceptions_2
@@ -95,47 +95,47 @@ Let's see what happens if we wrap some of this problematic code in a try/except 
 
 .. activecode:: exceptions_3
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except Exception:
        print("got an error")
-   
+
    print("continuing")
 
- 
-If we catch only IndexEror, and we actually have a divide by zero error, the program does stop executing.   
-   
+
+If we catch only IndexEror, and we actually have a divide by zero error, the program does stop executing.
+
 .. activecode:: exceptions_4
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except IndexError:
        print("error 1")
-      
+
    print("continuing")
-   
+
    try:
        x = 5
        y = x/0
        print("This won't print, either")
    except IndexError:
        print("error 2")
-       
-       
+
+
    print("continuing again")
-   
-   
+
+
 There's one other useful feature. The exception code can access a variable that contains information about exactly what the error was. Thus, for example, in the except clause you could print out the information that would normally be printed as an error message but continue on with execution of the rest of the program. To do that, you specify a variable name after the exception class that's being handled. The exception clause code can refer to that variable name.
 
 .. activecode:: exceptions_5
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
@@ -143,7 +143,7 @@ There's one other useful feature. The exception code can access a variable that 
    except Exception as e:
        print("got an error")
        print(e)
-   
+
    print("continuing")
 
 
@@ -157,9 +157,9 @@ There's one other useful feature. The exception code can access a variable that 
    :feedback_b: Run-time errors like index out of bounds can be caught and handled gracefully with try/except.
    :feedback_c: If your program runs to completion but does the wrong thing, try/except won't help you.
    :correct: b
-   
+
    Which type of error can be noticed and handled using try/except?
-   
+
 .. mchoice:: exceptions_mc_2
    :answer_a: True
    :answer_b: False
@@ -184,7 +184,7 @@ There's one other useful feature. The exception code can access a variable that 
    :answer_b: 1
    :answer_c: 3
    :answer_d: 4
-   :answer_e: 5  
+   :answer_e: 5
    :feedback_a: Try i = 0; that should print out .3333
    :feedback_b: Keep trying.
    :feedback_c: When i=3, it will no longer be able to pring 1.0/ (3-i), but it will still print one more line in the except clause.
@@ -194,9 +194,9 @@ There's one other useful feature. The exception code can access a variable that 
    :practice: T
 
    How many lines will print out when the following code is executed?
-   
+
    .. sourcecode:: python
-   
+
       try:
           for i in range(5):
               print(1.0 / (3-i))
@@ -219,7 +219,7 @@ There's one other useful feature. The exception code can access a variable that 
        elif tup[2] == 'Will not pass':
            passing['Will not pass'] += 1
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -235,17 +235,17 @@ There's one other useful feature. The exception code can access a variable that 
    :practice: T
    :autograde: unittest
 
-   6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four. 
+   6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four.
    ~~~~
    nums = [5, 9, '4', 3, 2, 1, 6, 5, '7', 4, 3, 2, 6, 7, 8, '0', 3, 4, 0, 6, 5, '3', 5, 6, 7, 8, '3', '1', 5, 6, 7, 9, 3, 2, 5, 6, '9', 2, 3, 4, 5, 1]
 
    plus_four = []
 
-   for num in nums: 
+   for num in nums:
        plus_four.append(num+4)
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

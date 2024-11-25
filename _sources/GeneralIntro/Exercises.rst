@@ -20,7 +20,7 @@ Chapter Assessment
 
 .. mchoice:: assess_question1_1_1
    :answer_a: Because computers are better at solving problems.
-   :answer_b: So that you don't have to solve the problem yourself. 
+   :answer_b: So that you don't have to solve the problem yourself.
    :answer_c: So that you have a general solution to a problem.
    :answer_d: Because you need a set of instructions to follow.
    :feedback_a: Computers aren't necessarily better at solving problems, though often they can be quicker than humans. Additionally, algorithms can be used to solve non-computer related problems.
@@ -40,7 +40,7 @@ Chapter Assessment
     Write code to print out the phrase "Hello World".
     ~~~~
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 

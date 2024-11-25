@@ -116,7 +116,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    ~~~~
    ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -142,7 +142,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
 
    nums_sorted =
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -167,7 +167,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
 
    nums_sorted_lambda =
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

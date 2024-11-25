@@ -22,12 +22,12 @@ letters are used most frequently in English.
 Suppose we had a reasonably long text that we thought was representative of general English
 usage. For our purposes in the this chapter, we will use the text of the Sherlock Holmes story,
 "A Study in Scarlet", by Sir Arthur Conan Doyle. The text actually includes a few
-lines about the source of the transcription (Project Gutenberg), but those will not 
+lines about the source of the transcription (Project Gutenberg), but those will not
 materially affect our analyses so we will just leave them in. You can access this text
 within this chapter with the code ``open('scarlet.txt', 'r')``.
 
 .. raw:: html
-   
+
    <div class="alert alert-info">
    <p>As with other files that we access in this textbook environment, this one is actually pre-loaded in your browser, not retrieved from your computer's file system. That's why this chapter may be a little slower to load than others. You can view the text of "A Study in Scarlet" at the bottom of the page.</p>
    </div>
@@ -44,7 +44,7 @@ in a count variable.
    for c in txt:
        if c == 't':
            t_count = t_count + 1   #increment the counter
-   print("t: " + str(t_count) + " occurrences")  
+   print("t: " + str(t_count) + " occurrences")
 
 We can accumulate counts for more than one character as we traverse the text.
 Suppose, for example, we wanted to compare the counts of 't' and 's' in the text.
@@ -61,16 +61,16 @@ Suppose, for example, we wanted to compare the counts of 't' and 's' in the text
            t_count = t_count + 1   #increment the t counter
        elif c == 's':
            s_count = s_count + 1
-   print("t: " + str(t_count) + " occurrences") 
+   print("t: " + str(t_count) + " occurrences")
    print("s: " + str(s_count) + " occurrences")
-   
+
 OK, but you can see this is going to get tedious if we try to accumulate counts
 for all the letters. We will have to initialize a lot of accumulators, and there will
 be a very long if..elif..elif statement. Using a dictionary, we can do a lot better.
 
 One dictionary can hold all of the accumulator variables. Each key in the dictionary
 will be one letter, and the corresponding value will be the count so far of how
-many times that letter has occurred. 
+many times that letter has occurred.
 
 .. activecode:: ac10_5_3
 
@@ -91,7 +91,7 @@ many times that letter has occurred.
 
 In the example above, we've created a dictionary, ``letter_counts``, to hold the letters 't'
 and 'c', with their associated counts. This hasn't really improved things yet, but look closely at lines 8-11 in the code above.
-Whichever character we're seeing, t or s, we're incrementing the counter for that 
+Whichever character we're seeing, t or s, we're incrementing the counter for that
 character. So lines 9 and 11 could really be the same, if we make one small change:
 
 .. activecode:: ac10_5_4
@@ -111,20 +111,20 @@ character. So lines 9 and 11 could really be the same, if we make one small chan
    print("t: " + str(letter_counts['t']) + " occurrences")
    print("s: " + str(letter_counts['s']) + " occurrences")
 
-Lines 9 and 11 above may seem a little confusing at first. Previously, our assignment 
-statements referred directly to keys, with ``letter_counts['s']`` and ``letter_counts['t']``. Here we 
+Lines 9 and 11 above may seem a little confusing at first. Previously, our assignment
+statements referred directly to keys, with ``letter_counts['s']`` and ``letter_counts['t']``. Here we
 are just using a variable ``c`` whose value is 's' or 't', or some other character.
 
-If that made perfect sense to you, skip the next two paragraphs. Otherwise, read on. 
-Let's break down that line in a little more detail. 
+If that made perfect sense to you, skip the next two paragraphs. Otherwise, read on.
+Let's break down that line in a little more detail.
 
 First, note that, as with all
 assignment statements, the right side is evaluated first. In this case ``letter_counts[c]`` has to be
 evaluated. As with all expressions, we first have to substitute values for variable names.
 ``letter_counts`` is a variable bound to a dictionary. ``c`` is a variable bound to one letter from the
-string that ``txt`` is bound to (that's what the for statement says to do: 
-execute lines 8-11 once for each character in txt, with the variable c bound to the current character 
-on each iteration.) So, let's suppose that the current character is the letter ``s`` (we are on line 11). 
+string that ``txt`` is bound to (that's what the for statement says to do:
+execute lines 8-11 once for each character in txt, with the variable c bound to the current character
+on each iteration.) So, let's suppose that the current character is the letter ``s`` (we are on line 11).
 Then ``letter_counts[c]`` looks up the value associated with the key 's' in the dictionary ``letter_counts``. If all is working correctly, that value should be the number of times 's' has previously occurred. For the sake of argument, suppose it's 25. Then
 the right side evaluates to 25 + 1, 26. Watch this play out below.
 
@@ -149,13 +149,13 @@ the right side evaluates to 25 + 1, 26. Watch this play out below.
            letter_counts['s'] = {{25 + 1}}{{26}}   # increment the s counter
 
 
-Now we have assigned the value 26 to ``letter_counts[c]``. That is, in dictionary x, we set the value associated with the 
+Now we have assigned the value 26 to ``letter_counts[c]``. That is, in dictionary x, we set the value associated with the
 key 's' (the current value of the variable c) to be 26. In other words, we have incremented the value associated with
 the key 's' from 25 to 26.
 
 We can do better still. One other nice thing about using a dictionary is that we don't have to prespecify
 what all the letters will be. In this case, we know in advance what the alphabet for
-English is, but later in the chapter we will count the occurrences of words, and 
+English is, but later in the chapter we will count the occurrences of words, and
 we do not know in advance all the of the words that may be used. Rather than pre-specifying
 which letters to keep accumulator counts for, we can start with an empty dictionary and
 add a counter to the dictionary each time we encounter a new thing that we want to
@@ -173,7 +173,7 @@ start keeping count of.
        if c not in letter_counts:
            # we have not seen this character before, so initialize a counter for it
            letter_counts[c] = 0
-      
+
        #whether we've seen it before or not, increment its counter
        letter_counts[c] = letter_counts[c] + 1
 
@@ -182,7 +182,7 @@ start keeping count of.
 
 Notice that in the for loop, we no longer need to explicitly ask whether the current
 letter is an 's' or 't'. The increment step on line 11 works for the counter
-associated with whatever the current character is. Our code is now accumulating 
+associated with whatever the current character is. Our code is now accumulating
 counts for all letters, not just 's' and 't'.
 
 As a final refinement, consider replacing lines 5-11 above with this for loop::
@@ -203,15 +203,15 @@ then incremented.
    :answer_c: print(letter_counts[e] > letter_counts[t])
    :answer_d: print(letter_counts[c] > txt[c])
    :answer_e: print(e[letter_counts] > t[letter_counts])
-   :feedback_a: txt is the variable that has the original text, not the dictionary of counts.   
+   :feedback_a: txt is the variable that has the original text, not the dictionary of counts.
    :feedback_b: letter_counts is the dictionary of counts; you want to compare the values associated with 'e' and 't'.
-   :feedback_c: letter_counts is the dictionary of counts, but you don't want to evaluate e and t as variables in order to determine which keys to look up in the dictionary. 
+   :feedback_c: letter_counts is the dictionary of counts, but you don't want to evaluate e and t as variables in order to determine which keys to look up in the dictionary.
    :feedback_d: It seems like maybe you're guessing. Please review the material above and then try again.
    :feedback_e: It seems like you've reversed things. The variable that refers to the dictionary goes outside the square brackets; the key you're looking up goes inside.
    :correct: b
 
    Consider example ac10_5_5 above. After the program runs, which of the following will print out True if there are more
-   occurrences of *e* than *t* in the text of "A Study in Scarlet," and False if *t* occurred more frequently? 
+   occurrences of *e* than *t* in the text of "A Study in Scarlet," and False if *t* occurred more frequently?
 
 .. tabbed:: tabbed_ac10_5_6
 
@@ -220,7 +220,7 @@ then incremented.
       .. activecode:: ac10_5_6
          :language: python
          :autograde: unittest
-         :practice: T         
+         :practice: T
 
          The print statements at the end of program ac10_5_5 above pick out the specific keys 't' and 's'. Generalize that
          to print out the occurrence counts for all of the characters. To pass the unit tests, your output must
@@ -229,15 +229,15 @@ then incremented.
          ~~~~
          f = open('scarlet.txt', 'r')
          txt = f.read()
-         letter_counts = {} 
+         letter_counts = {}
          for c in txt:
              if c not in letter_counts:
                  letter_counts[c] = 0
-            
+
              letter_counts[c] = letter_counts[c] + 1
 
          # Write a loop that prints the letters and their counts
-         =====
+         ====
 
          from unittest.gui import TestCaseGui
 
@@ -264,7 +264,7 @@ then incremented.
 
 
 In the solution to the problem above, note that only those letters that actually occur in the text are shown. Some
-punctuation marks that are possible in English, but were never used in the 
+punctuation marks that are possible in English, but were never used in the
 text, are omitted completely. The blank line partway through the output may surprise you.
 That's actually saying that the newline character, ``\n``, appears 5155 times in
 the text. In other words, there are 5155 lines of text in the file. Let's
@@ -294,7 +294,7 @@ Now, here are some additional problems to try.
          ~~~~
          sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 
-         =====
+         ====
 
          from unittest.gui import TestCaseGui
 
@@ -333,7 +333,7 @@ Now, here are some additional problems to try.
          ~~~~
          stri = "what can I do"
 
-         =====
+         ====
 
          from unittest.gui import TestCaseGui
 
@@ -357,7 +357,7 @@ Now, here are some additional problems to try.
 
          char_d = {}
          for c in stri:
-            char_d[c] = char_d.get(c, 0) + 1         
+            char_d[c] = char_d.get(c, 0) + 1
 
 .. datafile:: scarlet.txt
    :fromfile: scarlet.txt

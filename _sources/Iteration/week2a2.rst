@@ -28,7 +28,7 @@ Chapter Assessment
     ~~~~
     my_str = "MICHIGAN"
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -51,7 +51,7 @@ Chapter Assessment
     ~~~~
     several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -77,7 +77,7 @@ Chapter Assessment
     str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
 
     # Write your code here.
-    =====
+    ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
@@ -110,7 +110,7 @@ Chapter Assessment
     original_str = "The quick brown rhino jumped over the extremely lazy fox."
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -134,7 +134,7 @@ Chapter Assessment
     addition_str = "2+5+10+20"
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -160,7 +160,7 @@ Chapter Assessment
     week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -182,7 +182,7 @@ Chapter Assessment
    Write code to create a list of numbers from 0 to 67 and assign that list to the variable ``nums``. Do not hard code the list.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

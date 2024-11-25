@@ -180,7 +180,7 @@ the beginning of the iteration process how many times the block of code needs to
    Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -202,7 +202,7 @@ the beginning of the iteration process how many times the block of code needs to
     for elem in list1:
         tot = tot + elem
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 

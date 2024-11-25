@@ -76,7 +76,7 @@ but you'll learn more if you try to write it yourself first.
    ~~~~
    placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -99,7 +99,7 @@ but you'll learn more if you try to write it yourself first.
    ~~~~
    product = "iphone and android phones"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

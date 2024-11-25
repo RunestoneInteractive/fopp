@@ -44,7 +44,7 @@ We'll come back in a minute and talk about how we will calculate :math:`\vec{c}`
     def dot(a,b):
         # your code here
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -83,7 +83,7 @@ You can improve upon the solution from  :ref:`regression_analysis` because you c
     def fit():
         # your code here
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 

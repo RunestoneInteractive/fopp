@@ -121,7 +121,7 @@ that is expecting a list, its the same as passing the list of keys.
 
 Eventually, you will be able to read code like that and immediately know what it's doing. For now, when you come
 across something confusing, like line 11, try breaking it down. The function ``sorted`` is invoked. Its first parameter
-value is a dictionary, which really means the keys of the dictionary. The second parameter, the key function, decorates 
+value is a dictionary, which really means the keys of the dictionary. The second parameter, the key function, decorates
 the dictionary key with a post-it note containing that key's value in dictionary d. The last parameter, True, says to
 sort in reverse order.
 
@@ -167,7 +167,7 @@ There is another way to sort dictionaries, by calling .items() to extract a sequ
    ~~~~
    dictionary = {"Flowers": 10, 'Trees': 20, 'Chairs': 6, "Firepit": 1, 'Grill': 2, 'Lights': 14}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -187,7 +187,7 @@ There is another way to sort dictionaries, by calling .items() to extract a sequ
    ~~~~
    groceries = {'apples': 5, 'pasta': 3, 'carrots': 12, 'orange juice': 2, 'bananas': 8, 'popcorn': 1, 'salsa': 3, 'cereal': 4, 'coffee': 5, 'granola bars': 15, 'onions': 7, 'rice': 1, 'peanut butter': 2, 'spinach': 9}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -207,7 +207,7 @@ There is another way to sort dictionaries, by calling .items() to extract a sequ
    ~~~~
    dictionary = {"Flowers": 10, 'Trees': 20, 'Chairs': 6, "Firepit": 1, 'Grill': 2, 'Lights': 14}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

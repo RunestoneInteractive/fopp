@@ -27,7 +27,7 @@ Chapter Assessment
        country_gold.append(gold[x])
        country_gold.append("Did not get gold")
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -35,7 +35,7 @@ Chapter Assessment
 
       def testOneA(self):
          self.assertEqual(country_gold, [1, 'Did not get gold', 'Did not get gold', 10, 'Did not get gold', 46], "Testing that country_gold is assigned to correct values")
-      
+
    myTests().main()
 
 
@@ -53,7 +53,7 @@ Chapter Assessment
    print("Total number of puppies:", total)
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -75,7 +75,7 @@ Chapter Assessment
 
    remainder = []
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -83,7 +83,7 @@ Chapter Assessment
 
       def testOneA(self):
          self.assertEqual(remainder, [0, 'Error', 0, 4, 0, 0, 'Error', 0, 36, 'Error', 36, 'Error', 0, 13], "Testing that remainder is assigned to correct values.")
-     
+
    myTests().main()
 
 .. activecode:: ac_exceptions_021
@@ -103,7 +103,7 @@ Chapter Assessment
            lst_three.append(num)
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -130,7 +130,7 @@ Chapter Assessment
    for elem in full_lst:
        attempt.append(elem[1])
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -153,11 +153,11 @@ Chapter Assessment
 
    third_countries = []
 
-   for c in conts: 
+   for c in conts:
        third_countries.append(c[2])
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -166,7 +166,7 @@ Chapter Assessment
       def testOne(self):
          self.assertEqual(third_countries, ['Greece', 'Canada', 'Korea', 'Brazil', 'Continent does not have 3 countries', 'Kenya', 'Continent does not have 3 countries'], "Testing that third_countries is created correctly.")
 
-   myTests().main()   
+   myTests().main()
 
 
 .. activecode:: ac_exceptions_04
@@ -182,10 +182,10 @@ Chapter Assessment
    ppl_play = {"hockey":4, "soccer": 10, "football": 15, "tennis": 8}
 
    for x in sport:
-      
+
        print(ppl_play[x])
-       
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -193,7 +193,7 @@ Chapter Assessment
 
       def testOneA(self):
          self.assertEqual(sorted(ppl_play.items()), [('baseball', 1), ('basketball', 1), ('football', 15), ('hockey', 4), ('soccer', 10), ('tennis', 8)], "Testing that ppl_play is assigned to correct values.")
-     
+
    myTests().main()
 
 
@@ -213,7 +213,7 @@ Chapter Assessment
    print("Total number of puppies:", total)
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

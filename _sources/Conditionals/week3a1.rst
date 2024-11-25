@@ -27,7 +27,7 @@ Chapter Assessment
     Hard-coded answers will receive no credit.
     ~~~~
     rainfall_mi = "1.65, 1.46, 2.05, 3.03, 3.35, 3.46, 2.83, 3.23, 3.5, 2.52, 2.8, 1.85"
-    =====
+    ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
@@ -80,7 +80,7 @@ Chapter Assessment
     items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
 
 
-    =====
+    ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
@@ -109,7 +109,7 @@ Chapter Assessment
     sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
 
 
-    =====
+    ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
@@ -132,7 +132,7 @@ Chapter Assessment
     # Write your code here.
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -155,7 +155,7 @@ Chapter Assessment
    ~~~~
    w = "Friendship is a wonderful human experience!"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -186,7 +186,7 @@ Chapter Assessment
    else:
        output = "Consistently working"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -208,7 +208,7 @@ Chapter Assessment
    ~~~~
    schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -229,7 +229,7 @@ Chapter Assessment
    ~~~~
    y = 22
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -240,7 +240,7 @@ Chapter Assessment
       def testTwo(self):
          self.assertEqual(z, 30, "Testing the value of z.")
 
-   myTests().main()   
+   myTests().main()
 
 .. activecode:: assess_ac3_1_1_10
    :language: python
@@ -251,7 +251,7 @@ Chapter Assessment
    ~~~~
    wrd_lst = ["Hello", "activecode", "Java", "C#", "Python", "HTML and CSS", "Javascript", "Swift", "php"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

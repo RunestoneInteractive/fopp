@@ -12,14 +12,14 @@
    :start: 1
 
 .. index::
-    single: assignment; tuple 
-    single: tuple; assignment 
+    single: assignment; tuple
+    single: tuple; assignment
 
 Tuple Assignment with Unpacking
 -------------------------------
 
-Python has a very powerful **tuple assignment** feature that allows a tuple of variable names on the left of an 
-assignment statement to be assigned values from a tuple on the right of the assignment. Another way to think of this 
+Python has a very powerful **tuple assignment** feature that allows a tuple of variable names on the left of an
+assignment statement to be assigned values from a tuple on the right of the assignment. Another way to think of this
 is that the tuple of values is **unpacked** into the variable names.
 
 .. activecode:: ac12_4_1
@@ -66,7 +66,7 @@ Tuple assignment solves this problem neatly:
     (a, b) = (b, a)
     print(a, b)
 
-The left side is a tuple of variables; the right side is a tuple of values. Each value is assigned to its respective 
+The left side is a tuple of variables; the right side is a tuple of values. Each value is assigned to its respective
 variable. All the expressions on the right side are evaluated before any of the assignments. This feature makes
 tuple assignment quite versatile.
 
@@ -130,12 +130,12 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
    :correct: b
 
    Consider the following alternative way to swap the values of variables x and y. What's wrong with it?
-   
-   .. code-block:: python 
-        
+
+   .. code-block:: python
+
         # assume x and y already have values assigned to them
         y = x
-        x = y   
+        x = y
 
 .. activecode:: ac12_4_9
    :language: python
@@ -146,7 +146,7 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
    With only one line of code, assign the variables ``water``, ``fire``, ``electric``, and ``grass`` to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -159,7 +159,7 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
          self.assertEqual(grass, "Bulbasaur", "Testing that grass is assigned to the correct value.")
 
    myTests().main()
-   
+
 .. activecode:: ac12_4_10
    :language: python
    :autograde: unittest
@@ -169,7 +169,7 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
    With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -194,7 +194,7 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
    ~~~~
    pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -220,7 +220,7 @@ The pythonic way to consume the results of enumerate, however, is to unpack the 
    ~~~~
    track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

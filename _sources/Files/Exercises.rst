@@ -31,7 +31,7 @@ The file below is ``travel_plans.txt``.
     France: Paris, Nice, Lyon
     Spain: Madrid, Barcelona, Granada
     Austria: Vienna
-    I will probably not even want to come back! 
+    I will probably not even want to come back!
     However, I wonder how I will get by with all the different languages.
     I only know English!
     </pre>
@@ -79,8 +79,8 @@ The file below is ``emotion_words.txt``.
                 :nocodelens:
                 :available_files: studentdata.txt
 
-                The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The 
-                students name is the first thing on each line, followed by some exam scores.  
+                The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The
+                students name is the first thing on each line, followed by some exam scores.
                 The number of scores might be different for each student.
 
                 .. raw:: html
@@ -94,7 +94,7 @@ The file below is ``emotion_words.txt``.
                     </pre>
 
                 Using the text file ``studentdata.txt`` write a program that prints out the names of
-                students that have more than six quiz scores. 
+                students that have more than six quiz scores.
                 ~~~~
                 # Hint: first see if you can write a program that just prints out the number of scores on each line
                 # Then, make it print the number only if the number is at least six
@@ -121,7 +121,7 @@ The file below is ``emotion_words.txt``.
                         else:
                             self.assertTrue(re.search(r'with[ (] *open', self.getEditorText(), re.M), 'Checking open statement')
                 myTests().main()
-        
+
 
         .. tab:: Answer
 
@@ -150,8 +150,8 @@ The file below is ``emotion_words.txt``.
 
                Create a list called ``destination`` using the data stored in ``travel_plans.txt``. Each element of the list should contain a line from the file that lists a country and cities inside that country. Hint: each line that has this information also has a colon ``:`` in it.
                ~~~~
-               
-               =====
+
+               ====
 
                from unittest.gui import TestCaseGui
 
@@ -161,7 +161,7 @@ The file below is ``emotion_words.txt``.
                      self.assertEqual(destination, ['Italy: Rome\n', 'Greece: Athens\n', 'England: London, Manchester\n', 'France: Paris, Nice, Lyon\n', 'Spain: Madrid, Barcelona, Granada\n', 'Austria: Vienna\n'], "Testing that destination is assigned to correct values.")
 
                myTests().main()
-      
+
 .. question:: files_ex_3
    :number: 3
 
@@ -175,8 +175,8 @@ The file below is ``emotion_words.txt``.
 
                Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
                ~~~~
-               
-               =====
+
+               ====
 
                from unittest.gui import TestCaseGui
 

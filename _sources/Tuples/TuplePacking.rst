@@ -19,7 +19,7 @@ by commas, they are automatically **packed** into a tuple. For example, we can o
     # or equivalently
     julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
     print(julia[4])
-    
+
 
 **Check your understanding**
 
@@ -49,7 +49,7 @@ by commas, they are automatically **packed** into a tuple. For example, we can o
    **2.** Create a tuple called ``practice`` that has four elements: 'y', 'h', 'z', and 'x'.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -69,7 +69,7 @@ by commas, they are automatically **packed** into a tuple. For example, we can o
    **3.** Create a tuple named ``tup1`` that has three elements: 'a', 'b', and 'c'.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -90,7 +90,7 @@ by commas, they are automatically **packed** into a tuple. For example, we can o
    ~~~~
    lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -111,7 +111,7 @@ by commas, they are automatically **packed** into a tuple. For example, we can o
    ~~~~
    tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 'red'), (5.6, 9.99, 2.5, 8.2), ('squirrel', 'chipmunk')]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

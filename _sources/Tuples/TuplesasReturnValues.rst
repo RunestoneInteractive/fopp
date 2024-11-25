@@ -18,16 +18,16 @@
 Tuples as Return Values
 -----------------------
 
-Functions can return tuples as return values. This is very useful --- we often want to know some batsman's highest and 
-lowest score, or we want to find the mean and the standard deviation, or we want to know the year, the month, and the 
-day, or if we're doing some ecological modeling we may want to know the number of rabbits and the number of wolves on 
-an island at a given time.  In each case, a function (which can only return a single value), can create a single tuple holding multiple elements. 
+Functions can return tuples as return values. This is very useful --- we often want to know some batsman's highest and
+lowest score, or we want to find the mean and the standard deviation, or we want to know the year, the month, and the
+day, or if we're doing some ecological modeling we may want to know the number of rabbits and the number of wolves on
+an island at a given time.  In each case, a function (which can only return a single value), can create a single tuple holding multiple elements.
 
 For example, we could write a function that returns both the area and the circumference of a circle of radius r.
 
 .. activecode:: ac12_3_1
 
-    
+
     def circleInfo(r):
         """ Return (circumference, area) of a circle of radius r """
         c = 2 * 3.14159 * r
@@ -40,7 +40,7 @@ Again, we can take advantage of packing to make the code look a little more read
 
 .. activecode:: ac12_3_2
 
-    
+
     def circleInfo(r):
         """ Return (circumference, area) of a circle of radius r """
         c = 2 * 3.14159 * r
@@ -101,7 +101,7 @@ It's common to unpack the returned values into multiple variables.
    Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -122,7 +122,7 @@ It's common to unpack the returned values into multiple variables.
    ~~~~
    def info():
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

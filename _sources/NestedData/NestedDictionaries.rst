@@ -14,11 +14,11 @@
 Nested Dictionaries
 -------------------
 
-Just as lists can contain items of any type, the value associated with a key in a dictionary can also be an object of any 
-type. In particular, it is often useful to have a list or a dictionary as a value in a dictionary. And of course, those 
+Just as lists can contain items of any type, the value associated with a key in a dictionary can also be an object of any
+type. In particular, it is often useful to have a list or a dictionary as a value in a dictionary. And of course, those
 lists or dictionaries can also contain lists and dictionaries. There can be many layers of nesting.
 
-Only the values in dictionaries can be objects of arbitrary type. The keys in dictionaries must be one of the immutable 
+Only the values in dictionaries can be objects of arbitrary type. The keys in dictionaries must be one of the immutable
 data types (numbers, strings, tuples).
 
 
@@ -36,11 +36,11 @@ data types (numbers, strings, tuples).
    :feedback_b: Dictionary keys must be of immutable types. A dictionary can't be used as a key in a dictionary.
    :feedback_c: d['key2'] is {'b': 3, 'c': "yes"}, a python object. It can be bound to the key 'd' in a dictionary {'a': 5, 'c': 90, 5: 50}
    :feedback_d: key2 is an unbound variable here. d['key2'] would be OK.
-    
+
    Which of the following is a legal assignment statement, after the following code executes?
-    
-   .. code-block:: python 
-    
+
+   .. code-block:: python
+
        d = {'key1': {'a': 5, 'c': 90, 5: 50}, 'key2':{'b': 3, 'c': "yes"}}
 
 .. activecode:: ac17_2_1
@@ -51,7 +51,7 @@ data types (numbers, strings, tuples).
    **1.** Extract the value associated with the key color and assign it to the variable ``color``. Do not hard code this.
 
    ~~~~
-   info = {'personal_data': 
+   info = {'personal_data':
             {'name': 'Lauren',
              'age': 20,
              'major': 'Information Science',
@@ -66,7 +66,7 @@ data types (numbers, strings, tuples).
             }
          }
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

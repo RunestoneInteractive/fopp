@@ -11,7 +11,7 @@
    :prefix: sequences-3-
    :start: 1
 
-.. index:: 
+.. index::
    single: [ ]; string indexing
    index; string
    string; index
@@ -19,28 +19,28 @@
 Index Operator: Working with the Characters of a String
 -------------------------------------------------------
 
-The **indexing operator** (Python uses square brackets to enclose the index) 
-selects a single character from a string.  The characters are accessed by their position or 
-index value.  For example, in the string shown below, the 14 characters are indexed left to right 
-from postion 0 to position 13.  
+The **indexing operator** (Python uses square brackets to enclose the index)
+selects a single character from a string.  The characters are accessed by their position or
+index value.  For example, in the string shown below, the 14 characters are indexed left to right
+from postion 0 to position 13.
 
 .. image:: Figures/indexvalues.png
    :alt: index values
 
-It is also the case that the positions are named from right to left using negative numbers where -1 is 
+It is also the case that the positions are named from right to left using negative numbers where -1 is
 the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.
 
 .. activecode:: ac5_3_1
-    
+
     school = "Luther College"
     m = school[2]
     print(m)
-    
+
     lastchar = school[-1]
     print(lastchar)
 
 The expression ``school[2]`` selects the character at index 2 from ``school``, and creates a new
-string containing just this one character. The variable ``m`` refers to the result. 
+string containing just this one character. The variable ``m`` refers to the result.
 
 The letter at index zero of ``"Luther College"`` is ``L``.  So at
 position ``[2]`` we have the letter ``t``.
@@ -69,11 +69,11 @@ of from the left.
 When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean!
 
 Try to predict what will be printed out by the following code, and then run it to check your
-prediction. (Actually, it's a good idea to always do that with the code examples. You 
+prediction. (Actually, it's a good idea to always do that with the code examples. You
 will learn much more if you force yourself to make a prediction before you see the output.)
 
 .. activecode:: ac5_3_2
-    
+
     numbers = [17, 123, 87, 34, 66, 8398, 44]
     print(numbers[2])
     print(numbers[9-8])
@@ -102,9 +102,9 @@ will learn much more if you force yourself to make a prediction before you see t
    :practice: T
 
    What is printed by the following statements?
-      
+
    .. code-block:: python
-   
+
       s = "python rocks"
       print(s[3])
 
@@ -123,9 +123,9 @@ will learn much more if you force yourself to make a prediction before you see t
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. code-block:: python
-   
+
       s = "python rocks"
       print(s[2] + s[-4])
 
@@ -140,9 +140,9 @@ will learn much more if you force yourself to make a prediction before you see t
    :feedback_c: False is at index 6.
    :feedback_d: Look again, the element at index 3 is a list. This list only counts as one element.
    :practice: T
-   
+
    What is printed by the following statements?
-   
+
    .. code-block:: python
 
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
@@ -156,8 +156,8 @@ will learn much more if you force yourself to make a prediction before you see t
    Assign the value of the 34th element of ``lst`` to the variable ``output``. Note that the `l` in `lst` is a letter, not a number; variable names can't start with a number.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
-   
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -172,12 +172,12 @@ will learn much more if you force yourself to make a prediction before you see t
    :language: python
    :autograde: unittest
    :practice: T
-   
+
    Assign the value of the 23rd element of ``l`` to the variable ``checking``.
    ~~~~
    l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -196,8 +196,8 @@ will learn much more if you force yourself to make a prediction before you see t
    Assign the value of the last chacter of ``lst`` to the variable ``output``. Do this so that the length of lst doesn't matter.
    ~~~~
    lst = "Every chess or checkers game begins from the same position and has a finite number of moves that can be played. While the number of possible scenarios and moves is quite large, it is still possible for computers to calculate that number and even be programmed to respond well against a human player..."
-   
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 

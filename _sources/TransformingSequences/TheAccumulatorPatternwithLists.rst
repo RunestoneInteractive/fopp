@@ -94,7 +94,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    ~~~~
    verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -114,7 +114,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    ~~~~
    numbs = [5, 10, 15, 20, 25]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -134,7 +134,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    ~~~~
    numbs = [5, 10, 15, 20, 25]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -155,7 +155,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
    ~~~~
    lst_nums = [4, 29, 5.3, 10, 2, 1817, 1967, 9, 31.32]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

@@ -28,13 +28,13 @@ Exercises
 
             Step 1. Suppose you had this list, [8, 7, 6, 6, 4, 4, 3, 1, 0], already sorted, how would you make a list of just the best 5? (Hint: take a slice).
             ~~~~
-            
+
             L = [8, 7, 6, 6, 4, 4, 3, 1, 0]
-    
+
     .. tab:: Answer
-    
+
         .. actex:: answer16_8_1
-        
+
              L = [8, 7, 6, 6, 4, 4, 3, 1, 0]
              L[:5]
 
@@ -47,15 +47,15 @@ Exercises
             Now suppose the list wasn't sorted yet. How would get those same five elements from this list?
             ~~~~
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
-            
+
     .. tab:: Answer
- 
+
          .. actex:: answer16_8_2
 
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
             L2 = sorted(L, reverse=True)
             L2[:5]
-    
+
 
 .. tabbed:: q3
 
@@ -65,12 +65,12 @@ Exercises
 
             Now take a list L and make a dictionary of counts for how often these numbers appear in the list.
             ~~~~
-    
+
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
-        
+
 
     .. tab:: Answer
-    
+
         .. actex:: answer16_8_3
 
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
@@ -85,20 +85,20 @@ Exercises
 .. tabbed:: q4
 
     .. tab:: Question
-    
+
         .. actex:: ac18_8_4
 
             Now sort the keys (numbers) based on their frequencies. Review *Sorting a Dictionary* if you're not sure how to do this. Keep just the top five keys.
             ~~~~
 
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
-    
+
     .. tab:: Answer
-    
+
         .. actex:: answer16_8_4
-        
+
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
-        
+
             d = {}
             for x in L:
                 if x in d:
@@ -107,9 +107,9 @@ Exercises
                     d[x] = 1
 
             s = sorted(d, key=lambda x: d[x], reverse=True)
-            
+
             print(s[:5])
-            
+
 
 .. tabbed:: q5
 
@@ -122,9 +122,9 @@ Exercises
 
 
     .. tab:: Answer
-    
+
         .. actex:: answer16_8_5
-        
+
             def five_most_frequent(s):
                 d = {}
                 for x in s:
@@ -132,12 +132,12 @@ Exercises
                         d[x] = d[x] + 1
                     else:
                         d[x] = 1
-                
+
                 s = sorted(d, key=lambda x: d[x], reverse=True)
-            
+
                 return s[:5]
-                
-            =====
+
+            ====
 
             from unittest.gui import TestCaseGui
 

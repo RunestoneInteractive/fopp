@@ -160,7 +160,7 @@ There is no limit on the number of statements that can appear under the two clau
    ~~~~
    courses = ["ENGR 101", "SI 110", "ENG 125", "SI 106", "CHEM 130"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -181,7 +181,7 @@ There is no limit on the number of statements that can appear under the two clau
    ~~~~
    a = 20
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

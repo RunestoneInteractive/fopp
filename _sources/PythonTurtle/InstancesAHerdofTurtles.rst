@@ -100,64 +100,64 @@ Here are some *How to think like a computer scientist* observations:
 
 .. parsonsprob:: pp3_3_1
 
-   The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left: 
-   
-   .. image:: Figures/TwoTurtles1.png 
-      :height: 100 
-      :align: left 
-      :alt: image of a capital letter L in blue color drawn by one Turtle and a line to the west in orange color drawn by another Turtle. Both the Turtles have same starting point. 
-      
+   The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left:
+
+   .. image:: Figures/TwoTurtles1.png
+      :height: 100
+      :align: left
+      :alt: image of a capital letter L in blue color drawn by one Turtle and a line to the west in orange color drawn by another Turtle. Both the Turtles have same starting point.
+
    The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line. Finally, it should set the window to close when the user clicks in it.
-   
+
    Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
    wn = turtle.Screen()
-   =====
+   ====
    jamal = turtle.Turtle()
    jamal.pensize(10)
    jamal.color("blue")
    jamal.right(90)
    jamal.forward(150)
-   =====
+   ====
    jamal.left(90)
    jamal.forward(75)
-   =====
+   ====
    tina = turtle.Turtle()
    tina.pensize(10)
    tina.color("orange")
    tina.left(180)
    tina.forward(75)
-   =====
+   ====
    wn.exitonclick()
 
 .. parsonsprob:: pp3_3_2
 
-   The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, 
-   
-   .. image:: Figures/TwoTurtlesL.png 
+   The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left,
+
+   .. image:: Figures/TwoTurtlesL.png
       :width: 150
       :align: left
-      :alt: Image of a line to the north in blue color drawn by one Turtle and a line to the east in orange drawn by another Turtle. Both the Turtles have a same starting point. 
-   
+      :alt: Image of a line to the north in blue color drawn by one Turtle and a line to the east in orange drawn by another Turtle. Both the Turtles have a same starting point.
+
    The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east. Finally, it should set the window to close when the user clicks in it.
-   
+
    Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
    import turtle
-   =====
+   ====
    wn = turtle.Screen()
-   =====
+   ====
    jamal = turtle.Turtle()
    jamal.color("blue")
    jamal.pensize(10)
-   =====
+   ====
    jamal.left(90)
    jamal.forward(150)
-   =====
+   ====
    tina = turtle.Turtle()
    tina.pensize(10)
    tina.color("orange")
    tina.forward(150)
-   =====
+   ====
    wn.exitonclick()

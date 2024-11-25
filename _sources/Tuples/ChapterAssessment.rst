@@ -20,11 +20,11 @@ Chapter Assessment
    :chatcodes:
    :practice: T
    :topics: Tuples/TuplePacking
-      
+
    Create a tuple called ``olympics`` with four elements: "Beijing", "London", "Rio", "Tokyo".
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -46,8 +46,8 @@ Chapter Assessment
    The list below, ``tuples_lst``, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable ``country``.
    ~~~~
    tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -68,8 +68,8 @@ Chapter Assessment
    With only one line of code, assign the variables ``city``, ``country``, and ``year`` to the values of the tuple ``olymp``.
    ~~~~
    olymp = ('Rio', 'Brazil', 2016)
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -92,7 +92,7 @@ Chapter Assessment
    Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -114,7 +114,7 @@ Chapter Assessment
    ~~~~
    gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

@@ -17,11 +17,11 @@ Chapter Assessment
 .. activecode:: ac14_10_1
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
-    
+
     Write a function, ``sublist``, that takes in a list of numbers as the parameter. In the function, use a while loop to return a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the number 5 (it should not contain the number 5).
     ~~~~
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -42,7 +42,7 @@ Chapter Assessment
     Write a function called ``check_nums`` that takes a list as its parameter, and contains a while loop that only stops once the element of the list is the number 7. What is returned is a list of all of the numbers up until it reaches 7.
     ~~~~
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -63,7 +63,7 @@ Chapter Assessment
     Write a function, ``sublist``, that takes in a list of strings as the parameter. In the function, use a while loop to return a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the string "STOP" (it should not contain the string "STOP").
     ~~~~
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -84,7 +84,7 @@ Chapter Assessment
     ~~~~
     def stop_at_z():
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -110,7 +110,7 @@ Chapter Assessment
     for x in lst:
         sum1 = sum1 + x
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -129,7 +129,7 @@ Chapter Assessment
     **Challenge:** Write a function called ``beginning`` that takes a list as input and contains a loop that only stops once the element of the list is the string 'bye'. What is returned is a list that contains up to the first 10 strings, regardless of where the loop stops. (i.e., if it stops on the 32nd element, the first 10 are returned. If "bye" is the 5th element, the first 4 are returned.) *If you want to make this even more of a challenge, do this without slicing*
     ~~~~
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 

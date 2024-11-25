@@ -13,7 +13,7 @@
 Filter
 ------
 
-Now consider another common pattern: going through a list and keeping only those items that meet certain criteria. 
+Now consider another common pattern: going through a list and keeping only those items that meet certain criteria.
 This is called a filter.
 
 .. activecode:: ac21_3_1
@@ -24,12 +24,12 @@ This is called a filter.
            if num % 2 == 0:
                new_list.append(num)
        return new_list
-      
+
    print(keep_evens([3, 4, 6, 7, 0, 1]))
 
-Again, this pattern of computation is so common that Python offers a more compact and general way to do it, the ``filter`` 
-function. ``filter`` takes two arguments, a function and a sequence. The function takes one item and return True if the 
-item should. It is automatically called for each item in the sequence. You don't have to initialize an accumulator or 
+Again, this pattern of computation is so common that Python offers a more compact and general way to do it, the ``filter``
+function. ``filter`` takes two arguments, a function and a sequence. The function takes one item and return True if the
+item should. It is automatically called for each item in the sequence. You don't have to initialize an accumulator or
 iterate with a for loop.
 
 .. activecode:: ac21_3_2
@@ -37,7 +37,7 @@ iterate with a for loop.
    def keep_evens(nums):
        new_seq = filter(lambda num: num % 2 == 0, nums)
        return list(new_seq)
-      
+
    print(keep_evens([3, 4, 6, 7, 0, 1]))
 
 **Check Your Understanding**
@@ -52,7 +52,7 @@ iterate with a for loop.
    ~~~~
    lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -77,8 +77,8 @@ iterate with a for loop.
    **2.** Using filter, filter ``lst`` so that it only contains words containing the letter "o". Assign to variable ``lst2``. Do not hardcode this.
    ~~~~
    lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 

@@ -85,7 +85,7 @@ Chapter Assessment - List Methods
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -108,7 +108,7 @@ Chapter Assessment - List Methods
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'London', 'Melbourne']
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -131,7 +131,7 @@ Chapter Assessment - List Methods
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne']
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -304,7 +304,7 @@ Chapter Assessment - Split and Join
     awards = ['Emmy', 'Tony', 'Academy', 'Grammy']
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -416,7 +416,7 @@ Chapter Assessment - For Loop Mechanics
    str1 = "I love python"
    # HINT: what's the accumulator? That should go here.
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -610,7 +610,7 @@ Chapter Assessment - Accumulator Pattern
    ~~~~
    ael = "python!"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -631,7 +631,7 @@ Chapter Assessment - Accumulator Pattern
    For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
    ~~~~
    wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -656,7 +656,7 @@ Chapter Assessment - Accumulator Pattern
     original_str = "The quick brown rhino jumped over the extremely lazy fox"
 
 
-    =====
+    ====
 
     from unittest.gui import TestCaseGui
 
@@ -678,7 +678,7 @@ Chapter Assessment - Accumulator Pattern
    Create an empty string and assign it to the variable ``lett``. Then using range, write code such that when your code is run, ``lett`` has 7 b's (``"bbbbbbb"``).
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -703,7 +703,7 @@ Chapter Assessment - Problem Solving
    ~~~~
    scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -727,7 +727,7 @@ Chapter Assessment - Problem Solving
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', "The"]
    org = "The organization for health, safety, and education"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -751,7 +751,7 @@ Chapter Assessment - Problem Solving
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
    sent = "The water earth and air are vital"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -774,7 +774,7 @@ Chapter Assessment - Problem Solving
    ~~~~
    p_phrase = "was it a car or a cat I saw"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -800,7 +800,7 @@ Chapter Assessment - Problem Solving
    inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

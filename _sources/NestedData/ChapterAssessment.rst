@@ -24,8 +24,8 @@ Chapter Assessment
 
    ~~~~
    nested = [['dog', 'cat', 'horse'], ['frog', 'turtle', 'snake', 'gecko'], ['hamster', 'gerbil', 'rat', 'ferret']]
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -54,8 +54,8 @@ Chapter Assessment
 
 
    #Test to see if 'orange' is in the first element of lst. Save to variable ``orange``
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -87,7 +87,7 @@ Chapter Assessment
 
    # Test if 6.6 is in the third element of list L. Save to variable name test3
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -100,7 +100,7 @@ Chapter Assessment
       def testC(self):
          self.assertEqual(test3, True, "Testing that test3 has the correct value.")
 
-   myTests().main()  
+   myTests().main()
 
 
 .. activecode:: ac17_6_4
@@ -122,7 +122,7 @@ Chapter Assessment
 
    # Check to see if the string 'physics' is a key in the dictionary nested. If it is, assign to the variable physics, the value of True, otherwise False.
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -150,8 +150,8 @@ Chapter Assessment
 
    ~~~~
    nested_d = {'Beijing':{'China':51, 'USA':36, 'Russia':22, 'Great Britain':19}, 'London':{'USA':46, 'China':38, 'Great Britain':29, 'Russia':22}, 'Rio':{'USA':35, 'Great Britain':22, 'China':20, 'Germany':13}}
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -182,7 +182,7 @@ Chapter Assessment
 
    # Assign the string 'rings' to the variable name v4
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -204,7 +204,7 @@ Chapter Assessment
          self.assertNotIn("v4 = 'rings'", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
          self.assertNotIn('v4 = "rings"', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
-   myTests().main() 
+   myTests().main()
 
 
 .. activecode:: ac17_6_7
@@ -219,9 +219,9 @@ Chapter Assessment
    nested_d = {'Beijing':{'China':51, 'USA':36, 'Russia':22, 'Great Britain':19}, 'London':{'USA':46, 'China':38, 'Great Britain':29, 'Russia':22}, 'Rio':{'USA':35, 'Great Britain':22, 'China':20, 'Germany':13}}
 
    US_count = []
-      
 
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -244,7 +244,7 @@ Chapter Assessment
    ~~~~
    l_of_l = [['purple', 'mauve', 'blue'], ['red', 'maroon', 'blood orange', 'crimson'], ['sea green', 'cornflower', 'lavender', 'indigo'], ['yellow', 'amarillo', 'mac n cheese', 'golden rod']]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -267,7 +267,7 @@ Chapter Assessment
    ~~~~
    athletes = [['Phelps', 'Lochte', 'Schooling', 'Ledecky', 'Franklin'], ['Felix', 'Bolt', 'Gardner', 'Eaton'], ['Biles', 'Douglas', 'Hamm', 'Raisman', 'Mikulak', 'Dalton']]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

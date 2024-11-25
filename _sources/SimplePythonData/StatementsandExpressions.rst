@@ -22,11 +22,11 @@ Statements and Expressions
     :width: 560
     :align: left
 
-A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
-statement so far. Some other kinds of statements that you'll see in future chapters are ``while`` statements, 
+A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment
+statement so far. Some other kinds of statements that you'll see in future chapters are ``while`` statements,
 ``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds too!)
 
-An **expression** is a combination of literals, variable names, operators, and calls to functions. 
+An **expression** is a combination of literals, variable names, operators, and calls to functions.
 Expressions need to be evaluated. The result of evaluating an expression is a *value* or *object*.
 
 .. image:: Figures/expression_value_type.png
@@ -42,7 +42,7 @@ If you ask Python to ``print`` an expression, the interpreter **evaluates** the 
 
 In this example ``len`` is a built-in Python function that returns the number of characters in a string.
 
-The *evaluation of an expression* produces a value, which is why expressions can appear on the right hand 
+The *evaluation of an expression* produces a value, which is why expressions can appear on the right hand
 side of assignment statements. A literal all by itself is a simple expression, and so is a variable.
 
 .. activecode:: ac2_10_2
@@ -90,13 +90,13 @@ Similarly, when calling a function, instead of putting a literal inside the pare
 .. activecode:: ac2_10_5
    :nocanvas:
    :include: ac2_10_4
-   
+
    x = 2
    y = 1
    print(square(y + 3))
    print(square(y + square(x)))
    print(sub(square(y), square(x)))
-   
+
 With a function call, it's even possible to have a complex expression before the left parenthesis, as long as that expression evaluates to a function object. For now, though, we will just use variable names (like square, sub, and len) that are directly bound to function objects.
 
 It is important to start learning to read code that contains complex expressions. The Python interpreter examines any line of code and *parses* it into components. For example, if it sees an ``=`` symbol, it will try to treat the whole line as an assignment statement. It will expect to see a valid variable name to the left of the =, and will parse everything to the right of the = as an expression. It will try to figure out whether the right side is a literal, a variable name, an operator expression, or a function call expression. If it's an operator expression, it will further try to parse the sub-expressions before and after the operator. And so on. You should learn to parse lines of code in the same way.
@@ -129,17 +129,17 @@ To start giving you some practice in reading and understanding complicated expre
 
    -----
    look up the variable square to get the function object
-   =====
+   ====
    look up the variable sub to get the function object
-   =====
+   ====
    look up the variable y to get 3
-   =====
+   ====
    add 1 and 3 to get 4
-   =====
+   ====
    look up the variable x to get 2
-   =====
+   ====
    run the sub function, passing inputs 4 and 2, returning the value 2
-   =====
+   ====
    run the square function on input 2, returning the value 4
 
 
@@ -149,23 +149,23 @@ To start giving you some practice in reading and understanding complicated expre
 
    -----
    look up the variable square to get the function object
-   =====
+   ====
    look up the variable x to get 2
-   =====
+   ====
    look up the variable sub to get the function object
-   =====
+   ====
    look up the variable square, again, to get the function object
-   =====
+   ====
    look up the variable y to get 3
-   =====
+   ====
    run the square function on input 3, returning the value 9
-   =====
+   ====
    look up the variable x, again, to get 2
-   =====
+   ====
    multiply 2 * 2 to get 4
-   =====
+   ====
    run the sub function, passing inputs 9 and 4, returning the value 5
-   =====
+   ====
    add 2 and 5 to get 7
-   =====
+   ====
    run the square function, again, on input 7, returning the value 49

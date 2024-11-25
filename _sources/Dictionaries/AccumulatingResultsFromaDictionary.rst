@@ -21,7 +21,7 @@ depend on the values associated with each of the keys.
 For example, suppose that we wanted to compute a Scrabble score for the Study in Scarlet
 text. Each occurrence of the letter 'e' earns one point, but 'q' earns 10. We have
 a second dictionary, stored in the variable ``letter_values``. Now, to compute the
-total score, we start an accumulator at 0 and go through each of the letters in the 
+total score, we start an accumulator at 0 and go through each of the letters in the
 counts dictionary. For each of those letters that has a letter value (no points for spaces,
 punctuation, capital letters, etc.), we add to the total score.
 
@@ -36,12 +36,12 @@ punctuation, capital letters, etc.), we add to the total score.
        if c not in letter_counts:
            # we have not seen this character before, so initialize a counter for it
            letter_counts[c] = 0
-      
+
        #whether we've seen it before or not, increment its counter
        letter_counts[c] = letter_counts[c] + 1
 
    letter_values = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f':4, 'g': 2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':4, 'w':4, 'x':8, 'y':4, 'z':10}
-   
+
    tot = 0
    for letter in letter_counts:
        if letter in letter_values:
@@ -63,7 +63,7 @@ Try changing some of the letter values and see how it affects the total. Try cha
    ~~~~
    travel = {"North America": 2, "Europe": 8, "South America": 3, "Asia": 4, "Africa":1, "Antarctica": 0, "Australia": 1}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -83,7 +83,7 @@ Try changing some of the letter values and see how it affects the total. Try cha
    ~~~~
    schedule = {"UARTS 150": 3, "SPANISH 103": 4, "ENGLISH 125": 4, "SI 110": 4, "ENS 356": 2, "WOMENSTD 240": 4, "SI 106": 4, "BIO 118": 3, "SPANISH 231": 4, "PSYCH 111": 4, "LING 111": 3, "SPANISH 232": 4, "STATS 250": 4, "SI 206": 4, "COGSCI 200": 4, "AMCULT 202": 4, "ANTHRO 101": 4}
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

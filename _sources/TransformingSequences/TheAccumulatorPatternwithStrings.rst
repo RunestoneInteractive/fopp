@@ -14,25 +14,25 @@
 The Accumulator Pattern with Strings
 ------------------------------------
 
-We can also accumulate strings rather than accumulating numbers, as you've seen before. The following program isn't 
+We can also accumulate strings rather than accumulating numbers, as you've seen before. The following program isn't
 particularly useful for data processing, but we will see more useful things later that accumulate strings.
 
 .. activecode:: ac8_10_1
-    
+
    s = input("Enter some text")
    ac = ""
    for c in s:
        ac = ac + c + "-"
-       
+
    print(ac)
- 
+
 Look carefully at line 4 in the above program (``ac = ac + c + "-"``). In words, it says that the
 new value of ``ac`` will be the old value of ``ac`` concatenated with the current character and a dash.
 We are building the result string character by character.
 
 Take a close look also at the initialization of ``ac``.  We start with an empty string and then begin adding
-new characters to the end. Also note that I have given it a different name this time, ``ac`` instead of 
-``accum``. There's nothing magical about these names. You could use any valid variable and it would work the 
+new characters to the end. Also note that I have given it a different name this time, ``ac`` instead of
+``accum``. There's nothing magical about these names. You could use any valid variable and it would work the
 same (try substituting x for ac everywhere in the above code).
 
 We can use the accumulator pattern to reverse a string, as in the following code.
@@ -72,7 +72,7 @@ reversing the whole string. Try it in codelens if you're having trouble envision
    :practice: T
 
    What is printed by the following statements:
-   
+
    .. code-block:: python
 
       s = "ball"
@@ -90,8 +90,8 @@ reversing the whole string. Try it in codelens if you're having trouble envision
    ~~~~
    str1 = "I love python"
    # HINT: what's the accumulator? That should go here.
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -111,7 +111,7 @@ reversing the whole string. Try it in codelens if you're having trouble envision
    Assign an empty string to the variable ``output``. Using the ``range`` function, write code to make it so that the variable ``output`` has 35 ``a`` s inside it (like ``"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"``). Hint: use the accumulation pattern!
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -123,4 +123,4 @@ reversing the whole string. Try it in codelens if you're having trouble envision
          self.assertNotIn("*", self.getEditorText(), "Testing that you didn't use string multiplication (*); that is easier but isn't the point of the exercise.")
 
    myTests().main()
-   
+

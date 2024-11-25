@@ -74,7 +74,7 @@ you can use empty glue or multi-character strings as glue.
    ~~~~
    lst = ["swimming", 2, "water bottle", 44, "lollipop", "shine", "marsh", "winter", "donkey", "rain", ["Rio", "Beijing", "London"], [1,2,3], "gold", "bronze", "silver", "mathematician", "scientist", "actor", "actress", "win", "cell phone", "leg", "running", "horse", "socket", "plug", ["Phelps", "le Clos", "Lochte"], "drink", 22, "happyfeet", "penguins"]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -94,7 +94,7 @@ you can use empty glue or multi-character strings as glue.
    ~~~~
    str1 = "OH THE PLACES YOU'LL GO"
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

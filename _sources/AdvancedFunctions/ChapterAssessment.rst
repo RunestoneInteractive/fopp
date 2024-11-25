@@ -21,7 +21,7 @@ Chapter Assessment
 
    Create a function called ``mult`` that has two parameters, the first is required and should be an integer, the second is an optional parameter that can either be a number or a string but whose default is 6. The function should return the first parameter multiplied by the second.
    ~~~~
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -48,7 +48,7 @@ Chapter Assessment
    print(greeting("Bob"))
    print(greeting(""))
    print(greeting("Bob", excl="!!!"))
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -71,7 +71,7 @@ Chapter Assessment
    def sum(intz=5, intx):
        return intz + intx
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -90,8 +90,8 @@ Chapter Assessment
 
    Write a function, ``test``, that takes in three parameters: a required integer, an optional boolean whose default value is ``True``, and an optional dictionary, called ``dict1``, whose default value is ``{2:3, 4:5, 6:8}``. If the boolean parameter is True, the function should test to see if the integer is a key in the dictionary. The value of that key should then be returned. If the boolean parameter is False, return the boolean value "False".
    ~~~~
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -113,7 +113,7 @@ Chapter Assessment
 
    But if the second paramter is ``False``, then the function should check to see if the first parameter is *not* a key of the third. If it's *not*, the function should return ``True`` in this case, and if it is, it should return ``False``.
    ~~~~
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -148,7 +148,7 @@ Chapter Assessment
    # fill in two parameters to make vale have the value "Hi 3 Hi"
    val3 = f()
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

@@ -60,8 +60,8 @@ Here is the same program using ``elif``.
     else:
         print("x and y must be equal")
 
-The following image highlights different kinds of valid conditionals that can be used. Though there are other 
-versions of conditionals that Python can understand (imagine an if statement with twenty elif statements), those 
+The following image highlights different kinds of valid conditionals that can be used. Though there are other
+versions of conditionals that Python can understand (imagine an if statement with twenty elif statements), those
 other versions must follow the same order as seen below.
 
 .. image:: Figures/valid_conditionals.png
@@ -101,7 +101,7 @@ other versions must follow the same order as seen below.
    .. code-block:: python
 
      I.
-     
+
      if x < 0:
          print("The negative number ",  x, " is not valid here.")
      else (x > 0):
@@ -113,7 +113,7 @@ other versions must follow the same order as seen below.
    .. code-block:: python
 
      II.
-     
+
      if x < 0:
          print("The negative number ",  x, " is not valid here.")
      elif (x > 0):
@@ -124,7 +124,7 @@ other versions must follow the same order as seen below.
    .. code-block:: python
 
      III.
-     
+
      if x < 0:
          print("The negative number ",  x, " is not valid here.")
      if (x > 0):
@@ -161,8 +161,8 @@ other versions must follow the same order as seen below.
    Create one conditional to find whether "false" is in string ``str1``. If so, assign variable ``output`` the string "False. You aren't you?". Check to see if "true" is in string ``str1`` and if it is then assign "True! You are you!" to the variable ``output``. If neither are in ``str1``, assign "Neither true nor false!" to ``output``.
    ~~~~
    str1 = "Today you are you! That is truer than true! There is no one alive who is you-er than you!"
-      
-   =====
+
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -184,7 +184,7 @@ other versions must follow the same order as seen below.
    ~~~~
    percent_rain = [94.3, 45, 100, 78, 16, 5.3, 79, 86]
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -209,7 +209,7 @@ other versions must follow the same order as seen below.
        output.append(True)
    elif x > 55:
        output.append(False)
-   else: 
+   else:
        output.append("Neither")
 
    if x > 67:
@@ -217,7 +217,7 @@ other versions must follow the same order as seen below.
    else:
        output.append(None)
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

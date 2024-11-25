@@ -343,7 +343,7 @@ interpreter does these steps:
    **8.** Write a function named ``same`` that takes a string as input, and simply returns that string.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -363,7 +363,7 @@ interpreter does these steps:
    **9.** Write a function called ``same_thing`` that returns the parameter, unchanged.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -383,7 +383,7 @@ interpreter does these steps:
    **10.** Write a function called ``subtract_three`` that takes an integer or any number as input, and returns that number minus three.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -404,7 +404,7 @@ interpreter does these steps:
    **11.** Write a function called ``change`` that takes one number as its input and returns that number, plus 7.
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -424,7 +424,7 @@ interpreter does these steps:
    **12.** Write a function named ``intro`` that takes a string as input. This string ist intended to be a person's name and the output is a standardized greeting. For example, given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -444,7 +444,7 @@ interpreter does these steps:
    **13.** Write a function called ``s_change`` that takes one string as input and returns that string, concatenated with the string " for fun.".
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 
@@ -464,7 +464,7 @@ interpreter does these steps:
    **14.** Write a function called ``decision`` that takes a string as input, and then checks the number of characters. If it has over 17 characters, return "This is a long string", if it is shorter or has 17 characters, return "This is a short string".
    ~~~~
 
-   =====
+   ====
 
    from unittest.gui import TestCaseGui
 

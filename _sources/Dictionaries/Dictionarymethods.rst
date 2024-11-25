@@ -28,10 +28,10 @@ get         key                 Returns the value associated with key; None othe
 get         key,alt             Returns the value associated with key; alt otherwise
 ==========  ==============      =======================================================
 
-As we saw earlier with strings and lists, dictionary methods use dot notation, which specifies the name of the method 
-to the right of the dot and the name of the object on which to apply the method immediately to the left of the dot. 
-For example, if ``x`` is a variable 
-whose value is a dictionary, ``x.keys`` is the method object, and ``x.keys()`` invokes the method, returning a view of 
+As we saw earlier with strings and lists, dictionary methods use dot notation, which specifies the name of the method
+to the right of the dot and the name of the object on which to apply the method immediately to the left of the dot.
+For example, if ``x`` is a variable
+whose value is a dictionary, ``x.keys`` is the method object, and ``x.keys()`` invokes the method, returning a view of
 the value.
 
 Iterating over Dictionaries
@@ -39,18 +39,18 @@ Iterating over Dictionaries
 
 There are three ways to iterate over the contents of a dictionary. Let's take a moment to examine them.
 
-The first technique involves iterating over the keys of the dictionary using the ``keys`` method. 
+The first technique involves iterating over the keys of the dictionary using the ``keys`` method.
 The ``keys`` method returns a collection of the keys in the dictionary.
 
 .. activecode:: ac10_3_1
-    
-    inventory = {'apples': 430, 'bananas': 312, 'pears': 217, 'oranges': 525}  
-  
+
+    inventory = {'apples': 430, 'bananas': 312, 'pears': 217, 'oranges': 525}
+
     for akey in inventory.keys():     # the order in which we get the keys is not defined
-        print("Got key", akey, "which maps to value", inventory[akey])     
-       
+        print("Got key", akey, "which maps to value", inventory[akey])
+
     ks = list(inventory.keys())       # Make a list of all of the keys
-    print(ks)                    
+    print(ks)
     print(ks[0])                      # Display the first key
 
 Note the first line of the for loop::
@@ -69,31 +69,31 @@ omit the ``keys`` method call in the ``for`` loop --- iterating over
 a dictionary implicitly iterates over its keys.
 
 .. activecode:: ac10_3_2
-    
-    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}  
-    
-    for k in inventory:     
+
+    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
+
+    for k in inventory:
         print("Got key", k)
 
 The ``values`` method returns a collection of the values in the dictionary. Here's an example
 that displays a list of the values:
 
 .. activecode:: ac10_3_3a
-    
-    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}  
-    
+
+    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
+
     print(list(inventory.values()))
 
     for v in inventory.values():
         print("Got", v)
 
-The ``items`` method returns a collection of tuples containing each key and its associated value. 
+The ``items`` method returns a collection of tuples containing each key and its associated value.
 Take a look at this example that iterates over the dictionary using the ``items`` method:
 
 .. activecode:: ac10_3_3b
-    
-    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}  
-    
+
+    inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
+
     print(list(inventory.items()))
 
     for k, v in inventory.items():
@@ -117,12 +117,12 @@ with the key.
     instead of this::
 
         print(inventory.keys())
-    
-    Technically, ``keys()``, ``values()``, and ``items()`` don't return actual lists. Like the ``range`` function described 
-    previously, they return objects that produce the items one at a time, rather than producing and 
+
+    Technically, ``keys()``, ``values()``, and ``items()`` don't return actual lists. Like the ``range`` function described
+    previously, they return objects that produce the items one at a time, rather than producing and
     storing all of them in advance as a list. If you need to perform an operation on the result of one of these methods such as
-    extracting the first item, you must convert the result to a list using the ``list`` conversion function. For example, if you want to get the first key, 
-    this won't work: ``inventory.keys()[0]``. You need to make the collection of keys into a real list before using 
+    extracting the first item, you must convert the result to a list using the ``list`` conversion function. For example, if you want to get the first key,
+    this won't work: ``inventory.keys()[0]``. You need to make the collection of keys into a real list before using
     ``[0]`` to index into it: ``list(inventory.keys())[0]``.
 
 Safely Retrieving Values
@@ -130,11 +130,11 @@ Safely Retrieving Values
 
 Looking up a value in a dictionary is a potentially dangerous operation. When using the ``[]`` operator to access
 a key, if the key is not present, a runtime error occurs. There are two ways to deal with this problem.
-    
+
 The first approach is to use the ``in`` and ``not in`` operators, which can test if a key is in the dictionary:
 
 .. activecode:: ac10_3_4
-    
+
     inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
     print('apples' in inventory)
     print('cherries' in inventory)
@@ -144,17 +144,17 @@ The first approach is to use the ``in`` and ``not in`` operators, which can test
     else:
         print("We have no bananas")
 
-The second approach is to use the ``get`` method. ``get`` retrieves the value associated with a key, similar to the ``[]`` operator. The important 
-difference is that ``get`` will not cause a runtime error if the key is not present. It will instead return the value ``None``. 
-There exists a variation of ``get`` that allows a second parameter that serves as an alternative return value in the 
-case where the key is not present. This can be seen in the final example below. In this case, since "cherries" is not 
+The second approach is to use the ``get`` method. ``get`` retrieves the value associated with a key, similar to the ``[]`` operator. The important
+difference is that ``get`` will not cause a runtime error if the key is not present. It will instead return the value ``None``.
+There exists a variation of ``get`` that allows a second parameter that serves as an alternative return value in the
+case where the key is not present. This can be seen in the final example below. In this case, since "cherries" is not
 a key, ``get`` returns 0 (instead of None).
 
 .. activecode:: ac10_3_5
-    
+
     inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
-    
-    print(inventory.get("apples"))    
+
+    print(inventory.get("apples"))
     print(inventory.get("cherries"))
 
     print(inventory.get("cherries",0))
@@ -175,13 +175,13 @@ a key, ``get`` returns 0 (instead of None).
    :feedback_d: The integer division operator is being used on the values returned from the get method, not on the dictionary.
 
    What is printed by the following statements?
-   
+
    .. sourcecode:: python
 
      mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
      answer = mydict.get("cat")//mydict.get("dog")
      print(answer)
-   
+
 .. mchoice:: question10_3_2
    :answer_a: True
    :answer_b: False
@@ -191,7 +191,7 @@ a key, ``get`` returns 0 (instead of None).
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. sourcecode:: python
 
      mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
@@ -202,12 +202,12 @@ a key, ``get`` returns 0 (instead of None).
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: 23 is a value in the dictionary, not a key.  
+   :feedback_a: 23 is a value in the dictionary, not a key.
    :feedback_b: Yes, the in operator returns True if a key is in the dictionary, False otherwise.
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. sourcecode:: python
 
       mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
@@ -226,7 +226,7 @@ a key, ``get`` returns 0 (instead of None).
    :practice: T
 
    What is printed by the following statements?
-   
+
    .. sourcecode:: python
 
       total = 0
@@ -250,14 +250,14 @@ a key, ``get`` returns 0 (instead of None).
             ~~~~
             medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
 
-            =====
+            ====
 
             from unittest.gui import TestCaseGui
 
             class myTests(TestCaseGui):
 
                 def testOne(self):
-                    self.assertEqual(type(events), list, "Testing that events is a list")   
+                    self.assertEqual(type(events), list, "Testing that events is a list")
                     self.assertEqual(sorted(events), sorted(medal_events), "Testing that events was created correctly")
                     self.assertNotIn('[', self.getEditorText(), "Hard coding or accumulation detected; use a dictionary method instead")
 

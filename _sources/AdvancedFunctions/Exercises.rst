@@ -25,7 +25,7 @@ Exercises
            .. actex:: actex16_4_1
 
               1. Fill in the parameter list for g so that the invocations of g yield the return values specified
-              ~~~~ 
+              ~~~~
 
               def g():
                   return 2*x + y + z
@@ -42,12 +42,12 @@ Exercises
            .. actex:: actex16_4_2
 
               2. Define a function called ``nums`` that has three parameters. The first parameter, an integer, should be required. A second parameter named ``mult_int`` should be optional with a default value of 5. The final parameter, ``switch``, should also be optional with a default value of False. The function should multiply the two integers together, and if switch is True, should change the sign of the product before returning it.
-              ~~~~ 
+              ~~~~
 
               def nums():
                   pass #remove this once you start writing the function
 
-              =====
+              ====
 
               from unittest.gui import TestCaseGui
 
@@ -60,7 +60,7 @@ Exercises
                       self.assertEqual(nums(4, mult_int = 3, switch = True), -12, "Testing the function nums on inputs 4, mult_int = 3, switch = True.")
                       self.assertEqual(nums(0, switch = True), 0, "Testing the function nums on inputs 0, switch = True.")
 
-              myTests().main()  
+              myTests().main()
 
 .. question:: q16_4_3
 
@@ -71,9 +71,9 @@ Exercises
            .. actex:: actex16_4_3
 
               3. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is " ". What is returned is the first parameter, concatenated with the second, using the third.
-              ~~~~ 
+              ~~~~
 
-              =====
+              ====
 
               from unittest.gui import TestCaseGui
 
@@ -85,7 +85,7 @@ Exercises
                       self.assertEqual(together(3, 'dogs', ': '), '3: dogs', "Testing that together returns the correct string on input (3, 'dogs', ': ')")
                       self.assertEqual(together(493.3, 'beans', ' lima '), '493.3 lima beans', "Testing that together returns the correct string on input (493.3, 'beans', 'lima')")
 
-              myTests().main()   
+              myTests().main()
 
 
 Contributed Exercises
