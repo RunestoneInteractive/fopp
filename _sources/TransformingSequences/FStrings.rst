@@ -134,9 +134,9 @@ We have introduced various string methods in Python. Use the following question 
 
 .. mchoice:: question8_f_10
    :answer_a: The percentage of r characters (upper or lower case): 6.061%. The number of r: 4.
-   :answer_b: The number of r: 4. The percentage of r characters (upper or lower case): 6.061%.
+   :answer_b: The number of r characters: 4. The percentage of r characters (upper or lower case): 6.061%.
    :answer_c: The percentage of r characters (upper or lower case): 6.06%. The number of r: 3.
-   :answer_d: The number of r: 3. The percentage of r characters (upper or lower case): 6.06%.
+   :answer_d: The number of r characters: 3. The percentage of r characters (upper or lower case): 6.06%.
    :correct: d
    :feedback_a: Check how many decimal places, sentence order, and how many lower case ‘r’ characters there are.
    :feedback_b: Check how many decimal places and how many lower case ‘r’ characters there are.
