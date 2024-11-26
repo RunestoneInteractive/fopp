@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<section xml:id="python-turtle_object-oriented-concepts">
+  <title>Object Oriented Concepts</title>
+  <p>It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully.</p>
+  <subsection xml:id="python-turtle_user-defined-classes">
+    <title>User-defined Classes</title>
+    <p>First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and much later, new classes of objects. For now, you just need to understand how to use them.</p>
+  </subsection>
+  <subsection xml:id="python-turtle_instances">
+    <title>Instances</title>
+    <p>Given a class like <c>Turtle</c> or <c>Screen</c>, we create a new instance with a syntax that looks like a function call, <c>Turtle()</c>. The Python interpreter figures out that Turtle is a class rather than a function, and so it creates a new instance of the class and returns it. Since the Turtle class was defined in a separate module, (confusingly, also named turtle), we had to refer to the class as turtle.Turtle. Thus, in the programs we wrote <c>turtle.Turtle()</c> to make a new turtle. We could also write <c>turtle.Screen()</c> to make a new window for our turtles to paint in.</p>
+  </subsection>
+  <subsection xml:id="python-turtle_attributes">
+    <title>Attributes</title>
+    <p>Each instance can have attributes, sometimes called <term>instance variables</term>. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.</p>
+    <program language="python">
+      <input>
+alex.price = 500
+tess.price = 600
+print(alex.price + tess.price)
+</input>
+    </program>
+  </subsection>
+  <subsection xml:id="python-turtle_methods">
+    <title>Methods</title>
+    <p>Classes have associated <term>methods</term>, which are just a special kind of function.  Consider the expression <c>alex.forward(50)</c> The interpreter first looks up alex and finds that it is an instance of the class Turtle. Then it looks up the attribute forward and finds that it is a method. Since there is a left parenthesis directly following, the interpreter invokes the method, passing 50 as a parameter.</p>
+    <p>The only difference between a method invocation and other function calls is that the object instance itself is also passed as a parameter. Thus <c>alex.forward(50)</c> moves alex, while <c>tess.forward(50)</c> moves tess.</p>
+    <p>Some of the methods of the Turtle class set attributes that affect the actions of other methods. For example, the method pensize changes the width of the drawing pen, and the color method changes the pen's color.</p>
+    <p>Methods return values, just as functions do. However, none of the methods of the Turtle class that you have used return useful values the way the <c>len</c> function does. Thus, it would not make sense to build a complex expression like <c>tess.forward(50) + 75</c>. It could make sense, however to put a complex expression inside the parentheses: <c>tess.forward(x + y)</c></p>
+  </subsection>
+</section>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<section xml:id="simple-python-data_introduction">
+  <title>Introduction</title>
+  <video xml:id="typesnconvert" youtube="vNfCfowr-pQ" width="auto"/>
+  <p>This chapter introduces several basic building blocks of Python programs:</p>
+  <p>
+    <ul>
+      <li>
+        <p>literals, like numbers and character strings</p>
+      </li>
+      <li>
+        <p>operators, like <c>+</c> and <c>*</c></p>
+      </li>
+      <li>
+        <p>function calls, which take values as inputs and compute new values</p>
+      </li>
+      <li>
+        <p>variables, which save values so they can be used later in the program</p>
+      </li>
+    </ul>
+  </p>
+  <p>These are the basic building blocks that are assembled to create programs that you interact with everyday&#x2014;from the software running on your smartwatch, to the infrastructure behind the largest websites, and every app running on your phone.</p>
+  <subsection xml:id="simple-python-data_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>To understand Python's storage model</p>
+        </li>
+        <li>
+          <p>To solve problems using the &#x2018;accumulator pattern'</p>
+        </li>
+        <li>
+          <p>To understand operator precedence</p>
+        </li>
+        <li>
+          <p>To distinguish between expressions, values, and printed representations</p>
+        </li>
+        <li>
+          <p>To recogonize &amp; explain hard coding</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="simple-python-data_objectives">
+    <title>Objectives</title>
+    <p>
+      <ul>
+        <li>
+          <p>Given some sample code identify variables that reference an object of a particular type</p>
+        </li>
+        <li>
+          <p>Given a variable of one type convert it to another</p>
+        </li>
+        <li>
+          <p>Simulate evaluation of an expression and assignment statement</p>
+        </li>
+        <li>
+          <p>Use reassignment to increment a variable (accumulator pattern)</p>
+        </li>
+        <li>
+          <p>Get input from a user and convert the input to the appropriate type</p>
+        </li>
+        <li>
+          <p>Identify the following types of values: strings, integers, floats, functions</p>
+        </li>
+        <li>
+          <p>Recognize valid vs. invalid variable names</p>
+        </li>
+        <li>
+          <p>Write an assignment statement</p>
+        </li>
+        <li>
+          <p>Update a reference diagram after reassignment</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

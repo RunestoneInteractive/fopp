@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_checking-assumptions-about-data-types">
+  <title>Checking Assumptions About Data Types</title>
+  <p>Unlike some other programming languages, the python interpreter does not enforce restrictions about the data types of objects that can be bound to particular variables. For example, in java, before assigning a value to a variable, the program would include a declaration of what type of value (integer, float, Boolean, etc.) that the variable is allowed to hold. The variable <c>x</c> in a python program can be bound to an integer at one point and to a list at some other point in the program execution.</p>
+  <p>That flexibility makes it easier to get started with programming in python. Sometimes, however, type checking could alert us that something has gone wrong in our program execution. If we are assuming at that <c>x</c> is a list, but it's actually an integer, then at some point later in the program execution, there will probably be an error. We can add <c>assert</c> statements that will cause an error to be flagged sooner rather than later, which might make it a lot easier to debug.</p>
+  <p>In the code below, we explicitly state some natural assumptions about how truncated division might work in python. It turns out that the second asumption is wrong: <c>9.0//5</c> produces <c>2.0</c>, a floating point value!</p>
+  <program xml:id="ac19_1b_1" interactive="activecode" language="python">
+    <input>
+assert type(9//5) == int
+assert type(9.0//5) == int
+        </input>
+  </program>
+  <p>In the code below, <c>lst</c> is bound to a list object. In python, not all the elements of a list have to be of the same type. We can check that they all have the same type and get an error if they are not. Notice that with <c>lst2</c>, one of the assertions fails.</p>
+  <program xml:id="ac19_1b_2" interactive="activecode" language="python">
+    <input>
+lst = ['a', 'b', 'c']
+
+first_type = type(lst[0])
+for item in lst:
+    assert type(item) == first_type
+
+lst2 = ['a', 'b', 'c', 17]
+first_type = type(lst2[0])
+for item in lst2:
+    assert type(item) == first_type
+        </input>
+  </program>
+</section>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_printing-intermediate-results">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Printing Intermediate Results</title>
+  <p>In this textbook we provide the codelens tool so that you are able to step through
+            the program and watch what happens each time a line is evaluated by the Python
+            interpretor. What if you didn't have codelens though, what would you do?</p>
+  <p>In that case, print statements are your best friend. They can show you what the value of
+            something is. This is especially helpful in the case of writing for loops or accumulating
+            a value. If something is going wrong you can compare what you expect to happen to what
+            is actually happening.</p>
+  <program xml:id="ac6_7_1" interactive="activecode" language="python">
+    <input>
+w = range(10)
+
+tot = 0
+for num in w:
+    tot += num
+print(tot)
+        </input>
+  </program>
+  <p>Say we weren't sure what <c>num</c> was being assigned each time we iterated. One way to find out
+            would be to add a print statement inside of the for loop to see.</p>
+  <program xml:id="ac6_7_2" interactive="activecode" language="python">
+    <input>
+w = range(10)
+
+tot = 0
+for num in w:
+    print(num)
+    tot += num
+print(tot)
+        </input>
+  </program>
+  <p>If we wanted to see what was happening to <c>tot</c> as well, we could print that out in the for loop as well!</p>
+  <program xml:id="ac6_7_3" interactive="activecode" language="python">
+    <input>
+w = range(10)
+
+
+tot = 0
+for num in w:
+    print(num)
+    tot += num
+    print(tot)
+print(tot)
+        </input>
+  </program>
+  <p>Finally, if we wanted to make these numbers easier to understand, we could add more to the print statements
+            to make them easier to read!</p>
+  <program xml:id="ac6_7_4" interactive="activecode" language="python">
+    <input>
+w = range(10)
+
+tot = 0
+print("***** Before the For Loop ******")
+for num in w:
+    print("***** A New Loop Iteration ******")
+    print("Value of num:", num)
+    tot += num
+    print("Value of tot:", tot)
+print("***** End of For Loop *****")
+print("Final total:", tot)
+        </input>
+  </program>
+</section>

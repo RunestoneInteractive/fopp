@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_summary">
+  <title>Summary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>for loop traversal (<c>for</c>)</title>
+      <p><em>Traversing</em> a string or a list means accessing each character in the string or item in the list, one
+                            at a time.  For example, the following for loop:</p>
+      <program language="python">
+        <input>
+for ix in 'Example':
+    ...
+</input>
+      </program>
+      <p>executes the body of the loop 7 times with different values of <c>ix</c> each time.</p>
+    </gi>
+    <gi>
+      <title>range</title>
+      <p>A function that produces a list of numbers. For example, <c>range(5)</c>, produces a list of five
+                            numbers, starting with 0, <c>[0, 1, 2, 3, 4]</c>.</p>
+    </gi>
+    <gi>
+      <title>pattern</title>
+      <p>A sequence of statements, or a style of coding something that has
+                            general applicability in a number of different situations.  Part of
+                            becoming a mature programmer is to learn and establish the
+                            patterns and algorithms that form your toolkit.</p>
+    </gi>
+    <gi>
+      <title>index</title>
+      <p>A variable or value used to select a member of an ordered collection, such as
+                            a character from a string, or an element from a list.</p>
+    </gi>
+    <gi>
+      <title>traverse</title>
+      <p>To iterate through the elements of a collection, performing a similar
+                            operation on each.</p>
+    </gi>
+    <gi>
+      <title>accumulator pattern</title>
+      <p>A pattern where the program initializes an accumulator variable and then changes it
+                            during each iteration, accumulating a final result.</p>
+    </gi>
+  </glossary>
+</section>

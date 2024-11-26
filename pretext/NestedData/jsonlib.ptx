@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<section xml:id="nested-data_processing-json-results">
+  <title>Processing JSON results</title>
+  <p>JSON stands for JavaScript Object Notation. It looks a lot like the representation of nested dictionaries and lists in
+            python when we write them out as literals in a program, but with a few small differences (e.g., the word null instead of
+            None). When your program receives a JSON-formatted string, generally you will want to convert it into a python object, a
+            list or a dictionary.</p>
+  <p>Again, python provides a module for doing this. The module is called json. We will be using two functions in this module,
+            <c>loads</c> and <c>dumps</c>.</p>
+  <p><c>json.loads()</c> takes a string as input and produces a python object (a dictionary or a list) as output.</p>
+  <p>Consider, for example, some data that we might get from Apple's iTunes, in the JSON format:</p>
+  <program xml:id="ac17_3_1" interactive="activecode" language="python">
+    <input>
+import json
+a_string = '\n\n\n{\n "resultCount":25,\n "results": [\n{"wrapperType":"track", "kind":"podcast", "collectionId":10892}]}'
+print(a_string)
+d = json.loads(a_string)
+print("------")
+print(type(d))
+print(d.keys())
+print(d['resultCount'])
+# print(a_string['resultCount'])
+        </input>
+  </program>
+  <p>The other function we will use is <c>dumps</c>. It does the inverse of <c>loads</c>. It takes a python object, typically a dictionary or a list, and returns a string, in JSON format. It has a few other parameters. Two useful parameters are sort_keys and indent. When the value True is passed for the sort_keys parameter, the keys of dictionaries are output in alphabetic order with their values. The indent parameter expects an integer. When it is provided, dumps generates a string suitable for displaying to people, with newlines and indentation for nested lists or dictionaries. For example, the following function uses json.dumps to make a human-readable printout of a nested data structure.</p>
+  <program xml:id="ac17_3_2" interactive="activecode" language="python">
+    <input>
+import json
+def pretty(obj):
+    return json.dumps(obj, sort_keys=True, indent=2)
+
+d = {'key1': {'c': True, 'a': 90, '5': 50}, 'key2':{'b': 3, 'c': "yes"}}
+
+print(d)
+print('--------')
+print(pretty(d))
+        </input>
+  </program>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <exercise label="question17_3_1">
+    <statement>
+      <p>Because we can only write strings into a file, if we wanted to convert a dictionary <title_reference>d</title_reference> into a json-formatted string so that we could store it in a file, what would we use?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>json.loads(d)</p>
+        </statement>
+        <feedback>
+          <p>loads turns a json-formatted string into a list or dictionary</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>json.dumps(d)</p>
+        </statement>
+        <feedback>
+          <p>dumps turns a list or dictionary into a json-formatted string</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>d.json()</p>
+        </statement>
+        <feedback>
+          <p>.json() tries to invoke the json method, but that method is not defined for dictionaries</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question17_3_2">
+    <statement>
+      <p>Say we had a JSON string in the following format. How would you convert it so that it is a python list?</p>
+      <program language="python">
+        <input>
+entertainment = """[{"Library Data": {"count": 3500, "rows": 10, "locations": 3}}, {"Movie Theater Data": {"count": 8, "rows": 25, "locations": 2}}]"""
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>entertainment.json()</p>
+        </statement>
+        <feedback>
+          <p>The .json() method is not defined for strings.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>json.dumps(entertainment)</p>
+        </statement>
+        <feedback>
+          <p>dumps (dump to string) turns a list or dictionary into a json-formatted string</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>json.loads(entertainment)</p>
+        </statement>
+        <feedback>
+          <p>loads (load from string) turns a json-formatted string into a list or dictionary</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

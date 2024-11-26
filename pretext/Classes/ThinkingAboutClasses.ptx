@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<section xml:id="classes_thinking-about-classes-and-instances">
+  <title>Thinking About Classes and Instances</title>
+  <p>You can now imagine some reasons you may want to define a class. You have seen examples of creating types that are more complicated or specific than the ones built in to Python (like lists or strings). <c>Turtle</c>, with all the instance variables and methods you learned about using earlier in the semester, is a class that programmers defined which is now included in the Python language. In this chapter, we defined <c>Point</c> with some functionality that can make it easier to write programs that involve <c>x,y</c> coordinate <c>Point</c> instances. And shortly, you'll see how you can define classes to represent objects in a game.</p>
+  <p>You can also use self-defined classes to hold data &#x2013; for example, data you get from making a request to a REST API.</p>
+  <p>Before you decide to define a new class, there are a few things to keep in mind, and questions you should ask yourself:</p>
+  <p>
+    <ul>
+      <li>
+        <p><term>What is the data that you want to deal with?</term> (Data about a bunch of songs from iTunes? Data about a bunch of tweets from Twitter? Data about a bunch of hashtag searches on Twitter? Two numbers that represent coordinates of a point on a 2-dimensional plane?)</p>
+      </li>
+      <li>
+        <p><term>What will one instance of your class represent?</term> In other words, which sort of new <em>thing</em> in your program should have fancy functionality? One song? One hashtag? One tweet? One point? The answer to this question should help you decide what to call the class you define.</p>
+      </li>
+      <li>
+        <p><term>What information should each instance have as instance variables?</term> This is related to what an instance represents. See if you can make it into a sentence. <em><q>Each instance represents one &lt; song &gt; and each &lt; song &gt; has an &lt; artist &gt; and a &lt; title &gt; as instance variables.</q></em> Or, <em><q>Each instance represents a &lt; Tweet &gt; and each &lt; Tweet &gt; has a &lt; user (who posted it) &gt; and &lt; a message content string &gt; as instance variables.</q></em></p>
+      </li>
+      <li>
+        <p><term>What instance methods should each instance have?</term> What should each instance be able to <em>do</em>? To continue using the same examples: Maybe each song has a method that uses a lyrics API to get a long string of its lyrics. Maybe each song has a method that returns a string of its artist's name. Or for a tweet, maybe each tweet has a method that returns the length of the tweet's message. (Go wild!)</p>
+      </li>
+      <li>
+        <p><term>What should the printed version of an instance look like?</term> (This question will help you determine how to write the <c>__str__</c> method.) Maybe, <q>Each song printed out will show the song title and the artist's name.</q> or <q>Each Tweet printed out will show the username of the person who posted it and the message content of the tweet.</q></p>
+      </li>
+    </ul>
+  </p>
+  <p>After considering those questions and making decisions about how you're going to get started with a class definition, you can begin to define your class.</p>
+  <p>Remember that a class definition, like a function definition, is a general description of what <em>every instance of the class should have</em>. (Every Point has an <c>x</c> and a <c>y</c>.) The class instances are specific: e.g. the Point with <em>a specific x and y &gt;.</em> You might have a Point with an <c>x</c> value of 3 and a <c>y</c> value of 2, so for that particular <em>instance</em> of the <em>class</em> <c>Point</c>, you'd pass in <c>3</c> and <c>2</c> to the constructor, the <c>__init__</c> method, like so: <c>new_point = Point(3,2)</c>, as you saw in the last sections.</p>
+</section>

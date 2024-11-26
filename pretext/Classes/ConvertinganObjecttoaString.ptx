@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<section xml:id="classes_converting-an-object-to-a-string">
+  <title>Converting an Object to a String</title>
+  <p>When we're working with classes and objects, it is often necessary to print an object (that is, to print the state of an object).
+            Consider the example below.</p>
+  <program xml:id="chp13_classesstr1" interactive="activecode" language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+
+p = Point(7,6)
+print(p)
+        </input>
+  </program>
+  <p>The <c>print</c> function shown above produces a string representation of the Point <c>p</c>.  The default functionality provided by
+            Python tells you that <c>p</c> is an object of type <c>Point</c>.  However, it does not tell you anything about the specific
+            state of the point.</p>
+  <p>We can improve on this representation if we include a special method call <c>__str__</c>.  Notice that this method uses the same naming convention as the constructor, that is two underscores before and after the name.  It is common that Python
+            uses this naming technique for special methods.</p>
+  <p>The <c>__str__</c> method is responsible for returning a string representation as defined by the class creator.  In other words, you as the programmer, get to choose what a <c>Point</c> should look like when it gets printed.  In this case, we
+            have decided that the string representation will include the values of x and y as well as some identifying text.  It
+            is required that the <c>__str__</c> method create and <em>return</em> a string.</p>
+  <p>Whatever string the <c>__str__</c> method for a class returns, that is the string that will print when you put any instance of that class in a print statement. For that reason, the string that a class's <c>__str__</c> method returns should usually include values of instance variables. If a point has <c>x</c> value 3 and <c>y</c> value 4, but another point has <c>x</c> value 5 and <c>y</c> value 9, those two Point objects should probably look different when you print them, right?</p>
+  <p>Take a look at the code below.</p>
+  <program xml:id="chp13_classesstr2" interactive="activecode" language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return "x = {}, y = {}".format(self.x, self.y)
+
+p = Point(7,6)
+print(p)
+        </input>
+  </program>
+  <p>When we run the program above you can see that the <c>print</c> function now shows the string that we chose.</p>
+  <p>Now, you ask, don't we already have a <c>str</c> type converter that can
+            turn our object into a string?  Yes we do!</p>
+  <p>And doesn't <c>print</c>
+            automatically use this when printing things?  Yes again!</p>
+  <p>However, as we saw earlier, these automatic mechanisms do not do exactly what we want.  Python provides many default implementations for
+            methods that we as programmers will probably want to change.  When a programmer changes the meaning of a method we
+            say that we <term>override</term> the method.  Note also that the <c>str</c> type converter function uses whatever <c>__str__</c> method we
+            provide.</p>
+  <p>
+    <term>Check Your Understanding</term>
+  </p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Create a class called Cereal that accepts three inputs: 2 strings and 1 integer, and assigns them to 3 instance variables in the constructor: <c>name</c>, <c>brand</c>, and <c>fiber</c>. When an instance of <c>Cereal</c> is printed, the user should see the following: <q>[name] cereal is produced by [brand] and has [fiber integer] grams of fiber in every serving!</q> To the variable name <c>c1</c>, assign an instance of <c>Cereal</c> whose name is <c>"Corn Flakes"</c>, brand is <c>"Kellogg's"</c>, and fiber is <c>2</c>. To the variable name <c>c2</c>, assign an instance of <c>Cereal</c> whose name is <c>"Honey Nut Cheerios"</c>, brand is <c>"General Mills"</c>, and fiber is <c>3</c>. Practice printing both!</p>
+      </li>
+    </ol>
+  </p>
+  <program xml:id="ac_ch13_classstr_01" interactive="activecode" language="python">
+    <input>
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(c1.__str__(), "Corn Flakes cereal is produced by Kellogg's and has 2 grams of fiber in every serving!", "Testing that c1 prints correctly.")
+   def testTwo(self):
+      self.assertEqual(c2.__str__(), "Honey Nut Cheerios cereal is produced by General Mills and has 3 grams of fiber in every serving!", "Testing that c2 prints correctly.")
+
+myTests().main()
+        </input>
+  </program>
+</section>

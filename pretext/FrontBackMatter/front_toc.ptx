@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <chunking level="1" />
+    <titlepage>
+        <author>
+            <personname>Brad Miller</personname>
+        </author>
+
+        <author>
+            <personname>Paul Resnick</personname>
+        </author>
+
+        <date><today /></date>
+    </titlepage>
+
+    <xi:include href="./foreword.ptx" />
+    <xi:include href="./preface.ptx" />
+    <xi:include href="./contrib.ptx" />
+    
+</frontmatter>

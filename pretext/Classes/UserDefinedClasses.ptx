@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<section xml:id="classes_user-defined-classes">
+  <title>User Defined Classes</title>
+  <p>We've already seen classes like <c>str</c>, <c>int</c>,  <c>float</c> and <c>list</c>.  These were defined by Python and
+            made available for us to use.  However, in many cases when we are solving problems we need to create data objects
+            that are related to the problem we are trying to solve.  We need to create our own classes.</p>
+  <p>As an example, consider the concept of a mathematical point. In two dimensions, a point is two
+            numbers (coordinates) that are treated collectively as a single object.
+            Points are often written in parentheses with a comma
+            separating the coordinates. For example, <c>(0, 0)</c> represents the origin, and
+            <c>(x, y)</c> represents the point <c>x</c> units to the right and <c>y</c> units up
+            from the origin.  This <c>(x,y)</c> is the state of the point.</p>
+  <p>Thinking about our diagram above, we could draw a <c>point</c> object as shown here.</p>
+  <image source="Classes/Figures/objectpic2.png" width="50%" alt="A point has an x and a y"/>
+  <p>Some of the typical operations that one associates with points might be to ask
+            the point for its x coordinate, <c>getX</c>, or to ask for its y coordinate, <c>getY</c>.  You would want these types of functions available to prevent accidental changes to these instance variables since doing so would allow you to view the values without accessing them directly.  You may also
+            wish to calculate the distance of a point from the origin, or the distance of a point from another point,
+            or find the midpoint between two points, or answer the question as to whether a point falls within a
+            given rectangle or circle.  We'll shortly see how we can organize these
+            together with the data.</p>
+  <image source="Classes/Figures/objectpic3.png" width="50%" alt="A point also has methods"/>
+  <p>Now that we understand what a <c>point</c> object might look like, we can define a new <term>class</term>.
+            We'll want our points to each have an <c>x</c> and a <c>y</c> attribute,
+            so our first class definition looks like this.</p>
+  <program language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+        """ Create a new point at the origin """
+        self.x = 0
+        self.y = 0
+</input>
+  </program>
+  <p>Class definitions can appear anywhere in a program, but they are usually near
+            the beginning (after the <c>import</c> statements). The syntax rules for a class
+            definition are the same as for other compound statements. There is a header
+            which begins with the keyword, <c>class</c>, followed by the name of the class,
+            and ending with a colon.</p>
+  <p>If the first line after the class header is a string, it becomes
+            the docstring of the class, and will be recognized by various tools.  (This
+            is also the way docstrings work in functions.)</p>
+  <p>Every class should have a method with the special name <c>__init__</c>.
+            This <term>initializer method</term>, often referred to as the <term>constructor</term>, is automatically called whenever a new
+            instance of <c>Point</c> is created.  It gives the programmer the opportunity
+            to set up the attributes required within the new instance by giving them
+            their initial state values.  The <c>self</c> parameter (you could choose any
+            other name, but nobody ever does!) is automatically set to reference
+            the newly created object that needs to be initialized.</p>
+  <p>So let's use our new Point class now. This next part should look a little familiar, if you remember some of the syntax for how we created instances of the Turtle class, in the <xref ref="python-turtle_intro--hello-little-turtles"/>.</p>
+  <program xml:id="chp13_classes1" interactive="activecode" language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+
+        self.x = 0
+        self.y = 0
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # and make a second point
+
+print("Nothing seems to have happened with the points")
+        </input>
+  </program>
+  <p>During the initialization of the objects, we created two
+            attributes called <title_reference>x</title_reference> and <title_reference>y</title_reference> for each object, and gave them both the value 0.  You will note that when you run the
+            program, nothing happens.  It turns out that this is not quite the case.  In fact, two <c>Points</c> have been created, each
+            having an x and y coordinate with value 0.  However, because we have not asked the program to do anything with the points, we don't see any other result.</p>
+  <image source="Classes/Figures/objectpic4.png" width="50%" alt="Simple object has state and methods"/>
+  <p>The following program adds a few print statements. You can see that the output suggests that each one is a <c>Point object</c>.
+            However, notice that the <c>is</c> operator returns <c>False</c> meaning that they are different objects (we will have more to say about this in a later section).</p>
+  <program xml:id="chp13_classes2" interactive="activecode" language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+
+        self.x = 0
+        self.y = 0
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # and make a second point
+
+print(p)
+print(q)
+
+print(p is q)
+        </input>
+  </program>
+  <p>A function like <c>Point</c> that creates a new object instance
+            is called a <term>constructor</term>.  Every class automatically uses the name of the class as the name of the constructor function.
+            The definition of the constructor function is done
+            when you write the <c>__init__</c> function (method) inside the class definition.</p>
+  <p>It may be helpful to think of a class as a factory for making objects.
+            The class itself isn't an instance of a point, but it contains the machinery
+            to make point instances.   Every time you call the constructor, you're asking
+            the factory to make you a new object.  As the object comes off the
+            production line, its initialization method is executed to
+            get the object properly set up with it's factory default settings.</p>
+  <p>The combined process of <q>make me a new object</q> and <q>get its settings initialized
+            to the factory default settings</q> is called <term>instantiation</term>.</p>
+  <p>To get a clearer understanding of what happens when instantiating a new instance, examine the previous code using CodeLens.</p>
+  <program xml:id="chp13_classes2a" interactive="codelens" language="python">
+    <input>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self):
+
+        self.x = 0
+        self.y = 0
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # and make a second point
+
+print(p)
+print(q)
+
+print(p is q)
+    </input>
+  </program>
+  <p>At Step 2 in the CodeLens execution, you can see that <c>Point</c> has been bound to an object representing the <c>Point</c> class, but there are not yet any instances. The execution of line 9, <c>p = Point()</c>, occurs at steps 3-5. First, at step 3, you can see that a blank instance of the class has been created, and is passed as the first (and only parameter) to the <c>__init__</c> method. That method's code is executed, with the variable <c>self</c> bound to that instance. At steps 4 and 5, two instance variables are filled in: <c>x</c> and <c>y</c> are both set to <c>0</c>. Nothing is returned from the <c>__init__</c> method, but the point object itself is returned from the call to <c>Point()</c>. Thus, at step 7, <c>p</c> is bound to the new point that was created and initialized.</p>
+  <p>Skipping ahead, by the time we get to Step 14, <c>p</c> and <c>q</c> are each bound to different <c>Point</c> instances. Even though both have <c>x</c> and <c>y</c> instance variables set to <c>0</c>, they are <em>different objects</em>. Thus <c>p is q</c> evaluates to <c>False</c>.</p>
+</section>

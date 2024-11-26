@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ac_19_4_1">
+    <statement>
+      <p>The function <title_reference>mySum</title_reference> is supposed to return the sum of a list of numbers (and 0 if that list is empty), but it has one or more errors in it. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.</p>
+    </statement>
+    <program xml:id="ac_19_4_1_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mc_19_4_1">
+    <statement>
+      <p>Which of the following cases fail for the mySum function?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>an empty list</p>
+        </statement>
+        <feedback>
+          <p>Correct, 0 is not returned if the function is given an empty list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a list with one item</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, a list with one item returns the correct value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a list with more than one item</p>
+        </statement>
+        <feedback>
+          <p>Correct, a list with more than one item does not provide the correct response.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mc_19_4_2">
+    <statement>
+      <p>Are there any other cases, that we can determine based on the current structure of the function, that also fail for the mySum function?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Though it is possible that the function could have more issues, we can't tell if other cases would fail (such as combining integers and floats) due to the current issues.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Correct. At the moment we can't tell if other cases would fail (such as combining integers and floats), but it is possible that the function could have more issues once the current issues are fixed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac_19_4_2">
+    <statement>
+      <dl>
+        <li>
+          <title>The class Student is supposed to accept two arguments in its constructor:</title>
+          <p>
+            <ol label="1">
+              <li>
+                <p>A name string</p>
+              </li>
+              <li>
+                <p>An optional integer representing the number of years the student has been at Michigan (default:1)</p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <title>Every student has three instance variables:</title>
+          <p>
+            <ol label="1">
+              <li>
+                <p><title_reference>self.name</title_reference> (set to the name provided)</p>
+              </li>
+              <li>
+                <p><title_reference>self.years_UM</title_reference> (set to the number of years the student has been at Michigan)</p>
+              </li>
+              <li>
+                <p><title_reference>self.knowledge</title_reference> (initialized to 0)</p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <title>There are three methods:</title>
+          <p>
+            <ul>
+              <li>
+                <p><title_reference>.study()</title_reference> should increase self.knowledge by 1 and return None</p>
+              </li>
+              <li>
+                <p><title_reference>.getKnowledge()</title_reference> should return the value of self.knowledge</p>
+              </li>
+              <li>
+                <p><title_reference>.year_at_umich()</title_reference> should return the value of self.years_UM</p>
+              </li>
+            </ul>
+          </p>
+        </li>
+      </dl>
+      <p>There are one or more errors in the class. Use this space to write test cases to determine what errors there are. You will be using this information to answer the next set of multiple choice questions.</p>
+    </statement>
+    <program xml:id="ac_19_4_2_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mc_19_4_3">
+    <statement>
+      <p>Which of the following cases fail for the Student class?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>the method study does not return None</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the method study does return None.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the optional integer in the constructor is not optional</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the integer for number of years is optional.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>the attributes/instance variables are not correctly assigned in the constructor</p>
+        </statement>
+        <feedback>
+          <p>Correct! The constructor does not actually use the optional integer that is provided. Instead it sticks with using the default value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>the method study does not increase self.knowledge</p>
+        </statement>
+        <feedback>
+          <p>Correct! Study does not increase the self.knowledge.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the method year_at_umich does not return the value of self.years_UM</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, year_at_umich does return the value assigned to self.years_UM.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mc_19_4_4">
+    <statement>
+      <p>Are there any other cases, that we can determine based on the current structure of the class, that also fail for the Student class?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Correct! There is an issue with the getKnowledge method because it returns None when self.knowledge is 0, even though it returns the correct value when self.knowledge is non-zero.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there are more cases that fail. Try finding those other cases!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <program xml:id="ac_19_4_3" interactive="activecode" language="python">
+    <input>
+def lr(n): return list(range(n))
+
+# THESE FUNCTIONS ARE INTENTIONALLY OBFUSCATED
+# PLEASE TRY TO WRITE TESTS FOR THEM RATHER THAN
+# READING THEM.
+def mySum(a):
+    if type(a) is type(''.join([][:])): return a[lr(1)[0]] + mySum(a[1:])
+    elif len(a)==len(lr(1)+[]): return a[lr(1)[0]]
+    else: return None and a[lr(1)[0]] + mySum(a[1:])
+
+
+# THESE FUNCTIONS ARE INTENTIONALLY OBFUSCATED
+# PLEASE TRY TO WRITE TESTS FOR THEM RATHER THAN
+# READING THEM.
+class Student():
+    def __init__(s,a,b=1): s.name,s.years_UM,s.knowledge = ''*200+a+''*100,1,len(lr(0)) + len([])
+    def study(s):
+        for _ in lr(s.knowledge): s.knowledge = s.knowledge + 1
+    def getKnowledge(s):
+        for i in lr(s.knowledge): return s.knowledge
+    def year_at_umich(s): return s.years_UM
+        </input>
+  </program>
+</section>

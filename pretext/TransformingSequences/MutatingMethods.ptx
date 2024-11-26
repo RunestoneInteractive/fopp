@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_mutating-methods">
+  <title>Mutating Methods</title>
+  <p>You've seen some methods already, like the <c>count</c> and <c>index</c> methods. Methods are either
+            mutating or non-mutating. Mutating methods are ones that change the object after the method has been
+            used. Non-mutating methods do not change the object after the method has been used.</p>
+  <p>The <c>count</c> and <c>index</c> methods are both non-mutating. Count returns the number of occurrences of
+            the argument given but does not change the original string or list. Similarly, index returns the
+            leftmost occurrence of the argument but does not change the original string or list. Below we'll talk
+            about list methods in general. Keep an eye out for methods that are mutating!</p>
+  <subsection xml:id="transforming-sequences_list-methods">
+    <title>List Methods</title>
+    <p>The dot operator can also be used to access built-in methods of list objects.
+                <c>append</c> is a list method which adds the argument passed to it to the end of
+                the list. Continuing with this example, we show several other list methods.  Many of them are
+                easy to understand.</p>
+    <program xml:id="ac8_6_1" interactive="activecode" language="python">
+      <input>
+mylist = []
+mylist.append(5)
+mylist.append(27)
+mylist.append(3)
+mylist.append(12)
+print(mylist)
+
+mylist.insert(1, 12)
+print(mylist)
+print(mylist.count(12))
+
+print(mylist.index(3))
+print(mylist.count(5))
+
+mylist.reverse()
+print(mylist)
+
+mylist.sort()
+print(mylist)
+
+mylist.remove(5)
+print(mylist)
+
+lastitem = mylist.pop()
+print(lastitem)
+print(mylist)
+        </input>
+    </program>
+    <p>There are two ways to use the <c>pop</c> method.  The first, with no parameter, will remove and return the
+                last item of the list. If you provide a parameter for the position, <c>pop</c> will remove and return the
+                item at that position. Either way the list is changed.</p>
+    <p>The following table provides a summary of the list methods shown above. The column labeled <c>result</c>
+                gives an explanation as to what the return value is as it relates to the new value of the list. The
+                word <term>mutator</term> means that the list is changed by the method but nothing is returned (actually
+                <c>None</c> is returned). A <term>hybrid</term> method is one that not only changes the list but also returns a
+                value as its result. Finally, if the result is simply a return, then the list is unchanged by the
+                method.</p>
+    <p>Be sure to experiment with these methods to gain a better understanding of what they do.</p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell>
+                                Method
+                            </cell>
+          <cell>
+                                Parameters
+                            </cell>
+          <cell>
+                                Result
+                            </cell>
+          <cell>
+                                Description
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                append
+                            </cell>
+          <cell>
+                                item
+                            </cell>
+          <cell>
+                                mutator
+                            </cell>
+          <cell>
+                                Adds a new item to the end of a list
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                insert
+                            </cell>
+          <cell>
+                                position, item
+                            </cell>
+          <cell>
+                                mutator
+                            </cell>
+          <cell>
+                                Inserts a new item at the position given
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                pop
+                            </cell>
+          <cell>
+                                none
+                            </cell>
+          <cell>
+                                hybrid
+                            </cell>
+          <cell>
+                                Removes and returns the last item
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                pop
+                            </cell>
+          <cell>
+                                position
+                            </cell>
+          <cell>
+                                hybrid
+                            </cell>
+          <cell>
+                                Removes and returns the item at position
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                sort
+                            </cell>
+          <cell>
+                                none
+                            </cell>
+          <cell>
+                                mutator
+                            </cell>
+          <cell>
+                                Modifies a list to be sorted
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                reverse
+                            </cell>
+          <cell>
+                                none
+                            </cell>
+          <cell>
+                                mutator
+                            </cell>
+          <cell>
+                                Modifies a list to be in reverse order
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                index
+                            </cell>
+          <cell>
+                                item
+                            </cell>
+          <cell>
+                                return idx
+                            </cell>
+          <cell>
+                                Returns the position of first occurrence of item
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                count
+                            </cell>
+          <cell>
+                                item
+                            </cell>
+          <cell>
+                                return ct
+                            </cell>
+          <cell>
+                                Returns the number of occurrences of item
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                remove
+                            </cell>
+          <cell>
+                                item
+                            </cell>
+          <cell>
+                                mutator
+                            </cell>
+          <cell>
+                                Removes the first occurrence of item
+                            </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>Details for these and others can be found in the
+                <url href="http://docs.python.org/py3k/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range" visual="http://docs.python.org/py3k/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range">Python Documentation</url>.</p>
+    <p>It is important to remember that methods like <c>append</c>, <c>sort</c>,  and <c>reverse</c> all return
+                <c>None</c>. They change the list; they don't produce a new list. So, while we did reassignment to
+                increment a number, as in <c>x = x + 1</c>, doing the analogous thing with these operations will lose
+                the entire list contents (see line 8 below).</p>
+    <program xml:id="ac8_6_2" interactive="activecode" language="python">
+      <input>
+mylist = []
+mylist.append(5)
+mylist.append(27)
+mylist.append(3)
+mylist.append(12)
+print(mylist)
+
+mylist = mylist.sort()   #probably an error
+print(mylist)
+        </input>
+    </program>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question8_6_1">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+alist = [4,2,8,6,5]
+alist.append(True)
+alist.append(False)
+print(alist)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[4,2,8,6,5,False,True]</p>
+          </statement>
+          <feedback>
+            <p>True was added first, then False was added last.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[4,2,8,6,5,True,False]</p>
+          </statement>
+          <feedback>
+            <p>Yes, each item is added to the end of the list.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[True,False,4,2,8,6,5]</p>
+          </statement>
+          <feedback>
+            <p>append adds at the end, not the beginning.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

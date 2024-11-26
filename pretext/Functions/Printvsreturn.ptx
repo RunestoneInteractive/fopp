@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<section xml:id="functions_print-vs-return">
+  <title>&#x1F469;&#x200D;&#x1F4BB; Print vs. return</title>
+  <p>Many beginning programmers find the distinction between print and return very confusing, especially since most of the
+            illustrations of return values in intro texts like this one show the returned value from a function call by printing
+            it, as in <c>print(square(g(2)))</c>.</p>
+  <p>The print statement is fairly easy to understand. It takes a python object and outputs a printed representation of it
+            in the output window. You can think of the print statement as something that takes an object from the land of the
+            program and makes it visible to the land of the human observer.</p>
+  <note>
+    <p><term>Print is for people</term>. Remember that slogan. Printing has no effect on the ongoing execution of a program. It doesn't assign a value to a variable. It doesn't return a value from a function call.</p>
+  </note>
+  <p>If you're confused, chances are the source of your confusion is really about returned values and the evaluation of
+            complex expressions. A function that returns a value is producing a value for use <em>by the program</em>, in particular for
+            use in the part of the code where the function was invoked. Remember that when a function is invoked, the function's
+            code block is executed &#x2013; all that code indented under the <c>def</c> statement gets executed, following the rules of the
+            Python formal language for what should and should not execute as it goes. But when the function returns, control goes
+            back to the calling location, and a return value may come back with it.</p>
+  <p>You've already seen some function calls in Chapter 1. When we told you about the function <c>square</c> that we defined,
+            you saw that the expression <c>square(2)</c> evaluated to the integer value <c>4</c>.</p>
+  <p>That's because the <c>square</c> function <em>returns</em> a value: the square of whatever input is passed into it.</p>
+  <p>If a returned value is for use <em>by the program</em>, why did you make that function invocation to return a value? What do
+            you use the result of the function call for? There are three possibilities.</p>
+  <p>
+    <ol label="1">
+      <li>
+        <dl>
+          <li>
+            <title>Save it for later.</title>
+            <p>The returned value may be:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>Assigned to a variable. For example, <c>w = square(3)</c></p>
+                </li>
+                <li>
+                  <p>Put in a list. For example, <c>L.append(square(3))</c></p>
+                </li>
+                <li>
+                  <p>Put in a dictionary. For example, <c>d[3] = square(3)</c></p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <li>
+            <title>Use it in a more complex expression.</title>
+            <p>In that case, think of the return value as
+                                replacing the entire text of the function invocation. For example, if there is a line
+                                of code <c>w = square(square(3) + 7) - 5</c>, think of the return value 9 replacing the
+                                text square(3) in that invocation, so it becomes <c>square(9 + 7) -5</c>.</p>
+          </li>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <li>
+            <title>Print it for human consumption.</title>
+            <p>For example, <c>print(square(3))</c> outputs 9 to the
+                                output area. Note that, unless the return value is first  saved as in possibility 1, it will be available
+                                only to the humans watching the output area, not to the program as it continues executing.</p>
+          </li>
+        </dl>
+      </li>
+    </ol>
+  </p>
+  <p>If your only purpose in running a function is to make an output visible for human consumption, there are two ways to
+            do it. You can put one or more print statements inside the function definition and not bother to return anything from
+            the function (the value None will be returned). In that case, invoke the function without a print statement. For
+            example, you can have an entire line of code that reads <c>f(3)</c>. That will run the function f and throw away the
+            return value. Of course, if square doesn't print anything out or have any side effects, it's useless to call it and do
+            nothing with the return value. But with a function that has print statements inside it, it can be quite useful.</p>
+  <p>The other possibility is to return a value from the function and print it, as in <c>print(f(3))</c>. As you start to
+            write larger, more complex programs, this will be more typical. Indeed the print statement will usually only be a
+            temporary measure while you're developing the program. Eventually, you'll end up calling f and saving the return value
+            or using it as part of a more complex expression.</p>
+  <p>You will know you've really internalized the idea of functions when you are no longer confused about the difference
+            between print and return. Keep working at it until it makes sense to you!</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question11_11_1">
+    <statement>
+      <p>What will the following code output?</p>
+      <program language="python">
+        <input>
+def square(x):
+    return x*x
+
+def g(y):
+    return y + 3
+
+def h(y):
+    return square(y) + 3
+
+print(h(2))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>2 is the input; the value returned from h is what will be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Don't forget that 2 gets squared.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>7</p>
+        </statement>
+        <feedback>
+          <p>First square 2, then add 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>25</p>
+        </statement>
+        <feedback>
+          <p>3 is added to the result of squaring 2</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error: y has a value but x is an unbound variable inside the square function</p>
+        </statement>
+        <feedback>
+          <p>When square is called, x is bound to the parameter value that is passed in, 2.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question11_11_2">
+    <statement>
+      <p>What will the following code output?</p>
+      <program language="python">
+        <input>
+def square(x):
+    return x*x
+
+def g(y):
+    return y + 3
+
+def h(y):
+    return square(y) + 3
+
+print(g(h(2))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Better read the section above one more time.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Better read the section above one more time.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>7</p>
+        </statement>
+        <feedback>
+          <p>That's h(2), but it is passed to g.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>h(2) returns 7, so y is bound to 7 when g is invoked.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error: you can't nest function calls</p>
+        </statement>
+        <feedback>
+          <p>Ah, but you can nest function calls.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -28,6 +28,24 @@ if dynamic_pages:
 else:
     dest = "../../static"
 
+template_args={
+    'course_id': 'fopp',
+    'login_required':'false',
+    'course_title': project_name,
+    'appname':master_app,
+    'dynamic_pages': True,
+    'loglevel': 10,
+    'course_url':master_url,
+    'use_services': 'true',
+    'python3': 'true',
+    'dburl': 'postgresql://user:password@localhost/runestone',
+    'default_ac_lang': 'python',
+    'basecourse': 'fopp',
+    'downloads_enabled': 'false',
+    'enable_chatcodes': 'false',
+    'allow_pairs': 'false'
+}
+
 
 options(
     sphinx = Bunch(docroot=".",),

@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ee_inheritance_01">
+    <statement>
+      <p>The class, <c>Pokemon</c>, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create.</p>
+      <p><c>Grass_Pokemon</c> is a subclass that inherits from <c>Pokemon</c> but changes some aspects, for instance, the boost values are different.</p>
+      <p>For the subclass <c>Grass_Pokemon</c>, add another method called <c>action</c> that returns the string <c>"[name of pokemon] knows a lot of different moves!"</c>. Create an instance of this class with the <c>name</c> as <c>"Belle"</c>. Assign this instance to the variable <c>p1</c>.</p>
+    </statement>
+    <program xml:id="ee_inheritance_01_editor" interactive="activecode" language="python">
+      <input>
+class Pokemon(object):
+    attack = 12
+    defense = 10
+    health = 15
+    p_type = "Normal"
+
+    def __init__(self, name, level = 5):
+        self.name = name
+        self.level = level
+
+    def train(self):
+        self.update()
+        self.attack_up()
+        self.defense_up()
+        self.health_up()
+        self.level = self.level + 1
+        if self.level%self.evolve == 0:
+            return self.level, "Evolved!"
+        else:
+            return self.level
+
+    def attack_up(self):
+        self.attack = self.attack + self.attack_boost
+        return self.attack
+
+    def defense_up(self):
+        self.defense = self.defense + self.defense_boost
+        return self.defense
+
+    def health_up(self):
+        self.health = self.health + self.health_boost
+        return self.health
+
+    def update(self):
+        self.health_boost = 5
+        self.attack_boost = 3
+        self.defense_boost = 2
+        self.evolve = 10
+
+    def __str__(self):
+        self.update()
+        return "Pokemon name: {}, Type: {}, Level: {}".format(self.name, self.p_type, self.level)
+
+class Grass_Pokemon(Pokemon):
+    attack = 15
+    defense = 14
+    health = 12
+
+    def update(self):
+        self.health_boost = 6
+        self.attack_boost = 2
+        self.defense_boost = 3
+        self.evolve = 12
+
+    def moves(self):
+        self.p_moves = ["razor leaf", "synthesis", "petal dance"]
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOneA(self):
+      self.assertEqual(p1.action(), "Belle knows a lot of different moves!", "Testing that action method is correct and p1 assigned to correct value")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ee_inheritance_02">
+    <statement>
+      <p>Modify the <c>Grass_Pokemon</c> subclass so that the attack strength for <c>Grass_Pokemon</c> instances does not change until they reach level 10. At level 10 and up, their attack strength should increase by the <c>attack_boost</c> amount when they are trained.</p>
+      <p>To test, create an instance of the class with the name as <c>"Bulby"</c>. Assign the instance to the variable <c>p2</c>. Create another instance of the <c>Grass_Pokemon</c> class with the name set to <c>"Pika"</c> and assign that instance to the variable <c>p3</c>. Then, use <c>Grass_Pokemon</c> methods to train the <c>p3</c> <c>Grass_Pokemon</c> instance until it reaches at least level 10.</p>
+    </statement>
+    <program xml:id="ee_inheritance_02_editor" interactive="activecode" language="python">
+      <input>
+class Pokemon(object):
+    attack = 12
+    defense = 10
+    health = 15
+    p_type = "Normal"
+
+    def __init__(self, name, level = 5):
+        self.name = name
+        self.level = level
+
+    def train(self):
+        self.update()
+        self.attack_up()
+        self.defense_up()
+        self.health_up()
+        self.level = self.level + 1
+        if self.level%self.evolve == 0:
+            return self.level, "Evolved!"
+        else:
+            return self.level
+
+    def attack_up(self):
+        self.attack = self.attack + self.attack_boost
+        return self.attack
+
+    def defense_up(self):
+        self.defense = self.defense + self.defense_boost
+        return self.defense
+
+    def health_up(self):
+        self.health = self.health + self.health_boost
+        return self.health
+
+    def update(self):
+        self.health_boost = 5
+        self.attack_boost = 3
+        self.defense_boost = 2
+        self.evolve = 10
+
+    def __str__(self):
+        return "Pokemon name: {}, Type: {}, Level: {}".format(self.name, self.p_type, self.level)
+
+class Grass_Pokemon(Pokemon):
+    attack = 15
+    defense = 14
+    health = 12
+    p_type = "Grass"
+
+    def update(self):
+        self.health_boost = 6
+        self.attack_boost = 2
+        self.defense_boost = 3
+        self.evolve = 12
+
+    def moves(self):
+        self.p_moves = ["razor leaf", "synthesis", "petal dance"]
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOneA(self):
+      self.assertEqual(p2.__str__(), "Pokemon name: Bulby, Type: Grass, Level: 5", "Testing that p2 is assigned to correct value.")
+   def testOneB(self):
+      self.assertTrue(p3.attack_up() &gt;= 17, "Testing that attack value is assigned to correct value at level 10.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="ee_inheritance_05">
+    <statement>
+      <p>Along with the <c>Pokemon</c> parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses. Call it <c>opponent</c>. It should return which type of pokemon the current type is weak and strong against, as a tuple.</p>
+      <p>
+        <ul>
+          <li>
+            <p><term>Grass</term> is weak against <em>Fire</em> and strong against <em>Water</em></p>
+          </li>
+          <li>
+            <p><term>Ghost</term> is weak against <em>Dark</em> and strong against <em>Psychic</em></p>
+          </li>
+          <li>
+            <p><term>Fire</term> is weak against <em>Water</em> and strong against <em>Grass</em></p>
+          </li>
+          <li>
+            <p><term>Flying</term> is weak against <em>Electric</em> and strong against <em>Fighting</em></p>
+          </li>
+        </ul>
+      </p>
+      <p>For example, if the <c>p_type</c> of the subclass is <c>'Grass'</c>, <c>.opponent()</c> should return the tuple <c>('Fire', 'Water')</c></p>
+    </statement>
+    <program xml:id="ee_inheritance_05_editor" interactive="activecode" language="python">
+      <input>
+class Pokemon():
+    attack = 12
+    defense = 10
+    health = 15
+    p_type = "Normal"
+
+    def __init__(self, name,level = 5):
+        self.name = name
+        self.level = level
+        self.weak = "Normal"
+        self.strong = "Normal"
+
+    def train(self):
+        self.update()
+        self.attack_up()
+        self.defense_up()
+        self.health_up()
+        self.level = self.level + 1
+        if self.level%self.evolve == 0:
+            return self.level, "Evolved!"
+        else:
+            return self.level
+
+    def attack_up(self):
+        self.attack = self.attack + self.attack_boost
+        return self.attack
+
+    def defense_up(self):
+        self.defense = self.defense + self.defense_boost
+        return self.defense
+
+    def health_up(self):
+        self.health = self.health + self.health_boost
+        return self.health
+
+    def update(self):
+        self.health_boost = 5
+        self.attack_boost = 3
+        self.defense_boost = 2
+        self.evolve = 10
+
+    def __str__(self):
+        self.update()
+        return "Pokemon name: {}, Type: {}, Level: {}".format(self.name, self.p_type, self.level)
+
+class Grass_Pokemon(Pokemon):
+    attack = 15
+    defense = 14
+    health = 12
+    p_type = "Grass"
+
+    def update(self):
+        self.health_boost = 6
+        self.attack_boost = 2
+        self.defense_boost = 3
+        self.evolve = 12
+
+class Ghost_Pokemon(Pokemon):
+    p_type = "Ghost"
+
+    def update(self):
+        self.health_boost = 3
+        self.attack_boost = 4
+        self.defense_boost = 3
+
+class Fire_Pokemon(Pokemon):
+    p_type = "Fire"
+
+class Flying_Pokemon(Pokemon):
+    p_type = "Flying"
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOneA(self):
+      self.assertEqual(Grass_Pokemon("Buggy").opponent(), ("Fire", "Water"), "Testing that Grass weak and strong are assigned to correct values.")
+   def testOneB(self):
+      self.assertEqual(Fire_Pokemon("Buggy").opponent(), ("Water", "Grass"), "Testing that Fire weak and strong are assigned to correct values.")
+   def testOneC(self):
+      self.assertEqual(Ghost_Pokemon("Buggy").opponent(), ("Dark", "Psychic"), "Testing that Ghost weak and strong are assigned to correct values.")
+   def testOneD(self):
+      self.assertEqual(Flying_Pokemon("Buggy").opponent(), ("Electric", "Fighting"), "Testing that Flying weak and strong are assigned to correct values.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

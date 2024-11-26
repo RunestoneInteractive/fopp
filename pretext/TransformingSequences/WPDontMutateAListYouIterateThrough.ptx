@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<section xml:id="transforming-sequences_dont-mutate-a-list-that-you-are-iterating-through">
+  <title>&#x1F469;&#x200D;&#x1F4BB;  Don't Mutate A List That You Are Iterating Through</title>
+  <p>So far we've shown you how to iterate through a list:</p>
+  <program xml:id="ac8_12_1" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+
+for color in colors:
+    print(color)
+        </input>
+  </program>
+  <p>As well as accumulate a list by appending items:</p>
+  <program xml:id="ac8_12_2" interactive="activecode" language="python">
+    <input>
+colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+initials = []
+
+for color in colors:
+    initials.append(color[0])
+
+print(initials)
+        </input>
+  </program>
+  <p>You may be tempted now to iterate through a list and accumulate some data into it or delete data from it as you're traversing the list, however that
+            often becomes very confusing. In the following code we will filter out all words that begin with P, B, or T.</p>
+  <program xml:id="ac8_12_3" interactive="codelens" language="python">
+    <input>
+colors = ["Red", "Purple", "Yellow"]
+
+for position in range(len(colors)):
+    color = colors[position]
+    print(color)
+    if color[0] in ["P", "B", "T"]:
+        del colors[position]
+
+print(colors)
+    </input>
+  </program>
+  <p>In the code above, we iterated through the indexes, and deleted each item that begins with a bad letter.
+            However, we run into a problem because as we delete content from the list, the list
+            becomes shorter. Eventually, we have an issue indexing on line 4. Try stepping through it in codelens to see what's going on.</p>
+  <p>We can also try to accumulate a list that we're iterating through as well. What do you think will happen here?</p>
+  <program xml:id="ac8_12_4" interactive="codelens" language="python">
+    <input>
+colors = ["Red", "Orange", "Indigo"]
+
+for color in colors:
+    if color[0] in ["A", "E", "I", "O", "U"]:
+        colors.append(color)
+
+    print(colors)
+
+    if len(colors)&gt;6:
+        break
+    </input>
+  </program>
+  <p>Now try stepping through this code.
+            When we come across a color that begins with a vowel, that color is added to the end of the list.
+            The python interpreter doesn't make a copy of the sequence at the beginning and iterate through that copy.
+            It actually asks for the next item in the sequence at the top of each iteration. But here we are adding a new item to the
+            end of the list before we get to the end of the list, so there's always a next item. We would have an infinite loop.</p>
+  <p>To prevent the infinite loop, we've added a break once the list has six strings in it. You'll learn about break and continue later in the book.</p>
+  <p>The main message here is that you should not mutate a list while you're iterating through it! You'll get errors, infinite loops, or, worse, semantic errors: your code may run and produce very surprising results.</p>
+</section>

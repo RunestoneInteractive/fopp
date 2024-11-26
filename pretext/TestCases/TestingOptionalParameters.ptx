@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<section xml:id="test-cases_testing-optional-parameters">
+  <title>Testing Optional Parameters</title>
+  <p>If a function takes an optional parameter, one of the edge cases to test for is when no parameter value is supplied during execution. That will test whether the default value is being set correctly when the parameter is omitted.</p>
+  <p>Consider the following function, which counts the number of <q>long enough</q> words in a list. What counts as long enough is determined by an optional parameter, <c>min_length</c>.</p>
+  <program xml:id="ac19_2_3" interactive="activecode" language="python">
+    <input>
+def count_long_words(words, min_length=5):
+    ct = 0
+    for word in words:
+        if len(word) &gt;= min_length:
+            ct += 1
+    return ct
+        </input>
+  </program>
+  <p>What return value tests could we write to check whether it is implemented correctly? First, we could construct a list of words that has words of many lengths, including a degenerate empty string that has length 0. One return value test would omit <c>min_length</c> and check that we got the right count. Other return value tests would supply <c>min_length</c> and would include the edge case where <c>min_length</c> is 0 and one where it is very large.</p>
+  <program xml:id="ac19_2_3b" interactive="activecode" language="python">
+    <input>
+def count_long_words(words, min_length=5):
+    ct = 0
+    for word in words:
+        if len(word) &gt;= min_length:
+            ct += 1
+    return ct
+
+test_words = ["", "1", "12", "123", "1234", "12345", "123456"]
+assert count_long_words(test_words) == 2
+assert count_long_words(test_words, min_length=0) == 7
+assert count_long_words(test_words, min_length=4) == 3
+assert count_long_words(test_words, min_length=100) == 0
+        </input>
+  </program>
+</section>

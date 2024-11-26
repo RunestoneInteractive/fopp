@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Exceptions</title>
+        <xi:include href='./intro-exceptions.ptx' />
+        <xi:include href='./using-exceptions.ptx' />
+        <xi:include href='./standard-exceptions.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>
