@@ -350,11 +350,11 @@ Exercises
       Piece together the code so that a user is asked for two numbers, and then the sum of those two numbers is printed out.
       -----
       num_one = input("Please enter your first number: ")
-      ====
+      =====
       num_two = input("Please enter your second number: ")
-      ====
+      =====
       sum_of_input = int(num_one) + int(num_two)
-      ====
+      =====
       print(sum_of_input)
 
 .. question:: spd_ex_16
@@ -365,11 +365,11 @@ Exercises
       Write a program that will convert gallons to liters. This program will also need to get input from a user to see how many gallons should be converted and the result should be printed to the user.
       -----
       user_gallons = input("How many gallons should be converted?: ")
-      ====
+      =====
       num_gallons = int(user_gallons)
-      ====
+      =====
       liters = num_gallons * 3.785
-      ====
+      =====
       print("Number of liters: " + str(liters))
 
 
@@ -381,9 +381,9 @@ Exercises
       Write a program that will convert tablespoons to teaspoons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
       -----
       user_tablespoons = float(input("How many tablespoons should be converted?: "))
-      ====
+      =====
       teaspoons = user_tablespoons * 3
-      ====
+      =====
       print("Number of teaspoons: " + str(teaspoons))
 
 

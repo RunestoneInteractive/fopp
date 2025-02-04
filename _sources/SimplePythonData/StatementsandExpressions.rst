@@ -129,17 +129,17 @@ To start giving you some practice in reading and understanding complicated expre
 
    -----
    look up the variable square to get the function object
-   ====
+   =====
    look up the variable sub to get the function object
-   ====
+   =====
    look up the variable y to get 3
-   ====
+   =====
    add 1 and 3 to get 4
-   ====
+   =====
    look up the variable x to get 2
-   ====
+   =====
    run the sub function, passing inputs 4 and 2, returning the value 2
-   ====
+   =====
    run the square function on input 2, returning the value 4
 
 
@@ -149,23 +149,23 @@ To start giving you some practice in reading and understanding complicated expre
 
    -----
    look up the variable square to get the function object
-   ====
+   =====
    look up the variable x to get 2
-   ====
+   =====
    look up the variable sub to get the function object
-   ====
+   =====
    look up the variable square, again, to get the function object
-   ====
+   =====
    look up the variable y to get 3
-   ====
+   =====
    run the square function on input 3, returning the value 9
-   ====
+   =====
    look up the variable x, again, to get 2
-   ====
+   =====
    multiply 2 * 2 to get 4
-   ====
+   =====
    run the sub function, passing inputs 9 and 4, returning the value 5
-   ====
+   =====
    add 2 and 5 to get 7
-   ====
+   =====
    run the square function, again, on input 7, returning the value 49

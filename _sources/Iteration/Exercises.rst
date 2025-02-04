@@ -194,9 +194,9 @@ Exercises
       Write a program that will go through a list of temperatures and print them out to the user.
       -----
       temperatures = [-3, 78, 95, 28, 56, 42, 56, 81, -10, -]
-      ====
+      =====
       for temp in temperatures:
-      ====
+      =====
           print("The weather outside is: " + str(temp))
 
 .. question:: iter_ex_9
@@ -206,13 +206,13 @@ Exercises
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted.
       -----
       students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
-      ====
+      =====
       num_students = 0
-      ====
+      =====
       for student in students:
-      ====
+      =====
           print("Welcome to class, " + student)
-      ====
+      =====
           num_students += 1
           print(str(num_students) + "student(s) have entered the classroom")
 

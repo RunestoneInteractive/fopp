@@ -41,13 +41,13 @@ the original len function, and our implementation may not be a very good one.
 
    -----
    def mylen(x):
-   ====
+   =====
        c = 0 # initialize count variable to 0
-   ====
+   =====
        for y in x:
-   ====
+   =====
            c = c + 1   # increment the counter for each item in x
-   ====
+   =====
        return c
    =====
    print(mylen("hello"))
